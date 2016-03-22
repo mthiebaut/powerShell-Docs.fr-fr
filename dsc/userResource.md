@@ -37,7 +37,7 @@ User [string] #ResourceName
 | PasswordChangeNotAllowed| Indique si l’utilisateur peut modifier le mot de passe. Définissez cette propriété sur __$true__ pour vous assurer que l’utilisateur ne modifie pas le mot de passe, ou sur __$false__ pour permettre à l’utilisateur de modifier le mot de passe. La valeur par défaut est __$false__.| 
 | PasswordChangeRequired| Indique si l’utilisateur doit changer de mot de passe à la prochaine connexion. Définissez cette propriété sur __$true__ si l’utilisateur doit changer le mot de passe. La valeur par défaut est __$true__.| 
 | PasswordNeverExpires| Indique si le mot de passe doit expirer. Pour vous assurer que le mot de passe pour ce compte n’expire jamais, définissez cette propriété sur __$true__, et sur __$false__ si le mot de passe doit expirer. La valeur par défaut est __$false__.| 
-| DependsOn | Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource __ResourceName__ de type __ResourceType__, la syntaxe pour utiliser cette propriété est `DependsOn = "[ResourceType]ResourceName"`.| 
+| DependsOn | Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource __ResourceName__ de type __ResourceType__, la syntaxe permettant d’utiliser cette propriété est `DependsOn = "[ResourceType]ResourceName"`.| 
 
 ## Exemple
 

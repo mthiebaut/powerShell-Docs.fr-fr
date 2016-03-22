@@ -38,7 +38,7 @@ La propriété **RegistrationKey** est une clé partagée entre tous les nœuds 
 
 Quand le script s’exécute, il crée un dossier de sortie nommé **PullClientConfigID** et y place un fichier MOF de métaconfiguration. Dans ce cas, le fichier MOF de métaconfiguration est nommé `localhost.meta.mof`.
 
-Pour appliquer la configuration, appelez l’applet de commande **Set-DscLocalConfigurationManager**, avec le paramètre **Path** défini sur l’emplacement du fichier MOF de métaconfiguration. Par exemple : `Set-DSCLocalConfigurationManager localhost –Path .\PullClientConfigID –Verbose.`
+Pour appliquer la configuration, appelez l’applet de commande **Set-DscLocalConfigurationManager** avec le paramètre **Path** défini sur l’emplacement du fichier MOF de métaconfiguration. Par exemple : `Set-DSCLocalConfigurationManager localhost –Path .\PullClientConfigID –Verbose.`
 
 > **Remarque** : Les clés d’enregistrement fonctionnent uniquement avec les serveurs collecteurs web. Vous devez encore utiliser **ConfigurationID** avec un serveur collecteur SMB. Pour plus d’informations sur la configuration d’un serveur collecteur à l’aide de **ConfigurationID**, consultez [Configuration d’un client collecteur à l’aide de l’ID de configuration](pullClientConfigID.md)
 

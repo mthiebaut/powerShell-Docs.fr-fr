@@ -117,5 +117,5 @@ Une fois ces modules placés dans `$env:PSModulePath` et correctement reconnus p
 ## Voir aussi
 * [Présentation de la configuration de l’état souhaité de Windows PowerShell](overview.md)
 * [Ressources DSC](resources.md)
-* [Configuration du gestionnaire de configuration local](metaconfig.md)
+* [Configuration du Gestionnaire de configuration local](metaconfig.md)
 <!--HONumber=Feb16_HO4-->
