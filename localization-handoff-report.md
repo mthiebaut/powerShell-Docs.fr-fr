@@ -1,29 +1,11 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [dsc\secureMOF.md](https://github.com/PowerShell/powerShell-Docs/blob/11c8cb288104c51ccaf04665a603c1905ab14a62/dsc/secureMOF.md) | OutofSyncHandedBackSuccess | [Details](#c3b61e7f85bc59833548873a73b6ce9559dcea3a60)
 
 ## Item Details
-##### <a name='c3b61e7f85bc59833548873a73b6ce9559dcea3a60'></a> Source: [dsc\secureMOF.md](https://github.com/PowerShell/powerShell-Docs/blob/11c8cb288104c51ccaf04665a603c1905ab14a62/dsc/secureMOF.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/f3f93c5facada34da7eafb9b506a8d8c4554143a/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.fr-fr.xlf)
-* Handoff Datetime: 2016-03-23 22:38:50
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [dsc\secureMOF.md](https://github.com/PowerShell/powerShell-Docs.fr-fr/blob/f5365af334e26bbbcb4854c4d9a76c63ec303662/dsc/secureMOF.md)
-* Current Handback File: [secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/ec8ab9a530c9ea76f790299ed1262fc19f90c0d0/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.fr-fr.xlf)
-* Current Handback Datetime: 2016-03-22 17:43:05
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
