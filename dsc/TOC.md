@@ -26,6 +26,7 @@
 ### [Ressources personnalisées basées sur une classe](authoringResourceClass.md)
 ### [Ressources composites](authoringResourceComposite.md)
 ### [Débogage des ressources DSC](debugResource.md)
+### [Liste de vérification de création de ressources](resourceAuthoringChecklist.md)
 
 # [Configuration du gestionnaire de configuration local](metaConfig.md)
 ## [Configuration du gestionnaire de configuration local dans PowerShell 4.0](metaConfig4.md)
@@ -52,4 +53,4 @@
 ### [Ressource nxService](lnxServiceResource.md)
 ### [Ressource nxSshAuthorizedKeys](lnxSshAuthorizedKeysResource.md)
 ### [Ressource nxUser](lnxUserResource.md)
-<!--HONumber=Feb16_HO4-->
+<!--HONumber=Mar16_HO1-->
