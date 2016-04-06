@@ -18,14 +18,14 @@ Dans l’Observateur d’événements, les événements DSC se trouvent dans : 
 L’applet de commande PowerShell correspondante [Get-WinEvent](https://technet.microsoft.com/library/hh849682.aspx) peut également être exécutée pour afficher les journaux des événements :
 
 ```
-PS C:\Users> Get-WinEvent -LogName "Microsoft-Windows-Dsc/Operational"
+PS C:\> Get-WinEvent -LogName "Microsoft-Windows-Dsc/Operational"
    ProviderName: Microsoft-Windows-DSC
 TimeCreated                     Id LevelDisplayName Message                                                                                                  
 -----------                     -- ---------------- -------                                                                                                  
 11/17/2014 10:27:23 PM        4102 Information      Job {02C38626-D95A-47F1-9DA2-C1D44A7128E7} : 
 ```
 
-Comme indiqué ci-dessus, le nom du journal DSC principal est **Microsoft->Windows->DSC** (les autres noms de journal sous Windows ne sont pas cités ici, par souci de concision). Le nom principal est ajouté au nom du canal pour créer le nom complet du journal. Le moteur DSC écrit principalement dans trois types de journaux : [journaux des opérations, d’analyse et de débogage](https://technet.microsoft.com/library/cc722404.aspx). Les journaux d’analyse et de débogage étant désactivés par défaut, vous devez les activer dans l’Observateur d’événements. Pour ce faire, ouvrez l’Observateur d’événements en tapant eventvwr dans Windows PowerShell ou cliquez sur le bouton **Démarrer**, sur **Panneau de configuration**, **Outils d’administration**, puis **Observateur d’événements**. Dans le menu **Affichage** de l’Observateur d’événements, cliquez sur **Afficher les journaux d’analyse et de débogage**. Le nom du journal du canal d’analyse est **Microsoft-Windows-Dsc/Analytic** et celui du canal de débogage est **Microsoft-Windows-Dsc/Debug**. Vous pouvez également utiliser l’utilitaire [wevtutil](https://technet.microsoft.com/library/cc732848.aspx) pour activer les journaux, comme l’illustre l’exemple suivant.
+Comme indiqué ci-dessus, le nom du journal DSC principal est **Microsoft->Windows->DSC** (les autres noms de journal sous Windows ne sont pas cités ici, par souci de concision). Le nom principal est ajouté au nom du canal pour créer le nom complet du journal. Le moteur DSC écrit principalement dans trois types de journaux : [journaux des opérations, d’analyse et de débogage](https://technet.microsoft.com/library/cc722404.aspx). Les journaux d’analyse et de débogage étant désactivés par défaut, vous devez les activer dans l’Observateur d’événements. Pour ce faire, ouvrez l’Observateur d’événements en tapant Show-EventLog dans Windows PowerShell ou cliquez sur le bouton **Démarrer**, sur **Panneau de configuration**, **Outils d’administration**, puis **Observateur d’événements**. Dans le menu **Affichage** de l’Observateur d’événements, cliquez sur **Afficher les journaux d’analyse et de débogage**. Le nom du journal du canal d’analyse est **Microsoft-Windows-Dsc/Analytic** et celui du canal de débogage est **Microsoft-Windows-Dsc/Debug**. Vous pouvez également utiliser l’utilitaire [wevtutil](https://technet.microsoft.com/library/cc732848.aspx) pour activer les journaux, comme l’illustre l’exemple suivant.
 
 ```powershell
 wevtutil.exe set-log “Microsoft-Windows-Dsc/Analytic” /q:true /e:true
@@ -36,17 +36,17 @@ wevtutil.exe set-log “Microsoft-Windows-Dsc/Analytic” /q:true /e:true
 Les journaux DSC sont répartis sur les trois canaux de journal en fonction de l’importance du message. Le journal des opérations dans DSC contient tous les messages d’erreur et peut être utilisé pour identifier un problème. Le journal d’analyse contient un plus grand volume d’événements et peut identifier où se sont produites les erreurs. Ce canal contient également des messages détaillés (le cas échéant). Le journal de débogage contient des journaux qui peuvent vous aider à comprendre comment les erreurs se sont produites. Les messages d’événement DSC sont structurés de telle sorte que chaque message d’événement commence par un ID de tâche représentant de façon unique une opération DSC. L’exemple ci-dessous tente d’obtenir le message du premier événement enregistré dans le journal des opérations DSC.
 
 ```powershell
-PS C:\Users> $AllDscOpEvents=get-winevent -LogName "Microsoft-Windows-Dsc/Operational"
-PS C:\Users> $FirstOperationalEvent=$AllDscOpEvents[0]
-PS C:\Users> $FirstOperationalEvent.Message
+PS C:\> $AllDscOpEvents = Get-WinEvent -LogName "Microsoft-Windows-Dsc/Operational"
+PS C:\> $FirstOperationalEvent = $AllDscOpEvents[0]
+PS C:\> $FirstOperationalEvent.Message
 Job {02C38626-D95A-47F1-9DA2-C1D44A7128E7} : 
 Consistency engine was run successfully. 
 ```
 
 Les événements DSC sont enregistrés dans une structure particulière qui permet à l’utilisateur de regrouper les événements d’une seule tâche DSC. La structure est la suivante :
 
-**ID de tâche : \<Guid\>**
-**\<Event Message\>**
+**ID de tâche : <Guid>**
+**<Event Message>**
 
 ## Collecte des événements d’une seule opération DSC
 
@@ -70,15 +70,15 @@ Get-DscLocalConfigurationManager
 Step 3 : Collect all DSC Logs, from the Analytic, Debug and Operational channels
 ###########################################################################>
  
-$DscEvents=[System.Array](Get-WinEvent "Microsoft-windows-dsc/operational") `
+$DscEvents=[System.Array](Get-WinEvent "Microsoft-Windows-Dsc/Operational") `
          + [System.Array](Get-WinEvent "Microsoft-Windows-Dsc/Analytic" -Oldest) `
-         + [System.Array](Get-Winevent "Microsoft-Windows-Dsc/Debug" -Oldest)
+         + [System.Array](Get-WinEvent "Microsoft-Windows-Dsc/Debug" -Oldest)
  
  
 <##########################################################################
  Step 4 : Group all logs based on the job ID
 ###########################################################################>
-$SeparateDscOperations=$DscEvents | Group {$_.Properties[0].value}  
+$SeparateDscOperations = $DscEvents | Group {$_.Properties[0].value}  
 ```
 
 Ici, la variable `$SeparateDscOperations` contient les journaux regroupés par ID de tâche. Chaque élément du tableau de cette variable représente un groupe d’événements enregistrés par une opération DSC différente, ce qui donne accès à davantage d’informations sur les journaux.
@@ -118,7 +118,7 @@ Vous pouvez extraire les données de la variable `$SeparateDscOperations` à l�
 Tous les événements sont associés à des [niveaux de gravité](https://msdn.microsoft.com/library/dd996917(v=vs.85)). Ces informations peuvent être utilisées pour identifier les événements d’erreur :
 
 ```
-PS C:\> $SeparateDscOperations  | Where-Object {$_.Group.LevelDisplayName -contains "Error"}
+PS C:\> $SeparateDscOperations | Where-Object {$_.Group.LevelDisplayName -contains "Error"}
 Count Name                      Group                                                                     
 ----- ----                      -----                                                                     
    38 {5BCA8BE7-5BB6-11E3-BF... {System.Diagnostics.Eventing.Reader.EventLogRecord, System.Diagnostics....
@@ -129,8 +129,8 @@ Count Name                      Group
 `TimeCreated`, une propriété de chaque événement Windows, indique l’heure de création de l’événement. Vous pouvez comparer cette propriété avec un objet date/heure particulier pour filtrer tous les événements :
 
 ```powershell
-PS C:\> $DateLatest=(Get-date).AddMinutes(-30)
-PS C:\> $SeparateDscOperations  | Where-Object {$_.Group.TimeCreated -gt $DateLatest}
+PS C:\> $DateLatest = (Get-Date).AddMinutes(-30)
+PS C:\> $SeparateDscOperations | Where-Object {$_.Group.TimeCreated -gt $DateLatest}
 Count Name                      Group                                                                     
 ----- ----                      -----                                                                     
     1 {6CEC5B09-5BB0-11E3-BF... {System.Diagnostics.Eventing.Reader.EventLogRecord}   
@@ -163,7 +163,7 @@ Displaying messages from built-in DSC resources:
 `$SeparateDscOperations[0].Group` contient un ensemble d’événements pour la dernière opération. Exécutez l’applet de commande `Where-Object` pour filtrer les événements selon le nom d’affichage du niveau. Les résultats sont stockés dans la variable `$myFailedEvent`, qui peut être examinée pour obtenir le message d’événement :
 
 ```powershell
-PS C:\> $myFailedEvent=($SeparateDscOperations[0].Group | Where-Object {$_.LevelDisplayName -eq "Error"})
+PS C:\> $myFailedEvent = ($SeparateDscOperations[0].Group | Where-Object {$_.LevelDisplayName -eq "Error"})
  
 PS C:\> $myFailedEvent.Message
 Job {5BCA8BE7-5BB6-11E3-BF41-00155D553612} : 
@@ -192,11 +192,11 @@ TimeCreated                     Id LevelDisplayName Message
 
 ## Utilisation de xDscDiagnostics pour analyser les journaux DSC
 
-**xDscDiagnostics** est un module PowerShell qui se compose de deux opérations simples permettant d’analyser les échecs DSC sur votre ordinateur : `Get-xDscOperation` et `Trace-xDscOperation`. Ces fonctions peuvent vous aider à identifier tous les événements locaux des dernières opérations DSC ou les événements DSC sur des ordinateurs distants (avec des informations d’identification valides). Ici, le terme opération DSC est utilisé pour définir une exécution DSC unique du début à la fin. Par exemple, `Test-DscConfiguration` est une opération DSC à part entière. De même, chaque autre applet de commande dans DSC (telle que `Get-DscConfiguration`, `Start-DscConfiguration`, etc.) peut être identifiée comme une opération DSC à part entière. Les deux applets de commande sont expliquées dans le module PowerShell [xDscDiagnostics](https://powershellgallery.com/packages/xDscDiagnostics) (Kit de ressources DSC) et plus en détail ci-dessous. Vous accédez à l’aide en exécutant `Get-Help <cmdlet name>`.
+**xDscDiagnostics** est un module PowerShell qui se compose de deux fonctions simples permettant d’analyser les échecs DSC sur votre ordinateur : `Get-xDscOperation` et `Trace-xDscOperation`. Ces fonctions peuvent vous aider à identifier tous les événements locaux des dernières opérations DSC ou les événements DSC sur des ordinateurs distants (avec des informations d’identification valides). Ici, le terme opération DSC est utilisé pour définir une exécution DSC unique du début à la fin. Par exemple, `Test-DscConfiguration` est une opération DSC à part entière. De même, chaque autre applet de commande dans DSC (telle que `Get-DscConfiguration`, `Start-DscConfiguration`, etc.) peut être identifiée comme une opération DSC à part entière. Les deux fonctions sont expliquées dans le module PowerShell [xDscDiagnostics](https://powershellgallery.com/packages/xDscDiagnostics) (Kit de ressources DSC) et plus en détail ci-dessous. Vous accédez à l’aide en exécutant `Get-Help <cmdlet name>`.
 
 ## Get-xDscOperation
 
-Cette applet de commande vous permet de rechercher les résultats des opérations DSC qui s’exécutent sur un ou plusieurs ordinateurs, et retourne un objet qui contient la collection d’événements produits par chaque opération DSC. Par exemple, dans la sortie suivante, trois commandes ont été exécutées. La première a réussi et les deux autres ont échoué. Ces résultats sont résumés dans la sortie de `Get-xDscOperation`.
+Cette fonction vous permet de rechercher les résultats des opérations DSC qui s’exécutent sur un ou plusieurs ordinateurs, et retourne un objet qui contient la collection d’événements produits par chaque opération DSC. Par exemple, dans la sortie suivante, trois commandes ont été exécutées. La première a réussi et les deux autres ont échoué. Ces résultats sont résumés dans la sortie de `Get-xDscOperation`.
 
 TODO: remplacer cette image pour afficher la sortie de Get-xDscOperation
 
@@ -204,11 +204,11 @@ TODO: remplacer cette image pour afficher la sortie de Get-xDscOperation
 
 * **Newest** : accepte une valeur entière indiquant le nombre d’opérations à afficher. Par défaut, elle retourne les 10 dernières opérations. Par exemple,
   TODO: afficher Get-xDscOperation -Newest 5
-* **ComputerName** : paramètre qui accepte un tableau de chaînes, chacune contenant le nom d’un ordinateur sur lequel vous voulez collecter des données de journal des événements DSC. Par défaut, il collecte les données de l’ordinateur hôte. Pour activer cette fonctionnalité, vous devez exécuter la commande suivante sur les ordinateurs distants en mode élevé pour autoriser la collecte d’événements
+* **ComputerName** : paramètre qui accepte un tableau de chaînes, chacune contenant le nom d’un ordinateur sur lequel vous voulez collecter des données de journal des événements DSC. Par défaut, il collecte les données de l’ordinateur local. Pour activer cette fonctionnalité, vous devez exécuter la commande suivante sur les ordinateurs distants en mode élevé pour autoriser la collecte d’événements
 ```powershell
   New-NetFirewallRule -Name "Service RemoteAdmin" -Action Allow
 ```
-* **Credential** : paramètre de type PSCredential, qui permet d’accéder aux ordinateurs spécifiés dans le paramètre ComputerName.
+* **Credential** : paramètre de type PSCredential, qui permet d’accéder aux ordinateurs spécifiés dans le paramètre ComputerName.
 
 ### Objet retourné
 
@@ -231,7 +231,7 @@ Cette applet de commande retourne un objet qui contient une collection d’évé
 * **SequenceID** : valeur entière affectée à une opération sur un ordinateur spécifique. Si vous spécifiez un ID de séquence égal à 4, la trace de la 4ème avant-dernière opération DSC est générée
 
 Trace-xDscOperation avec l'ID de séquence spécifié
-* **JobID** : valeur du GUID assignée par xDscOperation du gestionnaire de configuration local pour identifier de manière unique une opération. quand un JobID est spécifié, la trace de l’opération DSC correspondante est générée.
+* **JobID** : valeur du GUID assignée par xDscOperation du gestionnaire de configuration local pour identifier de manière unique une opération. Quand un JobID est spécifié, la trace de l’opération DSC correspondante est générée.
   TODO: remplacer l’image par Trace xDscOperation prenant JobID comme paramètre
 * **ComputerName** et **Credential** : ces paramètres permettent de collecter la trace sur des ordinateurs distants :
 ```powershell
@@ -269,13 +269,13 @@ Vous pouvez aussi collecter des informations sur les événements en enregistran
 Cette commande génère les mêmes résultats que l’applet de commande `Get-WinEvent`, comme dans la sortie ci-dessous :
   TODO: quelle sortie ?
 
-Idéalement, commencez par utiliser `Get-xDscOperations` pour répertorier les dernières exécutions de configuration DSC sur vos ordinateurs. Ensuite, vous pouvez examiner chaque opération (à l’aide de son ID de séquence ou de tâche) avec `Trace-xDscOperation` pour découvrir ce qu’elle a effectué en arrière-plan.
+Idéalement, commencez par utiliser `Get-xDscOperation` pour répertorier les dernières exécutions de configuration DSC sur vos ordinateurs. Ensuite, vous pouvez examiner chaque opération (à l’aide de son ID de séquence ou de tâche) avec `Trace-xDscOperation` pour découvrir ce qu’elle a effectué en arrière-plan.
 
 ## Mes ressources ne sont pas mises à jour : comment réinitialiser le cache
 
 Le moteur DSC met en cache les ressources implémentées comme module PowerShell pour des raisons d’efficacité. Toutefois, cela peut entraîner des problèmes quand vous créez et testez une ressource simultanément, car DSC charge la version mise en cache tant que le processus n’est pas redémarré. La seule façon pour que DSC charge la version la plus récente est d’arrêter explicitement le processus qui héberge le moteur DSC.
 
-De même, quand vous exécutez `Start-DSCConfiguration`, une fois que vous avez ajouté et modifié une ressource personnalisée, la modification peut ne pas s’exécuter tant que l’ordinateur n’est pas redémarré. Ce comportement s’explique par le fait que DSC s’exécute dans le processus hôte du fournisseur WMI (WmiPrvSE) et qu’en général, il existe plusieurs instances de WmiPrvSE qui s’exécutent simultanément. Quand vous redémarrez, le processus hôte est redémarré et le cache est effacé.
+De même, quand vous exécutez `Start-DscConfiguration`, une fois que vous avez ajouté et modifié une ressource personnalisée, la modification peut ne pas s’exécuter tant que l’ordinateur n’est pas redémarré. Ce comportement s’explique par le fait que DSC s’exécute dans le processus hôte du fournisseur WMI (WmiPrvSE) et qu’en général, il existe plusieurs instances de WmiPrvSE qui s’exécutent simultanément. Quand vous redémarrez, le processus hôte est redémarré et le cache est effacé.
 
 Pour recycler la configuration et effacer le cache sans redémarrer l’ordinateur, vous devez arrêter, puis redémarrer le processus hôte. Vous pouvez le faire pour chaque instance : vous identifiez le processus, l’arrêtez et le redémarrez. Vous pouvez également utiliser `DebugMode`, comme illustré ci-dessous, pour recharger la ressource DSC PowerShell.
 
@@ -302,7 +302,7 @@ Vous pouvez configurer le gestionnaire de configuration local DSC de façon à u
 La démonstration suivante explique comment `DebugMode` peut actualiser le cache de façon automatique. Tout d’abord, examinons la configuration par défaut :
 
 ```
-PS C:\Users\WinVMAdmin\Desktop> Get-DscLocalConfigurationManager
+PS C:\> Get-DscLocalConfigurationManager
  
  
 AllowModuleOverwrite           : False
@@ -333,7 +333,7 @@ function Get-TargetResource
         [Parameter(Mandatory)]
         $onlyProperty
     )
-    return @{onlyProperty = Get-Content -path "$env:SystemDrive\OutputFromTestProviderDebugMode.txt"}
+    return @{onlyProperty = Get-Content -Path "$env:SystemDrive\OutputFromTestProviderDebugMode.txt"}
 }
 function Set-TargetResource
 {
@@ -342,7 +342,7 @@ function Set-TargetResource
         [Parameter(Mandatory)]
         $onlyProperty
     )
-    "1"|Out-File -PSPath "$env:SystemDrive\OutputFromTestProviderDebugMode.txt"
+    "1" | Out-File -PSPath "$env:SystemDrive\OutputFromTestProviderDebugMode.txt"
 }
 function Test-TargetResource
 {
@@ -386,7 +386,7 @@ function Get-TargetResource
         [Parameter(Mandatory)]
         `$onlyProperty
     )
-    return @{onlyProperty = Get-Content -path "$env:SystemDrive\OutputFromTestProviderDebugMode.txt"}
+    return @{onlyProperty = Get-Content -Path "$env:SystemDrive\OutputFromTestProviderDebugMode.txt"}
 }
 function Set-TargetResource
 {
@@ -395,7 +395,7 @@ function Set-TargetResource
         [Parameter(Mandatory)]
         `$onlyProperty
     )
-    "$newResourceOutput"|Out-File -PSPath C:\OutputFromTestProviderDebugMode.txt
+    "$newResourceOutput" | Out-File -PSPath C:\OutputFromTestProviderDebugMode.txt
 }
 function Test-TargetResource
 {
@@ -409,7 +409,7 @@ function Test-TargetResource
 "@ | Out-File -FilePath "C:\Program Files\WindowsPowerShell\Modules\MyPowerShellModules\DSCResources\TestProviderDebugMode\TestProviderDebugMode.psm1
 ```
 
-Ce script génère un nombre aléatoire et met à jour le fournisseur cade en conséquence. Quand `DebugMode` a la valeur false, le contenu du fichier « **$env:SystemDrive\OutputFromTestProviderDebugMode.txt** » est toujours le même.
+Ce script génère un nombre aléatoire et met à jour le code du fournisseur en conséquence. Quand `DebugMode` a la valeur false, le contenu du fichier « **$env:SystemDrive\OutputFromTestProviderDebugMode.txt** » est toujours le même.
 
 À présent, définissez `DebugMode` avec la valeur **TRUE** dans votre script de configuration :
 
@@ -423,17 +423,17 @@ LocalConfigurationManager
 Quand vous réexécutez le script ci-dessus, le contenu du fichier change à chaque fois. (Vous pouvez exécuter `Get-DscConfiguration` pour le vérifier.) Voici le résultat de deux exécutions supplémentaires (les résultats peuvent être différents quand vous exécutez le script) :
 
 ```powershell
-PS C:\Users\WinVMAdmin\Desktop> Get-DscConfiguration -CimSession (New-CimSession localhost)
+PS C:\> Get-DscConfiguration -CimSession (New-CimSession localhost)
  
 onlyProperty                            PSComputerName                         
 ------------                            --------------                         
 20                                      localhost                              
  
-PS C:\Users\WinVMAdmin\Desktop> Get-DscConfiguration -CimSession (New-CimSession localhost)
+PS C:\> Get-DscConfiguration -CimSession (New-CimSession localhost)
  
 onlyProperty                            PSComputerName                         
 ------------                            --------------                         
-14 
+14                                      localhost
 ```
 
 ## Voir aussi
@@ -442,8 +442,12 @@ onlyProperty                            PSComputerName
 * [Ressource Log dans DSC](logResource.md)
 
 ### Concepts
-* [Création de ressources personnalisées de configuration d’état souhaité Windows PowerShell](authoringResource.md)
+* [Création de ressources DSC Windows PowerShell personnalisées](authoringResource.md)
 
 ### Autres ressources
-* [Windows PowerShell Desired State Configuration Cmdlets](https://technet.microsoft.com/en-us/library/dn521624(v=wps.630).aspx)
-<!--HONumber=Feb16_HO4-->
+* [Applets de commande de la configuration d’état souhaité Windows PowerShell](https://technet.microsoft.com/en-us/library/dn521624(v=wps.630).aspx)
+
+
+<!--HONumber=Mar16_HO1-->
+
+

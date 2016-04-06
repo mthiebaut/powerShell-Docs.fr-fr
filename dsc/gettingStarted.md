@@ -10,9 +10,9 @@ Les [**configurations**](https://msdn.microsoft.com/en-us/powershell/dsc/configu
 Les configurations peuvent se présenter sous différentes formes. Le moyen le plus simple de créer une nouvelle configuration consiste à créer un fichier .ps1 (script PowerShell). Pour ce faire, ouvrez l’éditeur de votre choix. PowerShell ISE constitue un bon choix, car il comprend DSC de manière native. Enregistrez ce qui suit dans un fichier PS1 :
 
 ```powershell
-configuration myFirstConfiguration
+configuration MyFirstConfiguration
 {
-    import-dscresource -name WindowsFeature
+    Import-DscResource -Name WindowsFeature
 
     Node localhost
     {
@@ -33,7 +33,7 @@ La ligne suivante est une instruction d’importation, similaire à l’importat
 
 Node définit le nom de l’ordinateur auquel est appliquée la configuration. Même si elles sont modifiées localement, les configurations peuvent atteindre les nœuds distants et les configurer. 
 
-Les nœuds peuvent être des noms d’ordinateurs ou des adresses IP. Vous pouvez avoir plusieurs nœuds dans un même document de configuration. À l’aide de [données de configuration](https://msdn.microsoft.com/en-us/powershell/dsc/configdata), vous pouvez également appliquer une même configuration à plusieurs nœuds. Ici, le nœud s’appelle « localhost », ce qui correspond à l’ordinateur local. 
+Les nœuds peuvent être des noms d’ordinateurs ou des adresses IP. Vous pouvez avoir plusieurs nœuds dans un même document de configuration. À l’aide de [données de configuration](https://msdn.microsoft.com/en-us/powershell/dsc/configdata), vous pouvez également appliquer une même configuration à plusieurs nœuds. Ici, le nœud s’appelle « localhost », ce qui correspond à l’ordinateur local. 
 
 L’élément suivant est une [**ressource**](https://msdn.microsoft.com/en-us/powershell/dsc/resources). Les ressources sont les blocs de construction des configurations. Chaque ressource est un module qui définit la logique d’implémentation d’un aspect d’un ordinateur. Vous pouvez afficher toutes les ressources de votre ordinateur en exécutant **Get-DscResource** dans PowerShell. Les ressources doivent être présentes sur l’ordinateur local et importées avant de pouvoir être utilisées dans une configuration avec **Import-DscResource**, qui se trouve sur la deuxième ligne de cette configuration. 
 
@@ -50,11 +50,15 @@ Une fois la configuration exécutée, un dossier portant le nom de la configurat
 
 Pour promulguer la configuration :
 ```powershell
-Start-DscConfiguration -path ./myFirstConfiguration
+Start-DscConfiguration -Path ./myFirstConfiguration
 ```
-Cela crée une tâche PowerShell qui contacte les nœuds de la configuration et les configure. Pour afficher la sortie de la tâche, utilisez -wait. 
+Cela crée une tâche PowerShell qui contacte les nœuds de la configuration et les configure. Pour afficher la sortie de la tâche, utilisez -Wait. 
 ```powershell
-Start-DscConfiguration -path ./myFirstConfiguration -wait
+Start-DscConfiguration -Path ./myFirstConfiguration -Wait
 ```
 
-<!--HONumber=Feb16_HO4-->
+
+
+<!--HONumber=Mar16_HO1-->
+
+

@@ -63,7 +63,7 @@ configuration Sample_xDscWebService
 1. Exécutez la configuration, en passant l’empreinte numérique du certificat auto-signé que vous avez créé comme paramètre **certificateThumbPrint** :
 
 ```powershell
-PS:\>$myCert = Get-ChildItem CERT: | Where-Object {$_.Subject -eq 'CN=PSDSCPullServerCert'}
+PS:\>$myCert = Get-ChildItem CERT:\LocalMachine\My | Where-Object {$_.Subject -eq 'CN=PSDSCPullServerCert'}
 PS:\>Sample_xDSCService -certificateThumbprint $myCert.Thumbprint 
 ```
 
@@ -86,7 +86,11 @@ Le fichier de somme de contrôle doit être présent dans le même répertoire q
 >**Remarque** : Si vous modifiez le fichier MOF de configuration de quelque façon que ce soit, vous devez aussi recréer le fichier de somme de contrôle.
 
 ## Voir aussi
-* [Présentation de la configuration d’état souhaité Windows PowerShell](overview.md)
-* [Application des configurations](enactingConfigurations.md)
+* [Vue d’ensemble de la fonctionnalité Desired State Configuration de Windows PowerShell](overview.md)
+* [Promulgation des configurations](enactingConfigurations.md)
 * [Comment récupérer des informations sur les nœuds à partir d’un serveur collecteur DSC](retrieveNodeInfo.md)
-<!--HONumber=Feb16_HO4-->
+
+
+<!--HONumber=Mar16_HO1-->
+
+
