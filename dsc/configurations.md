@@ -52,7 +52,7 @@ Configuration MyDscConfiguration {
 }
 ```
 
-Dans cet exemple, vous spécifiez le nom du nœud en lui passant comme paramètre $computerName quand vous [compilez la configuration] (# compiler la configuration). Par défaut, le nom est « localhost ».
+Dans cet exemple, vous spécifiez le nom du nœud en lui passant comme paramètre $computerName quand vous [compilez la configuration] (# Compiling the configuration). Par défaut, le nom est « localhost ».
 
 ## Compilation de la configuration.
 Avant de pouvoir promulguer une configuration, vous devez la compiler dans un document MOF. Pour cela, appelez la configuration comme pour une fonction PowerShell.
@@ -118,4 +118,8 @@ Une fois ces modules placés dans `$env:PSModulePath` et correctement reconnus p
 * [Présentation de la configuration de l’état souhaité de Windows PowerShell](overview.md)
 * [Ressources DSC](resources.md)
 * [Configuration du Gestionnaire de configuration local](metaconfig.md)
+
+
 <!--HONumber=Feb16_HO4-->
+
+
