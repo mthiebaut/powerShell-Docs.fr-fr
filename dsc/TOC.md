@@ -4,6 +4,7 @@
 ## [Application des configurations](enactingConfigurations.md)
 ## [Données de configuration](configData.md)
 ### [Options d’informations d’identification dans les données de configuration](configDataCredentials.md)
+### [Exécution de DSC avec les informations d’identification de l’utilisateur](runAsUser.md)
 ## [Sécurisation du fichier MOF de configuration](secureMOF.md)
 ## [Configurations partielles](partialConfigs.md)
 # [Ressources](resources.md)
@@ -18,7 +19,7 @@
 ### [Ressource Script](scriptResource.md)
 ### [Ressource Service](serviceResource.md)
 ### [Ressource utilisateur](userResource.md)
-### [Ressource Windows Feature](windowsfeatureResource.md)
+### [Ressource WindowsFeature](windowsfeatureResource.md)
 ### [Ressource WindowsProcess](windowsProcessResource.md)
 ## [Création de ressources personnalisées](authoringResource.md) 
 ### [Ressources personnalisées basées sur le fichier MOF](authoringResourceMOF.md)
@@ -26,6 +27,7 @@
 ### [Ressources personnalisées basées sur une classe](authoringResourceClass.md)
 ### [Ressources composites](authoringResourceComposite.md)
 ### [Débogage des ressources DSC](debugResource.md)
+### [Écriture d’une ressource de DSC d’instance unique (recommandation)](singleInstance.md)
 ### [Liste de vérification de création de ressources](resourceAuthoringChecklist.md)
 
 # [Configuration du gestionnaire de configuration local](metaConfig.md)
@@ -33,6 +35,7 @@
 
 # Modèle DSC par extraction
 ## [Configuration d’un serveur collecteur web](pullServer.md)
+## [Configuration d’un serveur collecteur SMB DSC](pullServerSMB.md)
 ## [Configuration d’un client collecteur](pullClient.md)
 ### [Configuration d’un client collecteur à l’aide du nom de configuration](pullClientConfigNames.md)
 ### [Configuration d’un client collecteur à l’aide de l’ID de configuration](pullClientConfigID.md)
@@ -53,4 +56,8 @@
 ### [Ressource nxService](lnxServiceResource.md)
 ### [Ressource nxSshAuthorizedKeys](lnxSshAuthorizedKeysResource.md)
 ### [Ressource nxUser](lnxUserResource.md)
-<!--HONumber=Mar16_HO1-->
+
+
+<!--HONumber=Apr16_HO1-->
+
+
