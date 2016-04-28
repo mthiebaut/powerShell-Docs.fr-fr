@@ -6,13 +6,19 @@ Les ressources sont des blocs de construction que vous pouvez utiliser pour écr
 
 Le tableau suivant fournit la liste de ces ressources, ainsi que des liens vers les rubriques qui expliquent ces ressources en détail.
 
-* [Ressource nxArchive](lnxArchiveResource.md) : fournit un mécanisme permettant de décompresser les fichiers d’archive (.tar, .zip) à un emplacement spécifique.
-* [Ressource nxEnvironment](lnxEnvironmentResource.md) : gère les variables d’environnement des nœuds cibles. 
-* [Ressource nxFile](lnxFileResource.md) : gère les fichiers et les répertoires Linux. 
-* [Ressource nxFileLine](lnxFileLineResource.md) : gère des lignes d’un fichier Linux. 
-* [Ressource nxGroup](lnxGroupResource.md) : gère les groupes Linux locaux. 
-* [Ressource nxPackage](lnxPackageResource.md) : gère les packages des nœuds Linux. - [Ressource nxScript](lnxScriptResource.md) : exécute les scripts des nœuds cibles.
-* [Ressource nxService](lnxServiceResource.md) : gère les services (démons) Linux.
-* [Ressource nxSshAuthorizedKeys](lnxSshAuthorizedKeysResource.md) : gère des clés ssh publiques pour un utilisateur Linux. 
-* [Ressource nxUser](lnxUserResource.md) : gère les utilisateurs Linux locaux. 
-  <!--HONumber=Feb16_HO4-->
+* <ctype="x-NOTFOUND" mdpre="[" mdpost="](lnxArchiveResource.md)">Ressource nxArchive</ctype="x-NOTFOUND"> : fournit un mécanisme permettant de décompresser les fichiers d’archive (.tar, .zip) à un emplacement spécifique.
+* <ctype="x-NOTFOUND" mdpre="[" mdpost="](lnxEnvironmentResource.md)">Ressource nxEnvironment</ctype="x-NOTFOUND"> : gère les variables d’environnement des nœuds cibles. 
+* <ctype="x-NOTFOUND" mdpre="[" mdpost="](lnxFileResource.md)">Ressource nxFile</ctype="x-NOTFOUND"> : gère les fichiers et les répertoires Linux. 
+* <ctype="x-NOTFOUND" mdpre="[" mdpost="](lnxFileLineResource.md)">Ressource nxFileLine</ctype="x-NOTFOUND"> : gère les lignes individuelles d’un fichier Linux. 
+* <ctype="x-NOTFOUND" mdpre="[" mdpost="](lnxGroupResource.md)">Ressource nxGroup</ctype="x-NOTFOUND"> : gère les groupes Linux locaux. 
+* <ctype="x-NOTFOUND" mdpre="[" mdpost="](lnxPackageResource.md)">Ressource nxPackage</ctype="x-NOTFOUND"> : gère les packages des nœuds Linux.
+* <ctype="x-NOTFOUND" mdpre="[" mdpost="](lnxScriptResource.md)">Ressources nxScript</ctype="x-NOTFOUND"> : exécute des scripts sur les nœuds cibles.
+* <ctype="x-NOTFOUND" mdpre="[" mdpost="](lnxServiceResource.md)">Ressource nxService</ctype="x-NOTFOUND"> : gère les services (démons) Linux.
+* <ctype="x-NOTFOUND" mdpre="[" mdpost="](lnxSshAuthorizedKeysResource.md)">Ressource nxSshAuthorizedKeys</ctype="x-NOTFOUND"> : gère des clés ssh publiques pour un utilisateur Linux. 
+* <ctype="x-NOTFOUND" mdpre="[" mdpost="](lnxUserResource.md)">Ressource nxUser</ctype="x-NOTFOUND"> : gère les utilisateurs Linux locaux. 
+  
+
+
+<!--HONumber=Mar16_HO4-->
+
+
