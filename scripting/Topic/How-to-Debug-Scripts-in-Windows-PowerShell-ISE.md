@@ -26,12 +26,12 @@ Dans l’environnement de débogage de Windows PowerShell, vous pouvez définir 
 
 3.  **Point d’arrêt de commande.** L’exécution du script s’interrompt chaque fois que la commande désignée est sur le point d’être exécutée. Il est possible d’inclure des paramètres pour filtrer davantage le point d’arrêt uniquement pour l’opération souhaitée. La commande peut également être une fonction que vous créez.
 
-Dans l’environnement de débogage de [!INCLUDE[ise_2](../Token/ise_2_md.md)], seuls des points d’arrêt de ligne peuvent être définis à l’aide du menu ou des raccourcis clavier. Les deux autres types de points d’arrêt doivent être définis à partir du volet Console à l’aide de l’applet de commande [[m2] Set-PSBreakpoint](assetId:///88d2d9ad-17dc-44ae-99aa-f841125b9dc8). Cette section décrit comment effectuer des tâches de débogage dans [!INCLUDE[ise_2](../Token/ise_2_md.md)] en utilisant les menus disponibles, et exécuter un éventail plus large de commandes à partir du volet Console à l’aide de scripts.
+Dans l’environnement de débogage de [!INCLUDE[ise_2](../Token/ise_2_md.md)], seuls des points d’arrêt de ligne peuvent être définis à l’aide du menu ou des raccourcis clavier. Les deux autres types de points d’arrêt doivent être définis à partir du volet Console à l’aide de l’applet de commande [[m2] Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/88d2d9ad-17dc-44ae-99aa-f841125b9dc8). Cette section décrit comment effectuer des tâches de débogage dans [!INCLUDE[ise_2](../Token/ise_2_md.md)] en utilisant les menus disponibles, et exécuter un éventail plus large de commandes à partir du volet Console à l’aide de scripts.
 
 ### Pour définir un point d’arrêt
 Un point d’arrêt ne peut être défini dans un script qu’après l’enregistrement de celui-ci. Cliquez avec le bouton droit sur la ligne dans laquelle vous souhaitez définir un point d’arrêt de ligne, puis cliquez sur **Basculer le point d’arrêt**. Vous pouvez également cliquer sur la ligne dans laquelle vous souhaitez définir un point d’arrêt de ligne, puis appuyer sur **F9** ou, dans le menu **Déboguer**, cliquer sur **Basculer le point d’arrêt**.
 
-Le script suivant montre comment définir un point d’arrêt de variable à partir du volet Console en utilisant l’applet de commande [Set-PSBreakpoint](assetId:///6afd5d2c-a285-4796-8607-3cbf49471420).
+Le script suivant montre comment définir un point d’arrêt de variable à partir du volet Console en utilisant l’applet de commande [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420).
 
 ```
 # This command sets a breakpoint on the Server variable in the Sample.ps1 script.
@@ -41,7 +41,7 @@ set-psbreakpoint -script sample.ps1 -variable Server
 ### Liste de tous les points d’arrêt
 Affiche tous les points d’arrêt dans la session [!INCLUDE[wps_1](../Token/wps_1_md.md)] en cours.
 
-Dans le menu **Déboguer**, cliquez sur **Lister les points d’arrêt**. Le script suivant montre comment répertorier tous les points d’arrêt à partir du volet Console en utilisant l’applet de commande [Get-PSBreakpoint](assetId:///0bf48936-00ab-411c-b5e0-9b10a812a3c6).
+Dans le menu **Déboguer**, cliquez sur **Lister les points d’arrêt**. Le script suivant montre comment répertorier tous les points d’arrêt à partir du volet Console en utilisant l’applet de commande [Get-PSBreakpoint](https://technet.microsoft.com/en-us/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6).
 
 ```
 # This command lists all breakpoints in the current session. 
@@ -49,7 +49,7 @@ get-psbreakpoint
 ```
 
 ### Supprimer un point d’arrêt
-La suppression d’un point d’arrêt revient à effacer celui-ci.  Si vous pensez que vous pourriez être amené à le réutiliser ultérieurement, envisagez plutôt de le [désactiver](#bkmk_disable).  Cliquez avec le bouton droit sur la ligne dans laquelle vous souhaitez supprimer un point d’arrêt, puis cliquez sur **Basculer le point d’arrêt**. Vous pouvez également cliquer sur la ligne dans laquelle vous souhaitez supprimer un point d’arrêt, puis, dans le menu **Déboguer**, cliquer sur **Basculer le point d’arrêt**. Le script suivant montre comment supprimer un point d’arrêt avec un ID spécifié à partir du volet Console en utilisant l’applet de commande [Remove-PSBreakpoint](assetId:///4c877a80-0ea0-4790-9281-88c08ef0ddd6).
+La suppression d’un point d’arrêt revient à effacer celui-ci.  Si vous pensez que vous pourriez être amené à le réutiliser ultérieurement, envisagez plutôt de le [désactiver](#bkmk_disable).  Cliquez avec le bouton droit sur la ligne dans laquelle vous souhaitez supprimer un point d’arrêt, puis cliquez sur **Basculer le point d’arrêt**. Vous pouvez également cliquer sur la ligne dans laquelle vous souhaitez supprimer un point d’arrêt, puis, dans le menu **Déboguer**, cliquer sur **Basculer le point d’arrêt**. Le script suivant montre comment supprimer un point d’arrêt avec un ID spécifié à partir du volet Console en utilisant l’applet de commande [Remove-PSBreakpoint](https://technet.microsoft.com/en-us/library/4c877a80-0ea0-4790-9281-88c08ef0ddd6).
 
 ```
 # This command deletes the breakpoint with breakpoint ID 2.
@@ -59,7 +59,7 @@ remove-psbreakpoint -id 2
 ### Supprimer tous les points d’arrêt
 Pour supprimer tous les points d’arrêt définis dans la session active, dans le menu **Déboguer**, cliquez sur **Supprimer tous les points d’arrêt**.
 
-Le script suivant montre comment supprimer tous les points d’arrêt à partir du volet Console en utilisant l’applet de commande [Remove-PSBreakpoint](assetId:///4c877a80-0ea0-4790-9281-88c08ef0ddd6).
+Le script suivant montre comment supprimer tous les points d’arrêt à partir du volet Console en utilisant l’applet de commande [Remove-PSBreakpoint](https://technet.microsoft.com/en-us/library/4c877a80-0ea0-4790-9281-88c08ef0ddd6).
 
 ```
 # This command deletes all of the breakpoints in the current session.
@@ -67,7 +67,7 @@ get-breakpoint | remove-breakpoint
 ```
 
 ### <a name="bkmk_disable"></a>Désactiver un point d’arrêt
-La désactivation d’un point d’arrêt n’a pas pour effet de supprimer celui-ci, mais uniquement de le mettre hors service jusqu’à sa réactivation éventuelle.  Pour désactiver un point d’arrêt de ligne spécifique, cliquez avec le bouton droit sur la ligne dans laquelle vous souhaitez désactiver ce point d’arrêt, puis cliquez sur **Désactiver le point d’arrêt**. Vous pouvez également cliquer sur la ligne dans laquelle vous souhaitez désactiver un point d’arrêt, puis appuyer sur **F9** ou, dans le menu **Déboguer**, cliquer sur **Désactiver le point d’arrêt**. Le script suivant montre comment supprimer un point d’arrêt avec un ID spécifié à partir du volet Console en utilisant l’applet de commande [Disable-PSBreakpoint](assetId:///d4974e9b-0aaa-4e20-b87f-f599a413e4e8).
+La désactivation d’un point d’arrêt n’a pas pour effet de supprimer celui-ci, mais uniquement de le mettre hors service jusqu’à sa réactivation éventuelle.  Pour désactiver un point d’arrêt de ligne spécifique, cliquez avec le bouton droit sur la ligne dans laquelle vous souhaitez désactiver ce point d’arrêt, puis cliquez sur **Désactiver le point d’arrêt**. Vous pouvez également cliquer sur la ligne dans laquelle vous souhaitez désactiver un point d’arrêt, puis appuyer sur **F9** ou, dans le menu **Déboguer**, cliquer sur **Désactiver le point d’arrêt**. Le script suivant montre comment supprimer un point d’arrêt avec un ID spécifié à partir du volet Console en utilisant l’applet de commande [Disable-PSBreakpoint](https://technet.microsoft.com/en-us/library/d4974e9b-0aaa-4e20-b87f-f599a413e4e8).
 
 ```
 # This command disables the breakpoint with breakpoint ID 0.
@@ -75,7 +75,7 @@ disable-psbreakpoint -id 0
 ```
 
 ### Désactiver tous les points d’arrêt
-La désactivation d’un point d’arrêt n’a pas pour effet de supprimer celui-ci, mais uniquement de le mettre hors service jusqu’à sa réactivation éventuelle.  Pour désactiver tous les points d’arrêt dans la session active, dans le menu **Déboguer**, cliquez sur **Désactiver tous les points d’arrêt**. Le script suivant montre comment désactiver tous les points d’arrêt à partir du volet Console en utilisant l’applet de commande [Disable-PSBreakpoint](assetId:///d4974e9b-0aaa-4e20-b87f-f599a413e4e8).
+La désactivation d’un point d’arrêt n’a pas pour effet de supprimer celui-ci, mais uniquement de le mettre hors service jusqu’à sa réactivation éventuelle.  Pour désactiver tous les points d’arrêt dans la session active, dans le menu **Déboguer**, cliquez sur **Désactiver tous les points d’arrêt**. Le script suivant montre comment désactiver tous les points d’arrêt à partir du volet Console en utilisant l’applet de commande [Disable-PSBreakpoint](https://technet.microsoft.com/en-us/library/d4974e9b-0aaa-4e20-b87f-f599a413e4e8).
 
 ```
 # This command disables all breakpoints in the current session. 
@@ -84,7 +84,7 @@ get-psbreakpoint | disable-psbreakpoint
 ```
 
 ### Activer un point d’arrêt
-Pour activer un point d’arrêt spécifique, cliquez avec le bouton droit sur la ligne dans laquelle vous souhaitez activer ce point d’arrêt, puis cliquez sur **Activer le point d’arrêt**. Vous pouvez également cliquer sur la ligne dans laquelle vous souhaitez activer un point d’arrêt, puis appuyer sur **F9** ou, dans le menu **Déboguer**, cliquer sur **Activer le point d’arrêt**. Le script suivant montre comment activer des points d’arrêt spécifiques à partir du volet Console en utilisant l’applet de commande [Enable-PSBreakpoint](assetId:///739e1091-3b3f-405f-a428-bec7543e5df0).
+Pour activer un point d’arrêt spécifique, cliquez avec le bouton droit sur la ligne dans laquelle vous souhaitez activer ce point d’arrêt, puis cliquez sur **Activer le point d’arrêt**. Vous pouvez également cliquer sur la ligne dans laquelle vous souhaitez activer un point d’arrêt, puis appuyer sur **F9** ou, dans le menu **Déboguer**, cliquer sur **Activer le point d’arrêt**. Le script suivant montre comment activer des points d’arrêt spécifiques à partir du volet Console en utilisant l’applet de commande [Enable-PSBreakpoint](https://technet.microsoft.com/en-us/library/739e1091-3b3f-405f-a428-bec7543e5df0).
 
 ```
 # This command enables breakpoints with breakpoint IDs 0, 1, and 5.
@@ -92,7 +92,7 @@ enable-psbreakpoint -id 0, 1, 5
 ```
 
 ### Activer tous les points d’arrêt
-Pour activer tous les points d’arrêt définis dans la session active, dans le menu **Déboguer**, cliquez sur **Activer tous les points d’arrêt**. Le script suivant montre comment activer tous les points d’arrêt à partir du volet Console en utilisant l’applet de commande [Enable-PSBreakpoint](assetId:///739e1091-3b3f-405f-a428-bec7543e5df0).
+Pour activer tous les points d’arrêt définis dans la session active, dans le menu **Déboguer**, cliquez sur **Activer tous les points d’arrêt**. Le script suivant montre comment activer tous les points d’arrêt à partir du volet Console en utilisant l’applet de commande [Enable-PSBreakpoint](https://technet.microsoft.com/en-us/library/739e1091-3b3f-405f-a428-bec7543e5df0).
 
 ```
 # This command enables all breakpoints in the current session. 
@@ -101,7 +101,7 @@ get-psbreakpoint | enable-psbreakpoint
 ```
 
 ## <a name="bkmk_2"></a>Comment gérer une session de débogage
-Avant de commencer le débogage, vous devez définir un ou plusieurs points d’arrêt. Vous ne pouvez définir un point d’arrêt que si le script que vous souhaitez déboguer est enregistré. Pour des instructions sur la définition d’un point d’arrêt, voir [Comment gérer les points d’arrêt](#bkmk_1) ou [Set-PSBreakpoint](assetId:///6afd5d2c-a285-4796-8607-3cbf49471420). Une fois le débogage démarré, vous ne pouvez modifier un script qu’après avoir arrêté le débogage. Un script dans lequel un ou plusieurs points d’arrêt sont définis est automatiquement enregistré avant son exécution.
+Avant de commencer le débogage, vous devez définir un ou plusieurs points d’arrêt. Vous ne pouvez définir un point d’arrêt que si le script que vous souhaitez déboguer est enregistré. Pour des instructions sur la définition d’un point d’arrêt, voir [Comment gérer les points d’arrêt](#bkmk_1) ou [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420). Une fois le débogage démarré, vous ne pouvez modifier un script qu’après avoir arrêté le débogage. Un script dans lequel un ou plusieurs points d’arrêt sont définis est automatiquement enregistré avant son exécution.
 
 ### Pour commencer le débogage
 Appuyez sur **F5** ou, dans la barre d’outils, cliquez sur l’icône **Exécuter le script**. Ou encore, dans le menu **Déboguer**, cliquez sur **Exécuter/Continuer**. Le script s’exécute jusqu’à ce qu’il rencontre le premier point d’arrêt. Il suspend alors l’opération et met en surbrillance la ligne sur laquelle il s’est arrêté.
@@ -175,6 +175,6 @@ C:\ps-test\MyScript.ps1
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 

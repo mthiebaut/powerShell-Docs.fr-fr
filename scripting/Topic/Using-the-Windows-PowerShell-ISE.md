@@ -31,10 +31,10 @@ Fournit des informations sur les étapes de création et d’utilisation de prof
 ## Voir aussi
 [Découverte de Windows PowerShell ISE](../Topic/Exploring-the-Windows-PowerShell-ISE.md)
 [Accessibilité dans Windows PowerShell ISE](../Topic/Accessibility-in-Windows-PowerShell-ISE.md)
-[Modèle objet de script Windows PowerShell ISE](assetId:///69b047d0-da79-413e-b948-8e45d05d1f85)
+[Modèle objet de script Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/69b047d0-da79-413e-b948-8e45d05d1f85)
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 

@@ -14,7 +14,7 @@ ms.assetid: e0d2c6e8-5126-40e7-a1e1-d1cff29fe94a
 > Depuis [!INCLUDE[ise_2](../Token/ise_2_md.md)]3.0, les volets Commande et Sortie ont été combinés en un seul volet Console.
 
 ## Barre de menus
-La barre de menus contient les menus **Fichier**, **Modifier**, **Affichage**, **Outils**, **Débogage**, **Modules complémentaires** et **Aide**. Les boutons dans les menus permettent d’effectuer des tâches liées à l’écriture et à l’exécution de scripts, ainsi qu’à l’exécution de commandes dans [!INCLUDE[ise_2](../Token/ise_2_md.md)]. En outre, il est possible de placer un [menu de modules complémentaires](assetId:///412dd662-417a-4661-ada2-558802d0f6d2#submenus) sur la barre de menus en exécutant des scripts qui utilisent le [Modèle objet de script Windows PowerShell ISE](assetId:///1737ddb7-c20d-4e6b-a0d3-68cc2650f2a1).
+La barre de menus contient les menus **Fichier**, **Modifier**, **Affichage**, **Outils**, **Débogage**, **Modules complémentaires** et **Aide**. Les boutons dans les menus permettent d’effectuer des tâches liées à l’écriture et à l’exécution de scripts, ainsi qu’à l’exécution de commandes dans [!INCLUDE[ise_2](../Token/ise_2_md.md)]. En outre, il est possible de placer un [menu de modules complémentaires](https://technet.microsoft.com/en-us/library/412dd662-417a-4661-ada2-558802d0f6d2#submenus) sur la barre de menus en exécutant des scripts qui utilisent le [Modèle objet de script Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/1737ddb7-c20d-4e6b-a0d3-68cc2650f2a1).
 
 > [!NOTE]
 > Dans [!INCLUDE[ise_2](../Token/ise_2_md.md)] 2.0, les menus **Outils** et **Modules complémentaires** n’étaient pas présents.
@@ -73,6 +73,6 @@ L’aide sur [!INCLUDE[ise_2](../Token/ise_2_md.md)] est disponible sur le web d
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 

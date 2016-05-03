@@ -31,13 +31,13 @@ Pour exécuter le moteur [!INCLUDE[psversion2](../Token/psversion2_md.md)] dans 
 
 Il s’agit d’une tâche avancée généralement effectuée par un administrateur système.
 
-La procédure suivante utilise le paramètre **PSVersion** de l’applet de commande [Register-PSSessionConfiguration](assetId:///e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) pour créer une configuration de session qui utilise le moteur [!INCLUDE[psversion2](../Token/psversion2_md.md)]. Vous pouvez également utiliser le paramètre **PowerShellVersion** de l’applet de comment [New-PSSessionConfigurationFile](assetId:///5f3e3633-6e90-479c-aea9-ba45a1954866) pour créer un fichier de configuration de session pour une session qui charge le moteur [!INCLUDE[psversion2](../Token/psversion2_md.md)], et pouvez utiliser le paramètre **PSVersion** de l’applet de commande [Set-PSSessionConfiguration](assetId:///b21fbad3-1759-4260-b206-dcb8431cd6ea) pour modifier une configuration de session afin d’utiliser le moteur [!INCLUDE[psversion2](../Token/psversion2_md.md)].
+La procédure suivante utilise le paramètre **PSVersion** de l’applet de commande [Register-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) pour créer une configuration de session qui utilise le moteur [!INCLUDE[psversion2](../Token/psversion2_md.md)]. Vous pouvez également utiliser le paramètre **PowerShellVersion** de l’applet de comment [New-PSSessionConfigurationFile](https://technet.microsoft.com/en-us/library/5f3e3633-6e90-479c-aea9-ba45a1954866) pour créer un fichier de configuration de session pour une session qui charge le moteur [!INCLUDE[psversion2](../Token/psversion2_md.md)], et pouvez utiliser le paramètre **PSVersion** de l’applet de commande [Set-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/b21fbad3-1759-4260-b206-dcb8431cd6ea) pour modifier une configuration de session afin d’utiliser le moteur [!INCLUDE[psversion2](../Token/psversion2_md.md)].
 
-Pour plus d’informations sur les fichiers de configuration de session, voir [about_Session_Configuration_Files](assetId:///c7217447-1ebf-477b-a8ef-4dbe9a1473b8). Pour plus d’informations sur les configurations de session, y compris l’installation et la sécurité, voir [about_Session_Configurations [v4]](assetId:///a2fbe12a-350c-4d04-be50-24102824e3ab).
+Pour plus d’informations sur les fichiers de configuration de session, voir [about_Session_Configuration_Files](https://technet.microsoft.com/en-us/library/c7217447-1ebf-477b-a8ef-4dbe9a1473b8). Pour plus d’informations sur les configurations de session, y compris l’installation et la sécurité, voir [about_Session_Configurations [v4]](https://technet.microsoft.com/en-us/library/a2fbe12a-350c-4d04-be50-24102824e3ab).
 
 #### Pour démarrer une session à distance [!INCLUDE[psversion2](../Token/psversion2_md.md)]
 
-1.  Pour créer une configuration de session qui requiert le moteur [!INCLUDE[psversion2](../Token/psversion2_md.md)], utilisez le paramètre **PSVersion** de l’applet de commande [Register-PSSessionConfiguration](assetId:///e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) avec la valeur « 2.0 ». Exécutez cette commande sur l’ordinateur « côté serveur » ou en fin de réception de la connexion.
+1.  Pour créer une configuration de session qui requiert le moteur [!INCLUDE[psversion2](../Token/psversion2_md.md)], utilisez le paramètre **PSVersion** de l’applet de commande [Register-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) avec la valeur « 2.0 ». Exécutez cette commande sur l’ordinateur « côté serveur » ou en fin de réception de la connexion.
 
     L’exemple de commande suivant crée la configuration de session PS2 sur l’ordinateur Server01. Pour exécuter cette commande, démarrez [!INCLUDE[psversion4](../Token/psversion4_md.md)] ou [!INCLUDE[psversion3](../Token/psversion3_md.md)] avec l’option **Exécuter en tant qu’administrateur »**.
 
@@ -45,7 +45,7 @@ Pour plus d’informations sur les fichiers de configuration de session, voir [a
     Register-PSSessionConfiguration -Name PS2 -PSVersion 2.0
     ```
 
-2.  Pour créer une session sur l’ordinateur Server01 qui utilise la configuration de session PS2, utilisez le paramètre **ConfigurationName** d’applets de commande qui créent une session à distance, telle l’applet de commande [New-PSSession](assetId:///76f6628c-054c-4eda-ba7a-a6f28daaa26f).
+2.  Pour créer une session sur l’ordinateur Server01 qui utilise la configuration de session PS2, utilisez le paramètre **ConfigurationName** d’applets de commande qui créent une session à distance, telle l’applet de commande [New-PSSession](https://technet.microsoft.com/en-us/library/76f6628c-054c-4eda-ba7a-a6f28daaa26f).
 
     Quand une session utilisant la configuration de session démarre, le moteur [!INCLUDE[psversion2](../Token/psversion2_md.md)] est automatiquement chargé dans la session.
 
@@ -56,7 +56,7 @@ Pour plus d’informations sur les fichiers de configuration de session, voir [a
     ```
 
 ## Comment démarrer un travail en arrière-plan avec le moteur [!INCLUDE[psversion2](../Token/psversion2_md.md)]
-Pour démarrer un travail en arrière-plan avec le moteur [!INCLUDE[psversion2](../Token/psversion2_md.md)], utilisez le paramètre **PSVersion** de l’applet de commande [Start-Job](assetId:///2bc04935-0deb-4ec0-b856-d7290cca6442).
+Pour démarrer un travail en arrière-plan avec le moteur [!INCLUDE[psversion2](../Token/psversion2_md.md)], utilisez le paramètre **PSVersion** de l’applet de commande [Start-Job](https://technet.microsoft.com/en-us/library/2bc04935-0deb-4ec0-b856-d7290cca6442).
 
 La commande suivante démarre un travail en arrière-plan avec le moteur [!INCLUDE[psversion2](../Token/psversion2_md.md)].
 
@@ -64,10 +64,10 @@ La commande suivante démarre un travail en arrière-plan avec le moteur [!INCLU
 Start-Job {Get-Process} -PSVersion 2.0
 ```
 
-Pour plus d’informations sur les travaux en arrière-plan, voir [about_Jobs [v4]](assetId:///7362512a-8a4e-4575-b2ea-a740e5c4f002).
+Pour plus d’informations sur les travaux en arrière-plan, voir [about_Jobs [v4]](https://technet.microsoft.com/en-us/library/7362512a-8a4e-4575-b2ea-a740e5c4f002).
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 

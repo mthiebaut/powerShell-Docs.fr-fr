@@ -19,11 +19,11 @@ Cette rubrique décrit les fonctionnalités d’accessibilité de [!INCLUDE[ise_
 [Raccourcis clavier pour le démarrage et la fermeture](#bkmk_7)
 Microsoft s'attache à rendre ses produits et services conviviaux. Les rubriques suivantes fournissent des informations sur les fonctionnalités, les produits et les services qui rendent [!INCLUDE[ise_2](../Token/ise_2_md.md)] plus accessible aux personnes handicapées.
 
-[!INCLUDE[ise_2](../Token/ise_2_md.md)] prend en charge l’affichage à contraste élevé. Pour les malvoyants, les informations de point d’arrêt sont disponibles via les applets de commande pour la gestion des points d’arrêt, telles que [Get-PSBreakpoint](assetId:///0bf48936-00ab-411c-b5e0-9b10a812a3c6) et [Set-PSBreakpoint](assetId:///6afd5d2c-a285-4796-8607-3cbf49471420). Pour plus d’informations, voir « Comment gérer des points d’arrêt » dans [Comment déboguer des scripts dans Windows PowerShell ISE](../Topic/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md#bkmk_1). En plus des fonctionnalités et utilitaires d’accessibilité dans Microsoft Windows, les fonctionnalités suivantes rendent Windows PowerShell ISE plus accessible aux personnes handicapées :
+[!INCLUDE[ise_2](../Token/ise_2_md.md)] prend en charge l’affichage à contraste élevé. Pour les malvoyants, les informations de point d’arrêt sont disponibles via les applets de commande pour la gestion des points d’arrêt, telles que [Get-PSBreakpoint](https://technet.microsoft.com/en-us/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6) et [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420). Pour plus d’informations, voir « Comment gérer des points d’arrêt » dans [Comment déboguer des scripts dans Windows PowerShell ISE](../Topic/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md#bkmk_1). En plus des fonctionnalités et utilitaires d’accessibilité dans Microsoft Windows, les fonctionnalités suivantes rendent Windows PowerShell ISE plus accessible aux personnes handicapées :
 
 -   Raccourcis clavier
 
--   Table de coloration de la syntaxe et capacité de modifier plusieurs autres paramètres de couleur à l’aide de l’objet de script [$psISE.Options](assetId:///75e2a76f-f3d1-490b-ad5d-e3829946aabb).
+-   Table de coloration de la syntaxe et capacité de modifier plusieurs autres paramètres de couleur à l’aide de l’objet de script [$psISE.Options](https://technet.microsoft.com/en-us/library/75e2a76f-f3d1-490b-ad5d-e3829946aabb).
 
 -   Modification de la taille du texte
 
@@ -149,6 +149,6 @@ Pour démarrer la console Windows PowerShell (PowerShell.exe) ou pour quitter [!
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 

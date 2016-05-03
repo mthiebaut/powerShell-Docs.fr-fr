@@ -13,7 +13,7 @@ Windows PowerShell inclut des rubriques d’aide détaillées qui expliquent les
 Vous pouvez afficher ces rubriques d’aide à l’invite de commandes, ou afficher les versions les plus récemment mises à jour de ces rubriques dans la Bibliothèque Microsoft TechNet. De nombreux programmes hébergeant Windows PowerShell, comme l’environnement d’écriture de scripts intégré de Windows PowerShell, fournissent des fonctionnalités d’aide supplémentaires, telles qu’une aide contextuelle et un fichier d’aide compilé (.chm).
 
 ## Obtention d’aide sur les applets de commande
-Pour obtenir de l’aide sur les applets de commande Windows PowerShell, utilisez l’applet de commande [Get-Help [m2]](assetId:///2d7fe1b4-0025-4580-a911-d81922dd6cd2). Par exemple, pour obtenir de l’aide sur l’applet de commande [Get-ChildItem [m2]](assetId:///4b270d63-c995-45b8-b5b4-3f8887efbfcc), tapez :
+Pour obtenir de l’aide sur les applets de commande Windows PowerShell, utilisez l’applet de commande [Get-Help [m2]](https://technet.microsoft.com/en-us/library/2d7fe1b4-0025-4580-a911-d81922dd6cd2). Par exemple, pour obtenir de l’aide sur l’applet de commande [Get-ChildItem [m2]](https://technet.microsoft.com/en-us/library/4b270d63-c995-45b8-b5b4-3f8887efbfcc), tapez :
 
 ```
 get-help get-childitem
@@ -126,7 +126,7 @@ get-help c:\ps-test\TestScript.ps1
 
 Les paramètres conçus pour afficher de l’aide sur l’applet de commande, tels que *Detailed*, *Full*, *Examples*et *Parameter*, opèrent également pour l’aide sur le script et l’aide sur la fonction. Toutefois, lorsque vous affichez toute l’aide en tapant « get-help * », l’aide sur les fonctions et les scripts ne s’affiche pas.
 
-Pour plus d’informations sur l’écriture de rubriques d’aide pour vos fonctions et les scripts, voir [about_Functions [m2]](assetId:///61d40692-5300-4de9-a9b5-bae31815e105), [about_Scripts](assetId:///7dc08334-dcfe-450b-b949-0554855623af) et [about_Comment_Based_Help](assetId:///99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf).
+Pour plus d’informations sur l’écriture de rubriques d’aide pour vos fonctions et les scripts, voir [about_Functions [m2]](https://technet.microsoft.com/en-us/library/61d40692-5300-4de9-a9b5-bae31815e105), [about_Scripts](https://technet.microsoft.com/en-us/library/7dc08334-dcfe-450b-b949-0554855623af) et [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf).
 
 ## Obtention d’aide en ligne
 Si vous êtes connecté à Internet, l’un des meilleurs moyens d’obtenir de l’aide consiste à afficher les rubriques d’aide en ligne. Étant donné que les rubriques en ligne sont faciles à mettre à jour, il est probable qu’elles fournissent le contenu à jour.
@@ -163,16 +163,16 @@ La première ligne de la section Liens connexes de la rubrique est présentée c
 Online version: http://go.microsoft.com/fwlink/?LinkID=135194
 ```
 
-Pour plus d’informations sur la manière de fournir un support en ligne pour vos rubriques d’aide, voir [about_Comment_Based_Help](assetId:///99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf) et « Comment rédiger l’aide sur une applet de commande » ([http://go.microsoft.com/fwlink/?LinkID=123415](http://go.microsoft.com/fwlink/?LinkID=123415)) dans la bibliothèque MSDN (Microsoft Developer Network).
+Pour plus d’informations sur la manière de fournir un support en ligne pour vos rubriques d’aide, voir [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf) et « Comment rédiger l’aide sur une applet de commande » ([http://go.microsoft.com/fwlink/?LinkID=123415](http://go.microsoft.com/fwlink/?LinkID=123415)) dans la bibliothèque MSDN (Microsoft Developer Network).
 
 ## Voir aussi
-[about_Functions [m2]](assetId:///61d40692-5300-4de9-a9b5-bae31815e105)
-[about_Scripts](assetId:///7dc08334-dcfe-450b-b949-0554855623af)
-[about_Comment_Based_Help](assetId:///99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf)
-[Get-Help [m2]](assetId:///2d7fe1b4-0025-4580-a911-d81922dd6cd2)
+[about_Functions [m2]](https://technet.microsoft.com/en-us/library/61d40692-5300-4de9-a9b5-bae31815e105)
+[about_Scripts](https://technet.microsoft.com/en-us/library/7dc08334-dcfe-450b-b949-0554855623af)
+[about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf)
+[Get-Help [m2]](https://technet.microsoft.com/en-us/library/2d7fe1b4-0025-4580-a911-d81922dd6cd2)
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 
