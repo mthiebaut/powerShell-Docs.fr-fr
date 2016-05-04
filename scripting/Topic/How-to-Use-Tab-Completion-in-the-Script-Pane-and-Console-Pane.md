@@ -22,11 +22,11 @@ Dans le volet Commande ou Script, tapez une applet de commande suivie d’un tir
 Par exemple, tapez `get-process -` puis appuyez sur la touche TAB plusieurs fois pour afficher successivement chacun des paramètres de l’applet de commande.
 
 ## Voir aussi
-[Utilisation de Windows PowerShell ISE](assetId:///777ea82b-dd73-4269-b61a-69a17e6ff16f)
-[Comment créer un onglet PowerShell](assetId:///c57fc210-19c8-47b1-9171-26a2144c907c)
+[Utilisation de Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/777ea82b-dd73-4269-b61a-69a17e6ff16f)
+[Comment créer un onglet PowerShell](https://technet.microsoft.com/en-us/library/c57fc210-19c8-47b1-9171-26a2144c907c)
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 

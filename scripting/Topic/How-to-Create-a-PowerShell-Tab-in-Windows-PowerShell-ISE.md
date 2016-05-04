@@ -13,7 +13,7 @@ Les onglets dans [!INCLUDE[ise_1](../Token/ise_1_md.md)] permettent de créer et
 > [!NOTE]
 > Les variables, fonctions et alias que vous créez sous un onglet ne s’appliquent pas à un autre. Il s’agit de sessions Windows PowerShell différentes.
 
-Pour ouvrir ou fermer un onglet dans [!INCLUDE[wps_2](../Token/wps_2_md.md)], procédez comme suit. Pour renommer un onglet, définissez la propriété [DisplayName](assetId:///a9b58556-951b-4f48-b3ae-b351b7564360#Displayname) sur l’objet de script Onglet [!INCLUDE[wps_2](../Token/wps_2_md.md)].
+Pour ouvrir ou fermer un onglet dans [!INCLUDE[wps_2](../Token/wps_2_md.md)], procédez comme suit. Pour renommer un onglet, définissez la propriété [DisplayName](https://technet.microsoft.com/en-us/library/a9b58556-951b-4f48-b3ae-b351b7564360#Displayname) sur l’objet de script Onglet [!INCLUDE[wps_2](../Token/wps_2_md.md)].
 
 ## Pour créer et utiliser un onglet PowerShell
 Dans le menu **Fichier**, cliquez sur **Nouvel onglet PowerShell**. Le nouvel onglet PowerShell s’ouvre toujours comme la fenêtre active. Les onglets PowerShell sont numérotés de façon incrémentielle dans l’ordre de leur ouverture. Chaque onglet est associé à sa propre fenêtre de console Windows PowerShell. Vous pouvez avoir jusqu’à 32 onglets PowerShell avec leur propre session ouverte simultanément (ce nombre est limité à 8 sur [!INCLUDE[ise_2](../Token/ise_2_md.md)]2.0.)
@@ -32,7 +32,7 @@ Pour fermer un onglet, vous pouvez utiliser l’une des techniques suivantes :
 
 -   Dans le menu **Fichier**, cliquez sur **Fermer l’onglet PowerShell** ou sur le bouton Fermer (**X**) d’un onglet actif pour fermer celui-ci.
 
-Si des fichiers non enregistrés sont ouverts dans l’onglet PowerShell que vous fermez, vous êtes invité à les enregistrer ou les ignorer. Pour plus d’informations sur l’enregistrement d’un script, voir [Comment enregistrer un script](assetId:///162f594d-efd3-4234-9960-45e56e6eadc8).
+Si des fichiers non enregistrés sont ouverts dans l’onglet PowerShell que vous fermez, vous êtes invité à les enregistrer ou les ignorer. Pour plus d’informations sur l’enregistrement d’un script, voir [Comment enregistrer un script](https://technet.microsoft.com/en-us/library/162f594d-efd3-4234-9960-45e56e6eadc8).
 
 ## Voir aussi
 [Utilisation de Windows PowerShell ISE](../Topic/Using-the-Windows-PowerShell-ISE.md)
@@ -40,6 +40,6 @@ Si des fichiers non enregistrés sont ouverts dans l’onglet PowerShell que vou
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 

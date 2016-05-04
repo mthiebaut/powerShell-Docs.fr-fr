@@ -20,7 +20,7 @@ Voici quelques-unes des fonctionnalités qui ont été ajoutées à l’environn
 
 Les **extraits de code** sont de courtes sections de code que vous pouvez aisément insérer dans les scripts que vous écrivez. Une collection d’extraits de code utiles est incluse dans la zone et vous pouvez faire davantage à l’aide de l’applet de commande **New-Snippet**.
 
-Vous pouvez créer des **outils complémentaires** qui ajoutent des fonctionnalités à l’environnement ISE en écrivant du code qui interagit avec le [Modèle objet de script Windows PowerShell ISE](assetId:///69b047d0-da79-413e-b948-8e45d05d1f85). Ces outils peuvent afficher des contrôles dans un volet à onglets ou fonctionner de manière invisible en arrière-plan. Le composant additionnel **Commands** en est un bon exemple. Il est inclus dans les versions 3.0 et ultérieure qui affichent la liste des commandes disponibles et leur aide.
+Vous pouvez créer des **outils complémentaires** qui ajoutent des fonctionnalités à l’environnement ISE en écrivant du code qui interagit avec le [Modèle objet de script Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/dd819478.aspx). Ces outils peuvent afficher des contrôles dans un volet à onglets ou fonctionner de manière invisible en arrière-plan. Le composant additionnel **Commands** en est un bon exemple. Il est inclus dans les versions 3.0 et ultérieure qui affichent la liste des commandes disponibles et leur aide.
 
 Le **Gestionnaire de démarrage et enregistrement automatique** enregistre automatiquement vos scripts toutes les deux minutes pour vous éviter de perdre votre travail en cas de panne ou de redémarrage inattendu.
 
@@ -62,6 +62,6 @@ L’environnement ISE est disponible sur tout ordinateur pouvant exécuter Windo
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 
