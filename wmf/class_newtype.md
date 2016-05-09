@@ -103,7 +103,7 @@ $c = [MyClass]::new(@(42,43,44), "Hello")
 
 Dans cette version, New-Object ne fonctionne pas avec les classes définies dans Windows PowerShell. De plus, dans cette version, le nom de type est uniquement visible lexicalement, ce qui signifie qu’il n’est pas visible en dehors du module ou du script qui définit la classe. Les fonctions peuvent retourner des instances d’une classe définies dans Windows PowerShell, et les instances fonctionnent bien en dehors du module ou du script.
 
-`Get-Member -Static` énumère les constructeurs, ce qui vous permet d’afficher les surcharges comme toute autre méthode. Les performances de cette syntaxe sont également beaucoup plus rapides que New-Object.
+`Get-Member -Static` répertorie des constructeurs, ce qui vous permet d’afficher les surcharges comme toute autre méthode. Les performances de cette syntaxe sont également beaucoup plus rapides que New-Object.
 
 La méthode pseudo-statique nommée **new** fonctionne avec les types .NET, comme illustré dans l’exemple suivant.
 
@@ -166,9 +166,9 @@ Un nouvel attribut, **System.Management.Automation.HiddenAttribute**, a été aj
 
 Le type de retour est un contrat. La valeur de retour est convertie au type attendu. Si aucun type de retour n’est spécifié, le type de retour est void. Il n’existe aucune diffusion en continu d’objets. Les objets ne peuvent pas être écrits dans le pipeline, que ce soit intentionnellement ou par accident.
 
-## Attributs
+## Attributes
 
-Quatre nouveaux attributs, **DscResource**, **DscResourceKey**, **DscResourceMandatory** et **DscResourceOut**, ont été ajoutés.
+Deux nouveaux attributs, **DscResource** et **DscProperty**, ont été ajoutés.
 
 ## Étendue lexicale des variables
 
@@ -324,4 +324,8 @@ function Style
 # and then returns the resulting type.
 #
 function Html ([HTML] $doc) { return $doc }
-```<!--HONumber=Mar16_HO2-->
+```
+
+<!--HONumber=Apr16_HO5-->
+
+
