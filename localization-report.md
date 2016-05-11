@@ -7,10 +7,10 @@
 [ Handoff Failed Files ](#handoff-failed-list)| 0
 [ Handoff Success Files ](#handoff-success-list)| 2
 [ Archive Failed Files ](#archive-failed-list)| 0
-[ Archive Success Files ](#archive-success-list)| 97
+[ Archive Success Files ](#archive-success-list)| 96
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 11
-[ In Sync Handback Files ](#insync-handback-success-list)| 195
+[ In Sync Handback Files ](#insync-handback-success-list)| 196
 [ Ignored Files ](#ignored-list)| 12
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -26,7 +26,6 @@
 ## <a name='archive-success-list'></a> Archive Success File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [dsc\msft-dsclocalconfigurationmanager.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager.md) | ArchivedSuccess | [Details](#12e17503c55845ecaa154bd4c8c6b108bb3293c967)
  [dsc\msft-dsclocalconfigurationmanager-disabledebugconfiguration.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-disabledebugconfiguration.md) | ArchivedSuccess | [Details](#f343d09519af33d6b913f46d15b464e92601523749)
  [dsc\msft-dsclocalconfigurationmanager-enabledebugconfiguration.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-enabledebugconfiguration.md) | ArchivedSuccess | [Details](#ddc78784632f3453b5f229b4169d9512acb6afdd50)
  [dsc\msft-dsclocalconfigurationmanager-getconfigurationresultoutput.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-getconfigurationresultoutput.md) | ArchivedSuccess | [Details](#cc94a826a3638e2d2335827ebfb8b29ed7323e9b52)
@@ -182,6 +181,7 @@
  [dsc\logResource.md](https://github.com/PowerShell/powerShell-Docs/blob/dcacf14d13cc0c3e4bb3b6602ad3ab6b3141471f/dsc/logResource.md) | InSyncHandedBackSuccess | [Details](#0f4922e1df8725aad839211dbe0dfc532692f60644)
  [dsc\metaConfig.md](https://github.com/PowerShell/powerShell-Docs/blob/4079eca1deaf33162bf90c13bcfeb2255ec26d01/dsc/metaConfig.md) | InSyncHandedBackSuccess | [Details](#22147ef6b4045c44d80dc1025ac989e02763a69846)
  [dsc\metaConfig4.md](https://github.com/PowerShell/powerShell-Docs/blob/dcacf14d13cc0c3e4bb3b6602ad3ab6b3141471f/dsc/metaConfig4.md) | InSyncHandedBackSuccess | [Details](#ef2664b6dd61bd55898971adf7e4a57f92be88cc47)
+ [dsc\msft-dsclocalconfigurationmanager.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager.md) | InSyncHandedBackSuccess | [Details](#12e17503c55845ecaa154bd4c8c6b108bb3293c967)
  [dsc\msft-dsclocalconfigurationmanager-applyconfiguration.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-applyconfiguration.md) | InSyncHandedBackSuccess | [Details](#deb5fb9243d3b1d61e60991f70479e252b78024348)
  [dsc\msft-dsclocalconfigurationmanager-getconfiguration.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-getconfiguration.md) | InSyncHandedBackSuccess | [Details](#ec36bc9e6a824a78701c565c7f7f41f92c074f2d51)
  [dsc\msft-dsclocalconfigurationmanager-removeconfiguration.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-removeconfiguration.md) | InSyncHandedBackSuccess | [Details](#8e827d304f29972a5f95eb9bddd45c0dd5361e0c56)
@@ -945,15 +945,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='12e17503c55845ecaa154bd4c8c6b108bb3293c967'></a> Source: [dsc\msft-dsclocalconfigurationmanager.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager.md)
-* Status: ArchivedSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [dsc\msft-dsclocalconfigurationmanager.md](https://github.com/PowerShell/powerShell-Docs.fr-fr/blob/9a86d8910a25f6c644802498d3512ec097982fcc/dsc/msft-dsclocalconfigurationmanager.md)
 * Handoff File: [msft-dsclocalconfigurationmanager.a79fe5e4edd04227feb5da9e41daad2c0b306f84.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/868bc995c7f63a73b3b666b412a1cbed7703c386/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/msft-dsclocalconfigurationmanager.a79fe5e4edd04227feb5da9e41daad2c0b306f84.fr-fr.xlf)
 * Handoff Datetime: 2016-04-12 22:05:55
 * Handoff Reason: Include
 * Archive File: [msft-dsclocalconfigurationmanager.a79fe5e4edd04227feb5da9e41daad2c0b306f84.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/92532c71d1b174376d7e39c73973bd46c3132ce9/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/archive/msft-dsclocalconfigurationmanager.a79fe5e4edd04227feb5da9e41daad2c0b306f84.fr-fr.xlf)
 * Archive Datetime: 2016-04-29 00:22:07
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [msft-dsclocalconfigurationmanager.a79fe5e4edd04227feb5da9e41daad2c0b306f84.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/14a54745acc5e20ff628df77dffec156a49e4ac1/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/msft-dsclocalconfigurationmanager.a79fe5e4edd04227feb5da9e41daad2c0b306f84.fr-fr.xlf)
+* Handback Datetime: 2016-05-11 15:58:24
 * [Back to Top](#report-top)
 
 ##### <a name='deb5fb9243d3b1d61e60991f70479e252b78024348'></a> Source: [dsc\msft-dsclocalconfigurationmanager-applyconfiguration.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-applyconfiguration.md)
