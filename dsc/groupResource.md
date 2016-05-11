@@ -32,7 +32,7 @@ Group [string] #ResourceName
 | MembersToInclude| Spécifie les utilisateurs qui doivent faire partie du groupe.| 
 | DependsOn | Indique que la configuration d’une autre ressource doit être effectuée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’ID __ResourceName__ et le type __ResourceType__, utilisez la syntaxe suivante pour cette propriété : DependsOn = "[ResourceType]ResourceName"| 
 
-## Exemple
+## Exemple 1
 
 L’exemple suivant montre comment s’assurer qu’un groupe nommé TestGroup est absent. 
 
@@ -45,4 +45,36 @@ Group GroupExample
     GroupName = "TestGroup"
 }
 ```
-<!--HONumber=Feb16_HO4-->
+## Exemple 2
+L’exemple suivant montre comment ajouter un utilisateur Active Directory au groupe Administrateurs local dans le cadre d’une build de laboratoire avec plusieurs ordinateurs où vous utilisez déjà un PSCredential pour le compte d’administrateur Local. Comme il est également utilisé pour le compte d’administrateur de domaine (après la promotion de domaine), nous devons convertir ce PSCredential existant en informations d’identification conviviales du domaine pour pouvoir ajouter un utilisateur de domaine au groupe Administrateurs local sur le serveur membre.
+
+```powershell
+@{
+    AllNodes = @(
+        @{
+            NodeName = '*';
+            DomainName = 'SubTest.contoso.com';
+         }
+     @{
+            NodeName = 'Box2';
+            AdminAccount = 'Admin-Dave_Alexanderson'   
+      }    
+    )
+}
+                  
+$domain = $node.DomainName.split('.')[0]
+$DCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList ("$domain\$($credential.Username)", $Credential.Password)
+
+Group AddADUserToLocalAdminGroup
+        {
+            GroupName='Administrators'   
+            Ensure= 'Present'             
+            MembersToInclude= "$domain\$($Node.AdminAccount)"
+            Credential = $dCredential    
+            PsDscRunAsCredential = $DCredential
+        }
+```
+
+<!--HONumber=Apr16_HO3-->
+
+

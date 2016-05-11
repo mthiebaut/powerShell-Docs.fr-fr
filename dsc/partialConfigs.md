@@ -7,10 +7,10 @@ Dans PowerShell 5.0, la configuration d’état souhaité (DSC) permet de distr
 Vous pouvez utiliser des configurations partielles en mode par envoi ou par extraction, ou les deux.
 
 ## Configurations partielles en mode par envoi
-Pour utiliser des configurations partielles en mode par envoi, vous configurez le gestionnaire de configuration local sur le nœud cible de façon à recevoir les configurations partielles. Chaque configuration partielle doit être envoyée à la cible à l’aide de l’applet de commande Publish-DSCConfiguration. Le nœud cible associe ensuite la configuration partielle à une configuration unique, que vous pouvez appliquer en appelant l’applet de commande [Start-DscConfigurationxt](https://technet.microsoft.com/en-us/library/dn521623.aspx).
+Pour utiliser des configurations partielles en mode par envoi, vous configurez le gestionnaire de configuration local sur le nœud cible de façon à recevoir les configurations partielles. Chaque configuration partielle doit être envoyée à la cible à l’aide de l’applet de commande Publish-DSCConfiguration. Le nœud cible combine ensuite la configuration partielle en une configuration unique, que vous pouvez appliquer en appelant l’applet de commande [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx).
 
 ### Configuration du gestionnaire de configuration local pour les configurations partielles en mode par envoi
-Pour configurer le gestionnaire de configuration local pour les configurations partielles en mode par envoi, vous créez une configuration **DSCLocalConfigurationManager** avec un bloc **PartialConfiguration** pour chaque configuration partielle. Pour plus d’informations sur la configuration du gestionnaire de configuration local, consultez [Configuring the Local Configuration Manager](https://technet.microsoft.com/en-us/library/mt421188.aspx) (Configuration du gestionnaire de configuration local). L’exemple suivant montre une configuration de gestionnaire de configuration local avec deux configurations partielles : une qui déploie le système d’exploitation, et l’autre qui déploie et configure SharePoint.
+Pour configurer le gestionnaire de configuration local pour les configurations partielles en mode par envoi, vous créez une configuration **DSCLocalConfigurationManager** avec un bloc **PartialConfiguration** pour chaque configuration partielle. Pour plus d’informations sur la configuration du gestionnaire de configuration local, consultez [Configuring the Local Configuration Manager](https://technet.microsoft.com/en-us/library/mt421188.aspx). L’exemple suivant montre une configuration de gestionnaire de configuration local avec deux configurations partielles : une qui déploie le système d’exploitation, et l’autre qui déploie et configure SharePoint.
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -34,7 +34,7 @@ configuration PartialConfigDemo
 PartialConfigDemo 
 ```
 
-Le paramètre **RefreshMode** pour chaque configuration partielle est défini sur « Émission ». Les noms des blocs **PartialConfiguration** (dans ce cas, «OSInstall » et « SharePointConfig ») doivent correspondre exactement aux noms des configurations envoyées au nœud cible.
+Le paramètre **RefreshMode** pour chaque configuration partielle est défini sur « Émission ». Les noms des blocs **PartialConfiguration** (dans ce cas, « OSInstall » et « SharePointConfig ») doivent correspondre exactement aux noms des configurations envoyées au nœud cible.
 
 ### Publication et démarrage de configurations partielles en mode par envoi
 ![Structure du dossier PartialConfig](./images/PartialConfig1.jpg)
@@ -78,7 +78,7 @@ configuration PartialConfigDemo
         {
             Description = 'Configuration for the Sharepoint Server'
             ConfigurationSource = '[ConfigurationRepositoryWeb]CONTOSO-PullSrv'
-            DependsOn = [PartialConfiguration]OSInstall
+            DependsOn = '[PartialConfiguration]OSInstall'
             RefreshMode = 'Pull'
         }
     }
@@ -92,7 +92,7 @@ Après avoir créé la métaconfiguration, vous devez l’exécuter pour créer 
 
 ### Attribution de noms et placement des documents de configuration sur le serveur collecteur
 
-Les documents de configuration partielle doivent être placés dans le dossier spécifié comme **ConfigurationPath** dans le fichier `web.config` pour le serveur collecteur (généralement `C:\Program Files\WindowsPowerShell\DscService\Configuration`). Les documents de configuration doivent être nommés comme suit : _ConfigurationName_, _ConfigurationID_`.mof`, où _ConfigurationName_ est le nom de la configuration partielle et _ConfigurationID_ est l’ID de configuration défini dans le gestionnaire de configuration local sur le nœud cible. Dans notre exemple, les documents de configuration doivent être nommés comme suit.
+Les documents de configuration partielle doivent être placés dans le dossier spécifié comme **ConfigurationPath** dans le fichier `web.config` pour le serveur collecteur (généralement `C:\Program Files\WindowsPowerShell\DscService\Configuration`). Les documents de configuration doivent être nommés comme suit : _ConfigurationName_, _ConfigurationID_`.mof`, où _ConfigurationName_ est le nom de la configuration partielle et _ConfigurationID_ est l’ID de configuration défini dans le gestionnaire de configuration local sur le nœud cible. Dans notre exemple, les documents de configuration doivent être nommés comme suit.
 ![Noms PartialConfig sur le serveur collecteur](images/PartialConfigPullServer.jpg)
 
 ### Exécution des configurations partielles d’un serveur collecteur
@@ -131,7 +131,7 @@ configuration PartialConfigDemo
            PartialConfiguration SharePointConfig
         {
             Description = 'Configuration for the Sharepoint Server'
-            DependsOn = [PartialConfiguration]OSInstall
+            DependsOn = '[PartialConfiguration]OSInstall'
             RefreshMode = 'Push'
         }
     }
@@ -150,6 +150,6 @@ Vous nommez et localisez les documents de configuration comme décrit ci-dessus 
 [Configuration du gestionnaire de configuration local](https://technet.microsoft.com/en-us/library/mt421188.aspx) 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=Apr16_HO2-->
 
 

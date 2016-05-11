@@ -35,6 +35,10 @@ DSC inclut également plusieurs nouveaux mots clés de langage, applets de comma
 ## Voir aussi
 * [Configurations DSC](configurations.md)
 * [Ressources DSC](resources.md)
-* [Configuration du Gestionnaire de configuration local](metaconfig.md)
+* [Configuration du Gestionnaire de configuration local](metaConfig.md)
 
-<!--HONumber=Feb16_HO4-->
+
+
+<!--HONumber=Apr16_HO2-->
+
+

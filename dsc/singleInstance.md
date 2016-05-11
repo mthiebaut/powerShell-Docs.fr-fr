@@ -3,8 +3,8 @@
 >**Remarque :** cette rubrique décrit une recommandation pour la définition d’une ressource DSC qui n’autorise qu’une seule instance dans une configuration. Actuellement, il n’existe pas de fonctionnalité DSC intégrée pour ce faire. Cela pourrait
 >changer à l’avenir.
 
-Il existe des situations où vous ne souhaitez pas autoriser qu’une ressource soit utilisée plusieurs fois dans une configuration. Par exemple, dans une précédente implémentation de la ressource 
-[xTimeZone](https://github.com/PowerShell/xTimeZone), une configuration pouvait appeler la ressource plusieurs fois, en définissant un fuseau horaire différent dans chaque bloc de ressources :
+Il existe des situations où vous ne souhaitez pas autoriser qu’une ressource soit utilisée plusieurs fois dans une configuration. Par exemple, dans une précédente implémentation de la 
+ressource [xTimeZone](https://github.com/PowerShell/xTimeZone), une configuration pouvait appeler la ressource plusieurs fois, en définissant un fuseau horaire différent dans chaque bloc de ressources :
 
 ```powershell
 Configuration SetTimeZone 
@@ -37,9 +37,9 @@ Configuration SetTimeZone
 } 
 ```
 
-Cela est dû à la manière dont les clés de ressources DSC fonctionnent. Une ressource doit avoir au moins une propriété de clé. Une instance de ressource est considérée comme unique si la combinaison des valeurs de toutes ses 
-propriétés de clé est unique. Dans l’implémentation précédente, la ressource [xTimeZone](https://github.com/PowerShell/xTimeZone) n’avait qu’une seule propriété (**fuseau horaire**), qui devait nécessairement 
-être une clé. Pour cette raison, une configuration telle que celle ci-dessus était compilée et exécutée sans avertissement. Chacun des blocs de ressources **xTimeZone** est considéré comme unique. Cela entraînerait l’application de la 
+Cela est dû à la manière dont les clés de ressources DSC fonctionnent. Une ressource doit avoir au moins une propriété de clé. Une instance de ressource est considérée comme unique si la combinaison des valeurs de toutes 
+ses propriétés de clé est unique. Dans l’implémentation précédente, la ressource [xTimeZone](https://github.com/PowerShell/xTimeZone) n’avait qu’une seule propriété (**TimeZone**), qui devait 
+être une clé. Pour cette raison, une configuration telle que celle ci-dessus était compilée et exécutée sans avertissement. Chacun des blocs de ressources **xTimeZone** est considéré comme unique. Cela entraîne l’application de la 
 configuration au nœud à plusieurs reprises, en effectuant un cycle dans le fuseau horaire dans les deux sens.
 
 Pour s’assurer qu’une configuration ne puisse définir le fuseau horaire d’un nœud cible qu’une seule fois, la ressource a été mise à jour pour ajouter une deuxième propriété, **IsSingleInstance**, qui est devenue la propriété de clé. 
@@ -74,94 +74,9 @@ function Get-TargetResource
     param
     (
         [parameter(Mandatory = $true)]
-        [ValidateNotNullOrEmpty()]
-        [String]
-        $TimeZone
-    )
-
-    #Get the current TimeZone
-    $CurrentTimeZone = Invoke-Expression "tzutil.exe /g"
-
-    $returnValue = @{
-        TimeZone = $CurrentTimeZone
-    }
-
-    #Output the target resource
-    $returnValue
-}
-
-
-function Set-TargetResource
-{
-    [CmdletBinding(SupportsShouldProcess=$true)]
-    param
-    (
-        [parameter(Mandatory = $true)]
-        [ValidateNotNullOrEmpty()]
-        [String]
-        $TimeZone
-    )
-    
-    #Output the result of Get-TargetResource function.
-    $GetCurrentTimeZone = Get-TargetResource -TimeZone $TimeZone
-
-    If($PSCmdlet.ShouldProcess("'$TimeZone'","Replace the System Time Zone"))
-    {
-        Try
-        {
-            Write-Verbose "Setting the TimeZone"
-            Invoke-Expression "tzutil.exe /s ""$TimeZone"""
-        }
-        Catch
-        {
-            $ErrorMsg = $_.Exception.Message
-            Write-Verbose $ErrorMsg
-        }
-    }
-}
-
-
-function Test-TargetResource
-{
-    [CmdletBinding()]
-    [OutputType([Boolean])]
-    param
-    (
-        [parameter(Mandatory = $true)]
-        [ValidateNotNullOrEmpty()]
-        [String]
-        $TimeZone
-    )
-
-    #Output from Get-TargetResource
-    $Get = Get-TargetResource -TimeZone $TimeZone
-
-    If($TimeZone -eq $Get.TimeZone)
-    {
-        return $true
-    }
-    Else
-    {
-        return $false
-    }
-}
-
-Export-ModuleMember -Function *-TargetResource
-```
-
-Voici le script mis à jour. Notez qu’un paramètre **IsSingleInstance** obligatoire a été ajouté à chaque fonction.
-
-```powershell
-function Get-TargetResource
-{
-    [CmdletBinding()]
-    [OutputType([Hashtable])]
-    param
-    (
-        [parameter(Mandatory = $true)]
         [ValidateSet('Yes')]
         [String]
-        $IsSingleInstance, 
+        $IsSingleInstance,
 
         [parameter(Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
@@ -174,6 +89,7 @@ function Get-TargetResource
 
     $returnValue = @{
         TimeZone = $CurrentTimeZone
+        IsSingleInstance = 'Yes'
     }
 
     #Output the target resource
@@ -189,7 +105,7 @@ function Set-TargetResource
         [parameter(Mandatory = $true)]
         [ValidateSet('Yes')]
         [String]
-        $IsSingleInstance, 
+        $IsSingleInstance,
 
         [parameter(Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
@@ -200,19 +116,23 @@ function Set-TargetResource
     #Output the result of Get-TargetResource function.
     $CurrentTimeZone = Get-TimeZone
     
-    If($PSCmdlet.ShouldProcess("'$TimeZone'","Replace the System Time Zone"))
+    if($PSCmdlet.ShouldProcess("'$TimeZone'","Replace the System Time Zone"))
     {
-        Try{
-            if($CurrentTimeZone -ne $TimeZone){
-                Write-Verbose "Setting the TimeZone"
+        try
+        {
+            if($CurrentTimeZone -ne $TimeZone)
+            {
+                Write-Verbose -Verbose "Setting the TimeZone"
                 Set-TimeZone -TimeZone $TimeZone}
-            else{
-                Write-Verbose "TimeZone already set to $TimeZone"
+            else
+            {
+                Write-Verbose -Verbose "TimeZone already set to $TimeZone"
             }
         }
-        Catch{
+        catch
+        {
             $ErrorMsg = $_.Exception.Message
-            Write-Verbose $ErrorMsg
+            Write-Verbose -Verbose $ErrorMsg
         }
     }
 }
@@ -238,26 +158,24 @@ function Test-TargetResource
     #Output from Get-TargetResource
     $CurrentTimeZone = Get-TimeZone
 
-    If($TimeZone -eq $CurrentTimeZone)
+    if($TimeZone -eq $CurrentTimeZone)
     {
         return $true
     }
-    Else
+    else
     {
         return $false
     }
 }
 
-Function Get-TimeZone 
-{
+Function Get-TimeZone {
     [CmdletBinding()]
     param()
 
     & tzutil.exe /g
 }
 
-Function Set-TimeZone 
-{
+Function Set-TimeZone {
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$true)]
@@ -267,8 +185,9 @@ Function Set-TimeZone
 
     try
     {
-        & tzutil.exe /s $TimeZone    
-    }catch
+        & tzutil.exe /s $TimeZone
+    }
+    catch
     {
         $ErrorMsg = $_.Exception.Message
         Write-Verbose $ErrorMsg
@@ -300,6 +219,6 @@ At C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\PSDesiredStateConfiguratio
 ```
    
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 

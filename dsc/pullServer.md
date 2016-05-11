@@ -168,6 +168,6 @@ Les rubriques suivantes décrivent la configuration des clients collecteurs en d
 * [Utilisation d’un serveur de rapports DSC](reportServer.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=Apr16_HO2-->
 
 

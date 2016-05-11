@@ -100,8 +100,9 @@ Configuration DependsOnExample {
 
         User UserExample {
             Ensure = "Present"
+            UserName = "TestUser"
             FullName = "TestUser"
-            DependsOn = "GroupExample"
+            DependsOn = "[Group]GroupExample"
         }
     }
 }
@@ -115,11 +116,11 @@ Une fois ces modules placés dans `$env:PSModulePath` et correctement reconnus p
 * __Name__ correspond au nom de la ressource à importer. Il ne s’agit pas du nom convivial retourné comme « Name » par [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), mais du nom de classe utilisé lors de la définition du schéma de la ressource (retourné comme __ResourceType__ par [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx)). 
 
 ## Voir aussi
-* [Présentation de la configuration de l’état souhaité de Windows PowerShell](overview.md)
+* [Vue d’ensemble de la fonctionnalité Desired State Configuration de Windows PowerShell](overview.md)
 * [Ressources DSC](resources.md)
-* [Configuration du Gestionnaire de configuration local](metaconfig.md)
+* [Configuration du Gestionnaire de configuration local](metaConfig.md)
 
 
-<!--HONumber=Feb16_HO4-->
+<!--HONumber=Apr16_HO2-->
 
 

@@ -3,7 +3,16 @@
  
 > S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
-La ressource **Script** dans la configuration d’état souhaité (DSC) Windows PowerShell fournit un mécanisme pour exécuter des blocs de script Windows PowerShell sur des nœuds cibles.
+La ressource **Script** dans la configuration d’état souhaité (DSC) Windows PowerShell fournit un mécanisme pour exécuter des blocs de script Windows PowerShell sur des nœuds cibles. La ressource `Script` comprend les propriétés `GetScript`, `SetScript` et `TestScript`. Ces propriétés doivent être définies sur les blocs de script qui sont exécutés sur chaque nœud cible. 
+
+Le bloc de script `GetScript` doit retourner une table de hachage qui représente l’état du nœud actuel. Il n’a pas à retourner d’élément. DSC ne fait rien avec la sortie de ce bloc de script.
+
+Le bloc de script `TestScript` doit déterminer si le nœud actuel doit être modifié. Il doit retourner `$true` si le nœud est à jour. Il doit retourner `$false` si la configuration du nœud est obsolète et doit être mise à jour par le bloc de script `SetScript`. Le bloc de script `TestScript` est appelé par DSC.
+
+Le bloc de script `SetScript` doit modifier le nœud. Il est appelé par DSC si le bloc `TestScript` retourne `$false`.
+
+Si vous devez utiliser des variables de votre script de configuration dans les blocs de script `GetScript`, `TestScript` ou `SetScript`, utilisez l’étendue `$using:` (voir ci-dessous pour obtenir un exemple).
+
 
 ## Syntaxe
 
@@ -26,9 +35,9 @@ Script [string] #ResourceName
 | SetScript| Fournit un bloc de script Windows PowerShell. Quand vous appelez l’applet de commande [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx), le bloc **TestScript** s’exécute en premier. Si le bloc **TestScript** retourne **$false**, le bloc **SetScript** s’exécute. Si le bloc **TestScript** retourne **$true**, le bloc **SetScript** ne s’exécute pas.| 
 | TestScript| Fournit un bloc de script Windows PowerShell. Quand vous appelez l’applet de commande [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx), ce bloc s’exécute. Si elle retourne **$false**, le bloc SetScript s’exécute. Si elle retourne **$true**, le bloc SetScript ne s’exécute pas. Le bloc **TestScript** s’exécute également quand vous appelez l’applet de commande [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx). Toutefois, dans ce cas, la propriété **SetScript** ne s’exécute pas, quelle que soit la valeur retournée par le bloc TestScript. Le bloc **TestScript** doit retourner True si la configuration réelle correspond à la configuration d’état souhaité actuelle, sinon False. (La configuration d’état souhaité actuelle est la dernière configuration appliquée sur le nœud qui utilise DSC.)| 
 | Credential| Indique les informations d’identification à utiliser pour exécuter ce script, si elles sont nécessaires.| 
-| DependsOn| Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource **ResourceName** de type **ResourceType**, la syntaxe permettant d’utiliser cette propriété est `DependsOn = "[ResourceType]ResourceName"`.
+| DependsOn| Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource **ResourceName** de type **ResourceType**, la syntaxe pour utiliser cette propriété est `DependsOn = "[ResourceType]ResourceName"`.
 
-## Exemple
+## Exemple 1
 ```powershell
 Script ScriptExample
 {
@@ -42,4 +51,35 @@ Script ScriptExample
 }
 ```
 
-<!--HONumber=Feb16_HO4-->
+## Exemple 2
+```powershell
+$version = Get-Content 'version.txt'
+Script UpdateConfigurationVersion
+{
+    GetScript = { 
+        $currentVersion = Get-Content (Join-Path -Path $env:SYSTEMDRIVE -ChildPath 'version.txt')
+        return @{ 'Version' = $currentVersion }
+    }          
+    TestScript = { 
+        $state = GetScript
+        if( $state['Version'] -eq $using:version )
+        {
+            Write-Verbose -Message ('{0} -eq {1}' -f $state['Version'],$using:version)
+            return $true
+        }
+        Write-Verbose -Message ('Version up-to-date: {0}' -f $using:version)
+        return $false
+    }
+    SetScript = { 
+        $using:version | Set-Content -Path (Join-Path -Path $env:SYSTEMDRIVE -ChildPath 'version.txt')
+    }
+}
+```
+
+Cette ressource écrit la version de la configuration dans un fichier texte. Cette version étant disponible sur l’ordinateur client, mais pas sur les nœuds, elle doit être transmise à chacun des blocs de script de la ressource `Script` avec l’étendue `using` de PowerShell. Lors de la génération du fichier MOF du nœud, la valeur de la variable `$version` est lue à partir d’un fichier texte sur l’ordinateur client. DSC remplace les variables `$using:version` dans chaque bloc de script par la valeur de la variable `$version`.
+
+
+
+<!--HONumber=Apr16_HO2-->
+
+
