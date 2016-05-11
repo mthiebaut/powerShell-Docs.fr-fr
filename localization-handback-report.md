@@ -1,11 +1,39 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 2
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [dsc\msft-dsclocalconfigurationmanager-stopconfiguration.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-stopconfiguration.md) | InSyncHandedBackSuccess | [Details](#28904d9987bfa3fe57dc6a929eb3fd796537210465)
+ [dsc\sxsResource.md](https://github.com/PowerShell/powerShell-Docs/blob/4528b4c033ae0a9b7476a60899e5cd0c96607d1c/dsc/sxsResource.md) | InSyncHandedBackSuccess | [Details](#a770b81f2fa2457b15e7711b74d0df87637b05e089)
 
 ## Item Details
+##### <a name='28904d9987bfa3fe57dc6a929eb3fd796537210465'></a> Source: [dsc\msft-dsclocalconfigurationmanager-stopconfiguration.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-stopconfiguration.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [dsc\msft-dsclocalconfigurationmanager-stopconfiguration.md](https://github.com/PowerShell/powerShell-Docs.fr-fr/blob/4e822cd501d97ad6f38e42127e6976fac763c75c/dsc/msft-dsclocalconfigurationmanager-stopconfiguration.md)
+* Handoff File: [msft-dsclocalconfigurationmanager-stopconfiguration.be28209b8b0b7015bd9b68775697d0adbb5e5ebe.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/868bc995c7f63a73b3b666b412a1cbed7703c386/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/msft-dsclocalconfigurationmanager-stopconfiguration.be28209b8b0b7015bd9b68775697d0adbb5e5ebe.fr-fr.xlf)
+* Handoff Datetime: 2016-04-12 22:05:55
+* Handoff Reason: Include
+* Archive File: [msft-dsclocalconfigurationmanager-stopconfiguration.be28209b8b0b7015bd9b68775697d0adbb5e5ebe.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/92532c71d1b174376d7e39c73973bd46c3132ce9/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/archive/msft-dsclocalconfigurationmanager-stopconfiguration.be28209b8b0b7015bd9b68775697d0adbb5e5ebe.fr-fr.xlf)
+* Archive Datetime: 2016-04-29 00:22:07
+* Handback File: [msft-dsclocalconfigurationmanager-stopconfiguration.be28209b8b0b7015bd9b68775697d0adbb5e5ebe.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/9d0a93a19615c0279f89283d442af77f2f866e25/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/msft-dsclocalconfigurationmanager-stopconfiguration.be28209b8b0b7015bd9b68775697d0adbb5e5ebe.fr-fr.xlf)
+* Handback Datetime: 2016-05-11 09:55:37
+* [Back to Top](#report-top)
+
+##### <a name='a770b81f2fa2457b15e7711b74d0df87637b05e089'></a> Source: [dsc\sxsResource.md](https://github.com/PowerShell/powerShell-Docs/blob/4528b4c033ae0a9b7476a60899e5cd0c96607d1c/dsc/sxsResource.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [dsc\sxsResource.md](https://github.com/PowerShell/powerShell-Docs.fr-fr/blob/4e822cd501d97ad6f38e42127e6976fac763c75c/dsc/sxsResource.md)
+* Handoff File: [sxsResource.835258073c6738946b31509359c72fa70af35ce2.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/e09103fa885661bb4d10ba497d2318dd2b03db41/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/sxsResource.835258073c6738946b31509359c72fa70af35ce2.fr-fr.xlf)
+* Handoff Datetime: 2016-04-22 22:42:40
+* Handoff Reason: Include
+* Archive File: [sxsResource.835258073c6738946b31509359c72fa70af35ce2.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/92532c71d1b174376d7e39c73973bd46c3132ce9/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/archive/sxsResource.835258073c6738946b31509359c72fa70af35ce2.fr-fr.xlf)
+* Archive Datetime: 2016-04-29 00:22:07
+* Handback File: [sxsResource.835258073c6738946b31509359c72fa70af35ce2.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/9d0a93a19615c0279f89283d442af77f2f866e25/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/sxsResource.835258073c6738946b31509359c72fa70af35ce2.fr-fr.xlf)
+* Handback Datetime: 2016-05-11 09:55:37
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
