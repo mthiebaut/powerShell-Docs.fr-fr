@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "27126e485767aeb5f93cca84551ca05b89cbc743",
-  "LastTranslatedCommit": "1cfd4087d33f1ac1cbad4f1c35b0a0e6dc105f60",
+  "LastTranslatedCommit": "a507a9b835daa4ac260ea0794282b00ba7fc4e9e",
   "Items": {
     "81efeb79a70df604ef8c126c0ebd17b4f4711a44": {
       "FileHash": "81efeb79a70df604ef8c126c0ebd17b4f4711a44",
@@ -12759,14 +12759,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": null,
-      "TargetFilePath": null,
-      "HandbackFilePath": null,
-      "HandbackFileCommit": null,
-      "HandbackDateTime": "0001-01-01T00:00:00",
+      "TargetFileCommit": "a507a9b835daa4ac260ea0794282b00ba7fc4e9e",
+      "TargetFilePath": "dsc\\secureMOF.md",
+      "HandbackFilePath": "ol-handback\\PowerShell\\powerShell-Docs.fr-fr\\live\\secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.fr-fr.xlf",
+      "HandbackFileCommit": "be0310bd3c9fadace752070c67278ac5c26f01b8",
+      "HandbackDateTime": "2016-05-11T08:45:35.3060336Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "UpdatedDateTime": "2016-05-11T08:45:35.3060336Z",
       "ArchiveFilePath": "ol-handoff\\PowerShell\\powerShell-Docs.fr-fr\\live\\archive\\secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.fr-fr.xlf",
       "ArchiveFileCommit": "0a53ce0d3479104bb9f1a13452fb860e98750180",
       "ArchiveFileDateTime": "2016-05-03T15:36:10.330852Z",

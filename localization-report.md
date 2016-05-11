@@ -9,8 +9,8 @@
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 116
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 23
-[ In Sync Handback Files ](#insync-handback-success-list)| 164
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 22
+[ In Sync Handback Files ](#insync-handback-success-list)| 165
 [ Ignored Files ](#ignored-list)| 12
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -159,7 +159,6 @@
  [dsc\pullClientConfigNames.md](https://github.com/PowerShell/powerShell-Docs/blob/31a220c332d5aeaa4c4d82cfc66e7e27f4c5569a/dsc/pullClientConfigNames.md) | OutofSyncHandedBackSuccess | [Details](#aa586b7e1cd14692ed4731f0da3cc4227abc6f0675)
  [dsc\pullServer.md](https://github.com/PowerShell/powerShell-Docs/blob/4f89541a1821ca4283a39a9a1cb97c75e9e496db/dsc/pullServer.md) | OutofSyncHandedBackSuccess | [Details](#4327f7428aa839fd7bb1788b203d72c838814aa976)
  [dsc\scriptResource.md](https://github.com/PowerShell/powerShell-Docs/blob/54d8f8daa70f889268934121a37dac848846c307/dsc/scriptResource.md) | OutofSyncHandedBackSuccess | [Details](#4a1909ab56b9f8d3a97086696e344e91c5dd5fe784)
- [dsc\secureMOF.md](https://github.com/PowerShell/powerShell-Docs/blob/1fe9406f7e4b32970f588c618f402e0b610e2a87/dsc/secureMOF.md) | OutofSyncHandedBackSuccess | [Details](#29d9a48f9f256911029673b69484e1f4ec5f05d185)
  [dsc\singleInstance.md](https://github.com/PowerShell/powerShell-Docs/blob/29d8a5b89e372e75727430dd09a13d956f6f4f9e/dsc/singleInstance.md) | OutofSyncHandedBackSuccess | [Details](#f617844fdfc22c15e23687a911cfe75876abc43e88)
  [dsc\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/640434e49f3f64a5e2d4b7d9e5c785d04c21edb4/dsc/TOC.md) | OutofSyncHandedBackSuccess | [Details](#436d1bfab335c2333333be2fa4ba0330c2a6ffb190)
  [scripting\getting-started\fundamental\About-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/641acbd044886a9cc21274e586da59b14c7f5c99/scripting/getting-started/fundamental/About-Windows-PowerShell.md) | OutofSyncHandedBackSuccess | [Details](#71091e76e3f3953ed767ece6f4e098ac53798e4d195)
@@ -218,6 +217,7 @@
  [dsc\resourceAuthoringChecklist.md](https://github.com/PowerShell/powerShell-Docs/blob/0a303e872e91ac5f8eff4f9f84a25237ab0e8fb2/dsc/resourceAuthoringChecklist.md) | InSyncHandedBackSuccess | [Details](#c21a8247aac04887b4454122eb9b42476b40a54381)
  [dsc\resources.md](https://github.com/PowerShell/powerShell-Docs/blob/dcacf14d13cc0c3e4bb3b6602ad3ab6b3141471f/dsc/resources.md) | InSyncHandedBackSuccess | [Details](#df54abe3d92ffaff2998e9fb3157b42cf83143c282)
  [dsc\runAsUser.md](https://github.com/PowerShell/powerShell-Docs/blob/7ac50fbc62d5caf14a0a33b3fcdcc14275a566cd/dsc/runAsUser.md) | InSyncHandedBackSuccess | [Details](#0560274d9f9c8efaddf790dd784ddd936fe90e5d83)
+ [dsc\secureMOF.md](https://github.com/PowerShell/powerShell-Docs/blob/1fe9406f7e4b32970f588c618f402e0b610e2a87/dsc/secureMOF.md) | InSyncHandedBackSuccess | [Details](#29d9a48f9f256911029673b69484e1f4ec5f05d185)
  [dsc\secureServer.md](https://github.com/PowerShell/powerShell-Docs/blob/dcacf14d13cc0c3e4bb3b6602ad3ab6b3141471f/dsc/secureServer.md) | InSyncHandedBackSuccess | [Details](#2290a81a8dbc82b7881d2b6006d70a90578f9a5686)
  [dsc\serviceResource.md](https://github.com/PowerShell/powerShell-Docs/blob/dcacf14d13cc0c3e4bb3b6602ad3ab6b3141471f/dsc/serviceResource.md) | InSyncHandedBackSuccess | [Details](#ca609ad6055d8053e43e482ed2e57b3db41c354987)
  [dsc\troubleshooting.md](https://github.com/PowerShell/powerShell-Docs/blob/9aee11690c9278e18265f954c6808eecbb1576b5/dsc/troubleshooting.md) | InSyncHandedBackSuccess | [Details](#d571a7562bd23e3bca78127732dd4fccb88fee1c91)
@@ -1416,18 +1416,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='29d9a48f9f256911029673b69484e1f4ec5f05d185'></a> Source: [dsc\secureMOF.md](https://github.com/PowerShell/powerShell-Docs/blob/1fe9406f7e4b32970f588c618f402e0b610e2a87/dsc/secureMOF.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [dsc\secureMOF.md](https://github.com/PowerShell/powerShell-Docs.fr-fr/blob/a507a9b835daa4ac260ea0794282b00ba7fc4e9e/dsc/secureMOF.md)
 * Handoff File: [secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/f6cacaa4e73690455548fee2bda3b595194b5112/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.fr-fr.xlf)
 * Handoff Datetime: 2016-04-29 23:10:10
 * Handoff Reason: Include
 * Archive File: [secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/0a53ce0d3479104bb9f1a13452fb860e98750180/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/archive/secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.fr-fr.xlf)
 * Archive Datetime: 2016-05-03 15:36:10
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [dsc\secureMOF.md](https://github.com/PowerShell/powerShell-Docs.fr-fr/blob/e29e0a7a09a71244e7041c805ef84422221761b5/dsc/secureMOF.md)
-* Current Handback File: [secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/a5b762a741bf622d645643f2868c33db130f09c2/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.fr-fr.xlf)
-* Current Handback Datetime: 2016-05-06 21:51:03
+* Handback File: [secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/be0310bd3c9fadace752070c67278ac5c26f01b8/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.fr-fr.xlf)
+* Handback Datetime: 2016-05-11 08:45:35
 * [Back to Top](#report-top)
 
 ##### <a name='2290a81a8dbc82b7881d2b6006d70a90578f9a5686'></a> Source: [dsc\secureServer.md](https://github.com/PowerShell/powerShell-Docs/blob/dcacf14d13cc0c3e4bb3b6602ad3ab6b3141471f/dsc/secureServer.md)
