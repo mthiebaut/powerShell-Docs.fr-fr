@@ -1,3 +1,14 @@
+---
+title:   Livres blancs
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Livres blancs
 
 Les livres blancs suivants ont été publiés pour fournir des informations supplémentaires sur la configuration d’état souhaité PowerShell.
@@ -7,6 +18,8 @@ Vous avez tout à y gagner quand des modèles et pratiques de techniques de dév
 
 **[Télécharger le PDF](http://aka.ms/thereleasepipelinemodelpdf)**
 
-<!--HONumber=Apr16_HO2-->
+
+
+<!--HONumber=May16_HO3-->
 
 

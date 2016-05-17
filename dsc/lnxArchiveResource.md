@@ -1,3 +1,14 @@
+---
+title:   Ressource nxArchive dans DSC pour Linux
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Ressource nxArchive dans DSC pour Linux
 
 La ressource **nxArchive** de la configuration d’état souhaité (DSC) de Windows PowerShell fournit un mécanisme permettant de décompresser les fichiers d’archive (.zip) à un emplacement spécifique d’un nœud Linux.
@@ -51,4 +62,9 @@ nxArchive SyncWebDir
    DependsOn = "[nxFile]SyncArchiveFromWeb"
 } 
 ```
-<!--HONumber=Feb16_HO4-->
+
+
+
+<!--HONumber=May16_HO3-->
+
+

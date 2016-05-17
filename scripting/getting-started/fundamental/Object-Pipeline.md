@@ -1,12 +1,15 @@
 ---
-title: Pipeline d’objet
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 523d8ae4-d743-47a4-b79a-806130ca688a
+title:  Pipeline d’objet
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  523d8ae4-d743-47a4-b79a-806130ca688a
 ---
+
 # Pipeline d’objet
 Les pipelines agissent comme une série de segments de canal connectés. Les éléments se déplaçant dans pipeline passent par chaque segment. Pour créer un pipeline dans Windows PowerShell, vous interconnectez des commandes à l’aide que l’opérateur barre verticale « | » (pipe). La sortie de chaque commande est utilisée en tant qu’entrée pour la commande suivante.
 
@@ -16,6 +19,6 @@ Dans ce chapitre, nous expliquons en quoi le pipeline Windows PowerShell diffèr
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

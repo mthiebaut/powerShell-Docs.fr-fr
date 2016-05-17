@@ -1,12 +1,15 @@
 ---
-title: Changement de l’état de l’ordinateur
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 8093268b-27f8-4a49-8871-142c5cc33f01
+title:  Changement de l’état de l’ordinateur
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  8093268b-27f8-4a49-8871-142c5cc33f01
 ---
+
 # Changement de l’état de l’ordinateur
 Pour réinitialiser un ordinateur dans Windows PowerShell, utilisez un outil en ligne de commande standard ou une classe WMI. Même si vous utilisez Windows PowerShell uniquement pour exécuter l’outil, apprendre à modifier l’état d’alimentation d’un ordinateur dans Windows PowerShell permet de comprendre certains aspects importants de l’utilisation d’outils externes dans Windows PowerShell.
 
@@ -59,6 +62,6 @@ Pour redémarrer le système d’exploitation, utilisez la méthode Win32Shutdow
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

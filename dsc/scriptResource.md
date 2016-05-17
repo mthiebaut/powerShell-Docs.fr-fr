@@ -1,3 +1,14 @@
+---
+title:   Ressource Script dans DSC
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Ressource Script dans DSC
 
  
@@ -80,6 +91,6 @@ Cette ressource écrit la version de la configuration dans un fichier texte. Cet
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

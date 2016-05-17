@@ -1,3 +1,14 @@
+---
+title:   Gestionnaire de configuration local (LCM) de DSK Windows PowerShell 4.0
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Gestionnaire de configuration local (LCM) de DSK Windows PowerShell 4.0
 
 >S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -61,4 +72,10 @@ Set-DscLocalConfigurationManager -Path "c:\users\public\dsc"
 
 > **Remarque** : Pour le paramètre **Path**, vous devez spécifier le même chemin que celui que vous avez spécifié pour le paramètre **OutputPath** dans l’appel de la configuration de l’exemple précédent.
 
-Pour afficher les paramètres actuels du Gestionnaire de configuration local, utilisez l’applet de commande **Get-DscLocalConfigurationManager**. Si vous appelez cette applet de commande sans spécifier de paramètre, elle affiche par défaut les paramètres du Gestionnaire de configuration local pour le nœud sur lequel vous l’exécutez. Pour spécifier un autre nœud, utilisez le paramètre **CimSession** avec cette applet de commande.<!--HONumber=Feb16_HO4-->
+Pour afficher les paramètres actuels du Gestionnaire de configuration local, utilisez l’applet de commande **Get-DscLocalConfigurationManager**. Si vous appelez cette applet de commande sans spécifier de paramètre, elle affiche par défaut les paramètres du Gestionnaire de configuration local pour le nœud sur lequel vous l’exécutez. Pour spécifier un autre nœud, utilisez le paramètre **CimSession** avec cette applet de commande.
+
+
+
+<!--HONumber=May16_HO3-->
+
+

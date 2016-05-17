@@ -1,3 +1,14 @@
+---
+title:   Écriture d’une ressource DSC personnalisée avec les classes PowerShell
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Écriture d’une ressource DSC personnalisée avec les classes PowerShell
 
 > S’applique à : Windows PowerShell 5.0
@@ -464,6 +475,7 @@ Start-DscConfiguration -Wait -Force Test
 [Création de ressources DSC Windows PowerShell personnalisées](authoringResource.md)
 
 
-<!--HONumber=Mar16_HO4-->
+
+<!--HONumber=May16_HO3-->
 
 

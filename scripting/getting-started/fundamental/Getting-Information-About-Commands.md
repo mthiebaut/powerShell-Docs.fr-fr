@@ -1,12 +1,15 @@
 ---
-title: Obtention d'informations sur les commandes
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 56f8e5b4-d97c-4e59-abbe-bf13e464eb0d
+title:  Obtention d'informations sur les commandes
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  56f8e5b4-d97c-4e59-abbe-bf13e464eb0d
 ---
+
 # Obtention d'informations sur les commandes
 L’applet de commande Windows PowerShell **Get-Command** permet d’obtenir toutes les commandes disponibles dans la session active. Quand vous tapez **Get-Command** dans une invite Windows PowerShell, la sortie est similaire à ce qui suit :
 
@@ -78,6 +81,6 @@ Get-Command -CommandType Script
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

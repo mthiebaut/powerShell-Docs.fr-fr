@@ -1,12 +1,15 @@
 ---
-title: Utilisation du développement par tabulation
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c8730471-bf6a-43b8-ab1d-f9ef5a74f04e
+title:  Utilisation du développement par tabulation
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  c8730471-bf6a-43b8-ab1d-f9ef5a74f04e
 ---
+
 # Utilisation du développement par tabulation
 Les interpréteurs de ligne de commande offrent souvent une manière de compléter automatiquement les noms de fichiers ou commandes longs, en accélérant la saisie de commandes et en fournissant des indications. Windows PowerShell permet de renseigner des noms de fichiers et des noms de d’applet de commande en appuyant sur la touche **Tab**.
 
@@ -46,6 +49,6 @@ PS> Get-Content C:\windows\actsetup.log
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

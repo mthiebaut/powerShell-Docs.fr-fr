@@ -1,12 +1,15 @@
 ---
-title: Compréhension du pipeline Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6be50926-7943-4ef7-9499-4490d72a63fb
+title:  Compréhension du pipeline Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  6be50926-7943-4ef7-9499-4490d72a63fb
 ---
+
 # Compréhension du pipeline Windows PowerShell
 Le piping fonctionne pratiquement partout dans Windows PowerShell. Même si vous voyez du texte à l’écran, Windows PowerShell ne canalise pas de texte entre des commandes. Au lieu de cela, il canalise des objets.
 
@@ -62,6 +65,6 @@ Le reste de ce chapitre explique comment découvrir la structure d’objets Wind
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

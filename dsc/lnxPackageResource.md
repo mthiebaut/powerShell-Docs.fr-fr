@@ -1,3 +1,14 @@
+---
+title:   Ressource nxPackage dans DSC pour Linux
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Ressource nxPackage dans DSC pour Linux
 
 La ressource **nxPackage** dans DSC (Desired State Configuration) PowerShell fournit un mécanisme permettant de gérer des packages sur un nœud Linux.
@@ -48,4 +59,9 @@ nxPackage httpd
 }
 }
 ```
-<!--HONumber=Feb16_HO4-->
+
+
+
+<!--HONumber=May16_HO3-->
+
+

@@ -1,3 +1,14 @@
+---
+title:   Ressource WindowsProcess dans DSC
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Ressource WindowsProcess dans DSC
 
 > S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -33,4 +44,9 @@ WindowsProcess [string] #ResourceName
 | StandardInputPath| Indique l’emplacement d’entrée standard.| 
 | StandardOutputPath| Indique l’emplacement où écrire la sortie standard. Tout fichier existant est remplacé.| 
 | WorkingDirectory| Indique l’emplacement à utiliser comme répertoire de travail actuel pour le processus.| 
-<!--HONumber=Feb16_HO4-->
+
+
+
+<!--HONumber=May16_HO3-->
+
+

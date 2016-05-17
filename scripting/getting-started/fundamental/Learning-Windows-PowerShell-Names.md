@@ -1,12 +1,15 @@
 ---
-title: Apprentissage des noms dans Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: b4d0fd22-8298-4ee6-82ae-9b6f2907c986
+title:  Apprentissage des noms dans Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  b4d0fd22-8298-4ee6-82ae-9b6f2907c986
 ---
+
 # Apprentissage des noms dans Windows PowerShell
 L’apprentissage des noms et des paramètres des commandes nécessite beaucoup de temps avec la plupart des interfaces de ligne de commande. Le problème est qu’il existe très peu de modèles, de sorte que la seule façon d’apprendre consiste à mémoriser chaque commande et chaque paramètre que vous devez utiliser régulièrement.
 
@@ -92,6 +95,6 @@ Par exemple, les instructions recommandent d’attribuer à un paramètre faisan
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

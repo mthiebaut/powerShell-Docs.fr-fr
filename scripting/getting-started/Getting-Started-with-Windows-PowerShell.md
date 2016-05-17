@@ -1,12 +1,15 @@
 ---
-title: Prise en main de Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: b0e2ad92-875f-421d-b612-f624e644aa69
+title:  Prise en main de Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  b0e2ad92-875f-421d-b612-f624e644aa69
 ---
+
 # Prise en main de Windows PowerShell
 Windows PowerShell est un nouvel interpréteur de ligne de commande Windows spécialement conçu pour les administrateurs système. Windows PowerShell inclut une invite interactive et un environnement de script utilisables indépendamment ou conjointement.
 

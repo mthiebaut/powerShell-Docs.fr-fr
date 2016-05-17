@@ -1,3 +1,14 @@
+---
+title:   Utilisation du Concepteur de ressources
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Utilisation du Concepteur de ressources
 
 > S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -171,4 +182,9 @@ L’outil Concepteur de ressources expose une applet de commande supplémentaire
 
 #### Autres ressources
 [Module xDscResourceDesigner](https://powershellgallery.com/packages/xDscResourceDesigner)
-<!--HONumber=Feb16_HO4-->
+
+
+
+<!--HONumber=May16_HO3-->
+
+

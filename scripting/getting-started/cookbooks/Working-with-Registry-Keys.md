@@ -1,12 +1,15 @@
 ---
-title: Utilisation de clés de Registre
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 91bfaecd-8684-48b4-ad86-065dfe6dc90a
+title:  Utilisation de clés de Registre
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  91bfaecd-8684-48b4-ad86-065dfe6dc90a
 ---
+
 # Utilisation de clés de Registre
 Étant donné que les clés de Registre sont des éléments sur des lecteurs Windows PowerShell, leur utilisation est très similaire à l’utilisation de fichiers et dossiers. Une différence importante est que chaque élément sur un lecteur Windows PowerShell basé sur un Registre est un conteneur, tout comme un dossier sur un lecteur du système de fichiers. En revanche, les entrées de Registre et les valeurs qui leur sont associées sont des propriétés des éléments, pas des éléments distincts.
 
@@ -117,6 +120,6 @@ Remove-Item -Path HKCU:\CurrentVersion\* -Recurse
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

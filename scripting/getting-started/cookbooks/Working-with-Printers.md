@@ -1,12 +1,15 @@
 ---
-title: Utilisation d’imprimantes
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 4f29ead3-f83b-4706-ac3e-f2154ff38dc5
+title:  Utilisation d’imprimantes
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  4f29ead3-f83b-4706-ac3e-f2154ff38dc5
 ---
+
 # Utilisation d’imprimantes
 Vous pouvez utiliser Windows PowerShell pour gérer des imprimantes à l’aide de WMI et de l’objet COM WScript.Network de WSH. Nous allons utiliser une combinaison de ces deux outils pour effectuer des tâches spécifiques.
 
@@ -54,6 +57,6 @@ Pour supprimer une connexion d’imprimante, utilisez la méthode **WScript.Netw
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
