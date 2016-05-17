@@ -1,3 +1,14 @@
+---
+title:   Ressources DSC Windows PowerShell intégrées
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Ressources DSC Windows PowerShell intégrées
 
 > S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -18,6 +29,7 @@ La configuration de l’état souhaité (DSC) de Windows PowerShell est fournie 
 * [Ressource WindowsProcess](windowsProcessResource.md)
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=May16_HO3-->
 
 
