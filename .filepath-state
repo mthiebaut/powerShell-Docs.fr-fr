@@ -41,9 +41,6 @@
   "ea312b4e773cd8b0eceeca123e616957728eb1c6": [
     "dsc\\builtInResource.md"
   ],
-  "3e887680203d836b4161a1e54b6bc60bb20dc6c8": [
-    "dsc\\builtInResource.md"
-  ],
   "036c8fff9af66b677fb6750699f1bf9e679de517": [
     "dsc\\configData.md"
   ],
@@ -75,9 +72,6 @@
     "dsc\\debugResource.md"
   ],
   "2d2b142dc862f7655f28aa34e1fd91f63bd6286e": [
-    "dsc\\decisionMaker.md"
-  ],
-  "03159221013064b2c1d77211c88bb8e1c9a9fcb1": [
     "dsc\\decisionMaker.md"
   ],
   "4c802002c6a03a27d02221dd713677911a77c30b": [
@@ -143,9 +137,6 @@
   "2139e4462c0568c30b118ef6cb3ceef1717b52e6": [
     "dsc\\lnxGroupResource.md"
   ],
-  "9bda555be3a52c574eccfa66b114883e2f543c70": [
-    "dsc\\lnxGroupResource.md"
-  ],
   "31867cc7af96a3d8d527f5906d77bed5206940b4": [
     "dsc\\lnxPackageResource.md"
   ],
@@ -153,9 +144,6 @@
     "dsc\\lnxScriptResource.md"
   ],
   "3835495705297616a41329bcfdaad42b464115d8": [
-    "dsc\\lnxServiceResource.md"
-  ],
-  "c1bddeef2a61ad2b32e067bf643df077ec65053e": [
     "dsc\\lnxServiceResource.md"
   ],
   "edc906b4e9c925320c4ed00c5ab295189066ccb9": [
@@ -231,9 +219,6 @@
     "dsc\\pullServer.md"
   ],
   "02bb8458796d60991a05a8250f3bf8f3261ffce1": [
-    "dsc\\queryServerNodes.md"
-  ],
-  "fc1456c57ade6862957e54ee53f18f189785848a": [
     "dsc\\queryServerNodes.md"
   ],
   "15e346ecd630a1256477d375bc1373f376e76f64": [
@@ -680,9 +665,6 @@
   "72d0c66e8fe1c87561af89821e16032f25c3b1b5": [
     "scripting\\getting-started\\cookbooks\\Sorting-Objects.md"
   ],
-  "3a8408656ec59f58154bfca1b4bca6ea45547ac6": [
-    "scripting\\getting-started\\cookbooks\\Sorting-Objects.md"
-  ],
   "db5f410c8f84949c969f21ed59ac48a4e31e91fd": [
     "scripting\\getting-started\\fundamental\\Understanding-Important-Windows-PowerShell-Concepts.md"
   ],
@@ -732,9 +714,6 @@
     "scripting\\getting-started\\cookbooks\\Working-With-Files-Folders-and-Registry-Keys.md"
   ],
   "c9bc3460e25063347de3c594ef5ce437b0f8961d": [
-    "scripting\\getting-started\\cookbooks\\Working-with-Files-and-Folders.md"
-  ],
-  "292a8f74bf07cc177e34d9b7eea3db7ff69f8135": [
     "scripting\\getting-started\\cookbooks\\Working-with-Files-and-Folders.md"
   ],
   "a25734261fdcf657d0b97b1f037580f89b04881d": [
