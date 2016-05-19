@@ -10,10 +10,10 @@ Le schéma définit les propriétés de votre ressource qui peuvent être config
 
 ### Structure de dossiers pour une ressource MOF
 
-Pour implémenter une ressource personnalisée DSC avec un schéma MOF, créez la structure de dossiers suivante. Le schéma MOF est défini dans le fichier Demo_IISWebsite.schema.mof et le script de la ressource est défini dans Demo_IISWebsite.ps1. Si vous le voulez, vous pouvez créer un fichier de manifeste de module (psd1).
+Pour implémenter une ressource personnalisée DSC avec un schéma MOF, créez la structure de dossiers suivante. Le schéma MOF est défini dans le fichier Demo_IISWebsite.schema.mof et le script de la ressource est défini dans Demo_IISWebsite.psm1. Si vous le voulez, vous pouvez créer un fichier de manifeste de module (psd1).
 
 ```
-$env: psmodulepath (folder)
+$env:PSModulePath (folder)
     |- MyDscResources (folder)
         |- DSCResources (folder)
             |- Demo_IISWebsite (folder)
@@ -26,7 +26,7 @@ Notez qu’il est nécessaire de créer un dossier nommé DSCResources sous le d
 
 ### Le contenu du fichier MOF
 
-Voici un exemple de fichier MOF qui peut être utilisé pour une ressource de site web personnalisée. Pour suivre cet exemple, enregistrez ce schéma dans un fichier et appelez le fichier *Demo_IISWebsite.schema.mof*.
+Voici un exemple de fichier MOF qui peut être utilisé pour une ressource de site web personnalisée. Pour suivre cet exemple, enregistrez ce schéma dans un fichier et appelez le fichier *Demo_IISWebsite.schema.mof*..
 
 ```
 [ClassVersion("1.0.0"), FriendlyName("Website")] 
@@ -47,11 +47,11 @@ Notez les éléments suivants concernant le code ci-dessus :
 
 * `FriendlyName` définit le nom que vous pouvez utiliser pour faire référence à cette ressource personnalisée dans les scripts de configuration DSC. Dans cet exemple, `Website` équivaut au nom convivial `Archive` de la ressource Archive intégrée.
 * La classe que vous définissez pour la ressource personnalisée doit dériver de `OMI_BaseResource`.
-* Le qualificateur de type (`[Key]`) d’une propriété indique que cette propriété identifie de manière unique l’instance de ressource. Une propriété `[Key]` est également nécessaire.
+* Le qualificateur de type (`[Key]`) d’une propriété indique que cette propriété identifie de manière unique l’instance de ressource. Au moins une propriété `[Key]` est requise.
 * Le qualificateur `[Required]` indique que la propriété est obligatoire (une valeur doit être spécifiée dans un script de configuration qui utilise cette ressource).
 * Le qualificateur `[write]` indique que cette propriété est facultative quand vous utilisez la ressource personnalisée dans un script de configuration. Le qualificateur `[read]` indique qu’une propriété ne peut pas être définie par une configuration et qu’elle ne peut être utilisée qu’à des fins de création de rapports.
-* `Values` limite les valeurs pouvant être affectées à la propriété à la liste des valeurs définies dans `ValueMap`. Pour plus d’informations, consultez [ValueMap and Value Qualifiers](https://msdn.microsoft.com/library/windows/desktop/aa393965.aspx).
-* Il est recommandé d’utiliser une propriété appelée `Ensure` dans votre ressource pour maintenir un style cohérent entre les ressources DSC intégrées.
+* `Values` limite les valeurs pouvant être affectées à la propriété à la liste des valeurs définies dans `ValueMap`. Pour plus d’informations, consultez [ValueMap and Value Qualifiers](https://msdn.microsoft.com/library/windows/desktop/aa393965.aspx)..
+* Il est recommandé d’utiliser une propriété appelée `Ensure` avec les valeurs `Present` et `Absent` dans votre ressource pour maintenir un style cohérent entre les ressources DSC intégrées.
 * Nommez le fichier de schéma de la ressource personnalisée comme suit : `classname.schema.mof`, où `classname` est l’identificateur qui suit le mot clé `class` dans votre définition de schéma.
 
 ### Écriture du script de la ressource
@@ -154,7 +154,7 @@ function Set-TargetResource
 }
 ```
 
-Enfin, la fonction **Test-TargetResource** doit prendre le même jeu de paramètres que **Get-TargetResource** et **Set-TargetResource**. Dans votre implémentation de **Test-TargetResource**, vérifiez l’état de l’instance de ressource qui est spécifié dans les paramètres de clé. Si l’état réel de l’instance de ressource ne correspond pas aux valeurs spécifiées dans le jeu de paramètres, retournez **$false**. Sinon, retournez **$true**.
+Enfin, la fonction **Test-TargetResource** doit prendre le même jeu de paramètres que **Get-TargetResource** et **Set-TargetResource**. Dans votre implémentation de **Test-TargetResource**, vérifiez l’état de l’instance de ressource qui est spécifié dans les paramètres de clé. Si l’état réel de l’instance de ressource ne correspond pas aux valeurs spécifiées dans le jeu de paramètres, retournez **$false**. Sinon, retournez **$true**..
 
 Le code suivant implémente la fonction **Test-TargetResource**.
 
@@ -207,7 +207,7 @@ $result
 
 ### Création du manifeste de module
 
-Enfin, utilisez l’applet de commande **New-ModuleManifest** pour définir un fichier <ResourceName>.psd1 pour votre module de ressource personnalisé. Quand vous appelez cette applet de commande, référencez le fichier de module de script (.psm1) décrit dans la section précédente. Ajoutez **Get-TargetResource**, **Set-TargetResource** et **Test-TargetResource** à la liste des fonctions à exporter. Voici un exemple de fichier de manifeste.
+Enfin, utilisez l’applet de commande **New-ModuleManifest** pour définir un <ResourceName>fichier .psd1 pour votre module de ressource personnalisé. Quand vous appelez cette applet de commande, référencez le fichier de module de script (.psm1) décrit dans la section précédente. Ajoutez **Get-TargetResource**, **Set-TargetResource** et **Test-TargetResource** à la liste des fonctions à exporter. Voici un exemple de fichier de manifeste.
 
 ```powershell
 # Module manifest for module 'Demo.IIS.Website'
@@ -261,6 +261,7 @@ FunctionsToExport = @("Get-TargetResource", "Set-TargetResource", "Test-TargetRe
 }
 ```
 
-<!--HONumber=Feb16_HO4-->
+
+<!--HONumber=May16_HO2-->
 
 

@@ -17,13 +17,13 @@ Vous pouvez ajouter le rôle serveur IIS et le service DSC avec l’Assistant Aj
 ## Utilisation de la ressource xWebService
 Le moyen le plus simple de configurer un serveur collecteur web consiste à utiliser la ressource xWebService, incluse dans le module xPSDesiredStateConfiguration. Les étapes suivantes expliquent comment utiliser la ressource dans une configuration qui configure le service web.
 
-1. Appelez l’applet de commande [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) pour installer le module **xPSDesiredStateConfiguration**. **Remarque** : **Install-Module** est inclus dans le module **PowerShellGet** de PowerShell 5.0. Vous pouvez télécharger le module **PowerShellGet** pour PowerShell 3.0 et 4.0 ici : [PackageManagement PowerShell Modules Preview](https://www.microsoft.com/en-us/download/details.aspx?id=49186). 
+1. Appelez l’applet de commande [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) pour installer le module **xPSDesiredStateConfiguration**. **Remarque** : **Install-Module** est inclus dans le module **PowerShellGet** de PowerShell 5.0. Vous pouvez télécharger le module **PowerShellGet** pour PowerShell 3.0 et 4.0 ici : [PackageManagement PowerShell Modules Preview](https://www.microsoft.com/en-us/download/details.aspx?id=49186).. 
 1. Obtenez un certificat SSL pour le serveur collecteur DSC auprès d’une autorité de certification approuvée, au sein de votre organisation ou auprès d’une autorité publique. Le certificat reçu de l’autorité est généralement au format PFX. Installez le certificat sur le nœud qui sera le serveur DSC à l’emplacement par défaut, c’est-à-dire : CERT:\LocalMachine\My. Notez l’empreinte de certificat.
 1. Sélectionnez un GUID à utiliser comme clé d’inscription. Pour en générer un à l’aide de PowerShell, entrez ce qui suit à l’invite PowerShell et appuyez sur Entrée : « ``` [guid]::newGuid()``` ». Cette clé est utilisée par les nœuds clients comme une clé partagée pour l’authentification lors de l’inscription. Pour plus d’informations, voir la section [Clé d’inscription](#RegKey) ci-dessous.
 1. Dans PowerShell ISE, démarrez (F5) le script de configuration suivant (inclus dans le dossier Example du module **xPSDesiredStateConfiguration** en tant que Sample_xDscWebService.ps1). Ce script configure le serveur collecteur.
   
 ```powershell
-configuration Sample_xDscWebService 
+configuration Sample_xDscPullServer
 { 
     param  
     ( 
@@ -44,27 +44,26 @@ configuration Sample_xDscWebService
      { 
          WindowsFeature DSCServiceFeature 
          { 
-             Ensure = "Present" 
-             Name   = "DSC-Service"             
+             Ensure = 'Present'
+             Name   = 'DSC-Service'             
          } 
- 
  
          xDscWebService PSDSCPullServer 
          { 
-             Ensure                  = "Present" 
-             EndpointName            = "PSDSCPullServer" 
+             Ensure                  = 'Present' 
+             EndpointName            = 'PSDSCPullServer' 
              Port                    = 8080 
              PhysicalPath            = "$env:SystemDrive\inetpub\PSDSCPullServer" 
              CertificateThumbPrint   = $certificateThumbPrint          
              ModulePath              = "$env:PROGRAMFILES\WindowsPowerShell\DscService\Modules" 
-             ConfigurationPath       = "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration"             
-             State                   = "Started" 
-             DependsOn               = "[WindowsFeature]DSCServiceFeature"                         
+             ConfigurationPath       = "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration" 
+             State                   = 'Started'
+             DependsOn               = '[WindowsFeature]DSCServiceFeature'                         
          } 
 
         File RegistrationKeyFile
         {
-            Ensure          ='Present'
+            Ensure          = 'Present'
             Type            = 'File'
             DestinationPath = "$env:ProgramFiles\WindowsPowerShell\DscService\RegistrationKeys.txt"
             Contents        = $RegistrationKey
@@ -82,7 +81,10 @@ configuration Sample_xDscWebService
 dir Cert:\LocalMachine\my
 
 # Then include this thumbprint when running the configuration
-Sample_xDSCService -certificateThumbprint 'A7000024B753FA6FFF88E966FD6E19301FAE9CCC' -RegistrationKey '140a952b-b9d6-406b-b416-e0f759c9c0e4' -OutpuPath c:\Configs\PullServer
+Sample_xDSCPullServer -certificateThumbprint 'A7000024B753FA6FFF88E966FD6E19301FAE9CCC' -RegistrationKey '140a952b-b9d6-406b-b416-e0f759c9c0e4' -OutpuPath c:\Configs\PullServer
+
+# Run the compiled configuration to make the target node a DSC Pull Server
+Start-DscConfiguration -Path c:\Configs\PullServer -Wait -Verbose
 ```
 
 ## Clé d’inscription
@@ -99,22 +101,22 @@ configuration PullClientConfigID
     {
         Settings
         {
-            RefreshMode = 'Pull'
+            RefreshMode          = 'Pull'
             RefreshFrequencyMins = 30 
-            RebootNodeIfNeeded = $true
+            RebootNodeIfNeeded   = $true
         }
         
         ConfigurationRepositoryWeb CONTOSO-PullSrv
         {
-            ServerURL = 'https://CONTOSO-PullSrv:8080/PSDSCPullServer.svc'
-            RegistrationKey = '140a952b-b9d6-406b-b416-e0f759c9c0e4'
+            ServerURL          = 'https://CONTOSO-PullSrv:8080/PSDSCPullServer.svc'
+            RegistrationKey    = '140a952b-b9d6-406b-b416-e0f759c9c0e4'
             ConfigurationNames = @('ClientConfig')
         }   
         
         ReportServerWeb CONTOSO-PullSrv
         {
-            ServerURL         = 'https://CONTOSO-PullSrv:8080/PSDSCPullServer.svc'
-            RegistrationKey   = '140a952b-b9d6-406b-b416-e0f759c9c0e4'
+            ServerURL       = 'https://CONTOSO-PullSrv:8080/PSDSCPullServer.svc'
+            RegistrationKey = '140a952b-b9d6-406b-b416-e0f759c9c0e4'
         }
     }
 }
@@ -168,6 +170,6 @@ Les rubriques suivantes décrivent la configuration des clients collecteurs en d
 * [Utilisation d’un serveur de rapports DSC](reportServer.md)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO1-->
 
 
