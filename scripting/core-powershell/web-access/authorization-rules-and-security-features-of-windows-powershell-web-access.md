@@ -369,7 +369,7 @@ Non
 
 Vous avez d’autres commentaires ?
 
-<span class="stdr-count"><span class="stdr-charcnt">1500</span> caractères restants</span>
+<span class="stdr-count"><span class="stdr-charcnt">1500</span> caractères restants</span>
 Soumettre
 Ignorer
 
@@ -386,7 +386,7 @@ Commentaires sur le site
 
 Faites-nous part de votre expérience...
 
-La page s’est-elle téléchargée rapidement ?
+La page s’est elle chargée rapidement ?
 
 <span> Oui<span> </span></span> <span> Non<span> </span></span>
 
@@ -396,9 +396,9 @@ La page s’est-elle téléchargée rapidement ?
 
 Donnez-nous votre avis
 
--   [Newsletter](https://technet.microsoft.com/cc543196.aspx)
+-   [Bulletin d’informations](https://technet.microsoft.com/cc543196.aspx)
 -   |
--   [Contactez Microsoft](https://technet.microsoft.com/cc512759.aspx)
+-   [Contactez-nous](https://technet.microsoft.com/cc512759.aspx)
 -   |
 -   [Déclaration de confidentialité](https://privacy.microsoft.com/privacystatement)
 -   |
@@ -411,7 +411,7 @@ Donnez-nous votre avis
 
 © 2016 Microsoft
 
-Les codes et les scripts développés par un tiers et en rapport à ce site doivent faire l’objet d’une licence fournie par le tiers, qui indique qu’il détient son code. Microsoft n’est pas partie prenante. Consultez les conditions d’utilisation CDN Ajax ASP.NET – http://www.asp.net/ajaxlibrary/CDN.ashx.
+Les codes et les scripts développés par un tiers et en rapport à ce site doivent faire l’objet d’une licence fournie par le tiers, qui indique qu’il détient son code. Microsoft n’est pas partie prenante. Consultez les conditions d’utilisation CDN Ajax ASP.NET (http://www.asp.net/ajaxlibrary/CDN.ashx).
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
 
 
