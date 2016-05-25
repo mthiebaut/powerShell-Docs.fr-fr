@@ -8,7 +8,7 @@ ms.topic: article
 ms.assetid: 117316fe-2f82-4fc9-b5dc-794ae9e3f258
 ---
 # Module PSWorkflow
-Cette section contient les rubriques d’aide pour le module **PSWorkflow**. Celui-ci comprend des applets de commande qui prennent en charge la fonctionnalité de workflow Windows PowerShell. Le module **PSWorkflow** est installé avec Windows PowerShell.
+Cette section contient les rubriques d’aide relatives au module **PSWorkflow**. Celui-ci comprend des applets de commande qui prennent en charge la fonctionnalité Windows PowerShell Workflow. Le module **PSWorkflow** est installé avec Windows PowerShell.
 
 ## Rubriques d'aide
 [Applets de commande de workflow](http://go.microsoft.com/fwlink/?LinkID=245865)
