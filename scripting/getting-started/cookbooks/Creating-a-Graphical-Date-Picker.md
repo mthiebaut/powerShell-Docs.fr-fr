@@ -1,12 +1,15 @@
 ---
-title: Création d'un sélecteur de dates graphique
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c1cb722c-41e9-4baa-be83-59b4653222e9
+title:  Création d'un sélecteur de dates graphique
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  c1cb722c-41e9-4baa-be83-59b4653222e9
 ---
+
 # Création d'un sélecteur de dates graphique
 Dans Windows PowerShell 3.0 et versions ultérieures, vous pouvez créer un formulaire avec un contrôle graphique de type calendrier qui permet aux utilisateurs de sélectionner un jour du mois.
 
@@ -137,6 +140,6 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

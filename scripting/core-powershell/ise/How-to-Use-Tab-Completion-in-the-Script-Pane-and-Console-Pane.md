@@ -1,12 +1,15 @@
 ---
-title: Comment utiliser la saisie semi-automatique via la touche Tab dans les volets Script et Commande
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 3b752c3c-0bd0-4eca-a2d3-2d5a37fd9d84
+title:  Comment utiliser la saisie semi-automatique via la touche Tab dans les volets Script et Commande
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  3b752c3c-0bd0-4eca-a2d3-2d5a37fd9d84
 ---
+
 # Comment utiliser la saisie semi-automatique via la touche Tab dans les volets Script et Commande
 La saisie semi-automatique via la touche Tab fournit une aide automatique lorsque vous tapez dans le volet Script ou Commande. Pour tirer parti de cette fonctionnalité, procédez comme suit :
 
@@ -24,6 +27,7 @@ Par exemple, tapez `get-process -` puis appuyez sur la touche TAB plusieurs fois
 ## Voir aussi
 [Utilisation de Windows PowerShell ISE](using-the-windows-powershell-ise.md)
 [Comment créer un onglet PowerShell](How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md)
+
 
 
 <!--HONumber=May16_HO2-->

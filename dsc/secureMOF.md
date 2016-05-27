@@ -1,26 +1,30 @@
+---
+title:   Sécurisation du fichier MOF
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Sécurisation du fichier MOF
 
 >S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
-DSC indique aux nœuds cibles la configuration qu’ils doivent avoir en envoyant à chacun d’eux un fichier MOF contenant ces informations, dans lequel le gestionnaire de configuration local (LCM) implémente la configuration souhaitée. 
-. Étant donné que ce fichier contient les détails de la configuration, il est important qu’il soit sécurisé. Pour ce faire, vous pouvez paramétrer le LCM pour qu’il vérifie les informations d’identification 
-d’un utilisateur. Cette rubrique décrit comment transmettre ces informations d’identification en toute sécurité au nœud cible en les chiffrant avec des certificats.
+DSC indique aux nœuds cibles la configuration qu’ils doivent appliquer en envoyant à chaque nœud un fichier MOF contenant ces informations, dans lequel le gestionnaire de configuration local implémente la configuration souhaitée. Étant donné que ce fichier contient les détails de la configuration, il est important qu’il soit sécurisé. Pour ce faire, vous pouvez paramétrer le LCM pour qu’il vérifie les informations d’identification d’un utilisateur. Cette rubrique décrit comment transmettre ces informations d’identification en toute sécurité au nœud cible en les chiffrant avec des certificats.
 
->**Remarque :** cette rubrique présente les certificats utilisés pour le chiffrement. Pour le chiffrement, un certificat auto-signé est suffisant, car la clé privée est toujours gardée secrète et le chiffrement n’implique pas d’approbation du document. Les certificats auto-signés
->ne doivent *pas* être utilisés à des fins d’authentification. Pour l’authentification, vous devez utiliser un certificat d’une Autorité de certification (CA) approuvée.
+>**Remarque :** cette rubrique présente les certificats utilisés pour le chiffrement. Pour le chiffrement, un certificat auto-signé est suffisant, car la clé privée est toujours gardée secrète et le chiffrement n’implique pas d’approbation du document. Les certificats auto-signés ne doivent *pas* être utilisés à des fins d’authentification. Pour l’authentification, vous devez utiliser un certificat d’une Autorité de certification (CA) approuvée.
 
 ## Conditions préalables
 
 Afin de chiffrer correctement les informations d’identification utilisées pour sécuriser une configuration DSC, assurez-vous d’avoir les éléments suivants :
 
-* **Un moyen d’émettre et de distribuer des certificats**. Cette rubrique et ses exemples supposent que vous utilisez une autorité de certification Active Directory. Pour obtenir des informations générales sur les 
-services de certificats Active Directory, voir [Vue d’ensemble des services de certificats Active Directory](https://technet.microsoft.com/library/hh831740.aspx) et 
-[Services de certificats Active Directory dans Windows Server 2008](https://technet.microsoft.com/windowsserver/dd448615.aspx).
-* **Accès d’administrateur à un ou plusieurs nœuds cibles**.
-* **Chaque nœud cible dispose d’un certificat de chiffrement compatible enregistré dans son magasin personnel**. Dans Windows PowerShell, le chemin du magasin est Cert:\LocalMachine\My. Les exemples de cette rubrique utilisent le 
-modèle « Authentification de station de travail », disponible (ainsi que d’autres modèles de certificat) dans la page [Modèles de certificat par défaut](https://technet.microsoft.com/library/cc740061(v=WS.10).aspx).
-* Si vous comptez exécuter cette configuration sur un ordinateur autre que le nœud cible, **exportez la clé publique du certificat**, puis importez-la sur l’ordinateur à partir duquel vous allez exécuter 
-la configuration. Assurez-vous d’exporter uniquement la clé **publique** et sécurisez la clé privée.
+* **Un moyen d’émettre et de distribuer des certificats**. Cette rubrique et ses exemples supposent que vous utilisez une autorité de certification Active Directory. Pour plus d’informations sur les services de certificats Active Directory, consultez [Vue d’ensemble des services de certificats Active Directory](https://technet.microsoft.com/library/hh831740.aspx) et [Services de certificat Active Directory](https://technet.microsoft.com/windowsserver/dd448615.aspx).
+* **Un accès d’administrateur à un ou plusieurs nœuds cibles**.
+* **Chaque nœud cible dispose d’un certificat de chiffrement compatible enregistré dans son magasin personnel**. Dans Windows PowerShell, le chemin du magasin est Cert:\LocalMachine\My. Les exemples de cette rubrique utilisent le modèle « Authentification de station de travail », disponible (ainsi que d’autres modèles de certificat) dans la page [Modèles de certificat par défaut](https://technet.microsoft.com/library/cc740061(v=WS.10).aspx).
+* Si vous comptez exécuter cette configuration sur un ordinateur autre que le nœud cible, **exportez la clé publique du certificat**, puis importez-la sur l’ordinateur à partir duquel vous allez exécuter la configuration. Assurez-vous d’exporter uniquement la clé **publique** et sécurisez la clé privée.
 
 ## Processus général
 
@@ -44,9 +48,7 @@ Pour pouvoir être utilisé, ce certificat de clé publique doit répondre à de
  3. La clé privée du certificat est disponible sur le *Nœud cible_.
  4. Le **fournisseur** pour le certificat doit être « Fournisseur de services de chiffrement Microsoft RSA SChannel ».
  
->**Bonne pratique recommandée :** Bien que vous puissiez utiliser un certificat contenant une utilisation de clé de type « Digital Signature » ou l’une des utilisations améliorées de la clé d’authentification, la clé de chiffrement 
->est plus facilement utilisée à mauvais escient et vulnérable aux attaques. Par conséquent, il est recommandé d’utiliser un certificat créé spécifiquement pour les besoins de sécurisation des informations d’identification DSC, qui omet ces utilisation de clé et 
->utilisations améliorées de la clé.
+>**Bonne pratique recommandée :** bien que vous puissiez utiliser un certificat contenant une utilisation de clé de type « Digital Signature » ou une authentification d’utilisation améliorée de la clé, la clé de chiffrement est plus facilement utilisée à mauvais escient et vulnérable aux attaques. Par conséquent, il est recommandé d’utiliser un certificat créé spécifiquement pour les besoins de sécurisation des informations d’identification DSC, qui omet ces paramètres Utilisation de la clé et Utilisation améliorée de la clé.
   
 Tous les certificats existants sur le _Nœud cible_ qui répondent à ces critères peuvent être utilisés pour sécuriser les informations d’identification DSC.
 
@@ -62,12 +64,11 @@ La première méthode est recommandée, car la clé privée utilisée pour déch
 
 ### Création du certificat sur le nœud cible
 
-La clé privée doit être gardée secrète, car elle est utilisée pour déchiffrer le fichier MOF sur le **nœud cible**
-Le moyen le plus simple pour ce faire consiste à créer le certificat de clé privée sur le **nœud cible**, puis à copier le **certificat de clé publique** sur l’ordinateur utilisé pour créer la configuration DSC dans un fichier MOF.
+La clé privée doit être gardée secrète, car elle est utilisée pour déchiffrer le fichier MOF sur le **nœud cible**. Le moyen le plus simple pour ce faire consiste à créer le certificat de clé privée sur le **nœud cible**, puis à copier le **certificat de clé publique** sur l’ordinateur utilisé pour créer la configuration DSC dans un fichier MOF.
 L’exemple suivant :
  1. crée un certificat sur le **nœud cible** ;
- 2. exporte le certificat de clé publique sur le **nœud cible** ;.
- 3. importe le certificat de clé publique dans le magasin de certificats **my** sur le **nœud de création**..
+ 2. exporte le certificat de clé publique sur le **nœud cible**.
+ 3. importe le certificat de clé publique dans le magasin de certificats **my** sur le **nœud de création**.
 
 #### Sur le nœud cible : créer et exporter le certificat
 >Nœud de création : Windows Server 2016 et Windows 10
@@ -125,11 +126,11 @@ Vous pouvez également créer le certificat de chiffrement sur le **nœud de cr�
 Il s’agit de la méthode actuelle pour implémenter le chiffrement des informations d’identification DSC sur _Nano Server_.
 Même si le fichier PFX est sécurisé avec un mot de passe, il doit être conservé en lieu sûr pendant le transit.
 L’exemple suivant :
- 1. crée un certificat sur le **nœud de création** ;.
- 2. exporte le certificat, avec la clé privée, sur le **nœud de création** ;.
+ 1. crée un certificat sur le **nœud de création**.
+ 2. exporte le certificat, avec la clé privée, sur le **nœud de création**.
  3. supprime la clé privée du **nœud de création**, mais conserve le certificat de clé publique dans le magasin **my** ;
- 4. importe le certificat de clé privée dans le magasin de certificats racines sur le **nœud cible**..
-   - Il doit être ajouté au magasin racine pour être approuvé par le **nœud cible**..
+ 4. importe le certificat de clé privée dans le magasin de certificats racines sur le **nœud cible**.
+   - Il doit être ajouté au magasin racine pour être approuvé par le **nœud cible**.
 
 #### Sur le nœud de création : créer et exporter le certificat
 >Nœud cible : Windows Server 2016 et Windows 10
@@ -194,12 +195,12 @@ Import-PfxCertificate -FilePath "$env:temp\DscPrivateKey.pfx" -CertStoreLocation
 
 ## Données de configuration
 
-Le bloc de données de configuration définit les nœuds cibles concernés par l’opération, s’il faut ou non déchiffrer les informations d’identification, les moyens de chiffrement et d’autres informations. Pour plus d’informations sur le bloc de données de configuration, voir [Séparation des données de configuration et d’environnement](configData.md)..
+Le bloc de données de configuration définit les nœuds cibles concernés par l’opération, s’il faut ou non déchiffrer les informations d’identification, les moyens de chiffrement et d’autres informations. Pour plus d’informations sur le bloc de données de configuration, consultez [Séparation des données de configuration et d’environnement](configData.md).
 
 Les éléments pouvant être configurés pour chaque nœud et qui sont liés au chiffrement des informations d’identification sont les suivants :
 * **NodeName** : nom du nœud cible pour lequel le chiffrement des informations d’identification est configuré.
 * **PsDscAllowPlainTextPassword** : indique si des informations d’identification non chiffrées peuvent être transmises à ce nœud. Cela **n’est pas recommandé**.
-* **Thumbprint** : empreinte numérique du certificat utilisée pour déchiffrer les informations d’identification dans la configuration DSC sur le _nœud cible_. **Ce certificat doit exister dans le magasin de certificats de l’ordinateur local sur le nœud cible.**
+* **Thumbprint** : empreinte du certificat utilisée pour déchiffrer les informations d’identification dans la configuration DSC sur le _Nœud cible_. **Ce certificat doit exister dans le magasin de certificats de l’ordinateur local sur le nœud cible.**
 * **CertificateFile** : fichier de certificat (contenant uniquement la clé publique) qui doit être utilisé pour chiffrer les informations d’identification pour le _Nœud cible_. Le fichier de certificat doit être au format X.509 binaire encodé DER ou X.509 encodé base 64.
 
 Cet exemple montre un bloc de données de configuration qui spécifie le nœud cible concerné nommé targetNode, le chemin du fichier de certificat de clé publique (nommé targetNode.cer) et l’empreinte numérique de la clé publique.
@@ -442,6 +443,7 @@ Start-CredentialEncryptionExample
 ```
 
 
-<!--HONumber=Apr16_HO5-->
+
+<!--HONumber=May16_HO3-->
 
 

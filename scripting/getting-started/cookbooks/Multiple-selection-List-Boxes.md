@@ -1,12 +1,15 @@
 ---
-title: Zones de liste à sélection multiple
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f74cd5d9-da57-4802-b614-0b194a7bc8f8
+title:  Zones de liste à sélection multiple
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  f74cd5d9-da57-4802-b614-0b194a7bc8f8
 ---
+
 # Zones de liste à sélection multiple
 Dans Windows PowerShell 3.0 et versions ultérieures, vous pouvez créer un contrôle de zone de liste à sélection multiple dans un formulaire Windows Form personnalisé.
 
@@ -183,6 +186,6 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

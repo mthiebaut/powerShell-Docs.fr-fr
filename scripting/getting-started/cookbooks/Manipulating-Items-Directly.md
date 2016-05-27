@@ -1,12 +1,15 @@
 ---
-title: Manipulation d'éléments de manière directe
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 8cbd4867-917d-41ea-9ff0-b8e765509735
+title:  Manipulation d'éléments de manière directe
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  8cbd4867-917d-41ea-9ff0-b8e765509735
 ---
+
 # Manipulation d'éléments de manière directe
 Dans Windows PowerShell, le terme *éléments* est utilisé pour désigner ce que vous voyez dans les lecteurs Windows PowerShell, comme les fichiers et les dossiers dans les lecteurs du système de fichiers, ainsi que les clés de Registre dans les lecteurs de Registre Windows PowerShell. Les applets de commande associées à l’utilisation de ces éléments comportent le mot **Item** dans leur intitulé.
 
@@ -86,7 +89,7 @@ SKC  VC Name                           Property
   3   0 OptionalComponents             {}
 ```
 
-Bien qu'il serait pratique de traiter les entrées de Registre en tant qu'éléments, vous ne pouvez pas spécifier un chemin d'accès à une entrée de Registre d'une façon qui garantit son unicité. La notation de chemin d’accès ne fait pas la distinction entre la sous-clé de Registre nommée **Run** et l’entrée de Registre **(Default)** dans la sous-clé **Run**. Par ailleurs, si les entrées de Registre étaient des éléments, du fait que les noms des entrées de Registre peuvent contenir une barre oblique inverse (**\**), vous ne pourriez pas faire la distinction entre une entrée de Registre nommée **Windows\CurrentVersion\Run** et la sous-clé située dans ce chemin d’accès.
+Bien qu'il serait pratique de traiter les entrées de Registre en tant qu'éléments, vous ne pouvez pas spécifier un chemin d'accès à une entrée de Registre d'une façon qui garantit son unicité. La notation de chemin d’accès ne fait pas la distinction entre la sous-clé de Registre nommée **Run** et l’entrée de Registre **(Default)** dans la sous-clé **Run**. Par ailleurs, si les entrées de Registre étaient des éléments, du fait que les noms des entrées de Registre peuvent contenir une barre oblique inverse (**\\**), vous ne pourriez pas faire la distinction entre une entrée de Registre nommée **Windows\CurrentVersion\Run** et la sous-clé située dans ce chemin d’accès.
 
 ### Affectation d’un nouveau nom à des éléments existants (Rename-Item)
 Pour modifier le nom d’un fichier ou d’un dossier, utilisez l’applet de commande **Rename-Item**. La commande suivante remplace le nom du fichier **file1.txt** par **fileOne.txt**.
@@ -197,6 +200,6 @@ Si le type de fichier .ini est associé au Bloc-notes, le fichier boot.ini s'ouv
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

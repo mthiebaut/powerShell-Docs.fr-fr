@@ -1,12 +1,15 @@
 ---
-title: Suppression d’objets du pipeline (Where-Object)
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 01df8b22-2d22-4e2c-a18d-c004cd3cc284
+title:  Suppression d’objets du pipeline (Where Object) 
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  01df8b22-2d22-4e2c-a18d-c004cd3cc284
 ---
+
 # Suppression d’objets du pipeline (Where-Object)
 Dans Windows PowerShell, vous générez et transmettez souvent à un pipeline plus d’objets que souhaité. Vous pouvez spécifier les propriétés d’objets particuliers à afficher à l’aide des applets de commande **Format**, mais cela ne résout pas le problème de la suppression d’objets entiers de l’affichage. Il se peut que vous souhaitiez filtrer des objets avant la fin d’un pipeline afin de pouvoir effectuer des actions uniquement sur un sous-ensemble des objets générés initialement.
 
@@ -15,8 +18,7 @@ Windows PowerShell inclut une applet de commande **Where-Object** qui permet de 
 ### Exécution de tests simples avec l’applet de commande Where-objet
 La valeur de **FilterScript** est un *bloc de script* (une ou plusieurs commandes Windows PowerShell entourées d’accolades {}) qui prend la valeur true ou false. Un tel bloc de script peut être très simple, mais sa création nécessite de connaître un autre concept de Windows PowerShell, à savoir l’opérateur de comparaison. Un opérateur de comparaison compare les éléments figurant de part et d’autre de celui-ci. Un opérateur de comparaison commence par un caractère « - » suivi d’un nom. Les opérateurs de comparaison de base fonctionnent sur pratiquement tout type d’objet. Certains opérateurs de comparaison plus avancés fonctionnent uniquement sur du texte ou des tableaux.
 
-> [!NOTE]
-> Par défaut, lorsque vous travaillez sur du texte, les opérateurs de comparaison de Windows PowerShell ne respectent pas la casse.
+> [!NOTE] Par défaut, lorsque vous travaillez sur du texte, les opérateurs de comparaison de Windows PowerShell ne respectent pas la casse.
 
 En raison de considérations liées à l’analyse, des symboles tels que <, >, et = ne sont pas utilisés comme opérateurs de comparaison. Au lieu de cela, les opérateurs de comparaison sont constitués de lettres. Les opérateurs de comparaison de base sont répertoriés dans le tableau suivant.
 
@@ -102,6 +104,6 @@ Les opérateurs logiques standards sont répertoriés dans le tableau suivant.
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

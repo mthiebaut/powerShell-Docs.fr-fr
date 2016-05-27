@@ -2,7 +2,7 @@
 
 # [Détails de l'installation](requirements.md)
 
-# [Incompatibilités connues du produit](productincompat.md)
+# [État de compatibilité des produits](productincompat.md)
 
 # [Commentaires](feedback.md)
 
@@ -39,7 +39,6 @@
 #### [Configurer un nœud avec plusieurs fragments de configuration](dsc_partialconfig.md)
 ##### [Prise en charge du mode d’actualisation mixte](dsc_partialconfig_mixedmode.md)
 #### [Configurer le moteur DSC avec un nouvel attribut](dsc_metaconfiguration.md)
-#### [Combinaison de modes PUSH et PULL](dsc_mixedrefreshmode.md)
 #### [Informations détaillées sur l’état du gestionnaire de configuration local](dsc_lcmstate.md)
 #### [Les fréquences pour RefreshMode et ConfigurationMode ne doivent pas nécessairement être des multiples l’une de l’autre](dsc_freqnomultiple.md)
 #### [Valeur supplémentaire pour la propriété RefreshMode](dsc_refreshmode.md)
@@ -98,4 +97,8 @@
 
 # [Limitations et problèmes connus](limitation_overview.md)
 ## [Problèmes connus liés à la Configuration d’état souhaité (DSC)](limitation_dsc.md)
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=May16_HO4-->
+
+

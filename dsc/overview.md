@@ -1,3 +1,14 @@
+---
+title:   Vue d’ensemble de la fonctionnalité Desired State Configuration de Windows PowerShell 
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Vue d’ensemble de la fonctionnalité Desired State Configuration de Windows PowerShell 
 
 > S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -30,7 +41,7 @@ DSC est une plateforme déclarative employée pour la configuration, le déploie
 * Les ressources sont les blocs de construction impératifs de DSC qui sont créés pour modéliser les divers composants d’un sous-système et implémenter le flux de contrôle de leurs différents états. Elles sont stockées dans les modules PowerShell et peuvent être créées pour modéliser des éléments généraux, comme un fichier ou un processus Windows, ou des éléments plus spécifiques, tels qu’un serveur IIS ou une machine virtuelle Azure.
 * Le LCM est le moteur utilisé par DSC pour faciliter les interactions entre les ressources et les configurations. Le LCM interroge régulièrement le système, via le flux de contrôle implémenté par les ressources, pour s’assurer que le système est dans l’état déclaré dans une configuration. Si le système n’est pas dans l’état souhaité, le LCM utilise une logique supplémentaire à l’intérieur des ressources pour « faire en sorte » qu’il soit conforme à l’état déclaré dans la configuration. 
 
-DSC inclut également plusieurs nouveaux mots clés de langage, applets de commande et outils que vous pouvez utiliser pour créer des configurations, générer plus facilement des ressources DSC, appeler des configurations et gérer le LCM. La plupart de ces applets de commande sont fournies dans le module PsDesiredStateConfig de Windows 8.1 (y compris `Start-DscConfiguration`, `Set-DscLocalConfigurationManager` et `Get-DscResource`). xDscResourceDesigner (disponible dans la [galerie PowerShell](https://www.powershellgallery.com/packages/xDSCResourceDesigner/)) regroupe plusieurs applets de commande qui simplifient le développement des ressources DSC.
+DSC inclut également plusieurs nouveaux mots clés de langage, applets de commande et outils que vous pouvez utiliser pour créer des configurations, générer plus facilement des ressources DSC, appeler des configurations et gérer le LCM. La plupart de ces applets de commande sont fournies dans le module PSDesiredStateConfiguration de Windows 8.1 (y compris `Start-DscConfiguration`, `Set-DscLocalConfigurationManager` et `Get-DscResource`). xDscResourceDesigner (disponible dans la [galerie PowerShell](https://www.powershellgallery.com/packages/xDSCResourceDesigner/)) regroupe plusieurs applets de commande qui simplifient le développement des ressources DSC.
 
 ## Voir aussi
 * [Configurations DSC](configurations.md)
@@ -39,6 +50,6 @@ DSC inclut également plusieurs nouveaux mots clés de langage, applets de comma
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

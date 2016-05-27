@@ -1,12 +1,15 @@
 ---
-title: Gestion de l'emplacement actuel
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: a9f9e7a7-3ea8-47d3-bbb4-6e437f6d4a4a
+title:  Gestion de l'emplacement actuel
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  a9f9e7a7-3ea8-47d3-bbb4-6e437f6d4a4a
 ---
+
 # Gestion de l'emplacement actuel
 Quand vous parcourez des systèmes de dossiers dans l’Explorateur de fichiers, vous disposez généralement d’un emplacement de travail spécifique, à savoir le dossier actuellement ouvert. Pour manipuler les éléments contenus dans le dossier actif, il vous suffit de cliquer dessus. Dans des interfaces de ligne de commande telles que Cmd.exe, quand vous êtes dans le même dossier qu’un fichier particulier, vous pouvez accéder à ce dernier en spécifiant un nom relativement court, ce qui vous évite de spécifier le chemin d’accès complet au fichier. Le répertoire actif est désigné sous le nom de « répertoire de travail ».
 
@@ -47,10 +50,7 @@ Pour spécifier des chemins d'accès par rapport à votre emplacement actuel, pr
 
 Par exemple, si vous vous trouvez dans le dossier **C:\Windows**, un point (**.**) représente **C:\Windows** et un point double (**..**) représente **C:**. Pour passer de votre emplacement actuel à la racine du lecteur C:, tapez :
 
-<pre>PS> Set-Location -Path .. -PassThru
-Path
-----
-C:\</pre>
+<pre>PS> Set-Location -Path .. -PassThru Path ---- C:\</pre>
 
 Vous pouvez employer la même technique sur les lecteurs Windows PowerShell qui ne sont pas des lecteurs du système de fichiers, comme **HKLM:**. Pour sélectionner l’emplacement de la clé HKLM\Software dans le Registre, tapez ce qui suit :
 
@@ -168,6 +168,6 @@ Quand vous utilisez une interface de ligne de commande, il n’est pas pratique 
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

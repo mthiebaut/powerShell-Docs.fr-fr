@@ -1,12 +1,15 @@
 ---
-title: Création d'une zone d'entrée personnalisée
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0b12e56c-299f-40ee-afbf-d30d23ed2565
+title:  Création d'une zone d'entrée personnalisée
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  0b12e56c-299f-40ee-afbf-d30d23ed2565
 ---
+
 # Création d'une zone d'entrée personnalisée
 Dans Windows PowerShell 3.0 et versions ultérieures, utilisez les fonctionnalités de création de formulaires de Microsoft .NET Framework pour créer une zone d’entrée graphique personnalisée à l’aide d’un script.
 
@@ -159,6 +162,6 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

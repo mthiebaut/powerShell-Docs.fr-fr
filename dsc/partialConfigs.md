@@ -1,3 +1,14 @@
+---
+title:   Configurations partielles du service de configuration d’état souhaité PowerShell
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Configurations partielles du service de configuration d’état souhaité PowerShell
 
 >S’applique à : Windows PowerShell 5.0
@@ -141,15 +152,77 @@ PartialConfigDemo
 
 Notez que le paramètre **RefreshMode** spécifié dans le bloc de paramètres est « Collecte », mais que le paramètre **RefreshMode** de la configuration partielle OSInstall est « Émission ».
 
-Vous nommez et localisez les documents de configuration comme décrit ci-dessus selon leurs modes d’actualisation respectifs. Vous appelez **Publish-DSCConfiguration** pour publier la configuration partielle SharePointInstall, et vous attendez que la configuration OSInstall soit extraite du serveur collecteur ou vous forcez une actualisation en appelant [Update-DscConfiguration](https://technet.microsoft.com/en-us/library/mt143541(v=wps.630).aspx).
+Nommez et localisez les fichiers MOF de configuration comme décrit ci-dessus selon leur mode d’actualisation respectif. Appelez **Publish-DSCConfiguration** pour publier la configuration partielle `SharePointInstall` et attendez que la configuration `OSInstall` soit extraite du serveur collecteur ou forcez une actualisation en appelant [Update-DscConfiguration](https://technet.microsoft.com/en-us/library/mt143541(v=wps.630).aspx).
 
+## Exemple de configuration partielle OSInstall
+
+```powershell
+Configuration OSInstall
+{
+    Param (
+        [Parameter(Mandatory,
+                   HelpMessage="Domain credentials required to add domain\sharepoint_svc to the local Administrators group.")]
+        [ValidateNotNullOrEmpty()]
+        [pscredential]$Credential
+    )
+
+    Import-DscResource -ModuleName PSDesiredStateConfiguration
+
+
+    Node localhost
+    {
+        Group LocalAdmins
+        {
+            GroupName = 'Administrators'
+            MembersToInclude = 'domain\sharepoint_svc',
+                               'admins@example.domain'
+            Ensure = 'Present'
+            Credential = $Credential
+            
+        }
+
+        WindowsFeature Telnet
+        {
+            Name = 'Telnet-Server'
+            Ensure = 'Absent'
+        }
+    }
+}
+OSInstall
+
+```
+## Exemple de configuration partielle SharePointConfig
+```powershell
+Configuration SharePointConfig
+{
+    Param (
+        [Parameter(Mandatory)]
+        [ValidateNotNullOrEmpty()]
+        [pscredential]$ProductKey
+    )
+
+    Import-DscResource -ModuleName xSharePoint
+
+    Node localhost
+    {
+        xSPInstall SharePointDefault
+        {
+            Ensure = 'Present'
+            BinaryDir = '\\FileServer\Installers\Sharepoint\'
+            ProductKey = $ProductKey
+        }
+    }
+}
+SharePointConfig
+```
 ##Voir aussi 
 
 **Concepts**
-[Serveurs collecteurs de la configuration d’état souhaité Windows PowerShell](pullServer.md) 
-[Configuration du gestionnaire de configuration local](https://technet.microsoft.com/en-us/library/mt421188.aspx) 
+[Serveurs collecteurs de la configuration d’état souhaité Windows PowerShell ](pullServer.md) 
+[Configuring the Local Configuration Manager](https://technet.microsoft.com/en-us/library/mt421188.aspx) 
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=May16_HO4-->
 
 

@@ -1,12 +1,15 @@
 ---
-title: Utilisation des entrées de Registre
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: fd254570-27ac-4cc9-81d4-011afd29b7dc
+title:  Utilisation des entrées de Registre
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  fd254570-27ac-4cc9-81d4-011afd29b7dc
 ---
+
 # Utilisation des entrées de Registre
 Les entrées de Registre étant des propriétés de clés, il est impossible de les parcourir directement. Il est donc nécessaire d'adopter une approche légèrement différente pour pouvoir les utiliser.
 
@@ -143,8 +146,7 @@ PowerShellPath : C:\Program Files\Windows PowerShell\v1.0
 |String|Valeur de chaîne quelconque|
 |QWord|8 octets de données binaires|
 
-> [!NOTE]
-> Vous pouvez ajouter une entrée de Registre à plusieurs emplacements en spécifiant un tableau de valeurs pour le paramètre **Path** :
+> [!NOTE]Vous pouvez ajouter une entrée de Registre à plusieurs emplacements en spécifiant un tableau de valeurs pour le paramètre **Path** :
 
 ```
 New-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion, HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion -Name PowerShellPath -PropertyType String -Value $PSHome
@@ -175,6 +177,6 @@ Remove-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion -Name 
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

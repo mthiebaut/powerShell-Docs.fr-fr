@@ -1,12 +1,15 @@
 ---
-title: Utilisation de classes et méthodes statiques
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 418ad766-afa6-4b8c-9a44-471889af7fd9
+title:  Utilisation de classes et méthodes statiques
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  418ad766-afa6-4b8c-9a44-471889af7fd9
 ---
+
 # Utilisation de classes et méthodes statiques
 Certaines classes de .NET Framework ne peuvent pas être créées à l’aide de l’applet de commande **New-Object**. Par exemple, si vous essayez de créer un objet **System.Environment** ou **System.Math** avec l’applet de commande **New-Object**, vous obtenez les messages d’erreur suivants :
 
@@ -113,8 +116,7 @@ False
 ### Opérations mathématiques avec System.Math
 La classe statique System.Math est utile pour effectuer certaines opérations mathématiques. Les membres importants de **System.Math** sont essentiellement des méthodes que nous pouvons afficher à l’aide de l’applet de commande **Get-Member**.
 
-> [!NOTE]
-> System.Math dispose de plusieurs méthodes portant le même nom, mais qui se distinguent par le type de leurs paramètres.
+> [!NOTE] System.Math dispose de plusieurs méthodes portant le même nom, mais qui se distinguent par le type de leurs paramètres.
 
 Tapez la commande suivante pour répertorier les méthodes de la classe **System.Math**.
 
@@ -182,6 +184,6 @@ PS> [System.Math]::Truncate(-9.3)
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

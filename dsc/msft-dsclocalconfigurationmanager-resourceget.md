@@ -1,9 +1,12 @@
 ---
-DCS.appliesToProduct: 'WindowsServer\_Dev'
-Description: 'Exécutez Get directement sur un fournisseur.'
-MS-HAID: 'cimwin32a.MSFT_DSCLocalConfigurationManager\_resourceget'
-MSHAttr: 'PreferredLib:/library'
-title: 'Méthode ResourceGet de la classe MSFT_DSCLocalConfigurationManager'
+title: Méthode ResourceGet de la classe MSFT_DSCLocalConfigurationManager 
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
 ---
 
 # Méthode ResourceGet de la classe MSFT_DSCLocalConfigurationManager
@@ -32,8 +35,7 @@ Nom de la ressource à appeler.
 Nom du module qui contient la ressource à appeler.
 
 *resourceProperty* \[in\]  
-Spécifie le nom de propriété de ressource et sa valeur dans une table de hachage comme clé et valeur, respectivement. Utilisez l’
-applet de commande [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx) pour découvrir les propriétés de ressources et leurs types.
+Spécifie le nom de propriété de ressource et sa valeur dans une table de hachage comme clé et valeur, respectivement. Utilisez l’applet de commande [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx) pour découvrir les propriétés de ressources et leurs types.
 
 *configurations* \[out\]  
 En retour, contient une instance incorporée des configurations.
@@ -68,6 +70,6 @@ Il s’agit d’une méthode statique.
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

@@ -1,25 +1,29 @@
+---
+title:   Utilisation d’un serveur de rapports DSC
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Utilisation d’un serveur de rapports DSC
 
 > S’applique à : Windows PowerShell 5.0
 
 >**Remarque** : le serveur de rapports décrit dans cette rubrique n’est pas disponible dans PowerShell 4.0.
 
-Le gestionnaire de configuration local d’un nœud peut être configuré pour envoyer des rapports sur son état de configuration à un serveur collecteur, qui peut alors être interrogé pour récupérer ces données. Chaque fois, le nœud vérifie et applique
-une configuration, il envoie un rapport au serveur de rapports. Ces rapports sont stockés dans une base de données sur le serveur et peuvent être récupérés en appelant le service web de création de rapports. Chaque rapport contient
-des informations telles que les configurations qui ont été appliquées et si l’opération a réussi, les ressources utilisées, les erreurs qui ont été levées et les heures de début et de fin.
+Le gestionnaire de configuration local d’un nœud peut être configuré pour envoyer des rapports sur son état de configuration à un serveur collecteur, qui peut alors être interrogé pour récupérer ces données. Chaque fois, le nœud vérifie et applique une configuration, il envoie un rapport au serveur de rapports. Ces rapports sont stockés dans une base de données sur le serveur et peuvent être récupérés en appelant le service web de création de rapports. Chaque rapport contient des informations telles que les configurations qui ont été appliquées et si l’opération a réussi, les ressources utilisées, les erreurs qui ont été levées et les heures de début et de fin.
 
 ## Configuration d’un nœud pour envoyer des rapports
 
-Vous indiquez à un nœud d’envoyer des rapports à un serveur en utilisant un bloc **ReportServerWeb** dans la configuration du gestionnaire de configuration local du nœud (pour plus d’informations sur la configuration du gestionnaire de configuration local,
-consultez [Configuration du gestionnaire de configuration local](metaConfig.md)). Le serveur auquel le nœud envoie des rapports doit être configuré comme un serveur web collecteur (vous ne pouvez pas envoyer de rapports
-à un partage SMB). Pour plus d’informations sur la configuration d’un serveur collecteur, consultez [Configuration d’un serveur collecteur web DSC](pullServer.md). Le serveur de rapports peut être le même service duquel
-le nœud extrait des configurations et obtient des ressources, mais il peut également être un service différent.
+Vous indiquez à un nœud d’envoyer des rapports à un serveur en utilisant un bloc **ReportServerWeb** dans la configuration du gestionnaire de configuration local du nœud (pour plus d’informations sur la configuration du gestionnaire de configuration local, consultez [Configuration du gestionnaire de configuration local](metaConfig.md)). Le serveur auquel le nœud envoie des rapports doit être configuré comme un serveur web collecteur (vous ne pouvez pas envoyer de rapports à un partage SMB). Pour plus d’informations sur la configuration d’un serveur collecteur, consultez [Configuration d’un serveur collecteur web DSC](pullServer.md). Le serveur de rapports peut être le même service duquel le nœud extrait des configurations et obtient des ressources, mais il peut également être un service différent.
  
-Dans le bloc **ReportServerWeb**, vous spécifiez l’URL du service d’extraction
-et une clé d’inscription connue du serveur.
+Dans le bloc **ReportServerWeb**, vous spécifiez l’URL du service d’extraction et une clé d’inscription connue du serveur.
  
-La configuration suivante configure un nœud de façon à extraire des configurations d’un seul service et à envoyer des rapports
-à un service sur un autre serveur. 
+La configuration suivante configure un nœud de façon à extraire des configurations d’un seul service et à envoyer des rapports à un service sur un autre serveur. 
  
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -89,10 +93,7 @@ PullClientConfig
 ## Obtention des données du rapport
 
 Les rapports envoyés au serveur collecteur sont entrés dans une base de données sur le serveur. Les rapports sont disponibles par le biais d’appels au service web. Pour récupérer des rapports pour un nœud spécifique, 
-envoyez une demande HTTP au service web de rapports sous la forme suivante :
-`http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentID = MyNodeAgentId)/Reports` 
-où `MyNodeAgentId` est l’ID de l’agent du nœud pour lequel vous voulez obtenir des rapports. Vous pouvez obtenir l’ID de l’agent d’un nœud en appelant [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx)
-sur ce nœud.
+envoyez une demande HTTP au service web de rapports sous la forme suivante : `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentID = MyNodeAgentId)/Reports` où `MyNodeAgentId` est l’ID de l’agent du nœud pour lequel vous voulez obtenir des rapports. Vous pouvez obtenir l’ID de l’agent d’un nœud en appelant [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx) sur ce nœud.
 
 Les rapports sont retournés sous forme de tableau d’objets JSON.
 
@@ -160,8 +161,7 @@ $reportsByStartTime = $reports | Sort-Object -Property StartTime -Descending
 $reportMostRecent = $reportsByStartTime[0]
 ```
 
-Notez que la propriété **StatusData** est un objet avec un certain nombre de propriétés. C’est là que figurent une bonne partie des données de création de rapports. Examinons les différents champs de la propriété
-**StatusData** pour le rapport le plus récent :
+Notez que la propriété **StatusData** est un objet avec un certain nombre de propriétés. C’est là que figurent une bonne partie des données de création de rapports. Examinons les différents champs de la propriété**StatusData** pour le rapport le plus récent :
 
 ```powershell
 $statusData = $reportMostRecent.StatusData | ConvertFrom-Json
@@ -199,8 +199,7 @@ Locale                     : en-US
 Mode                       : Pull
 ```
 
-Cela indique, entre autres, que la configuration la plus récente a appelé deux ressources, et que l’une d’elles était dans l’état souhaité, tandis que l’autre pas. Vous pouvez obtenir
-une sortie plus lisible uniquement de la propriété **ResourcesNotInDesiredState**:
+Cela indique, entre autres, que la configuration la plus récente a appelé deux ressources, et que l’une d’elles était dans l’état souhaité, tandis que l’autre pas. Vous pouvez obtenir une sortie plus lisible uniquement de la propriété **ResourcesNotInDesiredState**:
 
 ```powershell
 $statusData.ResourcesInDesiredState
@@ -227,6 +226,7 @@ Notez que ces exemples ont pour but de vous donner une idée de ce que vous pouv
 - [Configuration d’un client collecteur à l’aide du nom de configuration](pullClientConfigNames.md)
 
 
-<!--HONumber=Apr16_HO1-->
+
+<!--HONumber=May16_HO3-->
 
 

@@ -1,12 +1,15 @@
 ---
-title: Affichage de structure d’objet (Get-Member)
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: a1819ed2-2ef3-453a-b2b0-f3589c550481
+title:  Affichage de structure d’objet (Get Member) 
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  a1819ed2-2ef3-453a-b2b0-f3589c550481
 ---
+
 # Affichage de structure d’objet (Get-Member)
 Étant donné que les objets jouent un rôle central dans Windows PowerShell, il existe plusieurs commandes natives conçues pour fonctionner avec des types d’objets arbitraires. La plus importante est l’applet de commande **Get-Member**.
 
@@ -57,8 +60,7 @@ Path                       ScriptProperty System.Object Path {get=$this.Main...
 ...
 ```
 
-> [!NOTE]
-> Les valeurs de MemberType autorisées AliasProperty, CodeProperty, Property, NoteProperty, ScriptProperty, Properties, PropertySet, Method, CodeMethod, ScriptMethod, Methods, ParameterizedProperty, MemberSet et All.
+> [!NOTE] Les valeurs de MemberType autorisées AliasProperty, CodeProperty, Property, NoteProperty, ScriptProperty, Properties, PropertySet, Method, CodeMethod, ScriptMethod, Methods, ParameterizedProperty, MemberSet et All.
 
 Plus de 60 propriétés sont applicables à un processus. La raison pour laquelle Windows PowerShell n’affiche souvent que quelques propriétés pour un objet bien connu est que les afficher toutes produirait une quantité ingérable d’informations.
 
@@ -69,6 +71,6 @@ Si vous avez besoin d’examiner les propriétés autres que celles que Windows 
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

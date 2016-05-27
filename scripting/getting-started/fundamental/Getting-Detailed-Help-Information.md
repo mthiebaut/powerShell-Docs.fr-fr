@@ -1,12 +1,15 @@
 ---
-title: Obtention d’informations d’aide détaillées
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6fb4daf7-8607-4a3e-b692-f77631adc1b9
+title:  Obtention d’informations d’aide détaillées
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  6fb4daf7-8607-4a3e-b692-f77631adc1b9
 ---
+
 # Obtention d’informations d’aide détaillées
 Windows PowerShell inclut des rubriques d’aide détaillées qui expliquent les concepts de Windows PowerShell et le langage Windows PowerShell. Il existe également des rubriques d’aide pour chaque applet de commande et fournisseur, et des rubriques d’aide pour un grand nombre de fonctions et de scripts.
 
@@ -173,6 +176,6 @@ Pour plus d’informations sur la manière de fournir un support en ligne pour v
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO2-->
 
 

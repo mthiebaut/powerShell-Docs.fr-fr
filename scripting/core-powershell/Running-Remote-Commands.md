@@ -1,12 +1,15 @@
 ---
-title: Exécution de commandes à distance
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: d6938b56-7dc8-44ba-b4d4-cd7b169fd74d
+title:  Exécution de commandes à distance
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  d6938b56-7dc8-44ba-b4d4-cd7b169fd74d
 ---
+
 # Exécution de commandes à distance
 Vous pouvez exécuter des commandes sur un ordinateur ou plusieurs centaines au moyen d'une seule commande Windows PowerShell. Pour communiquer à distance, Windows PowerShell fait appel à différentes technologies, notamment WMI, RPC et WS-Management.
 
@@ -46,8 +49,7 @@ La communication à distance Windows PowerShell, qui utilise le protocole WS-Man
 
 Pour utiliser la communication à distance Windows PowerShell, l'ordinateur distant doit être configuré pour la gestion à distance. Pour obtenir plus d’informations, notamment des instructions, voir [about_Remote_Requirements](https://technet.microsoft.com/en-us/library/dd315349.aspx).
 
-Après avoir configuré la communication à distance Windows PowerShell, vous avez le choix entre plusieurs stratégies de communication à distance. Le reste de ce document répertorie quelques-unes d'entre elles. Pour plus d’informations, voir [about_Remote](https://technet.microsoft.com/en-us/library/dd347744.aspx) et 
-[about_Remote](https://technet.microsoft.com/en-us/library/dd347744.aspx).
+Après avoir configuré la communication à distance Windows PowerShell, vous avez le choix entre plusieurs stratégies de communication à distance. Le reste de ce document répertorie quelques-unes d'entre elles. Pour plus d’informations, voir [À propos de la connexion à distance](https://technet.microsoft.com/en-us/library/dd347744.aspx) et [FAQ de la connexion à distance](https://technet.microsoft.com/en-us/library/dd347744.aspx).
 
 ### Démarrer une session interactive
 Pour démarrer une session interactive avec un seul ordinateur distant, utilisez l’applet de commande [Enter-PSSession](https://technet.microsoft.com/en-us/library/dd315384.aspx). Par exemple, pour démarrer une session interactive avec l'ordinateur distant Server01, tapez :
@@ -64,8 +66,7 @@ Pour terminer la session interactive, tapez :
 exit-pssession
 ```
 
-Pour plus d’informations sur les applets de commande Enter-PSSession et Exit-PSSession, voir [Enter-PSSession](https://technet.microsoft.com/en-us/library/dd315384.aspx) 
-et [Exit-PSSession](https://technet.microsoft.com/en-us/library/dd315322.aspx).
+Pour plus d’informations sur les applets de commande Enter-PSSession et Exit-PSSession, voir [Enter-PSSession](https://technet.microsoft.com/en-us/library/dd315384.aspx) et [Exit-PSSession](https://technet.microsoft.com/en-us/library/dd315322.aspx).
 
 ### Exécuter une commande à distance
 Pour exécuter une commande sur un ou plusieurs ordinateurs distants, utilisez l’applet de commande [Invoke-Command](https://technet.microsoft.com/en-us/library/dd347578.aspx).
@@ -124,8 +125,7 @@ invoke-command -session $s {$h | where {$_.installedby -ne "NTAUTHORITY\SYSTEM"
 Dans Windows PowerShell, la gestion à distance n'est qu'un début. Grâce aux applets de commande installées avec Windows PowerShell, vous pouvez établir et configurer des sessions à distance à partir des extrémités locales et distantes, créer des sessions personnalisées et restreintes, permettre aux utilisateurs d'importer à partir d'une session à distance des commandes qui s'exécutent de manière implicite sur la session à distance, configurer la sécurité d'une session à distance, etc.
 
 Pour faciliter la configuration à distance, Windows PowerShell comprend un fournisseur WSMan. Le lecteur WSMAN: créé par le fournisseur vous permet de parcourir une hiérarchie de paramètres de configuration sur l'ordinateur local et les ordinateurs distants.
- Pour plus d’informations sur le fournisseur WSMan, voir [Fournisseur WSMan](https://technet.microsoft.com/en-us/library/dd819476.aspx) et
-  [about_WS-Management_Cmdlets](https://technet.microsoft.com/en-us/library/dd819481.aspx) ou tapez « get\-help wsman » dans la console Windows PowerShell.
+ Pour plus d’informations sur le fournisseur WSMan, voir [Fournisseur WSMan](https://technet.microsoft.com/en-us/library/dd819476.aspx) et   [À propos des applets de commande WSMan](https://technet.microsoft.com/en-us/library/dd819481.aspx) ou tapez « get\-help wsman » dans la console Windows PowerShell.
 
 Pour plus d’informations, voir :
 - [about_Remote](https://technet.microsoft.com/en-us/library/dd315359.aspx)
@@ -149,6 +149,6 @@ Pour obtenir de l’aide sur les erreurs de communication à distance, voir [abo
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO2-->
 
 

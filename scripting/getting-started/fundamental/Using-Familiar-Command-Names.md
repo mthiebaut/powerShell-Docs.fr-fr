@@ -1,12 +1,15 @@
 ---
-title: Utilisation de noms de commande familiers
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 021e2424-c64e-4fa5-aa98-aa6405758d5d
+title:  Utilisation de noms de commande familiers
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  021e2424-c64e-4fa5-aa98-aa6405758d5d
 ---
+
 # Utilisation de noms de commande familiers
 Grâce à ce qu’on appelle des *alias*, Windows PowerShell permet aux utilisateurs de faire référence aux commandes par d’autres noms. Les alias permettent aux utilisateurs ayant l’expérience d’autres interpréteurs de commande (shells) de réutiliser des noms de commandes communes qu’ils connaissent déjà pour effectuer des opérations similaires dans Windows PowerShell. Bien que nous ne décrivions pas ici les alias Windows PowerShell en détail, vous pouvez toujours vous en servir lorsque vous commencez à utiliser Windows PowerShell.
 
@@ -59,13 +62,11 @@ Set-Alias -Name gcm -Value Get-Command
 
 En interne, Windows PowerShell utilise de telles commandes au démarrage, mais ces alias ne sont pas modifiables. Si vous tentez d’exécuter réellement l’une de ces commandes, vous obtenez un message d’erreur expliquant que l’alias ne peut pas être modifié. Par exemple :
 
-<pre>PS> Set-Alias -Name gi -Value Get-Item
-Set-Alias : Alias n’est pas accessible en écriture, car l’alias gi étant une constante ou en lecture seule, il n’est pas possible d’y écrire.
-At line:1 char:10
-+ Set-Alias  <<<< -Name gi -Value Get-Item</pre>
+<pre>PS> Set-Alias -Name gi -Value Get-Item Set-Alias : Alias n’est pas accessible en écriture, car l’alias gi étant une constante ou en lecture seule, il n’est pas possible d’y écrire.
+At line:1 char:10 + Set-Alias  <<<< -Name gi -Value Get-Item</pre>
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

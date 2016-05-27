@@ -1,3 +1,14 @@
+---
+title:   Débogage des ressources DSC
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Débogage des ressources DSC
 
 > S’applique à : Windows PowerShell 5.0
@@ -5,7 +16,10 @@
 Dans PowerShell 5.0, DSC contient une nouvelle fonctionnalité qui permet de déboguer une ressource DSC pendant qu’une configuration est appliquée.
 
 ## Activation du débogage DSC
-Avant de pouvoir déboguer une ressource, vous devez activer le débogage en appelant l’applet de commande [Enable-DscDebug](https://technet.microsoft.com/en-us/library/mt517870.aspx). Cette applet de commande prend un paramètre obligatoire : **BreakAll**. Vous pouvez vérifier que le débogage a été activé en examinant le résultat d’un appel à [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx). La sortie PowerShell suivante montre le résultat de l’activation du débogage :
+Avant de pouvoir déboguer une ressource, vous devez activer le débogage en appelant l’applet de commande [Enable-DscDebug](https://technet.microsoft.com/en-us/library/mt517870.aspx). Cette applet de commande prend un paramètre obligatoire : **BreakAll**. 
+
+Vous pouvez vérifier que le débogage a été activé en examinant le résultat d’un appel à [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx). 
+La sortie PowerShell suivante montre le résultat de l’activation du débogage :
 
 
 ```powershell
@@ -44,9 +58,7 @@ Configuration PSWebAccess
     }
 PSWebAccess
 ```
-Après la compilation de la configuration, démarrez-la en appelant [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). La configuration s’arrête quand
-le gestionnaire de configuration local appelle la première ressource de la configuration. Si vous utilisez les paramètres `-Verbose` et `-Wait`, la sortie affiche les lignes que vous devez entrer
-pour démarrer le débogage.
+Après la compilation de la configuration, démarrez-la en appelant [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). La configuration s’arrête quand le gestionnaire de configuration local appelle la première ressource de la configuration. Si vous utilisez les paramètres `-Verbose` et `-Wait`, la sortie affiche les lignes que vous devez entrer pour démarrer le débogage.
 
 ```powershell
 PS C:\DebugTest> Start-DscConfiguration .\PSWebAccess -Wait -Verbose
@@ -72,21 +84,28 @@ Debug-Runspace -Id 9
 
 ## Débogage du script de la ressource
 
-Démarrez une nouvelle instance de PowerShell ISE. Dans le volet console, entrez les trois dernières lignes de la sortie `Start-DscConifiguration` sous forme de commandes, en remplaçant `<credentials>` par
-des informations d’identification valides. Une invite du type suivant doit s’afficher :
+Démarrez une nouvelle instance de PowerShell ISE. Dans le volet console, entrez les trois dernières lignes de la sortie `Start-DscConifiguration` sous forme de commandes, en remplaçant `<credentials>` par des informations d’identification valides. Une invite du type suivant doit s’afficher :
 
 ```powershell
 [TEST-SRV]: [DBG]: [Process:9000]: [RemoteHost]: PS C:\DebugTest>>
 ```
 
 Le script de ressources s’ouvre dans le volet de script et le débogueur s’arrête à la première ligne de la fonction **Test-TargetResource** (la méthode **Test()** d’une ressource de classe).
-Vous pouvez désormais utiliser les commandes de débogage dans l’environnement ISE pour parcourir le script de ressources, examiner les valeurs des variables, afficher la pile des appels et ainsi de suite. Pour plus d’informations sur le débogage dans PowerShell ISE,
-consultez [How to Debug Scripts in Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/dd819480.aspx) (Comment déboguer des scripts dans Windows PowerShell ISE). N’oubliez pas que chaque ligne du script de ressources (ou classe) est défini comme point d’arrêt.
+Vous pouvez désormais utiliser les commandes de débogage dans l’environnement ISE pour parcourir le script de ressources, examiner les valeurs des variables, afficher la pile des appels et ainsi de suite. Pour plus d’informations sur le débogage dans PowerShell ISE, consultez [How to Debug Scripts in Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/dd819480.aspx) (Comment déboguer des scripts dans Windows PowerShell ISE). N’oubliez pas que chaque ligne du script de ressources (ou classe) est défini comme point d’arrêt.
+
+## Désactivation du débogage DSC
+
+Après avoir appelé [Enable-DscDebug](https://technet.microsoft.com/en-us/library/mt517870.aspx), tous les appels à [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx) causeront des erreurs de configuration dans le débogueur. Pour permettre aux configurations de s’exécuter normalement, vous devez désactiver le débogage en appelant l’applet de commande [Disable-DscDebug](https://technet.microsoft.com/en-us/library/mt517872.aspx).
+
+>**Remarque :** le redémarrage ne modifie pas l’état de débogage du LCM. Si le débogage est activé, le démarrage d’une configuration générera toujours des erreurs après un redémarrage.
+
 
 ## Voir aussi
 - [Écriture d’une ressource DSC personnalisée avec MOF](authoringResourceMOF.md) 
 - [Écriture d’une ressource DSC personnalisée avec les classes PowerShell](authoringResourceClass.md)
 
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=May16_HO3-->
 
 

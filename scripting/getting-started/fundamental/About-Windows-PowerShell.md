@@ -1,12 +1,15 @@
 ---
-title: À propos de Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 979654ae-7994-47f8-be43-d79e7a140143
+title:  À propos de Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  979654ae-7994-47f8-be43-d79e7a140143
 ---
+
 # À propos de Windows PowerShell
 Windows PowerShell est conçu pour améliorer l’environnement de script et de ligne de commande en éliminant des problèmes connus de longue date et en ajoutant de nouvelles fonctionnalités.
 
@@ -14,19 +17,18 @@ Windows PowerShell est conçu pour améliorer l’environnement de script et de 
 Windows PowerShell facilite la découverte de ses fonctionnalités. Par exemple, pour obtenir la liste des applets de commande qui permettent d’afficher et de modifier les services Windows, tapez :
 
 ```
-get-command *-service
+Get-Command *-Service
 ```
 
 Après avoir découvert l’applet de commande qui effectue une tâche, vous pouvez en apprendre davantage sur l’applet de commande à l’aide de l’applet de commande Get-Help. Par exemple, pour afficher l’aide concernant l’applet de commande Get-Service, tapez ce qui suit :
 
 ```
-get-help get-service
+Get-Help Get-Service
 ```
-
-Pour bien comprendre la sortie de cette applet de commande, canalisez-la vers l’applet de commande Get-Member. Par exemple, la commande suivante affiche des informations sur les membres de l’objet retourné par l’applet de commande Get-Service.
+La plupart des applets de commande émettent des objets qui peuvent être manipulés puis rendus sous forme texte pour l’affichage. Pour bien comprendre la sortie de cette applet de commande, canalisez-la vers l’applet de commande Get-Member. Par exemple, la commande suivante affiche des informations sur les membres de l’objet retourné par l’applet de commande Get-Service.
 
 ```
-get-service | get-member
+Get-Service | Get-Member
 ```
 
 ## Consistency
@@ -51,6 +53,6 @@ Windows PowerShell facilite la transition de la saisie de commandes de façon in
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

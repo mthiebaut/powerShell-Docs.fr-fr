@@ -1,9 +1,12 @@
 ---
-DCS.appliesToProduct: 'WindowsServer\_Dev'
-Description: 'Récupérez la sortie de l’agent de configuration associée à un travail spécifique.'
-MS-HAID: 'cimwin32a.MSFT_DSCLocalConfigurationManager\_getconfigurationresultoutput'
-MSHAttr: 'PreferredLib:/library'
-title: 'Méthode GetConfigurationResultOutput de la classe MSFT_DSCLocalConfigurationManager'
+title:  Méthode GetConfigurationResultOutput de la classe MSFT_DSCLocalConfigurationManager
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
 ---
 
 # Méthode GetConfigurationResultOutput de la classe MSFT_DSCLocalConfigurationManager
@@ -62,6 +65,6 @@ Il s’agit d’une méthode statique.
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

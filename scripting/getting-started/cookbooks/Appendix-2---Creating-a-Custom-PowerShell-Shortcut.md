@@ -1,12 +1,15 @@
 ---
-title: Annexe 2 : création d’un raccourci PowerShell personnalisé
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 5d4fd421-5d43-4ec7-86fd-acfe887b066e
+title:  Annexe 2   création d’un raccourci PowerShell personnalisé
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  5d4fd421-5d43-4ec7-86fd-acfe887b066e
 ---
+
 # Annexe 2 : création d’un raccourci PowerShell personnalisé
 La procédure suivante décrit comment créer un raccourci vers Windows PowerShell offrant plusieurs options pratiques personnalisées.
 
@@ -38,6 +41,6 @@ La procédure suivante décrit comment créer un raccourci vers Windows PowerShe
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

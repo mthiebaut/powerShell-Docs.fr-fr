@@ -1,3 +1,14 @@
+---
+title:   Liste de vérification de création de ressources
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Liste de vérification de création de ressources
 Cette liste de vérification est une liste des meilleures pratiques lors de la création d’une ressource DSC
 ## Le module de ressources contient le fichier .psd1 et schema.mof pour chaque ressource 
@@ -33,8 +44,7 @@ Vérifiez que :
 - La propriété [read] ne peut pas coexister avec [required], [key] ou [write].
 
 
-- Si plusieurs qualificateurs sont spécifiés, à l’exception de [read], [key] est prioritaire.
-Si [write] et [required] sont spécifiés, [required] est prioritaire.
+- Si plusieurs qualificateurs sont spécifiés, à l’exception de [read], [key] est prioritaire. Si [write] et [required] sont spécifiés, [required] est prioritaire.
 -   ValueMap est spécifié, le cas échéant.
 
 Exemple :
@@ -44,7 +54,7 @@ Exemple :
 
 -   Le nom convivial est spécifié et conforme aux conventions d’affectation de noms DSC.
 
-Exemple : 
+Exemple :
 ```[ClassVersion("1.0.0.0"), FriendlyName("xRemoteFile")]```
 
 -   Chaque champ a une description explicite.
@@ -83,8 +93,7 @@ If ($error.count –ne 0) {
     Throw “Module was not imported correctly. Errors returned: $error”
 }
 ```
-4   La ressource est idempotent dans le cas positif 
-L’une des caractéristiques fondamentales de chaque ressource DSC doit être l’idempotence. Cela signifie que nous pouvons appliquer une configuration DSC contenant cette ressource plusieurs fois sans modifier le résultat au-delà de l’application initiale. Par exemple, si nous créons une configuration qui contient la ressource de fichier suivante :
+4   La ressource est idempotente dans le cas positif. L’une des caractéristiques fondamentales de chaque ressource DSC doit être l’idempotence. Cela signifie que nous pouvons appliquer une configuration DSC contenant cette ressource plusieurs fois sans modifier le résultat au-delà de l’application initiale. Par exemple, si nous créons une configuration qui contient la ressource de fichier suivante :
 ```powershell
 File file {
     DestinationPath = "C:\test\test.txt"
@@ -101,8 +110,7 @@ La modification par l’utilisateur est un autre scénario courant à tester. Ce
 2.  Exécutez la configuration avec votre ressource.
 3.  Vérifiez que **Test-DscConfiguration** retourne la valeur True
 4.  Modifiez la ressource hors de l’état souhaité.
-5.  Vérifiez que **Test-DscConfiguration** retourne la valeur false
-Voici un exemple plus concret à l’aide de la ressource de Registre :
+5.  Vérifiez que **Test-DscConfiguration** retourne la valeur false. Voici un exemple plus concret à l’aide de la ressource de Registre :
 1.  Commencez avec la clé de Registre qui n’est pas à l’état souhaité.
 2.  Exécutez **Start-DscConfiguration** avec une configuration pour la faire basculer à l’état souhaité et vérifiez que l’opération réussit.
 3.  Exécutez **Test-DscConfiguration** et vérifiez qu’elle retourne la valeur true
@@ -195,8 +203,7 @@ Pour être efficaces, les messages d’erreur doivent être :
 -   Faciles à comprendre : ils doivent être lisibles. Il ne doit pas s’agir de codes d’erreur obscurs.
 -   Précis : décrivez le problème exact.
 -   Constructifs : donnez des conseils pour résoudre le problème.
--   Polis : ne blâmez pas l’utilisateur et ne le rabaissez pas.
-Vérifiez les erreurs dans les scénarios de bout en bout (à l’aide de **Start-DscConfiguration**), car elles peuvent différer de celles retournées lors de l’exécution directe des fonctions de ressources. 
+-   Poli : ne blâmez pas l’utilisateur et ne le rabaissez pas. Vérifiez les erreurs dans les scénarios de bout en bout (à l’aide de **Start-DscConfiguration**), car elles peuvent différer de celles retournées lors de l’exécution directe des fonctions de ressources. 
 
 ## Les messages de journaux sont faciles à comprendre et informatifs (notamment les journaux –verbose, –debug et ETW) ##
 Vérifiez que les journaux générés par la ressource sont faciles à comprendre et sont utiles à l’utilisateur. Les ressources doivent générer toutes les informations qui peuvent être utiles à l’utilisateur, mais il n’est pas toujours préférable de fournir davantage de journaux. Vous devez éviter de créer des redondances et des données qui n’apportent rien de plus. Ne forcez pas un utilisateur à parcourir des centaines d’entrées de journaux pour trouver ce qu’il cherche. Bien entendu, ne proposer aucun journal n’est pas non plus une solution acceptable pour ce problème. 
@@ -256,9 +263,7 @@ Pour xRemoteFile, ResourceTests.ps1 pourrait être aussi simple que ceci :
 Test-xDscResource ..\DSCResources\MSFT_xRemoteFile
 Test-xDscSchema ..\DSCResources\MSFT_xRemoteFile\MSFT_xRemoteFile.schema.mof 
 ```
-**Meilleures pratiques : le dossier de ressources contient un script de concepteur de ressources pour générer le schéma**
-Chaque ressource doit contenir un script de concepteur de ressources qui génère un schéma mof de la ressource. Vous devez placer ce fichier dans <ResourceName>\ResourceDesignerScripts et le nommer Generate<ResourceName>Schema.ps1
-Pour la ressource xRemoteFile, ce fichier se nomme GenerateXRemoteFileSchema.ps1 et contient :
+**Bonnes pratiques : le dossier de ressources contient un script de concepteur de ressources pour générer le schéma** Chaque ressource doit contenir un script de concepteur de ressources qui génère un schéma mof de la ressource. Vous devez placer ce fichier dans <ResourceName>\ResourceDesignerScripts et le nommer Generate<ResourceName>Schema.ps1 Pour la ressource xRemoteFile, ce fichier se nomme GenerateXRemoteFileSchema.ps1 et contient :
 ```powershell 
 $DestinationPath = New-xDscResourceProperty -Name DestinationPath -Type String -Attribute Key -Description 'Path under which downloaded or copied file should be accessible after operation.'
 $Uri = New-xDscResourceProperty -Name Uri -Type String -Attribute Required -Description 'Uri of a file which should be copied or downloaded. This parameter supports HTTP and HTTPS values.'
@@ -270,8 +275,7 @@ $CertificateThumbprint = New-xDscResourceProperty -Name CertificateThumbprint -T
 
 New-xDscResource -Name MSFT_xRemoteFile -Property @($DestinationPath, $Uri, $Headers, $UserAgent, $Ensure, $Credential, $CertificateThumbprint) -ModuleName xPSDesiredStateConfiguration2 -FriendlyName xRemoteFile 
 ```
-22  Bonne pratique : la ressource prend en charge -whatif
-Si votre ressource effectue des opérations « dangereuses », nous vous recommandons d’implémenter une fonctionnalité -whatif. Une fois ceci effectué, vérifiez que la sortie whatif décrit correctement les opérations qui auraient lieu si la commande était exécutée sans commutateur -whatif.
+22  Bonne pratique : la ressource prend en charge -whatif Si votre ressource effectue des opérations « dangereuses », nous vous recommandons d’implémenter une fonctionnalité -whatif. Une fois ceci effectué, vérifiez que la sortie whatif décrit correctement les opérations qui auraient lieu si la commande était exécutée sans commutateur -whatif.
 Vérifiez également que les opérations ne s’exécutent pas (l’état du nœud n’est pas modifié) quand le commutateur -whatif est présent. 
 Par exemple, supposons que nous testons la ressource File. Voici une configuration simple qui crée un fichier « test.txt » avec le contenu « test » :
 ```powershell
@@ -317,6 +321,7 @@ Ceci conclut notre liste de vérification. N’oubliez pas que cette liste n’e
 Si vous avez développé des instructions et des bonnes pratiques que vous utilisez pour écrire et tester des ressources DSC, n’hésitez pas à les partager.
 
 
-<!--HONumber=Mar16_HO2-->
+
+<!--HONumber=May16_HO3-->
 
 

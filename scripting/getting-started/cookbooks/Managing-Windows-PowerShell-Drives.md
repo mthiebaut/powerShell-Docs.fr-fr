@@ -1,12 +1,15 @@
 ---
-title: Gestion des lecteurs Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: bd809e38-8de9-437a-a250-f30a667d11b4
+title:  Gestion des lecteurs Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  bd809e38-8de9-437a-a250-f30a667d11b4
 ---
+
 # Gestion des lecteurs Windows PowerShell
 Un *lecteur Windows PowerShell* est un emplacement de magasin de données auquel vous pouvez accéder, au même titre qu’un lecteur du système de fichiers dans Windows PowerShell. Les fournisseurs Windows PowerShell créent pour vous certains lecteurs, comme les lecteurs du système de fichiers (y compris C: et D:), les lecteurs de Registre (HKCU: et HKLM:) et le lecteur de certificat (Cert:). Vous pouvez également créer vos propres lecteurs Windows PowerShell. Ces lecteurs sont très utiles, mais ils ne sont disponibles que dans Windows PowerShell. Vous ne pouvez pas y accéder à l'aide d'autres outils Windows, tels que l'Explorateur de fichiers ou Cmd.exe.
 
@@ -56,20 +59,11 @@ D          FileSystem    D:\
 
 Pour afficher les lecteurs Windows PowerShell qui représentent les ruches du Registre, utilisez le paramètre **PSProvider** pour afficher uniquement les lecteurs Windows PowerShell pris en charge par le fournisseur de Registre de Windows PowerShell :
 
-<pre>PS> Get-PSDrive -PSProvider Registry
-Name       Provider      Root                                   CurrentLocation
-----       --------      ----                                   ---------------
-HKCU       Registry      HKEY_CURRENT_USER
-HKLM       Registry      HKEY_LOCAL_MACHINE</pre>
+<pre>PS> Get-PSDrive -PSProvider Registry Name       Provider      Root                                   CurrentLocation ----       --------      ----                                   --------------- HKCU       Registry      HKEY_CURRENT_USER HKLM       Registry      HKEY_LOCAL_MACHINE</pre>
 
 Vous pouvez également utiliser les applets de commande Location standard avec les lecteurs Windows PowerShell :
 
-<pre>PS> Set-Location HKLM:\SOFTWARE
-PS> Push-Location .\Microsoft
-PS> Get-Location
-Path
-----
-HKLM:\SOFTWARE\Microsoft</pre>
+<pre>PS> Set-Location HKLM:\SOFTWARE PS> Push-Location .\Microsoft PS> Get-Location Path ---- HKLM:\SOFTWARE\Microsoft</pre>
 
 ### Ajout de nouveaux lecteurs Windows PowerShell (New-PSDrive)
 Vous pouvez ajouter vos propres lecteurs Windows PowerShell à l’aide de la commande **New-PSDrive**. Pour obtenir la syntaxe de l’applet de commande **New-PSDrive**, entrez la commande **Get-Command** avec le paramètre **Syntax** :
@@ -101,18 +95,13 @@ Name       Provider      Root                                   CurrentLocation
 Office     FileSystem    C:\Program Files\Microsoft Offic...
 ```
 
-> [!NOTE]
-> En général, les chemins d’accès ne respectent pas la casse.
+> [!NOTE] En général, les chemins d’accès ne respectent pas la casse.
 
 Vous pouvez référencer le nouveau lecteur Windows PowerShell comme tout autre lecteur Windows PowerShell, c’est-à-dire en tapant son nom suivi du signe deux-points (**:**).
 
 Un lecteur Windows PowerShell peut simplifier de nombreuses tâches. Par exemple, certaines clés importantes dans le Registre Windows ont des chemins d'accès tellement longs qu'il est difficile d'y accéder et de s'en souvenir. Les informations de configuration critiques se trouvent sous **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion**. Pour afficher et modifier des éléments dans la clé de Registre CurrentVersion, vous pouvez créer un lecteur Windows PowerShell ayant pour racine cette clé en tapant :
 
-<pre>PS> New-PSDrive -Name cvkey -PSProvider Registry -Root HKLM\Software\Microsoft\W
-Windows\CurrentVersion
-Name       Provider      Root                                   CurrentLocation
-----       --------      ----                                   ---------------
-cvkey      Registry      HKLM\Software\Microsoft\Windows\...</pre>
+<pre>PS> New-PSDrive -Name cvkey -PSProvider Registry -Root HKLM\Software\Microsoft\W indows\CurrentVersion Name       Provider      Root                                   CurrentLocation ----       --------      ----                                   --------------- cvkey      Registry      HKLM\Software\Microsoft\Windows\...</pre>
 
 Vous pouvez ensuite modifier l’emplacement du lecteur **cvkey:** comme vous le feriez pour tout autre lecteur :
 
@@ -120,10 +109,7 @@ Vous pouvez ensuite modifier l’emplacement du lecteur **cvkey:** comme vous le
 
 ou :
 
-<pre>PS> Set-Location cvkey: -PassThru
-Path
-----
-cvkey:\</pre>
+<pre>PS> Set-Location cvkey: -PassThru Path ---- cvkey:\</pre>
 
 L’applet de commande New-PsDrive ajoute le nouveau lecteur uniquement à la session Windows PowerShell active. Si vous fermez la fenêtre Windows PowerShell, le nouveau lecteur est perdu. Pour enregistrer un lecteur Windows PowerShell, utilisez l’applet de commande Export-Console pour exporter la session Windows PowerShell active, puis utilisez le paramètre **PSConsoleFile** de PowerShell.exe pour l’importer. Vous pouvez aussi ajouter le nouveau lecteur à votre profil Windows PowerShell.
 
@@ -157,6 +143,6 @@ Windows PowerShell détecte les lecteurs du système de fichiers qui sont ajout�
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

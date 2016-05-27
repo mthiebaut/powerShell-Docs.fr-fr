@@ -1,9 +1,12 @@
 ---
-DCS.appliesToProduct: 'WindowsServer\_Dev'
-Description: 'Arrêt de la configuration en cours.'
-MS-HAID: 'cimwin32a.MSFT_DSCLocalConfigurationManager\_stopconfiguration'
-MSHAttr: 'PreferredLib:/library'
-title: 'Méthode StopConfiguration de la classe MSFT_DSCLocalConfigurationManager'
+title:  Méthode StopConfiguration de la classe MSFT_DSCLocalConfigurationManager
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
 ---
 
 # Méthode StopConfiguration de la classe MSFT_DSCLocalConfigurationManager
@@ -55,6 +58,6 @@ Il s’agit d’une méthode statique.
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

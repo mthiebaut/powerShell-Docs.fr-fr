@@ -1,12 +1,15 @@
 ---
-title: Gestion des processus avec les applets de commande Process
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 5038f612-d149-4698-8bbb-999986959e31
+title:  Gestion des processus avec les applets de commande Process
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  5038f612-d149-4698-8bbb-999986959e31
 ---
+
 # Gestion des processus avec les applets de commande Process
 Les applets de commande Process de Windows PowerShell permettent de gérer des processus locaux et distants dans Windows PowerShell.
 
@@ -174,6 +177,6 @@ Windows PowerShell comprend également des applets de commande permettant de dé
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,12 +1,15 @@
 ---
-title: Utilisation des installations de logiciels
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 51a12fe9-95f6-4ffc-81a5-4fa72a5bada9
+title:  Utilisation des installations de logiciels
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  51a12fe9-95f6-4ffc-81a5-4fa72a5bada9
 ---
+
 # Utilisation des installations de logiciels
 Les applications conçues pour utiliser Windows Installer sont accessibles via la classe WMI **Win32_Product**. Toutefois, certaines applications ne font pas appel à Windows Installer. Étant donné que Windows Installer offre la plus vaste palette de techniques standard associées aux applications installables, nous allons examiner principalement ces applications. En général, les applications qui utilisent d'autres routines d'installation ne sont pas gérées par Windows Installer. Les techniques spécifiques à employer avec ces applications dépendent du programme d'installation et des décisions prises par le développeur de l'application.
 
@@ -137,8 +140,7 @@ SKC  VC Name                           Property
 ### Installation d'applications
 Vous pouvez utiliser la classe **Win32_Product** pour installer, localement ou à distance, des packages Windows Installer.
 
-> [!NOTE]
-> Dans Windows Vista, Windows Server 2008 et versions ultérieures de Windows, vous devez démarrer Windows PowerShell avec l'option « Exécuter en tant qu'administrateur » pour installer une application.
+> [!NOTE] Dans Windows Vista, Windows Server 2008 et versions ultérieures de Windows, vous devez démarrer Windows PowerShell avec l’option « Exécuter en tant qu’administrateur » pour installer une application.
 
 Pour effectuer une installation à distance, utilisez un chemin d'accès réseau UNC (Universal Naming Convention) pour spécifier le chemin d'accès au package .msi, car le sous-système WMI ne prend pas en charge les chemins d'accès Windows PowerShell. Par exemple, pour installer le package NewPackage.msi situé dans le partage réseau \AppServ\dsp sur l’ordinateur distant PC01, tapez la commande suivante à l’invite Windows PowerShell :
 
@@ -178,6 +180,6 @@ Pour mettre à niveau une application, vous devez connaître son nom et le chemi
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

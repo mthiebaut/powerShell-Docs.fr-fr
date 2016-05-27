@@ -1,12 +1,15 @@
 ---
-title: Annexe 1 - Alias de compatibilité
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 96ad921e-1a57-463e-8e60-424faf8b6ef8
+title:  Annexe 1   Alias de compatibilité
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  96ad921e-1a57-463e-8e60-424faf8b6ef8
 ---
+
 # Annexe 1 - Alias de compatibilité
 Windows PowerShell dispose de plusieurs alias de transition qui permettent aux utilisateurs d’UNIX et de Cmd d’utiliser des noms de commande familiers dans Windows PowerShell. Les alias courants sont répertoriés dans le tableau ci-dessous, ainsi que la commande Windows PowerShell sous-jacente, et l’alias Windows PowerShell standard, s’il en existe.
 
@@ -34,6 +37,6 @@ Alias           cls                             Clear-Host
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,10 +1,14 @@
 ---
-DCS.appliesToProduct: 'WindowsServer\_Dev'
-Description: 'Envoyez le document de configuration au nœud géré et commencez à utiliser l’agent de configuration pour appliquer la configuration. Utilisez GetConfigurationResultOutput pour récupérer la sortie du résultat.'
-MS-HAID: 'cimwin32a.MSFT_DSCLocalConfigurationManager\_sendconfigurationapplyasync'
-MSHAttr: 'PreferredLib:/library'
-title: 'Méthode SendConfigurationApplyAsync de la classe MSFT_DSCLocalConfigurationManager'
+title:  Méthode SendConfigurationApplyAsync de la classe MSFT_DSCLocalConfigurationManager
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
 ---
+
 
 # Méthode SendConfigurationApplyAsync de la classe MSFT_DSCLocalConfigurationManager
 
@@ -63,6 +67,6 @@ Il s’agit d’une méthode statique.
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

@@ -1,3 +1,14 @@
+---
+title:   Prendre en main la fonctionnalité DSC (Desired State Configuration) pour Linux
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Prendre en main la fonctionnalité DSC (Desired State Configuration) pour Linux
 
 Cette rubrique explique comment prendre en main la fonctionnalité DSC (Desired State Configuration) PowerShell pour Linux. Pour obtenir des informations générales sur DSC, consultez [Prendre en main la fonctionnalité DSC (Desired State Configuration) Windows PowerShell](overview.md).
@@ -173,6 +184,7 @@ Les messages concernant DSC pour Linux sont écrits dans les fichiers journaux s
 |dsc.log|/opt/omi/var/log/|Messages relatifs au fonctionnement de LCM (Local Configuration Manager) et à l’utilisation des ressources DSC.|
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=May16_HO3-->
 
 

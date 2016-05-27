@@ -1,12 +1,15 @@
 ---
-title: Création d’objets .NET et COM (New-Object)
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 2057b113-efeb-465e-8b44-da2f20dbf603
+title:  Création d’objets .NET et COM (New Object) 
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  2057b113-efeb-465e-8b44-da2f20dbf603
 ---
+
 # Création d’objets .NET et COM (New-Object)
 Il existe des composants logiciels avec des interfaces COM et .NET Framework, qui vous permettent d’effectuer de nombreuses tâches d’administration système. Windows PowerShell permet d’utiliser ces composants. Vous n’êtes donc pas limité aux tâches exécutables à l’aide d’applets de commande. La plupart des applets de commande dans la version initiale de Windows PowerShell ne fonctionnent pas sur des ordinateurs distants. Nous allons expliquer comment contourner cette limitation lors de la gestion des journaux des événements à l’aide de la classe .NET Framework **System.Diagnostics.EventLog** directement à partir de Windows PowerShell.
 
@@ -175,20 +178,11 @@ $Home\Desktop\PSHome.lnk
 
 Nous avons désormais une variable nommée **$lnk** qui contient une nouvelle référence au raccourci. Si vous souhaitez voir ses membres, vous pouvez la canaliser vers l’applet de commande **Get-Member**. La sortie ci-dessous montre les membres que nous devons utiliser pour achever la création de notre raccourci :
 
-<pre>PS> $lnk | Get-Member
-TypeName: System.__ComObject#{f935dc23-1cf0-11d0-adb9-00c04fd58a0b}
-Name             MemberType   Definition
-----             ----------   ----------
-...
-Save             Method       void Save ()
-...
-TargetPath       Property     string TargetPath () {get} {set}
-...</pre>
+<pre>PS> $lnk | Get-Member TypeName: System.__ComObject#{f935dc23-1cf0-11d0-adb9-00c04fd58a0b} Name             MemberType   Definition ----             ----------   ---------- ... Save             Method       void Save () ... TargetPath       Property     string TargetPath () {get} {set} ...</pre>
 
 Nous devons spécifier **TargetPath**, qui est le dossier d’application pour Windows PowerShell, puis enregistrer le raccourci **$lnk** en appelant la méthode **Save**. Le chemin d’accès au dossier d’application de Windows PowerShell étant stocké dans la variable **$PSHome**, nous pouvons faire cela en tapant ce qui suit :
 
-<pre>$lnk.TargetPath = $PSHome
-$lnk.Save()</pre>
+<pre>$lnk.TargetPath = $PSHome $lnk.Save()</pre>
 
 ### Utilisation d’Internet Explorer à partir de Windows PowerShell
 De nombreuses applications (dont la famille d’applications Microsoft Office et Internet Explorer) peuvent être automatisées à l’aide de COM. Internet Explorer illustre certains problèmes et techniques classiques impliqués dans l’utilisation d’applications basées sur COM.
@@ -266,6 +260,6 @@ Bien que l’objet soit toujours créé, vous êtes averti qu’il ne s’agit p
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

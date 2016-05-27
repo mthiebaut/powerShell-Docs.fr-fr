@@ -1,10 +1,14 @@
 ---
-DCS.appliesToProduct: 'WindowsServer\_Dev'
-Description: 'Activez la configuration DSC de débogage.'
-MS-HAID: 'cimwin32a.msft\_dsclocalconfigurationmanager\_enabledebugconfiguration'
-MSHAttr: 'PreferredLib:/library'
-title: 'Méthode EnableDebugConfiguration de la classe MSFT_DSCLocalConfigurationManager'
+title:  Méthode EnableDebugConfiguration de la classe MSFT_DSCLocalConfigurationManager
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
 ---
+
 
 # Méthode EnableDebugConfiguration de la classe MSFT_DSCLocalConfigurationManager
 
@@ -53,6 +57,6 @@ Il s’agit d’une méthode statique.
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

@@ -1,3 +1,14 @@
+---
+title:   Configuration du Gestionnaire de configuration local
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Configuration du Gestionnaire de configuration local
 
 > S’applique à : Windows PowerShell 5.0
@@ -11,7 +22,7 @@ Le Gestionnaire de configuration local (ou « LCM ») est le moteur de la fonc
 
 Un type spécial de configuration vous permet de configurer le LCM pour définir chacun de ces comportements. Les sections qui suivent décrivent comment configurer le LCM.
 
-> **Remarque** : Cette rubrique concerne le gestionnaire de configuration local introduit dans Windows PowerShell 5.0. Pour plus d’informations sur la configuration du LCM dans Windows PowerShell 4.0, consultez « Gestionnaire de configuration local de DSK Windows PowerShell 4.0 ».
+> **Remarque** : Cette rubrique concerne le gestionnaire de configuration local introduit dans Windows PowerShell 5.0. Pour plus d’informations sur la configuration du LCM dans Windows PowerShell 4.0, consultez [Gestionnaire de configuration local DSC Windows PowerShell 4.0](metaconfig4.md).
 
 ## Création et application d’une configuration du LCM
 
@@ -31,7 +42,7 @@ configuration LCMConfig
 } 
 ```
 
-Vous appelez et exécutez la configuration pour créer le fichier MOF de configuration, comme pour une configuration standard. Pour plus d’informations sur la création d’un fichier MOF de configuration, consultez « Prendre en main la fonctionnalité DSC (Desired State Configuration) Windows PowerShell ». À la différence d’une configuration standard, vous n’appliquez pas de configuration du gestionnaire de configuration local en appelant l’applet de commande [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Au lieu de cela, vous appelez l’applet de commande Set-DscLocalConfigurationManager, en spécifiant le chemin du fichier MOF de configuration comme paramètre. Après avoir appliqué la configuration, vous pouvez afficher les propriétés du gestionnaire de configuration local en appelant l’applet de commande [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx).
+Appelez et exécutez la configuration pour créer le fichier MOF de configuration, comme pour une configuration standard. Pour plus d’informations sur la création d’un fichier MOF de configuration, consultez [Compilation de la configuration](configurations#compiling-the-configuration). À la différence d’une configuration standard, vous n’appliquez pas de configuration du gestionnaire de configuration local en appelant l’applet de commande [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Appelez plutôt l’applet de commande [Set-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx) en spécifiant le chemin du fichier MOF de configuration comme paramètre. Après avoir appliqué la configuration, vous pouvez afficher les propriétés du gestionnaire de configuration local en appelant l’applet de commande [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx).
 
 Une configuration du LCM peut contenir des blocs pour un ensemble limité de ressources uniquement. Dans l’exemple précédent, **Settings** est la seule ressource appelée. Voici les autres ressources disponibles :
 
@@ -138,15 +149,19 @@ Pour définir une configuration partielle, créez un bloc **PartialConfiguration
 ## Voir aussi 
 
 ### Concepts
-Prendre en main la fonctionnalité DSC (Desired State Configuration) Windows PowerShell 
+[Vue d’ensemble de la fonctionnalité Desired State Configuration de Windows PowerShell](overview.md)
+ 
 [Configuration d’un serveur collecteur DSC](pullServer.md) 
+
 [Gestionnaire de configuration local de la configuration d’état souhaité Windows PowerShell 4.0](metaConfig4.md) 
 
 ### Autres ressources
 [Set-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx) 
+
 [Configuration d’un client collecteur à l’aide du nom de configuration](pullClientConfigNames.md) 
 
 
-<!--HONumber=Mar16_HO4-->
+
+<!--HONumber=May16_HO3-->
 
 

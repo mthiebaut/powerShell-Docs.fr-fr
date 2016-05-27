@@ -1,9 +1,12 @@
 ---
-DCS.appliesToProduct: 'WindowsServer\_Dev'
-Description: 'Envoyez le document de configuration au nœud géré et utilisez l’agent de configuration pour appliquer la configuration à l’aide de la méthode Get.'
-MS-HAID: 'cimwin32a.MSFT_DSCLocalConfigurationManager\_getconfiguration'
-MSHAttr: 'PreferredLib:/library'
-title: 'Méthode GetConfiguration de la classe MSFT_DSCLocalConfigurationManager'
+title:  Méthode GetConfiguration de la classe MSFT_DSCLocalConfigurationManager
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
 ---
 
 # Méthode GetConfiguration de la classe MSFT_DSCLocalConfigurationManager
@@ -57,6 +60,6 @@ Il s’agit d’une méthode statique.
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

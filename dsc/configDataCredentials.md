@@ -1,3 +1,14 @@
+---
+title:   Options relatives aux informations d’identification dans les données de configuration
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Options relatives aux informations d’identification dans les données de configuration
 >S’applique à : Windows PowerShell 5.0
 
@@ -15,7 +26,7 @@ Par défaut, les ressources de configuration DSC sont exécutées en tant que `
 Toutefois, certaines ressources nécessitent des informations d’identification, par exemple quand la ressource `Package` doit installer des logiciels sous un compte d’utilisateur spécifique.
 
 Avant, les ressources utilisaient un nom de propriété `Credential` codé en dur pour gérer cette situation.
-Avec WMF 5.0, la propriété `PsDscRunAsCredential` est ajoutée automatiquement à toutes les ressources.
+Avec WMF 5.0, la propriété `PsDscRunAsCredential` est ajoutée automatiquement à toutes les ressources. Pour plus d’informations sur l’utilisation de `PsDscRunAsCredential`, consultez [Exécution de DSC avec les informations d’identification de l’utilisateur](runAsUser.md).
 Les ressources récentes et les ressources personnalisées peuvent utiliser cette propriété automatique au lieu de créer leur propre propriété d’informations d’identification.
 
 *Notez que certaines ressources sont conçues pour utiliser plusieurs informations d’identification pour une raison donnée, et qu’elles ont leurs propres propriétés d’informations d’identification.*
@@ -161,7 +172,7 @@ L’utilisation d’un compte local élimine les risques d’exposition des info
 
 **Quand vous utilisez des informations d’identification avec des ressources DSC, préférez un compte local à un compte de domaine quand cela est possible.**
 
-Si la propriété `Username` des informations d’identification comprend un « \ » ou un « @ », DSC la traite comme un compte de domaine.
+Si la propriété `Username` des informations d’identification comprend un « \' » ou un « @ », DSC la traite comme un compte de domaine.
 Il existe une exception pour « localhost », « 127.0.0.1 » et « :: 1 » dans la partie du nom d’utilisateur consacrée au domaine.
 
 ## PsDscAllowDomainUser
@@ -183,4 +194,9 @@ $cd = @{
 ```
 
 Le script de configuration va maintenant générer le fichier MOF sans avertissement ni erreur.
-<!--HONumber=Feb16_HO4-->
+
+
+
+<!--HONumber=May16_HO3-->
+
+

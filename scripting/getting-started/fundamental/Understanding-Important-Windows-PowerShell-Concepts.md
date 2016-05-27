@@ -1,12 +1,15 @@
 ---
-title: Présentation des concepts importants de Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 3e601e38-4520-4578-a48d-b6779f1d35ee
+title:  Présentation des concepts importants de Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  3e601e38-4520-4578-a48d-b6779f1d35ee
 ---
+
 # Présentation des concepts importants de Windows PowerShell
 La conception de Windows PowerShell intègre des concepts de différents environnements. Plusieurs d’entre eux sont déjà familiers aux utilisateurs ayant une expérience d’interpréteurs de commandes ou d’environnements de programmation spécifiques, mais très peu de gens les connaissent tous. L’examen de certains de ces concepts permet d’avoir une vue d’ensemble utile de l’interpréteur de commandes.
 
@@ -28,7 +31,7 @@ En raison de la spécificité des commandes internes de Windows PowerShell, nous
 ### Windows PowerShell gère l’entrée et l’affichage sur la console
 Lorsque vous tapez une commande, Windows PowerShell traite toujours directement la saisie de la ligne de commande. Windows PowerShell met également en forme la sortie à l’écran. C’est important, car cela réduit le travail requis de chaque applet de commande et vous garantit de pouvoir toujours opérer de la même manière, quelle que soit l’applet de commande que vous utilisez. Un exemple de la manière dont cela simplifie la vie tant des développeurs d’outils que des utilisateurs, est l’aide relative à la ligne de commande.
 
-Les outils en ligne de commande traditionnels ont leurs propres modes de demande et d’affichage de l’aide. Certains outils en ligne de commande utilisent **/?** pour lancer l’affichage de l’aide. D’autres utilisent **-?**, **/H**, voire **//**. Certains affichent l’aide dans une fenêtre d’interface graphique utilisateur, plutôt que dans l’affichage de la console. Certains outils complexes, tels que des programmes de mise à jour d’application, décompressent des fichiers internes avant d’afficher leur aide. Si vous utilisez un paramètre incorrect, l’outil peut ignorer ce que vous avez tapé et commencer à exécuter une tâche automatiquement.
+Les outils en ligne de commande traditionnels ont leurs propres modes de demande et d’affichage de l’aide. Certains outils en ligne de commande utilisent **/?** pour déclencher l’affichage de l’aide. D’autres utilisent **\-?**, **VH**, voire **\/\/**. Certains affichent l’aide dans une fenêtre d’interface graphique utilisateur, plutôt que dans l’affichage de la console. Certains outils complexes, tels que des programmes de mise à jour d’application, décompressent des fichiers internes avant d’afficher leur aide. Si vous utilisez un paramètre incorrect, l’outil peut ignorer ce que vous avez tapé et commencer à exécuter une tâche automatiquement.
 
 Lorsque vous entrez une commande dans Windows PowerShell, tout ce que vous saisissez est automatiquement analysé et pré-traité. Si vous utilisez le paramètre **-?** avec une applet de commande Windows PowerShell, il signifie toujours « afficher l’aide pour cette commande ». Les développeurs d’applets de commande n’ont pas besoin d’analyser la commande ; il leur suffit de fournir le texte d’aide.
 
@@ -44,6 +47,6 @@ Si vous n’êtes pas programmeur C#, cette similitude est sans importance. En r
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

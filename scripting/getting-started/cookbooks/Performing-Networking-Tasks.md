@@ -1,12 +1,15 @@
 ---
-title: Exécution de tâches de mise en réseau
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: a43cc55f-70c1-45c8-9467-eaad0d57e3b5
+title:  Exécution de tâches de mise en réseau
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  a43cc55f-70c1-45c8-9467-eaad0d57e3b5
 ---
+
 # Exécution de tâches de mise en réseau
 TCP/IP étant le protocole réseau le plus utilisé, la plupart des tâches d’administration de protocole réseau de bas niveau impliquent TCP/IP. Dans cette section, nous utilisons Windows PowerShell et WMI pour effectuer ces tâches.
 
@@ -21,19 +24,11 @@ La sortie de cette commande diffère de la plupart des listes de propriétés, c
 
 <pre>IPAddress
 ---------
-{192.168.1.80}
-{192.168.148.1}
-{192.168.171.1}
-{0.0.0.0}</pre>
+{192.168.1.80} {192.168.148.1} {192.168.171.1} {0.0.0.0}</pre>
 
 Pour comprendre pourquoi des accolades s’affichent, utilisez l’applet de commande Get-Member pour examiner la propriété **IPAddress** :
 
-<pre>PS> Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName. | Get-Member -Name IPAddress
-TypeName: System.Management.ManagementObject#root\cimv2\Win32_NetworkAdapter
-Configuration
-Name      MemberType Definition
-----      ---------- ----------
-IPAddress Property   System.String[] IPAddress {get;}</pre>
+<pre>PS> Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName. | Get-Member -Name IPAddress TypeName: System.Management.ManagementObject#root\cimv2\Win32_NetworkAdapter Configuration Name      MemberType Definition ----      ---------- ---------- IPAddress Property   System.String[] IPAddress {get;}</pre>
 
 La propriété IPAddress pour chaque carte réseau est en réalité un tableau. Les accolades dans la définition indiquent qu’**IPAddress** n’est pas une valeur **System.String**, mais un tableau de valeurs **System.String**.
 
@@ -157,8 +152,7 @@ Le seul changement pour le renouvellement d’un bail DHCP consiste à utiliser 
 Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter "IPEnabled=true and DHCPEnabled=true" -ComputerName . | Where-Object -FilterScript {$_.DHCPServer -contains "192.168.1.254"} | ForEach-Object -Process {$_.ReleaseDHCPLease()}
 ```
 
-> [!NOTE]
-> Lorsque vous utilisez ces méthodes sur un ordinateur distant, n’oubliez pas que vous risquez de perdre l’accès au système distant si vous êtes connecté à celui-ci via la carte dont le bail a été résilié ou renouvelé.
+> [!NOTE] Lorsque vous utilisez ces méthodes sur un ordinateur distant, n’oubliez pas que vous risquez de perdre l’accès au système distant si vous êtes connecté à celui-ci via la carte dont le bail a été résilié ou renouvelé.
 
 #### Résiliation et renouvellement de baux DHCP sur toutes les cartes
 Vous pouvez effectuer des résiliations ou renouvellements d’adresse DHCP sur toutes les cartes en utilisant les méthodes **Win32_NetworkAdapterConfiguration**, **ReleaseDHCPLeaseAll** et **RenewDHCPLeaseAll**. Toutefois, la commande doit s’appliquer à la classe WMI, plutôt qu’à une carte particulière, car la résiliation et le renouvellement de baux de façon globale sont effectuées sur la classe, et non sur une carte spécifique.
@@ -225,6 +219,6 @@ Les lecteurs mappés avec **WScript.Network** ou net use sont immédiatement dis
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

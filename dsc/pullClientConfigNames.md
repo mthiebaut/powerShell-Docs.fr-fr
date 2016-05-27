@@ -1,3 +1,14 @@
+---
+title:   Configuration d’un client collecteur à l’aide du nom de configuration
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Configuration d’un client collecteur à l’aide du nom de configuration
 
 > S’applique à : Windows PowerShell 5.0
@@ -44,10 +55,7 @@ Pour appliquer la configuration, appelez l’applet de commande **Set-DscLocalCo
 
 ## Serveurs de ressources et de rapports
 
-Si vous spécifiez uniquement un bloc **ConfigurationRepositoryWeb** ou **ConfigurationRepositoryShare** dans votre configuration du gestionnaire de configuration local (comme dans l’exemple précédent), le client collecteur extrait 
-des ressources du serveur spécifié, mais il ne lui envoie pas de rapport. Vous pouvez utiliser un serveur collecteur unique pour les configurations, les ressources et les rapports, mais vous devez créer un bloc 
-**ReportRepositoryWeb** pour configurer les rapports. L’exemple suivant montre une métaconfiguration qui configure un client de façon à extraire les configurations et les ressources, et à envoyer des données de rapport à un seul
-serveur collecteur.
+Si vous spécifiez uniquement un bloc **ConfigurationRepositoryWeb** ou **ConfigurationRepositoryShare** dans votre configuration du gestionnaire de configuration local (comme dans l’exemple précédent), le client collecteur extrait des ressources du serveur spécifié, mais il ne lui envoie pas de rapport. Vous pouvez utiliser un serveur collecteur unique pour les configurations, les ressources et les rapports, mais vous devez créer un bloc **ReportRepositoryWeb** pour configurer les rapports. L’exemple suivant montre une métaconfiguration qui configure un client de façon à extraire les configurations et les ressources, et à envoyer des données de rapport à un seul serveur collecteur.
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -80,8 +88,7 @@ PullClientConfigID
 ```
 
 
-Vous pouvez également spécifier différents serveurs collecteurs pour les ressources et les rapports. Pour spécifier un serveur de ressources, vous utilisez un bloc **ResourceRepositoryWeb** (pour un serveur collecteur web) ou un bloc 
-**ResourceRepositoryShare** (pour un serveur collecteur SMB).
+Vous pouvez également spécifier différents serveurs collecteurs pour les ressources et les rapports. Pour spécifier un serveur de ressources, vous utilisez un bloc **ResourceRepositoryWeb** (pour un serveur collecteur web) ou **ResourceRepositoryShare** (pour un serveur collecteur SMB).
 Pour spécifier un serveur de rapports, vous utilisez un bloc **ReportRepositoryWeb**. Un serveur de rapports ne peut pas être un serveur SMB.
 La métaconfiguration suivante configure un client collecteur de façon à obtenir sa configuration de **CONTOSO-PullSrv** et ses ressources de **CONTOSO-ResourceSrv**, et à envoyer des rapports d’état à **CONTOSO-ReportSrv** :
 
@@ -126,6 +133,7 @@ PullClientConfigID
 * [Configuration d’un serveur collecteur web DSC](pullServer.md)
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=May16_HO3-->
 
 

@@ -1,12 +1,15 @@
 ---
-title: Redirection de données à l’aide d’applets de commande Out-*
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 2a4acd33-041d-43a5-a3e9-9608a4c52b0c
+title:  Redirection de données à l’aide d’applets de commande Out
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  2a4acd33-041d-43a5-a3e9-9608a4c52b0c
 ---
+
 # Redirection de données à l’aide d’applets de commande Out-*
 Windows PowerShell fournit plusieurs applets de commande qui vous permettent de contrôler directement la sortie de données. Ces applets de commande partagent deux caractéristiques importantes.
 
@@ -61,8 +64,7 @@ Name    : explorer
 
 Cela s’applique à toutes les applets de commande **Out**. Une applet de commande **Out** doit toujours apparaître à la fin du pipeline.
 
-> [!NOTE]
-> Toutes les applets de commande **Out** restituent la sortie en tant que texte, en utilisant la mise en forme applicable à la fenêtre de console, y compris les limites de longueur de ligne.
+> [!NOTE]Toutes les applets de commande **Out** restituent la sortie en tant que texte, en utilisant la mise en forme applicable à la fenêtre de console, y compris les limites de longueur de ligne.
 
 #### Pagination de la sortie de la console (Out-Host)
 Par défaut, Windows PowerShell envoie les données à la fenêtre hôte, ce qui est exactement ce que fait l’applet de commande Out-Host. La principale utilisation de l’applet de commande Out-Host est la pagination des données, que nous avons abordée précédemment. Par exemple, la commande suivante utilise l’applet de commande Out-Host pour paginer la sortie de l’applet de commande Get-Command :
@@ -153,6 +155,6 @@ L’applet de commande **Out-File** est particulièrement utile si vous souhaite
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

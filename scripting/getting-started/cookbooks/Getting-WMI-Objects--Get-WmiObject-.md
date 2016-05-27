@@ -1,12 +1,15 @@
 ---
-title: Obtention d’objets WMI (Get-WmiObject)
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f0ddfc7d-6b5e-4832-82de-2283597ea70d
+title:  Getting WMI Objects  Get WmiObject 
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  f0ddfc7d-6b5e-4832-82de-2283597ea70d
 ---
+
 # Obtention d’objets WMI (Get-WmiObject)
 
 ## Obtention d’objets WMI (Get-WmiObject)
@@ -114,8 +117,7 @@ TotalVirtualMemorySize TotalVisibleMem FreePhysicalMem FreeVirtualMemo FreeSpace
         2097024          785904          305808         2056724         1558232
 ```
 
-> [!NOTE]
-> Les caractères génériques fonctionnant avec les noms de propriété dans l’applet de commande **Format-Table**, l’élément final du pipeline peut être réduit à **Format-Table -Property TotalV&#42;,Free&#42;**.
+> [!NOTE]Les caractères génériques fonctionnant avec les noms de propriété dans l’applet de commande **Format-Table**, l’élément final du pipeline peut être réduit à **Format-Table -Property TotalV&#42;,Free&#42;.**
 
 Les données de la mémoire peuvent être plus lisibles si vous les affichez sous forme de liste en tapant ce qui suit :
 
@@ -131,6 +133,6 @@ FreeSpaceInPagingFiles : 1556644
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

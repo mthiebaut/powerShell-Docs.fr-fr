@@ -1,12 +1,15 @@
 ---
-title: Utilisation des fichiers, dossiers et clés de Registre
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: e6cf87aa-b5f8-48d5-a75a-7cb7ecb482dc
+title:  Utilisation des fichiers, dossiers et clés de Registre
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  e6cf87aa-b5f8-48d5-a75a-7cb7ecb482dc
 ---
+
 # Utilisation des fichiers, dossiers et clés de Registre
 Windows PowerShell utilise le substantif **Item** pour faire référence aux éléments figurant sur un lecteur Windows PowerShell. En relation avec le fournisseur FileSystem de Windows PowerShell, le terme **Item** peut désigner un fichier, un dossier ou le lecteur Windows PowerShell. Nous allons examiner en détail comment répertorier et utiliser ces éléments, ces tâches étant essentielles dans la plupart des environnements d'administration.
 
@@ -118,19 +121,7 @@ Par exemple, supposons que vous essayiez de trouver la DLL Windows Time Service 
 
 Une expression telle que **w&#42;32&#42;.dll** permet de trouver toutes les DLL qui répondent aux conditions, mais peut également retourner les DLL de compatibilité avec Windows 95 et Windows 16 bits qui comprennent « 95 » ou « 16 » dans leur nom. Pour omettre les fichiers contenant l’un de ces nombres dans leur nom, utilisez le paramètre **Exclude** selon le modèle **&#42;[9516]&#42;** :
 
-<pre>PS> Get-ChildItem -Path C:\WINDOWS\System32\w*32*.dll -Exclude *[9516]*
-Directory: Microsoft.PowerShell.Core\FileSystem::C:\WINDOWS\System32
-Mode                LastWriteTime     Length Name
-----                -------------     ------ ----
--a---        2004-08-04   8:00 AM     174592 w32time.dll
--a---        2004-08-04   8:00 AM      22016 w32topl.dll
--a---        2004-08-04   8:00 AM     101888 win32spl.dll
--a---        2004-08-04   8:00 AM     172032 wldap32.dll
--a---        2004-08-04   8:00 AM     264192 wow32.dll
--a---        2004-08-04   8:00 AM      82944 ws2_32.dll
--a---        2004-08-04   8:00 AM      42496 wsnmp32.dll
--a---        2004-08-04   8:00 AM      22528 wsock32.dll
--a---        2004-08-04   8:00 AM      18432 wtsapi32.dll</pre>
+<pre>PS> Get-ChildItem -Path C:\WINDOWS\System32\w*32*.dll -Exclude *[9516]* Directory: Microsoft.PowerShell.Core\FileSystem::C:\WINDOWS\System32 Mode                LastWriteTime     Length Name ----                -------------     ------ ---- -a---        2004-08-04   8:00 AM     174592 w32time.dll -a---        2004-08-04   8:00 AM      22016 w32topl.dll -a---        2004-08-04   8:00 AM     101888 win32spl.dll -a---        2004-08-04   8:00 AM     172032 wldap32.dll -a---        2004-08-04   8:00 AM     264192 wow32.dll -a---        2004-08-04   8:00 AM      82944 ws2_32.dll -a---        2004-08-04   8:00 AM      42496 wsnmp32.dll -a---        2004-08-04   8:00 AM      22528 wsock32.dll -a---        2004-08-04   8:00 AM      18432 wtsapi32.dll</pre>
 
 #### Combinaison de paramètres Get-ChildItem
 Vous pouvez utiliser plusieurs paramètres de l’applet de commande **Get-ChildItem** dans la même commande. Avant de combiner des paramètres, assurez-vous de bien comprendre à quoi correspondent les caractères génériques. Par exemple, la commande suivante ne retourne aucun résultat :
@@ -163,6 +154,6 @@ Mode                LastWriteTime     Length Name
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

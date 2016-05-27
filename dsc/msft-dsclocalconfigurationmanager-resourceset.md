@@ -1,10 +1,14 @@
 ---
-DCS.appliesToProduct: 'WindowsServer\_Dev'
-Description: 'Exécutez Set directement sur un fournisseur.'
-MS-HAID: 'cimwin32a.MSFT_DSCLocalConfigurationManager\_resourceset'
-MSHAttr: 'PreferredLib:/library'
-title: 'Méthode ResourceSet de la classe MSFT_DSCLocalConfigurationManager'
+title:  Méthode ResourceSet de la classe MSFT_DSCLocalConfigurationManager
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
 ---
+
 
 # Méthode ResourceSet de la classe MSFT_DSCLocalConfigurationManager
 
@@ -32,8 +36,7 @@ Nom de la ressource à appeler.
 Nom du module qui contient la ressource à appeler.
 
 *resourceProperty* \[in\]  
-Spécifie le nom de propriété de ressource et sa valeur dans une table de hachage comme clé et valeur, respectivement. Utilisez l’
-applet de commande [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx) pour découvrir les propriétés de ressources et leurs types.
+Spécifie le nom de propriété de ressource et sa valeur dans une table de hachage comme clé et valeur, respectivement. Utilisez l’applet de commande [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx) pour découvrir les propriétés de ressources et leurs types.
 
 *RebootRequired* \[out\]  
 En retour, cette propriété prend la valeur **true** si le nœud cible doit être redémarré.
@@ -67,6 +70,6 @@ Il s’agit d’une méthode statique.
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

@@ -1,3 +1,14 @@
+---
+title:   Ressource Group DSC
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Ressource Group DSC
 
 > S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -23,18 +34,18 @@ Group [string] #ResourceName
 
 |  Propriété  |  Description   | 
 |---|---| 
-| GroupName| Spécifie le nom du groupe pour lequel vous souhaitez garantir un état spécifique.| 
-| Credential| Indique les informations d’identification devant être fournies pour accéder aux ressources distantes. **Remarque** : Ce compte doit disposer des autorisations Active Directory appropriées pour ajouter tous les comptes non locaux au groupe. Dans le cas contraire, une erreur se produit.
-| Description| Spécifie la description du groupe.| 
+| GroupName| Le nom du groupe pour lequel vous souhaitez garantir un état spécifique.| 
+| Credential| Les informations d’identification devant être fournies pour accéder aux ressources distantes. **Remarque** : Ce compte doit disposer des autorisations Active Directory appropriées pour ajouter tous les comptes non locaux au groupe. Dans le cas contraire, une erreur se produit.
+| Description| La description du groupe.| 
 | Ensure| Indique si le groupe existe. Définissez cette propriété sur Absent pour vous assurer que le groupe n’existe pas. Si vous la définissez sur Present (la valeur par défaut), vous pouvez vous assurer que le groupe existe.| 
-| Members| Indique que vous voulez vous assurer que ces membres constituent le groupe.| 
-| MembersToExclude| Spécifie les utilisateurs qui ne doivent pas faire partie du groupe.| 
-| MembersToInclude| Spécifie les utilisateurs qui doivent faire partie du groupe.| 
+| Membres| Utilisez cette propriété pour remplacer l’appartenance à un groupe actuelle avec les membres spécifiés. La valeur de cette propriété est un tableau de chaînes au format *domaine*\\*nom d’utilisateur*. Si vous définissez cette propriété dans une configuration, n’utilisez pas les propriétés **MembersToExclude** et **MembersToInclude**. Cela générera une erreur.| 
+| MembersToExclude| Utilisez cette propriété pour supprimer des appartenances existantes du groupe. La valeur de cette propriété est un tableau de chaînes au format *domaine*\\*nom d’utilisateur*. Si vous définissez cette propriété dans une configuration, n’utilisez pas la propriété **Members**. Cela générera une erreur.| 
+| MembersToInclude| Utilisez cette propriété pour ajouter des membres aux appartenances existantes du groupe. La valeur de cette propriété est un tableau de chaînes au format *domaine*\\*nom d’utilisateur*. Si vous définissez cette propriété dans une configuration, n’utilisez pas la propriété **Members**. Cela générera une erreur.| 
 | DependsOn | Indique que la configuration d’une autre ressource doit être effectuée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’ID __ResourceName__ et le type __ResourceType__, utilisez la syntaxe suivante pour cette propriété : DependsOn = "[ResourceType]ResourceName"| 
 
 ## Exemple 1
 
-L’exemple suivant montre comment s’assurer qu’un groupe nommé TestGroup est absent. 
+L’exemple suivant montre comment s’assurer qu’un groupe nommé « TestGroup » est absent. 
 
 ```powershell
 Group GroupExample
@@ -75,6 +86,8 @@ Group AddADUserToLocalAdminGroup
         }
 ```
 
-<!--HONumber=Apr16_HO3-->
+
+
+<!--HONumber=May16_HO3-->
 
 
