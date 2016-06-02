@@ -157,7 +157,7 @@ AdditionalData       : {}
 Par défaut, les rapports sont triés par **JobID**. Pour obtenir le rapport le plus récent, vous pouvez trier les rapports dans l’ordre décroissant de la valeur de la propriété **StartTime**, puis obtenir le premier élément du tableau :
 
 ```powershell
-$reportsByStartTime = $reports | Sort-Object -Property StartTime -Descending
+$reportsByStartTime = $reports | Sort-Object {$_."StartTime" -as [DateTime] } -Descending
 $reportMostRecent = $reportsByStartTime[0]
 ```
 
@@ -227,6 +227,6 @@ Notez que ces exemples ont pour but de vous donner une idée de ce que vous pouv
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=May16_HO4-->
 
 
