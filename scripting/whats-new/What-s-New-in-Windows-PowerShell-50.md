@@ -215,7 +215,7 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
 -   Le paramètre FullyQualifiedName a été ajouté aux applets de commande Import-Module et Remove-Module, pour prendre en charge le stockage de plusieurs versions d’un même module.
 
--   Les applets de commande Save-Help, Update-Help, Import-PSSession, Export-PSSession et Get-Command disposent d’un nouveau paramètre, FullyQualifiedModule, de type ModuleSpecification. Ajoutez ce paramètre pour spécifier un module par son nom complet.
+-   Les applets de commande Save-Help, Update-Help, Import-PSSession, Export-PSSession et Get-Command disposent d’un nouveau paramètre, FullyQualifiedModule, de type ModuleSpecification.. Ajoutez ce paramètre pour spécifier un module par son nom complet.
 
 -   La valeur de **$PSVersionTable.PSVersion** a été mise à jour. Il s’agit désormais de 5.0.
 
