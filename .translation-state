@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "dfa1b62e1f20808bf11ad8613e185e6ca56d76b0",
-  "LastTranslatedCommit": "2f232c96337b02c05610ce844bb368be54b54d21",
+  "LastTranslatedCommit": "064d578734ed3f655914077a30b664b1673effef",
   "Items": {
     "81efeb79a70df604ef8c126c0ebd17b4f4711a44": {
       "FileHash": "81efeb79a70df604ef8c126c0ebd17b4f4711a44",
@@ -22748,14 +22748,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": null,
-      "TargetFilePath": null,
-      "HandbackFilePath": null,
-      "HandbackFileCommit": null,
-      "HandbackDateTime": "0001-01-01T00:00:00",
+      "TargetFileCommit": "064d578734ed3f655914077a30b664b1673effef",
+      "TargetFilePath": "scripting\\setup\\Starting-the-32-Bit-Version-of-Windows-PowerShell.md",
+      "HandbackFilePath": "ol-handback\\PowerShell\\powerShell-Docs.fr-fr\\live\\Starting-the-32-Bit-Version-of-Windows-PowerShell.4a4eaf664caff353459bbcc3d81a3756ede97b7f.fr-fr.xlf",
+      "HandbackFileCommit": "48e765b72ad4c11910f9b0aeaf7dcd3f5aa24e6c",
+      "HandbackDateTime": "2016-06-07T23:34:35.5019101Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "UpdatedDateTime": "2016-06-07T23:34:35.5019101Z",
       "ArchiveFilePath": "ol-handoff\\PowerShell\\powerShell-Docs.fr-fr\\live\\archive\\Starting-the-32-Bit-Version-of-Windows-PowerShell.4a4eaf664caff353459bbcc3d81a3756ede97b7f.fr-fr.xlf",
       "ArchiveFileCommit": "21e30d45b7b712100d8793236e510491637a6221",
       "ArchiveFileDateTime": "2016-05-17T13:25:34.9441789Z",
