@@ -700,11 +700,11 @@
 * Handoff File: [d9f53a805041164f5070845c0fd216b63d17ae58.png](https://github.com/PowerShell/powerShell-Docs.handoff/blob/835cd43bb26b3ec86d5fde1405337f4d3f8f7d17/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/d9f53a805041164f5070845c0fd216b63d17ae58.png)
 * Handoff Datetime: 2016-03-11 01:02:43
 * Handoff Reason: IsDependency
+* Dependency From: dsc\secureMOF.md
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Dependency From: dsc\secureMOF.md
 * [Back to Top](#report-top)
 
 ##### <a name='3e61149f7b05f74d662d3038233013ffdcbed1a328'></a> Source: [dsc\images\PartialConfig1.jpg](https://github.com/PowerShell/powerShell-Docs/blob/97cfb44dc3db0937a0eaae5af5113210f988aa56/dsc/images/PartialConfig1.jpg)
@@ -713,11 +713,11 @@
 * Handoff File: [3e61149f7b05f74d662d3038233013ffdcbed1a3.jpg](https://github.com/PowerShell/powerShell-Docs.handoff/blob/835cd43bb26b3ec86d5fde1405337f4d3f8f7d17/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/3e61149f7b05f74d662d3038233013ffdcbed1a3.jpg)
 * Handoff Datetime: 2016-03-11 01:02:43
 * Handoff Reason: IsDependency
+* Dependency From: dsc\partialConfigs.md
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [3e61149f7b05f74d662d3038233013ffdcbed1a3.jpg](https://github.com/PowerShell/powerShell-Docs.handback/blob/02850da5d2851a42313c9f9af3e3435efef92884/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/3e61149f7b05f74d662d3038233013ffdcbed1a3.jpg)
 * Handback Datetime: 2016-04-06 18:03:29
-* Dependency From: dsc\partialConfigs.md
 * [Back to Top](#report-top)
 
 ##### <a name='1ba842005c2b1ce80a3670429b3e010c7b1c1f5929'></a> Source: [dsc\images\PartialConfigPullServer.jpg](https://github.com/PowerShell/powerShell-Docs/blob/97cfb44dc3db0937a0eaae5af5113210f988aa56/dsc/images/PartialConfigPullServer.jpg)
@@ -726,11 +726,11 @@
 * Handoff File: [1ba842005c2b1ce80a3670429b3e010c7b1c1f59.jpg](https://github.com/PowerShell/powerShell-Docs.handoff/blob/835cd43bb26b3ec86d5fde1405337f4d3f8f7d17/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/1ba842005c2b1ce80a3670429b3e010c7b1c1f59.jpg)
 * Handoff Datetime: 2016-03-11 01:02:43
 * Handoff Reason: IsDependency
+* Dependency From: dsc\partialConfigs.md
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [1ba842005c2b1ce80a3670429b3e010c7b1c1f59.jpg](https://github.com/PowerShell/powerShell-Docs.handback/blob/02850da5d2851a42313c9f9af3e3435efef92884/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/1ba842005c2b1ce80a3670429b3e010c7b1c1f59.jpg)
 * Handback Datetime: 2016-04-06 18:03:29
-* Dependency From: dsc\partialConfigs.md
 * [Back to Top](#report-top)
 
 ##### <a name='7766a7ed7faad8f162557a30e644f43960f1859f30'></a> Source: [dsc\images\Pull.png](https://github.com/PowerShell/powerShell-Docs/blob/a654e9eb64af857e4bc313e0b651b205e3d878b4/dsc/images/Pull.png)
@@ -4195,11 +4195,11 @@
 * Handoff File: [ba1897f38317f5fe38f2d8caf0efcc57bc8bb19d.jpg](https://github.com/PowerShell/powerShell-Docs.handoff/blob/835cd43bb26b3ec86d5fde1405337f4d3f8f7d17/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/ba1897f38317f5fe38f2d8caf0efcc57bc8bb19d.jpg)
 * Handoff Datetime: 2016-03-11 01:02:43
 * Handoff Reason: IsDependency
+* Dependency From: wmf\dsc_resourcedebugging.md
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [ba1897f38317f5fe38f2d8caf0efcc57bc8bb19d.jpg](https://github.com/PowerShell/powerShell-Docs.handback/blob/950104f0daecd87bd8557357c442899a97890ae9/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/ba1897f38317f5fe38f2d8caf0efcc57bc8bb19d.jpg)
 * Handback Datetime: 2016-03-24 11:35:39
-* Dependency From: wmf\dsc_resourcedebugging.md
 * [Back to Top](#report-top)
 
 ##### <a name='e6ed57c70f1b1380eb67c6998a1c9c67f3f246fc296'></a> Source: [wmf\images\Import-DscResource-Modversion.jpg](https://github.com/PowerShell/powerShell-Docs/blob/97cfb44dc3db0937a0eaae5af5113210f988aa56/wmf/images/Import-DscResource-Modversion.jpg)
@@ -4208,11 +4208,11 @@
 * Handoff File: [e6ed57c70f1b1380eb67c6998a1c9c67f3f246fc.jpg](https://github.com/PowerShell/powerShell-Docs.handoff/blob/835cd43bb26b3ec86d5fde1405337f4d3f8f7d17/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/e6ed57c70f1b1380eb67c6998a1c9c67f3f246fc.jpg)
 * Handoff Datetime: 2016-03-11 01:02:43
 * Handoff Reason: IsDependency
+* Dependency From: wmf\dsc_importdscresource.md
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [e6ed57c70f1b1380eb67c6998a1c9c67f3f246fc.jpg](https://github.com/PowerShell/powerShell-Docs.handback/blob/950104f0daecd87bd8557357c442899a97890ae9/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/e6ed57c70f1b1380eb67c6998a1c9c67f3f246fc.jpg)
 * Handback Datetime: 2016-03-24 11:35:39
-* Dependency From: wmf\dsc_importdscresource.md
 * [Back to Top](#report-top)
 
 ##### <a name='9a44a53029d37d4165bbffbdcaa79d9be76e5fac297'></a> Source: [wmf\images\MOF_Encryption.jpg](https://github.com/PowerShell/powerShell-Docs/blob/97cfb44dc3db0937a0eaae5af5113210f988aa56/wmf/images/MOF_Encryption.jpg)
@@ -4221,11 +4221,11 @@
 * Handoff File: [9a44a53029d37d4165bbffbdcaa79d9be76e5fac.jpg](https://github.com/PowerShell/powerShell-Docs.handoff/blob/835cd43bb26b3ec86d5fde1405337f4d3f8f7d17/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/9a44a53029d37d4165bbffbdcaa79d9be76e5fac.jpg)
 * Handoff Datetime: 2016-03-11 01:02:43
 * Handoff Reason: IsDependency
+* Dependency From: wmf\dsc_encryptedmof.md
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [9a44a53029d37d4165bbffbdcaa79d9be76e5fac.jpg](https://github.com/PowerShell/powerShell-Docs.handback/blob/950104f0daecd87bd8557357c442899a97890ae9/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/9a44a53029d37d4165bbffbdcaa79d9be76e5fac.jpg)
 * Handback Datetime: 2016-03-24 11:35:39
-* Dependency From: wmf\dsc_encryptedmof.md
 * [Back to Top](#report-top)
 
 ##### <a name='20254315c2503d46e6160593fb822391c5db2dd4298'></a> Source: [wmf\informationstream_overview.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/informationstream_overview.md)
