@@ -1,12 +1,15 @@
 ---
-title: Nouveauté dans Windows PowerShell ISE
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
+title:  Nouveautés de PowerShell 5.0 ISE
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  38648d47-7c27-4b37-a40e-ad29948519c2
 ---
+
 # Nouveauté dans Windows PowerShell ISE
 Cette rubrique décrit les nouvelles fonctionnalités et les mises à jour qui ont été introduites dans les versions de l’environnement d’écriture de scripts intégré de Windows PowerShell® (ISE).
 
@@ -55,12 +58,12 @@ Les extraits de code vous permettent d’assembler et de créer rapidement des s
 
 **En quoi le fonctionnement est-il différent ?**
 
-Pour utiliser des extraits de code dans Windows PowerShell 3.0 ou version ultérieure, dans le menu **Modifier**, cliquez sur **Démarrer les extraits** ou appuyez sur **Ctrl-J**..
+Pour utiliser des extraits de code dans Windows PowerShell 3.0 ou version ultérieure, dans le menu **Modifier**, cliquez sur **Démarrer les extraits** ou appuyez sur **Ctrl\-J**.
 
 ### <a name="BKMK_AddOnTools"></a>Outils complémentaires
 **Ajout dans PowerShell 3.0**
 
-Windows PowerShell ISE prend désormais en charge des outils complémentaires qui sont des contrôles Windows Presentation Foundation (WPF) ajoutés à l’aide du modèle d’objet. Les outils complémentaires peuvent être affichés sur la console dans un volet vertical ou horizontal. Plusieurs outils complémentaires dans un volet sont affichés sous la forme d’un contrôle à onglets. Vous pouvez également ajouter ou supprimer des outils complémentaires produits par des éditeurs autres que Microsoft. Pour plus d’informations sur la manière d’importer ou de supprimer des outils complémentaires, consultez [Opérations Windows PowerShell ISE](http://technet.microsoft.com/library/cc732148.aspx)..
+Windows PowerShell ISE prend désormais en charge des outils complémentaires qui sont des contrôles Windows Presentation Foundation (WPF) ajoutés à l’aide du modèle d’objet. Les outils complémentaires peuvent être affichés sur la console dans un volet vertical ou horizontal. Plusieurs outils complémentaires dans un volet sont affichés sous la forme d’un contrôle à onglets. Vous pouvez également ajouter ou supprimer des outils complémentaires produits par des éditeurs autres que Microsoft. Pour plus d’informations sur la manière d’importer ou de supprimer des outils complémentaires, voir [Opérations Windows PowerShell ISE](http://technet.microsoft.com/library/cc732148.aspx).
 
 **Quels avantages cette modification procure-t-elle ?**
 
@@ -77,7 +80,7 @@ Les modules complémentaires sont accessibles via la commande **Ouvrir le site w
 
 Désormais, Windows PowerShell ISE enregistre automatiquement vos scripts ouverts toutes les deux minutes dans un emplacement distinct.  Si Windows PowerShell ISE cesse de fonctionner ou si le système d’exploitation est redémarré, après redémarrage, Windows PowerShell ISE récupère les scripts qui étaient ouverts dans la dernière session, même si ceux-ci n’ont pas été enregistrés.
 
-Pour modifier l’intervalle d’enregistrement automatique, exécutez la commande suivante dans le volet de la console : **$psise.Options.AutoSaveMinuteInterval**.
+Pour modifier l’intervalle d’enregistrement automatique, exécutez la commande suivante dans le volet Console : **$psise.Options.AutoSaveMinuteInterval**.
 
 **Quels avantages cette modification procure-t-elle ?**
 
@@ -92,7 +95,7 @@ Windows PowerShell ISE 2.0 n’enregistre pas les scripts automatiquement en ca
 
 Windows PowerShell ISE offre désormais une liste des derniers fichiers utilisés. Quand vous ouvrez un fichier dans Windows PowerShell ISE, celui-ci est ajouté à la liste des dernières utilisations dans le menu **Fichier**.
 
-Pour modifier le nombre par défaut de fichiers répertoriés dans la liste des dernières utilisations, exécutez la commande suivante dans le volet Console : **$psise.Options.MruCount**.
+Pour modifier le nombre par défaut de fichiers répertoriés dans la liste des dernières utilisations, exécutez la commande suivante dans le volet Console : **$psise. Options.MruCount**.
 
 **Quels avantages cette modification procure-t-elle ?**
 
@@ -148,7 +151,7 @@ Si vous démarrez Windows PowerShell ISE à partir de la ligne de commande (en t
 
 -   *-Help* : affiche une fenêtre d’aide
 
--   *-mta* : démarre Windows PowerShell ISE en mode multithread cloisonné. Le mode d’opération par défaut pour Windows PowerShell ISE est un mode à thread unique cloisonné, ou *-sta*.
+-   *-mta* : démarre Windows PowerShell ISE en mode multithread cloisonné. Le mode d’opération par défaut pour Windows PowerShell ISE est un mode à thread unique cloisonné, ou *\-sta*.
 
 **Quels avantages cette modification procure-t-elle ?**
 
@@ -167,7 +170,7 @@ Les autres fonctionnalités d’édition de Windows PowerShell ISE sont les suiv
 
 -   **Correspondance d’accolade** Windows PowerShell ISE inclut des fonctions de correspondance et de mise en surbrillance des accolades, utilisables comme suit : par exemple, la commande **Accéder à Match** ou la combinaison de touches **Ctrl+]** permettent de localiser l’accolade fermante, si une accolade ouvrante est sélectionnée.
 
--   **Mode Plan** Le volet Script prend en charge le mode Plan qui permet de réduire ou de développer des sections de code en cliquant sur les signes plus ou moins dans la marge gauche. Vous pouvez utiliser des accolades ou les balises **#region** et **#endregion** pour marquer le début ou la fin d’une section réductible. Pour développer ou réduire toutes les régions, appuyez sur **Ctrl+M**..
+-   **Mode Plan** Le volet Script prend en charge le mode Plan qui permet de réduire ou de développer des sections de code en cliquant sur les signes plus ou moins dans la marge gauche. Vous pouvez utiliser des accolades ou les balises **#region** et **#endregion** pour marquer le début ou la fin d’une section réductible. Pour développer ou réduire toutes les régions, appuyez sur **Ctrl+M**.
 
 -   **Édition du texte par glisser-déplacer**Désormais, Windows PowerShell ISE prend en charge l’édition de texte par glisser-déplacer. Vous pouvez sélectionner un bloc de texte et faire glisser ce texte vers un autre emplacement dans l’éditeur ou la console afin de le déplacer. Si vous maintenez la touche Ctrl enfoncée pendant que vous faites glisser le texte sélectionné, lorsque vous relâchez le bouton de la souris, le texte est copié dans le nouvel emplacement. Dans cette version de Windows PowerShell ISE, ainsi que dans la version précédente de Windows PowerShell ISE, quand vous glissez-déplacez un fichier vers Windows PowerShell ISE, ce dernier ouvre le fichier.
 
@@ -177,7 +180,7 @@ Les autres fonctionnalités d’édition de Windows PowerShell ISE sont les suiv
 
 -   **Copie et collage de texte enrichi** La copie dans le Presse-papiers dans Windows PowerShell ISE préserve les informations de police, de taille et de couleur de la sélection d’origine.
 
--   **Sélection de bloc** Vous pouvez sélectionner un bloc de texte en maintenant la touche Alt enfoncée tout en sélectionnant du texte dans le volet Script à l’aide de la souris, ou en appuyant sur **Alt+Maj+Flèche**..
+-   **Sélection de bloc** Vous pouvez sélectionner un bloc de texte en maintenant la touche Alt enfoncée tout en sélectionnant du texte dans le volet Script à l’aide de la souris, ou en appuyant sur **Alt+Maj+Flèche**.
 
 **Quels avantages cette modification procure-t-elle ?**
 
@@ -190,7 +193,7 @@ Ces améliorations des fonctionnalités d’édition ne figuraient pas dans Wind
 ### <a name="BKMK_NewHelpViewer"></a>Nouvelle fenêtre de visionneuse d’aide
 **Ajout dans PowerShell 3.0**
 
-Si vous appuyez sur **F1** lorsque le curseur est dans une applet de commande ou si une partie d’une applet de commande est en surbrillance, la nouvelle visionneuse d’aide ouvre une aide contextuelle sur l’applet de commande n surbrillance. Pour afficher les rubriques d’aide conceptuelle de Windows PowerShell, tapez les **opérateurs** dans le volet de la console, puis appuyez sur **F1**..
+Si vous appuyez sur **F1** lorsque le curseur est dans une applet de commande ou si une partie d’une applet de commande est en surbrillance, la nouvelle visionneuse d’aide ouvre une aide contextuelle sur l’applet de commande n surbrillance. Pour afficher les rubriques d’aide conceptuelle de Windows PowerShell, tapez les **opérateurs** dans le volet de la console, puis appuyez sur **F1**.
 
 Avant d’utiliser cette fonctionnalité, téléchargez la dernière version des rubriques d’aide de Windows PowerShell à partir du site web de Microsoft. La méthode la plus simple pour télécharger les rubriques d’aide consiste à exécuter l’applet de commande **Update-Help** dans le volet de la console durant l’exécution de Windows PowerShell ISE en tant qu’administrateur.
 
@@ -225,6 +228,7 @@ Pour plus d’informations sur l’utilisation de Windows PowerShell ISE dans Wi
 -   [ISE sur le wiki TechNet](http://social.technet.microsoft.com/wiki/search/searchresults.aspx?q=ISE)
 
 -   [Centre de scripts](http://technet.microsoft.com/scriptcenter/default)
+
 
 
 <!--HONumber=May16_HO2-->

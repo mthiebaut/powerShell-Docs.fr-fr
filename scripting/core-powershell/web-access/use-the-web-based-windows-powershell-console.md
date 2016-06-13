@@ -1,3 +1,14 @@
+---
+title:  utiliser la console web Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+---
+
 #  Utiliser la console web Windows PowerShell
 
 Mise à jour : 24 juin 2013
@@ -102,7 +113,7 @@ Votre administrateur Accès Web Windows PowerShell doit vous fournir une URL qui
     </tbody>
     </table>
 
-3.  La section **Paramètres de connexion facultatifs** porte sur les exigences d’autorisation de l’ordinateur distant que vous souhaitez gérer. Pour plus d’informations sur les paramètres équivalents aux paramètres de connexion facultatifs, consultez l’[Aide de l’applet de commande Enter-PSSession](https://technet.microsoft.com/library/dd315384.aspx)..
+3.  La section **Paramètres de connexion facultatifs** porte sur les exigences d’autorisation de l’ordinateur distant que vous souhaitez gérer. Pour plus d’informations sur les paramètres équivalents aux paramètres de connexion facultatifs, consultez l’[Aide de l’applet de commande Enter-PSSession](https://technet.microsoft.com/library/dd315384.aspx).
 
     En général, les informations d’identification que vous passez par le biais de la passerelle Accès Web Windows PowerShell sont identiques à celles reconnues par l’ordinateur distant que vous souhaitez gérer. Toutefois, si vous souhaitez utiliser des informations d’identification différentes pour gérer l’ordinateur spécifié à l’étape 2, développez la section **Paramètres de connexion facultatifs** et spécifiez les autres informations d’identification. Sinon, passez à l’étape 6.
 
@@ -110,7 +121,7 @@ Votre administrateur Accès Web Windows PowerShell doit vous fournir une URL qui
 
 5.  Conservez le **Type d’authentification** **Par défaut**, sauf indication contraire de l’administrateur Accès Web Windows PowerShell.
 
-6.  Cliquez sur **Se connecter**..
+6.  Cliquez sur **Se connecter**.
 
 <a href="" id="BKMK_timeout"></a>
 
@@ -129,7 +140,7 @@ Vous serez déconnecté de votre session web Windows PowerShell dans les cas sui
 
 -   Tentative de connexion pour gérer un autre ordinateur distant dans la même session de navigateur ou sous un nouvel onglet de la même session de navigateur. (Cela ne s’applique pas si le serveur de passerelle exécute Windows Server 2012 R2 ; l’exécution d’Accès Web Windows PowerShell sur Windows Server 2012 R2 autorise plusieurs sessions utilisateur sous de nouveaux onglets dans la même session de navigateur.) Pour plus d’informations sur la façon d’utiliser plusieurs sessions actives sur le même ordinateur, consultez « Connexion simultanée à plusieurs ordinateurs cibles » dans la section [Limitations de la console web](#BKMK_limits) de cette rubrique.
 
--   20 minutes d’inactivité au cours de la session. L’administrateur de la passerelle peut personnaliser le délai d’inactivité. Pour plus d’informations, consultez [Gestion des sessions](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx#BKMK_sesmgmt)..
+-   20 minutes d’inactivité au cours de la session. L’administrateur de la passerelle peut personnaliser le délai d’inactivité. Pour plus d’informations, consultez [Gestion des sessions](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx#BKMK_sesmgmt).
 
     -   Si vous êtes déconnecté d’une session de la console web en raison d’une erreur réseau ou d’autres défaillances ou arrêts non planifiés, et non parce que vous avez vous-même fermé la session, la session Accès Web Windows PowerShell continue de s’exécuter, connectée à l’ordinateur cible, jusqu’à ce que le délai d’expiration côté client soit écoulé. Par défaut, ce délai est de 20 minutes et est configuré par l’administrateur de la passerelle. La session est déconnectée après les 20 minutes définies par défaut, ou au terme du délai spécifié par l’administrateur de la passerelle, le délai le plus court étant appliqué.
 
@@ -317,7 +328,7 @@ La plupart des fonctionnalités hôtes de Windows PowerShell sont disponibles da
 
         Vous pouvez modifier la hauteur de la console d’une manière similaire.
 
-        D’autres exemples de personnalisation de l’affichage de la console sont disponibles sur le [blog de l’équipe Windows PowerShell](http://blogs.msdn.com/b/powershell/)..
+        D’autres exemples de personnalisation de l’affichage de la console sont disponibles sur le [blog de l’équipe Windows PowerShell](http://blogs.msdn.com/b/powershell/).
 
 <a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Voir aussi</span></a>
 <a href="/en-us/library/hh831417(v=ws.11).aspx#Anchor_4" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
@@ -333,14 +344,11 @@ La plupart des fonctionnalités hôtes de Windows PowerShell sont disponibles da
 <span>Afficher :</span> Hérité Protégé
 
 <span class="stdr-votetitle">Cette page vous a-t-elle été utile ?</span>
-Oui
-Non
+Oui Non
 
 Vous avez d’autres commentaires ?
 
-<span class="stdr-count"><span class="stdr-charcnt">1500</span> caractères restants</span>
-Soumettre
-Ignorer
+<span class="stdr-count"><span class="stdr-charcnt">1500</span> caractères restants</span> Soumettre Ignorer
 
 <span class="stdr-thankyou">Merci !</span> <span class="stdr-appreciate">Votre avis nous intéresse.</span>
 
@@ -348,8 +356,7 @@ Ignorer
 
 |
 
-<a href="javascript:void(0)" id="SiteFeedbackLinkOpener"><span id="FeedbackButton" class="FeedbackButton clip20x21"> <img src="https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635975720914499532" alt="Site Feedback" id="feedBackImg" class="cl_footer_feedback_icon" /> </span> Commentaires sur le site</a>
-Commentaires sur le site
+<a href="javascript:void(0)" id="SiteFeedbackLinkOpener"><span id="FeedbackButton" class="FeedbackButton clip20x21"> <img src="https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635975720914499532" alt="Site Feedback" id="feedBackImg" class="cl_footer_feedback_icon" /> </span> Commentaires sur le site</a> Commentaires sur le site
 
 <a href="javascript:void(0)" id="SiteFeedbackLinkCloser">x</a>
 
@@ -382,6 +389,7 @@ Donnez-nous votre avis
 
 Les codes et les scripts développés par un tiers et en rapport à ce site doivent faire l’objet d’une licence fournie par le tiers, qui indique qu’il détient son code. Microsoft n’est pas partie prenante. Consultez les conditions d’utilisation CDN Ajax ASP.NET (http://www.asp.net/ajaxlibrary/CDN.ashx).
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
+
 
 
 <!--HONumber=May16_HO2-->

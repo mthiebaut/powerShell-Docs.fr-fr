@@ -1,12 +1,15 @@
 ---
-title: Configuration requise pour Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6d1d3c75-3be4-4fc9-8805-ca9b2c454d42
+title:  Configuration requise pour Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  6d1d3c75-3be4-4fc9-8805-ca9b2c454d42
 ---
+
 # Configuration requise pour Windows PowerShell
 Cette rubrique répertorie la configuration requise pour Windows PowerShell 3.0 et Windows PowerShell 4.0, et pour des fonctionnalités spéciales telles que l’environnement d’écriture de scripts intégré de Windows PowerShell (ISE), les commandes CIM et les workflows.
 
@@ -74,7 +77,7 @@ Toutefois, certains éléments, tels les suivants, requièrent une interface gra
 
     1.  Paramètre **ShowWindow** de l’applet de commande [Get-Help](https://technet.microsoft.com/en-us/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a).
 
-    2.  Paramètre **ShowSecurityDescriptorUi** des applets de commande [Register-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) et [Set-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/b21fbad3-1759-4260-b206-dcb8431cd6ea).
+    2.  Paramètre **ShowSecurityDescriptorUI** des applets de commande [Register-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) et [Set-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/b21fbad3-1759-4260-b206-dcb8431cd6ea).
 
 ## Configuration requise pour le moteur Windows PowerShell
 Windows PowerShell 4.0 est conçu pour offrir une compatibilité descendante avec Windows PowerShell 3.0 et Windows PowerShell 2.0. Les applets de commande, fournisseurs, composants logiciels enfichables, modules et scripts écrits pour Windows PowerShell 2.0 et Windows PowerShell 3.0 s’exécutent sans modification dans Windows PowerShell 4.0.
@@ -83,7 +86,7 @@ Toutefois, en raison d’une modification de la stratégie d’activation du run
 
 Le moteur Windows PowerShell 2.0 nécessite au minimum le Microsoft .NET Framework 2.0.50727. Cette condition est remplie par Microsoft .NET Framework 3.5 Service Pack 1. Cette condition n’est pas remplie par Microsoft .NET Framework 4 et versions ultérieures de Microsoft .NET Framework.
 
-Pour plus d’informations sur l’ajout ou l’installation du moteur Windows PowerShell 2.0, et l’ajout ou l’installation des versions requises du Microsoft .NET Framework, consultez [Installation du moteur Windows PowerShell 2.0](Installing-the-Windows-PowerShell-2.0-Engine.md). Pour plus d’informations sur le démarrage du moteur Windows PowerShell 2.0, consultez [Démarrage du moteur Windows PowerShell 2.0](Starting-the-Windows-PowerShell-2.0-Engine.md)..
+Pour plus d’informations sur l’ajout ou l’installation du moteur Windows PowerShell 2.0, et l’ajout ou l’installation des versions requises du Microsoft .NET Framework, consultez [Installation du moteur Windows PowerShell 2.0](Installing-the-Windows-PowerShell-2.0-Engine.md). Pour plus d’informations sur le démarrage du moteur Windows PowerShell 2.0, consultez [Démarrage du moteur Windows PowerShell 2.0](Starting-the-Windows-PowerShell-2.0-Engine.md).
 
 ## Environnement de préinstallation Windows
 Windows PowerShell 2.0, Windows PowerShell 3.0 et Windows PowerShell 4.0 s’exécutent dans l’environnement de préinstallation Windows (Windows PE). Toutefois, les applets de commande suivantes ne sont pas pris en charge.
@@ -92,18 +95,20 @@ Windows PowerShell 2.0, Windows PowerShell 3.0 et Windows PowerShell 4.0 s’
 
 -   [Get-EventLog](https://technet.microsoft.com/en-us/library/b4985b11-82bf-487d-928d-becd96fc0419)
 
--   [Get-WinEvent[PSITPro5_Diagnostic]](https://technet.microsoft.com/en-us/library/5fe94870-ed6b-4ce2-9500-93846cc65c95)
+-   [Get-WinEvent](https://technet.microsoft.com/en-us/library/5fe94870-ed6b-4ce2-9500-93846cc65c95)
 
 -   [Save-Help](https://technet.microsoft.com/en-us/library/aed94f90-b73f-4e25-a25d-7c18d9f161fa)
 
 -   [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545)
 
-En outre, le service **WinRm** n’est pas présent sur Windows PE.
+En outre, le service **WinRM** n’est pas présent sur Windows PE.
 
 ## Voir aussi
 [Prise en main de Windows PowerShell](../getting-started/Getting-Started-with-Windows-PowerShell.md)
+
 [Installation de Windows PowerShell](Installing-Windows-PowerShell.md)
-[Démarrage de Windows PowerShell [ps]](https://technet.microsoft.com/en-us/library/8ec8c2d7-8e7c-4722-a3d2-498fe5739a8e)
+
+[Démarrage de Windows PowerShell](https://technet.microsoft.com/en-us/library/8ec8c2d7-8e7c-4722-a3d2-498fe5739a8e)
 
 
 

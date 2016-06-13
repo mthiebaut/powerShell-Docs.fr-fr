@@ -1,12 +1,15 @@
 ---
-title: Objet ISEEditor
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0101daf8-4e31-4e4c-ab89-01d95dcb8f46
+title:  Objet ISEEditor
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  0101daf8-4e31-4e4c-ab89-01d95dcb8f46
 ---
+
 # Objet ISEEditor
   Un objet **ISEEditor** est une instance de la classe Microsoft.PowerShell.Host.ISE.ISEEditor. Le volet de la console est un objet **ISEEditor**. Chaque objet [ISEFile](The-ISEFile-Object.md) est associé à un objet **ISEEditor**. Les sections suivantes répertorient les méthodes et propriétés d’un objet **ISEEditor**.
 
@@ -77,8 +80,7 @@ $psIse.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
  Remplace la sélection par du texte ou insère du texte à la position actuelle du point d’insertion.
 
- **text** \- chaîne
- Texte à insérer.
+ **text** \- chaîne  Texte à insérer.
 
  Consultez l’[exemple de script](#example) plus loin dans cette rubrique.
 
@@ -87,17 +89,13 @@ $psIse.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
  Sélectionne le texte spécifié par les paramètres **startLine**, **startColumn**, **endLine** et **endColumn**.
 
- **startLine** \- entier
- Ligne où commence la sélection.
+ **startLine** \- entier  Ligne où commence la sélection.
 
- **startColumn** \- entier
- Colonne dans la ligne de début où commence la sélection.
+ **startColumn** \- entier  Colonne dans la ligne de début où commence la sélection.
 
- **endLine** \- entier
- Ligne où se termine la sélection.
+ **endLine** \- entier  Ligne où se termine la sélection.
 
- **endColumn** \- entier
- Colonne dans la ligne de fin où se termine la sélection.
+ **endColumn** \- entier  Colonne dans la ligne de fin où se termine la sélection.
 
  Consultez l’[exemple de script](#example) plus loin dans cette rubrique.
 
@@ -119,11 +117,9 @@ $psIse.CurrentFile.Editor.SelectCaretLine()
 
  Définit la position du point d’insertion en fonction du numéro de ligne et du numéro de colonne spécifiés. Elle lève une exception si le numéro de ligne du point d’insertion ou le numéro de colonne du point d’insertion sont en dehors de leurs plages valides respectives.
 
- **lineNumber** \- entier
- Numéro de ligne du point d’insertion.
+ **lineNumber** \- entier  Numéro de ligne du point d’insertion.
 
- **columnNumber** \- entier
- Numéro de colonne du point d’insertion.
+ **columnNumber** \- entier  Numéro de colonne du point d’insertion.
 
 ```
 # Set the CaretPosition.
