@@ -9,8 +9,8 @@
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 1
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 85
-[ In Sync Handback Files ](#insync-handback-success-list)| 218
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 83
+[ In Sync Handback Files ](#insync-handback-success-list)| 220
 [ Ignored Files ](#ignored-list)| 16
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -92,8 +92,6 @@
  [scripting\core-powershell\scripting-guide.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/scripting-guide.md) | OutofSyncHandedBackSuccess | [Details](#d90e1aea0bc395320669bb58bb2e5b58708126d3152)
  [scripting\core-powershell\web-access.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/web-access.md) | OutofSyncHandedBackSuccess | [Details](#bdd57c989f4787e402b0334782db3ab9f5b42161153)
  [scripting\core-powershell\web-access\authorization-rules-and-security-features-of-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/web-access/authorization-rules-and-security-features-of-windows-powershell-web-access.md) | OutofSyncHandedBackSuccess | [Details](#ed586e55f4533ce5be7c68564e5cc537fed05016154)
- [scripting\core-powershell\web-access\install-and-use-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/web-access/install-and-use-windows-powershell-web-access.md) | OutofSyncHandedBackSuccess | [Details](#d2f78148402f06992f5f58cd40e8c4f624b5e4b5155)
- [scripting\core-powershell\web-access\troubleshooting-access-problems-in-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/web-access/troubleshooting-access-problems-in-windows-powershell-web-access.md) | OutofSyncHandedBackSuccess | [Details](#6366ec9c49f721b758b6a520f68cf2b3c5ee0caf156)
  [scripting\core-powershell\web-access\uninstall-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/web-access/uninstall-windows-powershell-web-access.md) | OutofSyncHandedBackSuccess | [Details](#ee5e88ece27add955fcef3a9df0a441a08251e77157)
  [scripting\core-powershell\workflows\PSWorkflow-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/workflows/PSWorkflow-Module.md) | OutofSyncHandedBackSuccess | [Details](#9de4d91359cf3c52d804749027f8d05cbffce743160)
  [scripting\core-powershell\workflows\PSWorkflowUtility-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/workflows/PSWorkflowUtility-Module.md) | OutofSyncHandedBackSuccess | [Details](#62cb6e90637373791e66ad1f94af085de00e4666161)
@@ -203,6 +201,8 @@
  [scripting\core-powershell\ise\The-ISEEditor-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/The-ISEEditor-Object.md) | InSyncHandedBackSuccess | [Details](#4812092dea24fa61245af7e06d1c5924ec812218136)
  [scripting\core-powershell\ise\The-ISEOptions-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/The-ISEOptions-Object.md) | InSyncHandedBackSuccess | [Details](#272749d487a59ccf5eb30352dc902591228746f3141)
  [scripting\core-powershell\Running-Remote-Commands.md](https://github.com/PowerShell/powerShell-Docs/blob/593f0c2ca72e00f19c395c1dae31798d5a5f652d/scripting/core-powershell/Running-Remote-Commands.md) | InSyncHandedBackSuccess | [Details](#75d41569b18e61342809eebcc76b7899ec6363fa151)
+ [scripting\core-powershell\web-access\install-and-use-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/web-access/install-and-use-windows-powershell-web-access.md) | InSyncHandedBackSuccess | [Details](#d2f78148402f06992f5f58cd40e8c4f624b5e4b5155)
+ [scripting\core-powershell\web-access\troubleshooting-access-problems-in-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/web-access/troubleshooting-access-problems-in-windows-powershell-web-access.md) | InSyncHandedBackSuccess | [Details](#6366ec9c49f721b758b6a520f68cf2b3c5ee0caf156)
  [scripting\core-powershell\web-access\use-the-web-based-windows-powershell-console.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/web-access/use-the-web-based-windows-powershell-console.md) | InSyncHandedBackSuccess | [Details](#02964dd763ccccbf27a963c0f8eef20aa23cc117158)
  [scripting\getting-started\cookbooks\Appendix-1---Compatibility-Aliases.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/Appendix-1---Compatibility-Aliases.md) | InSyncHandedBackSuccess | [Details](#38a6cb1b0402825b307652e6747ea65baafd1d8b164)
  [scripting\getting-started\cookbooks\Appendix-2---Creating-a-Custom-PowerShell-Shortcut.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/Appendix-2---Creating-a-Custom-PowerShell-Shortcut.md) | InSyncHandedBackSuccess | [Details](#24e9b67cf51b99156db3f0bdfb446996b9d3df76165)
@@ -2403,33 +2403,27 @@
 * [Back to Top](#report-top)
 
 ##### <a name='d2f78148402f06992f5f58cd40e8c4f624b5e4b5155'></a> Source: [scripting\core-powershell\web-access\install-and-use-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/web-access/install-and-use-windows-powershell-web-access.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\core-powershell\web-access\install-and-use-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs.fr-fr/blob/76f155ae2f6d9c071500d9a7247f2b4db88fbd1e/scripting/core-powershell/web-access/install-and-use-windows-powershell-web-access.md)
 * Handoff File: [install-and-use-windows-powershell-web-access.b0ab653c895ebd67ec078d852bf20804e9c72a1c.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/597a40a37c491bb1b7769c3ded67f9618fda2bde/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/install-and-use-windows-powershell-web-access.b0ab653c895ebd67ec078d852bf20804e9c72a1c.fr-fr.xlf)
 * Handoff Datetime: 2016-05-12 23:20:11
 * Handoff Reason: Include
 * Archive File: [install-and-use-windows-powershell-web-access.b0ab653c895ebd67ec078d852bf20804e9c72a1c.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/21e30d45b7b712100d8793236e510491637a6221/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/archive/install-and-use-windows-powershell-web-access.b0ab653c895ebd67ec078d852bf20804e9c72a1c.fr-fr.xlf)
 * Archive Datetime: 2016-05-17 13:25:34
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [scripting\core-powershell\web-access\install-and-use-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs.fr-fr/blob/1a98553aa63babc6a3bcabccf98ceb4fba24d3f5/scripting/core-powershell/web-access/install-and-use-windows-powershell-web-access.md)
-* Current Handback File: [install-and-use-windows-powershell-web-access.b0ab653c895ebd67ec078d852bf20804e9c72a1c.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/c2ea49a31643f70c92e6e7ec018e4b490538e7c9/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/install-and-use-windows-powershell-web-access.b0ab653c895ebd67ec078d852bf20804e9c72a1c.fr-fr.xlf)
-* Current Handback Datetime: 2016-05-21 21:38:52
+* Handback File: [install-and-use-windows-powershell-web-access.b0ab653c895ebd67ec078d852bf20804e9c72a1c.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/3ba5aadb89cf0f26aa2a2165dd3ca4ae73b40ef2/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/install-and-use-windows-powershell-web-access.b0ab653c895ebd67ec078d852bf20804e9c72a1c.fr-fr.xlf)
+* Handback Datetime: 2016-06-13 20:47:04
 * [Back to Top](#report-top)
 
 ##### <a name='6366ec9c49f721b758b6a520f68cf2b3c5ee0caf156'></a> Source: [scripting\core-powershell\web-access\troubleshooting-access-problems-in-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/web-access/troubleshooting-access-problems-in-windows-powershell-web-access.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\core-powershell\web-access\troubleshooting-access-problems-in-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs.fr-fr/blob/76f155ae2f6d9c071500d9a7247f2b4db88fbd1e/scripting/core-powershell/web-access/troubleshooting-access-problems-in-windows-powershell-web-access.md)
 * Handoff File: [troubleshooting-access-problems-in-windows-powershell-web-access.1c7875e668a4ef265134d93052c69465d51413d7.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/597a40a37c491bb1b7769c3ded67f9618fda2bde/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/troubleshooting-access-problems-in-windows-powershell-web-access.1c7875e668a4ef265134d93052c69465d51413d7.fr-fr.xlf)
 * Handoff Datetime: 2016-05-12 23:20:11
 * Handoff Reason: Include
 * Archive File: [troubleshooting-access-problems-in-windows-powershell-web-access.1c7875e668a4ef265134d93052c69465d51413d7.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/21e30d45b7b712100d8793236e510491637a6221/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/archive/troubleshooting-access-problems-in-windows-powershell-web-access.1c7875e668a4ef265134d93052c69465d51413d7.fr-fr.xlf)
 * Archive Datetime: 2016-05-17 13:25:34
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [scripting\core-powershell\web-access\troubleshooting-access-problems-in-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs.fr-fr/blob/1a98553aa63babc6a3bcabccf98ceb4fba24d3f5/scripting/core-powershell/web-access/troubleshooting-access-problems-in-windows-powershell-web-access.md)
-* Current Handback File: [troubleshooting-access-problems-in-windows-powershell-web-access.1c7875e668a4ef265134d93052c69465d51413d7.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/c2ea49a31643f70c92e6e7ec018e4b490538e7c9/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/troubleshooting-access-problems-in-windows-powershell-web-access.1c7875e668a4ef265134d93052c69465d51413d7.fr-fr.xlf)
-* Current Handback Datetime: 2016-05-21 21:38:52
+* Handback File: [troubleshooting-access-problems-in-windows-powershell-web-access.1c7875e668a4ef265134d93052c69465d51413d7.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/3ba5aadb89cf0f26aa2a2165dd3ca4ae73b40ef2/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/troubleshooting-access-problems-in-windows-powershell-web-access.1c7875e668a4ef265134d93052c69465d51413d7.fr-fr.xlf)
+* Handback Datetime: 2016-06-13 20:47:04
 * [Back to Top](#report-top)
 
 ##### <a name='ee5e88ece27add955fcef3a9df0a441a08251e77157'></a> Source: [scripting\core-powershell\web-access\uninstall-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/web-access/uninstall-windows-powershell-web-access.md)
