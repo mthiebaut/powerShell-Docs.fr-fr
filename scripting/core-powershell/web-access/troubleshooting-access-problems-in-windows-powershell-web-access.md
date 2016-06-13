@@ -1,3 +1,14 @@
+---
+title:  résolution des problèmes d’accès dans Accès Web Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+---
+
 #  Résolution des problèmes d’accès dans Accès Web Windows PowerShell
 
 Mise à jour : 24 juin 2013
@@ -41,7 +52,7 @@ Le tableau suivant identifie certains problèmes courants que les utilisateurs p
 <ol>
 <li><p>Appuyez sur <strong>F12</strong> pour ouvrir la console Outils de développement.</p></li>
 <li><p>Dans Internet Explorer 10, cliquez sur <strong>Mode navigateur</strong>, puis sélectionnez <strong>Internet Explorer 10</strong>.</p></li>
-<li><p>Cliquez sur <strong>Mode de document</strong>, puis cliquez sur <strong>Normes Internet Explorer 10</strong>.</p></li>
+<li><p>Cliquez sur <strong>Mode de document</strong>, puis sur <strong>Normes Internet Explorer 10</strong>.</p></li>
 <li><p>Appuyez de nouveau sur <strong>F12</strong> pour fermer la console Outils de développement.</p></li>
 </ol></li>
 <li><p>Désactivez la configuration automatique du proxy.</p>
@@ -128,19 +139,16 @@ Le tableau suivant identifie certains problèmes courants que les utilisateurs p
 
 [Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx)
 [Utiliser la console web Windows PowerShell](https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx)
-[about_Remote_Requirements](https://technet.microsoft.com/library/dd315349.aspx)
+[about\_Remote\_Requirements](https://technet.microsoft.com/library/dd315349.aspx)
 
 <span>Afficher :</span> Hérité Protégé
 
 <span class="stdr-votetitle">Cette page vous a-t-elle été utile ?</span>
-Oui
-Non
+Oui Non
 
 Vous avez d’autres commentaires ?
 
-<span class="stdr-count"><span class="stdr-charcnt">1500</span> caractères restants</span>
-Soumettre
-Ignorer
+<span class="stdr-count"><span class="stdr-charcnt">1500</span> caractères restants</span> Soumettre Ignorer
 
 <span class="stdr-thankyou">Merci !</span> <span class="stdr-appreciate">Votre avis nous intéresse.</span>
 
@@ -148,8 +156,7 @@ Ignorer
 
 |
 
-<a href="javascript:void(0)" id="SiteFeedbackLinkOpener"><span id="FeedbackButton" class="FeedbackButton clip20x21"> <img src="https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635975720914499532" alt="Site Feedback" id="feedBackImg" class="cl_footer_feedback_icon" /> </span> Commentaires sur le site</a>
-Commentaires sur le site
+<a href="javascript:void(0)" id="SiteFeedbackLinkOpener"><span id="FeedbackButton" class="FeedbackButton clip20x21"> <img src="https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635975720914499532" alt="Site Feedback" id="feedBackImg" class="cl_footer_feedback_icon" /> </span> Commentaires sur le site</a> Commentaires sur le site
 
 <a href="javascript:void(0)" id="SiteFeedbackLinkCloser">x</a>
 
@@ -182,6 +189,7 @@ Donnez-nous votre avis
 
 Les codes et les scripts développés par un tiers et en rapport à ce site doivent faire l’objet d’une licence fournie par le tiers, qui indique qu’il détient son code. Microsoft n’est pas partie prenante. Consultez les conditions d’utilisation CDN Ajax ASP.NET (http://www.asp.net/ajaxlibrary/CDN.ashx).
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
+
 
 
 <!--HONumber=May16_HO2-->

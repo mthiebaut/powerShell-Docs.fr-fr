@@ -1,3 +1,14 @@
+---
+title:  installer et utiliser Accès Web Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+---
+
 #  Installer et utiliser Accès Web Windows PowerShell
 
 Mise à jour : 5 novembre 2013
@@ -80,9 +91,9 @@ Accès Web Windows PowerShell prend en charge les navigateurs suivants. Bien que
 
 ------------------------------------------------------------------------
 
--   Windows Phone 7 et 7.5
+-   Windows Phone 7 et 7.5
 
--   Google Android WebKit 3.1 Browser Android 2.2.1 (Kernel 2.6)
+-   Google Android WebKit 3.1 Browser Android 2.2.1 (Kernel 2.6)
 
 -   Apple Safari pour système d’exploitation iPhone 5.0.1
 
@@ -128,9 +139,9 @@ Vous pouvez installer la passerelle Accès Web Windows PowerShell sur un serveur
 
 1.  Effectuez une des opérations suivantes pour ouvrir une session Windows PowerShell avec des droits utilisateur élevés.
 
-    -   Sur le Bureau Windows, cliquez avec le bouton droit dans la barre des tâches sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**..
+    -   Sur le Bureau Windows, cliquez avec le bouton droit dans la barre des tâches sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**.
 
-    -   Sur l’écran d’**accueil** de Windows, cliquez avec le bouton droit sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**..
+    -   Dans l’écran d’**accueil** de Windows, cliquez avec le bouton droit sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**.
 
     <table>
     <colgroup>
@@ -217,9 +228,9 @@ Vous pouvez terminer la configuration de l’application web d’Accès Web Wind
 
     -   Sur le Bureau Windows, cliquez avec le bouton droit sur **Windows PowerShell** dans la barre des tâches.
 
-    -   Sur l’écran d’**accueil** de Windows, cliquez sur **Windows PowerShell**..
+    -   Dans l’écran d’**accueil** de Windows, cliquez sur **Windows PowerShell**.
 
-2.  Tapez ce qui suit, puis appuyez sur **Entrée**..
+2.  Tapez ce qui suit, puis appuyez sur **Entrée**.
 
     **Install-PswaWebApplication -UseTestCertificate**
 
@@ -266,7 +277,7 @@ Vous pouvez terminer la configuration de l’application web d’Accès Web Wind
     </thead>
     <tbody>
     <tr class="odd">
-    <td><p>Vous ne pouvez pas vous connecter tant que les utilisateurs ne se voient pas accorder l’accès au site Web en ajoutant des règles d’autorisation. Pour plus d’informations, consultez <a href="#BKMK_step3">Étape 3 : Configurer une règle d’autorisation restrictive</a> et <a href="https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx">Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell.</a>.</p></td>
+    <td><p>Vous ne pouvez pas vous connecter tant que les utilisateurs ne se voient pas accorder l’accès au site Web en ajoutant des règles d’autorisation. Pour plus d’informations, consultez <a href="#BKMK_step3">Étape 3 : Configurer une règle d’autorisation restrictive</a> et <a href="https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx">Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell</a>.</p></td>
     </tr>
     </tbody>
     </table>
@@ -277,9 +288,9 @@ Vous pouvez terminer la configuration de l’application web d’Accès Web Wind
 
     -   Sur le Bureau Windows, cliquez avec le bouton droit sur **Windows PowerShell** dans la barre des tâches.
 
-    -   Sur l’écran d’**accueil** de Windows, cliquez sur **Windows PowerShell**..
+    -   Dans l’écran d’**accueil** de Windows, cliquez sur **Windows PowerShell**.
 
-2.  Tapez ce qui suit, puis appuyez sur **Entrée**..
+2.  Tapez ce qui suit, puis appuyez sur **Entrée**.
 
     **Install-PswaWebApplication**
 
@@ -295,17 +306,17 @@ Vous pouvez terminer la configuration de l’application web d’Accès Web Wind
 
 3.  Ouvrez la console du Gestionnaire des services Internet en procédant de l’une des manières suivantes.
 
-    -   Sur le Bureau Windows, démarrez le Gestionnaire de serveur en cliquant sur **Gestionnaire de serveur** dans la barre des tâches Windows. Dans le menu **Outils** du Gestionnaire de serveur, cliquez sur **Gestionnaire des Services Internet (IIS)**..
+    -   Sur le Bureau Windows, démarrez le Gestionnaire de serveur en cliquant sur **Gestionnaire de serveur** dans la barre des tâches Windows. Dans le menu **Outils** du Gestionnaire de serveur, cliquez sur **Gestionnaire des services Internet (IIS)**.
 
-    -   Sur l’écran d’**accueil** de Windows, cliquez sur **Gestionnaire de serveur**..
+    -   Dans l’écran d’**accueil** de Windows, cliquez sur **Gestionnaire de serveur**.
 
 4.  Dans le volet de l’arborescence du Gestionnaire des services Internet, développez le nœud du serveur sur lequel Accès Web Windows PowerShell est installé jusqu’à ce que le dossier **Sites** apparaisse. Développez le dossier **Sites**.
 
-5.  Sélectionnez le site web dans lequel vous avez installé l’application web d’Accès Web Windows PowerShell. Dans le volet **Actions**, cliquez sur **Liaisons**..
+5.  Sélectionnez le site web dans lequel vous avez installé l’application web d’Accès Web Windows PowerShell. Dans le volet **Actions**, cliquez sur **Liaisons**.
 
-6.  Dans la boîte de dialogue **Liaisons de site**, cliquez sur **Ajouter**..
+6.  Dans la boîte de dialogue **Liaisons de site**, cliquez sur **Ajouter**.
 
-7.  Dans la boîte de dialogue **Ajouter la liaison de site**, dans le champ **Type**, sélectionnez **https**..
+7.  Dans la boîte de dialogue **Ajouter la liaison de site**, dans le champ **Type**, sélectionnez **https**.
 
 8.  Dans le champ **Certificat SSL**, sélectionnez votre certificat signé dans le menu déroulant. Cliquez sur **OK**. Pour plus d’informations sur l’obtention d’un certificat, consultez [Pour configurer un certificat SSL dans le Gestionnaire des services Internet](#BKMK_cert) dans cette rubrique.
 
@@ -322,7 +333,7 @@ Vous pouvez terminer la configuration de l’application web d’Accès Web Wind
     </thead>
     <tbody>
     <tr class="odd">
-    <td><p>Vous ne pouvez pas vous connecter tant que les utilisateurs ne se voient pas accorder l’accès au site Web en ajoutant des règles d’autorisation. Pour plus d’informations, consultez <a href="#BKMK_step3">Étape 3 : Configurer une règle d’autorisation restrictive</a> et <a href="https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx">Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell.</a>.</p></td>
+    <td><p>Vous ne pouvez pas vous connecter tant que les utilisateurs ne se voient pas accorder l’accès au site Web en ajoutant des règles d’autorisation. Pour plus d’informations, consultez <a href="#BKMK_step3">Étape 3 : Configurer une règle d’autorisation restrictive</a> et <a href="https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx">Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell</a>.</p></td>
     </tr>
     </tbody>
     </table>
@@ -334,33 +345,33 @@ Vous pouvez terminer la configuration de l’application web d’Accès Web Wind
 
 ------------------------------------------------------------------------
 
-Une fois Accès Web Windows PowerShell installé et la passerelle configurée, les utilisateurs peuvent ouvrir la page de connexion dans un navigateur, mais ils ne peuvent pas se connecter tant que l’administrateur d’Accès Web Windows PowerShell ne leur a pas octroyé explicitement un accès. Le contrôle d’accès d’ Accès Web Windows PowerShell est géré à l’aide de l’ensemble d’applets de commande Windows PowerShell décrit dans le tableau suivant. Il n’existe aucune interface utilisateur graphique équivalente pour ajouter ou gérer les règles d’autorisation. Pour plus d’informations sur les applets de commande Accès Web Windows PowerShell, consultez les rubriques de référence des applets de commande, [Applets de commande Accès Web Windows PowerShell](https://technet.microsoft.com/library/hh918342.aspx)..
+Une fois Accès Web Windows PowerShell installé et la passerelle configurée, les utilisateurs peuvent ouvrir la page de connexion dans un navigateur, mais ils ne peuvent pas se connecter tant que l’administrateur d’Accès Web Windows PowerShell ne leur a pas octroyé explicitement un accès. Le contrôle d’accès d’Accès Web Windows PowerShell est géré à l’aide de l’ensemble d’applets de commande Windows PowerShell décrit dans le tableau suivant. Il n’existe aucune interface utilisateur graphique équivalente pour ajouter ou gérer les règles d’autorisation. Pour plus d’informations sur les applets de commande Accès Web Windows PowerShell, consultez les rubriques de référence des applets de commande, [Applets de commande Accès Web Windows PowerShell](https://technet.microsoft.com/library/hh918342.aspx).
 
-Pour plus de détails sur les règles d’autorisation et la sécurité d’Accès Web Windows PowerShell, consultez [Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx)..
+Pour plus de détails sur les règles d’autorisation et la sécurité d’Accès Web Windows PowerShell, consultez [Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx).
 
 #### Pour ajouter une règle d’autorisation restrictive
 
 1.  Effectuez une des opérations suivantes pour ouvrir une session Windows PowerShell avec des droits utilisateur élevés.
 
-    -   Sur le Bureau Windows, cliquez avec le bouton droit dans la barre des tâches sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**..
+    -   Sur le Bureau Windows, cliquez avec le bouton droit dans la barre des tâches sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**.
 
-    -   Sur l’écran d’**accueil** de Windows, cliquez avec le bouton droit sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**..
+    -   Dans l’écran d’**accueil** de Windows, cliquez avec le bouton droit sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**.
 
 2.  <span class="label">Étape facultative pour restreindre l’accès utilisateur à l’aide de configurations de sessions :</span> vérifiez que les configurations de sessions que vous voulez utiliser dans vos règles existent déjà. Si elles n’ont pas encore été créées, utilisez les instructions relatives à la création de configurations de sessions dans [about\_Session\_Configuration\_Files](https://msdn.microsoft.com/library/windows/desktop/hh847838.aspx) sur MSDN.
 
-3.  Tapez ce qui suit, puis appuyez sur **Entrée**..
+3.  Tapez ce qui suit, puis appuyez sur **Entrée**.
 
     [Copier](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_f9e7959b-75d0-4d63-8f8e-02334a8dd09d'); "Copier dans le Presse-papiers.")
 
         Add-PswaAuthorizationRule –UserName <domain\user | computer\user> -ComputerName <computer_name> -ConfigurationName <session_configuration_name>
 
-    Cette règle d’autorisation accorde à un utilisateur spécifique l’accès à un ordinateur sur le réseau auquel il a généralement accès, avec l’accès à une configuration de session spécifique ayant comme portée les besoins ordinaires de l’utilisateur en matière de script et d’applet de commande. Dans l’exemple suivant, un utilisateur nommé <span class="code">JSmith</span> dans le domaine <span class="code">Contoso</span> se voit accorder un accès pour gérer l’ordinateur <span class="code">Contoso\_214</span> et utiliser une configuration de session nommée <span class="code">NewAdminsOnly.</span>.
+    Cette règle d’autorisation accorde à un utilisateur spécifique l’accès à un ordinateur sur le réseau auquel il a généralement accès, avec l’accès à une configuration de session spécifique ayant comme portée les besoins ordinaires de l’utilisateur en matière de script et d’applet de commande. Dans l’exemple suivant, un utilisateur nommé <span class="code">JSmith</span> dans le domaine <span class="code">Contoso</span> se voit accorder un accès pour gérer l’ordinateur <span class="code">Contoso\_214</span> et utiliser une configuration de session nommée <span class="code">NewAdminsOnly</span>.
 
     [Copier](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_ebd5bc5e-ec5d-4955-a86a-63843e480e37'); "Copier dans le Presse-papiers.")
 
         Add-PswaAuthorizationRule –UserName Contoso\JSmith -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly
 
-4.  Vérifiez que la règle a été créée en exécutant l’applet de commande **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domain\\user | computer\\user&gt; -ComputerName** &lt;computer\_name&gt;. Par exemple, **Test-PswaAuthorizationRule –UserName Contoso\\JSmith –ComputerName Contoso\_214**..
+4.  Vérifiez que la règle a été créée en exécutant l’applet de commande **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domain\\user | computer\\user&gt; -ComputerName** &lt;computer\_name&gt;. Par exemple, **Test-PswaAuthorizationRule –UserName Contoso\\JSmith –ComputerName Contoso\_214**.
 
 Après avoir configuré une règle d’autorisation, les utilisateurs autorisés peuvent se connecter à la console web et commencer à utiliser Accès Web Windows PowerShell.
 
@@ -386,15 +397,15 @@ Vous pouvez installer la passerelle Accès Web Windows PowerShell sur un serveur
 
     -   Sur le Bureau Windows, démarrez le Gestionnaire de serveur en cliquant sur **Gestionnaire de serveur** dans la barre des tâches Windows.
 
-    -   Sur l’écran d’**accueil** de Windows, cliquez sur **Gestionnaire de serveur**..
+    -   Dans l’écran d’**accueil** de Windows, cliquez sur **Gestionnaire de serveur**.
 
-2.  Dans le menu **Gérer**, cliquez sur **Ajouter des rôles et fonctionnalités**..
+2.  Dans le menu **Gérer**, cliquez sur **Ajouter des rôles et fonctionnalités**.
 
-3.  Dans la page **Sélectionner le type d’installation**, sélectionnez **Installation basée sur un rôle ou une fonctionnalité**. Cliquez sur **Suivant**..
+3.  Dans la page **Sélectionner le type d’installation**, sélectionnez **Installation basée sur un rôle ou une fonctionnalité**. Cliquez sur **Suivant**.
 
-4.  Dans la page **Sélectionner le serveur de destination**, sélectionnez un serveur dans le pool de serveurs ou sélectionnez un disque dur virtuel hors connexion. Pour sélectionner un disque dur virtuel hors connexion en guise de serveur de destination, choisissez d’abord le serveur sur lequel monter le disque dur virtuel, puis sélectionnez le fichier VHD. Pour plus d’informations sur l’ajout de serveurs à votre pool de serveurs, consultez l’Aide du Gestionnaire de serveur. Une fois que vous avez sélectionné le serveur de destination, cliquez sur **Suivant**..
+4.  Dans la page **Sélectionner le serveur de destination**, sélectionnez un serveur dans le pool de serveurs ou sélectionnez un disque dur virtuel hors connexion. Pour sélectionner un disque dur virtuel hors connexion en guise de serveur de destination, choisissez d’abord le serveur sur lequel monter le disque dur virtuel, puis sélectionnez le fichier VHD. Pour plus d’informations sur l’ajout de serveurs à votre pool de serveurs, consultez l’Aide du Gestionnaire de serveur. Une fois que vous avez sélectionné le serveur de destination, cliquez sur **Suivant**.
 
-5.  Dans la page **Sélectionner des fonctionnalités** de l’Assistant, développez **Windows PowerShell**, puis sélectionnez **Accès Web Windows PowerShell**..
+5.  Dans la page **Sélectionner des fonctionnalités** de l’Assistant, développez **Windows PowerShell**, puis sélectionnez **Accès Web Windows PowerShell**.
 
 6.  Notez que vous êtes invité à ajouter les fonctionnalités requises, telles que le .NET Framework 4.5 et les services de rôle du serveur Web (IIS). Ajoutez les fonctionnalités requises et continuez.
 
@@ -414,9 +425,9 @@ Vous pouvez installer la passerelle Accès Web Windows PowerShell sur un serveur
     </tbody>
     </table>
 
-7.  Dans la page **Confirmer les sélections d’installation**, si les fichiers de fonctionnalités d’Accès Web Windows PowerShell ne sont pas enregistrés sur le serveur de destination que vous avez sélectionné à l’étape 4, cliquez sur **Spécifier un autre chemin d’accès source**, puis indiquez le chemin des fichiers de fonctionnalités. Sinon, cliquez sur **Installer**..
+7.  Dans la page **Confirmer les sélections d’installation**, si les fichiers de fonctionnalités d’Accès Web Windows PowerShell ne sont pas enregistrés sur le serveur de destination que vous avez sélectionné à l’étape 4, cliquez sur **Spécifier un autre chemin d’accès source**, puis indiquez le chemin des fichiers de fonctionnalités. Sinon, cliquez sur **Installer**.
 
-8.  Une fois que vous avez cliqué sur **Installer**, la page **Progression de l’installation** affiche la progression de l’installation, les résultats et des messages tels que des avertissements, échecs ou étapes de configuration de post-installation requises pour Accès Web Windows PowerShell. Une fois cette fonctionnalité installée, vous êtes invité à consulter le fichier Lisez-moi dans lequel se trouvent des instructions d’installation requises simples pour la passerelle. Ces instructions sont également incluses dans la présente rubrique. Le chemin du fichier Lisez-moi est <span class="computerOutputInline">C:\\Windows\\Web\\PowerShellWebAccess\\wwwroot\\README.txt.</span>.
+8.  Une fois que vous avez cliqué sur **Installer**, la page **Progression de l’installation** affiche la progression de l’installation, les résultats et des messages tels que des avertissements, échecs ou étapes de configuration de post-installation requises pour Accès Web Windows PowerShell. Une fois cette fonctionnalité installée, vous êtes invité à consulter le fichier Lisez-moi dans lequel se trouvent des instructions d’installation requises simples pour la passerelle. Ces instructions sont également incluses dans la présente rubrique. Le chemin du fichier Lisez-moi est <span class="computerOutputInline">C:\\Windows\\Web\\PowerShellWebAccess\\wwwroot\\README.txt</span>.
 
 ###
 
@@ -436,23 +447,23 @@ Les instructions données dans cette section concernent l’installation de l’
 
 1.  Ouvrez la console du Gestionnaire des services Internet en procédant de l’une des manières suivantes.
 
-    -   Sur le Bureau Windows, démarrez le Gestionnaire de serveur en cliquant sur **Gestionnaire de serveur** dans la barre des tâches Windows. Dans le menu **Outils** du Gestionnaire de serveur, cliquez sur **Gestionnaire des Services Internet (IIS)**..
+    -   Sur le Bureau Windows, démarrez le Gestionnaire de serveur en cliquant sur **Gestionnaire de serveur** dans la barre des tâches Windows. Dans le menu **Outils** du Gestionnaire de serveur, cliquez sur **Gestionnaire des services Internet (IIS)**.
 
     -   Sur l’écran d’**accueil** de Windows, tapez une partie du nom **Gestionnaire des services Internet (IIS)**. Cliquez sur le raccourci quand il s’affiche dans les résultats **Applications**.
 
 2.  Créez un pool d’applications pour Accès Web Windows PowerShell. Développez le nœud du serveur de passerelle dans l’arborescence du Gestionnaire des services Internet, sélectionnez **Pools d’applications**, puis cliquez sur **Ajouter un pool d’applications** dans le volet **Actions**.
 
-3.  Ajoutez un nouveau pool d’applications portant le nom **pswa\_pool** ou indiquez un autre nom. Cliquez sur **OK**..
+3.  Ajoutez un nouveau pool d’applications portant le nom **pswa\_pool** ou indiquez un autre nom. Cliquez sur **OK**.
 
 4.  Dans le volet de l’arborescence du Gestionnaire des services Internet, développez le nœud du serveur sur lequel Accès Web Windows PowerShell est installé jusqu’à ce que le dossier **Sites** apparaisse. Sélectionnez le dossier **Sites**.
 
-5.  Cliquez avec le bouton droit sur le site web (par exemple, **Site Web par défaut**) auquel vous voulez ajouter le site web d’Accès Web Windows PowerShell, puis cliquez sur **Ajouter une application**..
+5.  Cliquez avec le bouton droit sur le site web (par exemple, **Site web par défaut**) auquel vous voulez ajouter le site web Accès Web Windows PowerShell, puis cliquez sur **Ajouter une application**.
 
 6.  Dans le champ **Alias**, tapez pswa ou indiquez un autre alias. L’alias devient le nom du répertoire virtuel. Par exemple, **pswa** dans l’URL suivante représente l’alias spécifié durant cette étape : https://&lt;server\_name&gt;/pswa.
 
 7.  Dans le champ **Pool d’applications**, sélectionnez le pool d’applications que vous avez créé à l’étape 3.
 
-8.  Dans le champ **Chemin d’accès physique**, naviguez jusqu’à l’emplacement de l’application. Vous pouvez utiliser l’emplacement par défaut, %windir%/Web/PowerShellWebAccess/wwwroot. Cliquez sur **OK**..
+8.  Dans le champ **Chemin d’accès physique**, naviguez jusqu’à l’emplacement de l’application. Vous pouvez utiliser l’emplacement par défaut, %windir%/Web/PowerShellWebAccess/wwwroot. Cliquez sur **OK**.
 
 9.  Suivez les étapes de la procédure [Pour configurer un certificat SSL dans le Gestionnaire des services Internet](#BKMK_cert) décrite dans cette rubrique.
 
@@ -498,27 +509,27 @@ Les instructions données dans cette section concernent l’installation de l’
 
 1.  Ouvrez la console du Gestionnaire des services Internet en procédant de l’une des manières suivantes.
 
-    -   Sur le Bureau Windows, démarrez le Gestionnaire de serveur en cliquant sur **Gestionnaire de serveur** dans la barre des tâches Windows. Dans le menu **Outils** du Gestionnaire de serveur, cliquez sur **Gestionnaire des Services Internet (IIS)**..
+    -   Sur le Bureau Windows, démarrez le Gestionnaire de serveur en cliquant sur **Gestionnaire de serveur** dans la barre des tâches Windows. Dans le menu **Outils** du Gestionnaire de serveur, cliquez sur **Gestionnaire des services Internet (IIS)**.
 
     -   Sur l’écran d’**accueil** de Windows, tapez une partie du nom **Gestionnaire des services Internet (IIS)**. Cliquez sur le raccourci quand il s’affiche dans les résultats **Applications**.
 
 2.  Dans le volet de l’arborescence du Gestionnaire des services Internet, développez le nœud du serveur sur lequel Accès Web Windows PowerShell est installé jusqu’à ce que le dossier **Sites** apparaisse. Sélectionnez le dossier **Sites**.
 
-3.  Dans le volet **Actions**, cliquez sur **Ajouter un site Web**..
+3.  Dans le volet **Actions**, cliquez sur **Ajouter un site Web**.
 
-4.  Tapez le nom du site web, comme **Accès Web Windows PowerShell**..
+4.  Tapez le nom du site web, comme **Accès Web Windows PowerShell**.
 
-5.  Un pool d’applications est créé automatiquement pour le nouveau site Web. Pour utiliser un autre pool d’applications, cliquez sur **Sélectionner** pour sélectionner un pool d’applications à associer au nouveau site web. Sélectionnez l’autre pool d’applications dans la boîte de dialogue **Sélectionner un pool d’applications**, puis cliquez sur **OK**..
+5.  Un pool d’applications est créé automatiquement pour le nouveau site Web. Pour utiliser un autre pool d’applications, cliquez sur **Sélectionner** pour sélectionner un pool d’applications à associer au nouveau site web. Sélectionnez l’autre pool d’applications dans la boîte de dialogue **Sélectionner un pool d’applications**, puis cliquez sur **OK**.
 
 6.  Dans la zone de texte **Chemin d’accès physique**, accédez à %*windir*%/Web/PowerShellWebAccess/wwwroot.
 
-7.  Dans le champ **Type** de la zone **Liaison**, sélectionnez **https**..
+7.  Dans le champ **Type** de la zone **Liaison**, sélectionnez **https**.
 
 8.  Assignez au site Web un numéro de port qui n’est pas déjà utilisé par un autre site ou une autre application. Pour localiser les ports ouverts, vous pouvez exécuter la commande **netstat** dans une fenêtre d’invite de commandes. Le numéro de port par défaut est 443.
 
     Modifiez le port par défaut si un autre site Web utilise déjà le port 443 ou si vous avez d’autres raisons d’ordre sécuritaire. Si un autre site web qui s’exécute sur votre serveur de passerelle utilise votre port sélectionné, un avertissement s’affiche quand vous cliquez sur **OK** dans la boîte de dialogue **Ajouter un site Web**. Vous devez utiliser un port inutilisé pour exécuter Accès Web Windows PowerShell.
 
-9.  Selon les besoins de votre organisation, spécifiez éventuellement un nom d’hôte qui a du sens pour votre organisation et ses utilisateurs, comme **www.contoso.com**. Cliquez sur **OK**..
+9.  Selon les besoins de votre organisation, spécifiez éventuellement un nom d’hôte qui a du sens pour votre organisation et ses utilisateurs, comme **www.contoso.com**. Cliquez sur **OK**.
 
 10. Pour un environnement de production plus sécurisé, nous vous recommandons vivement de fournir un certificat valide signé par une autorité de certification. Vous devez fournir un certificat SSL, car les utilisateurs peuvent uniquement se connecter à Accès Web Windows PowerShell par le biais d’un site web HTTPS. Pour plus d’informations sur l’obtention d’un certificat, consultez [Pour configurer un certificat SSL dans le Gestionnaire des services Internet](#BKMK_cert) dans cette rubrique.
 
@@ -544,7 +555,7 @@ Les instructions données dans cette section concernent l’installation de l’
 
 15. Ouvrez le site web Accès Web Windows PowerShell.
 
-    Étant donné que le site web racine pointe vers le dossier Accès Web Windows PowerShell, le navigateur doit afficher la page de connexion d’Accès Web Windows PowerShell quand vous ouvrez https://&lt; *gateway\_server\_name*&gt;. Il n’est pas nécessaire d’ajouter **/pswa** à l’URL.
+    Étant donné que le site web racine pointe vers le dossier Accès Web Windows PowerShell, le navigateur doit afficher la page de connexion Accès Web Windows PowerShell quand vous ouvrez https://&lt;*gateway\_server\_name*&gt;. Il n’est pas nécessaire d’ajouter **/pswa** à l’URL.
 
     <table>
     <colgroup>
@@ -568,33 +579,33 @@ Les instructions données dans cette section concernent l’installation de l’
 
 ------------------------------------------------------------------------
 
-Une fois Accès Web Windows PowerShell installé et la passerelle configurée, les utilisateurs peuvent ouvrir la page de connexion dans un navigateur, mais ils ne peuvent pas se connecter tant que l’administrateur d’Accès Web Windows PowerShell ne leur a pas octroyé explicitement un accès. Le contrôle d’accès d’ Accès Web Windows PowerShell est géré à l’aide de l’ensemble d’applets de commande Windows PowerShell décrit dans le tableau suivant. Il n’existe aucune interface utilisateur graphique équivalente pour ajouter ou gérer les règles d’autorisation. Pour plus d’informations sur les applets de commande Accès Web Windows PowerShell, consultez les rubriques de référence des applets de commande, [Applets de commande Accès Web Windows PowerShell](https://technet.microsoft.com/library/hh918342.aspx)..
+Une fois Accès Web Windows PowerShell installé et la passerelle configurée, les utilisateurs peuvent ouvrir la page de connexion dans un navigateur, mais ils ne peuvent pas se connecter tant que l’administrateur d’Accès Web Windows PowerShell ne leur a pas octroyé explicitement un accès. Le contrôle d’accès d’Accès Web Windows PowerShell est géré à l’aide de l’ensemble d’applets de commande Windows PowerShell décrit dans le tableau suivant. Il n’existe aucune interface utilisateur graphique équivalente pour ajouter ou gérer les règles d’autorisation. Pour plus d’informations sur les applets de commande Accès Web Windows PowerShell, consultez les rubriques de référence des applets de commande, [Applets de commande Accès Web Windows PowerShell](https://technet.microsoft.com/library/hh918342.aspx).
 
-Pour plus de détails sur les règles d’autorisation et la sécurité d’Accès Web Windows PowerShell, consultez [Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx)..
+Pour plus de détails sur les règles d’autorisation et la sécurité d’Accès Web Windows PowerShell, consultez [Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx).
 
 #### Pour ajouter une règle d’autorisation restrictive
 
 1.  Effectuez une des opérations suivantes pour ouvrir une session Windows PowerShell avec des droits utilisateur élevés.
 
-    -   Sur le Bureau Windows, cliquez avec le bouton droit dans la barre des tâches sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**..
+    -   Sur le Bureau Windows, cliquez avec le bouton droit dans la barre des tâches sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**.
 
-    -   Sur l’écran d’**accueil** de Windows, cliquez avec le bouton droit sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**..
+    -   Dans l’écran d’**accueil** de Windows, cliquez avec le bouton droit sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**.
 
 2.  <span class="label">Étape facultative pour restreindre l’accès utilisateur à l’aide de configurations de sessions :</span> vérifiez que les configurations de sessions que vous voulez utiliser dans vos règles existent déjà. Si elles n’ont pas encore été créées, utilisez les instructions relatives à la création de configurations de sessions dans [about\_Session\_Configuration\_Files](https://msdn.microsoft.com/library/windows/desktop/hh847838.aspx) sur MSDN.
 
-3.  Tapez ce qui suit, puis appuyez sur **Entrée**..
+3.  Tapez ce qui suit, puis appuyez sur **Entrée**.
 
     [Copier](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_4df22c91-f56f-4bb5-91e7-99f9b365ed5d'); "Copier dans le Presse-papiers.")
 
         Add-PswaAuthorizationRule –UserName <domain\user | computer\user> -ComputerName <computer_name> -ConfigurationName <session_configuration_name>
 
-    Cette règle d’autorisation accorde à un utilisateur spécifique l’accès à un ordinateur sur le réseau auquel il a généralement accès, avec l’accès à une configuration de session spécifique ayant comme portée les besoins ordinaires de l’utilisateur en matière de script et d’applet de commande. Dans l’exemple suivant, un utilisateur nommé <span class="code">JSmith</span> dans le domaine <span class="code">Contoso</span> se voit accorder un accès pour gérer l’ordinateur <span class="code">Contoso\_214</span> et utiliser une configuration de session nommée <span class="code">NewAdminsOnly.</span>.
+    Cette règle d’autorisation accorde à un utilisateur spécifique l’accès à un ordinateur sur le réseau auquel il a généralement accès, avec l’accès à une configuration de session spécifique ayant comme portée les besoins ordinaires de l’utilisateur en matière de script et d’applet de commande. Dans l’exemple suivant, un utilisateur nommé <span class="code">JSmith</span> dans le domaine <span class="code">Contoso</span> se voit accorder un accès pour gérer l’ordinateur <span class="code">Contoso\_214</span> et utiliser une configuration de session nommée <span class="code">NewAdminsOnly</span>.
 
     [Copier](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_efc3999a-2905-453f-86cd-014b41658ffc'); "Copier dans le Presse-papiers.")
 
         Add-PswaAuthorizationRule –UserName Contoso\JSmith -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly
 
-4.  Vérifiez que la règle a été créée en exécutant l’applet de commande **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domain\\user | computer\\user&gt; -ComputerName** &lt;computer\_name&gt;. Par exemple, **Test-PswaAuthorizationRule –UserName Contoso\\JSmith –ComputerName Contoso\_214**..
+4.  Vérifiez que la règle a été créée en exécutant l’applet de commande **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domain\\user | computer\\user&gt; -ComputerName** &lt;computer\_name&gt;. Par exemple, **Test-PswaAuthorizationRule –UserName Contoso\\JSmith –ComputerName Contoso\_214**.
 
 Après avoir configuré une règle d’autorisation, les utilisateurs autorisés peuvent se connecter à la console web et commencer à utiliser Accès Web Windows PowerShell.
 
@@ -611,9 +622,9 @@ Pour un environnement de production sécurisé, utilisez toujours un certificat 
 
 1.  Dans le volet de l’arborescence du Gestionnaire des services Internet, sélectionnez le serveur sur lequel Accès Web Windows PowerShell est installé.
 
-2.  Dans le volet de contenu, double-cliquez sur **Certificats de serveur**..
+2.  Dans le volet de contenu, double-cliquez sur **Certificats de serveur**.
 
-3.  Dans le volet **Actions**, effectuez l’une des opérations suivantes. Pour plus d’informations sur la configuration des certificats de serveur dans IIS, consultez [Configuration des certificats de serveur dans IIS 7](https://technet.microsoft.com/library/cc732230.aspx)..
+3.  Dans le volet **Actions**, effectuez l’une des opérations suivantes. Pour plus d’informations sur la configuration des certificats de serveur dans IIS, consultez [Configuration des certificats de serveur dans IIS 7](https://technet.microsoft.com/library/cc732230.aspx).
 
     -   Cliquez sur **Importer** pour importer un certificat existant valide depuis un emplacement sur votre réseau.
 
@@ -625,7 +636,7 @@ Pour un environnement de production sécurisé, utilisez toujours un certificat 
 
 5.  Dans la boîte de dialogue **Ajouter la liaison de site**, ajoutez une liaison **https** pour le site, si aucune n’est déjà affichée. Si vous n’utilisez pas de certificat auto-signé, spécifiez le nom d’hôte de l’étape 3 de cette procédure. Si vous utilisez un certificat auto-signé, vous pouvez ignorer cette étape.
 
-6.  Sélectionnez le certificat que vous avez obtenu ou créé à l’étape 3 de cette procédure, puis cliquez sur **OK**..
+6.  Sélectionnez le certificat que vous avez obtenu ou créé à l’étape 3 de cette procédure, puis cliquez sur **OK**.
 
 <a href="" id="BKMK_using"></a>
 
@@ -634,7 +645,7 @@ Pour un environnement de production sécurisé, utilisez toujours un certificat 
 
 ------------------------------------------------------------------------
 
-Une fois qu’Accès Web Windows PowerShell est installé et la configuration de la passerelle terminée comme décrit dans cette rubrique, la console web Windows PowerShell est prête à être utilisée. Pour plus d’informations sur la prise en main de la console web, consultez [Utiliser la console web Windows PowerShell](https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx)..
+Une fois qu’Accès Web Windows PowerShell est installé et la configuration de la passerelle terminée comme décrit dans cette rubrique, la console web Windows PowerShell est prête à être utilisée. Pour plus d’informations sur la prise en main de la console web, consultez [Utiliser la console web Windows PowerShell](https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx).
 
 <a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Voir aussi</span></a>
 <a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_6" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
@@ -649,14 +660,11 @@ Une fois qu’Accès Web Windows PowerShell est installé et la configuration de
 <span>Afficher :</span> Hérité Protégé
 
 <span class="stdr-votetitle">Cette page vous a-t-elle été utile ?</span>
-Oui
-Non
+Oui Non
 
 Vous avez d’autres commentaires ?
 
-<span class="stdr-count"><span class="stdr-charcnt">1500</span> caractères restants</span>
-Soumettre
-Ignorer
+<span class="stdr-count"><span class="stdr-charcnt">1500</span> caractères restants</span> Soumettre Ignorer
 
 <span class="stdr-thankyou">Merci !</span> <span class="stdr-appreciate">Votre avis nous intéresse.</span>
 
@@ -664,14 +672,13 @@ Ignorer
 
 |
 
-<a href="javascript:void(0)" id="SiteFeedbackLinkOpener"><span id="FeedbackButton" class="FeedbackButton clip20x21"> <img src="https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635975720914499532" alt="Site Feedback" id="feedBackImg" class="cl_footer_feedback_icon" /> </span> Commentaires sur le site</a>
-Commentaires sur le site
+<a href="javascript:void(0)" id="SiteFeedbackLinkOpener"><span id="FeedbackButton" class="FeedbackButton clip20x21"> <img src="https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635975720914499532" alt="Site Feedback" id="feedBackImg" class="cl_footer_feedback_icon" /> </span> Commentaires sur le site</a> Commentaires sur le site
 
 <a href="javascript:void(0)" id="SiteFeedbackLinkCloser">x</a>
 
 Faites-nous part de votre expérience...
 
-La page s’est-elle téléchargée rapidement ?
+La page s’est elle chargée rapidement ?
 
 <span> Oui<span> </span></span> <span> Non<span> </span></span>
 
@@ -681,9 +688,9 @@ La page s’est-elle téléchargée rapidement ?
 
 Donnez-nous votre avis
 
--   [Newsletter](https://technet.microsoft.com/cc543196.aspx)
+-   [Bulletin d’informations](https://technet.microsoft.com/cc543196.aspx)
 -   |
--   [Contactez Microsoft](https://technet.microsoft.com/cc512759.aspx)
+-   [Contactez-nous](https://technet.microsoft.com/cc512759.aspx)
 -   |
 -   [Déclaration de confidentialité](https://privacy.microsoft.com/privacystatement)
 -   |
@@ -696,8 +703,9 @@ Donnez-nous votre avis
 
 © 2016 Microsoft
 
-Les codes et les scripts développés par un tiers et en rapport à ce site doivent faire l’objet d’une licence fournie par le tiers, qui indique qu’il détient son code. Microsoft n’est pas partie prenante. Consultez les conditions d’utilisation CDN Ajax ASP.NET – http://www.asp.net/ajaxlibrary/CDN.ashx.
+Les codes et les scripts développés par un tiers et en rapport à ce site doivent faire l’objet d’une licence fournie par le tiers, qui indique qu’il détient son code. Microsoft n’est pas partie prenante. Consultez les conditions d’utilisation CDN Ajax ASP.NET (http://www.asp.net/ajaxlibrary/CDN.ashx).
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
+
 
 
 <!--HONumber=May16_HO2-->
