@@ -42,7 +42,7 @@ configuration LCMConfig
 } 
 ```
 
-Appelez et exécutez la configuration pour créer le fichier MOF de configuration, comme pour une configuration standard. Pour plus d’informations sur la création d’un fichier MOF de configuration, consultez [Compilation de la configuration](configurations#compiling-the-configuration). À la différence d’une configuration standard, vous n’appliquez pas de configuration du gestionnaire de configuration local en appelant l’applet de commande [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Appelez plutôt l’applet de commande [Set-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx) en spécifiant le chemin du fichier MOF de configuration comme paramètre. Après avoir appliqué la configuration, vous pouvez afficher les propriétés du gestionnaire de configuration local en appelant l’applet de commande [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx).
+Appelez et exécutez la configuration pour créer le fichier MOF de configuration, comme pour une configuration standard. Pour plus d’informations sur la création d’un fichier MOF de configuration, consultez [Compilation de la configuration](configurations.md#compiling-the-configuration). À la différence d’une configuration standard, vous n’appliquez pas de configuration du gestionnaire de configuration local en appelant l’applet de commande [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Appelez plutôt l’applet de commande [Set-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx) en spécifiant le chemin du fichier MOF de configuration comme paramètre. Après avoir appliqué la configuration, vous pouvez afficher les propriétés du gestionnaire de configuration local en appelant l’applet de commande [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx).
 
 Une configuration du LCM peut contenir des blocs pour un ensemble limité de ressources uniquement. Dans l’exemple précédent, **Settings** est la seule ressource appelée. Voici les autres ressources disponibles :
 
@@ -162,6 +162,6 @@ Pour définir une configuration partielle, créez un bloc **PartialConfiguration
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO1-->
 
 
