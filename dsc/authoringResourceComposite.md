@@ -139,7 +139,7 @@ Quand vous avez terminé, la structure de dossiers doit ressembler à ceci :
 $env: psmodulepath
     |- MyDscResources
            MyDscResources.psd1
-        |- DSC Resources
+        |- DSCResources
             |- xVirtualMachine
                 |- xVirtualMachine.psd1
                 |- xVirtualMachine.schema.psm1
@@ -189,6 +189,6 @@ configuration RenameVM
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO1-->
 
 
