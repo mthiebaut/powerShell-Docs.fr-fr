@@ -55,13 +55,13 @@ Les comptes virtuels appartiennent au groupe de sécurité « Administrateurs 
 
 ### Explorer le guide d’expérience
 Vous êtes prêt à créer votre premier point de terminaison JEA ?
-Consultez le [guide d’expérience JEA](./JEA Guide.md) pour apprendre à créer, déployer et utiliser votre propre point de terminaison JEA.
+Consultez le [guide d’expérience JEA](jea-uide.md) pour apprendre à créer, déployer et utiliser votre propre point de terminaison JEA.
 Le guide vous assure une prise en main rapide d’un point de terminaison JEA prédéfini pour découvrir l’expérience utilisateur final, puis il vous oriente progressivement dans la création de toutes pièces de ce point de terminaison pour mieux expliquer les configurations de session et les capacités de rôle.
 
 ### Commencer à créer vos propres points de terminaison JEA
 Il est facile de créer un point de terminaison JEA : tout ce dont vous avez besoin, c’est d’un système compatible JEA et d’un éditeur de texte (comme PowerShell ISE).
 Conseil utile pour démarrer : créez des fichiers squelettes à l’aide de `New-PSRoleCapabilityFile -Path <path>` et `New-PSSessionCapabilityFile -Path <Path>` sans aucun autre argument.
-Ces fichiers squelettes contiennent tous les champs de configuration applicables, ainsi que des commentaires utiles pour expliquer à quoi peut servir chaque champ. 
+Ces fichiers squelettes contiennent tous les champs de configuration applicables, ainsi que des commentaires utiles pour expliquer à quoi peut servir chaque champ.
 
 Pour faciliter encore plus la création de points de terminaison JEA, consultez le blog [JEA Toolkit Helper](http://blogs.technet.com/b/privatecloud/archive/2015/12/20/introducing-the-updated-jea-helper-tool.aspx) qui fournit une interface graphique utilisateur avec laquelle vous pouvez créer des fichiers de configuration de session et de capacités de rôle.
 La génération de capacités de rôle en fonction des journaux PowerShell est même prise en charge pour faciliter votre démarrage avec les commandes que vos utilisateurs exécutent régulièrement pour accomplir leur travail.
