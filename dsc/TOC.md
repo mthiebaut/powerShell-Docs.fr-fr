@@ -30,10 +30,10 @@
 #### [Ressource en C basée sur le fichier MOF#](authoringResourceMofCS.md)
 ### [Ressources personnalisées basées sur une classe](authoringResourceClass.md)
 ### [Ressources composites](authoringResourceComposite.md)
-### [Débogage des ressources DSC](debugResource.md)
-### [Appel direct de méthodes de ressources DSC](directCallResource.md)
 ### [Écriture d’une ressource de DSC d’instance unique (recommandation)](singleInstance.md)
 ### [Liste de vérification de création de ressources](resourceAuthoringChecklist.md)
+## [Débogage des ressources DSC](debugResource.md)
+## [Appel direct de méthodes de ressources DSC](directCallResource.md)
 
 # [Configuration du gestionnaire de configuration local](metaConfig.md)
 ## [Configuration du gestionnaire de configuration local dans PowerShell 4.0](metaConfig4.md)
@@ -91,6 +91,6 @@
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO3-->
 
 
