@@ -3852,8 +3852,8 @@
 * Archive Datetime: 2016-06-21 13:12:57
 * Handback File: [Starting-the-32-Bit-Version-of-Windows-PowerShell.4a4eaf664caff353459bbcc3d81a3756ede97b7f.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/fedd024cfe3113e30e9cd4aa9c4ff22f7acc6cb2/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/Starting-the-32-Bit-Version-of-Windows-PowerShell.4a4eaf664caff353459bbcc3d81a3756ede97b7f.fr-fr.xlf)
 * Handback Datetime: 2016-06-24 19:04:02
-* Bilingual File: [Starting-the-32-Bit-Version-of-Windows-PowerShell.4a4eaf664caff353459bbcc3d81a3756ede97b7f.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/48e765b72ad4c11910f9b0aeaf7dcd3f5aa24e6c/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/Starting-the-32-Bit-Version-of-Windows-PowerShell.4a4eaf664caff353459bbcc3d81a3756ede97b7f.fr-fr.xlf)
-* Bilingual Datetime: 2016-06-16 14:29:50
+* Bilingual File: [Starting-the-32-Bit-Version-of-Windows-PowerShell.4a4eaf664caff353459bbcc3d81a3756ede97b7f.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/fedd024cfe3113e30e9cd4aa9c4ff22f7acc6cb2/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/Starting-the-32-Bit-Version-of-Windows-PowerShell.4a4eaf664caff353459bbcc3d81a3756ede97b7f.fr-fr.xlf)
+* Bilingual Datetime: 2016-06-24 19:04:37
 * [Back to Top](#report-top)
 
 ##### <a name='45102cbc730d8eaac9ebdcb73456b1d1e149c6f2237'></a> Source: [scripting\setup\Starting-the-Windows-PowerShell-2.0-Engine.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/setup/Starting-the-Windows-PowerShell-2.0-Engine.md)
