@@ -30,7 +30,7 @@ class MSFT_DSCLocalConfigurationManager
 
 La classe **MSFT_DSCLocalConfigurationManager** comprend les membres suivants :
 
--   [Methods][]
+-   [Méthodes][]
 
 ### Méthodes
 
@@ -51,7 +51,7 @@ La classe **MSFT_DSCLocalConfigurationManager** comprend les méthodes suivantes
 | [ResourceSet](msft-dsclocalconfigurationmanager-resourceset.md)| Appelle directement la méthode **Set** d’une ressource DSC.| 
 | [ResourceTest](msft-dsclocalconfigurationmanager-resourcetest.md)| Appelle directement la méthode **Test** d’une ressource DSC.| 
 | [RollBack](msft-dsclocalconfigurationmanager-rollback.md)| Restaure une configuration précédente.| 
-| [SendConfiguration](msft-dsclocalconfigurationmanager-sendconfiguration.md)| Envoyez le document de configuration au nœud géré et enregistrez-le comme étant en attente. Envoie le document de configuration au nœud géré et l’enregistre comme une modification en attente.| 
+| [SendConfiguration](msft-dsclocalconfigurationmanager-sendconfiguration.md)| Envoie le document de configuration au nœud géré et l’enregistre comme une modification en attente.| 
 | [SendConfigurationApply](msft-dsclocalconfigurationmanager-sendconfigurationapply.md)| Envoie le document de configuration au nœud géré et utilise l’agent de configuration pour appliquer la configuration.| 
 | [SendConfigurationApplyAsync](msft-dsclocalconfigurationmanager-sendconfigurationapplyasync.md)| Envoyez le document de configuration au nœud géré et commencez à utiliser l’agent de configuration pour appliquer la configuration. Utilisez GetConfigurationResultOutput pour récupérer la sortie du résultat.| 
 | [SendMetaConfigurationApply](msft-dsclocalconfigurationmanager-sendmetaconfigurationapply.md)| Définit les paramètres du Gestionnaire de configuration local qui permettent de contrôler l’agent de configuration.| 
@@ -78,6 +78,6 @@ La classe **MSFT_DSCLocalConfigurationManager** comprend les méthodes suivantes
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO3-->
 
 

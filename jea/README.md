@@ -67,6 +67,6 @@ Pour faciliter encore plus la création de points de terminaison JEA, consultez 
 La génération de capacités de rôle en fonction des journaux PowerShell est même prise en charge pour faciliter votre démarrage avec les commandes que vos utilisateurs exécutent régulièrement pour accomplir leur travail.
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO3-->
 
 
