@@ -1709,8 +1709,8 @@
 * Archive Datetime: 2016-06-28 13:28:12
 * Handback File: [windowsProcessResource.d5014f2fde06deea365cd1e64a3587c037999fa7.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/0d68504875d32b22d888d4014489e50d69bb4348/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/windowsProcessResource.d5014f2fde06deea365cd1e64a3587c037999fa7.fr-fr.xlf)
 * Handback Datetime: 2016-06-28 14:43:01
-* Bilingual File: [windowsProcessResource.d5014f2fde06deea365cd1e64a3587c037999fa7.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/93cc36d4362c9baf67b2a6437337eda4f509f713/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/windowsProcessResource.d5014f2fde06deea365cd1e64a3587c037999fa7.fr-fr.xlf)
-* Bilingual Datetime: 2016-06-16 14:29:50
+* Bilingual File: [windowsProcessResource.d5014f2fde06deea365cd1e64a3587c037999fa7.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/0d68504875d32b22d888d4014489e50d69bb4348/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/windowsProcessResource.d5014f2fde06deea365cd1e64a3587c037999fa7.fr-fr.xlf)
+* Bilingual Datetime: 2016-06-28 14:48:44
 * [Back to Top](#report-top)
 
 ##### <a name='0e221c840f083ce0b8ecbcbb34c184bcdbc0c73e96'></a> Source: [jea\common-role-capability-pitfalls.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/common-role-capability-pitfalls.md)
