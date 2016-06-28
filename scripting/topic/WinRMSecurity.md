@@ -1,13 +1,17 @@
 ---
-title:  WinRMSecurityRedirect
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: WinRMSecurityRedirect
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
 redirect_url: https://msdn.microsoft.com/powershell/scripting/setup/winrmsecurity
+translationtype: Human Translation
+ms.sourcegitcommit: afa259b8611f995bbf5b824179a12e3d8f15df86
+ms.openlocfilehash: 207792452c563ec6cca5c17fbcd122372442d8ac
+
 ---
 
 # Éléments à prendre en compte en matière de sécurité de la communication à distance PowerShell
@@ -35,8 +39,7 @@ Sur les réseaux privés, la règle de Pare-feu Windows par défaut pour la comm
 
 ## Isolation des processus
 
-La communication à distance PowerShell utilise [WinRM](https://msdn.microsoft.com/en-us/library/windows/desktop/aa384426) pour la communication entre les ordinateurs. 
-WinRM s’exécute comme service sous le compte de service réseau et génère des processus isolés exécutés comme comptes d’utilisateur pour héberger les instances de PowerShell. Une instance de PowerShell exécutée comme un utilisateur n’a pas accès à un processus utilisant une instance de PowerShell exécutée comme autre utilisateur.
+La communication à distance PowerShell utilise [WinRM](https://msdn.microsoft.com/en-us/library/windows/desktop/aa384426) pour la communication entre les ordinateurs. WinRM s’exécute comme service sous le compte de service réseau et génère des processus isolés exécutés comme comptes d’utilisateur pour héberger les instances de PowerShell. Une instance de PowerShell exécutée comme un utilisateur n’a pas accès à un processus utilisant une instance de PowerShell exécutée comme autre utilisateur.
 
 ## Journaux des événements générés par la communication à distance PowerShell
 
@@ -80,8 +83,7 @@ Une fois l’authentification initiale terminée, le [protocole de communication
 ## Second saut
 
 Par défaut, la communication à distance PowerShell utilise Kerberos (s’il est disponible) ou NTLM pour l’authentification. Ces deux protocoles permettent de s’authentifier auprès de l’ordinateur distant sans lui envoyer d’informations d’identification.
-Il s’agit de la méthode la plus sûre pour s’authentifier mais, comme l’ordinateur distant ne dispose pas des informations d’identification de l’utilisateur, il ne peut pas accéder aux autres ordinateurs ni services au nom de l’utilisateur. 
-Ce problème est connu sous le nom de « double saut ».
+Il s’agit de la méthode la plus sûre pour s’authentifier mais, comme l’ordinateur distant ne dispose pas des informations d’identification de l’utilisateur, il ne peut pas accéder aux autres ordinateurs ni services au nom de l’utilisateur. Ce problème est connu sous le nom de « double saut ».
 
 Il existe plusieurs moyens de l’éviter :
 
@@ -119,6 +121,7 @@ Pour plus d’informations sur les risques de vol des informations d’identific
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
