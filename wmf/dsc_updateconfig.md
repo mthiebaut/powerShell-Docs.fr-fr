@@ -2,6 +2,7 @@
 
 La nouvelle applet de commande Update-DscConfiguration déclenche une extraction à partir des serveurs collecteurs définis dans la métaconfiguration. Ce comportement est souvent appelé « Extraire maintenant ». 
 
+
 Une fois déclenchée, l’extraction se comporte exactement comme si elle avait été déclenchée selon la fréquence normale :
 
 1. La somme de contrôle de la configuration actuelle est comparée à la somme de contrôle de la configuration sur le serveur collecteur. 
@@ -29,4 +30,8 @@ Update-DscConfiguration     -CimSession <CimSession[]>
                             [-WhatIf] 
                             [-Confirm] 
                             [<CommonParameters>]
-```<!--HONumber=Mar16_HO2-->
+```
+
+<!--HONumber=Jun16_HO4-->
+
+
