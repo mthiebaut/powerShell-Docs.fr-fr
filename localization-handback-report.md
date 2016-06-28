@@ -1,28 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [dsc\windowsProcessResource.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/windowsProcessResource.md) | InSyncHandedBackSuccess | [Details](#d7bd873cde4a4bda12490d69acdd5e2b0ba8cdec95)
 
 ## Item Details
-##### <a name='d7bd873cde4a4bda12490d69acdd5e2b0ba8cdec95'></a> Source: [dsc\windowsProcessResource.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/windowsProcessResource.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [dsc\windowsProcessResource.md](https://github.com/PowerShell/powerShell-Docs.fr-fr/blob/338103d128c48814c237532a29fc7e7ca6749f43/dsc/windowsProcessResource.md)
-* Handoff File: [windowsProcessResource.d5014f2fde06deea365cd1e64a3587c037999fa7.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/c1138905bb409ba244270df6245164b8ebbd00c2/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/windowsProcessResource.d5014f2fde06deea365cd1e64a3587c037999fa7.fr-fr.xlf)
-* Handoff Datetime: 2016-06-27 20:16:16
-* Handoff Reason: Include
-* Archive File: [windowsProcessResource.d5014f2fde06deea365cd1e64a3587c037999fa7.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/9e8dc961ea02996e09f2849a8ded2cfe8ca65b7e/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/archive/windowsProcessResource.d5014f2fde06deea365cd1e64a3587c037999fa7.fr-fr.xlf)
-* Archive Datetime: 2016-06-28 13:28:12
-* Handback File: [windowsProcessResource.d5014f2fde06deea365cd1e64a3587c037999fa7.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/0d68504875d32b22d888d4014489e50d69bb4348/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/windowsProcessResource.d5014f2fde06deea365cd1e64a3587c037999fa7.fr-fr.xlf)
-* Handback Datetime: 2016-06-28 14:43:01
-* Bilingual File: [windowsProcessResource.d5014f2fde06deea365cd1e64a3587c037999fa7.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/93cc36d4362c9baf67b2a6437337eda4f509f713/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/windowsProcessResource.d5014f2fde06deea365cd1e64a3587c037999fa7.fr-fr.xlf)
-* Bilingual Datetime: 2016-06-16 14:29:50
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
