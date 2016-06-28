@@ -1,12 +1,16 @@
 ---
-title: Méthode PerformRequiredConfigurationChecks de la classe MSFT_DSCLocalConfigurationManager 
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: "Méthode PerformRequiredConfigurationChecks de la classe MSFT_DSCLocalConfigurationManager"
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: c915ebd021ed20209bc491505d45cff2ac89f21d
+ms.openlocfilehash: f9eb975845f6ccabcac80e2591fd987f80f81331
+
 ---
 
 
@@ -66,6 +70,7 @@ Il s’agit d’une méthode statique.
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,12 +1,16 @@
 ---
-title:   Vue d’ensemble de la fonctionnalité Desired State Configuration de Windows PowerShell 
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: "Vue d’ensemble de la fonctionnalité Desired State Configuration de Windows PowerShell"
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
+ms.openlocfilehash: 1a796658eb30bdf5c37ea3677f94767260a34b45
+
 ---
 
 # Vue d’ensemble de la fonctionnalité Desired State Configuration de Windows PowerShell 
@@ -50,6 +54,7 @@ DSC inclut également plusieurs nouveaux mots clés de langage, applets de comma
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,12 +1,16 @@
 ---
-title:   Application des configurations
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: Application des configurations
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
+ms.openlocfilehash: 4c802002c6a03a27d02221dd713677911a77c30b
+
 ---
 
 # Application des configurations
@@ -30,8 +34,7 @@ Après la création et la compilation d’une configuration, vous pouvez la prom
 
 ![Mode par extraction](images/Pull.png "How pull mode works")
 
-Avec le mode par extraction, les clients d’extraction sont configurés de façon à obtenir leur configuration d’état souhaité à partir d’un serveur collecteur. De même, le serveur a été configuré pour héberger le service DSC et a été approvisionné avec les configurations et les ressources nécessaires par les clients d’extraction. Chacun des clients d’extraction est associé à une tâche planifiée qui effectue une vérification de conformité à intervalles réguliers sur la configuration du nœud. Quand l’événement est déclenché pour la première fois, le gestionnaire de configuration local du client d’extraction valide la configuration. 
-Si le client d’extraction est configuré comme souhaité, rien ne se produit. Dans le cas contraire, le gestionnaire de configuration local envoie une demande au serveur collecteur pour obtenir une configuration donnée. Si cette configuration existe sur le serveur collecteur et si les vérifications de validation initiales renvoient un résultat positif, la configuration est passée au client d’extraction, où elle est ensuite exécutée par le gestionnaire de configuration local.
+Avec le mode par extraction, les clients d’extraction sont configurés de façon à obtenir leur configuration d’état souhaité à partir d’un serveur collecteur. De même, le serveur a été configuré pour héberger le service DSC et a été approvisionné avec les configurations et les ressources nécessaires par les clients d’extraction. Chacun des clients d’extraction est associé à une tâche planifiée qui effectue une vérification de conformité à intervalles réguliers sur la configuration du nœud. Quand l’événement est déclenché pour la première fois, le gestionnaire de configuration local du client d’extraction valide la configuration. Si le client d’extraction est configuré comme souhaité, rien ne se produit. Dans le cas contraire, le gestionnaire de configuration local envoie une demande au serveur collecteur pour obtenir une configuration donnée. Si cette configuration existe sur le serveur collecteur et si les vérifications de validation initiales renvoient un résultat positif, la configuration est passée au client d’extraction, où elle est ensuite exécutée par le gestionnaire de configuration local.
 
 Pour plus d’informations sur le déploiement d’un serveur collecteur DSC local, consultez le guide de planification et de configuration du serveur collecteur DSC.
 
@@ -45,6 +48,7 @@ Les rubriques suivantes expliquent comment configurer les clients et les serveur
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

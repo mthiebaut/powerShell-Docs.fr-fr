@@ -1,20 +1,23 @@
 ---
-title:   Configurations DSC
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: Configurations DSC
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
+ms.openlocfilehash: 29676d0bf51adf9176753d0056efe76687a40600
+
 ---
 
 # Configurations DSC
 
 >S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Les configurations DSC sont des scripts PowerShell qui définissent un type spécial de fonction. 
-Pour définir une configuration, utilisez le mot clé PowerShell __Configuration__.
+Les configurations DSC sont des scripts PowerShell qui définissent un type spécial de fonction. Pour définir une configuration, utilisez le mot clé PowerShell __Configuration__.
 
 ```powershell
 Configuration MyDscConfiguration {
@@ -121,8 +124,7 @@ Configuration DependsOnExample {
 
 ## Utilisation de nouvelles ressources dans la configuration
 Si vous avez exécuté les exemples précédents, vous avez peut-être remarqué un avertissement disant que vous utilisez une ressource sans l’avoir importée explicitement.
-Actuellement, DSC est fourni avec 12 ressources contenues dans le module PSDesiredStateConfiguration. Les autres ressources des modules externes doivent être placées dans `$env:PSModulePath` pour être reconnues par le gestionnaire de configuration local. Une nouvelle applet de commande, [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), peut être utilisée pour déterminer quelles ressources sont installées sur le système et lesquelles peuvent être utilisées par le gestionnaire de configuration local. 
-Une fois ces modules placés dans `$env:PSModulePath` et correctement reconnus par [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), ils doivent encore être chargés dans votre configuration. __Import-DscResource__ est un mot clé dynamique qui peut être reconnu uniquement au sein d’un bloc __Configuration__ (ce n’est donc pas une applet de commande). __Import-DscResource__ accepte deux paramètres :
+Actuellement, DSC est fourni avec 12 ressources contenues dans le module PSDesiredStateConfiguration. Les autres ressources des modules externes doivent être placées dans `$env:PSModulePath` pour être reconnues par le gestionnaire de configuration local. Une nouvelle applet de commande, [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), peut être utilisée pour déterminer quelles ressources sont installées sur le système et lesquelles peuvent être utilisées par le gestionnaire de configuration local. Une fois ces modules placés dans `$env:PSModulePath` et correctement reconnus par [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), ils doivent encore être chargés dans votre configuration. __Import-DscResource__ est un mot clé dynamique qui peut être reconnu uniquement au sein d’un bloc __Configuration__ (ce n’est donc pas une applet de commande). __Import-DscResource__ accepte deux paramètres :
 * __ModuleName__ est recommandé pour l’utilisation d’__Import-DscResource__. Il accepte le nom du module qui contient les ressources à importer (ainsi qu’un tableau de chaînes comprenant des noms de modules). 
 * __Name__ correspond au nom de la ressource à importer. Il ne s’agit pas du nom convivial retourné comme « Name » par [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), mais du nom de classe utilisé lors de la définition du schéma de la ressource (retourné comme __ResourceType__ par [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx)). 
 
@@ -133,6 +135,7 @@ Une fois ces modules placés dans `$env:PSModulePath` et correctement reconnus p
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

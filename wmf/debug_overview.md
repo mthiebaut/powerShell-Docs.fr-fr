@@ -41,4 +41,8 @@ De nouvelles applets de commande permettent de répertorier les instances en cou
 Vous pouvez désormais joindre n’importe quel processus de l’ordinateur ayant chargé Windows PowerShell. Pour cela, vous devez établir une session interactive avec le processus, comme vous le faites pour établir une session interactive à distance en exécutant l’applet de commande Enter-PSSession :
 
 -   Enter-PSHostProcess
--   Exit-PSHostProcess<!--HONumber=Mar16_HO2-->
+-   Exit-PSHostProcess
+
+<!--HONumber=Jun16_HO4-->
+
+

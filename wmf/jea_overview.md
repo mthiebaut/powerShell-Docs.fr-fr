@@ -7,4 +7,8 @@ JEA vous permet de créer des points de terminaison contraints spécialement con
 
 1. Les utilisateurs qui s’y connectent « s’exécutent en tant que » compte privilégié virtuel qui existe uniquement pendant la durée de la session à distance.  Par défaut, ce compte virtuel est membre du groupe Administrateurs intégré, et également administrateur de domaine sur les contrôleurs de domaine (notez que ces autorisations sont configurables). Le fait de se connecter sous un utilisateur et de s’exécuter en tant qu’autre utilisateur privilégié permet aux utilisateurs sans privilèges d’effectuer des tâches administratives spécifiques sans que des droits d’administration leur soient accordés sur vos systèmes.
 2. Le point de terminaison est verrouillé.  Cela signifie que PowerShell s’exécute en mode sans langage.  Seuls des commandes, scripts et exécutables spécifiques sont visibles par l’utilisateur.
-3. Des ensembles de capacités différents sont présentés aux utilisateurs qui se connectent en fonction de l’appartenance au groupe.  Vous pouvez fournir différentes capacités à différents rôles sur le même point de terminaison.<!--HONumber=Mar16_HO2-->
+3. Des ensembles de capacités différents sont présentés aux utilisateurs qui se connectent en fonction de l’appartenance au groupe.  Vous pouvez fournir différentes capacités à différents rôles sur le même point de terminaison.
+
+<!--HONumber=Jun16_HO4-->
+
+

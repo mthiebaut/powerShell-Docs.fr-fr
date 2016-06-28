@@ -31,4 +31,8 @@ Cmdlet          Restart-Service                                    3.0.0.0 Micro
 
 Pour générer un rapport sur les _actions_ effectuées par les utilisateurs pendant une session de JEA, vous pouvez :
 1. Activer les transcriptions de « procuration de privilège » pour ce point de terminaison JEA et consulter le répertoire de transcription pour obtenir un journal complet des actions de chaque utilisateur
-2. Activer la journalisation des modules PowerShell et inspecter les journaux des événements PowerShell<!--HONumber=Mar16_HO2-->
+2. Activer la journalisation des modules PowerShell et inspecter les journaux des événements PowerShell
+
+<!--HONumber=Jun16_HO4-->
+
+

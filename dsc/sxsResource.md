@@ -1,12 +1,16 @@
 ---
-title:   Utilisation de ressources avec plusieurs versions
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: Utilisation de ressources avec plusieurs versions
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 01720794aa1d200428c2729463fba92970f9cb56
+ms.openlocfilehash: 716ecd9b14976dd70b69a740850ab53670387956
+
 ---
 
 # Utilisation de ressources avec plusieurs versions
@@ -92,6 +96,7 @@ Cela fonctionne également dans PowerShell 5.0, mais il est recommandé d’uti
 
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

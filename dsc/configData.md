@@ -1,12 +1,16 @@
 ---
-title:   Séparation des données de configuration et d’environnement
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: "Séparation des données de configuration et d’environnement"
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: ebd74549e2671a332ef6abf131ab984a4d0865a6
+ms.openlocfilehash: 8a3ae5fdf5d70de999ca6b992efb14533408c305
+
 ---
 
 # Séparation des données de configuration et d’environnement
@@ -221,6 +225,7 @@ Vous trouverez un exemple complet dans le [module xWebAdministration](https://po
 
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

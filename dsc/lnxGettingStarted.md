@@ -1,12 +1,16 @@
 ---
-title:   Prendre en main la fonctionnalité DSC (Desired State Configuration) pour Linux
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: "Prendre en main la fonctionnalité DSC (Desired State Configuration) pour Linux"
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
+ms.openlocfilehash: c05b48d2c903e59f8b65c4c8c289d2dd5c23c3f9
+
 ---
 
 # Prendre en main la fonctionnalité DSC (Desired State Configuration) pour Linux
@@ -185,6 +189,7 @@ Les messages concernant DSC pour Linux sont écrits dans les fichiers journaux s
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

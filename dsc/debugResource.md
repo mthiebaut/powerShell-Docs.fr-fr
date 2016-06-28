@@ -1,12 +1,16 @@
 ---
-title:   Débogage des ressources DSC
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: "Débogage des ressources DSC"
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
+ms.openlocfilehash: f5290e085c8949f6b3cdf23f3244a7142da6248d
+
 ---
 
 # Débogage des ressources DSC
@@ -18,8 +22,7 @@ Dans PowerShell 5.0, DSC contient une nouvelle fonctionnalité qui permet de d�
 ## Activation du débogage DSC
 Avant de pouvoir déboguer une ressource, vous devez activer le débogage en appelant l’applet de commande [Enable-DscDebug](https://technet.microsoft.com/en-us/library/mt517870.aspx). Cette applet de commande prend un paramètre obligatoire : **BreakAll**. 
 
-Vous pouvez vérifier que le débogage a été activé en examinant le résultat d’un appel à [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx). 
-La sortie PowerShell suivante montre le résultat de l’activation du débogage :
+Vous pouvez vérifier que le débogage a été activé en examinant le résultat d’un appel à [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx). La sortie PowerShell suivante montre le résultat de l’activation du débogage :
 
 
 ```powershell
@@ -106,6 +109,7 @@ Après avoir appelé [Enable-DscDebug](https://technet.microsoft.com/en-us/libra
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

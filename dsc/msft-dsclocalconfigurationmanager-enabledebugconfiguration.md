@@ -1,12 +1,16 @@
 ---
-title:  Méthode EnableDebugConfiguration de la classe MSFT_DSCLocalConfigurationManager
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: "Méthode EnableDebugConfiguration de la classe MSFT_DSCLocalConfigurationManager"
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 919438862ca9786447b690d2db10e905da0a7c42
+ms.openlocfilehash: f74e9941180c00a1aae1bd1d7b48fa4de0c8790d
+
 ---
 
 
@@ -57,6 +61,7 @@ Il s’agit d’une méthode statique.
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
