@@ -254,9 +254,6 @@
   "841bf46cc17ef9121c56ac003cda25478a21b798": [
     "wmf\\dsc_importdscresource.md"
   ],
-  "cde72b65d75ded4968090264dd536874b4d2ac70": [
-    "wmf\\dsc_importdscresource.md"
-  ],
   "336c6bc43b482eda6524ebed0381240868261f64": [
     "wmf\\dsc_improvements.md"
   ],
@@ -266,49 +263,28 @@
   "cd879af041642e96074706ff553af57d17b06802": [
     "wmf\\dsc_metaconfiguration.md"
   ],
-  "5e3adc41e37f7089d8393789464c4b1b70da7148": [
-    "wmf\\dsc_metaconfiguration.md"
-  ],
   "34c29d88f0676e51c1b8af9d9e65b151eb8a4272": [
     "wmf\\dsc_newresources.md"
   ],
   "81b391b6c1bc334cb88f9af00f31a99d95df8270": [
     "wmf\\dsc_nodeid.md"
   ],
-  "517c1d3654cd87b2356abadabf474c76580767f4": [
-    "wmf\\dsc_nodeid.md"
-  ],
   "73d6ffec22390fa09e258f283fab2cdca001de16": [
-    "wmf\\dsc_partialconfig.md"
-  ],
-  "c0a49b1266b01f7333cee2b39349f220c924d16d": [
     "wmf\\dsc_partialconfig.md"
   ],
   "f4e5652672044938c196ea2cd5b81ccd888dd6d0": [
     "wmf\\dsc_partialconfig_mixedmode.md"
   ],
-  "90da8345a6741a152aeb87fb3ce4706af8b5ec75": [
-    "wmf\\dsc_partialconfig_mixedmode.md"
-  ],
   "fbfae5c87a81bb36e1187a65b2ef7a6a982d99f4": [
     "wmf\\dsc_publishconfig.md"
   ],
-  "3a7709855bdf46120e2f2115ac1635dc58c905a7": [
-    "wmf\\dsc_publishconfig.md"
-  ],
   "92bb8c98776a2a7fa8cae8e6988d88820b887a6c": [
-    "wmf\\dsc_refreshmode.md"
-  ],
-  "5bf341e02933b3c6cb49d6dac20ded189f0d889c": [
     "wmf\\dsc_refreshmode.md"
   ],
   "b0fb33b1d5e4ef1b0b9018ec5dd5f88ef5df4719": [
     "wmf\\dsc_removeconfigdoc.md"
   ],
   "f68eb0016b45ea5a08ce99572cbec04ac96fbf46": [
-    "wmf\\dsc_reporting.md"
-  ],
-  "3f286a0cdcff33aa396c745a661d52d07f25817d": [
     "wmf\\dsc_reporting.md"
   ],
   "d9da7ea2674b0428118ec1585c705b90a886ca44": [
@@ -320,9 +296,6 @@
   "fa0f232c7ed02cb6358b1c181a40bab8a1e2e640": [
     "wmf\\dsc_resourcedebugging.md"
   ],
-  "68949a10a4e8b6cac5a2d596567e7c0e680db8a2": [
-    "wmf\\dsc_resourcedebugging.md"
-  ],
   "1c0bad4dab64c9fbd09be23df3d7b19913fa9511": [
     "wmf\\dsc_runas.md"
   ],
@@ -332,16 +305,10 @@
   "97cd3cb5658f3acabf4f980d1e3fa99fe84e0d04": [
     "wmf\\dsc_setdsclcm.md"
   ],
-  "6ab763e1969aa55b7f85b51b7115d065830c5458": [
-    "wmf\\dsc_setdsclcm.md"
-  ],
   "98a8a8f27661042bef27d0edceccf9a67c9153d1": [
     "wmf\\dsc_statestatus.md"
   ],
   "866429453239ceef799dff1acb99abd27e9b24c4": [
-    "wmf\\dsc_sxsresource.md"
-  ],
-  "a7c6fb818477522ebd7be025f154c1b2eea0e518": [
     "wmf\\dsc_sxsresource.md"
   ],
   "df6b5db79c8c165e7fb3c1570838ac7a696b5a55": [
@@ -825,12 +792,6 @@
     "scripting\\core-powershell\\core-modules\\Windows-PowerShell-Core-Providers.md"
   ],
   "4c22e1a2543690a971836813cb32ace74ababb4a": [
-    "scripting\\core-powershell\\core-powershell.md"
-  ],
-  "897702d56a14657881121890f2283f50bdc2d517": [
-    "scripting\\core-powershell\\core-powershell.md"
-  ],
-  "65eaf56239163e2061dd65e0887d71ac0d481b82": [
     "scripting\\core-powershell\\core-powershell.md"
   ],
   "8af4de973a95352fd41d2bb2823b9382899ef5bf": [
