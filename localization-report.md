@@ -3056,8 +3056,8 @@
 * Archive Datetime: 2016-06-28 13:28:12
 * Handback File: [Creating-a-Custom-Input-Box.d0b0f28391ca707134d516718eec44a874382d2a.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/ab6966e6acf371d6c3001628157ef44c6494b6bf/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/Creating-a-Custom-Input-Box.d0b0f28391ca707134d516718eec44a874382d2a.fr-fr.xlf)
 * Handback Datetime: 2016-07-05 10:41:13
-* Bilingual File: [Creating-a-Custom-Input-Box.d0b0f28391ca707134d516718eec44a874382d2a.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b3c98e9281771cf745573b5c20010ed4cb48b3d7/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/Creating-a-Custom-Input-Box.d0b0f28391ca707134d516718eec44a874382d2a.fr-fr.xlf)
-* Bilingual Datetime: 2016-06-16 14:29:50
+* Bilingual File: [Creating-a-Custom-Input-Box.d0b0f28391ca707134d516718eec44a874382d2a.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/ab6966e6acf371d6c3001628157ef44c6494b6bf/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/Creating-a-Custom-Input-Box.d0b0f28391ca707134d516718eec44a874382d2a.fr-fr.xlf)
+* Bilingual Datetime: 2016-07-05 10:42:02
 * [Back to Top](#report-top)
 
 ##### <a name='f359254900dce0ef0a28af3e16b8ef4095e85309182'></a> Source: [scripting\getting-started\cookbooks\Creating-a-Graphical-Date-Picker.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/Creating-a-Graphical-Date-Picker.md)
@@ -4035,8 +4035,8 @@
 * Archive Datetime: 2016-06-28 13:28:12
 * Handback File: [What-s-New-With-PowerShell.8b0e86271984e828077d39559df46f794de87d12.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/ab6966e6acf371d6c3001628157ef44c6494b6bf/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/What-s-New-With-PowerShell.8b0e86271984e828077d39559df46f794de87d12.fr-fr.xlf)
 * Handback Datetime: 2016-07-05 10:41:13
-* Bilingual File: [What-s-New-With-PowerShell.8b0e86271984e828077d39559df46f794de87d12.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/0f1a3d365f9335abaecf3f00680bacfcc0f8d851/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/What-s-New-With-PowerShell.8b0e86271984e828077d39559df46f794de87d12.fr-fr.xlf)
-* Bilingual Datetime: 2016-06-16 14:29:50
+* Bilingual File: [What-s-New-With-PowerShell.8b0e86271984e828077d39559df46f794de87d12.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/ab6966e6acf371d6c3001628157ef44c6494b6bf/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/What-s-New-With-PowerShell.8b0e86271984e828077d39559df46f794de87d12.fr-fr.xlf)
+* Bilingual Datetime: 2016-07-05 10:42:02
 * [Back to Top](#report-top)
 
 ##### <a name='0cd377653a3ca82052b1b88f00bfe92830f2020f248'></a> Source: [scripting\Windows-PowerShell-Glossary.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/Windows-PowerShell-Glossary.md)
