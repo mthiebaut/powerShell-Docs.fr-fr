@@ -1,28 +1,11 @@
 # <a name='report-top'></a> Localization Bilingual Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [scripting\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/2fe345e6dc0734769a78bd91a0e831d413fcd7c1/scripting/TOC.md) | InSyncHandedBackSuccess | [Details](#c3d86239550566a7704405930f72c598d140cdb8243)
 
 ## Item Details
-##### <a name='c3d86239550566a7704405930f72c598d140cdb8243'></a> Source: [scripting\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/2fe345e6dc0734769a78bd91a0e831d413fcd7c1/scripting/TOC.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [scripting\TOC.md](https://github.com/PowerShell/powerShell-Docs.fr-fr/blob/5a32fa6cf1cedf8dacc15c711f7dc37ff6a46fe6/scripting/TOC.md)
-* Handoff File: [TOC.94c88eadcdc1b167fb0a17837d186c734f84dea9.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/9a4f18e06a5757c5796b76a7542d01294a633b40/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/TOC.94c88eadcdc1b167fb0a17837d186c734f84dea9.fr-fr.xlf)
-* Handoff Datetime: 2016-06-30 18:41:01
-* Handoff Reason: Include
-* Archive File: [TOC.94c88eadcdc1b167fb0a17837d186c734f84dea9.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/2ad8683edde619e61e9a04896eaf6cc07eb29af3/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/archive/TOC.94c88eadcdc1b167fb0a17837d186c734f84dea9.fr-fr.xlf)
-* Archive Datetime: 2016-07-05 13:08:20
-* Handback File: [TOC.94c88eadcdc1b167fb0a17837d186c734f84dea9.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/1aa0dfe47f8b4157d9bc77d62fb0967fbd2a7554/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/TOC.94c88eadcdc1b167fb0a17837d186c734f84dea9.fr-fr.xlf)
-* Handback Datetime: 2016-07-05 14:09:32
-* Bilingual File: [TOC.94c88eadcdc1b167fb0a17837d186c734f84dea9.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/1aa0dfe47f8b4157d9bc77d62fb0967fbd2a7554/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/TOC.94c88eadcdc1b167fb0a17837d186c734f84dea9.fr-fr.xlf)
-* Bilingual Datetime: 2016-07-05 14:10:25
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
