@@ -1,12 +1,16 @@
 ---
-title:  résolution des problèmes d’accès dans Accès Web Windows PowerShell
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
+title: "résolution des problèmes d’accès dans Accès Web Windows PowerShell"
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 6366ec9c49f721b758b6a520f68cf2b3c5ee0caf
+
 ---
 
 #  Résolution des problèmes d’accès dans Accès Web Windows PowerShell
@@ -65,7 +69,7 @@ Le tableau suivant identifie certains problèmes courants que les utilisateurs p
 </tr>
 <tr class="odd">
 <td><p>Impossible de se connecter à un ordinateur de groupe de travail distant</p></td>
-<td><p>Si l’ordinateur de destination est membre d’un groupe de travail, utilisez la syntaxe suivante pour fournir votre nom d’utilisateur et vous connecter à l’ordinateur : &lt;<em>nom_groupe_de_travail</em>&gt;\&lt;<em>nom_utilisateur</em>&gt;</p></td>
+<td><p>Si l’ordinateur de destination est membre d’un groupe de travail, utilisez la syntaxe suivante pour fournir votre nom d’utilisateur et vous connecter à l’ordinateur : &lt;<em>workgroup_name</em>&gt;\&lt;<em>user_name</em>&gt;</p></td>
 </tr>
 <tr class="even">
 <td><p>Impossible de trouver les outils de gestion de serveur Web (IIS) bien que le rôle ait été installé</p></td>
@@ -192,6 +196,7 @@ Les codes et les scripts développés par un tiers et en rapport à ce site doiv
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

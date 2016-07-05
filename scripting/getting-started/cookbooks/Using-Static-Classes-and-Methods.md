@@ -1,17 +1,21 @@
 ---
-title:  Utilisation de classes et méthodes statiques
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  418ad766-afa6-4b8c-9a44-471889af7fd9
+title: "Utilisation de classes et méthodes statiques"
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 418ad766-afa6-4b8c-9a44-471889af7fd9
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 50ebc8a737b50aba5a5af49716b59905da74669a
+
 ---
 
 # Utilisation de classes et méthodes statiques
-Certaines classes de .NET Framework ne peuvent pas être créées à l’aide de l’applet de commande **New-Object**. Par exemple, si vous essayez de créer un objet **System.Environment** ou **System.Math** avec l’applet de commande **New-Object**, vous obtenez les messages d’erreur suivants :
+Certaines classes de .NET Framework ne peuvent pas être créées à l’aide de l’applet de commande **New\-Object**. Par exemple, si vous essayez de créer un objet **System.Environment** ou **System.Math** avec l’applet de commande **New\-Object**, vous obtenez les messages d’erreur suivants :
 
 ```
 PS> New-Object System.Environment
@@ -29,7 +33,7 @@ At line:1 char:11
 Ces erreurs se produisent parce qu’il n’existe aucun moyen de créer un objet à partir de ces classes. Ces classes sont des bibliothèques de référence de méthodes et propriétés qui ne changent pas d’état. Vous n’avez pas besoin de les créer. Vous les utilisez simplement. Les classes et méthodes telles que celles-ci sont appelées *classes statiques*, car elles ne sont pas créées, détruites ou modifiées. Par souci de clarté, nous fournirons des exemples qui utilisent des classes statiques.
 
 ### Obtention de données d’environnement avec System.Environment
-En règle générale, la première étape de l’utilisation d’un objet dans Windows PowerShell consiste à utiliser l’applet de commande Get-Member pour découvrir les membres qu’il contient. Avec des classes statiques, le processus est un peu différent, car la classe réelle n’est pas un objet.
+En règle générale, la première étape de l’utilisation d’un objet dans Windows PowerShell consiste à utiliser l’applet de commande Get\-Member pour découvrir les membres qu’il contient. Avec des classes statiques, le processus est un peu différent, car la classe réelle n’est pas un objet.
 
 #### Référence à la classe statique System.Environment
 Vous pouvez faire référence à une classe statique en entourant le nom de la classe de crochets. Par exemple, vous pouvez faire référence à la classe **System.Environment** en tapant le nom entre crochets. Cela a pour effet d’afficher des informations de type générique :
@@ -43,11 +47,11 @@ True     False    Environment                              System.Object
 ```
 
 > [!NOTE]
-> Comme mentionné précédemment, Windows PowerShell ajoute automatiquement « **System.** » aux noms de type lorsque vous utilisez l’applet de commande **New-Object**. La même chose se produisant en cas d’utilisation d’un nom de type entre crochets, vous pouvez spécifier **[System.Environment]** en tant que **[Environment]**.
+> Comme mentionné précédemment, Windows PowerShell ajoute automatiquement « **System.** » aux noms de type lorsque vous utilisez l’applet de commande **New\-Object**. La même chose se produisant en cas d’utilisation d’un nom de type entre crochets, vous pouvez spécifier **\[System.Environment]** en tant que **\[Environment]**.
 
 La classe **System.Environment** contient des informations générales sur l’environnement de travail pour le processus actuel, c’est-à-dire powershell.exe lorsque vous travaillez dans Windows PowerShell.
 
-Si vous essayez d’afficher les détails de cette classe en tapant **[System.Environment] | Get-Member**, le type d’objet est signalé comme étant **System.RuntimeType**, pas **System.Environment** :
+Si vous essayez d’afficher les détails de cette classe en tapant **\[System.Environment] | Get\-Member**, le type d’objet est signalé comme étant **System.RuntimeType**, pas **System.Environment** :
 
 ```
 PS> [System.Environment] | Get-Member
@@ -55,7 +59,7 @@ PS> [System.Environment] | Get-Member
    TypeName: System.RuntimeType
 ```
 
-Pour afficher les membres statiques avec Get-Member, spécifiez le paramètre **Static** paramètre :
+Pour afficher les membres statiques avec Get\-Member, spécifiez le paramètre **Static** :
 
 ```
 PS> [System.Environment] | Get-Member -Static
@@ -114,9 +118,10 @@ False
 ```
 
 ### Opérations mathématiques avec System.Math
-La classe statique System.Math est utile pour effectuer certaines opérations mathématiques. Les membres importants de **System.Math** sont essentiellement des méthodes que nous pouvons afficher à l’aide de l’applet de commande **Get-Member**.
+La classe statique System.Math est utile pour effectuer certaines opérations mathématiques. Les membres importants de **System.Math** sont essentiellement des méthodes que nous pouvons afficher à l’aide de l’applet de commande **Get\-Member**.
 
-> [!NOTE] System.Math dispose de plusieurs méthodes portant le même nom, mais qui se distinguent par le type de leurs paramètres.
+> [!NOTE]
+> System.Math dispose de plusieurs méthodes portant le même nom, mais qui se distinguent par le type de leurs paramètres.
 
 Tapez la commande suivante pour répertorier les méthodes de la classe **System.Math**.
 
@@ -184,6 +189,7 @@ PS> [System.Math]::Truncate(-9.3)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

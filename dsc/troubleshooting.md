@@ -1,22 +1,83 @@
 ---
-title:   Résolution des problèmes liés à DSC
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: "Résolution des problèmes liés à DSC"
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: d367048eab0ba3fd67baed2ee27332ce0827d5ac
+ms.openlocfilehash: a09f228cf232ff9d7cf2ba20c73808fd92c9d560
+
 ---
 
 # Résolution des problèmes liés à DSC
 
 >S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Cette rubrique décrit des méthodes pour que vos scripts de configuration d’état souhaité (DSC) s’exécutent sans erreur. Si vous utilisez les journaux de manière efficace pour détecter les erreurs et que vous comprenez comment recycler le cache pour afficher les résultats immédiats des modifications que vous apportez aux ressources, vous pouvez résoudre plus efficacement les problèmes liés à DSC. Ces techniques sont présentées dans deux sections :
+Cette rubrique décrit comment résoudre les problèmes liés à DSC quand ils se produisent.
 
-* Mon script ne s’exécute pas : **utilisation des journaux DSC pour diagnostiquer les erreurs de script**
-* Mes ressources ne sont pas mises à jour : **comment réinitialiser le cache**
+## Utilisation de l’applet de commande Get-DscConfigurationStatus
+
+L’applet de commande, [Get-DscConfigurationStatus](https://technet.microsoft.com/en-us/library/mt517868.aspx) obtient des informations sur l’état de configuration à partir d’un nœud cible. Un objet enrichi est retourné. Il comprend des informations générales indiquant si l’exécution de la configuration a réussi ou échoué. Vous pouvez explorer l’objet pour obtenir des détails sur l’exécution de la configuration, notamment :
+
+* Toutes les ressources qui ont échoué
+* Toute ressource ayant demandé un redémarrage
+* Les paramètres de métaconfiguration au moment de l’exécution de la configuration
+* Etc.
+
+Le jeu de paramètres suivant retourne les informations d’état pour la dernière exécution de configuration :
+
+```powershell
+Get-DscConfigurationStatus  [-CimSession <CimSession[]>] 
+                            [-ThrottleLimit <int>] 
+                            [-AsJob] 
+                            [<CommonParameters>]
+```
+Le jeu de paramètres suivant retourne les informations d’état pour toutes les exécutions de configuration précédentes :
+
+```powershell
+Get-DscConfigurationStatus  -All 
+                            [-CimSession <CimSession[]>] 
+                            [-ThrottleLimit <int>] 
+                            [-AsJob] 
+                            [<CommonParameters>]
+```
+
+## Exemple
+
+```powershell
+PS C:\> $Status = Get-DscConfigurationStatus 
+
+PS C:\> $Status
+
+Status      StartDate               Type            Mode    RebootRequested     NumberOfResources
+------      ---------               ----            ----    ---------------     -----------------
+Failure     11/24/2015  3:44:56     Consistency     Push    True                36
+
+PS C:\> $Status.ResourcesNotInDesiredState
+
+ConfigurationName       :   MyService
+DependsOn               :   
+ModuleName              :   PSDesiredStateConfiguration
+ModuleVersion           :   1.1
+PsDscRunAsCredential    :   
+ResourceID              :   [File]ServiceDll
+SourceInfo              :   c:\git\CustomerService\Configs\MyCustomService.ps1::5::34::File
+DurationInSeconds       :   0.19
+Error                   :   SourcePath must be accessible for current configuration. The related file/directory is:
+                            \\Server93\Shared\contosoApp.dll. The related ResourceID is [File]ServiceDll
+FinalState              :   
+InDesiredState          :   False
+InitialState            :   
+InstanceName            :   ServiceDll
+RebootRequested         :   False
+ReosurceName            :   File
+StartDate               :   11/24/2015  3:44:56
+PSComputerName          :
+```
 
 ## Mon script ne s’exécute pas : utilisation des journaux DSC pour diagnostiquer les erreurs de script
 
@@ -203,91 +264,200 @@ TimeCreated                     Id LevelDisplayName Message
 
 ## Utilisation de xDscDiagnostics pour analyser les journaux DSC
 
-**xDscDiagnostics** est un module PowerShell qui se compose de deux fonctions simples permettant d’analyser les échecs DSC sur votre ordinateur : `Get-xDscOperation` et `Trace-xDscOperation`. Ces fonctions peuvent vous aider à identifier tous les événements locaux des dernières opérations DSC ou les événements DSC sur des ordinateurs distants (avec des informations d’identification valides). Ici, le terme opération DSC est utilisé pour définir une exécution DSC unique du début à la fin. Par exemple, `Test-DscConfiguration` est une opération DSC à part entière. De même, chaque autre applet de commande dans DSC (telle que `Get-DscConfiguration`, `Start-DscConfiguration`, etc.) peut être identifiée comme une opération DSC à part entière. Les deux fonctions sont expliquées dans le module PowerShell [xDscDiagnostics](https://powershellgallery.com/packages/xDscDiagnostics) (Kit de ressources DSC) et plus en détail ci-dessous. Vous accédez à l’aide en exécutant `Get-Help <cmdlet name>`.
+**xDscDiagnostics** est un module PowerShell qui se compose de plusieurs fonctions permettant d’analyser les échecs DSC sur votre ordinateur. Ces fonctions peuvent vous aider à identifier tous les événements locaux des dernières opérations DSC ou les événements DSC sur des ordinateurs distants (avec des informations d’identification valides). Ici, le terme opération DSC est utilisé pour définir une exécution DSC unique du début à la fin. Par exemple, `Test-DscConfiguration` est une opération DSC à part entière. De même, chaque autre applet de commande dans DSC (telle que `Get-DscConfiguration`, `Start-DscConfiguration`, etc.) peut être identifiée comme une opération DSC à part entière. Les fonctions sont expliquées dans [xDscDiagnostics](https://github.com/PowerShell/xDscDiagnostics). Vous accédez à l’aide en exécutant `Get-Help <cmdlet name>`.
 
-## Get-xDscOperation
+### Obtention de détails des opérations DSC 
 
-Cette fonction vous permet de rechercher les résultats des opérations DSC qui s’exécutent sur un ou plusieurs ordinateurs, et retourne un objet qui contient la collection d’événements produits par chaque opération DSC. Par exemple, dans la sortie suivante, trois commandes ont été exécutées. La première a réussi et les deux autres ont échoué. Ces résultats sont résumés dans la sortie de `Get-xDscOperation`.
+La fonction `Get-xDscOperation` vous permet de rechercher les résultats des opérations DSC qui s’exécutent sur un ou plusieurs ordinateurs, et de retourner un objet qui contient la collection d’événements produits par chaque opération DSC. Par exemple, dans la sortie suivante, trois commandes ont été exécutées. La première a réussi et les deux autres ont échoué. Ces résultats sont résumés dans la sortie de `Get-xDscOperation`.
 
-TODO: remplacer cette image pour afficher la sortie de Get-xDscOperation
-
-### Paramètres
-
-* **Newest** : accepte une valeur entière indiquant le nombre d’opérations à afficher. Par défaut, elle retourne les 10 dernières opérations. Par exemple, TODO: afficher Get-xDscOperation -Newest 5
-* **ComputerName** : paramètre qui accepte un tableau de chaînes, chacune contenant le nom d’un ordinateur sur lequel vous voulez collecter des données de journal des événements DSC. Par défaut, il collecte les données de l’ordinateur local. Pour activer cette fonctionnalité, vous devez exécuter la commande suivante sur les ordinateurs distants en mode élevé pour autoriser la collecte d’événements
 ```powershell
-  New-NetFirewallRule -Name "Service RemoteAdmin" -Action Allow
+PS C:\DiagnosticsTest> Get-xDscOperation
+
+ComputerName   SequenceId TimeCreated           Result   JobID                                 AllEvents            
+------------   ---------- -----------           ------   -----                                 ---------            
+SRV1   1          6/23/2016 9:37:52 AM  Failure  9701aadf-395e-11e6-9165-00155d390509  {@{Message=; TimeC...
+SRV1   2          6/23/2016 9:36:54 AM  Failure  7e8e2d6e-395c-11e6-9165-00155d390509  {@{Message=; TimeC...
+SRV1   3          6/23/2016 9:36:54 AM  Success  af72c6aa-3960-11e6-9165-00155d390509  {@{Message=Operati...
+
 ```
-* **Credential** : paramètre de type PSCredential, qui permet d’accéder aux ordinateurs spécifiés dans le paramètre ComputerName.
 
-### Objet retourné
+Vous pouvez également spécifier que vous voulez uniquement les résultats des opérations les plus récentes à l’aide du paramètre `Newest` :
 
-L’applet de commande retourne un tableau d’objets de type **Microsoft.PowerShell.xDscDiagnostics.GroupedEvents**. Chaque objet du tableau se rapporte à une opération DSC différente. L’affichage par défaut de cet objet possède les propriétés suivantes
-* **SequenceID** : spécifie le nombre incrémentiel associé à l’opération DSC basée sur l’heure. Par exemple, la dernière opération exécutée a une propriété SequenceID avec la valeur 1, l’avant-dernière avec la valeur 2, etc. Ce nombre est un autre identificateur pour chaque objet du tableau retourné.
-* **TimeCreated** : une valeur DateTime qui indique quand l’opération DSC a commencé.
-* **ComputerName** : le nom de l’ordinateur à partir duquel les résultats sont agrégés.
-* **Result** : une chaîne avec la valeur **Failure** ou **Success** qui indique si l’opération DSC a rencontré une erreur ou non, respectivement.
-* **AllEvents** : un objet qui représente une collection d’événements produits par l’opération DSC.
-
-Par exemple, la sortie suivante montre les résultats de la dernière opération sur plusieurs ordinateurs : TODO: remplacer l’image pour que Get-xDscOperation affiche les journaux de l’ordinateur distant
-
-## Trace-xDscOperation
-
-Cette applet de commande retourne un objet qui contient une collection d’événements, leur type et la sortie de message générée à partir d’une opération DSC particulière. En règle générale, quand vous trouvez une erreur dans une opération à l’aide de `Get-xDscOperation`, vous tracez l’opération pour déterminer lequel des événements a entraîné un échec.
-
-### Paramètres
-
-* **SequenceID** : valeur entière affectée à une opération sur un ordinateur spécifique. Si vous spécifiez un ID de séquence égal à 4, la trace de la 4ème avant-dernière opération DSC est générée
-
-Trace-xDscOperation avec l'ID de séquence spécifié
-* **JobID** : valeur du GUID assignée par xDscOperation du gestionnaire de configuration local pour identifier de manière unique une opération. Quand un JobID est spécifié, la trace de l’opération DSC correspondante est générée.
-  TODO: remplacer l’image par Trace xDscOperation prenant JobID comme paramètre
-* **ComputerName** et **Credential** : ces paramètres permettent de collecter la trace sur des ordinateurs distants :
 ```powershell
-New-NetFirewallRule -Name "Service RemoteAdmin" -Action Allow
+PS C:\DiagnosticsTest> Get-xDscOperation -Newest 5
+ComputerName   SequenceId TimeCreated           Result   JobID                                 AllEvents            
+------------   ---------- -----------           ------   -----                                 ---------            
+SRV1   1          6/23/2016 4:36:54 PM  Success                                        {@{Message=; TimeC...
+SRV1   2          6/23/2016 4:36:54 PM  Success  5c06402b-399b-11e6-9165-00155d390509  {@{Message=Operati...
+SRV1   3          6/23/2016 4:36:54 PM  Success                                        {@{Message=; TimeC...
+SRV1   4          6/23/2016 4:36:54 PM  Success  5c06402a-399b-11e6-9165-00155d390509  {@{Message=Operati...
+SRV1   5          6/23/2016 4:36:51 PM  Success                                        {@{Message=; TimeC...
 ```
-  TODO: remplacer l’image par Trace-xDscOperation s’exécutant sur un autre ordinateur
+
+### Obtention des détails des événements DSC
+
+L’`Trace-xDscOperation1 cmdlet returns an object containing a collection of events, their event types, and the message output generated from a particular DSC operation. Typically, when you find a failure 
+in any of the operations using `Get-xDscOperation`, vous suivez cette opération pour déterminer lequel des événements a entraîné un échec.
+
+Utilisez le paramètre `SequenceID` pour obtenir les événements d’une opération spécifique d’un ordinateur spécifique. Par exemple, si vous spécifiez une valeur de 9 pour `SequenceID`, `Trace-xDscOperaion` obtient la trace de la neuvième opération DSC à partir de la dernière opération :
+
+```powershell
+PS C:\DiagnosticsTest> Trace-xDscOperation -SequenceID 9
+
+ComputerName   EventType    TimeCreated           Message                                                                                             
+------------   ---------    -----------           -------                                                                                             
+SRV1   OPERATIONAL  6/24/2016 10:51:52 AM Operation Consistency Check or Pull started by user sid S-1-5-20 from computer NULL.                
+SRV1   OPERATIONAL  6/24/2016 10:51:52 AM Running consistency engine.                                                                         
+SRV1   OPERATIONAL  6/24/2016 10:51:52 AM The local configuration manager is updating the PSModulePath to WindowsPowerShell\Modules;C:\Prog...
+SRV1   OPERATIONAL  6/24/2016 10:51:53 AM  Resource execution sequence :: [WindowsFeature]DSCServiceFeature, [xDSCWebService]PSDSCPullServer. 
+SRV1   OPERATIONAL  6/24/2016 10:51:54 AM Consistency engine was run successfully.                                                            
+SRV1   OPERATIONAL  6/24/2016 10:51:54 AM Job runs under the following LCM setting. ...                                                       
+SRV1   OPERATIONAL  6/24/2016 10:51:54 AM Operation Consistency Check or Pull completed successfully. 
+```
+
+Passez le **GUID** affecté à une opération DSC spécifique (comme retourné par l’applet de commande `Get-xDscOperation`) pour obtenir les détails de l’événement pour cette opération DSC :
+
+```powershell
+PS C:\DiagnosticsTest> Trace-xDscOperation -JobID 9e0bfb6b-3a3a-11e6-9165-00155d390509
+
+ComputerName   EventType    TimeCreated           Message                                                                                             
+------------   ---------    -----------           -------                                                                                             
+SRV1   OPERATIONAL  6/24/2016 11:36:56 AM Operation Consistency Check or Pull started by user sid S-1-5-20 from computer NULL.                
+SRV1   ANALYTIC     6/24/2016 11:36:56 AM Deleting file from C:\Windows\System32\Configuration\DSCEngineCache.mof                             
+SRV1   OPERATIONAL  6/24/2016 11:36:56 AM Running consistency engine.                                                                         
+SRV1   VERBOSE      6/24/2016 11:36:56 AM [SRV1]:                            [] Starting consistency engine.                          
+SRV1   ANALYTIC     6/24/2016 11:36:56 AM Applying configuration from C:\Windows\System32\Configuration\Current.mof.                          
+SRV1   ANALYTIC     6/24/2016 11:36:56 AM Parsing the configuration to apply.                                                                 
+SRV1   OPERATIONAL  6/24/2016 11:36:56 AM  Resource execution sequence :: [WindowsFeature]DSCServiceFeature, [xDSCWebService]PSDSCPullServer. 
+SRV1   VERBOSE      6/24/2016 11:36:56 AM [SRV1]: LCM:  [ Start  Resource ]  [[WindowsFeature]DSCServiceFeature]                      
+SRV1   ANALYTIC     6/24/2016 11:36:56 AM Executing operations for PS DSC resource MSFT_RoleResource with resource name [WindowsFeature]DSC...
+SRV1   VERBOSE      6/24/2016 11:36:56 AM [SRV1]: LCM:  [ Start  Test     ]  [[WindowsFeature]DSCServiceFeature]                      
+SRV1   VERBOSE      6/24/2016 11:36:56 AM [SRV1]:                            [[WindowsFeature]DSCServiceFeature] The operation 'Get...
+SRV1   VERBOSE      6/24/2016 11:36:56 AM [SRV1]:                            [[WindowsFeature]DSCServiceFeature] The operation 'Get...
+SRV1   VERBOSE      6/24/2016 11:36:56 AM [SRV1]: LCM:  [ End    Test     ]  [[WindowsFeature]DSCServiceFeature] True in 0.3130 sec...
+SRV1   VERBOSE      6/24/2016 11:36:56 AM [SRV1]: LCM:  [ End    Resource ]  [[WindowsFeature]DSCServiceFeature]                      
+SRV1   VERBOSE      6/24/2016 11:36:56 AM [SRV1]: LCM:  [ Start  Resource ]  [[xDSCWebService]PSDSCPullServer]                        
+SRV1   ANALYTIC     6/24/2016 11:36:56 AM Executing operations for PS DSC resource MSFT_xDSCWebService with resource name [xDSCWebService]P...
+SRV1   VERBOSE      6/24/2016 11:36:56 AM [SRV1]: LCM:  [ Start  Test     ]  [[xDSCWebService]PSDSCPullServer]                        
+SRV1   VERBOSE      6/24/2016 11:36:56 AM [SRV1]:                            [[xDSCWebService]PSDSCPullServer] Check Ensure           
+SRV1   VERBOSE      6/24/2016 11:36:56 AM [SRV1]:                            [[xDSCWebService]PSDSCPullServer] Check Port             
+SRV1   VERBOSE      6/24/2016 11:36:56 AM [SRV1]:                            [[xDSCWebService]PSDSCPullServer] Check Physical Path ...
+SRV1   VERBOSE      6/24/2016 11:36:56 AM [SRV1]:                            [[xDSCWebService]PSDSCPullServer] Check State            
+SRV1   VERBOSE      6/24/2016 11:36:56 AM [SRV1]:                            [[xDSCWebService]PSDSCPullServer] Get Full Path for We...
+SRV1   VERBOSE      6/24/2016 11:36:56 AM [SRV1]: LCM:  [ End    Test     ]  [[xDSCWebService]PSDSCPullServer] True in 0.0160 seconds.
+SRV1   VERBOSE      6/24/2016 11:36:56 AM [SRV1]: LCM:  [ End    Resource ]  [[xDSCWebService]PSDSCPullServer]                        
+SRV1   VERBOSE      6/24/2016 11:36:56 AM [SRV1]:                            [] Consistency check completed.                          
+SRV1   ANALYTIC     6/24/2016 11:36:56 AM Deleting file from C:\Windows\System32\Configuration\DSCEngineCache.mof                             
+SRV1   OPERATIONAL  6/24/2016 11:36:56 AM Consistency engine was run successfully.                                                            
+SRV1   OPERATIONAL  6/24/2016 11:36:56 AM Job runs under the following LCM setting. ...                                                       
+SRV1   OPERATIONAL  6/24/2016 11:36:56 AM Operation Consistency Check or Pull completed successfully.                                         
+SRV1   ANALYTIC     6/24/2016 11:36:56 AM Deleting file from C:\Windows\System32\Configuration\DSCEngineCache.mof
+```
 
 Notez qu’étant donné que `Trace-xDscOperation` regroupe les événements des journaux d’analyse, de débogage et des opérations, vous êtes invité à activer ces journaux comme décrit ci-dessus.
 
-### Objet retourné
-
-L’applet de commande retourne un tableau d’objets, chacun de type `Microsoft.PowerShell.xDscDiagnostics.TraceOutput`. Chaque objet du tableau contient les champs suivants :
-* **ComputerName** : nom de l’ordinateur sur lequel les journaux sont collectés.
-* **EventType** : il s’agit d’un champ de type d’énumérateur qui contient des informations sur le type d’événement. Ce peut être l’un des types d’énumérateur suivants :
-  - *Operational* : l’événement figure dans le journal des opérations.
-  - *Analytic* : l’événement figure dans le journal d’analyse.
-  - *Debug* : l’événement figure dans le journal de débogage.
-  - *Verbose* : la sortie des événements est un message détaillé pendant l’exécution. Les messages détaillés facilitent l’identification de la séquence des événements publiés.
-  - *Error* : événements d’erreur. En recherchant les événements d’erreur, vous pouvez généralement rapidement trouver la raison de l’échec.
-* **TimeCreated** : valeur DateTime qui indique le moment où l’événement a été enregistré par DSC.
-* **Message** : message qui a été enregistré par DSC dans les journaux des événements.
-
-Voici les champs de cet objet qui peuvent être utilisés pour obtenir plus d’informations sur l’événement, mais qui ne sont pas affichés par défaut :
-
-* **JobID** : ID de tâche (format GUID) spécifique de cette opération DSC.
-* **SequenceID** : ID de séquence unique pour cette opération DSC sur cet ordinateur.
-* **Event** : événement réel enregistré par DSC, de type `System.Diagnostics.Eventing.Reader.EventLogRecord`. Il peut également être obtenu en exécutant l’applet de commande `Get-WinEvent`. Il contient plus d’informations comme la tâche, l’ID d’événement et le niveau de l’événement.
-
-Vous pouvez aussi collecter des informations sur les événements en enregistrant la sortie de `Trace-xDscOperation` dans une variable. Vous pouvez utiliser la commande suivante pour afficher tous les événements d’une opération DSC particulière :
+Vous pouvez aussi collecter des informations sur les événements en enregistrant la sortie de `Trace-xDscOperation` dans une variable. Vous pouvez utiliser les commandes suivantes pour afficher tous les événements d’une opération DSC particulière.
 
 ```powershell
-(Trace-xDscOperation -SequenceID 3).Event
+PS C:\DiagnosticsTest> $Trace = Trace-xDscOperation -SequenceID 4
+
+PS C:\DiagnosticsTest> $Trace.Event
 ```
 
-Cette commande génère les mêmes résultats que l’applet de commande `Get-WinEvent`, comme dans la sortie ci-dessous : TODO: quelle sortie ?
+Cette commande génère les mêmes résultats que l’applet de commande `Get-WinEvent`, comme dans la sortie ci-dessous :
+
+```powershell
+   ProviderName: Microsoft-Windows-DSC
+
+TimeCreated                     Id LevelDisplayName Message                                                                                           
+-----------                     -- ---------------- -------                                                                                           
+6/23/2016 1:36:53 AM          4312 Information      The DscTimer is running LCM method PerformRequiredConfigurationChecks with the flag set to 5.     
+6/23/2016 1:36:53 AM          4343 Information      The DscTimer has successfully run LCM method PerformRequiredConfigurationChecks with flag 5.      
+6/23/2016 2:07:00 AM          4312 Information      The DscTimer is running LCM method PerformRequiredConfigurationChecks with the flag set to 5.     
+6/23/2016 2:07:01 AM          4343 Information      The DscTimer has successfully run LCM method PerformRequiredConfigurationChecks with flag 5.      
+6/23/2016 2:36:55 AM          4312 Information      The DscTimer is running LCM method PerformRequiredConfigurationChecks with the flag set to 5.     
+6/23/2016 2:36:56 AM          4343 Information      The DscTimer has successfully run LCM method PerformRequiredConfigurationChecks with flag 5.      
+6/23/2016 3:06:55 AM          4312 Information      The DscTimer is running LCM method PerformRequiredConfigurationChecks with the flag set to 5.     
+6/23/2016 3:06:55 AM          4343 Information      The DscTimer has successfully run LCM method PerformRequiredConfigurationChecks with flag 5.      
+6/23/2016 3:36:55 AM          4312 Information      The DscTimer is running LCM method PerformRequiredConfigurationChecks with the flag set to 5.     
+6/23/2016 3:36:55 AM          4343 Information      The DscTimer has successfully run LCM method PerformRequiredConfigurationChecks with flag 5.      
+6/23/2016 4:06:53 AM          4312 Information      The DscTimer is running LCM method PerformRequiredConfigurationChecks with the flag set to 5.     
+6/23/2016 4:06:53 AM          4343 Information      The DscTimer has successfully run LCM method PerformRequiredConfigurationChecks with flag 5.      
+6/23/2016 4:36:52 AM          4312 Information      The DscTimer is running LCM method PerformRequiredConfigurationChecks with the flag set to 5.     
+6/23/2016 4:36:53 AM          4343 Information      The DscTimer has successfully run LCM method PerformRequiredConfigurationChecks with flag 5.      
+6/23/2016 5:06:52 AM          4312 Information      The DscTimer is running LCM method PerformRequiredConfigurationChecks with the flag set to 5.     
+6/23/2016 5:06:53 AM          4343 Information      The DscTimer has successfully run LCM method PerformRequiredConfigurationChecks with flag 5.      
+6/23/2016 5:36:54 AM          4312 Information      The DscTimer is running LCM method PerformRequiredConfigurationChecks with the flag set to 5.     
+6/23/2016 5:36:54 AM          4343 Information      The DscTimer has successfully run LCM method PerformRequiredConfigurationChecks with flag 5.      
+6/23/2016 6:06:52 AM          4312 Information      The DscTimer is running LCM method PerformRequiredConfigurationChecks with the flag set to 5.     
+6/23/2016 6:06:53 AM          4343 Information      The DscTimer has successfully run LCM method PerformRequiredConfigurationChecks with flag 5.      
+6/23/2016 6:36:56 AM          4312 Information      The DscTimer is running LCM method PerformRequiredConfigurationChecks with the flag set to 5.     
+6/23/2016 6:36:57 AM          4343 Information      The DscTimer has successfully run LCM method PerformRequiredConfigurationChecks with flag 5.      
+6/23/2016 7:06:52 AM          4312 Information      The DscTimer is running LCM method PerformRequiredConfigurationChecks with the flag set to 5.     
+6/23/2016 7:06:53 AM          4343 Information      The DscTimer has successfully run LCM method PerformRequiredConfigurationChecks with flag 5.      
+6/23/2016 7:36:53 AM          4312 Information      The DscTimer is running LCM method PerformRequiredConfigurationChecks with the flag set to 5.     
+6/23/2016 7:36:54 AM          4343 Information      The DscTimer has successfully run LCM method PerformRequiredConfigurationChecks with flag 5.      
+6/23/2016 8:06:54 AM          4312 Information      The DscTimer is running LCM method PerformRequiredConfigurationChecks with the flag set to 5.
+```
 
 Idéalement, commencez par utiliser `Get-xDscOperation` pour répertorier les dernières exécutions de configuration DSC sur vos ordinateurs. Ensuite, vous pouvez examiner chaque opération (à l’aide de son ID de séquence ou de tâche) avec `Trace-xDscOperation` pour découvrir ce qu’elle a effectué en arrière-plan.
 
-## Mes ressources ne sont pas mises à jour : comment réinitialiser le cache
+### Obtention des événements d’un ordinateur distant
 
-Le moteur DSC met en cache les ressources implémentées comme module PowerShell pour des raisons d’efficacité. Toutefois, cela peut entraîner des problèmes quand vous créez et testez une ressource simultanément, car DSC charge la version mise en cache tant que le processus n’est pas redémarré. La seule façon pour que DSC charge la version la plus récente est d’arrêter explicitement le processus qui héberge le moteur DSC.
+Utilisez le paramètre `ComputerName` de l’applet de commande `Trace-xDscOperation` pour obtenir les détails des événements d’un ordinateur distant. Avant cela, vous devez créer une règle de pare-feu pour autoriser l’administration à distance sur l’ordinateur distant :
 
-De même, quand vous exécutez `Start-DscConfiguration`, une fois que vous avez ajouté et modifié une ressource personnalisée, la modification peut ne pas s’exécuter tant que l’ordinateur n’est pas redémarré. Ce comportement s’explique par le fait que DSC s’exécute dans le processus hôte du fournisseur WMI (WmiPrvSE) et qu’en général, il existe plusieurs instances de WmiPrvSE qui s’exécutent simultanément. Quand vous redémarrez, le processus hôte est redémarré et le cache est effacé.
+```powershell
+New-NetFirewallRule -Name "Service RemoteAdmin" -DisplayName "Remote" -Action Allow
+```
+Vous pouvez maintenant spécifier cet ordinateur dans votre appel à `Trace-xDscOperation` :
 
-Pour recycler la configuration et effacer le cache sans redémarrer l’ordinateur, vous devez arrêter, puis redémarrer le processus hôte. Vous pouvez le faire pour chaque instance : vous identifiez le processus, l’arrêtez et le redémarrez. Vous pouvez également utiliser `DebugMode`, comme illustré ci-dessous, pour recharger la ressource DSC PowerShell.
+```powershell
+PS C:\DiagnosticsTest> Trace-xDscOperation -ComputerName SRV2 -Credential Get-Credential -SequenceID 5
 
-Pour identifier le processus qui héberge le moteur DSC et l’arrêter pour chaque instance, vous pouvez répertorier les ID de processus de WmiPrvSE, qui héberge le moteur DSC. Ensuite, pour mettre à jour le fournisseur, arrêtez le processus WmiPrvSE à l’aide des commandes ci-dessous, puis exécutez **Start-DscConfiguration** de nouveau.
+ComputerName   EventType    TimeCreated           Message
+------------   ---------    -----------           -------
+SRV2   OPERATIONAL  6/24/2016 11:36:56 AM Operation Consistency Check or Pull started by user sid S-1-5-20 f...
+SRV2   ANALYTIC     6/24/2016 11:36:56 AM Deleting file from C:\Windows\System32\Configuration\DSCEngineCach...
+SRV2   OPERATIONAL  6/24/2016 11:36:56 AM Running consistency engine.
+SRV2   VERBOSE      6/24/2016 11:36:56 AM [SRV2]:                            [] Starting consistency...
+SRV2   ANALYTIC     6/24/2016 11:36:56 AM Applying configuration from C:\Windows\System32\Configuration\Curr...
+SRV2   ANALYTIC     6/24/2016 11:36:56 AM Parsing the configuration to apply.
+SRV2   OPERATIONAL  6/24/2016 11:36:56 AM  Resource execution sequence :: [WindowsFeature]DSCServiceFeature,...
+SRV2   VERBOSE      6/24/2016 11:36:56 AM [SRV2]: LCM:  [ Start  Resource ]  [[WindowsFeature]DSCSer...
+SRV2   ANALYTIC     6/24/2016 11:36:56 AM Executing operations for PS DSC resource MSFT_RoleResource with re...
+SRV2   VERBOSE      6/24/2016 11:36:56 AM [SRV2]: LCM:  [ Start  Test     ]  [[WindowsFeature]DSCSer...
+SRV2   VERBOSE      6/24/2016 11:36:56 AM [SRV2]:                            [[WindowsFeature]DSCSer...
+SRV2   VERBOSE      6/24/2016 11:36:56 AM [SRV2]:                            [[WindowsFeature]DSCSer...
+SRV2   VERBOSE      6/24/2016 11:36:56 AM [SRV2]: LCM:  [ End    Test     ]  [[WindowsFeature]DSCSer...
+SRV2   VERBOSE      6/24/2016 11:36:56 AM [SRV2]: LCM:  [ End    Resource ]  [[WindowsFeature]DSCSer...
+SRV2   VERBOSE      6/24/2016 11:36:56 AM [SRV2]: LCM:  [ Start  Resource ]  [[xDSCWebService]PSDSCP...
+SRV2   ANALYTIC     6/24/2016 11:36:56 AM Executing operations for PS DSC resource MSFT_xDSCWebService with ...
+SRV2   VERBOSE      6/24/2016 11:36:56 AM [SRV2]: LCM:  [ Start  Test     ]  [[xDSCWebService]PSDSCP...
+SRV2   VERBOSE      6/24/2016 11:36:56 AM [SRV2]:                            [[xDSCWebService]PSDSCP...
+SRV2   VERBOSE      6/24/2016 11:36:56 AM [SRV2]:                            [[xDSCWebService]PSDSCP...
+SRV2   VERBOSE      6/24/2016 11:36:56 AM [SRV2]:                            [[xDSCWebService]PSDSCP...
+SRV2   VERBOSE      6/24/2016 11:36:56 AM [SRV2]:                            [[xDSCWebService]PSDSCP...
+SRV2   VERBOSE      6/24/2016 11:36:56 AM [SRV2]:                            [[xDSCWebService]PSDSCP...
+SRV2   VERBOSE      6/24/2016 11:36:56 AM [SRV2]: LCM:  [ End    Test     ]  [[xDSCWebService]PSDSCP...
+SRV2   VERBOSE      6/24/2016 11:36:56 AM [SRV2]: LCM:  [ End    Resource ]  [[xDSCWebService]PSDSCP...
+SRV2   VERBOSE      6/24/2016 11:36:56 AM [SRV2]:                            [] Consistency check co...
+SRV2   ANALYTIC     6/24/2016 11:36:56 AM Deleting file from C:\Windows\System32\Configuration\DSCEngineCach...
+SRV2   OPERATIONAL  6/24/2016 11:36:56 AM Consistency engine was run successfully.
+SRV2   OPERATIONAL  6/24/2016 11:36:56 AM Job runs under the following LCM setting. ...
+SRV2   OPERATIONAL  6/24/2016 11:36:56 AM Operation Consistency Check or Pull completed successfully.
+SRV2   ANALYTIC     6/24/2016 11:36:56 AM Deleting file from C:\Windows\System32\Configuration\DSCEngineCach...
+
+
+
+## My resources won’t update: How to reset the cache
+
+The DSC engine caches resources implemented as a PowerShell module for efficiency purposes. However, this can cause problems when you are authoring a resource and testing it simultaneously because DSC will load the cached version until the process is restarted. The only way to make DSC load the newer version is to explicitly kill the process hosting the DSC engine.
+
+Similarly, when you run `Start-DscConfiguration`, after adding and modifying a custom resource, the modification may not execute unless, or until, the computer is rebooted. This is because DSC runs in the WMI Provider Host Process (WmiPrvSE), and usually, there are many instances of WmiPrvSE running at once. When you reboot, the host process is restarted and the cache is cleared.
+
+To successfully recycle the configuration and clear the cache without rebooting, you must stop and then restart the host process. This can be done on a per instance basis, whereby you identify the process, stop it, and restart it. Or, you can use `DebugMode`, as demonstrated below, to reload the PowerShell DSC resource.
+
+To identify which process is hosting the DSC engine and stop it on a per instance basis, you can list the process ID of the WmiPrvSE which is hosting the DSC engine. Then, to update the provider, stop the WmiPrvSE process using the commands below, and then run **Start-DscConfiguration** again.
 
 ```powershell
 ###
@@ -457,6 +627,7 @@ onlyProperty                            PSComputerName
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

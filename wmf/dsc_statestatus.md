@@ -26,9 +26,7 @@ Le tableau ci-dessous illustre les propriétés d’état et de statut résultan
 | r, F                            | PendingReboot        | Opération réussie    | $true         | $null                        | r                              |
 
 ^
-S<sub>i</sub> : série de ressources appliquée avec succès
-F<sub>i</sub> : série de ressources appliquée sans succès
-r : ressource qui nécessite un redémarrage
+S<sub>i</sub> : série de ressources appliquée avec succès F<sub>i</sub> : série de ressources appliquée sans succès r : ressource qui nécessite un redémarrage
 \*
 
 ```powershell
@@ -105,4 +103,8 @@ LCM State: Idle,
 LCM State: Busy, LCM is performing a consistency check.
 LCM State: Idle,
 ```
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
+
+

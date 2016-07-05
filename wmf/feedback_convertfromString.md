@@ -73,17 +73,16 @@ Placez des accolades autour des données que vous souhaitez extraire, en leur do
 
 > 2 \[C:\\temp\]
 >
-> &gt;&gt; Get-Content .\\addresses.output.txt | ConvertFrom-String -TemplateFile .\\addresses.template.txt |
-> &gt;&gt;&gt; Format-Table -Auto
+> &gt;&gt; Get-Content .\\addresses.output.txt | ConvertFrom-String -TemplateFile .\\addresses.template.txt | &gt;&gt;&gt; Format-Table -Auto
 >
 > ExtentText                     Name               City     State
 > ----------                     ----               ----     -----
-> Ana Trujillo...                Ana Trujillo       Redmond  WA
-> Antonio Moreno...              Antonio Moreno     Renton   WA
-> Thomas Hardy...                Thomas Hardy       Seattle  WA
-> Christina Berglund...          Christina Berglund Redmond  WA
-> Hanna Moos...                  Hanna Moos         Puyallup WA
+> Ana Trujillo...                Ana Trujillo       Redmond  WA Antonio Moreno...              Antonio Moreno     Renton   WA Thomas Hardy...                Thomas Hardy       Seattle  WA Christina Berglund...          Christina Berglund Redmond  WA Hanna Moos...                  Hanna Moos         Puyallup WA
 
 Pour effectuer des manipulations de données supplémentaires sur le texte extrait, la propriété **ExtentText** capture le texte brut à partir duquel l’enregistrement a été extrait. Pour nous faire part de vos commentaires sur cette fonctionnalité ou pour partager du contenu pour lequel vous avez des difficultés à écrire des exemples, envoyez-nous un message à l’adresse <psdmfb@microsoft.com>.
 
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
+
+

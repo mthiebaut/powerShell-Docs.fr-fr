@@ -81,4 +81,8 @@ Pour afficher des certificats de chiffrement de document dans le fournisseur de 
 
 ```powershell
 dir -DocumentEncryptionCert
-```<!--HONumber=Mar16_HO2-->
+```
+
+<!--HONumber=Jun16_HO4-->
+
+
