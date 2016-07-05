@@ -1,6 +1,6 @@
 # Interagir avec des liens symboliques à l’aide des applets de commande Item améliorées
 
-Pour prendre en charge les liens symboliques, **\*-Item** et quelques applets de commande associées ont été étendues. Vous pouvez désormais créer des liens symboliques sur une ligne unique et simple avec **New-Item**. Vous remarquerez que les applets de commande en rapport avec Item (**Remove-Item, Get-ChildItem**) se comportent en grande partie comme auparavant.
+Pour prendre en charge les liens symboliques, **\*Item** et quelques applets de commande associées ont été étendues. Vous pouvez désormais créer des liens symboliques sur une ligne unique et simple avec **New-Item**. Vous remarquerez que les applets de commande en rapport avec Item (**Remove-Item, Get-ChildItem**) se comportent en grande partie comme auparavant.
 
 Voici quelques cas d’usage des nouvelles fonctionnalités :
 
@@ -113,4 +113,8 @@ Remove-Item C:\Temp\MySymLinkDir
 # Removes the files in the target directory and MySymLinkDir
 Remove-Item C:\Temp\MySymLinkDir -Force
 ```
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
+
+

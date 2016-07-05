@@ -1,8 +1,20 @@
+---
+title: core powershell
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.sourcegitcommit: cd6e130d9f6f70449084d25eb386a3c0a2b84737
+ms.openlocfilehash: 4c22e1a2543690a971836813cb32ace74ababb4a
+
+---
+
 #  PowerShell Core
 Cette section contient tous les documents de référence et guides détaillés sur PowerShell.  
 Contenu de cette section :
--  [Guide de script PowerShell](scripting-guide.md)
--  [Guide du langage PowerShell](language-guide.md)
 -  [Guide des modules PowerShell Core](core-modules.md)
 -  [PowerShell Integrated Scripting Environment (ISE) - Guide](ise-guide.md)
 -  [Guide de la fenêtre de console PowerShell](console-guide.md)
@@ -12,6 +24,8 @@ Contenu de cette section :
 -  [Glossaire PowerShell](../Windows-PowerShell-Glossary.md)
 
 
-<!--HONumber=May16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
 
 

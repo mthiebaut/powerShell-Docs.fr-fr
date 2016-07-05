@@ -4,8 +4,7 @@ PowerShell 5.0 offre les nouveaux éléments de langage suivants dans Windows P
 
 ## Mot clé classe
 
-Le mot clé **class** définit une nouvelle classe. Il s’agit d’un véritable type .NET Framework. 
-Les membres de la classe sont publics, mais uniquement dans l’étendue du module.
+Le mot clé **class** définit une nouvelle classe. Il s’agit d’un véritable type .NET Framework. Les membres de la classe sont publics, mais uniquement dans l’étendue du module.
 Vous ne pouvez pas faire référence au nom de type sous forme de chaîne (par exemple, `New-Object` ne fonctionne pas), et dans cette version, vous ne pouvez pas utiliser de littéral de type (par exemple, `[MyClass]`) en dehors du fichier de script/module dans lequel la classe est définie.
 
 ```powershell
@@ -80,7 +79,7 @@ Tous les membres sont publics.
 
 ## Constructeurs et instanciation
 
-Les classes Windows PowerShell peuvent avoir des constructeurs. Ils ont le même nom que leur classe. Les constructeurs peuvent être surchargés. Les constructeurs statiques sont pris en charge. Les propriétés avec des expressions d’initialisation sont initialisées avant l’exécution du code dans un constructeur. Les propriétés statiques sont initialisées avant le corps d’un constructeur statique, et les propriétés d’instance sont initialisées avant le corps du constructeur non statique. Actuellement, il n’existe aucune syntaxe pour appeler un constructeur à partir d’un autre constructeur (comme la syntaxe C\# : « : this() »). La solution de contournement consiste à définir une méthode Init commune. 
+Les classes Windows PowerShell peuvent avoir des constructeurs. Ils ont le même nom que leur classe. Les constructeurs peuvent être surchargés. Les constructeurs statiques sont pris en charge. Les propriétés avec des expressions d’initialisation sont initialisées avant l’exécution du code dans un constructeur. Les propriétés statiques sont initialisées avant le corps d’un constructeur statique, et les propriétés d’instance sont initialisées avant le corps du constructeur non statique. Actuellement, il n’existe aucune syntaxe pour appeler un constructeur à partir d’un autre constructeur (comme la syntaxe C\# « : this() »). La solution de contournement consiste à définir une méthode Init commune. 
 
 Voici comment instancier des classes dans cette version.
 
@@ -200,8 +199,7 @@ $v -eq $d # true
 
 ## Exemple de bout en bout
 
-L’exemple suivant crée plusieurs classes personnalisées pour implémenter un langage DSL (Dynamic Style Sheet) HTML. 
-Ensuite, l’exemple ajoute des fonctions d’assistance pour créer des types d’éléments spécifiques dans le cadre de la classe d’éléments, tels que des tables et des styles de titre, car les types ne peuvent pas être utilisés en dehors de l’étendue d’un module.
+L’exemple suivant crée plusieurs classes personnalisées pour implémenter un langage DSL (Dynamic Style Sheet) HTML. Ensuite, l’exemple ajoute des fonctions d’assistance pour créer des types d’éléments spécifiques dans le cadre de la classe d’éléments, tels que des tables et des styles de titre, car les types ne peuvent pas être utilisés en dehors de l’étendue d’un module.
 
 ```powershell
 # Classes that define the structure of the document
@@ -326,6 +324,6 @@ function Style
 function Html ([HTML] $doc) { return $doc }
 ```
 
-<!--HONumber=Apr16_HO5-->
+<!--HONumber=Jun16_HO4-->
 
 
