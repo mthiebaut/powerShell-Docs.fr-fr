@@ -158,12 +158,6 @@
   "a09f228cf232ff9d7cf2ba20c73808fd92c9d560": [
     "dsc\\troubleshooting.md"
   ],
-  "c4ef56848e95dafe0addfdf29a51e5a795518eee": [
-    "dsc\\troubleshooting.md"
-  ],
-  "95e75bd95552a9bcfa41adee74ef5ceacb3ea33b": [
-    "dsc\\troubleshooting.md"
-  ],
   "5c7878bdfc8a3f118b569a9e43be6c7e4333ad2c": [
     "dsc\\userResource.md"
   ],
@@ -215,19 +209,10 @@
   "282dceabb24805173208860923cba4a96c9261ce": [
     "wmf\\dsc_classbasedresource.md"
   ],
-  "7e25c8195c153a2fda21fac320c2750d51678b6a": [
-    "wmf\\dsc_classbasedresource.md"
-  ],
   "00d17803fd93cd7492be149f8c6335c4a7e1d42b": [
     "wmf\\dsc_confighelp.md"
   ],
-  "0c31a5571d8262c81e748f1a3368361ea4e9a700": [
-    "wmf\\dsc_confighelp.md"
-  ],
   "cd9360babcd367c621455b0fce6316137fd83a3d": [
-    "wmf\\dsc_directaccess.md"
-  ],
-  "dff9d6cfd92efac3f7a5f68b4ebe37719dbce111": [
     "wmf\\dsc_directaccess.md"
   ],
   "20dee3be52962c04f04666893eed4a5ea1c27d0a": [
@@ -236,13 +221,7 @@
   "2c2aaa65ee09f0aade41fe0ca4088036c63dea2a": [
     "wmf\\dsc_freqnomultiple.md"
   ],
-  "34a0df793382c9bc882bcd94f8fdd1b426814fd4": [
-    "wmf\\dsc_freqnomultiple.md"
-  ],
   "3ff2fc261e539b230f30dc5776533ae09807f008": [
-    "wmf\\dsc_getconfigurationstatus.md"
-  ],
-  "290c205d4e88b23974b126ea8157442e6cbf740f": [
     "wmf\\dsc_getconfigurationstatus.md"
   ],
   "a257f792d39f360a2c9e638f42ffac5fed282b00": [
@@ -290,16 +269,10 @@
   "d9da7ea2674b0428118ec1585c705b90a886ca44": [
     "wmf\\dsc_repository.md"
   ],
-  "85b3c01a3bd6830be929734084abad14f0d3c971": [
-    "wmf\\dsc_repository.md"
-  ],
   "fa0f232c7ed02cb6358b1c181a40bab8a1e2e640": [
     "wmf\\dsc_resourcedebugging.md"
   ],
   "1c0bad4dab64c9fbd09be23df3d7b19913fa9511": [
-    "wmf\\dsc_runas.md"
-  ],
-  "d4919d80c1b1f8509b4e581768dd6f74e9d01f0d": [
     "wmf\\dsc_runas.md"
   ],
   "97cd3cb5658f3acabf4f980d1e3fa99fe84e0d04": [
@@ -318,9 +291,6 @@
     "wmf\\dsc_updateconfig.md"
   ],
   "e5017e8821d2cb11a270286e6896206805866300": [
-    "wmf\\dsc_waitfor.md"
-  ],
-  "24a680a5f41f6b6cb150226f347e90a2c5eafb25": [
     "wmf\\dsc_waitfor.md"
   ],
   "59206d28411ca6d4591cff5b3f158f4f5b78cc6a": [
