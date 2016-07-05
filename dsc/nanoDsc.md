@@ -1,12 +1,16 @@
 ---
-title:   Utilisation de DSC sur Nano Server
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: Utilisation de DSC sur Nano Server
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
+ms.openlocfilehash: 962941ba946a67256baf141bd195361c94a68f90
+
 ---
 
 # Utilisation de DSC sur Nano Server
@@ -121,14 +125,14 @@ Les fonctionnalités DSC suivantes ne sont pas disponibles sur Nano Server :
 
 ## Utilisation de ressources DSC personnalisées sur Nano Server
  
-En raison des ensembles limités d’API Windows et de bibliothèques CLR disponibles sur Nano Server, les ressources DSC qui fonctionnent sur la version CLR complète de Windows ne fonctionnent pas nécessairement sur Nano Server. 
-Effectuez les tests de bout en bout avant de déployer des ressources personnalisées DSC dans un environnement de production.
+En raison des ensembles limités d’API Windows et de bibliothèques CLR disponibles sur Nano Server, les ressources DSC qui fonctionnent sur la version CLR complète de Windows ne fonctionnent pas nécessairement sur Nano Server. Effectuez les tests de bout en bout avant de déployer des ressources personnalisées DSC dans un environnement de production.
 
 ## Voir aussi
 - [Prise en main de Nano Server](https://technet.microsoft.com/en-us/library/mt126167.aspx)
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

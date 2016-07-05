@@ -1,12 +1,16 @@
 ---
-title:  utiliser la console web Windows PowerShell
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
+title: utiliser la console web Windows PowerShell
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 02964dd763ccccbf27a963c0f8eef20aa23cc117
+
 ---
 
 #  Utiliser la console web Windows PowerShell
@@ -85,7 +89,7 @@ Pour utiliser la console web Accès Web Windows PowerShell, les navigateurs doiv
 
 ------------------------------------------------------------------------
 
-Votre administrateur Accès Web Windows PowerShell doit vous fournir une URL qui est l’adresse du site web de la passerelle Accès Web Windows PowerShell de votre organisation. Par défaut, l’adresse de ce site web est https://&lt;nom_serveur&gt;/pswa. Avant de vous connecter à Accès Web Windows PowerShell, vérifiez que vous disposez du nom ou de l’adresse IP de l’ordinateur distant que vous souhaitez gérer. Vous devez être un utilisateur autorisé sur l’ordinateur distant et celui-ci doit être configuré pour autoriser la gestion à distance. Pour plus d’informations sur la configuration de votre ordinateur pour autoriser la gestion à distance, consultez [Activer et utiliser des commandes distantes dans Windows PowerShell](https://technet.microsoft.com/magazine/ff700227.aspx). Le moyen le plus simple de configurer votre ordinateur pour autoriser la gestion à distance consiste à exécuter l’applet de commande **Enable-PSRemoting -force** sur l’ordinateur, dans une session Windows PowerShell qui a été ouverte avec des droits d’utilisateur élevés (**Exécuter en tant qu’administrateur**).
+Votre administrateur Accès Web Windows PowerShell doit vous fournir une URL qui est l’adresse du site web de la passerelle Accès Web Windows PowerShell de votre organisation. Par défaut, l’adresse de ce site web est https://&lt;nom\_serveur&gt;/pswa. Avant de vous connecter à Accès Web Windows PowerShell, vérifiez que vous disposez du nom ou de l’adresse IP de l’ordinateur distant que vous souhaitez gérer. Vous devez être un utilisateur autorisé sur l’ordinateur distant et celui-ci doit être configuré pour autoriser la gestion à distance. Pour plus d’informations sur la configuration de votre ordinateur pour autoriser la gestion à distance, consultez [Activer et utiliser des commandes distantes dans Windows PowerShell](https://technet.microsoft.com/magazine/ff700227.aspx). Le moyen le plus simple de configurer votre ordinateur pour autoriser la gestion à distance consiste à exécuter l’applet de commande **Enable-PSRemoting -force** sur l’ordinateur, dans une session Windows PowerShell qui a été ouverte avec des droits d’utilisateur élevés (**Exécuter en tant qu’administrateur**).
 
 ### Pour se connecter à Windows PowerShell Web Access
 
@@ -107,7 +111,7 @@ Votre administrateur Accès Web Windows PowerShell doit vous fournir une URL qui
     <td><ul>
     <li><p>Si l’ordinateur de destination est membre d’un groupe de travail, utilisez la syntaxe suivante pour fournir votre nom d’utilisateur et vous connecter à l’ordinateur : &lt;<em>nom_groupe_de_travail</em>&gt;\&lt;<em>nom_utilisateur</em>&gt;.</p></li>
     <li><p>Si l’ordinateur de destination est le serveur passerelle, vous pouvez spécifier <strong>localhost</strong> dans le champ <strong>Nom de l’ordinateur</strong>.</p></li>
-    <li><p>Si l’ordinateur de destination est le serveur passerelle et qu’il appartient à un groupe de travail, vous pouvez spécifier <strong>localhost</strong> dans le champ <strong>Nom de l’ordinateur</strong>, mais ne spécifiez pas localhost\&lt;<em>user_name</em>&gt; dans le champ <strong>Nom d’utilisateur</strong>. Vous devez utiliser &lt;<em>nom_groupe_de_travail</em>&gt;\&lt;<em>nom_utilisateur</em>&gt;.</p></li>
+    <li><p>Si l’ordinateur de destination est le serveur passerelle et qu’il appartient à un groupe de travail, vous pouvez spécifier <strong>localhost</strong> dans le champ <strong>Nom de l’ordinateur</strong>, mais ne spécifiez pas localhost\&lt;<em>nom_utilisateur</em>&gt; dans le champ <strong>Nom d’utilisateur</strong>. Vous devez utiliser &lt;<em>nom_groupe_de_travail</em>&gt;\&lt;<em>nom_utilisateur</em>&gt;.</p></li>
     </ul></td>
     </tr>
     </tbody>
@@ -117,7 +121,7 @@ Votre administrateur Accès Web Windows PowerShell doit vous fournir une URL qui
 
     En général, les informations d’identification que vous passez par le biais de la passerelle Accès Web Windows PowerShell sont identiques à celles reconnues par l’ordinateur distant que vous souhaitez gérer. Toutefois, si vous souhaitez utiliser des informations d’identification différentes pour gérer l’ordinateur spécifié à l’étape 2, développez la section **Paramètres de connexion facultatifs** et spécifiez les autres informations d’identification. Sinon, passez à l’étape 6.
 
-4.  Si l’administrateur Accès Web Windows PowerShell a créé une configuration de session personnalisée pour les utilisateurs d’Accès Web Windows PowerShell, tapez le nom de cette configuration se session dans le champ **Nom de la configuration**. Pour plus d’informations sur les configurations de sessions, consultez [about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx) sur le site web de Microsoft.
+4.  Si l’administrateur Accès Web Windows PowerShell a créé une configuration de session personnalisée pour les utilisateurs d’Accès Web Windows PowerShell, tapez le nom de cette configuration se session dans le champ **Nom de la configuration**. Pour plus d’informations sur les configurations de sessions, consultez [about\_Session\_Configurations](https://technet.microsoft.com/library/dd819508.aspx) sur le site web de Microsoft.
 
 5.  Conservez le **Type d’authentification** **Par défaut**, sauf indication contraire de l’administrateur Accès Web Windows PowerShell.
 
@@ -392,6 +396,7 @@ Les codes et les scripts développés par un tiers et en rapport à ce site doiv
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

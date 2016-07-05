@@ -1,12 +1,16 @@
 ---
-title:  installer et utiliser Accès Web Windows PowerShell
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
+title: "installer et utiliser Accès Web Windows PowerShell"
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: d2f78148402f06992f5f58cd40e8c4f624b5e4b5
+
 ---
 
 #  Installer et utiliser Accès Web Windows PowerShell
@@ -555,7 +559,7 @@ Les instructions données dans cette section concernent l’installation de l’
 
 15. Ouvrez le site web Accès Web Windows PowerShell.
 
-    Étant donné que le site web racine pointe vers le dossier Accès Web Windows PowerShell, le navigateur doit afficher la page de connexion Accès Web Windows PowerShell quand vous ouvrez https://&lt;*gateway\_server\_name*&gt;. Il n’est pas nécessaire d’ajouter **/pswa** à l’URL.
+    Étant donné que le site web racine pointe vers le dossier Accès Web Windows PowerShell, le navigateur doit afficher la page de connexion Accès Web Windows PowerShell quand vous ouvrez https://&lt; *gateway\_server\_name*&gt;. Il n’est pas nécessaire d’ajouter **/pswa** à l’URL.
 
     <table>
     <colgroup>
@@ -708,6 +712,7 @@ Les codes et les scripts développés par un tiers et en rapport à ce site doiv
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

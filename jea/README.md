@@ -1,23 +1,36 @@
+---
+description: 
+manager: dongill
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: powershell,cmdlet,jea
+ms.date: 2016-06-22
+title: Fichier Lisez-moi
+ms.technology: powershell
+ms.sourcegitcommit: 47593773fb0f34e0b52d35617522d7b1db7f48e6
+ms.openlocfilehash: 1cecf1b6bf5a55ed785c8ff43bdd4a0a41e96cd0
+
+---
+
 # Just Enough Administration
-Just Enough Administration (JEA) est la technologie de sécurité qui permet une administration déléguée de tout ce qui peut être géré avec PowerShell.
+Just Enough Administration (JEA) est une technologie de sécurité qui permet une administration déléguée de tout ce qui peut être géré avec PowerShell.
 Avec JEA, vous pouvez :
 - **Réduire le nombre d’administrateurs sur vos ordinateurs** en exploitant des comptes virtuels qui exécutent des actions privilégiées au nom d’utilisateurs normaux.
 - **Limiter les opérations réalisables par les utilisateurs** en spécifiant les applets de commande, fonctions et commandes externes qu’ils peuvent exécuter.
 - **Mieux comprendre ce que font vos utilisateurs** avec les transcriptions de « procuration de privilège » qui vous montrent exactement quelles commandes un utilisateur a exécutées pendant une session.
 
-Pourquoi est-ce important ?
+**Pourquoi est-ce important ?**  
 Prenez le scénario courant dans lequel vos serveurs DNS sont colocalisés avec vos contrôleurs de domaine Active Directory.
 Vos administrateurs DNS ont besoin de disposer de privilèges d’administrateur local pour résoudre les problèmes liés au serveur DNS, mais pour cela, vous devez les intégrer comme membres au groupe de sécurité « Administrateurs de domaine » disposant de privilèges très élevés.
-Ainsi, ils peuvent contrôler tout votre domaine et accéder à toutes les ressources situées sur cet ordinateur.
+Cette approche permet effectivement aux administrateurs DNS de contrôler tout votre domaine et d’accéder à toutes les ressources situées sur cet ordinateur.
 
 Avec JEA mis en place, vous pouvez configurer un rôle pour vos administrateurs DNS qui leur donne accès à toutes les commandes dont ils ont besoin pour réaliser leurs tâches, mais c’est tout.
-Cela signifie qu’ils peuvent facilement réparer un cache DNS empoisonné sans disposer de droits sur Active Directory, parcourir le système de fichiers ou exécuter des scripts potentiellement dangereux.
+Cela signifie que vous pouvez leur octroyer l’accès approprié pour réparer un cache DNS empoisonné sans leur donner par inadvertance des droits sur Active Directory, de parcourir le système de fichiers, ou d’exécuter des scripts potentiellement dangereux.
 Mieux encore, quand la session JEA est configurée pour utiliser des comptes virtuels privilégiés à usage unique, vos administrateurs DNS peuvent se connecter au serveur en utilisant des informations d’identification *non privilégiées* et quand même exécuter des commandes privilégiées.
 
-## Prise en main
-
-### Installation
-JEA est en cours de développement en même temps que l’imminente version 2016 de Windows Server et est disponible sur les versions antérieures de Windows par le biais de mises à jour Windows Management Framework.
+## Disponibilité
+JEA est en cours de développement en parallèle avec Windows Server 2016 et est disponible sur les versions antérieures de Windows par le biais de mises à jour Windows Management Framework.
 La version actuelle de JEA est disponible sur les plateformes suivantes :
 
 **Windows Server**
@@ -31,34 +44,43 @@ La version actuelle de JEA est disponible sur les plateformes suivantes :
 \* La prise en charge des comptes virtuels pendant les sessions JEA n’est pas disponible sur Windows Server 2008 R2 ou Windows 7 pour le moment.
 
 
-### Concepts fondamentaux
-**Qu’est-ce que JEA exactement ?**
+## Explorer le guide d’expérience
+Prêt à apprendre à créer, déployer et utiliser votre propre point de terminaison JEA ?
 
-JEA est une extension des [points de terminaison contraints](http://blogs.technet.com/b/heyscriptingguy/archive/2014/03/31/introduction-to-powershell-endpoints.aspx) PowerShell qui permet d’ajouter des définitions de rôle, des comptes virtuels et plusieurs autres améliorations pour faciliter encore plus le verrouillage de vos points de terminaison de gestion.
-Un point de terminaison JEA se compose d’un fichier de configuration de session PowerShell et d’un ou plusieurs fichiers de capacités de rôle.
+Ce guide vous permet de commencer rapidement avec un point de terminaison JEA prédéfini pour vous donner une idée de l’expérience utilisateur final, puis de créer un tout nouveau point de terminaison pour mieux illustrer des concepts comme les configurations de session et les capacités de rôle.
 
-**Que sont les fichiers de configuration de session et de capacités de rôle ?**
+1.  [Introduction](introduction.md)   
+Explique brièvement pourquoi JEA devrait vous intéresser
 
-Les fichiers de configuration de session PowerShell (.pssc) définissent *qui* peut se connecter à un point de terminaison PowerShell et *comment* il est configuré.
-C’est là que vous mappez des utilisateurs et groupes de sécurité sur des rôles de gestion spécifiques et que vous configurez des paramètres globaux comme les comptes virtuels et les stratégies de transcription.
-Les fichiers de configuration de session sont propres à chaque ordinateur, ce qui vous permet de contrôler l’accès ordinateur par ordinateur si vous le souhaitez.
+2.  [Conditions préalables](prerequisites.md)  
+Explique comment configurer votre environnement
 
-Les fichiers de capacités de rôle PowerShell (.psrc) définissent *ce que* les utilisateurs appartenant à un rôle sont en mesure de faire sur le système.
-Ils vous permettent de restreindre les applets de commande, fonctions, fournisseurs et programmes externes qu’utilisateur peut utiliser pendant sa session JEA.
-Les fichiers de capacités de rôle sont souvent génériques pour le rôle servi (administrateur DNS, support technique de niveau 1, audit d’inventaire en lecture seule, etc.) et ils appartiennent à des modules PowerShell, ce qui facilite leur partage au sein de votre environnement et avec d’autres personnes.
+3.  [Utilisation de JEA](using-jea.md)  
+Commence par vous faire comprendre l’expérience opérateur dans l’utilisation de JEA
 
-**Comment les comptes virtuels sont-ils exploités par JEA ?**
+4.  [Refaire la démo](remake-the-demo-endpoint.md)  
+Créer une configuration de session JEA ex nihilo
 
-Dans le fichier de configuration de session PowerShell, vous pouvez configurer des sessions JEA pour utiliser des comptes « d’identification » virtuels.
-Les comptes virtuels sont des comptes privilégiés à usage unique préparés pour l’utilisateur spécifique qui tente d’établir une connexion au cours de cette session spécifique dans le contexte d’exécution des commandes de l’utilisateur.
-Les comptes virtuels appartiennent au groupe de sécurité « Administrateurs » local par défaut, mais ils peuvent éventuellement être configurés pour n'appartenir qu’aux groupes de sécurité que vous spécifiez.
+5.  [Capacités de rôle](role-capabilities.md)  
+Découvrir comment personnaliser les fonctionnalités JEA avec des fichiers de capacités de rôle
 
-### Explorer le guide d’expérience
-Vous êtes prêt à créer votre premier point de terminaison JEA ?
-Consultez le [guide d’expérience JEA](jea-uide.md) pour apprendre à créer, déployer et utiliser votre propre point de terminaison JEA.
-Le guide vous assure une prise en main rapide d’un point de terminaison JEA prédéfini pour découvrir l’expérience utilisateur final, puis il vous oriente progressivement dans la création de toutes pièces de ce point de terminaison pour mieux expliquer les configurations de session et les capacités de rôle.
+6.  [De bout en bout - Active Directory](end-to-end---active-directory.md)  
+Créer un point de terminaison pour gérer Active Directory
 
-### Commencer à créer vos propres points de terminaison JEA
+7.  [Déploiement et maintenance de plusieurs ordinateurs](multi-machine-deployment-and-maintenance.md)  
+Découvrir comment le déploiement et la création évoluent avec l’échelle
+
+8.  [Création de rapports sur JEA](reporting-on-jea.md)  
+Découvrir comment auditer et créer des rapports sur toutes les actions et l’infrastructure JEA
+
+9.  Annexes
+  - [Concepts clés utilisés dans ce guide](key-concepts-used-throughout-this-guide.md)  
+  -  [Création d’un contrôleur de domaine](creating-a-domain-controller.md)  
+  -  [À propos de l’inscription sur liste noire](on-blacklisting.md)  
+  -  [Éléments à prendre en considération lors de la limitation des commandes](considerations-when-limiting-commands.md)  
+  -  [Pièges liés aux capacités de rôle](common-role-capability-pitfalls.md)
+
+## Commencer à créer vos propres points de terminaison JEA
 Il est facile de créer un point de terminaison JEA : tout ce dont vous avez besoin, c’est d’un système compatible JEA et d’un éditeur de texte (comme PowerShell ISE).
 Conseil utile pour démarrer : créez des fichiers squelettes à l’aide de `New-PSRoleCapabilityFile -Path <path>` et `New-PSSessionCapabilityFile -Path <Path>` sans aucun autre argument.
 Ces fichiers squelettes contiennent tous les champs de configuration applicables, ainsi que des commentaires utiles pour expliquer à quoi peut servir chaque champ.
@@ -67,6 +89,8 @@ Pour faciliter encore plus la création de points de terminaison JEA, consultez 
 La génération de capacités de rôle en fonction des journaux PowerShell est même prise en charge pour faciliter votre démarrage avec les commandes que vos utilisateurs exécutent régulièrement pour accomplir leur travail.
 
 
-<!--HONumber=Jun16_HO3-->
+
+
+<!--HONumber=Jun16_HO4-->
 
 
