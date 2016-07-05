@@ -1,17 +1,21 @@
 ---
-title:  Utilisation des installations de logiciels
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  51a12fe9-95f6-4ffc-81a5-4fa72a5bada9
+title: Utilisation des installations de logiciels
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 51a12fe9-95f6-4ffc-81a5-4fa72a5bada9
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 9f60be9bebe9dfaa98f495c8e9a9c0d8c2fa5cc2
+
 ---
 
 # Utilisation des installations de logiciels
-Les applications conçues pour utiliser Windows Installer sont accessibles via la classe WMI **Win32_Product**. Toutefois, certaines applications ne font pas appel à Windows Installer. Étant donné que Windows Installer offre la plus vaste palette de techniques standard associées aux applications installables, nous allons examiner principalement ces applications. En général, les applications qui utilisent d'autres routines d'installation ne sont pas gérées par Windows Installer. Les techniques spécifiques à employer avec ces applications dépendent du programme d'installation et des décisions prises par le développeur de l'application.
+Les applications conçues pour utiliser Windows Installer sont accessibles via la classe WMI **Win32\_Product**. Toutefois, certaines applications ne font pas appel à Windows Installer. Étant donné que Windows Installer offre la plus vaste palette de techniques standard associées aux applications installables, nous allons examiner principalement ces applications. En général, les applications qui utilisent d'autres routines d'installation ne sont pas gérées par Windows Installer. Les techniques spécifiques à employer avec ces applications dépendent du programme d'installation et des décisions prises par le développeur de l'application.
 
 > [!NOTE]
 > Dans la plupart des cas, les applications installées par copie des fichiers de l'application sur l'ordinateur ne peuvent pas être gérées au moyen des techniques présentées ici. Vous pouvez gérer ces applications en tant que fichiers et dossiers en utilisant les techniques présentées dans la section « Utilisation des fichiers et dossiers ».
@@ -28,7 +32,7 @@ Version           : 2.0.50727
 Caption           : Microsoft .NET Framework 2.0
 ```
 
-Pour afficher toutes les propriétés de l’objet Win32_Product, utilisez le paramètre Property des applets de commande de mise en forme, telle l’applet de commande Format-List, avec la valeur * (all).
+Pour afficher toutes les propriétés de l’objet Win32\_Product, utilisez le paramètre Property des applets de commande de mise en forme, telle l’applet de commande Format\-List, avec la valeur \* (all).
 
 ```
 PS> Get-WmiObject -Class Win32_Product -ComputerName . | Where-Object -FilterScript {$_.Name -eq "Microsoft .NET Framework 2.0"} | Format-List -Property *
@@ -46,13 +50,13 @@ SKUNumber         :
 Vendor            : Microsoft Corporation
 ```
 
-Vous pouvez également utiliser le paramètre **Get-WmiObject Filter** pour sélectionner uniquement Microsoft .NET Framework 2.0. Le filtre utilisé dans cette commande étant un filtre WMI, il utilise la syntaxe du langage de requêtes WMI (WQL), et non la syntaxe Windows PowerShell. À la place :
+Vous pouvez également utiliser le paramètre **Get\-WmiObject Filter** pour sélectionner uniquement Microsoft .NET Framework 2.0. Le filtre utilisé dans cette commande étant un filtre WMI, il utilise la syntaxe du langage de requêtes WMI (WQL), et non la syntaxe Windows PowerShell. À la place :
 
 ```
 Get-WmiObject -Class Win32_Product -ComputerName . -Filter "Name='Microsoft .NET Framework 2.0'"| Format-List -Property *
 ```
 
-Notez que les requêtes WQL utilisent fréquemment des caractères, tels que des espaces ou des signes d'égalité, qui ont une signification spéciale dans Windows PowerShell. Pour cette raison, il est préférable de toujours mettre la valeur du paramètre Filter entre guillemets. Vous pouvez également utiliser le caractère d’échappement de Windows PowerShell, à savoir l’accent grave (`), bien que cela n’améliore pas nécessairement la lisibilité. La commande suivante est équivalente à la précédente et retourne les mêmes résultats. Toutefois, des accents graves sont utilisés pour échapper les caractères spéciaux, ce qui évite de mettre la chaîne de filtre entre guillemets.
+Notez que les requêtes WQL utilisent fréquemment des caractères, tels que des espaces ou des signes d'égalité, qui ont une signification spéciale dans Windows PowerShell. Pour cette raison, il est préférable de toujours mettre la valeur du paramètre Filter entre guillemets. Vous pouvez également utiliser le caractère d’échappement de Windows PowerShell, à savoir l’accent grave (\`), bien que cela n’améliore pas nécessairement la lisibilité. La commande suivante est équivalente à la précédente et retourne les mêmes résultats. Toutefois, des accents graves sont utilisés pour échapper les caractères spéciaux, ce qui évite de mettre la chaîne de filtre entre guillemets.
 
 ```
 Get-WmiObject -Class Win32_Product -ComputerName . -Filter Name`=`'Microsoft` .NET` Framework` 2.0`' | Format-List -Property *
@@ -73,7 +77,7 @@ IdentifyingNumber : {FCE65C4E-B0E8-4FBD-AD16-EDCBE6CD591F}
 ...
 ```
 
-Enfin, pour obtenir uniquement les noms des applications installées, une instruction **Format-Wide** simplifie la sortie :
+Enfin, pour obtenir uniquement les noms des applications installées, une instruction **Format\-Wide** simplifie la sortie :
 
 ```
 Get-WmiObject -Class Win32_Product -ComputerName .  | Format-Wide -Column 1
@@ -84,7 +88,7 @@ Si nous disposons de plusieurs méthodes pour examiner les applications faisant 
 ### Affichage de la liste de toutes les applications non installables
 Bien qu'aucune méthode ne garantisse l'identification de toutes les applications présentes sur un système, il est possible de trouver tous les programmes répertoriés dans la boîte de dialogue Ajout/Suppression de programmes. Cette dernière recherche les applications dans la clé de Registre suivante :
 
-**HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall**.
+**HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall**.
 
 Nous pouvons également examiner cette clé pour trouver des applications. Pour faciliter l'affichage de la clé Uninstall, nous pouvons mapper un lecteur Windows PowerShell à cet emplacement de Registre :
 
@@ -97,7 +101,7 @@ Uninstall  Registry      HKEY_LOCAL_MACHINE\SOFTWARE\Micr...
 ```
 
 > [!NOTE]
-> Le lecteur **HKLM:** étant mappé à la racine de **HKEY_LOCAL_MACHINE**, nous utilisons ce lecteur dans le chemin d’accès à la clé Uninstall. Au lieu d’utiliser **HKLM:**, nous pourrions recourir à **HKLM** ou à ** HKEY_LOCAL_MACHINE** pour spécifier le chemin d’accès au Registre. L’avantage d’utiliser un lecteur de Registre existant, c’est que nous pouvons utiliser la saisie semi-automatique via la touche Tab pour remplir les noms des clés, ce qui nous évite de les taper.
+> Le lecteur **HKLM:** étant mappé à la racine de **HKEY\_LOCAL\_MACHINE**, nous utilisons ce lecteur dans le chemin d’accès à la clé Uninstall. Au lieu d’utiliser **HKLM:**, nous pourrions recourir à **HKLM** ou à ** HKEY\_LOCAL\_MACHINE** pour spécifier le chemin d’accès au Registre. L’avantage d’utiliser un lecteur de Registre existant, c’est que nous pouvons utiliser la saisie semi\-automatique via la touche Tab pour remplir les noms des clés, ce qui nous évite de les taper.
 
 Nous disposons désormais d'un lecteur nommé « Uninstall » qui peut servir à rechercher rapidement et facilement des installations d'applications. Nous pouvons trouver le nombre d’applications installées en comptant le nombre de clés de Registre dans le lecteur Windows PowerShell Uninstall: :
 
@@ -106,14 +110,14 @@ PS> (Get-ChildItem -Path Uninstall:).Count
 459
 ```
 
-Nous pouvons affiner cette liste d’applications à l’aide de diverses techniques, la première d’entre elles étant **Get-ChildItem**. Pour obtenir la liste des applications et les enregistrer dans la variable **$UninstallableApplications**, utilisez la commande suivante :
+Nous pouvons affiner cette liste d’applications à l’aide de diverses techniques, la première d’entre elles étant **Get\-ChildItem**. Pour obtenir la liste des applications et les enregistrer dans la variable **$UninstallableApplications**, utilisez la commande suivante :
 
 ```
 $UninstallableApplications = Get-ChildItem -Path Uninstall:
 ```
 
 > [!NOTE]
-> Nous utilisons ici un nom de variable long par souci de clarté. Dans la réalité, il est inutile d'utiliser des noms longs. Bien que vous puissiez utiliser la saisie semi-automatique via la touche Tab pour les noms de variable, vous pouvez également utiliser des noms contenant 1 ou 2 caractères pour aller plus vite. Des noms descriptifs plus longs sont particulièrement utiles quand vous développez du code destiné à être réutilisé.
+> Nous utilisons ici un nom de variable long par souci de clarté. Dans la réalité, il est inutile d'utiliser des noms longs. Bien que vous puissiez utiliser la saisie semi\-automatique via la touche Tab pour les noms de variable, vous pouvez également utiliser des noms contenant 1 ou 2 caractères pour aller plus vite. Des noms descriptifs plus longs sont particulièrement utiles quand vous développez du code destiné à être réutilisé.
 
 Pour afficher les valeurs des entrées de Registre dans les clés de Registre sous Uninstall, utilisez la méthode GetValue des clés de Registre. La valeur de la méthode est le nom de l'entrée de Registre.
 
@@ -138,11 +142,12 @@ SKC  VC Name                           Property
 ```
 
 ### Installation d'applications
-Vous pouvez utiliser la classe **Win32_Product** pour installer, localement ou à distance, des packages Windows Installer.
+Vous pouvez utiliser la classe **Win32\_Product** pour installer, localement ou à distance, des packages Windows Installer.
 
-> [!NOTE] Dans Windows Vista, Windows Server 2008 et versions ultérieures de Windows, vous devez démarrer Windows PowerShell avec l’option « Exécuter en tant qu’administrateur » pour installer une application.
+> [!NOTE]
+> Dans Windows Vista, Windows Server 2008 et versions ultérieures de Windows, vous devez démarrer Windows PowerShell avec l'option « Exécuter en tant qu'administrateur » pour installer une application.
 
-Pour effectuer une installation à distance, utilisez un chemin d'accès réseau UNC (Universal Naming Convention) pour spécifier le chemin d'accès au package .msi, car le sous-système WMI ne prend pas en charge les chemins d'accès Windows PowerShell. Par exemple, pour installer le package NewPackage.msi situé dans le partage réseau \AppServ\dsp sur l’ordinateur distant PC01, tapez la commande suivante à l’invite Windows PowerShell :
+Pour effectuer une installation à distance, utilisez un chemin d'accès réseau UNC (Universal Naming Convention) pour spécifier le chemin d'accès au package .msi, car le sous-système WMI ne prend pas en charge les chemins d'accès Windows PowerShell. Par exemple, pour installer le package NewPackage.msi situé dans le partage réseau \\\\AppServ\\dsp sur l’ordinateur distant PC01, tapez la commande suivante à l’invite Windows PowerShell :
 
 ```
 (Get-WMIObject -ComputerName PC01 -List | Where-Object -FilterScript {$_.Name -eq "Win32_Product"}).Install(\\AppSrv\dsp\NewPackage.msi)
@@ -180,6 +185,7 @@ Pour mettre à niveau une application, vous devez connaître son nom et le chemi
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,20 +1,24 @@
 ---
-title:  Création d’objets .NET et COM (New Object) 
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  2057b113-efeb-465e-8b44-da2f20dbf603
+title: "Création d’objets .NET et COM (New Object)"
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 2057b113-efeb-465e-8b44-da2f20dbf603
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: e986e85a5d7416d8deaec06c0784263ee09fc9ff
+
 ---
 
 # Création d’objets .NET et COM (New-Object)
 Il existe des composants logiciels avec des interfaces COM et .NET Framework, qui vous permettent d’effectuer de nombreuses tâches d’administration système. Windows PowerShell permet d’utiliser ces composants. Vous n’êtes donc pas limité aux tâches exécutables à l’aide d’applets de commande. La plupart des applets de commande dans la version initiale de Windows PowerShell ne fonctionnent pas sur des ordinateurs distants. Nous allons expliquer comment contourner cette limitation lors de la gestion des journaux des événements à l’aide de la classe .NET Framework **System.Diagnostics.EventLog** directement à partir de Windows PowerShell.
 
-### Utilisation de l’applet de commande New-Object pour l’accès au journal des événements
-La bibliothèque de classes .NET Framework inclut une classe nommée **System.Diagnostics.EventLog** qui permet de gérer les journaux des événements. Vous pouvez créer une nouvelle instance d’une classe .NET Framework en utilisant l’applet de commande **New-Object** avec le paramètre **TypeName**. Par exemple, la commande suivante crée une référence de journal des événements :
+### Utilisation de l’applet de commande New\-Object pour l’accès au journal des événements
+La bibliothèque de classes .NET Framework inclut une classe nommée **System.Diagnostics.EventLog** qui permet de gérer les journaux des événements. Vous pouvez créer une nouvelle instance d’une classe .NET Framework en utilisant l’applet de commande **New\-Object** avec le paramètre **TypeName**. Par exemple, la commande suivante crée une référence de journal des événements :
 
 ```
 PS> New-Object -TypeName System.Diagnostics.EventLog
@@ -23,10 +27,10 @@ PS> New-Object -TypeName System.Diagnostics.EventLog
   ------ ------ --------------        ------- ----
 ```
 
-Bien que la commande a créé une instance de la classe EventLog, l’instance n’inclut pas de données. Cela est dû au fait que nous n’avons pas spécifié de journal des événements spécifique. Comment obtenir un journal des événements réel ?
+Même si la commande a créé une instance de la classe EventLog, l’instance n’inclut pas de données. Cela est dû au fait que nous n’avons pas spécifié de journal des événements spécifique. Comment obtenir un journal des événements réel ?
 
-#### Utilisation de constructeurs avec l’applet de commande New-Object
-Pour faire référence à un journal des événements spécifique, vous devez spécifier son nom. L’applet de commande **New-Object** a un paramètre **ArgumentList**. Les arguments que vous passez en tant que valeurs pour ce paramètre sont utilisés par une méthode spéciale de démarrage de l’objet. La méthode est appelée *constructeur*, car elles est utilisée pour construire l’objet. Par exemple, pour obtenir une référence au journal des applications, vous spécifiez la chaîne « Application » en tant qu’argument :
+#### Utilisation de constructeurs avec l’applet de commande New\-Object
+Pour faire référence à un journal des événements spécifique, vous devez spécifier son nom. L’applet de commande **New\-Object** a un paramètre **ArgumentList**. Les arguments que vous passez en tant que valeurs pour ce paramètre sont utilisés par une méthode spéciale de démarrage de l’objet. La méthode est appelée *constructeur*, car elles est utilisée pour construire l’objet. Par exemple, pour obtenir une référence au journal des applications, vous spécifiez la chaîne « Application » en tant qu’argument :
 
 ```
 PS> New-Object -TypeName System.Diagnostics.EventLog -ArgumentList Application
@@ -58,8 +62,8 @@ PS> $AppLog
   16,384      7 OverwriteOlder          2,160 Application
 ```
 
-#### Accès à un journal des événements à distance avec New-Object
-Les commandes utilisées dans la section précédente ciblent l’ordinateur local. L’applet de commande **Get-EventLog** peut faire cela. Pour accéder au journal des applications sur un ordinateur distant, vous devez fournir le nom du journal et un nom d’ordinateur (ou une adresse IP) en tant qu’arguments.
+#### Accès à un journal des événements à distance avec New\-Object
+Les commandes utilisées dans la section précédente ciblent l’ordinateur local. L’applet de commande **Get\-EventLog** peut faire cela. Pour accéder au journal des applications sur un ordinateur distant, vous devez fournir le nom du journal et un nom d’ordinateur (ou une adresse IP) en tant qu’arguments.
 
 ```
 PS> $RemoteAppLog = New-Object -TypeName System.Diagnostics.EventLog Application,192.168.1.81
@@ -73,7 +77,7 @@ PS> $RemoteAppLog
 Maintenant que nous avons une référence à un journal des événements stocké dans la variable $RemoteAppLog, quelles tâches pouvons-nous effectuer sur celui-ci ?
 
 #### Effacement d’un journal des événements avec des méthodes d’objet
-Les objets ont souvent des méthodes associées qui peuvent être appelées pour effectuer des tâches. L’applet de commande **Get-Member** permet d’afficher les méthodes associées à un objet. La commande suivante et la sortie sélectionnée affichent certaines des méthodes de la classe EventLog :
+Les objets ont souvent des méthodes associées qui peuvent être appelées pour effectuer des tâches. L’applet de commande **Get\-Member** permet d’afficher les méthodes associées à un objet. La commande suivante et la sortie sélectionnée affichent certaines des méthodes de la classe EventLog :
 
 ```
 PS> $RemoteAppLog | Get-Member -MemberType Method
@@ -112,10 +116,10 @@ PS> $RemoteAppLog
      512      7 OverwriteOlder              0 Application
 ```
 
-### Création d’objets COM avec New-Object
-L’applet de commande **New-Object** permet d’utiliser des composants COM (Component Object Model). Les composants vont des différentes bibliothèques incluses dans l’environnement d’exécution de scripts WSH (Windows Script Host) aux applications ActiveX telles qu’Internet Explorer qui sont installées sur la plupart des systèmes.
+### Création d’objets COM avec New\-Object
+L’applet de commande **New\-Object** permet d’utiliser des composants COM (Component Object Model). Les composants vont des différentes bibliothèques incluses dans l’environnement d’exécution de scripts WSH (Windows Script Host) aux applications ActiveX telles qu’Internet Explorer qui sont installées sur la plupart des systèmes.
 
-L’applet de commande **New-Object** utilise des wrappers RCW (Runtime-Callable Wrappers) .NET Framework pour créer des objets COM. Elle est donc sujette aux mêmes limitations que .NET Framework lors de l’appel d’objets COM. Pour créer un objet COM, vous devez spécifier le paramètre **ComObject** avec l’identificateur programmatique, ou *ProgId*, de la classe COM que vous souhaitez utiliser. Une description complète des limitations de l’utilisation de COM et de la détermination des ProgID disponibles sur un système dépasserait la portée de ce guide, mais la plupart des objets bien connus d’environnements tels que WSH peuvent être utilisés dans Windows PowerShell.
+L’applet de commande **New\-Object** utilise des wrappers RCW (Runtime\-Callable Wrappers) .NET Framework pour créer des objets COM. Elle est donc sujette aux mêmes limitations que le .NET Framework lors de l’appel d’objets COM. Pour créer un objet COM, vous devez spécifier le paramètre **ComObject** avec l’identificateur programmatique, ou *ProgId*, de la classe COM que vous souhaitez utiliser. Une description complète des limitations de l’utilisation de COM et de la détermination des ProgID disponibles sur un système dépasserait la portée de ce guide, mais la plupart des objets connus d’environnements tels que WSH peuvent être utilisés dans Windows PowerShell.
 
 Vous pouvez créer les objets WSH en spécifiant les ProgID suivants : **WScript.Shell**, **WScript.Network**, **Scripting.Dictionary**, et **Scripting.FileSystemObject**. Les commandes suivantes créent ces objets :
 
@@ -135,7 +139,7 @@ Une tâche exécutable rapidement avec un objet COM est la création d’un racc
 $WshShell = New-Object -ComObject WScript.Shell
 ```
 
-L’applet de commande Get-Member fonctionnant avec des objets COM, vous pouvez explorer les membres de l’objet en tapant ce qui suit :
+L’applet de commande Get\-Member fonctionnant avec des objets COM, vous pouvez explorer les membres de l’objet en tapant ce qui suit :
 
 ```
 PS> $WshShell | Get-Member
@@ -149,7 +153,7 @@ CreateShortcut           Method                IDispatch CreateShortcut (str...
 ...
 ```
 
-L’applet de commande **Get-Member** dispose d’un paramètre facultatif, **InputObject**, que vous pouvez utiliser à la place d’un piping pour fournir l’entrée à **Get-Member**. Vous obtiendriez la même sortie que celle indiquée ci-dessus si vous utilisez à la place la commande **Get-Member -InputObject $WshShell**. Si vous utilisez **InputObject**, l’argument est traité comme un seul élément. Cela signifie que, si vous disposez de plusieurs objets dans une variable, l’applet de commande **Get-Member** les traite comme un tableau d’objets. Par exemple :
+L’applet de commande **Get\-Member** dispose d’un paramètre facultatif, **InputObject**, que vous pouvez utiliser à la place d’un piping pour fournir l’entrée à **Get\-Member**. Vous obtiendriez la même sortie que celle indiquée ci-dessus si vous utilisez à la place la commande **Get\-Member \-InputObject $WshShell**. Si vous utilisez **InputObject**, l’argument est traité comme un seul élément. Cela signifie que si vous disposez de plusieurs objets dans une variable, l’applet de commande **Get\-Member** les traite comme un tableau d’objets. Par exemple :
 
 ```
 PS> $a = 1,2,"three"
@@ -176,7 +180,7 @@ PS> '$Home\Desktop\PSHome.lnk'
 $Home\Desktop\PSHome.lnk
 ```
 
-Nous avons désormais une variable nommée **$lnk** qui contient une nouvelle référence au raccourci. Si vous souhaitez voir ses membres, vous pouvez la canaliser vers l’applet de commande **Get-Member**. La sortie ci-dessous montre les membres que nous devons utiliser pour achever la création de notre raccourci :
+Nous avons désormais une variable nommée **$lnk** qui contient une nouvelle référence au raccourci. Si vous souhaitez voir ses membres, vous pouvez la canaliser vers l’applet de commande **Get\-Member**. La sortie ci-dessous montre les membres que nous devons utiliser pour achever la création de notre raccourci :
 
 <pre>PS> $lnk | Get-Member TypeName: System.__ComObject#{f935dc23-1cf0-11d0-adb9-00c04fd58a0b} Name             MemberType   Definition ----             ----------   ---------- ... Save             Method       void Save () ... TargetPath       Property     string TargetPath () {get} {set} ...</pre>
 
@@ -193,12 +197,12 @@ Vous créez une instance Internet Explorer en spécifiant le ProgId d’Internet
 $ie = New-Object -ComObject InternetExplorer.Application
 ```
 
-Cette commande démarre Internet Explorer, mais ne le rend pas visible. Si vous tapez Get-Process, vous pouvez voir qu’un processus nommé iexplore est en cours d’exécution. En fait, si vous quittez Windows PowerShell, le processus continue à s’exécuter. Pour arrêter le processus iexplore, vous devez redémarrer l’ordinateur ou utiliser un outil tel que le Gestionnaire des tâches.
+Cette commande démarre Internet Explorer, mais ne le rend pas visible. Si vous tapez Get\-Process, vous pouvez voir qu’un processus nommé iexplore est en cours d’exécution. En fait, si vous quittez Windows PowerShell, le processus continue à s’exécuter. Pour arrêter le processus iexplore, vous devez redémarrer l’ordinateur ou utiliser un outil tel que le Gestionnaire des tâches.
 
 > [!NOTE]
 > Les objets COM qui démarrent en tant que processus séparés, généralement appelés *exécutables ActiveX*, peuvent ou non afficher une fenêtre d’interface utilisateur au démarrage. S’ils créent une fenêtre, comme Internet Explorer, mais ne la rendent pas visible, le focus se positionne généralement sur le Bureau Windows, et vous devez rendre la fenêtre visible pour pouvoir interagir avec elle.
 
-Pour afficher les propriétés et méthodes pour Internet Explorer, tapez **$ie | Get-Member**. Pour afficher la fenêtre Internet Explorer, définissez la propriété Visible sur $true en tapant ce qui suit :
+Pour afficher les propriétés et méthodes pour Internet Explorer, tapez **$ie | Get\-Member**. Pour afficher la fenêtre Internet Explorer, définissez la propriété Visible sur $true en tapant ce qui suit :
 
 ```
 $ie.Visible = $true
@@ -233,7 +237,7 @@ At line:1 char:16
 + $ie | Get-Member <<<<
 ```
 
-Vous pouvez soit supprimer la référence restante avec une commande telle que $ie = $null, ou supprimer complètement la variable en tapant ce qui suit :
+Vous pouvez soit supprimer la référence restante avec une commande telle que $ie \= $null, ou supprimer complètement la variable en tapant ce qui suit :
 
 ```
 Remove-Variable ie
@@ -243,7 +247,7 @@ Remove-Variable ie
 > Il n’existe aucune norme commune déterminant si les exécutables ActiveX s’arrêtent ou continuent à s’exécuter lorsque vous supprimez une référence à ceux-ci. En fonction des circonstances, selon que l’application est visible, qu’un document modifié est en cours d’exécution dans celle-ci, et même que Windows PowerShell est toujours en cours d’exécution, l’application peut se fermer ou non. C’est pourquoi, vous devez tester le comportement d’arrêt de chaque exécutable ActiveX à utiliser dans Windows PowerShell.
 
 ### Obtention d’alertes sur les objets COM encapsulés .NET Framework
-Dans certains cas, un objet COM peut avoir un *wrapper RCW* (Runtime-Callable Wrapper) .NET Framework associé, qui sera utilisé par l’applet de commande **New-Object**. Étant donné que le comportement du wrapper RCW peut différer du comportement de l’objet COM normal, l’applet de commande **New-Object** dispose d’un paramètre **Strict** pour vous avertir de l’accès au wrapper RCW. Si vous spécifiez le paramètre **Strict**, puis créez un objet COM qui utilise un wrapper RCW, vous recevez un message d’avertissement :
+Dans certains cas, un objet COM peut avoir un wrapper RCW (*Runtime\-Callable Wrapper*) .NET Framework associé, qui sera utilisé par l’applet de commande **New\-Object**. Étant donné que le comportement du wrapper RCW peut différer du comportement de l’objet COM normal, l’applet de commande **New\-Object** dispose d’un paramètre **Strict** pour vous avertir de l’accès au wrapper RCW. Si vous spécifiez le paramètre **Strict**, puis créez un objet COM qui utilise un wrapper RCW, vous recevez un message d’avertissement :
 
 ```
 PS> $xl = New-Object -ComObject Excel.Application -Strict
@@ -260,6 +264,7 @@ Bien que l’objet soit toujours créé, vous êtes averti qu’il ne s’agit p
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

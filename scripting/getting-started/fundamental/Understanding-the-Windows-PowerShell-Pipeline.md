@@ -1,19 +1,23 @@
 ---
-title:  Compréhension du pipeline Windows PowerShell
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  6be50926-7943-4ef7-9499-4490d72a63fb
+title: "Compréhension du pipeline Windows PowerShell"
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 6be50926-7943-4ef7-9499-4490d72a63fb
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 233ec6fafbf1e770190601750be3bdcef2337b7f
+
 ---
 
 # Compréhension du pipeline Windows PowerShell
 Le piping fonctionne pratiquement partout dans Windows PowerShell. Même si vous voyez du texte à l’écran, Windows PowerShell ne canalise pas de texte entre des commandes. Au lieu de cela, il canalise des objets.
 
-La notation utilisée pour les pipelines est similaire à celle utilisée dans d’autres interpréteurs de commandes. Ainsi, à première vue, les nouveautés de Windows PowerShell peuvent ne pas sembler évidentes. Par exemple, si vous utilisez l’applet de commande **Out-Host** pour forcer un affichage page par page de la sortie d’une autre commande, la sortie ressemble exactement au texte normal affiché à l’écran, mais divisé en pages :
+La notation utilisée pour les pipelines est similaire à celle utilisée dans d’autres interpréteurs de commandes. Ainsi, à première vue, les nouveautés de Windows PowerShell peuvent ne pas sembler évidentes. Par exemple, si vous utilisez l’applet de commande **Out\-Host** pour forcer un affichage page par page de la sortie d’une autre commande, la sortie ressemble exactement au texte normal affiché à l’écran, mais divisé en pages :
 
 ```
 PS> Get-ChildItem -Path C:\WINDOWS\System32 | Out-Host -Paging
@@ -39,9 +43,9 @@ Mode                LastWriteTime     Length Name
 ...
 ```
 
-La commande Out-Host -Paging est un élément de pipeline utile chaque fois que vous avez une sortie longue que vous souhaitez afficher lentement. Elle est particulièrement utile si l’opération nécessite une utilisation importante du processeur. Étant donné que le traitement est transféré à l’applet de commande Out-Host quand une page complète est prête pour affichage, les applets de commande précédentes dans le pipeline suspendent l’opération jusqu’à ce que la page de sortie suivante est disponible. Vous pouvez voir cela si vous utilisez le Gestionnaire des tâches de Windows pour surveiller l’utilisation du processeur et de la mémoire par Windows PowerShell.
+La commande Out\-Host \-Paging est un élément de pipeline utile chaque fois que vous avez une sortie longue que vous souhaitez afficher lentement. Elle est particulièrement utile si l’opération nécessite une utilisation importante du processeur. Étant donné que le traitement est transféré à l’applet de commande Out\-Host quand une page complète est prête pour affichage, les applets de commande précédentes dans le pipeline suspendent l’opération jusqu’à ce que la page de sortie suivante est disponible. Vous pouvez voir cela si vous utilisez le Gestionnaire des tâches de Windows pour surveiller l’utilisation du processeur et de la mémoire par Windows PowerShell.
 
-Exécutez la commande suivante : **Get-ChildItem C:\Windows -Recurse**. Comparez l’utilisation du processeur et de la mémoire à la sortie de la commande suivante : **Get-ChildItem C:\Windows -Recurse | Out-Host -Paging**. Si ce que vous voyez à l’écran est du texte, c’est parce qu’il est de nécessaire représenter les objets sous forme de texte dans une fenêtre de console. Il s’agit juste d’une représentation de ce qui se passe vraiment dans Windows PowerShell. Par exemple, considérez l’applet de commande Get-Location. Si vous tapez **Get-Location** alors que votre emplacement actuel est la racine du lecteur C, la sortie est la suivante :
+Exécutez la commande suivante : **Get\-ChildItem C:\\Windows \-Recurse**. Comparez l’utilisation du processeur et de la mémoire à la sortie de la commande suivante : **Get\-ChildItem C:\\Windows \-Recurse | Out\-Host \-Paging**. Si ce que vous voyez à l’écran est du texte, c’est parce qu’il est de nécessaire représenter les objets sous forme de texte dans une fenêtre de console. Il s’agit juste d’une représentation de ce qui se passe vraiment dans Windows PowerShell. Par exemple, considérez l’applet de commande Get\-Location. Si vous tapez **Get\-Location** alors que votre emplacement actuel est la racine du lecteur C, la sortie est la suivante :
 
 ```
 PS> Get-Location
@@ -51,13 +55,13 @@ Path
 C:\
 ```
 
-Si le texte figure dans un pipeline Windows PowerShell, l’émission d’une commande telle que **Get-Location | Out-Host** a pour effet de transmettre de **Get-Location** à **Out-Host** un jeu de caractères dans l’ordre de leur affichage à l’écran. En d’autres termes, si vous deviez ignorer les informations d’en-tête, **Out-Host** recevrait d’abord le caractère « **C »**, puis le caractère « **: »**, puis le caractère  **\ »**. Il se pourrait que l’applet de commande **Out-Host** ne puisse pas déterminer quelle signification associer à la sortie de caractères par l’applet de commande **Get-Location**.
+Si le texte figure dans un pipeline Windows PowerShell, l’émission d’une commande telle que **Get\-Location | Out\-Host** a pour effet de transmettre de **Get\-Location** à **Out\-Host** un jeu de caractères dans l’ordre de leur affichage à l’écran. En d’autres termes, si vous deviez ignorer les informations d’en-tête, **Out\-Host** recevrait d’abord le caractère '**C'**, puis le caractère '**:'**, puis le caractère '**\\'**. Il se pourrait que l’applet de commande **Out\-Host** ne puisse pas déterminer quelle signification associer à la sortie de caractères par l’applet de commande **Get\-Location**.
 
 Au lieu d’utiliser du texte pour vous permettre aux commandes dans un pipeline de communiquer, Windows PowerShell utilise des objets. Du point de vue d’un utilisateur, les objets empaquètent des informations connexes sous une forme facilitant la manipulation des informations en tant qu’unité, et l’extraction des éléments spécifiques dont vous avez besoin.
 
-La commande **Get-Location** ne retourne pas de texte contenant le chemin d’accès actuel. Elle retourne un ensemble d’informations appelé objet **PathInfo**, qui contient le chemin d’accès actuel, ainsi que d’autres informations. L’applet de commande **Out-Host** envoie ensuite cet objet **PathInfo** à l’écran, tandis que Windows PowerShell choisit les informations à afficher et leur mode d’affichage en fonction de ses règles de mise en forme.
+La commande **Get\-Location** ne retourne pas de texte contenant le chemin d’accès actuel. Elle retourne un ensemble d’informations appelé objet **PathInfo**, qui contient le chemin d’accès actuel, ainsi que d’autres informations. L’applet de commande **Out\-Host** envoie ensuite cet objet **PathInfo** à l’écran, tandis que Windows PowerShell choisit les informations à afficher et leur mode d’affichage en fonction de ses règles de mise en forme.
 
-En fait, les informations d’en-tête retournées par l’applet de commande **Get-Location** ne sont ajoutées qu’à la fin du processus, dans le cadre de la mise en forme des données à afficher à l’écran. Ce que vous voyez à l’écran est un résumé des informations, non une représentation complète de l’objet de sortie.
+En fait, les informations d’en-tête retournées par l’applet de commande **Get\-Location** ne sont ajoutées qu’à la fin du processus, dans le cadre de la mise en forme des données à afficher à l’écran. Ce que vous voyez à l’écran est un résumé des informations, non une représentation complète de l’objet de sortie.
 
 Étant donné qu’il peut y avoir plus d’informations générées par une commande Windows PowerShell que ce que nous voyons dans la fenêtre de console, comment récupérer les éléments invisibles ? Comment afficher les données supplémentaires ? Et que se passe-t-il si vous souhaitez afficher les données dans un format différent de celui que Windows PowerShell utilise normalement ?
 
@@ -65,6 +69,7 @@ Le reste de ce chapitre explique comment découvrir la structure d’objets Wind
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

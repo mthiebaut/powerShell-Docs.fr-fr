@@ -1,13 +1,17 @@
 ---
-title:  Utilisation de variables pour stocker des objets
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  b1688d73-c173-491e-9ba6-6d0c1cc852de
+title: Utilisation de variables pour stocker des objets
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: b1688d73-c173-491e-9ba6-6d0c1cc852de
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: c3bcf9dc6f70383e971d9c1ae75ec78860111de9
+
 ---
 
 # Utilisation de variables pour stocker des objets
@@ -39,7 +43,7 @@ Path
 C:\temp
 ```
 
-Vous pouvez utiliser l’applet de commande **Get-Member** pour afficher des informations sur le contenu de variables. Le piping de $loc vers l’applet de commande Get-Member montre qu’il s’agit d’un objet **PathInfo**, tout comme la sortie de l’applet de commande Get-Location :
+Vous pouvez utiliser l’applet de commande **Get\-Member** pour afficher des informations sur le contenu de variables. Le piping de $loc vers l’applet de commande Get\-Member montre qu’il s’agit d’un objet **PathInfo**, tout comme la sortie de l’applet de commande Get\-Location :
 
 ```
 PS> $loc | Get-Member -MemberType Property
@@ -61,7 +65,7 @@ Windows PowerShell fournit plusieurs commandes pour manipuler des variables. Vou
 Get-Command -Noun Variable | Format-Table -Property Name,Definition -AutoSize -Wrap
 ```
 
-Outre les variables que vous créez dans votre session Windows PowerShell actuelle, il existe plusieurs variables définies par le système. Vous pouvez utiliser l’applet de commande **Remove-Variable** pour effacer toutes les variables non contrôlées par Windows PowerShell. Pour effacer toutes les variables, tapez la commande suivante :
+Outre les variables que vous créez dans votre session Windows PowerShell actuelle, il existe plusieurs variables définies par le système. Vous pouvez utiliser l’applet de commande **Remove\-Variable** pour effacer toutes les variables non contrôlées par Windows PowerShell. Pour effacer toutes les variables, tapez la commande suivante :
 
 ```
 Remove-Variable -Name * -Force -ErrorAction SilentlyContinue
@@ -77,7 +81,7 @@ Performing operation "Remove Variable" on Target "Name: Error".
 (default is "Y"):A
 ```
 
-Si vous exécutez ensuite l’applet de commande **Get-Variable**, vous voyez les autres variables Windows PowerShell. Dans la mesure où il existe également un lecteur Windows PowerShell variable, vous pouvez également afficher toutes les variables Windows PowerShell en tapant ce qui suit :
+Si vous exécutez ensuite l’applet de commande **Get\-Variable**, vous voyez les autres variables Windows PowerShell. Dans la mesure où il existe également un lecteur Windows PowerShell variable, vous pouvez également afficher toutes les variables Windows PowerShell en tapant ce qui suit :
 
 ```
 Get-ChildItem variable:
@@ -101,6 +105,7 @@ Vous pouvez également créer et modifier des variables d’environnement à par
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
