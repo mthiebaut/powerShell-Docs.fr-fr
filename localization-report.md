@@ -3230,8 +3230,8 @@
 * Archive Datetime: 2016-06-28 13:28:12
 * Handback File: [Redirecting-Data-with-Out---Cmdlets.f00d2b27f4adf3fcfcd30fe93cc31d62302c5a43.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/52d47296c37ea57ab4d177ed07f3c4deb804a640/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/Redirecting-Data-with-Out---Cmdlets.f00d2b27f4adf3fcfcd30fe93cc31d62302c5a43.fr-fr.xlf)
 * Handback Datetime: 2016-07-05 11:39:21
-* Bilingual File: [Redirecting-Data-with-Out---Cmdlets.f00d2b27f4adf3fcfcd30fe93cc31d62302c5a43.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b3c98e9281771cf745573b5c20010ed4cb48b3d7/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/Redirecting-Data-with-Out---Cmdlets.f00d2b27f4adf3fcfcd30fe93cc31d62302c5a43.fr-fr.xlf)
-* Bilingual Datetime: 2016-06-16 14:29:50
+* Bilingual File: [Redirecting-Data-with-Out---Cmdlets.f00d2b27f4adf3fcfcd30fe93cc31d62302c5a43.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/52d47296c37ea57ab4d177ed07f3c4deb804a640/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/Redirecting-Data-with-Out---Cmdlets.f00d2b27f4adf3fcfcd30fe93cc31d62302c5a43.fr-fr.xlf)
+* Bilingual Datetime: 2016-07-05 11:40:08
 * [Back to Top](#report-top)
 
 ##### <a name='0c5e2b60d96a6c64aedfa9522cbdc0ce5d4aa6b0194'></a> Source: [scripting\getting-started\cookbooks\Removing-Objects-from-the-Pipeline--Where-Object-.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/Removing-Objects-from-the-Pipeline--Where-Object-.md)
@@ -3373,8 +3373,8 @@
 * Archive Datetime: 2016-06-28 13:28:12
 * Handback File: [Working-With-Files-Folders-and-Registry-Keys.853b8e9b48e80efcbf9ed04d21be570df93cae82.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/52d47296c37ea57ab4d177ed07f3c4deb804a640/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/Working-With-Files-Folders-and-Registry-Keys.853b8e9b48e80efcbf9ed04d21be570df93cae82.fr-fr.xlf)
 * Handback Datetime: 2016-07-05 11:39:21
-* Bilingual File: [Working-With-Files-Folders-and-Registry-Keys.853b8e9b48e80efcbf9ed04d21be570df93cae82.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b3c98e9281771cf745573b5c20010ed4cb48b3d7/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/Working-With-Files-Folders-and-Registry-Keys.853b8e9b48e80efcbf9ed04d21be570df93cae82.fr-fr.xlf)
-* Bilingual Datetime: 2016-06-16 14:29:50
+* Bilingual File: [Working-With-Files-Folders-and-Registry-Keys.853b8e9b48e80efcbf9ed04d21be570df93cae82.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/52d47296c37ea57ab4d177ed07f3c4deb804a640/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/Working-With-Files-Folders-and-Registry-Keys.853b8e9b48e80efcbf9ed04d21be570df93cae82.fr-fr.xlf)
+* Bilingual Datetime: 2016-07-05 11:40:08
 * [Back to Top](#report-top)
 
 ##### <a name='a25734261fdcf657d0b97b1f037580f89b04881d204'></a> Source: [scripting\getting-started\cookbooks\Working-with-Objects.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/Working-with-Objects.md)
@@ -3457,8 +3457,8 @@
 * Archive Datetime: 2016-06-28 13:28:12
 * Handback File: [About-Windows-PowerShell.9cb66c3513a43593501f97fde1913b752049ba24.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/52d47296c37ea57ab4d177ed07f3c4deb804a640/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/About-Windows-PowerShell.9cb66c3513a43593501f97fde1913b752049ba24.fr-fr.xlf)
 * Handback Datetime: 2016-07-05 11:39:21
-* Bilingual File: [About-Windows-PowerShell.9cb66c3513a43593501f97fde1913b752049ba24.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b3c98e9281771cf745573b5c20010ed4cb48b3d7/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/About-Windows-PowerShell.9cb66c3513a43593501f97fde1913b752049ba24.fr-fr.xlf)
-* Bilingual Datetime: 2016-06-16 14:29:50
+* Bilingual File: [About-Windows-PowerShell.9cb66c3513a43593501f97fde1913b752049ba24.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/52d47296c37ea57ab4d177ed07f3c4deb804a640/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/About-Windows-PowerShell.9cb66c3513a43593501f97fde1913b752049ba24.fr-fr.xlf)
+* Bilingual Datetime: 2016-07-05 11:40:08
 * [Back to Top](#report-top)
 
 ##### <a name='642bc1ba2e6d63de2ef692a1e2c547fb3f1a5946211'></a> Source: [scripting\getting-started\fundamental\Exploring-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental/Exploring-the-Windows-PowerShell-ISE.md)
@@ -3770,8 +3770,8 @@
 * Archive Datetime: 2016-06-28 13:28:12
 * Handback File: [PowerShell-Scripting.8f5d79e74e333fb9812de946411a1b4ef2060582.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/52d47296c37ea57ab4d177ed07f3c4deb804a640/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/PowerShell-Scripting.8f5d79e74e333fb9812de946411a1b4ef2060582.fr-fr.xlf)
 * Handback Datetime: 2016-07-05 11:39:21
-* Bilingual File: [PowerShell-Scripting.8f5d79e74e333fb9812de946411a1b4ef2060582.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b5fec5698bb79ec6265aca4edae58bac2a5d1120/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/PowerShell-Scripting.8f5d79e74e333fb9812de946411a1b4ef2060582.fr-fr.xlf)
-* Bilingual Datetime: 2016-06-16 14:29:50
+* Bilingual File: [PowerShell-Scripting.8f5d79e74e333fb9812de946411a1b4ef2060582.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/52d47296c37ea57ab4d177ed07f3c4deb804a640/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/PowerShell-Scripting.8f5d79e74e333fb9812de946411a1b4ef2060582.fr-fr.xlf)
+* Bilingual Datetime: 2016-07-05 11:40:08
 * [Back to Top](#report-top)
 
 ##### <a name='a6581fe76bf29a0090f9dfa5ad41ec4fc7572998231'></a> Source: [scripting\setup\Accessibility-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/setup/Accessibility-in-Windows-PowerShell-ISE.md)
