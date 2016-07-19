@@ -8,8 +8,9 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: "capacités de rôle"
 ms.technology: powershell
-ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
-ms.openlocfilehash: 5b6dcb205d2c3cbb1a98c6465cb1002b9ed61459
+translationtype: Human Translation
+ms.sourcegitcommit: 81fd386d58576a8930093b4f18ce36a4ff6cecd0
+ms.openlocfilehash: a3dd4a217f5b1fd80e97adf802c65073ca015bbc
 
 ---
 
@@ -122,7 +123,7 @@ New-ModuleManifest -Path 'C:\Program Files\WindowsPowerShell\Modules\Contoso_AD_
 # Create a blank script module. You'll use this for custom functions in the next section.
 New-Item -Path 'C:\Program Files\WindowsPowerShell\Modules\Contoso_AD_Module\Contoso_AD_Module.psm1' -ItemType File
 
-# Create a RoleCapabilities folder in the AD_Module folder. PowerShell expects Role Capabilities to be located in a "RoleCapabilities" folder within a module.
+# Create a RoleCapabilities folder in the Contoso_AD_Module folder. PowerShell expects Role Capabilities to be located in a "RoleCapabilities" folder within a module.
 New-Item -Path 'C:\Program Files\WindowsPowerShell\Modules\Contoso_AD_Module\RoleCapabilities' -ItemType Directory
 
 # Create a blank Role Capability in your RoleCapabilities folder. Running this command without any additional parameters just creates a blank template.
@@ -133,7 +134,7 @@ Félicitations ! Vous avez créé un fichier de capacité de rôle vierge.
 Il servira dans la section suivante.
 
 ## Concepts clés
-**Capacité de rôle (.psrc)** : fichier qui définit « ce » qu’un utilisateur peut faire sur un point de terminaison JEA.
+**Capacité de rôle (.psrc)** : fichier qui définit ce qu’un utilisateur peut faire sur un point de terminaison JEA.
 Elle dresse la liste des éléments comme les commandes visibles, les applications de console visibles, etc.
 Pour que PowerShell détecte les capacités de rôle, vous devez les placer dans un dossier « RoleCapabilities » dans un module PowerShell valide.
 
@@ -144,6 +145,6 @@ Pour être chargés automatiquement, les modules PowerShell doivent se trouver s
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

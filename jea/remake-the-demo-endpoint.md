@@ -8,8 +8,9 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: "refaire le point de terminaison de démonstration"
 ms.technology: powershell
-ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
-ms.openlocfilehash: dabb5023012e90ace3fbc5f347c17821abd92595
+translationtype: Human Translation
+ms.sourcegitcommit: d20ea8418cb7389d756de94ea752cf604b8d07af
+ms.openlocfilehash: acd2cfbd038250a26236c875d0e8b03a32cd84f9
 
 ---
 
@@ -91,7 +92,7 @@ L’effet net de ces paramètres est un point de départ sécurisé et minimal p
 Il définit qui peut faire quoi en tant que compte privilégié.
 Avec ce champ, vous pouvez spécifier les capacités disponibles pour tout utilisateur qui tente d’établir une connexion en fonction de son appartenance à un groupe.
 Là est l’essence de la fonctionnalité RBAC de JEA.
-Dans cet exemple, vous exposez le champ RoleCapability « Demo » prédéfini aux membres du groupe « Contoso\JEA_NonAdmin_Operator ».
+Dans cet exemple, vous exposez le champ RoleCapability « Maintenance » prédéfini aux membres du groupe « Contoso\JEA_NonAdmin_Operator ».
 
 3.  Le champ *RunAsVirtualAccount* indique que PowerShell doit « s’exécuter en tant que » compte virtuel sur ce point de terminaison.
 Par défaut, le compte virtuel est membre du groupe Administrateurs prédéfini.
@@ -124,7 +125,7 @@ Félicitations ! Vous avez configuré votre point de terminaison JEA.
 
 ## Tester votre point de terminaison
 Réexécutez les étapes répertoriées dans la section [Utilisation de JEA](using-jea.md) pour votre nouveau point de terminaison afin de vérifier qu’il fonctionne comme prévu.
-Veillez à utiliser le nouveau nom de point de terminaison (JEADemo2) quand vous indiquez le nom de la configuration dans l’applet de commande Enter-PSSession.
+Veillez à utiliser le nouveau nom de point de terminaison (JEADemo2) quand vous indiquez le nom de la configuration dans l’applet de commande `Enter-PSSession`.
 
 ```PowerShell
 Enter-PSSession -ComputerName . -ConfigurationName JEADemo2 -Credential $NonAdminCred
@@ -152,6 +153,6 @@ Pour plus d’informations sur les transcriptions, consultez ce [billet de blog]
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

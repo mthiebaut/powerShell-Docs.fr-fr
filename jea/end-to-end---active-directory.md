@@ -8,8 +8,9 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: de bout en bout   active directory
 ms.technology: powershell
-ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
-ms.openlocfilehash: 0a262e2c83174db7041d3cf35d97542b1cac4386
+translationtype: Human Translation
+ms.sourcegitcommit: 5954eb797df43de6f132a434ecad7049ee0221fb
+ms.openlocfilehash: 204909c16d5e3e2099f6ba4247929d61445cd654
 
 ---
 
@@ -82,7 +83,7 @@ Pour plus d’informations à ce sujet, consultez la section Éléments à prend
 
 Après avoir examiné chaque commande, vous décidez de restreindre les suivantes :
 
-1.  `Set-ADUser` doit uniquement s’exécuter avec le paramètre « -Title »
+1.  `Set-ADUser` doit uniquement pouvoir s’exécuter avec le paramètre -Title
 
 2.  `Add-ADGroupMember` et `Remove-ADGroupMember` doit uniquement fonctionner avec certains groupes
 
@@ -92,15 +93,15 @@ JEA s’exécute en mode *sans langage* qui, entre autres choses, empêche les u
 Pour garantir une expérience sans heurts aux utilisateurs, il est important de vérifier quelques points.
 
 Par exemple, intéressons-nous à `Set-ADAccountPassword`.
-Le paramètre « -NewPassword » exige une chaîne sécurisée.
+Le paramètre -NewPassword exige une chaîne sécurisée.
 Souvent, les utilisateurs créent une chaîne sécurisée et la transmettent en tant que variable (comme indiqué ci-dessous) :
 
 ```PowerShell
-$newPassword = (Read-Host -Prompt "Specify a new password" -AsSecureString)
+$newPassword = Read-Host -Prompt "Specify a new password" -AsSecureString
 Set-ADAccountPassword -Identity mollyd -NewPassword $newPassword -Reset
 ```
 
-Toutefois, le mode sans langage empêche l’utilisation de variables.
+Toutefois, le mode *sans langage* empêche l’utilisation de variables.
 Vous pouvez contourner cette restriction de deux manières :
 
 1.  Vous pouvez exiger que les utilisateurs exécutent la commande sans affecter de variables.
@@ -124,7 +125,7 @@ Nous la placerons dans le module Contoso_AD_Module que vous avez créé au cours
 
 1. Dans PowerShell ISE, ouvrez « Contoso_AD_Module.psm1 ».
 ```PowerShell
-ISE 'C:\Program Files\WindowsPowerShell\Modules\Contoso_AD_Module\Contoso_AD_Module.psm1'
+ise 'C:\Program Files\WindowsPowerShell\Modules\Contoso_AD_Module\Contoso_AD_Module.psm1'
 ```
 
 2. Appuyez sur Ctrl+J pour ouvrir le menu des extraits de code.
@@ -165,7 +166,7 @@ Set-ADUser -Identity $Identity -ChangePasswordAtLogon
 Dans la section [Création de capacité de rôle](#role-capability-creation), vous avez créé un fichier de capacité de rôle vierge.
 Dans cette section, vous allez renseigner les valeurs dans ce fichier.
 
-Commencez par ouvrir le fichier de capacité de rôle dans ISE.
+Commencez par ouvrir le fichier de capacité de rôle dans PowerShell ISE.
 ```PowerShell
 ise 'C:\Program Files\WindowsPowerShell\Modules\Contoso_AD_Module\RoleCapabilities\ADHelpDesk.psrc'
 ```
@@ -193,7 +194,7 @@ Il est bon de noter quelques points sur ce qui précède :
 1.  PowerShell va tenter de charger automatiquement les modules nécessaires à votre capacité de rôle.
 Vous devrez peut-être répertorier explicitement les noms de module dans le champ « ModulesToImport » si vous rencontrez des problèmes avec un module qui ne se charge pas automatiquement.
 
-2.  Si vous ne savez pas si une commande est une applet de commande ou une fonction, exécutez `Get-Command` et examinez « CommandType ».
+2.  Si vous ne savez pas si une commande est une applet de commande ou une fonction, exécutez `Get-Command` et examinez la propriété « CommandType ».
 
 3.  ValidatePattern vous permet d’utiliser une expression régulière pour restreindre des arguments de paramètre s’il n’est pas facile de définir un ensemble de valeurs autorisées.
 Vous ne pouvez pas définir à la fois ValidatePattern et ValidateSet pour un seul paramètre.
@@ -210,7 +211,7 @@ Modifiez les champs suivants dans le fichier PSSC.
 Si vous travaillez dans votre propre environnement, vous devez remplacer « CONTOSO\JEA_NonAdmins_Helpdesk » par votre propre utilisateur ou groupe non-administrateur.
 ```PowerShell
 # OLD: Description = ''
-Description = 'An endpoint for active directory tasks.'
+Description = 'An endpoint for Active Directory tasks.'
 
 # OLD: SessionType = 'Default'
 SessionType = 'RestrictedRemoteServer'
@@ -266,12 +267,12 @@ Pour plus d’informations, exécuter `Get-Help about_Language_Modes`.
 Pour plus d’informations, exécuter `Get-Help about_Functions`.
 
 **ValidateSet/ValidatePattern** : lors de l’exposition d’une commande, vous pouvez restreindre les arguments valides de paramètres spécifiques.
-ValidateSet correspond à la liste spécifique des commandes valides.
+ValidateSet correspond à la liste spécifique des arguments valides.
 ValidatePattern est une expression régulière à laquelle doivent correspondre les arguments de ce paramètre.
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

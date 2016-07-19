@@ -9,13 +9,13 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: b0e2ad92-875f-421d-b612-f624e644aa69
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: bee671bf537a100bd8ad407f34ccd5fe63c7f9a8
+ms.sourcegitcommit: 35dafe18719cd26977966a26d2781fc99cbf4097
+ms.openlocfilehash: d0f5fb26844edd4e07265a8c7d638f30a51244f7
 
 ---
 
 # Prise en main de Windows PowerShell
-Windows PowerShell est un nouvel interpréteur de ligne de commande Windows spécialement conçu pour les administrateurs système. Windows PowerShell inclut une invite interactive et un environnement de script utilisables indépendamment ou conjointement.
+Windows PowerShell est un interpréteur de ligne de commande Windows spécialement conçu pour les administrateurs système. Windows PowerShell inclut une invite interactive et un environnement de script utilisables indépendamment ou conjointement.
 
 Contrairement à la plupart des interpréteurs de commandes, qui acceptent et retournent du texte, Windows PowerShell est basé sur le Common Language Runtime (CLR) Microsoft .NET Framework et sur .NET Framework, et accepte et retourne des objets .NET Framework. Ce changement fondamental dans l’environnement apporte des outils et méthodes entièrement nouveaux pour la gestion et la configuration de Windows.
 
@@ -38,6 +38,6 @@ Dans cette rubrique :
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

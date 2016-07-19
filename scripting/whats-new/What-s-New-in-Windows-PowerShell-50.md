@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 1476722e-947e-425d-a86c-50037488dc6e
 translationtype: Human Translation
-ms.sourcegitcommit: ca7ab17f7ba2615c7a39d1e3dd944501bab4e72c
-ms.openlocfilehash: 87e4a23f93d19219a8d00671f319ef93a96fbbf6
+ms.sourcegitcommit: b41a40fd06de6898ba9adf01053d225edaa31b29
+ms.openlocfilehash: cd94291f225851a99253f5f54e10d6174e63f413
 
 ---
 
@@ -40,7 +40,7 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
     -   [Start-DscConfiguration](http://technet.microsoft.com/library/dn521623.aspx) : un nouveau paramètre, -UseExisting, réapplique la dernière configuration appliquée.
 
-    -   [Start-DscConfiguration](http://technet.microsoft.com/library/dn521623.aspx) : le paramètre \-Force a été corrigé.
+    -   [Start-DscConfiguration](http://technet.microsoft.com/library/dn521623.aspx) : le paramètre Force a été corrigé.
 
     -   [Get-DscLocalConfigurationManager](http://technet.microsoft.com/library/dn407378.aspx): affiche davantage d’informations utiles sur l’état du moteur.
 
@@ -104,13 +104,13 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
     -   La version de module est désormais appliquée avant une configuration.
 
-    -   La variable **DebugPreference** est désormais définie correctement pour les appels Get\-TargetResource, Set\-TargetResource et Test\-TargetResource.
+    -   La variable **DebugPreference** est désormais définie correctement pour les appels Get-TargetResource, Set-TargetResource et Test-TargetResource.
 
 -   Améliorations apportées à la gestion des informations d’identification
 
     -   Un certificat est désormais utilisé, si **Certificate** et **PSDscAllowPlainTextPassword** sont spécifiés.
 
-    -   Les informations d’identification sont déchiffrées, même pour les appels Get\-TargetResource.
+    -   Les informations d’identification sont déchiffrées, même pour les appels Get-TargetResource.
 
     -   Les informations d’identification de métaconfiguration sont chiffrées et déchiffrées.
 
@@ -142,87 +142,87 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
 ### <a name="BKMK_newcore"></a>Nouvelles fonctionnalités de Windows PowerShell
 
--   Désormais, dans Windows PowerShell 5.0, vous pouvez développer à l’aide de classes, en utilisant une syntaxe et une sémantique formelles similaires à celles d’autres langages de programmation orientés objet. Des mots clés tels que **Class** et **Enum** ont été ajoutés au langage Windows PowerShell pour prendre en charge la nouvelle fonctionnalité. Pour plus d’informations sur l’utilisation des classes, voir la rubrique les concernant.
+-   Désormais, dans Windows PowerShell 5.0, vous pouvez développer à l’aide de classes, en utilisant une syntaxe et une sémantique formelles similaires à celles d’autres langages de programmation orientée objet. Des mots clés tels que **Class** et **Enum** ont été ajoutés au langage Windows PowerShell pour prendre en charge la nouvelle fonctionnalité. Pour plus d’informations sur l’utilisation des classes, voir about_Classes.
 
--   Windows PowerShell 5.0 introduit un nouveau flux d’informations structurées qui permet d’échanger des données structurées entre un script et ses appelants (ou un environnement d’hébergement). Vous pouvez maintenant utiliser Write\-Host pour envoyer la sortie au flux d’informations. Les flux d’informations fonctionnent également pour PowerShell.Streams, les travaux, les travaux planifiés et les workflows. Les fonctionnalités suivantes prennent en charge le flux d’informations.
+-   Windows PowerShell 5.0 introduit un nouveau flux d’informations structurées qui permet d’échanger des données structurées entre un script et ses appelants (ou un environnement d’hébergement). Vous pouvez désormais utiliser Write-Host pour envoyer la sortie au flux d’informations. Les flux d’informations fonctionnent également pour PowerShell.Streams, les travaux, les travaux planifiés et les workflows. Les fonctionnalités suivantes prennent en charge le flux d’informations.
 
-    -   Une nouvelle applet de commande, Write\-Information, permet de spécifier la manière dont Windows PowerShell gère les données de flux d’informations pour une commande. Write\-Host est un wrapper pour Write\-Information. Write\-Information est également une activité de workflow prise en charge.
+    -   Une nouvelle applet de commande, Write-Information, permet de spécifier la manière dont Windows PowerShell gère les données de flux d’informations pour une commande. Write-Host est un wrapper pour Write-Information. Write-Information est également une activité de flux de travail prise en charge.
 
-    -   Deux nouveaux paramètres courants, InformationVariable et InformationAction, permettent de déterminer le mode d’affichage des flux d’informations en provenance d’une commande. Les valeurs valides pour InformationAction sont SilentlyContinue, Stop, Continue, Inquire, Ignore ou Suspend, SilentlyContinue étant la valeur par défaut. InformationVariable spécifie une chaîne comme nom d’une variable dans laquelle vous souhaitez enregistrer les données Write\-Host en provenance d’une commande.
+    -   Deux nouveaux paramètres courants, InformationVariable et InformationAction, permettent de déterminer le mode d’affichage des flux d’informations en provenance d’une commande. Les valeurs valides pour InformationAction sont SilentlyContinue, Stop, Continue, Inquire, Ignore ou Suspend, SilentlyContinue étant la valeur par défaut. InformationVariable spécifie une chaîne en tant que nom d’une variable dans laquelle vous souhaitez enregistrer les données Write-Host en provenance d’une commande.
 
     -   Une nouvelle variable de préférence, InformationPreference, spécifie votre préférence par défaut pour les données du flux d’informations dans une session Windows PowerShell. La valeur par défaut est SilentlyContinue.
 
     -   Deux nouveaux paramètres communs de workflow, PSInformation et InformationAction, ont été ajoutés.
 
-    -   Quand vous utilisez la commande Format\-Table, les colonnes de table sont désormais mises en forme automatiquement en évaluant les 300 premières millisecondes de données qui transitent dans le flux.
+    -   Quand vous utilisez la commande Format-Table, les colonnes de table sont désormais mises en forme automatiquement en évaluant les 300 premières millisecondes de données qui transitent dans le flux.
 
--   En collaboration avec [Microsoft Research](http://research.microsoft.com/), nous avons ajouté la nouvelle applet de commande ConvertFrom\-String. L’applet de commande ConvertFrom\-String permet d’extraire des objets structurés du contenu de chaînes de texte, et de les analyser. Pour plus d’informations, consultez ConvertFrom\-String.
+-   En collaboration avec [Microsoft Research](http://research.microsoft.com/), une nouvelle applet de commande, ConvertFrom-String, a été ajoutée. L’applet de commande ConvertFrom-String permet d’extraire des objets structurés du contenu de chaînes de texte, et de les analyser. Pour plus d’informations, voir ConvertFrom-String.
 
--   Une nouvelle applet de commande, Convert\-String, met automatiquement en forme le texte sur la base d’un exemple que vous fournissez dans un paramètre \-Example.
+-   Une nouvelle applet de commande, Convert-String, met en forme automatiquement le texte sur la base d’un exemple que vous fournissez dans un paramètre -Example.
 
 -   Un nouveau module, Microsoft.PowerShell.Archive, inclut des applets de commande qui vous permettent de compresser des fichiers et dossiers dans des fichiers d’archives (également appelés ZIP), d’extraire des fichiers de fichiers ZIP, et de mettre à jour des fichiers ZIP avec des versions plus récentes des fichiers qui y sont compressés.
 
 -   Un nouveau module, PackageManagement, permet de détecter des packages logiciels sur Internet, et de les installer. Le module PackageManagement (anciennement OneGet) est un gestionnaire ou multiplexeur de gestionnaires de package existants (également appelés fournisseurs du package), destiné à unifier la gestion des packages Windows avec une seule interface Windows PowerShell.
 
--   Un nouveau module, PowerShellGet, permet de rechercher, d’installer, de publier et de mettre à jour des modules et des ressources DSC dans la [Galerie PowerShell](http://www.powershellgallery.com/), ou dans un référentiel de module interne que vous pouvez configurer en exécutant l’applet de commande Register\-PSRepository.
+-   Un nouveau module, PowerShellGet, permet de rechercher, d’installer, de publier et de mettre à jour des modules et des ressources DSC dans la [Galerie PowerShell](http://www.powershellgallery.com/), ou dans un dépôt de module interne que vous pouvez configurer en exécutant l’applet de commande Register-PSRepository.
 
--   Un nouveau mot clé du langage, **Hidden**, a été ajouté pour spécifier qu’un membre (une propriété ou une méthode) n’est pas affiché par défaut dans les résultats de l’applet de commande Get\-Member (sauf si vous ajoutez le paramètre \-Force). Les propriétés ou méthodes marquées pour être masquées n’apparaissent pas non plus dans les résultats d’IntelliSense, sauf si vous êtes dans un contexte où le membre doit être visible. Par exemple, la variable automatique $This doit afficher les membres masqués dans le contexte de la méthode Class.
+-   Un nouveau mot clé du langage, **Hidden**, a été ajouté pour spécifier qu’un membre (une propriété ou une méthode) n’est pas affiché par défaut dans les résultats de l’applet de commande Get-Member (sauf si vous ajoutez le paramètre -Force). Les propriétés ou méthodes marquées pour être masquées n’apparaissent pas non plus dans les résultats d’IntelliSense, sauf si vous êtes dans un contexte où le membre doit être visible. Par exemple, la variable automatique $This doit afficher les membres masqués dans le contexte de la méthode Class.
 
--   Les applets de commande New\-Item, Remove\-Item et Get\-ChildItem ont été améliorées pour prendre en charge la création et la gestion des [liens symboliques](http://en.wikipedia.org/wiki/Symbolic_link). Le paramètre **ItemType** de l’applet de commande New\-Item accepte une nouvelle valeur, **SymbolicLink**. Vous pouvez désormais créer des liens symboliques en une seule ligne, en exécutant l’applet de commande New\-Item.
+-   Les applets de commande New-Item, Remove-Item et Get-ChildItem ont été améliorées pour prendre en charge la création et la gestion des [liens symboliques](http://en.wikipedia.org/wiki/Symbolic_link). Le paramètre **-ItemType** de l’applet de commande New-Item accepte une nouvelle valeur, **SymbolicLink**. Vous pouvez désormais créer des liens symboliques en une seule ligne, en exécutant l’applet de commande New-Item.
 
--   L’applet de commande Get\-ChildItem a également un nouveau paramètre, -Depth, que vous pouvez utiliser avec le paramètre -Recurse pour limiter la récursivité. Par exemple, la commande Get\-ChildItem -Recurse -Depth 2 retourne des résultats à partir du dossier actif, de tous les dossiers enfants de ce dossier, et de tous les sous-dossiers des dossiers enfants.
+-   L’applet de commande Get-ChildItem dispose également d’un nouveau paramètre, -Depth, que vous pouvez utiliser avec le paramètre Recurse pour limiter la récursivité. Par exemple, la commande Get-ChildItem -Recurse -Depth 2 retourne des résultats à partir du dossier actif, de tous les dossiers enfants de ce dossier, et de tous les sous-dossiers des dossiers enfants.
 
--   L’applet de commande Copy\-Item permet désormais de copier des fichiers ou dossiers d’une session Windows PowerShell vers une autre. Vous pouvez ainsi copier des fichiers vers des sessions connectées à des ordinateurs distants (notamment les ordinateurs exécutant [Windows Nano Server](http://blogs.technet.com/b/windowsserver/archive/2015/04/08/microsoft-announces-nano-server-for-modern-apps-and-cloud.aspx), qui n’ont donc pas d’autre interface). Pour copier des fichiers, spécifiez des ID PSSession comme valeurs pour les nouveaux paramètres \-ToSession et \-FromSession, en ajoutant -Path et -Destination pour spécifier respectivement le chemin d’origine et la destination. Par exemple, Copy\-Item \-Path c:\\myFile.txt \-ToSession $s \-Destination d:\\destinationFolder.
+-   L’applet de commande Copy-Item permet désormais de copier des fichiers ou dossiers d’une session Windows PowerShell vers une autre. Vous pouvez ainsi copier des fichiers vers des sessions connectées à des ordinateurs distants (notamment les ordinateurs exécutant [Windows Nano Server](http://blogs.technet.com/b/windowsserver/archive/2015/04/08/microsoft-announces-nano-server-for-modern-apps-and-cloud.aspx), qui n’ont donc pas d’autre interface). Pour copier des fichiers, spécifiez des ID PSSession comme valeurs pour les nouveaux paramètres -ToSession et -FromSession, en ajoutant -Path et -Destination pour spécifier respectivement le chemin d’origine et la destination. Par exemple, Copy-Item -Path c:\\myFile.txt -ToSession $s -Destination d:\\destinationFolder.
 
--   La transcription Windows PowerShell a été améliorée pour s’appliquer non seulement à l’hôte de la console (**powershell.exe**), mais aussi à toutes les applications d’hébergement telles que Windows PowerShell ISE. Vous pouvez configurer des options de transcription (notamment la transcription à l’échelle du système) en activant le paramètre de stratégie de groupe **Activer la transcription PowerShell** accessible dans Modèles d’administration\/Composants Windows\/Windows PowerShell.
+-   La transcription Windows PowerShell a été améliorée pour s’appliquer non seulement à l’hôte de la console (**powershell.exe**), mais aussi à toutes les applications d’hébergement telles que Windows PowerShell ISE. Vous pouvez configurer des options de transcription (notamment la transcription à l’échelle du système) en activant le paramètre de stratégie de groupe **Activer la transcription PowerShell** accessible dans Modèles d’administration/Composants Windows/Windows PowerShell.
 
--   Une nouvelle fonctionnalité de traçage de script détaillé vous permet d’activer le suivi et l’analyse détaillés de l’utilisation des scripts Windows PowerShell sur un système. Une fois que vous avez activé le traçage de script détaillé, Windows PowerShell enregistre tous les blocs de scripts dans le journal des événements Suivi d’événements pour Windows (ETW), **Microsoft\-Windows\-PowerShell\/Operational**.
+-   Une nouvelle fonctionnalité de traçage de script détaillé vous permet d’activer le suivi et l’analyse détaillés de l’utilisation des scripts Windows PowerShell sur un système. Une fois que vous avez activé le traçage de script détaillé, Windows PowerShell enregistre tous les blocs de scripts dans le journal des événements Suivi d’événements pour Windows (ETW), **Microsoft-Windows-PowerShell/Operational**.
 
--   Désormais, dans Windows PowerShell 5.0, de nouvelles applets de commande CMS (Cryptographic Message Syntax) prennent en charge le chiffrement et le déchiffrement de contenu à l’aide du format IETF standard pour protéger par chiffrement des messages, comme décrit dans le document [RFC (Request For Comments) 5652](http://tools.ietf.org/html/rfc5652). Les applets de commande Get\-CmsMessage, Protect\-CmsMessage et Unprotect\-CmsMessage ont été ajoutées au module [Microsoft.PowerShell.Security](http://technet.microsoft.com/library/hh849807.aspx).
+-   Désormais, dans Windows PowerShell 5.0, de nouvelles applets de commande CMS (Cryptographic Message Syntax) prennent en charge le chiffrement et le déchiffrement de contenu à l’aide du format IETF standard pour protéger par chiffrement des messages, comme décrit dans le document [RFC (Request For Comments) 5652](http://tools.ietf.org/html/rfc5652). Les applets de commande Get-CmsMessage, Protect-CmsMessage et Unprotect-CmsMessage ont été ajoutées au module [Microsoft.PowerShell.Security](http://technet.microsoft.com/library/hh849807.aspx).
 
--   Les nouvelles applets de commande du module [Microsoft.PowerShell.Utility](http://technet.microsoft.com/library/hh849958.aspx) (Get\-Runspace, Debug\-Runspace, Get\-RunspaceDebug, Enable\-RunspaceDebug et Disable\-RunspaceDebug) vous permettent de définir des options de débogage ainsi que de démarrer et d’arrêter le débogage sur une instance d’exécution. Pour le débogage d’instances d’exécution arbitraires (c’est-à-dire, autres que l’instance d’exécution par défaut pour une console Windows PowerShell ou une session Windows PowerShell ISE), Windows PowerShell permet de définir des points d’arrêt dans un script, qui interrompent l’exécution de celui-ci jusqu’à ce que vous puissiez attacher un débogueur pour déboguer le script de l’instance d’exécution. Une prise en charge du débogage imbriqué pour les instances d’exécution arbitraires a été ajoutée au débogueur de script Windows PowerShell pour les instances d’exécution.
+-   Les nouvelles applets de commande du module [Microsoft.PowerShell.Utility](http://technet.microsoft.com/library/hh849958.aspx) (Get-Runspace, Debug-Runspace, Get-RunspaceDebug, Enable-RunspaceDebug et Disable-RunspaceDebug) vous permettent de définir des options de débogage ainsi que de démarrer et d’arrêter le débogage sur une instance d’exécution. Pour le débogage d’instances d’exécution arbitraires (c’est-à-dire, autres que l’instance d’exécution par défaut pour une console Windows PowerShell ou une session Windows PowerShell ISE), Windows PowerShell permet de définir des points d’arrêt dans un script, qui interrompent l’exécution de celui-ci jusqu’à ce que vous puissiez attacher un débogueur pour déboguer le script de l’instance d’exécution. Une prise en charge du débogage imbriqué pour les instances d’exécution arbitraires a été ajoutée au débogueur de script Windows PowerShell pour les instances d’exécution.
 
--   Une nouvelle applet de commande, Format\-Hex, a été ajoutée au module [Microsoft.PowerShell.Utility](http://technet.microsoft.com/library/hh849958.aspx). L’applet de commande Format\-Hex permet d’afficher du texte ou des données binaires au format hexadécimal.
+-   Une nouvelle applet de commande, Format-Hex, a été ajoutée au module [Microsoft.PowerShell.Utility](http://technet.microsoft.com/library/hh849958.aspx). Format-Hex permet d’afficher du texte ou des données binaires au format hexadécimal.
 
--   Les applets de commande Get\-Clipboard et Set\-Clipboard ont été ajoutées au module [Microsoft.PowerShell.Utility](http://technet.microsoft.com/library/hh849958.aspx) pour faciliter l’échange de contenu entre sessions Windows PowerShell. Les applets de commande du Presse-papiers prennent en charge les images, les fichiers audio, les listes de fichiers et le texte.
+-   Les applets de commande Get-Clipboard et Set-Clipboard ont été ajoutées au module [Microsoft.PowerShell.Utility](http://technet.microsoft.com/library/hh849958.aspx) pour faciliter l’échange de contenu entre sessions Windows PowerShell. Les applets de commande du Presse-papiers prennent en charge les images, les fichiers audio, les listes de fichiers et le texte.
 
--   Une nouvelle applet de commande, Clear\-RecycleBin, a été ajoutée au module [Microsoft.PowerShell.Management](http://technet.microsoft.com/library/hh849827(v=wps.640).aspx). Elle permet de vider la Corbeille d’un lecteur fixe, y compris s’il s’agit d’un lecteur externe. Par défaut, vous êtes invité à confirmer une commande Clear\-RecycleBin, car la propriété ConfirmImpact de l’applet de commande est définie sur ConfirmImpact.High.
+-   Une nouvelle applet de commande, Clear-RecycleBin, a été ajoutée au module [Microsoft.PowerShell.Management](http://technet.microsoft.com/library/hh849827(v=wps.640).aspx). Elle permet de vider la Corbeille d’un lecteur fixe, notamment s’il s’agit d’un lecteur externe. Par défaut, vous êtes invité à confirmer une commande Clear-RecycleBin, car la propriété ConfirmImpact de l’applet de commande a la valeur ConfirmImpact.High.
 
--   Une nouvelle applet de commande, New\-TemporaryFile, permet de créer un fichier temporaire dans le cadre d’un script. Par défaut, le fichier temporaire est créé dans C:\\Users\\<user name>\\AppData\\Local\\Temp.
+-   Une nouvelle applet de commande, New-TemporaryFile, permet de créer un fichier temporaire dans le cadre d’un script. Par défaut, le fichier temporaire est créé dans ```C:\Users\<user name>\AppData\Local\Temp```.
 
--   Les applets de commande Out\-File, Add\-Content et Set\-Content ont désormais un nouveau paramètre, -NoNewline, qui omet toute nouvelle ligne après la sortie.
+-   Les applets de commande Out-File, Add-Content et Set-Content disposent désormais d’un nouveau paramètre, -NoNewline, qui omet toute nouvelle ligne après la sortie.
 
--   L’applet de commande New\-Guid utilise la classe Guid de .NET Framework pour générer un GUID utile quand vous écrivez des scripts ou des ressources DSC.
+-   L’applet de commande New-Guid tire parti de la classe Guid du .NET Framework pour générer un GUID utile quand vous écrivez des scripts ou des ressources DSC.
 
--   Étant donné que les informations sur la version d’un fichier peuvent être trompeuses, en particulier après correction de celui-ci, de nouvelles propriétés de script, FileVersionRaw et ProductVersionRaw, sont disponibles pour les objets FileInfo. Par exemple, vous pouvez exécuter la commande suivante afin d’afficher les valeurs de ces propriétés pour PowerShell.exe : Get\-Process \-Id $pid \-FileVersionInfo | Format\-List \*version\* \-Force
+-   Étant donné que les informations sur la version d’un fichier peuvent être trompeuses, en particulier après correction de celui-ci, de nouvelles propriétés de script, FileVersionRaw et ProductVersionRaw, sont disponibles pour les objets FileInfo. Par exemple, vous pouvez exécuter la commande suivante pour afficher les valeurs de ces propriétés pour PowerShell.exe, où $pid contient l’ID de processus d’une session active de Windows PowerShell :  ```Get-Process -Id $pid -FileVersionInfo | Format-List *version* -Force```
 
--   Les nouvelles applets de commande Enter\-PSHostProcess et Exit\-PSHostProcess permettent de déboguer des scripts Windows PowerShell dans des processus distincts du processus actuel en cours d’exécution sur la console Windows PowerShell. Exécutez Enter\-PSHostProcess pour entrer ou associer un ID de processus spécifique, puis exécutez Get\-Runspace pour retourner les instances d’exécution actives au sein du processus. Exécutez Exit\-PSHostProcess pour dissocier le processus quand vous avez fini de déboguer le script au sein du processus.
+-   Les nouvelles applets de commande Enter-PSHostProcess et Exit-PSHostProcess permettent de déboguer des scripts Windows PowerShell dans des processus distincts du processus en cours d’exécution sur la console Windows PowerShell. Exécutez Enter-PSHostProcess pour entrer dans ou associer à un ID de processus spécifique, puis exécutez Get-Runspace pour retourner les instances d’exécution actives au sein du processus. Exécutez Exit-PSHostProcess pour dissocier du processus quand vous avez fini de déboguer le script au sein du processus.
 
--   Une nouvelle applet de commande, Wait\-Debugger, a été ajoutée au module [Microsoft.PowerShell.Utility](http://technet.microsoft.com/library/hh849958.aspx). L’applet de commande Wait\-Debugger permet d’arrêter l’exécution d’un script dans le débogueur avant d’exécuter l’instruction suivante du script.
+-   Une nouvelle applet de commande, Wait-Debugger, a été ajoutée au module [Microsoft.PowerShell.Utility](http://technet.microsoft.com/library/hh849958.aspx). L’applet de commande Wait-Debugger permet d’arrêter l’exécution d’un script dans le débogueur avant d’exécuter l’instruction suivante du script.
 
--   Le débogueur Windows PowerShell Workflow prend désormais en charge l’exécution par commande ou via la touche Tab, et vous pouvez déboguer des fonctions de workflow imbriquées. Vous pouvez désormais appuyer sur **Ctrl\+Pause** pour activer le débogueur dans un script en cours d’exécution dans des sessions locales ou à distance, et dans un script de workflow.
+-   Le débogueur Windows PowerShell Workflow prend désormais en charge l’exécution par commande ou via la touche Tab, et vous pouvez déboguer des fonctions de workflow imbriquées. Vous pouvez désormais appuyer sur **Ctrl+Pause** pour activer le débogueur dans un script en cours d’exécution, dans des sessions tant locales que distantes, et dans un script de workflow.
 
--   L’applet de commande Debug\-Job a été ajoutée au module [Microsoft.PowerShell.Core](http://technet.microsoft.com/library/hh849695.aspx). Elle permet de déboguer des scripts de travail en cours d’exécution pour Windows PowerShell Workflow, l’arrière-plan et les travaux en cours d’exécution dans des sessions à distance.
+-   Une applet de commande, Debug-Job, a été ajoutée au module [Microsoft.PowerShell.Core](http://technet.microsoft.com/library/hh849695.aspx). Elle permet de déboguer des scripts de travail en cours d’exécution pour Windows PowerShell Workflow, l’arrière-plan et les travaux en cours d’exécution dans des sessions à distance.
 
--   Un nouvel état, AtBreakpoint, a été ajouté pour les travaux Windows PowerShell. L’état AtBreakpoint s’applique quand un travail exécute un script incluant une série de points d’arrêt, au moment où le script atteint un point d’arrêt. Quand un travail est interrompu à un point d’arrêt de débogage, vous devez déboguer le travail en exécutant l’applet de commande Debug\-Job.
+-   Un nouvel état, AtBreakpoint, a été ajouté pour les travaux Windows PowerShell. L’état AtBreakpoint s’applique quand un travail exécute un script incluant une série de points d’arrêt, au moment où le script atteint un point d’arrêt. Quand un travail est interrompu à un point d’arrêt de débogage, vous devez déboguer le travail en exécutant l’applet de commande Debug-Job.
 
--   Windows PowerShell 5.0 prend en charge plusieurs versions d’un module Windows PowerShell à l’intérieur du même dossier dans $PSModulePath. Une propriété, RequiredVersion, a été ajoutée à la classe ModuleSpecification pour vous aider à obtenir la version souhaitée d’un module. Cette propriété ne peut pas être utilisée en même temps que la propriété ModuleVersion. La propriété RequiredVersion est désormais prise en charge. Elle est incluse dans la valeur du paramètre FullyQualifiedName des applets de commande Get\-Module, Import\-Module et Remove\-Module.
+-   Windows PowerShell 5.0 prend en charge plusieurs versions d’un module Windows PowerShell à l’intérieur du même dossier dans $PSModulePath. Une propriété, RequiredVersion, a été ajoutée à la classe ModuleSpecification pour vous aider à obtenir la version souhaitée d’un module. Cette propriété ne peut pas être utilisée en même temps que la propriété ModuleVersion. La propriété RequiredVersion est désormais prise en charge. Elle est incluse dans la valeur du paramètre FullyQualifiedName des applets de commande Get-Module, Import-Module et Remove-Module.
 
--   Vous pouvez désormais effectuer une validation de la version du module en exécutant l’applet de commande Test\-ModuleManifest.
+-   Vous pouvez désormais effectuer une validation de la version du module en exécutant l’applet de commande Test-ModuleManifest.
 
--   Les résultats de l’applet de commande Get\-Command affichent désormais une colonne Version suite à l’ajout d’une nouvelle propriété, Version, à la classe CommandInfo. L’applet de commande Get\-Command affiche les commandes de plusieurs versions du même module. La propriété Version fait également partie des classes dérivées de CmdletInfo:CmdletInfo et d’ApplicationInfo.
+-   Les résultats de l’applet de commande Get-Command affichent désormais une colonne Version suite à l’ajout d’une nouvelle propriété, Version, à la classe CommandInfo. L’applet de commande Get-Command affiche les commandes de plusieurs versions du même module. La propriété Version fait également partie des classes dérivées de CmdletInfo:CmdletInfo et d’ApplicationInfo.
 
--   L’applet de commande Get\-Command a un nouveau paramètre, \-ShowCommandInfo, qui retourne les informations de ShowCommand en tant que PSObjects. Cette fonctionnalité est particulièrement utile quand l’applet de commande Show\-Command est exécutée dans Windows PowerShell ISE à l’aide de la communication à distance Windows PowerShell. Le paramètre -ShowCommandInfo remplace la fonction Get\-SerializedCommand du module Microsoft.PowerShell.Utility, mais le script Get\-SerializedCommand est toujours disponible pour garantir la prise en charge des scripts de bas niveau.
+-   L’applet de commande Get-Command dispose d’un nouveau paramètre, -ShowCommandInfo, qui retourne les informations de ShowCommand en tant que PSObjects. Cette fonctionnalité est particulièrement utile quand l’applet de commande Show-Command est exécutée dans Windows PowerShell ISE à l’aide de la communication à distance Windows PowerShell. Le paramètre -ShowCommandInfo remplace la fonction Get-SerializedCommand du module Microsoft.PowerShell.Utility, mais le script Get-SerializedCommand est toujours disponible pour prendre en charge les scripts de bas niveau.
 
--   Une nouvelle applet de commande, Get\-ItemPropertyValue, permet d’obtenir la valeur d’une propriété sans utiliser de notation par points. Par exemple, dans les versions plus anciennes de Windows PowerShell, vous pouvez exécuter la commande suivante pour obtenir la valeur de la propriété de base de l’application de la clé de Registre PowerShellEngine : **(Get\-ItemProperty \-Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine \-Name ApplicationBase).ApplicationBase**. Désormais, dans Windows PowerShell 5.0, vous pouvez exécuter **Get\-ItemPropertyValue \-Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine \-Name ApplicationBase**.
+-   Une nouvelle applet de commande, Get-ItemPropertyValue, permet d’obtenir la valeur d’une propriété sans utiliser de notation par points. Par exemple, dans les versions plus anciennes de Windows PowerShell, vous pouvez exécuter la commande suivante pour obtenir la valeur de la propriété de base de l’application de la clé de Registre PowerShellEngine : **(Get-ItemProperty -Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine -Name ApplicationBase).ApplicationBase**. Désormais, dans Windows PowerShell 5.0, vous pouvez exécuter **Get-ItemPropertyValue -Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine -Name ApplicationBase**.
 
 -   La console Windows PowerShell utilise à présent une coloration de la syntaxe, tout comme dans Windows PowerShell ISE.
 
 -   Un nouveau module, NetworkSwitch, contient des applets de commande permettant d’appliquer un commutateur, un réseau local virtuel (VLAN) et une configuration de port de commutateur réseau de couche 2 de base à des commutateurs réseau certifiés par le logo Windows PowerShell 2012 R2.
 
--   Le paramètre FullyQualifiedName a été ajouté aux applets de commande Import\-Module et Remove\-Module pour prendre en charge le stockage de plusieurs versions d’un même module.
+-   Le paramètre FullyQualifiedName a été ajouté aux applets de commande Import-Module et Remove-Module pour prendre en charge le stockage de plusieurs versions d’un même module.
 
--   Les applets de commande Save\-Help, Update\-Help, Import\-PSSession, Export\-PSSession et Get\-Command ont un nouveau paramètre, FullyQualifiedModule, de type ModuleSpecification. Ajoutez ce paramètre pour spécifier un module par son nom complet.
+-   Les applets de commande Save-Help, Update-Help, Import-PSSession, Export-PSSession et Get-Command disposent d’un nouveau paramètre, FullyQualifiedModule, de type ModuleSpecification. Ajoutez ce paramètre pour spécifier un module par son nom complet.
 
 -   La valeur de **$PSVersionTable.PSVersion** a été mise à jour. Il s’agit désormais de 5.0.
 
@@ -759,6 +759,6 @@ Pour améliorer l’interprétation et la gestion des caractères spéciaux dans
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

@@ -1,12 +1,19 @@
 ---
 title: Glossaire Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: b0f88cbe-cb83-4912-a301-184534cb35c7
+translationtype: Human Translation
+ms.sourcegitcommit: ea25f98e60050a52fc1d72c7e529985855eeed36
+ms.openlocfilehash: ab41246eda58eb384500daa1f99aa9a8f9e019e1
+
 ---
+
 # Glossaire Windows PowerShell
 
 
@@ -15,7 +22,7 @@ ms.assetid: b0f88cbe-cb83-4912-a301-184534cb35c7
 |module binaire|Module Windows PowerShell dont module racine est un fichier de module binaire (.dll). Un module binaire peut ou non inclure un manifeste de module.|
 |paramètre commun|Paramètre qui est ajouté à toutes les applets de commande et fonctions avancées par le moteur Windows PowerShell.|
 |source de point|Dans Windows PowerShell, permet de lancer une commande en tapant un point et une espace devant la commande. Les commandes sans source de point s’exécutent dans l’étendue actuelle plutôt que dans une nouvelle étendue. Les variables, alias, fonctions ou lecteurs que la commande crée sont créés dans l’étendue en cours, et sont disponibles pour les utilisateurs une fois l’exécution de la commande terminée.|
-|module dynamique|Module qui existe uniquement en mémoire. L’applet de commande Import-PSSession crée des modules dynamiques.|
+|module dynamique|Module qui existe uniquement en mémoire. Les applets de commande New-Module et Import-PSSession créent des modules dynamiques.|
 |paramètre dynamique|Paramètre qui est ajouté à une applet de commande, une fonction ou un script Windows PowerShell sous certaines conditions. Des applets de commande, des fonctions, des fournisseurs et des scripts peuvent ajouter des paramètres dynamiques.|
 |fichier de mise en forme|Fichier XML de Windows PowerShell portant l’extension .format.ps1xml, qui définit la manière dont Windows PowerShell affiche un objet en fonction de son type .NET Framework.|
 |état de session global|État de session contenant les données qui sont accessibles à l’utilisateur d’une session Windows PowerShell.|
@@ -45,17 +52,18 @@ ms.assetid: b0f88cbe-cb83-4912-a301-184534cb35c7
 |Windows PowerShell|Technologie de script basée sur des tâches et un interpréteur de ligne de commande, qui fournit aux administrateurs informatiques un contrôle et une automatisation complets des tâches d’administration système.|
 |Commande de Windows PowerShell|Éléments dans un pipeline qui déclenchent l’exécution d’une action. Les commandes Windows PowerShell sont tapées sur le clavier ou appelées par programme.|
 |Fichier de données Windows PowerShell|Fichier texte portant l’extension de nom de fichier .psd1. Windows PowerShell utilise des fichiers de données à différentes fins, telles que le stockage des données de manifeste de module et le stockage de chaînes traduites pour l’internationalisation des scripts.|
-|lecteur Windows PowerShell|Disque virtuel qui fournit un accès direct à un magasin de données. Il peut être défini par un fournisseur Windows PowerShell ou créé via la ligne de commande. Les lecteurs créés via la ligne de commande sont spécifiques d’une session et perdus lors de la fermeture de celle-ci.|
-|Environnement d'écriture de scripts intégré de Windows PowerShell|Application hôte Windows PowerShell qui permet d’exécuter des commandes ainsi que d’écrire, tester et déboguer des scripts dans un environnement convivial, avec coloration de la syntaxe et compatible Unicode.|
+|lecteur Windows PowerShell|Disque virtuel qui fournit un accès direct à un magasin de données. Il peut être défini par un fournisseur Windows PowerShell ou créé via la ligne de commande. Les lecteurs créés par le biais de la ligne de commande sont propres à une session et perdus lors de sa fermeture.|
+|Environnement d'écriture de scripts intégré de Windows PowerShell|Application hôte Windows PowerShell qui permet d’exécuter des commandes et d’écrire, tester et déboguer des scripts dans un environnement convivial, avec coloration de la syntaxe et compatible Unicode.|
 |module Windows PowerShell|Unité réutilisable intégrée qui permet de partitionner, d’organiser et d’abstraire votre code Windows PowerShell. Un module peut contenir des applets de commande, fournisseurs, fonctions, variables et autres types de ressources pouvant être importés en tant qu’unité unique.|
-|fournisseur Windows PowerShell|Programme Microsoft basé sur .NET Framework, qui rend les données d’une banque de données spécialisée disponibles dans Windows PowerShell, afin que vous puissiez les afficher et les gérer.|
+|fournisseur Windows PowerShell|Programme Microsoft basé sur le .NET Framework, qui rend les données d’une banque de données spécialisée disponibles dans Windows PowerShell, afin que vous puissiez les afficher et les gérer.|
 |script Windows PowerShell|Script écrit dans le langage Windows PowerShell.|
 |fichier de script Windows PowerShell|Fichier portant l’extension .ps1 et contenant un script écrit dans le langage Windows PowerShell.|
-|composant logiciel enfichable Windows PowerShell|Ressource définissant un ensemble d’applets de commande, de fournisseurs et de types Microsoft .NET Framework qui peuvent être ajoutés à l’environnement Windows PowerShell.|
-|Windows PowerShell Workflow|Un flux de travail est une séquence d’étapes programmées et connectées, qui effectuent des tâches de longue durée ou requièrent une coordination sur plusieurs appareils ou nœuds gérés. Windows PowerShell Workflow permet aux professionnels de l’informatique et aux développeurs de créer des séquences d’activités de gestion multi-appareils, ou des tâches unique au sein d’un workflow en tant que workflow. Windows PowerShell Workflow permet d’adapter et d’exécuter des fichiers XAML et des scripts Windows PowerShell en tant que workflow.|
+|Composant logiciel enfichable Windows PowerShell|Ressource définissant un ensemble d’applets de commande, de fournisseurs et de types Microsoft .NET Framework qui peuvent être ajoutés à l’environnement Windows PowerShell.|
+|Windows PowerShell Workflow|Un workflow est une séquence d’étapes programmées et connectées, qui effectuent des tâches de longue durée ou nécessitent une coordination sur plusieurs appareils ou nœuds gérés. Windows PowerShell Workflow permet aux professionnels de l’informatique et aux développeurs de créer des séquences d’activités de gestion multi-appareils, ou des tâches uniques au sein d’un workflow, en tant que workflows. Windows PowerShell Workflow permet d’adapter et d’exécuter des fichiers XAML et des scripts Windows PowerShell en tant que workflow.|
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jul16_HO1-->
 
 

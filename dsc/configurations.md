@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: 29676d0bf51adf9176753d0056efe76687a40600
+ms.sourcegitcommit: 59bf4cff540dabeeb77038ea84177f7c6bac2b4b
+ms.openlocfilehash: e5412a3168a18d1dbd117ed8b3eb6dd42a8d8f70
 
 ---
 
@@ -72,10 +72,11 @@ Dans cet exemple, vous spécifiez le nom du nœud en lui passant comme paramètr
 Avant de pouvoir promulguer une configuration, vous devez la compiler dans un document MOF. Pour cela, appelez la configuration comme pour une fonction PowerShell.
 >__Remarque__ : Pour appeler une configuration, la fonction doit se trouver dans la portée globale (comme pour toutes les fonctions PowerShell). Vous avez le choix entre « dot sourcer » le script, exécuter le script de configuration avec la touche F5 ou cliquer sur le bouton __Exécuter le script__ dans l’environnement ISE. Pour « dot sourcer » le script, exécutez la commande `. .\myConfig.ps1`, où `myConfig.ps1` correspond au nom du fichier de script qui contient votre configuration.
 
-Quand vous appelez la configuration, les éléments suivants sont créés :
+Quand vous appelez la configuration, elle :
 
-- Un dossier dans le répertoire actif portant le même nom que la configuration.
-- Un fichier nommé _NodeName_.mof dans le nouveau répertoire, où _NodeName_ correspond au nom du nœud cible de la configuration. S’il existe plusieurs nœuds, un fichier MOF est créé pour chaque nœud.
+- Résout toutes les variables. 
+- Crée un dossier dans le répertoire actif portant le même nom que la configuration.
+- Crée un fichier nommé _nom_nœud_.mof dans le nouveau répertoire, où _nom_nœud_ correspond au nom du nœud cible de la configuration. S’il existe plusieurs nœuds, un fichier MOF est créé pour chaque nœud.
 
 >__Remarque__ : Le fichier MOF contient toutes les informations de configuration du nœud cible. Il est donc important de le sécuriser. Pour plus d’informations, consultez [Sécurisation du fichier MOF](secureMOF.md).
 
@@ -136,6 +137,6 @@ Actuellement, DSC est fourni avec 12 ressources contenues dans le module PSDesi
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

@@ -1,3 +1,18 @@
+---
+title: guide de workflows
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 4f760ef9a62d16ec709f8d25e62c2a03b8d841a5
+ms.openlocfilehash: 4cdd2c913eb33d29e9734c3845994d7e776db2b1
+
+---
+
 # Module PSWorkflow
 Cette section contient les rubriques d’aide relatives au module **PSWorkflow**. Celui-ci comprend des applets de commande qui prennent en charge la fonctionnalité Windows PowerShell Workflow. Le module **PSWorkflow** est installé avec Windows PowerShell.
 
@@ -18,8 +33,6 @@ Cette section contient les rubriques d’aide relatives au module **PSWorkflow**
 
 [about_Parallel](https://technet.microsoft.com/en-us/library/104559a8-e89a-49f5-8c08-e5bf72768cbf)
 
-[about_Foreach-Parallel](https://technet.microsoft.com/en-us/library/35704780-dde8-4f5f-9319-5b982148bba7)
-
 [about_Sequence](https://technet.microsoft.com/en-us/library/bda3f81a-be8a-43be-b0df-12bb7e193b9b)
 
 [about_Suspend-Workflow](https://technet.microsoft.com/en-us/library/be2ded75-1eca-493e-96c1-758f92b5f199)
@@ -27,6 +40,8 @@ Cette section contient les rubriques d’aide relatives au module **PSWorkflow**
 [Applets de commande PowerShell Workflow Utility](https://technet.microsoft.com/en-us/library/a5a32019-0d68-4041-935f-1b1cacaf6d3d)
 
 
-<!--HONumber=May16_HO2-->
+
+
+<!--HONumber=Jul16_HO1-->
 
 

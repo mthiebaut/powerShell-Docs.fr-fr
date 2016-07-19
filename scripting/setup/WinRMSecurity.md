@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 7facb78962411d7b96ef6741e3ffa153d5537a0d
-ms.openlocfilehash: e1827e102a9b35ea214f89395f7ff3c5e0a58506
+ms.sourcegitcommit: 67ef350559f9b3d17232f3c93d67634b3e939c60
+ms.openlocfilehash: b1addddd50368fadcbb2581673d3ebc7cad8e32a
 
 ---
 
@@ -19,7 +19,7 @@ La communication à distance PowerShell est la méthode recommandée pour gérer
 
 ## Présentation de la communication à distance PowerShell
 
-La communication à distance Powershell utilise la [Gestion à distance de Windows (WinRM)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa384426.aspx), l’implémentation par Microsoft du protocole [Gestion des services Web (WS-Managment)](http://www.dmtf.org/sites/default/files/standards/documents/DSP0226_1.2.0.pdf), pour permettre aux utilisateurs d’exécuter des commandes PowerShell sur des ordinateurs distants. Pour plus d’informations sur l’utilisation de la communication à distance PowerShell, voir [Exécution de commandes à distance](https://technet.microsoft.com/en-us/library/dd819505.aspx).
+La communication à distance Powershell utilise la [Gestion à distance de Windows (WinRM)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa384426.aspx), l’implémentation par Microsoft du protocole [Gestion des services Web (WS-Management)](http://www.dmtf.org/sites/default/files/standards/documents/DSP0226_1.2.0.pdf), pour permettre aux utilisateurs d’exécuter des commandes PowerShell sur des ordinateurs distants. Pour plus d’informations sur l’utilisation de la communication à distance PowerShell, voir [Exécution de commandes à distance](https://technet.microsoft.com/en-us/library/dd819505.aspx).
 
 La communication à distance PowerShell n’est pas identique à l’utilisation du paramètre **ComputerName** d’une applet de commande pour l’exécuter sur un ordinateur distant, qui utilise l’appel de procédure distante (RPC) en tant que protocole sous-jacent.
 
@@ -62,7 +62,7 @@ Quand un client se connecte à un serveur de domaine avec son adresse IP ou qu�
       
 Le protocole NTLM ne garantit cependant pas l’identité du serveur. Comme avec tous les protocoles qui utilisent NTLM pour l’authentification, un pirate ayant accès au compte d’un ordinateur appartenant à un domaine peut appeler le contrôleur de domaine pour calculer une clé de session NTLM et donc emprunter l’identité du serveur.
 
-L’authentification NTLM est désactivée par défaut, mais peut être autorisée en configurant SSL sur le serveur cible ou en configurant le paramètre WinRM TrustedHosts.
+L’authentification NTLM est désactivée par défaut, mais peut être autorisée en configurant SSL sur le serveur cible ou en configurant le paramètre WinRM TrustedHosts sur le client.
     
 #### Utilisation de certificats SSL pour valider l’identité du serveur pendant les connexions NTLM
 
@@ -121,6 +121,6 @@ Pour plus d’informations sur les risques de vol des informations d’identific
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 
