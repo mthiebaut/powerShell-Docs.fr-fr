@@ -1,12 +1,16 @@
 ---
-title:   Ressources DSC Windows PowerShell intégrées
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: "Ressources DSC Windows PowerShell intégrées"
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
+ms.openlocfilehash: ea312b4e773cd8b0eceeca123e616957728eb1c6
+
 ---
 
 # Ressources DSC Windows PowerShell intégrées
@@ -30,6 +34,7 @@ La configuration de l’état souhaité (DSC) de Windows PowerShell est fournie 
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
