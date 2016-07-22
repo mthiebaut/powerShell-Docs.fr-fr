@@ -1,12 +1,19 @@
 ---
-title: Comment déboguer des scripts dans Windows PowerShell ISE
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+title: "Comment déboguer des scripts dans Windows PowerShell ISE"
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: 6dc6d8f9-8978-46e9-a92f-169af37e2817
+translationtype: Human Translation
+ms.sourcegitcommit: 669bbe8da3d6b5f4955b86474c21c11c3cfe495b
+ms.openlocfilehash: 080cbfd63838472d9d5405e4b232cda1cc1d028a
+
 ---
+
 # Comment déboguer des scripts dans Windows PowerShell ISE
 Cette rubrique décrit comment déboguer des scripts sur un ordinateur local à l’aide des fonctionnalités de débogage visuel de Windows PowerShellÂ® Integrated Scripting Environment (ISE).
 
@@ -29,7 +36,7 @@ Dans l’environnement de débogage de Windows PowerShell, vous pouvez définir 
 Dans l’environnement de débogage de Windows PowerShell ISE, seuls des points d’arrêt de ligne peuvent être définis à l’aide du menu ou des raccourcis clavier. Les deux autres types de points d’arrêt doivent être définis à partir du volet Console à l’aide de l’applet de commande [[m2] Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/88d2d9ad-17dc-44ae-99aa-f841125b9dc8). Cette section décrit comment effectuer des tâches de débogage dans Windows PowerShell ISE en utilisant les menus disponibles, et exécuter un éventail plus large de commandes à partir du volet Console à l’aide de scripts.
 
 ### Pour définir un point d’arrêt
-Un point d’arrêt ne peut être défini dans un script qu’après l’enregistrement de celui-ci. Cliquez avec le bouton droit sur la ligne dans laquelle vous souhaitez définir un point d’arrêt de ligne, puis cliquez sur **Basculer le point d’arrêt**. Vous pouvez également cliquer sur la ligne dans laquelle vous souhaitez définir un point d’arrêt de ligne, puis appuyer sur **F9** ou, dans le menu **Déboguer**, cliquer sur **Basculer le point d’arrêt**..
+Un point d’arrêt ne peut être défini dans un script qu’après l’enregistrement de celui-ci. Cliquez avec le bouton droit sur la ligne dans laquelle vous souhaitez définir un point d’arrêt de ligne, puis cliquez sur **Basculer le point d’arrêt**. Vous pouvez également cliquer sur la ligne dans laquelle vous souhaitez définir un point d’arrêt de ligne, puis appuyer sur **F9** ou, dans le menu **Déboguer**, cliquer sur **Basculer le point d’arrêt**.
 
 Le script suivant montre comment définir un point d’arrêt de variable à partir du volet Console en utilisant l’applet de commande [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420).
 
@@ -57,13 +64,13 @@ remove-psbreakpoint -id 2
 ```
 
 ### Supprimer tous les points d’arrêt
-Pour supprimer tous les points d’arrêt définis dans la session active, dans le menu **Déboguer**, cliquez sur **Supprimer tous les points d’arrêt**..
+Pour supprimer tous les points d’arrêt définis dans la session active, dans le menu **Déboguer**, cliquez sur **Supprimer tous les points d’arrêt**.
 
 Le script suivant montre comment supprimer tous les points d’arrêt à partir du volet Console en utilisant l’applet de commande [Remove-PSBreakpoint](https://technet.microsoft.com/en-us/library/4c877a80-0ea0-4790-9281-88c08ef0ddd6).
 
 ```
 # This command deletes all of the breakpoints in the current session.
-get-breakpoint | remove-breakpoint
+get-psbreakpoint | remove-psbreakpoint
 ```
 
 ### <a name="bkmk_disable"></a>Désactiver un point d’arrêt
@@ -104,18 +111,18 @@ get-psbreakpoint | enable-psbreakpoint
 Avant de commencer le débogage, vous devez définir un ou plusieurs points d’arrêt. Vous ne pouvez définir un point d’arrêt que si le script que vous souhaitez déboguer est enregistré. Pour des instructions sur la définition d’un point d’arrêt, voir [Comment gérer les points d’arrêt](#bkmk_1) ou [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420). Une fois le débogage démarré, vous ne pouvez modifier un script qu’après avoir arrêté le débogage. Un script dans lequel un ou plusieurs points d’arrêt sont définis est automatiquement enregistré avant son exécution.
 
 ### Pour commencer le débogage
-Appuyez sur **F5** ou, dans la barre d’outils, cliquez sur l’icône **Exécuter le script**. Ou encore, dans le menu **Déboguer**, cliquez sur **Exécuter/Continuer**. Le script s’exécute jusqu’à ce qu’il rencontre le premier point d’arrêt. Il suspend alors l’opération et met en surbrillance la ligne sur laquelle il s’est arrêté.
+Appuyez sur **F5** ou, dans la barre d’outils, cliquez sur l’icône **Exécuter le script** ou encore, dans le menu **Déboguer**, cliquez sur **Exécuter\/Continuer**. Le script s’exécute jusqu’à ce qu’il rencontre le premier point d’arrêt. Il suspend alors l’opération et met en surbrillance la ligne sur laquelle il s’est arrêté.
 
 ### Pour continuer le débogage
-Appuyez sur **F5** ou, dans la barre d’outils, cliquez sur l’icône **Exécuter le script**. Ou bien, dans le menu **Déboguer**, cliquez sur **Exécuter/Continuer**. Ou encore, dans le volet Console, tapez sur **C** puis appuyez sur **Entrée**. Le script poursuit alors son exécution jusqu’au point d’arrêt suivant ou jusqu’à la fin s’il ne rencontre plus d’autre point d’arrêt.
+Appuyez sur **F5** ou, dans la barre d’outils, cliquez sur l’icône **Exécuter le script** ou encore, dans le menu **Déboguer**, cliquez sur **Exécuter\/Continuer**. Vous pouvez aussi taper **C** dans le volet de la console et appuyer sur **Entrée**. Le script poursuit alors son exécution jusqu’au point d’arrêt suivant ou jusqu’à la fin s’il ne rencontre plus d’autre point d’arrêt.
 
 ### Pour afficher la pile des appels
-La pile des appels affiche l’emplacement d’exécution actuel dans le script. Si le script s’exécute dans une fonction appelée par une autre fonction, cela est indiqué dans l’affichage par des lignes supplémentaires dans la sortie. La ligne inférieure affiche le script d’origine et la ligne de celui-ci dans laquelle une fonction a été appelée. La ligne juste au-dessus affiche cette fonction et la ligne dans laquelle une autre fonction pourrait avoir été appelée.  La dernière supérieure affiche le contexte actuel de la ligne active sur laquelle le point d’arrêt est défini.
+La pile des appels affiche l’emplacement d’exécution actuel dans le script. Si le script s’exécute dans une fonction appelée par une autre fonction, cela est indiqué dans l’affichage par des lignes supplémentaires dans la sortie. La ligne inférieure affiche le script d’origine et la ligne de celui-ci dans laquelle une fonction a été appelée. La ligne juste au-dessus affiche cette fonction et la ligne dans laquelle une autre fonction pourrait avoir été appelée.  La ligne supérieure affiche le contexte actuel de la ligne active dans laquelle le point d’arrêt est défini.
 
-Pendant la suspension, pour afficher la pile des appels active, appuyez sur **Ctrl+Maj+D** ou, dans le menu **Déboguer**, cliquez sur **Afficher la pile des appels**. Ou encore, dans le volet Console, tapez **K**, puis appuyez sur **Entrée**..
+Pendant la suspension, pour afficher la pile des appels active, appuyez sur **Ctrl\+Maj\+D** ou, dans le menu **Déboguer**, cliquez sur **Afficher la pile des appels**. Vous pouvez aussi taper **K** dans le volet de la console et appuyer sur **Entrée**.
 
 ### Pour arrêter le débogage
-Appuyez sur **Maj-F5** ou, dans le menu **Déboguer**, cliquez sur **Arrêter le débogueur**. Ou encore, dans le volet Console, tapez **Q**, puis appuyez sur **Entrée**..
+Appuyez sur **Maj\-F5** ou, dans le menu **Déboguer**, cliquez sur **Arrêter le débogueur**. Vous pouvez aussi taper **Q** dans le volet de la console et appuyer sur **Entrée**.
 
 ## <a name="bkmk_3"></a>Comment effectuer une opération de pas à pas principal, de pas à pas détaillé et de pas à pas sortant lors d’un débogage
 Un pas à pas est le processus consistant à exécuter une instruction à la fois. Vous pouvez arrêter l’exécution sur une ligne de code, puis examiner les valeurs des variables et l’état du système. Le tableau suivant décrit des tâches de débogage courantes, telles que l’exécution d’une opération de pas à pas principal, de pas à pas détaillé et de pas à pas sortant.
@@ -123,10 +130,10 @@ Un pas à pas est le processus consistant à exécuter une instruction à la foi
 ||||
 |-|-|-|
 |**Tâche de débogage**|**Description**|**Comment l’accomplir dans PowerShell ISE**|
-|**Pas à pas détaillé**|Exécute l’instruction en cours, puis s’arrête à l’instruction suivante. Si l’instruction en cours est une fonction ou appel de script, le débogueur effectue un pas à pas détaillé de cette fonction ou de ce script ; sinon, il s’arrête à l’instruction suivante.|Appuyez sur **F11** ou, dans le menu **Déboguer**, cliquez sur **Pas à pas détaillé**. Ou encore, dans le volet Console, tapez **S**, puis appuyez sur **Entrée**..|
-|**Pas à pas principal**|Exécute l’instruction en cours, puis s’arrête à l’instruction suivante. Si l’instruction en cours est un appel de fonction ou un script, le débogueur exécute entièrement la fonction ou le script, puis s’arrête à l’instruction suivante après l’appel de fonction.|Appuyez sur **F10** ou, dans le menu **Déboguer**, cliquez sur **Pas à pas principal**. Ou encore, dans le volet Console, tapez **V**, puis appuyez sur **Entrée**..|
-|**Pas à pas sortant**|Sort de la fonction en cours et passe au niveau supérieur si la fonction est imbriquée. Dans le corps principal, le script est exécuté jusqu’à la fin ou jusqu’au point d’arrêt suivant. Les instructions ignorées sont exécutées, mais sans pas à pas.|Appuyez sur **Maj+F11** ou, dans le menu **Déboguer**, cliquez sur **Pas à pas sortant**. Ou encore, dans le volet Console, tapez **O**, puis appuyez sur **Entrée**..|
-|**Continuer**|Continue l’exécution jusqu’à la fin ou jusqu’au point d’arrêt suivant. Les fonctions et appels ignorés sont exécutés, mais sans pas à pas.|Appuyez sur **F5** ou, dans le menu **Déboguer**, cliquez sur **Exécuter/Continuer**. Ou encore, dans le volet Console, tapez **C**, puis appuyez sur **Entrée**..|
+|**Pas à pas détaillé**|Exécute l’instruction en cours, puis s’arrête à l’instruction suivante. Si l’instruction en cours est une fonction ou appel de script, le débogueur effectue un pas à pas détaillé de cette fonction ou de ce script ; sinon, il s’arrête à l’instruction suivante.|Appuyez sur **F11** ou, dans le menu **Déboguer**, cliquez sur **Pas à pas détaillé**. Ou encore, dans le volet Console, tapez **S**, puis appuyez sur **Entrée**.|
+|**Pas à pas principal**|Exécute l’instruction en cours, puis s’arrête à l’instruction suivante. Si l’instruction en cours est un appel de fonction ou un script, le débogueur exécute entièrement la fonction ou le script, puis s’arrête à l’instruction suivante après l’appel de fonction.|Appuyez sur **F10** ou, dans le menu **Déboguer**, cliquez sur **Pas à pas principal**. Ou encore, dans le volet Console, tapez **V**, puis appuyez sur **Entrée**.|
+|**Pas à pas sortant**|Sort de la fonction en cours et passe au niveau supérieur si la fonction est imbriquée. Dans le corps principal, le script est exécuté jusqu’à la fin ou jusqu’au point d’arrêt suivant. Les instructions ignorées sont exécutées, mais sans pas à pas.|Appuyez sur **Maj+\+F11** ou, dans le menu **Déboguer**, cliquez sur **Pas à pas sortant**. Vous pouvez aussi taper **O** dans le volet de la console et appuyer sur **Entrée**.|
+|**Continuer**|Continue l’exécution jusqu’à la fin ou jusqu’au point d’arrêt suivant. Les fonctions et appels ignorés sont exécutés, mais sans pas à pas.|Appuyez sur **F5** ou, dans le menu **Déboguer**, cliquez sur **Exécuter\/Continuer**. Vous pouvez aussi taper **C** dans le volet de la console et appuyer sur **Entrée**.|
 
 ## <a name="bkmk_4"></a>Comment afficher les valeurs de variables lors d’un débogage
 À mesure que vous exécutez le code pas à pas, vous pouvez afficher les valeurs actuelles des variables dans le script.
@@ -136,14 +143,14 @@ Appliquez l'une des méthodes suivantes :
 
 -   Dans le volet Script, placez le curseur sur la variable pour afficher sa valeur dans une info-bulle.
 
--   Dans le volet Console, tapez le nom de la variable, puis appuyez sur **Entrée**..
+-   Dans le volet Console, tapez le nom de la variable, puis appuyez sur **Entrée**.
 
 Dans ISE, tous les volets sont toujours dans la même étendue. Par conséquent, lorsque vous déboguez un script, les commandes que vous tapez dans le volet Console s’exécutent dans l’étendue du script. Cela permet d’utiliser le volet Console pour rechercher les valeurs des variables et d’appeler des fonctions qui sont définies uniquement dans le script.
 
 ### Pour afficher les valeurs de variables automatiques
 Vous pouvez utiliser la méthode précédente pour afficher la valeur de presque toutes les variables pendant que vous déboguez un script. En revanche, ces méthodes ne fonctionnent pas pour les variables automatiques suivantes.
 
--   $_
+-   $\_
 
 -   $Input
 
@@ -153,7 +160,7 @@ Vous pouvez utiliser la méthode précédente pour afficher la valeur de presque
 
 -   $Args
 
-Si vous essayez d’afficher la valeur d’une de ces variables, vous l’obtenez pour un pipeline interne que le débogueur utilise, pas la valeur de la variable dans le script. Vous pouvez contourner ce comportement pour quelques variables ($_, $Input, $MyInvocation, $PSBoundParameters et $Args) en utilisant la méthode suivante :
+Si vous essayez d’afficher la valeur d’une de ces variables, vous l’obtenez pour un pipeline interne que le débogueur utilise, pas la valeur de la variable dans le script. Vous pouvez contourner ce comportement pour quelques variables ($\_, $Input, $MyInvocation, $PSBoundParameters et $Args) en utilisant la méthode suivante :
 
 1.  Dans le script, affectez la valeur de la variable automatique à une nouvelle variable.
 
@@ -175,6 +182,7 @@ C:\ps-test\MyScript.ps1
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jul16_HO2-->
 
 
