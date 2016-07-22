@@ -3221,8 +3221,8 @@
 * Archive Datetime: 2016-07-19 13:10:29
 * Handback File: [How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/6f040f765d6350427381dc1a2296ae7c0c16d672/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.fr-fr.xlf)
 * Handback Datetime: 2016-07-22 10:30:57
-* Bilingual File: [How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/cad8ff2ef6b7cef48b9de652495d397b37a18607/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.fr-fr.xlf)
-* Bilingual Datetime: 2016-06-16 14:29:50
+* Bilingual File: [How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/6f040f765d6350427381dc1a2296ae7c0c16d672/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.fr-fr.xlf)
+* Bilingual Datetime: 2016-07-22 10:31:40
 * [Back to Top](#report-top)
 
 ##### <a name='a8b729612c54e5f0f95497a71a192f16e2a9d32a202'></a> Source: [scripting\core-powershell\ise\How-to-Use-Profiles-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/How-to-Use-Profiles-in-Windows-PowerShell-ISE.md)
