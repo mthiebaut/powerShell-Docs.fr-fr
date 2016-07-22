@@ -1,28 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [scripting\core-powershell\ise\How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/669bbe8da3d6b5f4955b86474c21c11c3cfe495b/scripting/core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md) | InSyncHandedBackSuccess | [Details](#080cbfd63838472d9d5405e4b232cda1cc1d028a201)
 
 ## Item Details
-##### <a name='080cbfd63838472d9d5405e4b232cda1cc1d028a201'></a> Source: [scripting\core-powershell\ise\How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/669bbe8da3d6b5f4955b86474c21c11c3cfe495b/scripting/core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [scripting\core-powershell\ise\How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs.fr-fr/blob/9e9a446a6046debe82a25d922d6842d08d2c7dff/scripting/core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md)
-* Handoff File: [How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/034e5f7cf370b080d0dec8859975268ac5dc9f76/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.fr-fr.xlf)
-* Handoff Datetime: 2016-07-12 21:20:45
-* Handoff Reason: Include
-* Archive File: [How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/63227533239bdbdd9f101dae7dca618b6784b00f/ol-archive/PowerShell/powerShell-Docs.fr-fr/live/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.fr-fr.xlf)
-* Archive Datetime: 2016-07-19 13:10:29
-* Handback File: [How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/6f040f765d6350427381dc1a2296ae7c0c16d672/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.fr-fr.xlf)
-* Handback Datetime: 2016-07-22 10:30:57
-* Bilingual File: [How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/cad8ff2ef6b7cef48b9de652495d397b37a18607/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.fr-fr.xlf)
-* Bilingual Datetime: 2016-06-16 14:29:50
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
