@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "8149d7c7a234672345b777610e3deba5b57fa0e1",
-  "LastTranslatedCommit": "c16e726f436f659d0ca43cae88a62036b4ccf451",
+  "LastTranslatedCommit": "9e9a446a6046debe82a25d922d6842d08d2c7dff",
   "Items": {
     "81efeb79a70df604ef8c126c0ebd17b4f4711a44": {
       "FileHash": "81efeb79a70df604ef8c126c0ebd17b4f4711a44",
@@ -32536,14 +32536,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": null,
-      "TargetFilePath": null,
-      "HandbackFilePath": null,
-      "HandbackFileCommit": null,
-      "HandbackDateTime": "0001-01-01T00:00:00",
+      "TargetFileCommit": "9e9a446a6046debe82a25d922d6842d08d2c7dff",
+      "TargetFilePath": "scripting\\core-powershell\\ise\\How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md",
+      "HandbackFilePath": "ol-handback\\PowerShell\\powerShell-Docs.fr-fr\\live\\How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.fr-fr.xlf",
+      "HandbackFileCommit": "6f040f765d6350427381dc1a2296ae7c0c16d672",
+      "HandbackDateTime": "2016-07-22T10:30:57.8126847Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "UpdatedDateTime": "2016-07-22T10:30:57.8126847Z",
       "ArchiveFilePath": "ol-archive\\PowerShell\\powerShell-Docs.fr-fr\\live\\How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.fr-fr.xlf",
       "ArchiveFileCommit": "63227533239bdbdd9f101dae7dca618b6784b00f",
       "ArchiveFileDateTime": "2016-07-19T13:10:29.87455Z",
