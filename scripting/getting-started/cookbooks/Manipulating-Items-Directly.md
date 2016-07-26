@@ -192,7 +192,7 @@ Par exemple, imaginez que vous exécutiez la commande suivante :
 PS> Invoke-Item C:\WINDOWS
 ```
 
-Une fenêtre d’explorateur située dans C:\\Windows s’affiche comme si vous aviez double\-cliqué sur le dossier C:\\Windows.
+Une fenêtre de l’explorateur située dans C:\\Windows s’affiche comme si vous aviez double\-cliqué sur le dossier C:\\Windows.
 
 Si vous appelez le fichier **Boot.ini** sur un système antérieur à Windows Vista :
 
