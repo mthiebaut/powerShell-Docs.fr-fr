@@ -1949,6 +1949,8 @@
 * Archive Datetime: 2016-08-02 13:12:04
 * Handback File: [index.fb851c60ffb7fc30c83dbadbcac26716f6e1f16d.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b3eb7988c5aeb039eb124a02588b3bdaa2b9afab/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/index.fb851c60ffb7fc30c83dbadbcac26716f6e1f16d.fr-fr.xlf)
 * Handback Datetime: 2016-08-02 14:02:53
+* Bilingual File: [index.fb851c60ffb7fc30c83dbadbcac26716f6e1f16d.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b3eb7988c5aeb039eb124a02588b3bdaa2b9afab/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/index.fb851c60ffb7fc30c83dbadbcac26716f6e1f16d.fr-fr.xlf)
+* Bilingual Datetime: 2016-08-02 14:06:01
 * [Back to Top](#report-top)
 
 ##### <a name='443d343d6f5c79c562e36ba59cd822d990de8715105'></a> Source: [gallery\psgallery\contributing_to_psgallery_documentation.md](https://github.com/PowerShell/powerShell-Docs/blob/316caf861c7aff7e7a587fe2a8065933c0b67404/gallery/psgallery/contributing_to_psgallery_documentation.md)
