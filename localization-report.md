@@ -7,10 +7,10 @@
 [ Handoff Failed Files ](#handoff-failed-list)| 0
 [ Handoff Success Files ](#handoff-success-list)| 1
 [ Archive Failed Files ](#archive-failed-list)| 0
-[ Archive Success Files ](#archive-success-list)| 66
+[ Archive Success Files ](#archive-success-list)| 65
 [ Handback Failed Files ](#handback-failed-list)| 5
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 77
-[ In Sync Handback Files ](#insync-handback-success-list)| 267
+[ In Sync Handback Files ](#insync-handback-success-list)| 268
 [ Ignored Files ](#ignored-list)| 31
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -26,7 +26,6 @@
  Source File | Status | Details 
  ----------- | ------ | ------- 
  [dsc\index.md](https://github.com/PowerShell/powerShell-Docs/blob/8248ea4c6e353ae6df1662e080b2aa0156a4fb51/dsc/index.md) | ArchivedSuccess | [Details](#865258c0b403d4e7979d7ee32d3f87b63a349f0833)
- [gallery\index.md](https://github.com/PowerShell/powerShell-Docs/blob/8c31a7878b8c16469fd709d76af8bb9f1b39af1e/gallery/index.md) | ArchivedSuccess | [Details](#97403b5ae385aa568d0eba44eabac2e10b130a76104)
  [gallery\psgallery\contributing_to_psgallery_documentation.md](https://github.com/PowerShell/powerShell-Docs/blob/316caf861c7aff7e7a587fe2a8065933c0b67404/gallery/psgallery/contributing_to_psgallery_documentation.md) | ArchivedSuccess | [Details](#443d343d6f5c79c562e36ba59cd822d990de8715105)
  [gallery\psgallery\Creating-and-Publishing-an-item.md](https://github.com/PowerShell/powerShell-Docs/blob/316caf861c7aff7e7a587fe2a8065933c0b67404/gallery/psgallery/Creating-and-Publishing-an-item.md) | ArchivedSuccess | [Details](#9dab14b25815ac7c005b915df421300a1cc72033106)
  [gallery\psgallery\Deleting-Items.md](https://github.com/PowerShell/powerShell-Docs/blob/316caf861c7aff7e7a587fe2a8065933c0b67404/gallery/psgallery/Deleting-Items.md) | ArchivedSuccess | [Details](#8d6ca21b735c61aabd82ee9dd116082651133cf3107)
@@ -271,6 +270,7 @@
  [dsc\windowsOptionalFeatureResource.md](https://github.com/PowerShell/powerShell-Docs/blob/97714d3fa9a1c00fb3d2e79cc873280ca945a840/dsc/windowsOptionalFeatureResource.md) | InSyncHandedBackSuccess | [Details](#1254037b655a3160c90e69971c9faf061f205917100)
  [dsc\windowsOptionalFeatureSetResource.md](https://github.com/PowerShell/powerShell-Docs/blob/97714d3fa9a1c00fb3d2e79cc873280ca945a840/dsc/windowsOptionalFeatureSetResource.md) | InSyncHandedBackSuccess | [Details](#52eb958e59ecb1d5ae3faf268933bbd544410d47101)
  [dsc\windowsProcessResource.md](https://github.com/PowerShell/powerShell-Docs/blob/97714d3fa9a1c00fb3d2e79cc873280ca945a840/dsc/windowsProcessResource.md) | InSyncHandedBackSuccess | [Details](#0fe5e7d9679d44bb50c897badf8c6517b95049e2102)
+ [gallery\index.md](https://github.com/PowerShell/powerShell-Docs/blob/8c31a7878b8c16469fd709d76af8bb9f1b39af1e/gallery/index.md) | InSyncHandedBackSuccess | [Details](#97403b5ae385aa568d0eba44eabac2e10b130a76104)
  [jea\common-role-capability-pitfalls.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/common-role-capability-pitfalls.md) | InSyncHandedBackSuccess | [Details](#0e221c840f083ce0b8ecbcbb34c184bcdbc0c73e163)
  [jea\considerations-when-limiting-commands.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/considerations-when-limiting-commands.md) | InSyncHandedBackSuccess | [Details](#9f3f79a29e0fb7ec5a5111284bb7985548e17749164)
  [jea\creating-a-domain-controller.md](https://github.com/PowerShell/powerShell-Docs/blob/d4a72a7c5883b1d3ba8de3dbc9cfe016a6fb3498/jea/creating-a-domain-controller.md) | InSyncHandedBackSuccess | [Details](#8473eb668e4da5bab01c2f2b7647cbced413bd22165)
@@ -1940,15 +1940,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='97403b5ae385aa568d0eba44eabac2e10b130a76104'></a> Source: [gallery\index.md](https://github.com/PowerShell/powerShell-Docs/blob/8c31a7878b8c16469fd709d76af8bb9f1b39af1e/gallery/index.md)
-* Status: ArchivedSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [gallery\index.md](https://github.com/PowerShell/powerShell-Docs.fr-fr/blob/19c35f26be1fccd54e2242e4dd3a2491956b1f89/gallery/index.md)
 * Handoff File: [index.fb851c60ffb7fc30c83dbadbcac26716f6e1f16d.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/5d2d17f666a35ae10d2146be503824463ca97e4f/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/index.fb851c60ffb7fc30c83dbadbcac26716f6e1f16d.fr-fr.xlf)
 * Handoff Datetime: 2016-07-29 18:12:09
 * Handoff Reason: Include
 * Archive File: [index.fb851c60ffb7fc30c83dbadbcac26716f6e1f16d.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/764b76a64ab31cd7b7a391b9ce50c4640c992a50/ol-archive/PowerShell/powerShell-Docs.fr-fr/live/index.fb851c60ffb7fc30c83dbadbcac26716f6e1f16d.fr-fr.xlf)
 * Archive Datetime: 2016-08-02 13:12:04
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [index.fb851c60ffb7fc30c83dbadbcac26716f6e1f16d.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b3eb7988c5aeb039eb124a02588b3bdaa2b9afab/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/index.fb851c60ffb7fc30c83dbadbcac26716f6e1f16d.fr-fr.xlf)
+* Handback Datetime: 2016-08-02 14:02:53
 * [Back to Top](#report-top)
 
 ##### <a name='443d343d6f5c79c562e36ba59cd822d990de8715105'></a> Source: [gallery\psgallery\contributing_to_psgallery_documentation.md](https://github.com/PowerShell/powerShell-Docs/blob/316caf861c7aff7e7a587fe2a8065933c0b67404/gallery/psgallery/contributing_to_psgallery_documentation.md)
