@@ -1,6 +1,6 @@
 ---
 title: "Notes de publication de WMF 5.1 (préversion)"
-ms.date: 2016-05-16
+ms.date: 2016-07-27
 keywords: PowerShell, DSC, WMF
 description: 
 ms.topic: article
@@ -9,28 +9,32 @@ manager: dongill
 ms.prod: powershell
 ms.technology: WMF
 translationtype: Human Translation
-ms.sourcegitcommit: 9c763f92b8e342b0208204f997c079c725891933
-ms.openlocfilehash: d25a22b0448e82a85e45c302a998abc35bd4c1b6
+ms.sourcegitcommit: 5eb9eae6257cdb57f4f778b5dddf5aa7ef9d10bb
+ms.openlocfilehash: 12f2c084ab92134b733ee037c3d9fbd512af2e4c
 
 ---
 
-# Notes de publication de Windows Management Framework (WMF) 5.1 (préversion) #
+# Notes de publication de Windows Management Framework (WMF) 5.1 Preview #
 
-> Remarque : Ces informations sont préliminaires et susceptibles d’être modifiées.
+WMF 5.1 Preview comprend les composants PowerShell, WMI, WinRM et SIL (Software Inventory and Licensing), qui sont publiés avec Windows Server 2016. WMF 5.1 peut être installé sur Windows 7, Windows 8.1, Windows Server 2008 R2, 2012 et 2012 R2, et fournit plusieurs améliorations par rapport à WMF 5.0 RTM, notamment :
 
-Les documents de cette section s’appliquent à une préversion de WMF 5.1 à venir. La date de sortie de la préversion de WMF 5.1 est à déterminer. Ce contenu est préliminaire et sera mis à jour fréquemment dans les prochaines semaines. 
+- Nouvelles applets de commande : groupes et utilisateurs locaux ; Get-ComputerInfo
+- Améliorations de PowerShellGet avec l’utilisation imposée de modules signés et l’installation de modules JEA
+- Ajout de la prise en charge de PackageManagement pour les conteneurs, l’installation de CBS, l’installation basée sur des fichiers .exe et les packages CAB
+- Améliorations du débogage pour les classes DSC et PowerShell
+- Améliorations de la sécurité, notamment l’utilisation imposée de modules signés par le catalogue provenant du serveur collecteur et lors de l’utilisation des applets de commande PowerShellGet
+- Réponses à plusieurs demandes et problèmes des utilisateurs
 
-Nous publions ce contenu très tôt pour fournir des informations aux utilisateurs qui ont accès aux premières versions de Windows Server 2016. La majorité des informations de ces documents s’appliquent également aux préversions de Windows Server 2016, à l’exception des sections sur l’installation, la configuration et la compatibilité qui se rapportent uniquement à WMF.
+**Remarques importantes :**
+
+- **WMF 5.1 Preview nécessite Windows Management Framework 4.6**. L’installation réussit, mais des fonctionnalités clés échouent si .NET 4.6 n’est pas installé. Des instructions sont disponibles dans la rubrique [Installer et configurer WMF 5.1 (Preview)](https://msdn.microsoft.com/en-us/powershell/wmf/5.1/install-configure). 
+- **WMF 5.1 Preview n’est pas pris en charge pour les déploiements de production** pour l’instant. Cette préversion est destinée à fournir des informations sur le contenu de la version et à vous donner la possibilité de fournir des commentaires à l’équipe PowerShell.
+- WMF 5.1 Preview peut être installé directement sur WMF 5.0.
+- Le fait que WMF 4.0 est actuellement nécessaire pour pouvoir installer WMF 5.1 Preview sur Windows 7 et Windows Server 2008 est un problème connu. Cette condition requise devrait être supprimée avant la version finale.
+- L’installation des prochaines versions de WMF 5.1, notamment la version RTM, nécessitera la désinstallation de WMF 5.1 Preview.
 
 
 
-
-
-
-
-
-
-
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO5-->
 
 

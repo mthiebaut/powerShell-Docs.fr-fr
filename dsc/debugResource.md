@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: f5290e085c8949f6b3cdf23f3244a7142da6248d
+ms.sourcegitcommit: 83ca45d507e39b77751ac7feb6a7b65ae2834280
+ms.openlocfilehash: e1922008a92f00c9ddab28598735839c25219d24
 
 ---
 
@@ -87,7 +87,7 @@ Debug-Runspace -Id 9
 
 ## Débogage du script de la ressource
 
-Démarrez une nouvelle instance de PowerShell ISE. Dans le volet console, entrez les trois dernières lignes de la sortie `Start-DscConifiguration` sous forme de commandes, en remplaçant `<credentials>` par des informations d’identification valides. Une invite du type suivant doit s’afficher :
+Démarrez une nouvelle instance de PowerShell ISE. Dans le volet de la console, entrez les trois dernières lignes de la sortie de la `Start-DscConfiguration` sous forme de commandes, en remplaçant `<credentials>` par des informations d’identification valides. Une invite du type suivant doit s’afficher :
 
 ```powershell
 [TEST-SRV]: [DBG]: [Process:9000]: [RemoteHost]: PS C:\DebugTest>>
@@ -110,6 +110,6 @@ Après avoir appelé [Enable-DscDebug](https://technet.microsoft.com/en-us/libra
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 

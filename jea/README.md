@@ -4,13 +4,13 @@ manager: dongill
 ms.topic: article
 author: jpjofre
 ms.prod: powershell
-keywords: powershell,cmdlet,jea
+keywords: powershell,applet de commande,jea
 ms.date: 2016-06-22
 title: Fichier Lisez-moi
 ms.technology: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: d4e46653ff31ea7cda71f1c92b12ce5f2811b8a7
-ms.openlocfilehash: e24757029fd3ac9a70f710a7a755c35f440f087c
+ms.sourcegitcommit: bd7f637d0889fd0f56c3fa653389819341d2ccff
+ms.openlocfilehash: bfee5ef59a4085f0350ff454f634fc0bf5d6d837
 
 ---
 
@@ -28,7 +28,7 @@ Cette approche permet effectivement aux administrateurs DNS de contrôler tout v
 
 Avec JEA mis en place, vous pouvez configurer un rôle pour vos administrateurs DNS qui leur donne accès à toutes les commandes dont ils ont besoin pour réaliser leurs tâches, mais c’est tout.
 Cela signifie que vous pouvez leur octroyer l’accès approprié pour réparer un cache DNS empoisonné sans leur donner par inadvertance des droits sur Active Directory, de parcourir le système de fichiers, ou d’exécuter des scripts potentiellement dangereux.
-Mieux encore, quand la session JEA est configurée pour utiliser des comptes virtuels privilégiés à usage unique, vos administrateurs DNS peuvent se connecter au serveur en utilisant des informations d’identification *non privilégiées* et quand même exécuter des commandes privilégiées.
+Mieux encore, quand la session JEA est configurée pour utiliser des comptes virtuels privilégiés à usage unique, vos administrateurs DNS peuvent se connecter au serveur en utilisant des informations d’identification *non privilégiées* et exécuter quand même des commandes privilégiées.
 
 ## Disponibilité
 JEA est en cours de développement en parallèle avec Windows Server 2016 et est disponible sur les versions antérieures de Windows par le biais de mises à jour Windows Management Framework.
@@ -92,6 +92,6 @@ La génération de capacités de rôle en fonction des journaux PowerShell est m
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Jul16_HO4-->
 
 
