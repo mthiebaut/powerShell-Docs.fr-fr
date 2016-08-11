@@ -2811,8 +2811,8 @@
 * Archive Datetime: 2016-08-02 13:12:04
 * Handback File: [README.21b5f679157a942d8da32daf52be349e47cf03ae.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/1f6c4e5abb8dc2965883807c4a170f8f9c1d8672/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/README.21b5f679157a942d8da32daf52be349e47cf03ae.fr-fr.xlf)
 * Handback Datetime: 2016-08-11 07:01:30
-* Bilingual File: [README.21b5f679157a942d8da32daf52be349e47cf03ae.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/fb8a40f242a17bd0963a11bbe1a4694bbdacd93e/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/README.21b5f679157a942d8da32daf52be349e47cf03ae.fr-fr.xlf)
-* Bilingual Datetime: 2016-08-05 05:44:58
+* Bilingual File: [README.21b5f679157a942d8da32daf52be349e47cf03ae.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/1f6c4e5abb8dc2965883807c4a170f8f9c1d8672/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/README.21b5f679157a942d8da32daf52be349e47cf03ae.fr-fr.xlf)
+* Bilingual Datetime: 2016-08-11 07:02:33
 * [Back to Top](#report-top)
 
 ##### <a name='acd2cfbd038250a26236c875d0e8b03a32cd84f9175'></a> Source: [jea\remake-the-demo-endpoint.md](https://github.com/PowerShell/powerShell-Docs/blob/d20ea8418cb7389d756de94ea752cf604b8d07af/jea/remake-the-demo-endpoint.md)
