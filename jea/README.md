@@ -77,7 +77,7 @@ Découvrir comment auditer et créer des rapports sur toutes les actions et l’
 9.  Annexes
   - [Concepts clés utilisés dans ce guide](key-concepts-used-throughout-this-guide.md)  
   -  [Création d’un contrôleur de domaine](creating-a-domain-controller.md)  
-  -  [À propos de l’inscription sur liste noire](on-blacklisting.md)  
+  -  [À propos de l’inscription sur liste rouge](on-blacklisting.md)  
   -  [Éléments à prendre en considération lors de la limitation des commandes](considerations-when-limiting-commands.md)  
   -  [Pièges liés aux capacités de rôle](common-role-capability-pitfalls.md)
 
