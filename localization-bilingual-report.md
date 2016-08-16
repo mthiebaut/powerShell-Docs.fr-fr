@@ -6,21 +6,24 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [jea\on-blacklisting.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/on-blacklisting.md) | InSyncHandedBackSuccess | [Details](#8892e5e08a763fbc66d782bbc9252d1f3a7dcfcf173)
+ [scripting\core-powershell\web-access\authorization-rules-and-security-features-of-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/web-access/authorization-rules-and-security-features-of-windows-powershell-web-access.md) | ArchivedSuccess | [Details](#ed586e55f4533ce5be7c68564e5cc537fed05016233)
 
 ## Item Details
-##### <a name='8892e5e08a763fbc66d782bbc9252d1f3a7dcfcf173'></a> Source: [jea\on-blacklisting.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/on-blacklisting.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [jea\on-blacklisting.md](https://github.com/PowerShell/powerShell-Docs.fr-fr/blob/1db264f55155165c328de7cbe0fa5f0724e933d4/jea/on-blacklisting.md)
-* Handoff File: [on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/16be6e18f025d3dafabdb708a089cbc080584cca/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.fr-fr.xlf)
-* Handoff Datetime: 2016-07-06 23:48:42
+##### <a name='ed586e55f4533ce5be7c68564e5cc537fed05016233'></a> Source: [scripting\core-powershell\web-access\authorization-rules-and-security-features-of-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/web-access/authorization-rules-and-security-features-of-windows-powershell-web-access.md)
+* Status: ArchivedSuccess
+* Target File: 
+* Handoff File: [authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/597a40a37c491bb1b7769c3ded67f9618fda2bde/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.fr-fr.xlf)
+* Handoff Datetime: 2016-05-12 23:20:11
 * Handoff Reason: Include
-* Archive File: [on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/4845109f819766b4810d28baeb3e1da8ddca0f41/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/archive/on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.fr-fr.xlf)
-* Archive Datetime: 2016-07-12 13:13:06
-* Handback File: [on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/e6c2cdfca5165b92f411fa5c27e8a1605ec94b58/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.fr-fr.xlf)
-* Handback Datetime: 2016-08-16 08:07:41
-* Bilingual File: [on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/e6c2cdfca5165b92f411fa5c27e8a1605ec94b58/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.fr-fr.xlf)
-* Bilingual Datetime: 2016-08-16 08:54:13
+* Archive File: [authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/21e30d45b7b712100d8793236e510491637a6221/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/archive/authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.fr-fr.xlf)
+* Archive Datetime: 2016-05-17 13:25:34
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [scripting\core-powershell\web-access\authorization-rules-and-security-features-of-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs.fr-fr/blob/a618fee19a1772dfb0da7236ecd63c72dfb24b14/scripting/core-powershell/web-access/authorization-rules-and-security-features-of-windows-powershell-web-access.md)
+* Current Handback File: [authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b98ef84ee2594cab42bea44a0569931b6db36f19/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.fr-fr.xlf)
+* Current Handback Datetime: 2016-08-16 11:57:44
+* Bilingual File: [authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b98ef84ee2594cab42bea44a0569931b6db36f19/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.fr-fr.xlf)
+* Bilingual Datetime: 2016-08-16 12:58:58
 * [Back to Top](#report-top)
 
 
