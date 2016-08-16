@@ -1,28 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [jea\on-blacklisting.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/on-blacklisting.md) | InSyncHandedBackSuccess | [Details](#8892e5e08a763fbc66d782bbc9252d1f3a7dcfcf173)
 
 ## Item Details
-##### <a name='8892e5e08a763fbc66d782bbc9252d1f3a7dcfcf173'></a> Source: [jea\on-blacklisting.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/on-blacklisting.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [jea\on-blacklisting.md](https://github.com/PowerShell/powerShell-Docs.fr-fr/blob/1db264f55155165c328de7cbe0fa5f0724e933d4/jea/on-blacklisting.md)
-* Handoff File: [on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/16be6e18f025d3dafabdb708a089cbc080584cca/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.fr-fr.xlf)
-* Handoff Datetime: 2016-07-06 23:48:42
-* Handoff Reason: Include
-* Archive File: [on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/4845109f819766b4810d28baeb3e1da8ddca0f41/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/archive/on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.fr-fr.xlf)
-* Archive Datetime: 2016-07-12 13:13:06
-* Handback File: [on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/e6c2cdfca5165b92f411fa5c27e8a1605ec94b58/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.fr-fr.xlf)
-* Handback Datetime: 2016-08-16 08:07:41
-* Bilingual File: [on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/59f3150d9531e88f9a3a233648b000da79a3bccc/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.fr-fr.xlf)
-* Bilingual Datetime: 2016-07-12 18:20:39
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
