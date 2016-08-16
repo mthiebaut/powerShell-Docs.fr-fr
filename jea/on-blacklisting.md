@@ -6,7 +6,7 @@ author: jpjofre
 ms.prod: powershell
 keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
-title: "à propos de l’inscription sur liste noire"
+title: "à propos de l’inscription sur liste rouge"
 ms.technology: powershell
 translationtype: Human Translation
 ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
@@ -14,7 +14,7 @@ ms.openlocfilehash: 8892e5e08a763fbc66d782bbc9252d1f3a7dcfcf
 
 ---
 
-### À propos de l’inscription sur liste noire
+### À propos de l’inscription sur liste rouge
 Maintenant que vous avez manipulé JEA, vous vous demandez peut-être s’il est possible d’inscrire des commandes sur liste rouge.
 Cette demande est compréhensible, mais elle n’est pas actuellement prévue pour JEA pour les raisons suivantes :
 
