@@ -17,7 +17,7 @@ Les administrateurs peuvent définir entre 0 et *n* règles d’authentification
 
 Add-PswaAuthorizationRule et Test-PswaAuthorizationRule dans Windows Server 2012 R2 incluent un paramètre Credential qui permet d’ajouter et de tester les règles d’autorisation Accès Web Windows PowerShell depuis un ordinateur distant ou une session active Accès Web Windows PowerShell. Comme avec d’autres applets de commande Windows PowerShell disposant d’un paramètre Credential, vous pouvez définir un objet PSCredential comme valeur du paramètre. Pour créer un objet PSCredential qui contient les informations d’identification que vous souhaitez transmettre à un ordinateur distant, exécutez l’applet de commande [Get-Credential](https://technet.microsoft.com/library/hh849815.aspx).
 
-Les règles d’authentification Accès Web Windows PowerShell sont des règles de liste blanche. Chaque règle est une définition d’une connexion autorisée entre utilisateurs, ordinateurs cibles et [configurations de sessions](https://technet.microsoft.com/library/dd819508.aspx) particulières (également appelées points de terminaison ou instances d’exécution) sur des ordinateurs cibles spécifiés.
+Les règles d’authentification Accès Web Windows PowerShell sont des règles de liste verte. Chaque règle est une définition d’une connexion autorisée entre utilisateurs, ordinateurs cibles et [configurations de sessions](https://technet.microsoft.com/library/dd819508.aspx) particulières (également appelées points de terminaison ou instances d’exécution) sur des ordinateurs cibles spécifiés.
 
 <table>
 <colgroup>
