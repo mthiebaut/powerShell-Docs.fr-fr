@@ -2802,8 +2802,8 @@
 * Archive Datetime: 2016-07-12 13:13:06
 * Handback File: [on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/e6c2cdfca5165b92f411fa5c27e8a1605ec94b58/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.fr-fr.xlf)
 * Handback Datetime: 2016-08-16 08:07:41
-* Bilingual File: [on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/59f3150d9531e88f9a3a233648b000da79a3bccc/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.fr-fr.xlf)
-* Bilingual Datetime: 2016-07-12 18:20:39
+* Bilingual File: [on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/e6c2cdfca5165b92f411fa5c27e8a1605ec94b58/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/on-blacklisting.a0a3a6a7999f27e486c2bb0a14d88792ee94f927.fr-fr.xlf)
+* Bilingual Datetime: 2016-08-16 08:54:13
 * [Back to Top](#report-top)
 
 ##### <a name='ac9231a475ba84e9051bbd06a65f3f20c9e49846174'></a> Source: [jea\prerequisites.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/prerequisites.md)
