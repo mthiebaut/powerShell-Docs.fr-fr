@@ -3770,9 +3770,9 @@
 * Archive Datetime: 2016-05-17 13:25:34
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [scripting\core-powershell\web-access\authorization-rules-and-security-features-of-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs.fr-fr/blob/a618fee19a1772dfb0da7236ecd63c72dfb24b14/scripting/core-powershell/web-access/authorization-rules-and-security-features-of-windows-powershell-web-access.md)
-* Current Handback File: [authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b98ef84ee2594cab42bea44a0569931b6db36f19/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.fr-fr.xlf)
-* Current Handback Datetime: 2016-08-16 11:57:44
+* Current Target File: [scripting\core-powershell\web-access\authorization-rules-and-security-features-of-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs.fr-fr/blob/4a351b2ce6651a691244362d7483f594c3e8f47b/scripting/core-powershell/web-access/authorization-rules-and-security-features-of-windows-powershell-web-access.md)
+* Current Handback File: [authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/d87bbc76fae780d47b82e442929fefa5fc363ca1/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.fr-fr.xlf)
+* Current Handback Datetime: 2016-08-17 00:52:14
 * Bilingual File: [authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b98ef84ee2594cab42bea44a0569931b6db36f19/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.fr-fr.xlf)
 * Bilingual Datetime: 2016-08-16 12:58:58
 * [Back to Top](#report-top)
