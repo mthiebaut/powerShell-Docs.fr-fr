@@ -3773,8 +3773,8 @@
 * Current Target File: [scripting\core-powershell\web-access\authorization-rules-and-security-features-of-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs.fr-fr/blob/4a351b2ce6651a691244362d7483f594c3e8f47b/scripting/core-powershell/web-access/authorization-rules-and-security-features-of-windows-powershell-web-access.md)
 * Current Handback File: [authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/d87bbc76fae780d47b82e442929fefa5fc363ca1/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.fr-fr.xlf)
 * Current Handback Datetime: 2016-08-17 00:52:14
-* Bilingual File: [authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b98ef84ee2594cab42bea44a0569931b6db36f19/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.fr-fr.xlf)
-* Bilingual Datetime: 2016-08-16 12:58:58
+* Bilingual File: [authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/d87bbc76fae780d47b82e442929fefa5fc363ca1/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.fr-fr.xlf)
+* Bilingual Datetime: 2016-08-17 03:58:51
 * [Back to Top](#report-top)
 
 ##### <a name='d2f78148402f06992f5f58cd40e8c4f624b5e4b5234'></a> Source: [scripting\core-powershell\web-access\install-and-use-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/web-access/install-and-use-windows-powershell-web-access.md)
