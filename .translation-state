@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "877e2df3b80ad730f143f8008a5d8c071eabb9ca",
-  "LastTranslatedCommit": "4a351b2ce6651a691244362d7483f594c3e8f47b",
+  "LastTranslatedCommit": "031c766f51f02844221814621aaf61a2d576238f",
   "Items": {
     "81efeb79a70df604ef8c126c0ebd17b4f4711a44": {
       "FileHash": "81efeb79a70df604ef8c126c0ebd17b4f4711a44",
@@ -17504,14 +17504,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": "4a351b2ce6651a691244362d7483f594c3e8f47b",
+      "TargetFileCommit": "031c766f51f02844221814621aaf61a2d576238f",
       "TargetFilePath": "scripting\\core-powershell\\web-access\\authorization-rules-and-security-features-of-windows-powershell-web-access.md",
       "HandbackFilePath": "ol-handback\\PowerShell\\powerShell-Docs.fr-fr\\live\\authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.fr-fr.xlf",
-      "HandbackFileCommit": "d87bbc76fae780d47b82e442929fefa5fc363ca1",
-      "HandbackDateTime": "2016-08-17T00:52:14.6112684Z",
+      "HandbackFileCommit": "12b17bae42ab7353c1c1bc2b4f432491972c8de7",
+      "HandbackDateTime": "2016-08-17T10:57:43.7631354Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "2016-08-17T00:52:14.6112684Z",
+      "UpdatedDateTime": "2016-08-17T10:57:43.7631354Z",
       "ArchiveFilePath": "ol-handoff\\PowerShell\\powerShell-Docs.fr-fr\\live\\archive\\authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.fr-fr.xlf",
       "ArchiveFileCommit": "445c533cf8fe39156b37069fc7886d9be434ad2e",
       "ArchiveFileDateTime": "2016-05-10T13:23:14.3755991Z",
