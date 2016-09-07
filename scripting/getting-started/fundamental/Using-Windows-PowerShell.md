@@ -1,12 +1,19 @@
 ---
 title: Utilisation de Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: powershell,applet de commande
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: cf06f1e5-3945-47e4-98be-412f5a1f43fe
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 994e6c89f6fc20b95691f010deb3c48062cef310
+
 ---
+
 # Utilisation de Windows PowerShell
 Windows PowerShell® est un interpréteur de ligne de commande et un langage de script basé sur les tâches, conçu spécialement pour l’administration du système. Basé sur le .NET Framework, Windows PowerShell aide les professionnels de l’informatique et les utilisateurs avancés à contrôler et à automatiser l’administration du système d’exploitation Windows et des applications s’exécutant sur Windows.
 
@@ -62,13 +69,15 @@ Les rubriques suivantes décrivent comment obtenir l’aide la plus récente pou
 
 -   Applet de commande [Update-Help](http://technet.microsoft.com/library/hh849720.aspx). Applet de commande Windows PowerShell qui télécharge et installe les dernières versions des rubriques d’aide pour les modules Windows PowerShell sur votre ordinateur.
 
-    Pour plus d’informations sur le système d’aide actualisable dans Windows PowerShell, notamment sur la manière de l’installer sur des ordinateurs isolés réseau, consultez [about_Updatable_Help](http://technet.microsoft.com/library/hh847735.aspx), [Save-Help](http://technet.microsoft.com/library/hh849724.aspx) et [Prise en charge de l’aide actualisable](http://msdn.microsoft.com/library/hh852754.aspx)..
+    Pour plus d’informations sur le système d’aide actualisable dans Windows PowerShell, notamment sur la manière de l’installer sur des ordinateurs isolés réseau, consultez [about_Updatable_Help](http://technet.microsoft.com/library/hh847735.aspx), [Save-Help](http://technet.microsoft.com/library/hh849724.aspx) et [Prise en charge de l’aide actualisable](http://msdn.microsoft.com/library/hh852754.aspx).
 
 -   applet de commande [Get-Help](http://technet.microsoft.com/library/hh849696(v=wps.630).aspx). Applet de commande Windows PowerShell que vous pouvez utiliser pour en savoir plus sur les applets de commande et les fournisseurs installés sur votre système.
 
--   Vous pouvez obtenir des notifications sur les mises à jour des fichiers d’aide publiés en vous abonnant au flux RSS suivant : [http://sxp.microsoft.com/feeds/msdntn/PowerShellHelpVersions](http://sxp.microsoft.com/feeds/msdntn/PowerShellHelpVersions)..
+-   Vous pouvez obtenir des notifications sur les mises à jour des fichiers d’aide publiés en vous abonnant au flux RSS suivant : [http://sxp.microsoft.com/feeds/msdntn/PowerShellHelpVersions](http://sxp.microsoft.com/feeds/msdntn/PowerShellHelpVersions).
 
 
-<!--HONumber=May16_HO2-->
+
+
+<!--HONumber=Aug16_HO4-->
 
 

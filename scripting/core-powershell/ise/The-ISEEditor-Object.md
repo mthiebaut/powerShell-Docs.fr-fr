@@ -1,7 +1,7 @@
 ---
 title: Objet ISEEditor
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: powershell,applet de commande
 description: 
 ms.topic: article
 author: jpjofre
@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 0101daf8-4e31-4e4c-ab89-01d95dcb8f46
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 4812092dea24fa61245af7e06d1c5924ec812218
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 05255e63ae34e239003e5847c9f3b7fb2f4e3a0a
 
 ---
 
@@ -73,7 +73,7 @@ $psIse.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 ### GoToMatch\(\)
   Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures. 
 
- Déplace le point d’insertion vers le caractère correspondant si la propriété **CanGoToMatch** de l’objet editor a la valeur **$true**. Ceci se produit quand le point d’insertion se situe juste avant une parenthèse ouvrante, un crochet ouvrant ou une accolade ouvrante \- \(,\[,{ \- ou juste après une parenthèse fermante, un crochet fermant ou une accolade fermante \- \),\],}.  Le point d’insertion se trouve avant un caractère ouvrant ou après un caractère fermant. Si la propriété **CanGoToMatch** a la valeur **$false**, cette méthode n’a aucun effet. Consultez [CanGoToMatch](#cangotomatch).
+ Déplace le point d’insertion vers le caractère correspondant si la propriété **CanGoToMatch** de l’objet editor a la valeur **$true**. Ceci se produit quand le point d’insertion se situe juste avant une parenthèse ouvrante, un crochet ouvrant ou une accolade ouvrante \( \[,{ - ou juste après une parenthèse fermante, un crochet fermant ou une accolade fermante -\),\],}.  Le point d’insertion se trouve avant un caractère ouvrant ou après un caractère fermant. Si la propriété **CanGoToMatch** a la valeur **$false**, cette méthode n’a aucun effet. Consultez [CanGoToMatch](#cangotomatch).
 
 ```
 # Test to see if the caret is next to a parenthesis, bracket, or brace.
@@ -84,7 +84,7 @@ $psIse.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
  Remplace la sélection par du texte ou insère du texte à la position actuelle du point d’insertion.
 
- **text** \- chaîne Texte à insérer.
+ **text** : chaîne Texte à insérer.
 
  Consultez l’[exemple de script](#example) plus loin dans cette rubrique.
 
@@ -93,13 +93,13 @@ $psIse.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
  Sélectionne le texte spécifié par les paramètres **startLine**, **startColumn**, **endLine** et **endColumn**.
 
- **startLine** \- entier Ligne où commence la sélection.
+ **startLine** : entier Ligne où commence la sélection.
 
- **startColumn** \- entier Colonne dans la ligne de début où commence la sélection.
+ **startColumn** : entier Colonne dans la ligne de début où commence la sélection.
 
- **endLine** \- entier Ligne où se termine la sélection.
+ **endLine** : entier Ligne où se termine la sélection.
 
- **endColumn** \- entier Colonne dans la ligne de fin où se termine la sélection.
+ **endColumn** : entier Colonne dans la ligne de fin où se termine la sélection.
 
  Consultez l’[exemple de script](#example) plus loin dans cette rubrique.
 
@@ -121,9 +121,9 @@ $psIse.CurrentFile.Editor.SelectCaretLine()
 
  Définit la position du point d’insertion en fonction du numéro de ligne et du numéro de colonne spécifiés. Elle lève une exception si le numéro de ligne du point d’insertion ou le numéro de colonne du point d’insertion sont en dehors de leurs plages valides respectives.
 
- **lineNumber** \- entier Numéro de ligne du point d’insertion.
+ **lineNumber** : entier Numéro de ligne du point d’insertion.
 
- **columnNumber** \- entier Numéro de colonne du point d’insertion.
+ **columnNumber** : entier Numéro de colonne du point d’insertion.
 
 ```
 # Set the CaretPosition.
@@ -253,6 +253,6 @@ $myEditor.InsertText($selection.ToLower())
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

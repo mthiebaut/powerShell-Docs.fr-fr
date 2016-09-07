@@ -1,12 +1,19 @@
 ---
-title: Comment utiliser le volet Console dans Windows PowerShell ISE
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+title: "Comment utiliser le volet Console dans Windows PowerShell ISE"
+ms.date: 2016-05-11
+keywords: powershell,applet de commande
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: 44d67705-87c7-4a69-a53e-6471fdebb757
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: d48ea75b99ef3d20c3e180ccec7f35adf6290a63
+
 ---
+
 # Comment utiliser le volet Console dans Windows PowerShell ISE
 Le volet Console dans Windows PowerShellÂ® Scripting environnement intégré (ISE) fonctionne exactement comme la fenêtre de console Windows PowerShell ISE autonome.
 
@@ -20,13 +27,14 @@ Depuis Windows PowerShell v3, le volet Sortie est combiné avec le volet Console
 
 -   Collez le texte sélectionné à l’emplacement du curseur. Cliquez sur l’icône **Coller** dans la barre d’outils.
 
--   Effacer tout le texte dans le volet Console. Pour effacer le volet Console, vous pouvez cliquer sur l’icône **Effacer le volet Console** dans la barre d’outils, ou exécutez la commande **Clear-Host** ou son alias, **cls**..
+-   Effacer tout le texte dans le volet Console. Pour effacer le volet Console, vous pouvez cliquer sur l’icône **Effacer le volet Console** dans la barre d’outils, ou exécutez la commande **Clear-Host** ou son alias, **cls**.
 
 ## Voir aussi
 [Utilisation de Windows PowerShell ISE](Using-the-Windows-PowerShell-ISE.md)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

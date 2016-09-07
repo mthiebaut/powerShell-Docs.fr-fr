@@ -1,7 +1,7 @@
 ---
 title: "Exécution de commandes à distance"
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: powershell,applet de commande
 description: 
 ms.topic: article
 author: jpjofre
@@ -9,13 +9,13 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: d6938b56-7dc8-44ba-b4d4-cd7b169fd74d
 translationtype: Human Translation
-ms.sourcegitcommit: 0f77e2d13a26c58d2a4813e57a76ba54dbcaac46
-ms.openlocfilehash: 48385de53964217b2f7d263d85bfb99b1dbf6507
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: d36a862d27ed4bb8a4bed2ae58f9479ba1b29d21
 
 ---
 
 # Exécution de commandes à distance
-Vous pouvez exécuter des commandes sur un ordinateur ou plusieurs centaines au moyen d'une seule commande Windows PowerShell. Pour communiquer à distance, Windows PowerShell fait appel à différentes technologies, notamment WMI, RPC et WS\-Management.
+Vous pouvez exécuter des commandes sur un ordinateur ou plusieurs centaines au moyen d'une seule commande Windows PowerShell. Pour communiquer à distance, Windows PowerShell fait appel à différentes technologies, notamment WMI, RPC et WS-Management.
 
 ## Communication à distance sans configuration
 De nombreuses applets de commande Windows PowerShell possèdent le paramètre ComputerName, qui vous permet de collecter des données et de modifier les paramètres sur un ou plusieurs ordinateurs distants. Elles utilisent diverses technologies de communication et bon nombre d'entre elles fonctionnent sur tous les systèmes d'exploitation Windows pris en charge par Windows PowerShell, et ce sans configuration particulière.
@@ -49,7 +49,7 @@ Get-Command | where { $_.parameters.keys -contains "ComputerName" -and $_.parame
 ```
 
 ## Communication à distance Windows PowerShell
-La communication à distance Windows PowerShell, qui utilise le protocole WS\-Management, permet d’exécuter n’importe quelle commande Windows PowerShell sur un ou plusieurs ordinateurs distants. Vous pouvez ainsi établir des connexions persistantes, démarrer des sessions interactives 1:1 et exécuter des scripts sur plusieurs ordinateurs.
+La communication à distance Windows PowerShell, qui utilise le protocole WS-Management, vous permet d'exécuter n'importe quelle commande Windows PowerShell sur un ou plusieurs ordinateurs distants. Vous pouvez ainsi établir des connexions persistantes, démarrer des sessions interactives 1:1 et exécuter des scripts sur plusieurs ordinateurs.
 
 Pour utiliser la communication à distance Windows PowerShell, l'ordinateur distant doit être configuré pour la gestion à distance. Pour obtenir plus d’informations, notamment des instructions, voir [about_Remote_Requirements](https://technet.microsoft.com/en-us/library/dd315349.aspx).
 
@@ -70,7 +70,7 @@ Pour terminer la session interactive, tapez :
 Exit-PSSession
 ```
 
-Pour plus d’informations sur les applets de commande Enter\-PSSession et Exit\-PSSession, consultez [Enter-PSSession](https://technet.microsoft.com/en-us/library/dd315384.aspx) et [Exit-PSSession](https://technet.microsoft.com/en-us/library/dd315322.aspx).
+Pour plus d’informations sur les applets de commande Enter-PSSession et Exit-PSSession, voir [Enter-PSSession](https://technet.microsoft.com/en-us/library/dd315384.aspx) et [Exit-PSSession](https://technet.microsoft.com/en-us/library/dd315322.aspx).
 
 ### Exécuter une commande à distance
 Pour exécuter une commande sur un ou plusieurs ordinateurs distants, utilisez l’applet de commande [Invoke-Command](https://technet.microsoft.com/en-us/library/dd347578.aspx).
@@ -89,10 +89,10 @@ LCID    Name     DisplayName               PSComputerName
 1033    en-US    English (United States)   server02.corp.fabrikam.com
 ```
 
-Pour plus d’informations sur l’applet de commande Invoke\-Command, consultez [Invoke-Command](https://technet.microsoft.com/en-us/library/22fd98ba-1874-492e-95a5-c069467b8462).
+Pour plus d’informations sur l’applet de commande Invoke-Command, voir [Invoke-Command](https://technet.microsoft.com/en-us/library/22fd98ba-1874-492e-95a5-c069467b8462).
 
 ### Exécuter un script
-Pour exécuter un script sur un ou plusieurs ordinateurs distants, utilisez le paramètre FilePath de l’applet de commande Invoke\-Command. Le script doit être accessible à votre ordinateur local ou se trouver sur celui-ci. Les résultats sont retournés à votre ordinateur local.
+Pour exécuter un script sur un ou plusieurs ordinateurs distants, utilisez le paramètre FilePath de l'applet de commande Invoke-Command. Le script doit être accessible à votre ordinateur local ou se trouver sur celui-ci. Les résultats sont retournés à votre ordinateur local.
 
 Par exemple, la commande suivante exécute le script DiskCollect.ps1 sur les ordinateurs distants Server01 et Server02.
 
@@ -100,10 +100,10 @@ Par exemple, la commande suivante exécute le script DiskCollect.ps1 sur les ord
 Invoke-Command -ComputerName Server01, Server02 -FilePath c:\Scripts\DiskCollect.ps1
 ```
 
-Pour plus d’informations sur l’applet de commande Invoke\-Command, consultez [Invoke-Command](https://technet.microsoft.com/en-us/library/dd347578.aspx).
+Pour plus d’informations sur l’applet de commande Invoke-Command, voir [Invoke-Command](https://technet.microsoft.com/en-us/library/dd347578.aspx).
 
 ### Établir une connexion persistante
-Pour exécuter une série de commandes associées qui partagent des données, créez une session sur l’ordinateur distant, puis utilisez l’applet de commande Invoke\-Command pour exécuter les commandes dans la nouvelle session. Pour créer une session à distance, utilisez l’applet de commande New\-PSSession.
+Pour exécuter une série de commandes associées qui partagent des données, créez une session sur l'ordinateur distant, puis utilisez l'applet de commande Invoke-Command pour exécuter des commandes dans la session créée. Pour créer une session à distance, utilisez l'applet de commande New-PSSession.
 
 Par exemple, la commande suivante crée une session à distance sur l'ordinateur Server01 et une autre session à distance sur l'ordinateur Server02. Elle enregistre les objets de session dans la variable $s.
 
@@ -113,7 +113,7 @@ $s = New-PSSession -ComputerName Server01, Server02
 
 Une fois les sessions établies, vous pouvez exécuter n'importe quelle commande dans celles-ci. Les sessions étant persistantes, vous pouvez collecter des données en une seule commande et les utiliser dans une commande ultérieure.
 
-Par exemple, la commande suivante exécute une commande Get\-HotFix dans les sessions dans la variable $s et enregistre les résultats dans la variable $h. La variable $h est créée dans chacune des sessions dans $s, mais elle n'existe pas dans la session locale.
+Par exemple, la commande suivante exécute une commande Get-Hotfix dans les sessions dans la variable $s et enregistre les résultats dans la variable $h. La variable $h est créée dans chacune des sessions dans $s, mais elle n'existe pas dans la session locale.
 
 ```
 Invoke-Command -Session $s {$h = Get-HotFix}
@@ -129,7 +129,7 @@ Invoke-Command -Session $s {$h | where {$_.installedby -ne "NTAUTHORITY\SYSTEM"}
 Dans Windows PowerShell, la gestion à distance n'est qu'un début. Grâce aux applets de commande installées avec Windows PowerShell, vous pouvez établir et configurer des sessions à distance à partir des extrémités locales et distantes, créer des sessions personnalisées et restreintes, permettre aux utilisateurs d'importer à partir d'une session à distance des commandes qui s'exécutent de manière implicite sur la session à distance, configurer la sécurité d'une session à distance, etc.
 
 Pour faciliter la configuration à distance, Windows PowerShell comprend un fournisseur WSMan. Le lecteur WSMAN: créé par le fournisseur vous permet de parcourir une hiérarchie de paramètres de configuration sur l'ordinateur local et les ordinateurs distants.
-Pour plus d’informations sur le fournisseur WSMan, consultez [Fournisseur WSMan](https://technet.microsoft.com/en-us/library/dd819476.aspx) et   [À propos des applets de commande WS-Management](https://technet.microsoft.com/en-us/library/dd819481.aspx) ou tapez « Get\-Help wsman » dans la console Windows PowerShell.
+Pour plus d’informations sur le fournisseur WSMan, voir [Fournisseur WSMan](https://technet.microsoft.com/en-us/library/dd819476.aspx) et   [À propos des applets de commande WSMan](https://technet.microsoft.com/en-us/library/dd819481.aspx) ou tapez « Get-Help wsman » dans la console Windows PowerShell.
 
 Pour plus d’informations, voir :
 - [about_Remote](https://technet.microsoft.com/en-us/library/dd315359.aspx)
@@ -154,6 +154,6 @@ Pour obtenir de l’aide sur les erreurs de communication à distance, voir [abo
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 

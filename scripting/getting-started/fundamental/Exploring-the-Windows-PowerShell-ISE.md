@@ -1,12 +1,19 @@
 ---
-title: Découverte de Windows PowerShell ISE
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+title: "Découverte de Windows PowerShell ISE"
+ms.date: 2016-05-11
+keywords: powershell,applet de commande
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: e0d2c6e8-5126-40e7-a1e1-d1cff29fe94a
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: c1f285a1d1beb35c931c17f5944d7ec697cb152e
+
 ---
+
 # Découverte de Windows PowerShell ISE
 Vous pouvez utiliser Windows PowerShellÂ® Integrated Scripting Environment (ISE) pour créer, exécuter et déboguer des commandes et des scripts. Windows PowerShell ISE se compose d’une barre de menus, d’onglets Windows PowerShell, d’une barre d’outils, d’onglets de script, d’un volet Script, d’un volet Console, d’une barre d’état, d’un curseur de taille de texte et d’une aide contextuelle.
 
@@ -14,7 +21,7 @@ Vous pouvez utiliser Windows PowerShellÂ® Integrated Scripting Environment (IS
 > Depuis Windows PowerShell ISE 3.0, les volets Commande et Sortie ont été combinés en un seul volet Console.
 
 ## Barre de menus
-La barre de menus contient les menus **Fichier**, **Modifier**, **Affichage**, **Outils**, **Débogage**, **Modules complémentaires** et **Aide**. Les boutons dans les menus permettent d’effectuer des tâches liées à l’écriture et à l’exécution de scripts, ainsi qu’à l’exécution de commandes dans Windows PowerShell ISE. En outre, il est possible de placer un [outil complémentaire](../../core-powershell/ise/The-ISEAddOnTool-Object.md) sur la barre de menus en exécutant des scripts qui utilisent le [Modèle objet de script Windows PowerShell ISE](../../core-powershell/ise/The-Windows-PowerShell-ISE-Scripting-Object-Model.md)..
+La barre de menus contient les menus **Fichier**, **Modifier**, **Affichage**, **Outils**, **Débogage**, **Modules complémentaires** et **Aide**. Les boutons dans les menus permettent d’effectuer des tâches liées à l’écriture et à l’exécution de scripts, ainsi qu’à l’exécution de commandes dans Windows PowerShell ISE. En outre, il est possible de placer un [outil complémentaire](../../core-powershell/ise/The-ISEAddOnTool-Object.md) sur la barre de menus en exécutant des scripts qui utilisent le [Modèle objet de script Windows PowerShell ISE](../../core-powershell/ise/The-Windows-PowerShell-ISE-Scripting-Object-Model.md).
 
 > [!NOTE]
 > Dans Windows PowerShell ISE 2.0, les menus **Outils** et **Modules complémentaires** n’étaient pas présents.
@@ -72,6 +79,8 @@ L’aide sur Windows PowerShell ISE est disponible sur le web dans la bibliothè
 [Utilisation de Windows PowerShell ISE](../../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
 
 
-<!--HONumber=May16_HO2-->
+
+
+<!--HONumber=Aug16_HO4-->
 
 

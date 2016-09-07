@@ -1,14 +1,21 @@
 ---
 title: Raccourcis clavier pour Windows PowerShell ISE
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: powershell,applet de commande
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: 8328b946-0f02-4ef4-ac28-2743a1b4043b
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 596bbd2a5c272918171833310fc8c8aa5353adb1
+
 ---
+
 # Raccourcis clavier pour Windows PowerShell ISE
-Pour effectuer des actions dans Windows PowerShellÂ® Integrated Scripting Environment (ISE), utilisez les raccourcis clavier suivants. Windows PowerShell ISE est intégré aux systèmes d’exploitation Windows Server et Windows Client, mais peut également être installé sur certains systèmes d’exploitation Windows plus anciens comme composant du [package de téléchargement de Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881)..
+Pour effectuer des actions dans Windows PowerShellÂ® Integrated Scripting Environment (ISE), utilisez les raccourcis clavier suivants. Windows PowerShell ISE est intégré aux systèmes d’exploitation Windows Server et Windows Client, mais peut également être installé sur certains systèmes d’exploitation Windows plus anciens comme composant du [package de téléchargement de Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881).
 
 ## Raccourcis clavier pour l’édition de texte
 Lorsque vous éditez un texte, vous pouvez utiliser les raccourcis clavier suivants.
@@ -28,7 +35,7 @@ Lorsque vous éditez un texte, vous pouvez utiliser les raccourcis clavier suiva
 |**Remplacer dans le script**|Ctrl+H|Volet Script|
 |**Enregistrer**|Ctrl+S|Volet Script|
 |**Sélectionner tout**|Ctrl+A|Volets Script, Commande et Sortie|
-|**Afficher les extraits de code**|Ctrl+J|Volets Script et Commande|
+|**Afficher les extraits de code**|CTRL+J|Volets Script et Commande|
 |**Annuler**|Ctrl+Z|Volets Script et Commande|
 
 ## Raccourcis clavier pour exécuter les scripts
@@ -40,7 +47,7 @@ Lorsque vous exécutez des scripts dans le volet Script, vous pouvez utiliser le
 |**Ouvrir**|Ctrl+O|
 |**Exécuter**|F5|
 |**Exécuter la sélection**|F8|
-|**Arrêter l’exécution**|Ctrl+Pause. Vous pouvez utiliser Ctrl+C quand le contexte est sans ambiguïté (quand aucun texte n’est sélectionné).|
+|**Arrêter l’exécution**|CTRL+PAUSE. Vous pouvez utiliser Ctrl+C quand le contexte est sans ambiguïté (quand aucun texte n’est sélectionné).|
 |**Tab** (pour accéder au script suivant)|Ctrl+Tab **Remarque :** L’usage de la touche Tab pour accéder au script suivant fonctionne uniquement quand un seul onglet Windows PowerShell est ouvert ou, si plusieurs onglets Windows PowerShell sont ouverts, quand le focus est dans le volet Script.|
 |**Tab** (pour accéder au script précédent)|Ctrl+Maj+Tab **Remarque :** L’usage de la touche Tab pour accéder au script précédent fonctionne uniquement quand un seul onglet Windows PowerShell est ouvert ou, si plusieurs onglets Windows PowerShell sont ouverts, quand le focus est dans le volet Script.|
 
@@ -50,22 +57,22 @@ Pour personnaliser l’affichage dans Windows PowerShell ISE, vous pouvez utilis
 |Action|Raccourci clavier|
 |----------|---------------------|
 |**Accédez au volet Commande (v2) ou Console (v3 et versions ultérieures)**|Ctrl+D|
-|**Accéder au volet Sortie (v2 uniquement)**|Ctrl+Maj+O|
+|**Accéder au volet Sortie (v2 uniquement)**|Ctrl+Maj+ O|
 |**Accéder au volet Script**|Ctrl+I|
 |**Afficher le volet Script**|Ctrl+R|
 |**Masquer le volet Script**|Ctrl+R|
 |**Déplacer le volet Script vers le haut**|Ctrl+1|
 |**Déplacer le volet Script vers la droite**|Ctrl+2|
 |**Maximiser le volet Script**|Ctrl+3|
-|**Zoom avant**|Ctrl+Signe plus|
-|**Zoom arrière**|Ctrl+Signe moins|
+|**Zoom avant**|Ctrl+Signe Plus|
+|**Zoom arrière**|Ctrl+Signe Moins|
 
 ## Raccourcis clavier pour le débogage des scripts
 Lors du débogage de scripts, vous pouvez utiliser les raccourcis clavier suivants.
 
 |Action|Raccourci clavier|Utiliser dans|
 |----------|---------------------|----------|
-|**Exécuter/Continuer**|F5|Volet Script, lors du débogage d’un script|
+|**Exécuter/continuer**|F5|Volet Script, lors du débogage d’un script|
 |**Pas à pas détaillé**|F11|Volet Script, lors du débogage d’un script|
 |**Pas à pas principal**|F10|Volet Script, lors du débogage d’un script|
 |**Pas à pas sortant**|Maj+F11|Volet Script, lors du débogage d’un script|
@@ -96,9 +103,9 @@ Lorsque vous utilisez les onglets Windows PowerShell, vous pouvez utiliser les r
 |Action|Raccourci clavier|
 |----------|---------------------|
 |**Fermer l’onglet PowerShell**|Ctrl+W|
-|**Nouvel onglet PowerShell**|Ctrl+T|
-|**Onglet PowerShell précédent**|Ctrl+Maj+Tab. Ce raccourci ne fonctionne que si aucun fichier n’est ouvert sous aucun onglet Windows PowerShell.|
-|**Onglet Windows PowerShell suivant**|Ctrl+Tab. Ce raccourci ne fonctionne que si aucun fichier n’est ouvert sous aucun onglet Windows PowerShell.|
+|**Nouvel onglet PowerShell**|CTRL+T|
+|**Onglet PowerShell précédent**|Ctrl+Maj+Tab Ce raccourci ne fonctionne que si aucun fichier n’est ouvert sous aucun onglet Windows PowerShell.|
+|**Onglet Windows PowerShell suivant**|CTRL+Tab Ce raccourci ne fonctionne que si aucun fichier n’est ouvert sous aucun onglet Windows PowerShell.|
 
 ## Raccourcis clavier pour le démarrage et la fermeture
 Pour démarrer la console Windows PowerShell (PowerShell.exe) ou pour quitter Windows PowerShell ISE, vous pouvez utiliser les raccourcis clavier suivants.
@@ -113,6 +120,7 @@ Pour démarrer la console Windows PowerShell (PowerShell.exe) ou pour quitter Wi
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

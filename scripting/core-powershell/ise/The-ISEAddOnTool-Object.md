@@ -1,12 +1,19 @@
 ---
 title: Objet ISEAddOnTool
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: powershell,applet de commande
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: ce84d8bc-07ba-41f6-bdde-d6f3fddcd1e3
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 6b3c739ef54596495dad65dd51c3bcb4404c3d94
+
 ---
+
 # Objet ISEAddOnTool
   Un objet **ISEAddonTool** représente un outil complémentaire installé qui apporte des fonctionnalités supplémentaires à Windows PowerShell ISE. L’outil **Commandes** en est un exemple. Vous pouvez l’afficher en cliquant sur **Affichage**, puis sur **Afficher le composant additionnel de commande**. Vous pouvez ensuite utiliser cet outil par le biais des différents objets **ISEAddOnTool** disponibles.
 
@@ -167,6 +174,8 @@ Commands
  [Hiérarchie du modèle objet ISE](The-ISE-Object-Model-Hierarchy.md)
 
 
-<!--HONumber=May16_HO2-->
+
+
+<!--HONumber=Aug16_HO4-->
 
 

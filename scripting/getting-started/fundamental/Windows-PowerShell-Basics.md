@@ -1,7 +1,7 @@
 ---
 title: Concepts de base de Windows PowerShell
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: powershell,applet de commande
 description: 
 ms.topic: article
 author: jpjofre
@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 6b3cbbc8-060c-4877-b00b-7300dbbe4e28
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 8d4a801c534075db568cb38eb51cb11db40cce15
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 6b35f2dd3cf441daa1a92d52435ed0ae350c138a
 
 ---
 
@@ -23,19 +23,19 @@ La plupart des CLI n’ont pas de modèles pouvant aider l’utilisateur à appr
 
 Windows PowerShell a été conçu pour tirer parti des connaissances historiques de l’utilisateur en matière de CLI. Ce chapitre présente des outils et concepts de base qui peuvent vous aider à apprendre rapidement à utiliser Windows PowerShell. Ils comprennent :
 
--   Utilisation de l’applet de commande Get\-Command
+-   Utilisation de Get-Command
 
 -   Utilisation de commandes Cmd.exe et UNIX
 
 -   Utilisation de commandes externes
 
--   Utilisation de l’applet de commande Tab\-Completion
+-   Utilisation de la saisie semi-automatique vie la touche Tab
 
--   Utilisation de l’applet de commande Get\-Help
-
-
+-   Utilisation de Get-Help
 
 
-<!--HONumber=Jun16_HO4-->
+
+
+<!--HONumber=Aug16_HO4-->
 
 

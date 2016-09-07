@@ -1,7 +1,7 @@
 ---
 title: Gestion des processus avec les applets de commande Process
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: powershell,applet de commande
 description: 
 ms.topic: article
 author: jpjofre
@@ -9,16 +9,16 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 5038f612-d149-4698-8bbb-999986959e31
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 6857cf5e73252f646e563fa12a8252b4bdc2e1e5
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 5a635485387bb367f4e43982085f9d36765a95e5
 
 ---
 
 # Gestion des processus avec les applets de commande Process
 Les applets de commande Process de Windows PowerShell permettent de gérer des processus locaux et distants dans Windows PowerShell.
 
-## Obtention de processus (Get\-Process)
-Pour obtenir les processus en cours d’exécution sur l’ordinateur local, exécutez l’applet de commande **Get\-Process** sans paramètres.
+## Obtention de processus (Get-Process)
+Pour obtenir les processus en cours d’exécution sur l’ordinateur local, exécutez l’applet de commande **Get-Process** sans paramètres.
 
 Vous pouvez obtenir des processus particuliers en spécifiant leur nom ou leur ID. La commande suivante obtient le processus Idle :
 
@@ -29,7 +29,7 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
       0       0        0         16     0               0 Idle
 ```
 
-S’il est normal que des applets de commande ne retournent aucune donnée dans certaines situations, lorsque vous spécifiez un processus par son ID, l’applet de commande **Get\-Process** génère une erreur si elle ne trouve aucune correspondance, car l’objectif consiste généralement à récupérer un processus en cours d’exécution connu. Si aucun processus ne correspond à cet ID, il est probable que celui-ci est incorrect ou que son exécution est déjà terminée :
+S’il est normal que des applets de commande ne retournent aucune donnée dans certaines situations, lorsque vous spécifiez un processus par son ID, l’applet de commande **Get-Process** génère une erreur si elle ne trouve aucune correspondance, car l’objectif consiste généralement à récupérer un processus en cours d’exécution connu. Si aucun processus ne correspond à cet ID, il est probable que celui-ci est incorrect ou que son exécution est déjà terminée :
 
 ```
 PS> Get-Process -Id 99
@@ -38,7 +38,7 @@ At line:1 char:12
 + Get-Process  <<<< -Id 99
 ```
 
-Vous pouvez utiliser le paramètre Name de l’applet de commande Get\-Process pour spécifier une partie des processus en se basant sur le nom des processus. Le paramètre Name peut prendre plusieurs noms dans une liste de valeurs séparées par des virgules. Comme il prend en charge l’utilisation de caractères génériques, vous pouvez entrer des modèles de noms.
+Vous pouvez utiliser le paramètre Name de l’applet de commande Get-Process pour spécifier une partie des processus en se basant sur le nom des processus. Le paramètre Name peut prendre plusieurs noms dans une liste de valeurs séparées par des virgules. Comme il prend en charge l’utilisation de caractères génériques, vous pouvez entrer des modèles de noms.
 
 Par exemple, la commande suivante obtient les processus dont les noms commencent par « ex ».
 
@@ -52,7 +52,7 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
 
 Étant donné que la classe System.Diagnostics.Process de .NET constitue la base des processus Windows PowerShell, elle suit certaines des conventions utilisées par System.Diagnostics.Process. L’une de ces conventions est que le nom de processus d’un exécutable n’inclut jamais « .exe » à la fin du nom.
 
-L’applet de commande **Get\-Process** accepte également plusieurs valeurs pour le paramètre Name.
+L’applet de commande **Get-Process** accepte également plusieurs valeurs pour le paramètre Name.
 
 ```
 PS> Get-Process -Name exp*,power* 
@@ -62,7 +62,7 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
     605       9    30668      29800   155     7.11   3052 powershell
 ```
 
-Vous pouvez utiliser le paramètre ComputerName de l’applet de commande Get\-Process pour obtenir des processus sur des ordinateurs distants. Par exemple, la commande suivante obtient les processus PowerShell sur l’ordinateur local (représenté par « localhost ») et sur deux ordinateurs distants.
+Vous pouvez utiliser le paramètre ComputerName de l’applet de commande Get-Process pour obtenir des processus sur des ordinateurs distants. Par exemple, la commande suivante obtient les processus PowerShell sur l’ordinateur local (représenté par « localhost ») et sur deux ordinateurs distants.
 
 ```
 PS> Get-Process -Name PowerShell -ComputerName localhost, Server01, Server02
@@ -73,7 +73,7 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
     605       9    30668      29800   155     7.11   3052 powershell
 ```
 
-Les noms d’ordinateurs ne sont pas évidents dans cet affichage, mais ils sont stockés dans la propriété MachineName des objets de processus que l’applet de commande Get\-Process retourne. La commande suivante utilise l’applet de commande Format\-Table pour afficher les propriétés d’ID de processus, ProcessName et MachineName (ComputerName) des objets de processus.
+Les noms d’ordinateurs ne sont pas évidents dans cet affichage, mais ils sont stockés dans la propriété MachineName des objets de processus que l’applet de commande Get-Process retourne. La commande suivante utilise l’applet de commande Format-Table pour afficher les propriétés d’ID de processus, ProcessName et MachineName (ComputerName) des objets de processus.
 
 ```
 PS> Get-Process -Name PowerShell -ComputerName localhost, Server01, Server01 | Format-Table -Property ID, ProcessName, MachineName
@@ -84,7 +84,7 @@ PS> Get-Process -Name PowerShell -ComputerName localhost, Server01, Server01 | F
 5816 powershell  localhost
 ```
 
-Cette commande plus complexe ajoute la propriété MachineName à l’affichage standard de l’applet de commande Get\-Process. L’accent grave (\`)(ASCII 96) est le caractère de continuation de Windows PowerShell.
+Cette commande plus complexe ajoute la propriété MachineName à l’affichage standard de l’applet de commande Get-Process. L’accent grave (\`)(ASCII 96) est le caractère de continuation de Windows PowerShell.
 
 ```
 get-process powershell -computername localhost, Server01, Server02 | format-table -property Handles, `
@@ -103,10 +103,10 @@ Handles  NPM(K)  PM(K) WS(K) VM(M) CPU(s)  Id ProcessName  MachineName
     605       9  30668 29800   155 7.11    3052 powershell Server02
 ```
 
-## Arrêt des processus (Stop\-Process)
+## Arrêt des processus (Stop-Process)
 Windows PowerShell offre une flexibilité certaine pour l’affichage des processus, mais qu’en est-il de l’arrêt d’un processus ?
 
-L’applet de commande **Stop\-Process** prend un nom ou un ID pour spécifier un processus à arrêter. Votre capacité à arrêter des processus dépend des autorisations dont vous disposez. Certains processus ne peuvent pas être arrêtés. Par exemple, si vous essayez d’arrêter le processus inactif, vous obtenez une erreur :
+L’applet de commande **Stop-Process** prend un nom ou un ID pour spécifier un processus à arrêter. Votre capacité à arrêter des processus dépend des autorisations dont vous disposez. Certains processus ne peuvent pas être arrêtés. Par exemple, si vous essayez d’arrêter le processus inactif, vous obtenez une erreur :
 
 ```
 PS> Stop-Process -Name Idle
@@ -138,13 +138,13 @@ Une manipulation de processus complexes est possible en utilisant certaines appl
 Get-Process | Where-Object -FilterScript {$_.Responding -eq $false} | Stop-Process
 ```
 
-Vous pouvez utiliser la même approche dans d’autres situations. Par exemple, supposons qu’une application de zone de notification secondaire s’exécute automatiquement quand des utilisateurs démarrent une autre application. Il est possible que vous constatiez que cela ne fonctionne pas correctement dans les sessions des services Terminal Server, mais que vous souhaitiez conserver cette approche dans les sessions qui s’exécutent sur la console de l’ordinateur physique. Les sessions connectées au bureau de l’ordinateur physique ayant toujours un ID de session 0, vous pouvez arrêter toutes les instances du processus figurant dans d’autres sessions à l’aide de l’applet de commande **Where\-Object** et du processus **SessionId** :
+Vous pouvez utiliser la même approche dans d’autres situations. Par exemple, supposons qu’une application de zone de notification secondaire s’exécute automatiquement quand des utilisateurs démarrent une autre application. Il est possible que vous constatiez que cela ne fonctionne pas correctement dans les sessions des services Terminal Server, mais que vous souhaitiez conserver cette approche dans les sessions qui s’exécutent sur la console de l’ordinateur physique. Les sessions connectées au bureau de l’ordinateur physique ayant toujours un ID de session 0, vous pouvez arrêter toutes les instances du processus figurant dans d’autres sessions à l’aide de l’applet de commande **Where-Object** et du processus **SessionId** :
 
 ```
 Get-Process -Name BadApp | Where-Object -FilterScript {$_.SessionId -neq 0} | Stop-Process
 ```
 
-L’applet de commande Stop\-Process ne prend pas de paramètre ComputerName. Par conséquent, pour exécuter une commande d’arrêt de processus sur un ordinateur distant, vous devez utiliser l’applet de commande Invoke\-Command. Par exemple, pour arrêter le processus PowerShell sur l’ordinateur distant Serveur01, tapez :
+L’applet de commande Stop-Process ne prend pas de paramètre ComputerName. Par conséquent, pour exécuter une commande d’arrêt de processus sur un ordinateur distant, vous devez utiliser l’applet de commande Invoke-Command. Par exemple, pour arrêter le processus PowerShell sur l’ordinateur distant Serveur01, tapez :
 
 ```
 Invoke-Command -ComputerName Server01 {Stop-Process Powershell}
@@ -182,6 +182,6 @@ Windows PowerShell comprend également des applets de commande permettant de dé
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

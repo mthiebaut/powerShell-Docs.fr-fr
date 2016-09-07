@@ -1,12 +1,19 @@
 ---
-title: Environnement d'écriture de scripts intégré de Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+title: Windows PowerShell Integrated Scripting Environment (ISE)
+ms.date: 2016-05-11
+keywords: powershell,applet de commande
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: f156b92d-0203-46d2-89c7-b4989d32e3d2
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 061e22c26853664c89adc023d43802628859b9a6
+
 ---
+
 # Environnement d'écriture de scripts intégré de Windows PowerShell
 L’environnement d’écriture de scripts intégré de Windows PowerShell (ISE) est l’un des deux ordinateurs hôtes pour le moteur et le langage Windows PowerShell. Il permet d’écrire, d’exécuter et de tester des scripts d’une manière que la console Windows PowerShell ne permet pas. L’environnement ISE ajoute la coloration de la syntaxe, la saisie semi-automatique via la touche Tab, IntelliSense, le débogage visuel et l’aide contextuelle.
 
@@ -34,7 +41,7 @@ Les **nouvelles fonctionnalités de l’éditeur** facilitent la création et la
 
 -   **Coloration de la syntaxe XML**. L’éditeur ISE colore désormais la syntaxe XML de la même façon que la syntaxe du code Windows PowerShell.
 
--   **Correspondance d’accolade**. Windows PowerShell ISE met en surbrillance les accolades correspondantes afin que vous puissiez vous assurer que le nombre d’accolades fermantes est égal au nombre d’accolades ouvrantes. Pour localiser l’accolade fermante correspondant à l’accolade ouvrante sur laquelle le curseur est positionné, utilisez CTRL-[.
+-   **Correspondance d’accolade**. Windows PowerShell ISE met en surbrillance les accolades correspondantes afin que vous puissiez vous assurer que le nombre d’accolades fermantes est égal au nombre d’accolades ouvrantes. Pour localiser l’accolade fermante correspondant à l’accolade ouvrante sur laquelle le curseur est positionné, utilisez CTRL-\[.
 
 -   **Mode Plan**. Vous pouvez réduire ou développer des sections de votre code en cliquant sur les signes plus et moins dans la marge de gauche. Cela facilite la recherche du code souhaité dans un script long.
 
@@ -62,6 +69,7 @@ L’environnement ISE est disponible sur tout ordinateur pouvant exécuter Windo
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

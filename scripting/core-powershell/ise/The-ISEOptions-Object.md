@@ -1,7 +1,7 @@
 ---
 title: Objet ISEOptions
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: powershell,applet de commande
 description: 
 ms.topic: article
 author: jpjofre
@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 75e2a76f-f3d1-490b-ad5d-e3829946aabb
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 272749d487a59ccf5eb30352dc902591228746f3
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 1aee849dd8b89492a641560ed4ef163c3cb96da4
 
 ---
 
@@ -387,7 +387,7 @@ $psISE.Options.OutputPaneTextForegroundColor  = "blue"
 ###  <a name="optbc"></a> OutputPaneTextBackgroundColor
   Cette fonctionnalité est présente dans Windows PowerShell ISE 2.0, mais a été supprimée ou renommée dans les versions ultérieures de l'environnement ISE.  Pour les versions ultérieures, consultez [ConsolePaneTextBackgroundColor](#conptbc).
 
- Propriété en lecture\/écriture qui modifie la couleur d’arrière-plan du texte affiché dans le volet de sortie.
+ Propriété en lecture/écriture qui modifie la couleur d’arrière-plan du texte affiché dans le volet de sortie.
 
 ```
 # Changes the background color of the Output pane text to pink.
@@ -397,7 +397,7 @@ $psISE.Options.OutputPaneTextBackgroundColor = "pink"
 ###  <a name="spbc"></a> ScriptPaneBackgroundColor
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures.
 
- Propriété en lecture\/écriture qui obtient ou définit la couleur d’arrière-plan pour les fichiers. Il s’agit d’une instance de la classe **System.Windows.Media.Color**.
+ Propriété en lecture/écriture qui obtient ou définit la couleur d’arrière-plan pour les fichiers. Il s’agit d’une instance de la classe **System.Windows.Media.Color**.
 
 ```
 
@@ -409,7 +409,7 @@ $psISE.Options.ScriptPaneBackgroundColor = ”yellow”
 ###  <a name="spfc"></a> ScriptPaneForegroundColor
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures.
 
- Propriété en lecture\/écriture qui obtient ou définit la couleur de premier plan pour les fichiers autres que de script dans le volet de script.
+ Propriété en lecture/écriture qui obtient ou définit la couleur de premier plan pour les fichiers autres que de script dans le volet de script.
 Pour définir la couleur de premier plan pour les fichiers de script, utilisez la propriété [TokenColors](The-ISEOptions-Object.md#tc).
 
 ```
@@ -421,7 +421,7 @@ $psISE.Options.ScriptPaneBackgroundColor = "green"
 ###  <a name="ssps"></a> SelectedScriptPaneState
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures.
 
- Propriété en lecture\/écriture qui obtient ou définit l’emplacement du volet de script à l’écran. Les valeurs possibles sont « Maximized », « Top » ou « Right ».
+ Propriété en lecture/écriture qui obtient ou définit l’emplacement du volet de script à l’écran. Les valeurs possibles sont « Maximized », « Top » ou « Right ».
 
 ```
 # Moves the Script Pane to the top.
@@ -436,7 +436,7 @@ $psISE.Options.SelectedScriptPaneState = "Maximized"
 ###  <a name="sds"></a> ShowDefaultSnippets
   Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures.
 
- Spécifie si la liste **Ctrl\+J** des extraits de code inclut les éléments de démarrage qui sont fournis dans Windows PowerShell. Si cette propriété a la valeur **$false**, la liste **Ctrl\+J** contient uniquement les extraits de code définis par l’utilisateur. La valeur par défaut est **$true**.
+ Spécifie si la liste **Ctrl+J** des extraits de code inclut les éléments de démarrage qui sont fournis dans Windows PowerShell. Si cette propriété a la valeur **$false**, la liste **Ctrl+J** contient uniquement les extraits de code définis par l’utilisateur. La valeur par défaut est **$true**.
 
 ```
 # Hide the default snippets from the CTRL+J list.
@@ -476,7 +476,7 @@ $psISe.Options.ShowLineNumbers = $false
 ###  <a name="so"></a> ShowOutlining
   Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures.
 
- Spécifie si le volet de script affiche des crochets pouvant être développés et réduits en regard des sections de code dans la marge de gauche. Quand les crochets sont affichés, vous pouvez cliquer sur l’icône avec le signe moins \(\-\) à côté du bloc de texte à réduire ou sur l’icône avec le signe plus \(\+\) pour le développer. La valeur par défaut est **$true**.
+ Spécifie si le volet de script affiche des crochets pouvant être développés et réduits en regard des sections de code dans la marge de gauche. Quand les crochets sont affichés, vous pouvez cliquer sur l’icône avec le signe moins \(-\) à côté du bloc de texte à réduire ou sur l’icône avec le signe plus \(+\) pour le développer. La valeur par défaut est **$true**.
 
 ```
 # Turn off outlining in the Script pane.
@@ -520,7 +520,7 @@ $psISE.Options.ShowWarningForDuplicateFiles = $true
 ###  <a name="tc"></a> TokenColors
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures.
 
- Spécifie les couleurs des jetons IntelliSense dans le volet de script Windows PowerShell ISE. Cette propriété est un objet dictionnaire qui contient les paires nom\/valeur des types et couleurs des jetons dans le volet de script. Pour modifier les couleurs des jetons IntelliSense dans le volet de la console, consultez [ConsoleTokenColors](#contc). Pour restaurer les valeurs par défaut des couleurs, consultez [RestoreDefaultTokenColors()](#rdtc). Les couleurs des jetons peuvent être définies pour les éléments suivants : Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
+ Spécifie les couleurs des jetons IntelliSense dans le volet de script Windows PowerShell ISE. Cette propriété est un objet dictionnaire qui contient les paires nom/valeur des types et couleurs des jetons dans le volet de script. Pour modifier les couleurs des jetons IntelliSense dans le volet de la console, consultez [ConsoleTokenColors](#contc). Pour restaurer les valeurs par défaut des couleurs, consultez [RestoreDefaultTokenColors()](#rdtc). Les couleurs des jetons peuvent être définies pour les éléments suivants : Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
 
 ```
 # Sets the color of commands to green.
@@ -608,7 +608,7 @@ $psISE.Options.WarningForegroundColor =”yellow”
 ###  <a name="xtc"></a> XmlTokenColors
   Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures.
 
- Spécifie un objet dictionnaire qui contient les paires nom\/valeur des types et couleurs des jetons pour le contenu XML qui s’affiche dans Windows PowerShell ISE. Les couleurs des jetons peuvent être définies pour les éléments suivants : Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable. Consultez également [RestoreDefaultXmlTokenColors()](#rdxtc).
+ Spécifie un objet dictionnaire qui contient les paires nom/valeur des types et couleurs des jetons pour le contenu XML qui s’affiche dans Windows PowerShell ISE. Les couleurs des jetons peuvent être définies pour les éléments suivants : Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable. Consultez également [RestoreDefaultXmlTokenColors()](#rdxtc).
 
 ```
 # Sets the color of XML element names to green.
@@ -635,6 +635,6 @@ $psISE.Options.Zoom = 200
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

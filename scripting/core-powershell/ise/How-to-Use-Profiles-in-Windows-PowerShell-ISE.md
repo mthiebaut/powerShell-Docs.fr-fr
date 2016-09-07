@@ -1,19 +1,26 @@
 ---
 title: Comment utiliser des profils dans Windows PowerShell ISE
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: powershell,applet de commande
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: 0219626a-6da5-4acc-b630-d058e8b29cc6
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: d934eac30da3d6a180d0dd92194eedbfd4cd8844
+
 ---
+
 # Comment utiliser des profils dans Windows PowerShell ISE
-Cette rubrique explique comment utiliser des profils dans Windows PowerShellÂ® Integrated Scripting Environment (ISE). Avant d’effectuer les tâches décrites dans cette section, nous vous recommandons de consulter [about_Profiles [v4]](https://technet.microsoft.com/en-us/library/e1d9e30a-70cc-4f36-949f-fc7cd96b4054) ou, dans le volet Console, de taper « get-help about_profiles », puis d’appuyer sur **Entrée**..
+Cette rubrique explique comment utiliser des profils dans Windows PowerShellÂ® Integrated Scripting Environment (ISE). Avant d’effectuer les tâches décrites dans cette section, nous vous recommandons de consulter [about_Profiles [v4]](https://technet.microsoft.com/en-us/library/e1d9e30a-70cc-4f36-949f-fc7cd96b4054) ou, dans le volet Console, de taper « get-help about_profiles », puis d’appuyer sur **Entrée**.
 
 Un profil est un script Windows PowerShell ISE qui s’exécute automatiquement quand vous démarrez une nouvelle session.  Vous pouvez créer un ou plusieurs profils Windows PowerShell pour Windows PowerShell ISE, et les utiliser pour ajouter la configuration à l’environnement Windows PowerShell ou Windows PowerShell ISE, en le préparant pour votre utilisation, avec les variables, alias, fonctions et préférences de police et de couleur dont vous voulez disposer. Un profil affecte chaque session Windows PowerShell ISE que vous démarrez.
 
 > [!NOTE]
-> La stratégie d’exécution de Windows PowerShell détermine si vous pouvez exécuter des scripts et charger un profil. La stratégie d’exécution par défaut, « Restricted », empêche l’exécution de tous les scripts, y compris des profils. Si vous utilisez la stratégie « Restricted », le profil ne peut pas se charger. Pour plus d’informations sur la stratégie d’exécution, voir [about_Execution_Policies [v4]](https://technet.microsoft.com/en-us/library/347708dc-1515-4d74-978b-8334603472e6)..
+> La stratégie d’exécution de Windows PowerShell détermine si vous pouvez exécuter des scripts et charger un profil. La stratégie d’exécution par défaut, « Restricted », empêche l’exécution de tous les scripts, y compris des profils. Si vous utilisez la stratégie « Restricted », le profil ne peut pas se charger. Pour plus d’informations sur la stratégie d’exécution, voir [about_Execution_Policies [v4]](https://technet.microsoft.com/en-us/library/347708dc-1515-4d74-978b-8334603472e6).
 
 ## Sélection d’un profil à utiliser dans Windows PowerShell ISE
 Windows PowerShell ISE prend en charge les profils pour l’utilisateur actuel et tous les utilisateurs. Il prend également en charge les profils Windows PowerShell qui s’appliquent à tous les ordinateurs hôtes.
@@ -68,7 +75,7 @@ if (!(test-path $profile.AllUsersAllHosts))
 
 2.  Ajoutez des éléments à votre profil. Voici quelques exemples pour vous aider à démarrer :
 
-    -   Pour modifier la couleur d’arrière-plan par défaut du volet Console en bleu, dans le type de fichier de profil : `$psISE.Options.OutputPaneBackground = 'blue'`. Pour plus d’informations sur la variable $psISE, consultez [Référence de modèle objet Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/e1a9e7d1-0fd5-47de-8d9b-f1be1ed13b0c)..
+    -   Pour modifier la couleur d’arrière-plan par défaut du volet Console en bleu, dans le type de fichier de profil : `$psISE.Options.OutputPaneBackground = 'blue'`. Pour plus d’informations sur la variable $psISE, voir [Référence de modèle objet Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/e1a9e7d1-0fd5-47de-8d9b-f1be1ed13b0c).
 
     -   Pour modifier la taille de police en 20, dans le type de fichier de profil : `$psISE.Options.FontSize =20`
 
@@ -80,6 +87,7 @@ if (!(test-path $profile.AllUsersAllHosts))
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

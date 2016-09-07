@@ -1,7 +1,7 @@
 ---
 title: "Changement de l’état de l’ordinateur"
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: powershell,applet de commande
 description: 
 ms.topic: article
 author: jpjofre
@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 8093268b-27f8-4a49-8871-142c5cc33f01
 translationtype: Human Translation
-ms.sourcegitcommit: c6b87ed59a16ccb147fdd3d98e48cfa1c0aa748d
-ms.openlocfilehash: d1f3c08451b385c56d0c4e084dce8fa5795c278e
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 1779b9de13a30a43236e24793e5196261a7db77f
 
 ---
 
@@ -39,18 +39,18 @@ Vous pouvez également recouvrir à l’outil **shutdown.exe** avec son option l
 shutdown.exe -l
 ```
 
-Une troisième option consiste à utiliser WMI. La classe Win32\_OperatingSystem dispose d’une méthode Win32Shutdown. L’appel de la méthode avec l’indicateur 0 déclenche la fermeture de session :
+Une troisième option consiste à utiliser WMI. La classe Win32_OperatingSystem dispose d’une méthode Win32Shutdown. L’appel de la méthode avec l’indicateur 0 déclenche la fermeture de session :
 
 ```
 (Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(0)
 ```
 
-Pour plus d’informations et pour découvrir d’autres fonctionnalités de la méthode Win32Shutdown, consultez « Méthode Win32Shutdown de la classe Win32\_OperatingSystem » dans MSDN.
+Pour plus d’informations et pour découvrir d’autres fonctionnalités de la méthode Win32Shutdown, voir « Méthode Win32Shutdown de la classe Win32_OperatingSystem » dans MSDN.
 
 ### Arrêt ou redémarrage d’un ordinateur
 L’arrêt et le redémarrage d’ordinateurs sont généralement des tâches de même type. Les outils permettant d’arrêter un ordinateur permettent généralement aussi de le redémarrer, et inversement. Deux options simples permettent de redémarrer un ordinateur à partir de Windows PowerShell. Utilisez Tsshutdn.exe ou Shutdown.exe avec des arguments appropriés. Vous pouvez obtenir des informations d’utilisation détaillées à partir de **tsshutdn.exe /?** ou de **shutdown.exe /?**.
 
-Vous pouvez également exécuter des opérations d’arrêt et de redémarrage à l’aide de **Win32\_OperatingSystem** directement à partir de Windows PowerShell.
+Vous pouvez également exécuter des opérations d’arrêt et de redémarrage à l’aide de **Win32_OperatingSystem** directement à partir de Windows PowerShell.
 
 Pour arrêter l’ordinateur, utilisez la méthode Win32Shutdown avec l’indicateur **1**.
 
@@ -67,6 +67,6 @@ Pour redémarrer le système d’exploitation, utilisez la méthode Win32Shutdow
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 

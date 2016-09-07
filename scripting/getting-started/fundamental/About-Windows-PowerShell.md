@@ -1,7 +1,7 @@
 ---
 title: "À propos de Windows PowerShell"
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: powershell,applet de commande
 description: 
 ms.topic: article
 author: jpjofre
@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 979654ae-7994-47f8-be43-d79e7a140143
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: b990fb5c6855aaffeb241e9596c333014050e059
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 548cb522ecf8f8f5e82fb43e709c6b8bf3a05096
 
 ---
 
@@ -24,12 +24,12 @@ Windows PowerShell facilite la découverte de ses fonctionnalités. Par exemple,
 Get-Command *-Service
 ```
 
-Après avoir découvert l’applet de commande qui effectue une tâche, vous pouvez en apprendre davantage sur l’applet de commande à l’aide de l’applet de commande Get\-Help. Par exemple, pour afficher l’aide concernant l’applet de commande Get\-Service, tapez ce qui suit :
+Après avoir découvert l’applet de commande qui effectue une tâche, vous pouvez en apprendre davantage sur l’applet de commande à l’aide de l’applet de commande Get-Help. Par exemple, pour afficher l’aide concernant l’applet de commande Get-Service, tapez ce qui suit :
 
 ```
 Get-Help Get-Service
 ```
-La plupart des applets de commande émettent des objets qui peuvent être manipulés puis rendus sous forme texte pour l’affichage. Pour bien comprendre la sortie de cette applet de commande, canalisez-la vers l’applet de commande Get\-Member. Par exemple, la commande suivante affiche des informations sur les membres de l’objet retourné par l’applet de commande Get\-Service.
+La plupart des applets de commande émettent des objets qui peuvent être manipulés puis rendus sous forme texte pour l’affichage. Pour bien comprendre la sortie de cette applet de commande, canalisez-la vers l’applet de commande Get-Member. Par exemple, la commande suivante affiche des informations sur les membres de l’objet retourné par l’applet de commande Get-Service.
 
 ```
 Get-Service | Get-Member
@@ -38,7 +38,7 @@ Get-Service | Get-Member
 ## Consistency
 La gestion de systèmes pouvant être complexe, disposer d’outils dont l’interface est cohérente facilite le contrôle de la complexité intrinsèque. Malheureusement, ni les outils en ligne de commande, ni les objets COM pouvant contenir des scripts ne sont réputés pour leur cohérence.
 
-La cohérence de Windows PowerShell est l’un de ses principaux atouts. Par exemple, si vous apprenez à utiliser l’applet de commande Sort\-Object, vous pouvez utiliser cette connaissance pour trier la sortie de toute applet de commande. Vous n’avez pas à apprendre les différentes routines de tri de chaque applet de commande.
+La cohérence de Windows PowerShell est l’un de ses principaux atouts. Par exemple, si vous apprenez à utiliser l’applet de commande Sort-Object, vous pouvez utiliser cette connaissance pour trier la sortie de toute applet de commande. Vous n’avez pas à apprendre les différentes routines de tri de chaque applet de commande.
 
 En outre, les développeurs d’applets de commande n’ont pas à concevoir de fonctionnalités de tri pour leur applets de commande. Windows PowerShell leur offre une infrastructure qui intègre les fonctionnalités de base et les force à être cohérents pour de nombreux aspects de l’interface. L’infrastructure élimine certains choix généralement laissés à l’appréciation des développeurs mais, en retour, elle simplifie le développement d’applets de commande robustes et simples d’utilisation.
 
@@ -58,6 +58,6 @@ Windows PowerShell facilite la transition de la saisie de commandes de façon in
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

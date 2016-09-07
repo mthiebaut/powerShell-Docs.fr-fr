@@ -1,12 +1,19 @@
 ---
 title: Objet PowerShellTab
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: powershell,applet de commande
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: a9b58556-951b-4f48-b3ae-b351b7564360
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: f3f2d27c3c82406f8e8967fd1784a6e07579c1fa
+
 ---
+
 # Objet PowerShellTab
   L’objet **PowerShellTab** représente un environnement d’exécution Windows PowerShell.
 
@@ -20,8 +27,7 @@ ms.assetid: a9b58556-951b-4f48-b3ae-b351b7564360
 > [!NOTE]
 >  Cette méthode effectue cette action uniquement dans les onglets PowerShell autres que l’onglet PowerShell à partir duquel elle est exécutée. Elle ne renvoie pas d’objet ou de valeur. Si le code modifie une variable, ces modifications s’appliquent à l’onglet pour lequel la commande a été appelée.
 
- **Script** \- System.Management.Automation.ScriptBlock ou chaîne
- Bloc de script à exécuter.
+ **Script** \- System.Management.Automation.ScriptBlock ou chaîne. Bloc de script à utiliser.
 
 ```
 # Manually create a second PowerShell tab before running this script.
@@ -37,14 +43,13 @@ $psise.PowerShellTabs[1].Invoke({dir})
 > [!NOTE]
 >  Cette méthode effectue cette action uniquement dans les onglets PowerShell autres que l’onglet PowerShell à partir duquel elle est exécutée. Le bloc de script est exécuté. Les valeurs renvoyées par le script sont renvoyées à l’environnement d’exécution à partir duquel vous avez appelé la commande. Si la durée d’exécution de la commande dépasse la valeur **millesecondsTimeout** spécifiée, la commande échoue avec une exception : « Le délai de l’opération a expiré. »
 
- **Script** \- System.Management.Automation.ScriptBlock ou chaîne
- Bloc de script à exécuter.
+ **Script** \- System.Management.Automation.ScriptBlock ou chaîne. Bloc de script à utiliser.
 
- **\[useNewScope\]** \- Valeur booléenne facultative qui a la valeur **$true** par défaut
- Si la valeur est **$true**, une nouvelle étendue est créée pour y exécuter la commande. Cela ne modifie pas l’environnement d’exécution de l’onglet PowerShell qui est spécifié par la commande.
+ **\[useNewScope\]** : valeur booléenne facultative qui a la valeur **$true**
+ par défaut Si la valeur est **$true**, une nouvelle étendue est créée pour y exécuter la commande. Cela ne modifie pas l’environnement d’exécution de l’onglet PowerShell qui est spécifié par la commande.
 
- **\[millisecondsTimeout\]** \- Entier facultatif qui a la valeur **500** par défaut.
- Si la commande ne se termine pas dans le délai spécifié, la commande génère une exception **TimeoutException** avec le message « Le délai de l’opération a expiré. »
+ **\[millisecondsTimeout\]** - Entier facultatif qui a la valeur **500** par défaut.
+Si la commande ne se termine pas dans le délai spécifié, la commande génère une exception **TimeoutException** avec le message « Le délai de l’opération a expiré. »
 
 ```
 # create a new PowerShell tab and then switch back to the first
@@ -119,7 +124,7 @@ $psISE.CurrentPowerShellTab.ConsolePane
 ###  <a name="Displayname"></a> DisplayName
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
- Propriété en lecture seule qui obtient ou définit le texte affiché dans l’onglet PowerShell. Par défaut, les onglets sont nommés « PowerShell \# », où \# est un nombre.
+ Propriété en lecture seule qui obtient ou définit le texte affiché dans l’onglet PowerShell. Par défaut, les onglets sont nommés « PowerShell # », où # est un nombre.
 
 ```
 $newTab = $psise.PowerShellTabs.Add()
@@ -217,12 +222,13 @@ $psISE.CurrentPowerShellTab.HorizontalAddOnToolsPaneOpened
 ## Voir aussi
  [Objet PowerShellTabCollection](The-PowerShellTabCollection-Object.md) 
  [Modèle objet de script Windows PowerShell ISE](../ise/The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
- [Référence de modèle objet Windows PowerShell ISE](../ise/Windows-PowerShell-ISE-Object-Model-Reference.md) 
+ [Informations de référence sur le modèle objet Windows PowerShell ISE](../ise/Windows-PowerShell-ISE-Object-Model-Reference.md) 
  [Hiérarchie du modèle objet ISE](../ise/The-ISE-Object-Model-Hierarchy.md)
 
   
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

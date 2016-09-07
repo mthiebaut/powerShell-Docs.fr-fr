@@ -1,7 +1,7 @@
 ---
 title: "Annexe 2   création d’un raccourci PowerShell personnalisé"
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: powershell,applet de commande
 description: 
 ms.topic: article
 author: jpjofre
@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 5d4fd421-5d43-4ec7-86fd-acfe887b066e
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 24e9b67cf51b99156db3f0bdfb446996b9d3df76
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: ceec1038516ddd4c29df770d14981c0a69437498
 
 ---
 
@@ -25,9 +25,9 @@ La procédure suivante décrit comment créer un raccourci vers Windows PowerShe
 
 4.  Dans la section **Modifier les options**, activez la case à cocher **QuickEdit**.
 
-    Ce paramètre permet de sélectionner du texte dans la fenêtre de console Windows PowerShell en faisant glisser tout en appuyant sur le bouton gauche de la souris, et permet de copier du texte dans le Presse\-papiers en appuyant sur Entrée ou en cliquant le bouton droit la souris.
+    Ce paramètre permet de sélectionner du texte dans la fenêtre de console Windows PowerShell en faisant glisser tout en appuyant sur le bouton gauche de la souris, et permet de copier du texte dans le Presse-papiers en appuyant sur Entrée ou en cliquant avec le bouton droit.
 
-5.  Dans la section **Modifier les options**, activez la case à cocher **Mode insertion**. Ce paramètre permet de cliquer avec le bouton droit dans la fenêtre de console pour coller automatiquement du texte à partir du Presse\-papiers.
+5.  Dans la section **Modifier les options**, activez la case à cocher **Mode insertion**. Ce paramètre permet de cliquer avec le bouton droit dans la fenêtre de console pour coller automatiquement du texte à partir du Presse-papiers.
 
 6.  Dans la section **Historique des commandes**, dans le champ **Taille de la mémoire tampon**, tapez ou sélectionnez un nombre compris entre 1 et 999. Cela a pour effet de définir le nombre de commandes saisies qui sont conservées dans la mémoire tampon de la console.
 
@@ -46,6 +46,6 @@ La procédure suivante décrit comment créer un raccourci vers Windows PowerShe
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

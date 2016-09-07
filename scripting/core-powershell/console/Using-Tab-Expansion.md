@@ -1,7 +1,7 @@
 ---
 title: "Utilisation du développement par tabulation"
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: powershell,applet de commande
 description: 
 ms.topic: article
 author: jpjofre
@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: c8730471-bf6a-43b8-ab1d-f9ef5a74f04e
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 644dbbb51e98efda9735f0ff23489e936f6b28a2
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: fd950429d80972b6025e67ea727aa49ef195e882
 
 ---
 
@@ -22,9 +22,9 @@ Les interpréteurs de ligne de commande offrent souvent une manière de complét
 
 Pour renseigner automatiquement un nom de fichier ou un chemin d’accès à partir des choix disponibles, tapez une partie du nom, puis appuyez sur la touche **Tab**. Windows PowerShell développe automatiquement le nom sur la base de la première correspondance trouvée. Des appuis répétés sur la touche **Tab** permettent de passer en revue tous les choix disponibles.
 
-Le développement par tabulation des noms d’applet de commande est légèrement différent. Pour développer par tabulation un nom d’applet de commande, tapez la première partie entière du nom (verbe) et le trait d’union qui suit. Vous pouvez entrer davantage de caractères du nom pour une correspondance partielle. Par exemple, si vous tapez **get\-co**, puis appuyez sur la touche **Tab**, Windows PowerShell développe automatiquement le nom de l’applet de commande **Get\-Command** (notez qu’il modifie également la casse des lettres pour leur attribuer leur format standard). Si vous appuyez de nouveau sur la touche **Tab**, Windows PowerShell remplace ce nom par le seul autre nom d’applet de commande correspondant, **Get\-Content**.
+Le développement par tabulation des noms d’applet de commande est légèrement différent. Pour développer par tabulation un nom d’applet de commande, tapez la première partie entière du nom (verbe) et le trait d’union qui suit. Vous pouvez entrer davantage de caractères du nom pour une correspondance partielle. Par exemple, si vous tapez **get-co**, puis appuyez sur la touche **Tab**, Windows PowerShell développe automatiquement le nom de l’applet de commande **Get-Command** (notez qu’il modifie également la casse des lettres pour leur attribuer leur format standard). Si vous appuyez de nouveau sur la touche **Tab**, Windows PowerShell remplace ce nom par le seul autre nom d’applet de commande correspondant, **Get-Content**.
 
-Vous pouvez utiliser le développement par tabulation à plusieurs reprises sur la même ligne. Par exemple, vous pouvez l’utiliser sur le nom de l’applet de commande **Get\-Content** en entrant ce qui suit :
+Vous pouvez utiliser le développement par tabulation à plusieurs reprises sur la même ligne. Par exemple, vous pouvez l’utiliser sur le nom de l’applet de commande **Get-Content** en entrant ce qui suit :
 
 ```
 PS> Get-Con<Tab>
@@ -54,6 +54,6 @@ PS> Get-Content C:\windows\actsetup.log
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

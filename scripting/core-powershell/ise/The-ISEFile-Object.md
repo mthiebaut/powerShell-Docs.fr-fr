@@ -1,12 +1,19 @@
 ---
 title: Objet ISEFile
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: powershell,applet de commande
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: 1c6d91f3-c556-42a2-a017-79b6b7b4b7db
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: c1744841e23aa9c2fedf3eb92230ef422c36f0cd
+
 ---
+
 # Objet ISEFile
   Un objet **ISEFile** représente un fichier dans l’environnement d’écriture de scripts intégré (ISE) de Windows PowerShellÂ®. Il s’agit d’une instance de la classe Microsoft.PowerShell.Host.ISE.ISEFile. Cette rubrique répertorie les méthodes et propriétés membres de cet objet. **$psISE.CurrentFile** et les fichiers de la collection Files dans un onglet PowerShell sont tous des instances de la classe Microsoft.PowerShell.Host.ISE.ISEFile.
 
@@ -17,7 +24,7 @@ ms.assetid: 1c6d91f3-c556-42a2-a017-79b6b7b4b7db
 
  Enregistre le fichier sur le disque.
 
- **\[saveEncoding\]** – [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx) facultatif
+ **\[saveEncoding\]** – (facultatif) [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx)
  Paramètre facultatif d’encodage de caractères à utiliser pour le fichier enregistré. La valeur par défaut est **UTF8**.
 
  **Exceptions**
@@ -41,10 +48,9 @@ $myfile.Encoding
 
  Enregistre le fichier avec le nom de fichier et l’encodage spécifiés.
 
- **filename** \- chaîne
- Nom à utiliser pour enregistrer le fichier.
+ **filename** : chaîne Nom à utiliser pour enregistrer le fichier.
 
- **\[saveEncoding\]** – [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx) facultatif
+ **\[saveEncoding\]** – (facultatif) [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx)
  Paramètre facultatif d’encodage de caractères à utiliser pour le fichier enregistré. La valeur par défaut est **UTF8**.
 
  **Exceptions**
@@ -135,7 +141,7 @@ $psISE.CurrentFile.IsUntitled
 ```
 
 ## Voir aussi
- [Objet ISEFileCollection](The-ISEFileCollection-Object.md) 
+ [Objet ISEFileCollectionObject](The-ISEFileCollection-Object.md) 
  [Modèle objet de script Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
  [Référence de modèle objet Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md) 
  [Hiérarchie du modèle objet ISE](The-ISE-Object-Model-Hierarchy.md)
@@ -143,6 +149,7 @@ $psISE.CurrentFile.IsUntitled
   
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

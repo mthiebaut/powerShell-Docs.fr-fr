@@ -1,7 +1,7 @@
 ---
 title: "Présentation des concepts importants de Windows PowerShell"
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: powershell,applet de commande
 description: 
 ms.topic: article
 author: jpjofre
@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 3e601e38-4520-4578-a48d-b6779f1d35ee
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: db5f410c8f84949c969f21ed59ac48a4e31e91fd
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 89634d992eb59650e1f1a6cf89064b477ac4fea9
 
 ---
 
@@ -23,7 +23,7 @@ Contrairement aux commandes d’interface de ligne de commande traditionnelles, 
 Si vous avez utilisé des outils de traitement de texte pour traiter des données de ligne de commande par le passé, vous constaterez qu’ils se comportent différemment si vous tentez de les utiliser dans Windows PowerShell. Dans la plupart des cas, vous n’avez pas besoin d’outils de traitement texte pour extraire des informations spécifiques. Vous pouvez accéder à des portions de données directement à l’aide des commandes de manipulation d’objets standard de Windows PowerShell.
 
 ### La famille de commandes est extensible
-Des interfaces telles que Cmd.exe n’offrent aucun moyen d’étendre directement le jeu de commandes intégré. Vous pouvez créer des outils en ligne de commande externes qui s’exécutent dans Cmd.exe, mais ceux\-ci n’ont pas de services tels que l’intégration de l’aide, et Cmd.exe ne détermine pas automatiquement qu’il s’agit de commandes valides.
+Des interfaces telles que Cmd.exe n’offrent aucun moyen d’étendre directement le jeu de commandes intégré. Vous pouvez créer des outils en ligne de commande externes qui s’exécutent dans Cmd.exe, mais ceux-ci n’ont pas de services tels que l’intégration de l’aide, et Cmd.exe ne détermine pas automatiquement qu’il s’agit de commandes valides.
 
 Les commandes binaires natives de Windows PowerShell, appelées *applets de commande* peuvent être complétées par des applets de commande que vous créez et ajoutez à Windows PowerShell à l’aide de composants logiciels enfichables. Les *composants logiciels enfichables* de Windows PowerShell sont compilés, à l’instar des outils binaires dans toute autre interface. Vous pouvez les utiliser pour ajouter des fournisseurs Windows PowerShell à l’interpréteur de commandes, ainsi que de nouvelles applets de commande.
 
@@ -35,23 +35,23 @@ En raison de la spécificité des commandes internes de Windows PowerShell, nous
 ### Windows PowerShell gère l’entrée et l’affichage sur la console
 Lorsque vous tapez une commande, Windows PowerShell traite toujours directement la saisie de la ligne de commande. Windows PowerShell met également en forme la sortie à l’écran. C’est important, car cela réduit le travail requis de chaque applet de commande et vous garantit de pouvoir toujours opérer de la même manière, quelle que soit l’applet de commande que vous utilisez. Un exemple de la manière dont cela simplifie la vie tant des développeurs d’outils que des utilisateurs, est l’aide relative à la ligne de commande.
 
-Les outils en ligne de commande traditionnels ont leurs propres modes de demande et d’affichage de l’aide. Certains outils en ligne de commande utilisent **\/?** pour déclencher l’affichage de l’aide. D’autres utilisent **\-?**, **\/H**, voire **\/\/**. Certains affichent l’aide dans une fenêtre d’interface graphique utilisateur, plutôt que dans l’affichage de la console. Certains outils complexes, tels que des programmes de mise à jour d’application, décompressent des fichiers internes avant d’afficher leur aide. Si vous utilisez un paramètre incorrect, l’outil peut ignorer ce que vous avez tapé et commencer à exécuter une tâche automatiquement.
+Les outils en ligne de commande traditionnels ont leurs propres modes de demande et d’affichage de l’aide. Certains outils en ligne de commande utilisent **/?** pour déclencher l’affichage de l’aide. D’autres utilisent **-?**, **/H**, voire **//**. Certains affichent l’aide dans une fenêtre d’interface graphique utilisateur, plutôt que dans l’affichage de la console. Certains outils complexes, tels que des programmes de mise à jour d’application, décompressent des fichiers internes avant d’afficher leur aide. Si vous utilisez un paramètre incorrect, l’outil peut ignorer ce que vous avez tapé et commencer à exécuter une tâche automatiquement.
 
-Lorsque vous entrez une commande dans Windows PowerShell, tout ce que vous saisissez est automatiquement analysé et pré\-traité. Si vous utilisez le paramètre **\-?** avec une applet de commande Windows PowerShell, il signifie toujours « afficher l’aide pour cette commande ». Les développeurs d’applets de commande n’ont pas besoin d’analyser la commande ; il leur suffit de fournir le texte d’aide.
+Lorsque vous entrez une commande dans Windows PowerShell, tout ce que vous saisissez est automatiquement analysé et pré-traité. Si vous utilisez le paramètre **-?** avec une applet de commande Windows PowerShell, il signifie toujours « afficher l’aide pour cette commande ». Les développeurs d’applets de commande n’ont pas besoin d’analyser la commande ; il leur suffit de fournir le texte d’aide.
 
 Il est important de comprendre que les fonctionnalités d’aide de Windows PowerShell sont disponibles même lorsque vous exécutez des outils en ligne de commande traditionnels dans Windows PowerShell. Windows PowerShell traite les paramètres et transmet les résultats aux outils externes.
 
 > [!NOTE]
 > Si vous exécutez une application graphique dans Windows PowerShell, la fenêtre de l’application s’ouvre. Windows PowerShell intervient uniquement lors du traitement de l’entrée de ligne de commande que vous saisissez ou lors du renvoi de la sortie de l’application à la fenêtre de la console. Cela n’affecte en rien le fonctionnement interne de l’application.
 
-### Windows PowerShell utilise une syntaxe C\#
-Windows PowerShell dispose de fonctionnalités et de mots clés de syntaxe qui sont très similaires à ceux utilisés dans le langage de programmation C\#, car Windows PowerShell est basé sur .NET Framework. L’apprentissage de Windows PowerShell facilite sensiblement l’apprentissage de C\#, si ce langage vous intéresse.
+### Windows PowerShell utilise une syntaxe C#
+Windows PowerShell dispose de fonctionnalités et de mots clés de syntaxe qui sont très similaires à ceux utilisés dans le langage de programmation C#, car Windows PowerShell est basé sur .NET Framework. L’apprentissage de Windows PowerShell facilite sensiblement l’apprentissage de C#, si ce langage vous intéresse.
 
-Si vous n’êtes pas programmeur C\#, cette similitude est sans importance. En revanche, si le langage C\# vous est familier, les similitudes peuvent faciliter sensiblement l’apprentissage de Windows PowerShell.
-
-
+Si vous n’êtes pas programmeur C#, cette similitude est sans importance. En revanche, si le langage C# vous est familier, les similitudes peuvent faciliter sensiblement l’apprentissage de Windows PowerShell.
 
 
-<!--HONumber=Jun16_HO4-->
+
+
+<!--HONumber=Aug16_HO4-->
 
 

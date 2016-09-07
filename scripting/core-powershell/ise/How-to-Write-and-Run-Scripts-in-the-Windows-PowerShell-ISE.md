@@ -1,12 +1,19 @@
 ---
-title: Comment écrire et exécuter des scripts dans Windows PowerShell ISE
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+title: "Comment écrire et exécuter des scripts dans Windows PowerShell ISE"
+ms.date: 2016-05-11
+keywords: powershell,applet de commande
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: 62f916d9-b3a1-484a-bdfb-41f57112c22b
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 6e58c298725254a84819856070b9702340fcf81d
+
 ---
+
 # Comment écrire et exécuter des scripts dans Windows PowerShell ISE
 Cette rubrique décrit comment créer, modifier, exécuter et enregistrer des scripts dans le volet Script.
 
@@ -20,7 +27,7 @@ Cette rubrique décrit comment créer, modifier, exécuter et enregistrer des sc
 Vous pouvez ouvrir et modifier des fichiers Windows PowerShellÂ® dans le volet Script. Les types de fichiers spécifiques particulièrement intéressants dans Windows PowerShellÂ® sont les fichiers de script (.ps1), les fichiers de données de script (.psd1) et les fichiers de module de script (.psm1). Ces types de fichiers font l’objet d’une coloration de la syntaxe dans l’éditeur du volet Script. D’autres types de fichiers courants que vous pouvez ouvrir dans le volet Script sont les fichiers de configuration (.ps1xml), les fichiers XML et les fichiers texte.
 
 > [!NOTE]
-> La stratégie d’exécution de Windows PowerShell détermine si vous pouvez exécuter des scripts et charger des fichiers de configuration et des profils Windows PowerShell. La stratégie d’exécution par défaut, restreinte, empêche l’exécution de tous les scripts et le chargement de profils. Pour savoir comment modifier la stratégie d’exécution afin d’autoriser le chargement et l’utilisation de profils, voir [Set-ExecutionPolicy[PSITPro5_Security]](https://technet.microsoft.com/en-us/library/5690a0e1-495b-4e63-8280-65ead7bf01ab) et [about_Signing [v4]](https://technet.microsoft.com/en-us/library/fcbdd3b9-0b9f-4734-b5c7-e0dcc304fa1d)..
+> La stratégie d’exécution de Windows PowerShell détermine si vous pouvez exécuter des scripts et charger des fichiers de configuration et des profils Windows PowerShell. La stratégie d’exécution par défaut, restreinte, empêche l’exécution de tous les scripts et le chargement de profils. Pour savoir comment modifier la stratégie d’exécution afin d’autoriser le chargement et l’utilisation de profils, voir [Set-ExecutionPolicy[PSITPro5_Security]](https://technet.microsoft.com/en-us/library/5690a0e1-495b-4e63-8280-65ead7bf01ab) et [about_Signing [v4]](https://technet.microsoft.com/en-us/library/fcbdd3b9-0b9f-4734-b5c7-e0dcc304fa1d).
 
 ### Pour créer un fichier de script
 Dans la barre d’outils, cliquez sur **Nouveau** ou, dans le menu **Fichier**, cliquez sur **Nouveau**. Le fichier créé s’affiche dans un nouvel onglet de fichier sous l’onglet PowerShell actif. N’oubliez pas que les onglets PowerShell sont visibles uniquement quand il y en a plusieurs. Par défaut, un fichier de script type (.ps1) est créé, mais il peut être enregistré avec un nouveau nom et une nouvelle extension. Plusieurs fichiers de script peuvent être créés sous le même onglet PowerShell.
@@ -33,7 +40,7 @@ Cliquez sur l’onglet de script du script que vous voulez fermer, puis effectue
 
 1.  Cliquez sur l’icône **Fermer** (X) sous l’onglet de script.
 
-2.  Dans le menu **Fichier**, cliquez sur **Fermer**..
+2.  Dans le menu **Fichier**, cliquez sur **Fermer**.
 
 Si le fichier a été modifié depuis son dernier enregistrement, vous êtes invité à l’enregistrer ou à l’ignorer.
 
@@ -41,13 +48,13 @@ Si le fichier a été modifié depuis son dernier enregistrement, vous êtes inv
 Sous l’onglet Fichier, pointez sur le nom de fichier. Le chemin d’accès complet au fichier de script s’affiche dans une info-bulle.
 
 ### Pour exécuter un script
-Dans la barre d’outils, cliquez sur **Exécuter le Script** ou, dans le menu **Fichier**, cliquez sur **Exécuter**..
+Dans la barre d’outils, cliquez sur **Exécuter le Script** ou, dans le menu **Fichier**, cliquez sur **Exécuter**.
 
 ### Pour exécuter une partie d’un script
 
 1.  Dans le volet Script, sélectionnez une partie d’un script.
 
-2.  Dans le menu **Fichier**, cliquez sur **Exécuter la sélection** ou, dans la barre d’outils, cliquez sur **Exécuter la sélection**..
+2.  Dans le menu **Fichier**, cliquez sur **Exécuter la sélection** ou, dans la barre d’outils, cliquez sur **Exécuter la sélection**.
 
 ### Pour arrêter un script en cours d’exécution
 Dans la barre d’outils, cliquez sur **Arrêter l’opération**, puis appuyez sur Ctrl+Pause, ou, dans le menu **Fichier**, cliquez sur **Arrêter l’opération**. Appuyer sur **Ctrl+C** fonctionne également, sauf si du texte est sélectionné, auquel cas l’appui sur **Ctrl+C** mappe à la fonction de copie pour le texte sélectionné.
@@ -65,18 +72,18 @@ Pour modifier le texte dans le volet Script, procédez comme suit. Vous pouvez c
 
 ### Pour rechercher du texte dans le volet Script
 
-1.  Pour rechercher du texte n’importe où, appuyez sur **Ctrl+F** ou, dans le menu **Modifier**, cliquez sur **Rechercher dans le script**..
+1.  Pour rechercher du texte n’importe où, appuyez sur **Ctrl+F** ou, dans le menu **Modifier**, cliquez sur **Rechercher dans le script**.
 
-2.  Pour rechercher du texte situé après le curseur, appuyez sur **F3** ou, dans le menu **Modifier**, cliquez sur **Rechercher suivant dans le script**..
+2.  Pour rechercher du texte situé après le curseur, appuyez sur **F3** ou, dans le menu **Modifier**, cliquez sur **Rechercher suivant dans le script**.
 
-3.  Pour rechercher du texte devant le curseur, appuyez sur **Maj+F3** ou, dans le menu **Modifier**, cliquez sur **Rechercher précédent dans le script**..
+3.  Pour rechercher du texte devant le curseur, appuyez sur **Maj+F3** ou, dans le menu **Modifier**, cliquez sur **Rechercher précédent dans le script**.
 
 ### Pour rechercher et remplacer du texte dans le volet Script
-Appuyez sur **Ctrl+H** ou, dans le menu **Modifier**, cliquez sur **Remplacer dans le script**. Entrez le texte à rechercher et le texte à y substituer, puis appuyez sur **Entrée**..
+Appuyez sur **Ctrl+H** ou, dans le menu **Modifier**, cliquez sur **Remplacer dans le script**. Entrez le texte à rechercher et le texte à y substituer, puis appuyez sur **Entrée**.
 
 ### Pour accéder à une ligne particulière du texte dans le volet Script
 
-1.  Dans le volet Script, appuyez sur **Ctrl+G** ou, dans le menu **Modifier**, cliquez sur **Atteindre la ligne**..
+1.  Dans le volet Script, appuyez sur **Ctrl+G** ou, dans le menu **Modifier**, cliquez sur **Atteindre la ligne**.
 
 2.  Entrez un numéro de ligne.
 
@@ -84,28 +91,28 @@ Appuyez sur **Ctrl+H** ou, dans le menu **Modifier**, cliquez sur **Remplacer da
 
 1.  Dans le volet Script, sélectionnez le texte à copier.
 
-2.  Appuyez sur **Ctrl+C** ou, dans la barre d’outils, cliquez sur l’icône **Copier**, ou encore, dans le menu **Modifier**, cliquez sur **Copier**..
+2.  Appuyez sur **Ctrl+C** ou, dans la barre d’outils, cliquez sur l’icône **Copier**, ou encore, dans le menu **Modifier**, cliquez sur **Copier**.
 
 ### Pour couper du texte dans le volet Script
 
 1.  Dans le volet Script, sélectionnez le texte à couper.
 
-2.  Appuyez sur **Ctrl+X** ou, dans la barre d’outils, cliquez sur l’icône **Couper**, ou encore, dans le menu **Modifier**, cliquez sur **Couper**..
+2.  Appuyez sur **Ctrl+X** ou, dans la barre d’outils, cliquez sur l’icône **Couper**, ou encore, dans le menu **Modifier**, cliquez sur **Couper**.
 
 ### Pour coller du texte dans le volet Script
-Appuyez sur **Ctrl+V** ou, dans la barre d’outils, cliquez sur l’icône **Coller**, ou encore, dans le menu **Modifier**, cliquez sur **Coller**..
+Appuyez sur **Ctrl+V** ou, dans la barre d’outils, cliquez sur l’icône **Coller**, ou encore, dans le menu **Modifier**, cliquez sur **Coller**.
 
 ### Pour annuler une action dans le volet Script
-Appuyez sur **Ctrl+Z** ou, dans la barre d’outils, cliquez sur l’icône **Annuler**, ou encore, dans le menu **Modifier**, cliquez sur **Annuler**..
+Appuyez sur **Ctrl+Z** ou, dans la barre d’outils, cliquez sur l’icône **Annuler**, ou encore, dans le menu **Modifier**, cliquez sur **Annuler**.
 
 ### Pour rétablir une action dans le volet Script
-Appuyez sur **Ctrl+Y** ou, dans la barre d’outils, cliquez sur l’icône **Rétablir**, ou encore, dans le menu **Modifier**, cliquez sur **Rétablir**..
+Appuyez sur **Ctrl+Y** ou, dans la barre d’outils, cliquez sur l’icône **Rétablir**, ou encore, dans le menu **Modifier**, cliquez sur **Rétablir**.
 
 ## <a name="bkmk_3"></a>Comment enregistrer un script
 Pour enregistrer et nommer un script, procédez comme suit. Un astérisque apparaît en regard du nom de script pour marquer un fichier qui n’a pas été enregistré depuis sa modification. L’astérisque disparaît lors de l’enregistrement du fichier.
 
 ### Pour enregistrer un script
-Appuyez sur **Ctrl+S** ou, dans la barre d’outils, cliquez sur l’icône **Enregistrer**, ou encore, dans le menu **Fichier**, cliquez sur **Enregistrer**..
+Appuyez sur **Ctrl+S** ou, dans la barre d’outils, cliquez sur l’icône **Enregistrer**, ou encore, dans le menu **Fichier**, cliquez sur **Enregistrer**.
 
 ### Pour enregistrer et nommer un script
 
@@ -113,9 +120,9 @@ Appuyez sur **Ctrl+S** ou, dans la barre d’outils, cliquez sur l’icône **En
 
 2.  Dans le champ **Nom de fichier**, entrez un nom pour le fichier.
 
-3.  Dans le champ **Type de fichier**, sélectionnez un type de fichier. Par exemple, dans le champ **Type de fichier**, sélectionnez « Scripts PowerShell (* .ps1) ».
+3.  Dans le champ **Type de fichier**, sélectionnez un type de fichier. Par exemple, dans le champ **Type de fichier**, sélectionnez « Scripts PowerShell (\* .ps1) ».
 
-4.  Cliquez sur **Enregistrer**..
+4.  Cliquez sur **Enregistrer**.
 
 ### Pour enregistrer un script en encodage ASCII
 Par défaut, Windows PowerShell ISE enregistre les nouveaux fichiers de script (.ps1), les fichiers de données de script (.psd1) et les fichiers de module de script (.psm1) au format Unicode (BigEndianUnicode). Pour enregistrer un script dans un autre encodage, tel ASCII (ANSI), utilisez les méthodes **Save** ou **SaveAs** sur l’objet [$psISE.CurrentFile](https://technet.microsoft.com/en-us/library/bc3300e4-9c17-4f00-a621-c8867126e3b3#CurrentFile).
@@ -147,6 +154,7 @@ Windows PowerShell ISE ne modifie pas l’encodage des scripts qui ont été cr�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

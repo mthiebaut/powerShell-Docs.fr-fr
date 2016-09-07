@@ -1,7 +1,7 @@
 ---
 title: Configuration requise pour Windows PowerShell
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: powershell,applet de commande
 description: 
 ms.topic: article
 author: jpjofre
@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 6d1d3c75-3be4-4fc9-8805-ca9b2c454d42
 translationtype: Human Translation
-ms.sourcegitcommit: 1ae9150b226147c039acf0738690de4da8686a71
-ms.openlocfilehash: e2e129c1c90ab7561861a7d9c71fb654569d5712
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: b5b797ed09f9f43bfd0259e4af8b3754655d7c84
 
 ---
 
@@ -47,12 +47,12 @@ Windows PowerShell 4.0 nécessite l’installation complète du Microsoft .NET 
 
 Windows PowerShell 3.0 nécessite l’installation complète du Microsoft .NET Framework 4. Windows 8 et Windows Server 2012 incluent le Microsoft .NET Framework 4.5 par défaut, ce qui répond à cette exigence.
 
-Pour installer Microsoft .NET Framework 4.5 (dotNetFx45Fullsetup\_Full\_setup.exe), consultez [Microsoft .NET Framework 4.5](http://go.microsoft.com/fwlink/?LinkID=242919) dans le Centre de téléchargement Microsoft.
+Pour installer Microsoft .NET Framework 4.5 (dotNetFx45_Full_setup.exe), voir [Microsoft .NET Framework 4.5](http://go.microsoft.com/fwlink/?LinkID=242919) sur le Centre de téléchargement Microsoft.
 
-Pour effectuer l’installation complète de Microsoft .NET Framework 4 (dotNetFx40Fullsetup\_Full\_setup.exe), consultez [Microsoft .NET Framework 4 (programme d’installation web)](http://go.microsoft.com/fwlink/?LinkID=212931) dans le Centre de téléchargement Microsoft.
+Pour effectuer l’installation complète de Microsoft .NET Framework 4 (dotNetFx40_Full_setup.exe), voir [Microsoft .NET Framework 4 (programme d’installation web)](http://go.microsoft.com/fwlink/?LinkID=212931) sur le Centre de téléchargement Microsoft.
 
-## WS\-Management 3.0
-Windows PowerShell 3.0 et Windows PowerShell 4.0 nécessitent WS\-Management 3.0, qui prend en charge le service WinRM et le protocole WSMan. Ce programme est inclus dans Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows Management Framework 4.0 et Windows Management Framework 3.0.
+## WS-Management 3.0
+Windows PowerShell 3.0 et Windows PowerShell 4.0 nécessitent WS-Management 3.0, qui prend en charge le service WinRM et le protocole WSMan. Ce programme est inclus dans Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows Management Framework 4.0 et Windows Management Framework 3.0.
 
 ## WMI (Windows Management Instrumentation) 3.0
 Windows PowerShell 3.0 et Windows PowerShell 4.0 nécessitent WMI (Windows Management Instrumentation) 3.0. Ce programme est inclus dans Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows Management Framework 4.0 et Windows Management Framework 3.0. Si ce programme n’est pas installé sur l’ordinateur, les fonctionnalités qui requièrent WMI, telles que les commandes CIM, ne fonctionnent pas.
@@ -61,7 +61,7 @@ Windows PowerShell 3.0 et Windows PowerShell 4.0 nécessitent WMI (Windows Man
 Windows PowerShell 3.0 et Windows PowerShell 4.0 sont compilés avec le Common Language Runtime (CLR) 4.0.
 
 ## Configuration requise de l’interface graphique utilisateur
-Windows PowerShell est une application console qui ne nécessite pas d’interface graphique utilisateur. Elle est donc particulièrement adaptée aux ordinateurs qui n’ont pas d’écran, de moniteur ou d’interface utilisateur, notamment avec les options d’installation minimale de Windows Server 2012 R2 ou Windows Server 2012.
+Windows PowerShell est une application console qui ne nécessite pas d’interface utilisateur graphique. Elle est donc particulièrement adaptée aux ordinateurs qui n’ont pas d’écran, de moniteur ou d’interface utilisateur, notamment avec les options d’installation minimale de Windows Server 2012 R2 ou Windows Server 2012.
 
 Toutefois, certains éléments, tels les suivants, requièrent une interface graphique utilisateur. Pour plus d’informations, consultez la rubrique d’aide de chaque élément.
 
@@ -117,6 +117,6 @@ En outre, le service **WinRM** n’est pas présent sur Windows PE.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

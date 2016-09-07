@@ -1,3 +1,18 @@
+---
+title: "Désinstaller Accès Web Windows PowerShell"
+ms.date: 2016-05-11
+keywords: powershell,applet de commande
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: d54139714552943901f565a8525bb478ed308f09
+
+---
+
 #  désinstaller Accès Web Windows PowerShell
 
 Mise à jour : 24 juin 2013
@@ -10,7 +25,7 @@ Suivez les étapes de cette rubrique pour supprimer le site web et l’applicati
 
 ------------------------------------------------------------------------
 
-Avant de désinstaller Accès Web Windows PowerShell du serveur de passerelle, exécutez l’applet de commande <span class="code">Uninstall-PswaWebApplication</span>pour supprimer le site web et les applications web Accès Web Windows PowerShell ou utilisez la procédure du Gestionnaire des services Internet, [Pour supprimer le site web et les applications web Accès Web Windows PowerShell à l’aide du Gestionnaire de services Internet](#BKMK_delsite)..
+Avant de désinstaller Accès Web Windows PowerShell du serveur de passerelle, exécutez l’applet de commande <span class="code">Uninstall-PswaWebApplication</span>pour supprimer le site web et les applications web Accès Web Windows PowerShell ou utilisez la procédure du Gestionnaire des services Internet, [Pour supprimer le site web et les applications web Accès Web Windows PowerShell à l’aide du Gestionnaire de services Internet](#BKMK_delsite).
 
 La désinstallation d’Accès Web Windows PowerShell ne désinstalle pas IIS ni d’autres fonctionnalités automatiquement installées, car Accès Web Windows PowerShell en a besoin pour s’exécuter. Le processus de désinstallation laisse les fonctionnalités installées dont dépendait Accès Web Windows PowerShell ; vous pouvez désinstaller ces fonctionnalités séparément si besoin.
 
@@ -35,9 +50,9 @@ Si vous avez défini un nom de site web personnalisé, ajoutez le paramètre <sp
 
     -   Sur le Bureau Windows, cliquez avec le bouton droit sur **Windows PowerShell** dans la barre des tâches.
 
-    -   Sur l’écran d’**accueil** de Windows, cliquez sur **Windows PowerShell**..
+    -   Dans l’écran d’**accueil** de Windows, cliquez sur **Windows PowerShell**.
 
-2.  Tapez **Uninstall-PswaWebApplication**, puis appuyez sur **Entrée**..
+2.  Tapez **Uninstall-PswaWebApplication**, puis appuyez sur **Entrée**.
 
 3.  Si vous utilisez un certificat de test, ajoutez le paramètre <span class="code">DeleteTestCertificate</span> à l’applet de commande, comme indiqué dans l’exemple suivant.
 
@@ -55,9 +70,9 @@ Si vous avez défini un nom de site web personnalisé, ajoutez le paramètre <sp
 
 1.  Effectuez une des opérations suivantes pour ouvrir une session Windows PowerShell avec des droits utilisateur élevés. Si une session est déjà ouverte, passez à l’étape suivante.
 
-    -   Sur le Bureau Windows, cliquez avec le bouton droit dans la barre des tâches sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**..
+    -   Sur le Bureau Windows, cliquez avec le bouton droit dans la barre des tâches sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**.
 
-    -   Sur l’écran d’**accueil** de Windows, cliquez avec le bouton droit sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**..
+    -   Dans l’écran d’**accueil** de Windows, cliquez avec le bouton droit sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**.
 
 2.  Tapez ce qui suit, puis appuyez sur **Entrée**, où *computer_name* représente le nom de l’ordinateur distant sur lequel vous souhaitez installer Accès Web Windows PowerShell, le cas échéant. Le paramètre <span class="code">–Restart</span> redémarre automatiquement les serveurs de destination si la suppression l’exige.
 
@@ -90,15 +105,15 @@ Les procédures de cette section vous permettent de désinstaller l’applicatio
 
 1.  Ouvrez la console du Gestionnaire des services Internet en procédant de l’une des manières suivantes. Si elle est déjà ouverte, passez à l’étape suivante.
 
-    -   Sur le Bureau Windows, démarrez le Gestionnaire de serveur en cliquant sur **Gestionnaire de serveur** dans la barre des tâches Windows. Dans le menu **Outils** du Gestionnaire de serveur, cliquez sur **Gestionnaire des services Internet (IIS)**..
+    -   Sur le Bureau Windows, démarrez le Gestionnaire de serveur en cliquant sur **Gestionnaire de serveur** dans la barre des tâches Windows. Dans le menu **Outils** du Gestionnaire de serveur, cliquez sur **Gestionnaire des services Internet (IIS)**.
 
     -   Sur l’écran d’**accueil** de Windows, tapez une partie du nom **Gestionnaire des services Internet (IIS)**. Cliquez sur le raccourci quand il s’affiche dans les résultats **Applications**.
 
 2.  Dans le volet de l’arborescence du Gestionnaire des services Internet, sélectionnez le site web qui exécute l’application web Accès Web Windows PowerShell.
 
-3.  Dans le volet **Actions**, sous **Gérer le site web**, cliquez sur **Arrêter**..
+3.  Dans le volet **Actions**, sous **Gérer le site web**, cliquez sur **Arrêter**.
 
-4.  Dans le volet de l’arborescence, cliquez avec le bouton droit sur l’application web dans le site web qui exécute l’application web Accès Web Windows PowerShell, puis cliquez sur **Supprimer**..
+4.  Dans le volet de l’arborescence, cliquez avec le bouton droit sur l’application web dans le site web qui exécute l’application web Accès Web Windows PowerShell, puis cliquez sur **Supprimer**.
 
 5.  Dans le volet de l’arborescence, sélectionnez **Pools d’applications**, sélectionnez le dossier du pool d’applications Accès Web Windows PowerShell, cliquez sur **Arrêter** dans le volet **Actions**, puis cliquez sur **Supprimer** dans le volet de contenu.
 
@@ -132,17 +147,17 @@ Les procédures de cette section vous permettent de désinstaller l’applicatio
 
     -   Sur le Bureau Windows, démarrez le Gestionnaire de serveur en cliquant sur **Gestionnaire de serveur** dans la barre des tâches Windows.
 
-    -   Sur l’écran d’**accueil** de Windows, cliquez sur **Gestionnaire de serveur**..
+    -   Dans l’écran d’**accueil** de Windows, cliquez sur **Gestionnaire de serveur**.
 
-2.  Dans le menu **Gérer**, cliquez sur **Supprimer des rôles et fonctionnalités**..
+2.  Dans le menu **Gérer**, cliquez sur **Supprimer des rôles et fonctionnalités**.
 
-3.  Dans la page **Sélectionner le serveur de destination**, sélectionnez le serveur ou le disque dur virtuel hors connexion sur lequel vous souhaitez supprimer la fonctionnalité. Pour sélectionner un disque dur virtuel hors connexion, choisissez d’abord le serveur sur lequel monter le disque dur virtuel, puis sélectionnez le fichier VHD. Après avoir sélectionné le serveur de destination, cliquez sur **Suivant**..
+3.  Dans la page **Sélectionner le serveur de destination**, sélectionnez le serveur ou le disque dur virtuel hors connexion sur lequel vous souhaitez supprimer la fonctionnalité. Pour sélectionner un disque dur virtuel hors connexion, choisissez d’abord le serveur sur lequel monter le disque dur virtuel, puis sélectionnez le fichier VHD. Une fois que vous avez sélectionné le serveur de destination, cliquez sur **Suivant**.
 
 4.  Cliquez de nouveau sur **Suivant** pour passer à la page **Supprimer des fonctionnalités**.
 
-5.  Décochez la case **Accès Web Windows PowerShell**, puis cliquez sur **Suivant**..
+5.  Décochez la case **Accès Web Windows PowerShell**, puis cliquez sur **Suivant**.
 
-6.  Dans la page **Confirmer les sélections pour la suppression**, cliquez sur **Supprimer**..
+6.  Dans la page **Confirmer les sélections pour la suppression**, cliquez sur **Supprimer**.
 
 <a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Voir aussi</span></a>
 <a href="/en-us/library/dn282396(v=ws.11).aspx#Anchor_3" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
@@ -155,14 +170,11 @@ Les procédures de cette section vous permettent de désinstaller l’applicatio
 <span>Afficher :</span> Hérité Protégé
 
 <span class="stdr-votetitle">Cette page vous a-t-elle été utile ?</span>
-Oui
-Non
+Oui Non
 
 Vous avez d’autres commentaires ?
 
-<span class="stdr-count"><span class="stdr-charcnt">1500</span> caractères restants</span>
-Soumettre
-Ignorer
+<span class="stdr-count"><span class="stdr-charcnt">1500</span> caractères restants</span> Soumettre Ignorer
 
 <span class="stdr-thankyou">Merci !</span> <span class="stdr-appreciate">Votre avis nous intéresse.</span>
 
@@ -170,8 +182,7 @@ Ignorer
 
 |
 
-<a href="javascript:void(0)" id="SiteFeedbackLinkOpener"><span id="FeedbackButton" class="FeedbackButton clip20x21"> <img src="https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635975720914499532" alt="Site Feedback" id="feedBackImg" class="cl_footer_feedback_icon" /> </span> Commentaires sur le site</a>
-Commentaires sur le site
+<a href="javascript:void(0)" id="SiteFeedbackLinkOpener"><span id="FeedbackButton" class="FeedbackButton clip20x21"> <img src="https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635975720914499532" alt="Site Feedback" id="feedBackImg" class="cl_footer_feedback_icon" /> </span> Commentaires sur le site</a> Commentaires sur le site
 
 <a href="javascript:void(0)" id="SiteFeedbackLinkCloser">x</a>
 
@@ -206,6 +217,8 @@ Les codes et les scripts développés par un tiers et en rapport à ce site doiv
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
 
 
-<!--HONumber=May16_HO2-->
+
+
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,7 +1,7 @@
 ---
 title: Gestion des lecteurs Windows PowerShell
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: powershell,applet de commande
 description: 
 ms.topic: article
 author: jpjofre
@@ -9,15 +9,15 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: bd809e38-8de9-437a-a250-f30a667d11b4
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 23d4f8d23170c4992092a2070baaedf4375be0d8
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: d266a109b1acd97c03594f988ce2fab3c697b80c
 
 ---
 
 # Gestion des lecteurs Windows PowerShell
 Un *lecteur Windows PowerShell* est un emplacement de magasin de données auquel vous pouvez accéder, au même titre qu’un lecteur du système de fichiers dans Windows PowerShell. Les fournisseurs Windows PowerShell créent pour vous certains lecteurs, comme les lecteurs du système de fichiers (y compris C: et D:), les lecteurs de Registre (HKCU: et HKLM:) et le lecteur de certificat (Cert:). Vous pouvez également créer vos propres lecteurs Windows PowerShell. Ces lecteurs sont très utiles, mais ils ne sont disponibles que dans Windows PowerShell. Vous ne pouvez pas y accéder à l'aide d'autres outils Windows, tels que l'Explorateur de fichiers ou Cmd.exe.
 
-Les commandes associées aux lecteurs Windows PowerShell comportent le mot **PSDrive** dans leur intitulé. Pour obtenir la liste des lecteurs Windows PowerShell dans votre session Windows PowerShell, utilisez l’applet de commande **Get\-PSDrive**.
+Les commandes associées aux lecteurs Windows PowerShell comportent le mot **PSDrive** dans leur intitulé. Pour obtenir la liste des lecteurs Windows PowerShell dans votre session Windows PowerShell, utilisez l’applet de commande **Get-PSDrive**.
 
 ```
 PS> Get-PSDrive
@@ -36,11 +36,11 @@ HKLM       Registry      HKEY_LOCAL_MACHINE
 Variable   Variable
 ```
 
-Bien que les lecteurs répertoriés varient en fonction des lecteurs de votre système, leur liste est similaire à la sortie de la commande **Get\-PSDrive** ci-dessus.
+Bien que les lecteurs répertoriés varient en fonction des lecteurs de votre système, leur liste est similaire à la sortie de la commande **Get-PSDrive** ci-dessus.
 
 Les lecteurs du système de fichiers sont un sous-ensemble des lecteurs Windows PowerShell. Les lecteurs du système de fichiers sont identifiés par l'entrée FileSystem dans la colonne Provider. (Les lecteurs du système de fichiers dans Windows PowerShell sont pris en charge par le fournisseur FileSystem de Windows PowerShell.)
 
-Pour afficher la syntaxe de l’applet de commande **Get\-PSDrive**, tapez une commande **Get\-Command** avec le paramètre **Syntax** :
+Pour afficher la syntaxe de l’applet de commande **Get-PSDrive**, tapez une commande **Get-Command** avec le paramètre **Syntax** :
 
 ```
 PS> Get-Command -Name Get-PSDrive -Syntax
@@ -49,7 +49,7 @@ erbose] [-Debug] [-ErrorAction <ActionPreference>] [-ErrorVariable <String>] [-
 OutVariable <String>] [-OutBuffer <Int32>]
 ```
 
-Le paramètre **PSProvider** permet d’afficher uniquement les lecteurs Windows PowerShell pris en charge par un fournisseur particulier. Par exemple, pour afficher uniquement les lecteurs pris en charge par le fournisseur FileSystem de Windows PowerShell, tapez une commande **Get\-PSDrive** avec le paramètre **PSProvider** et la valeur **FileSystem** :
+Le paramètre **PSProvider** permet d’afficher uniquement les lecteurs Windows PowerShell pris en charge par un fournisseur particulier. Par exemple, pour afficher uniquement les lecteurs pris en charge par le fournisseur FileSystem de Windows PowerShell, tapez une commande **Get-PSDrive** avec le paramètre **PSProvider** et la valeur **FileSystem** :
 
 ```
 PS> Get-PSDrive -PSProvider FileSystem
@@ -69,8 +69,8 @@ Vous pouvez également utiliser les applets de commande Location standard avec l
 
 <pre>PS> Set-Location HKLM:\SOFTWARE PS> Push-Location .\Microsoft PS> Get-Location Path ---- HKLM:\SOFTWARE\Microsoft</pre>
 
-### Ajout de nouveaux lecteurs Windows PowerShell (New\-PSDrive)
-Vous pouvez ajouter vos propres lecteurs Windows PowerShell à l’aide de la commande **New\-PSDrive**. Pour obtenir la syntaxe de l’applet de commande **New\-PSDrive**, entrez la commande **Get\-Command** avec le paramètre **Syntax** :
+### Ajout de nouveaux lecteurs Windows PowerShell (New-PSDrive)
+Vous pouvez ajouter vos propres lecteurs Windows PowerShell à l’aide de la commande **New-PSDrive**. Pour obtenir la syntaxe de l’applet de commande **New-PSDrive**, entrez la commande **Get-Command** avec le paramètre **Syntax** :
 
 ```
 PS> Get-Command -Name New-PSDrive -Syntax
@@ -100,11 +100,11 @@ Office     FileSystem    C:\Program Files\Microsoft Offic...
 ```
 
 > [!NOTE]
-> En général, les chemins d’accès ne respectent pas la casse.
+> En général, les chemins d'accès ne respectent pas la casse.
 
 Vous pouvez référencer le nouveau lecteur Windows PowerShell comme tout autre lecteur Windows PowerShell, c’est-à-dire en tapant son nom suivi du signe deux-points (**:**).
 
-Un lecteur Windows PowerShell peut simplifier de nombreuses tâches. Par exemple, certaines clés importantes dans le Registre Windows ont des chemins d'accès tellement longs qu'il est difficile d'y accéder et de s'en souvenir. Les informations de configuration critiques se trouvent sous **HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion**. Pour afficher et modifier des éléments dans la clé de Registre CurrentVersion, vous pouvez créer un lecteur Windows PowerShell ayant pour racine cette clé en tapant :
+Un lecteur Windows PowerShell peut simplifier de nombreuses tâches. Par exemple, certaines clés importantes dans le Registre Windows ont des chemins d'accès tellement longs qu'il est difficile d'y accéder et de s'en souvenir. Les informations de configuration critiques se trouvent sous **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion**. Pour afficher et modifier des éléments dans la clé de Registre CurrentVersion, vous pouvez créer un lecteur Windows PowerShell ayant pour racine cette clé en tapant :
 
 <pre>PS> New-PSDrive -Name cvkey -PSProvider Registry -Root HKLM\Software\Microsoft\W indows\CurrentVersion Name       Provider      Root                                   CurrentLocation ----       --------      ----                                   --------------- cvkey      Registry      HKLM\Software\Microsoft\Windows\...</pre>
 
@@ -116,18 +116,18 @@ ou :
 
 <pre>PS> Set-Location cvkey: -PassThru Path ---- cvkey:\</pre>
 
-L’applet de commande New\-PsDrive ajoute le nouveau lecteur uniquement à la session Windows PowerShell active. Si vous fermez la fenêtre Windows PowerShell, le nouveau lecteur est perdu. Pour enregistrer un lecteur Windows PowerShell, utilisez l’applet de commande Export\-Console pour exporter la session Windows PowerShell active, puis utilisez le paramètre **PSConsoleFile** de PowerShell.exe pour l’importer. Vous pouvez aussi ajouter le nouveau lecteur à votre profil Windows PowerShell.
+L'applet de commande New-PsDrive ajoute le nouveau lecteur uniquement à la session Windows PowerShell active. Si vous fermez la fenêtre Windows PowerShell, le nouveau lecteur est perdu. Pour enregistrer un lecteur Windows PowerShell, utilisez l’applet de commande Export-Console pour exporter la session Windows PowerShell active, puis utilisez le paramètre **PSConsoleFile** de PowerShell.exe pour l’importer. Vous pouvez aussi ajouter le nouveau lecteur à votre profil Windows PowerShell.
 
-### Suppression de lecteurs Windows PowerShell (Remove\-PSDrive)
-Pour supprimer des lecteurs de Windows PowerShell, utilisez l’applet de commande **Remove\-PSDrive**. L’applet de commande **Remove\-PSDrive** est facile à utiliser. Pour supprimer un lecteur Windows PowerShell, vous devez simplement spécifier son nom.
+### Suppression de lecteurs Windows PowerShell (Remove-PSDrive)
+Pour supprimer des lecteurs de Windows PowerShell, utilisez l’applet de commande **Remove-PSDrive**. L’applet de commande **Remove-PSDrive** est facile à utiliser. Pour supprimer un lecteur Windows PowerShell, vous devez simplement spécifier son nom.
 
-Par exemple, si vous avez ajouté le lecteur Windows PowerShell **Office:**, comme illustré dans la rubrique **New\-PSDrive**, vous pouvez le supprimer en tapant ce qui suit :
+Par exemple, si vous avez ajouté le lecteur Windows PowerShell **Office:**, comme illustré dans la rubrique **New-PSDrive**, vous pouvez le supprimer en tapant ce qui suit :
 
 ```
 PS> Remove-PSDrive -Name Office
 ```
 
-Pour supprimer le lecteur Windows PowerShell **cvkey:**, qui apparaît aussi dans la rubrique **New\-PSDrive**, utilisez la commande suivante :
+Pour supprimer le lecteur Windows PowerShell **cvkey:**, qui apparaît aussi dans la rubrique **New-PSDrive**, utilisez la commande suivante :
 
 ```
 PS> Remove-PSDrive -Name cvkey
@@ -149,6 +149,6 @@ Windows PowerShell détecte les lecteurs du système de fichiers qui sont ajout�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

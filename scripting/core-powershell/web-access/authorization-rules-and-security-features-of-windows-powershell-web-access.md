@@ -1,3 +1,18 @@
+---
+title: "Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell"
+ms.date: 2016-05-11
+keywords: powershell,applet de commande
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: dc50a729855a71d61c187da9d698bd294f740546
+
+---
+
 # Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell
 
 Mise à jour : 24 juin 2013
@@ -11,7 +26,7 @@ La fonctionnalité Accès Web Windows PowerShell® dans Windows Server® 2012 R2
 -   [Gestion des sessions](#BKMK_sesmgmt)
 
 
-Une fois Accès Web Windows PowerShell installé et la passerelle configurée, les utilisateurs peuvent ouvrir la page de connexion dans un navigateur, mais ils ne peuvent pas se connecter tant que l’administrateur d’Accès Web Windows PowerShell ne leur a pas octroyé explicitement un accès. Le contrôle d’accès d’Accès Web Windows PowerShell est géré à l’aide de l’ensemble d’applets de commande Windows PowerShell décrit dans le tableau suivant. Il n’existe aucune interface utilisateur graphique équivalente pour ajouter ou gérer les règles d’autorisation. Pour plus d’informations sur les applets de commande Accès Web Windows PowerShell, consultez les rubriques de référence des applets de commande, [Applets de commande Accès Web Windows PowerShell](https://technet.microsoft.com/library/hh918342.aspx)..
+Une fois Accès Web Windows PowerShell installé et la passerelle configurée, les utilisateurs peuvent ouvrir la page de connexion dans un navigateur, mais ils ne peuvent pas se connecter tant que l’administrateur d’Accès Web Windows PowerShell ne leur a pas octroyé explicitement un accès. Le contrôle d’accès d’Accès Web Windows PowerShell est géré à l’aide de l’ensemble d’applets de commande Windows PowerShell décrit dans le tableau suivant. Il n’existe aucune interface utilisateur graphique équivalente pour ajouter ou gérer les règles d’autorisation. Pour plus d’informations sur les applets de commande Accès Web Windows PowerShell, consultez les rubriques de référence des applets de commande, [Applets de commande Accès Web Windows PowerShell](https://technet.microsoft.com/library/hh918342.aspx).
 
 Les administrateurs peuvent définir entre 0 et *n* règles d’authentification pour Accès Web Windows PowerShell. La sécurité par défaut est restrictive plutôt que permissive ; les règles à authentification zéro signifient qu’aucun utilisateur n’a accès à quoi que ce soit.
 
@@ -128,7 +143,7 @@ Le tableau suivant décrit les quatre couches de sécurité entre les utilisateu
 <td><p>Fonctionnalités de sécurité du serveur Web (IIS), telles que l’authentification des certificats clients</p></td>
 <td><p>Les utilisateurs d’Accès Web Windows PowerShell doivent toujours fournir un nom d’utilisateur et un mot de passe pour authentifier leurs comptes sur la passerelle. Toutefois, les administrateurs d’Accès Web Windows PowerShell peuvent également activer ou désactiver une authentification de certificat client facultatif (voir l’étape 10 de la procédure « Pour configurer la passerelle dans un site web existant à l’aide du Gestionnaire des services Internet » dans <a href="https://technet.microsoft.com/en-us/library/hh831611(v=ws.11).aspx">Installer et utiliser Accès Web Windows PowerShell</a>). Pour la fonctionnalité de certificat client facultatif, les utilisateurs doivent posséder un certificat client valide en plus de leur nom d’utilisateur/mot de passe. Cette fonctionnalité fait partie de la configuration du serveur Web (IIS). Quand la couche du certificat client est activée, la page de connexion à Accès Web Windows PowerShell invite les utilisateurs à fournir des certificats valides avant d’évaluer leurs informations d’identification de connexion. L’authentification de certificat client vérifie automatiquement la présence du certificat client.</p>
 <p>Si aucun certificat valide n’est trouvé, Accès Web Windows PowerShell en informe les utilisateurs, pour qu’ils puissent fournir ce certificat. Si un certificat client valide est trouvé, Accès Web Windows PowerShell ouvre la page de connexion pour que les utilisateurs indiquent leur nom d’utilisateur et leur mot de passe.</p>
-<p>Il s’agit d’un exemple de paramètres de sécurité supplémentaires offerts par le serveur Web (IIS). Pour plus d’informations sur d’autres fonctionnalités de sécurité IIS, consultez <a href="https://technet.microsoft.com/library/cc731278(ws.10).aspx">Configurer la sécurité du serveur Web (IIS 7).</a>.</p></td>
+<p>Il s’agit d’un exemple de paramètres de sécurité supplémentaires offerts par le serveur Web (IIS). Pour plus d’informations sur d’autres fonctionnalités de sécurité IIS, consultez <a href="https://technet.microsoft.com/library/cc731278(ws.10).aspx">Configurer la sécurité du serveur Web (IIS 7)</a>.</p></td>
 </tr>
 <tr class="even">
 <td><p>2</p></td>
@@ -163,9 +178,9 @@ Le tableau suivant décrit les quatre couches de sécurité entre les utilisateu
 
 Les administrateurs souhaitent probablement la même règle d’autorisation pour les utilisateurs d’Accès Web Windows PowerShell que celle déjà définie dans leur environnement pour la gestion à distance Windows PowerShell. La première procédure de cette section décrit comment ajouter une règle d’autorisation sécurisée qui accorde l’accès à un utilisateur qui se connecte pour gérer un seul ordinateur dans une seule configuration de session. La seconde procédure décrit comment supprimer une règle d’autorisation dont vous n’avez plus besoin.
 
-Si vous envisagez d’utiliser des configurations de sessions personnalisées pour autoriser des utilisateurs spécifiques à travailler uniquement dans des instances d’exécution restreintes dans Accès Web Windows PowerShell, créez vos configurations de sessions personnalisées avant d’ajouter des règles d’autorisation qui s’y réfèrent. Vous ne pouvez pas utiliser les applets de commande d’Accès Web Windows PowerShell pour créer des configurations de sessions personnalisées. Pour plus d’informations sur la création de configurations de sessions personnalisées, consultez [about\_Session\_Configuration\_Files](https://msdn.microsoft.com/library/windows/desktop/hh847838.aspx) sur MSDN.
+Si vous envisagez d’utiliser des configurations de sessions personnalisées pour autoriser des utilisateurs spécifiques à travailler uniquement dans des instances d’exécution restreintes dans Accès Web Windows PowerShell, créez vos configurations de sessions personnalisées avant d’ajouter des règles d’autorisation qui s’y réfèrent. Vous ne pouvez pas utiliser les applets de commande d’Accès Web Windows PowerShell pour créer des configurations de sessions personnalisées. Pour plus d’informations sur la création de configurations de sessions personnalisées, consultez [about_Session_Configuration_Files](https://msdn.microsoft.com/library/windows/desktop/hh847838.aspx) sur MSDN.
 
-Les applets de commande d’Accès Web Windows PowerShell prennent en charge un seul caractère générique, un astérisque (\*). Les caractères génériques dans les chaînes ne sont pas pris en charge. Utilisez un seul astérisque par propriété (utilisateurs, ordinateurs ou configurations de sessions).
+Les applets de commande d’Accès Web Windows PowerShell prennent en charge un seul caractère générique, un astérisque ( \* ). Les caractères génériques dans les chaînes ne sont pas pris en charge. Utilisez un seul astérisque par propriété (utilisateurs, ordinateurs ou configurations de sessions).
 
 <table>
 <colgroup>
@@ -187,25 +202,25 @@ Les applets de commande d’Accès Web Windows PowerShell prennent en charge un 
 
 1.  Effectuez une des opérations suivantes pour ouvrir une session Windows PowerShell avec des droits utilisateur élevés.
 
-    -   Sur le Bureau Windows, cliquez avec le bouton droit dans la barre des tâches sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**..
+    -   Sur le Bureau Windows, cliquez avec le bouton droit dans la barre des tâches sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**.
 
-    -   Sur l’écran d’**accueil** de Windows, cliquez avec le bouton droit sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**..
+    -   Dans l’écran d’**accueil** de Windows, cliquez avec le bouton droit sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**.
 
-2.  <span class="label">Étape facultative pour restreindre l’accès utilisateur à l’aide de configurations de sessions :</span> vérifiez que les configurations de sessions que vous voulez utiliser dans vos règles existent déjà. Si elles n’ont pas encore été créées, utilisez les instructions relatives à la création de configurations de sessions dans [about\_Session\_Configuration\_Files](https://msdn.microsoft.com/library/windows/desktop/hh847838.aspx) sur MSDN.
+2.  <span class="label">Étape facultative pour restreindre l’accès utilisateur à l’aide de configurations de sessions :</span> vérifiez que les configurations de sessions que vous voulez utiliser dans vos règles existent déjà. Si elles n’ont pas encore été créées, utilisez les instructions relatives à la création de configurations de sessions dans [about_Session_Configuration_Files](https://msdn.microsoft.com/library/windows/desktop/hh847838.aspx) sur MSDN.
 
-3.  Tapez ce qui suit, puis appuyez sur **Entrée**..
+3.  Tapez ce qui suit, puis appuyez sur **Entrée**.
 
     [Copier](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_1079478f-cd51-4d35-8022-4b532a9d57a4'); "Copier dans le Presse-papiers.")
 
         Add-PswaAuthorizationRule –UserName <domain\user | computer\user> -ComputerName <computer_name> -ConfigurationName <session_configuration_name>
 
-    Cette règle d’autorisation accorde à un utilisateur spécifique l’accès à un ordinateur sur le réseau auquel il a généralement accès, avec l’accès à une configuration de session spécifique ayant comme portée les besoins ordinaires de l’utilisateur en matière de script et d’applet de commande. Dans l’exemple suivant, un utilisateur nommé <span class="code">JSmith</span> dans le domaine <span class="code">Contoso</span> se voit accorder un accès pour gérer l’ordinateur <span class="code">Contoso\_214</span> et utiliser une configuration de session nommée <span class="code">NewAdminsOnly.</span>.
+    Cette règle d’autorisation accorde à un utilisateur spécifique l’accès à un ordinateur sur le réseau auquel il a généralement accès, avec l’accès à une configuration de session spécifique ayant comme portée les besoins ordinaires de l’utilisateur en matière de script et d’applet de commande. Dans l’exemple suivant, un utilisateur nommé <span class="code">JSmith</span> dans le domaine <span class="code">Contoso</span> se voit accorder un accès pour gérer l’ordinateur <span class="code">Contoso_214</span> et utiliser une configuration de session nommée <span class="code">NewAdminsOnly</span>.
 
     [Copier](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_4e760377-e401-4ef4-988f-7a0aec1b2a90'); "Copier dans le Presse-papiers.")
 
         Add-PswaAuthorizationRule –UserName Contoso\JSmith -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly
 
-4.  Vérifiez que la règle a été créée en exécutant l’applet de commande **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domain\\user | computer\\user&gt; -ComputerName** &lt;computer\_name&gt;. Par exemple, **Test-PswaAuthorizationRule –UserName Contoso\\JSmith –ComputerName Contoso\_214**..
+4.  Vérifiez que la règle a été créée en exécutant l’applet de commande **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domain\\user | computer\\user&gt; -ComputerName** &lt;nom_ordinateur&gt;. Par exemple, **Test-PswaAuthorizationRule –UserName Contoso\\JSmith –ComputerName Contoso_214**.
 
 #### Pour supprimer une règle d’autorisation
 
@@ -242,13 +257,13 @@ Les applets de commande d’Accès Web Windows PowerShell prennent en charge un 
 
 ------------------------------------------------------------------------
 
-Chaque session Windows PowerShell utilise une configuration de session ; si aucune n’est spécifiée pour une session, Windows PowerShell utilise la configuration de session Windows PowerShell prédéfinie par défaut, appelée Microsoft.PowerShell. La configuration de session par défaut inclut toutes les applets de commande disponibles sur un ordinateur. Les administrateurs peuvent limiter l’accès à tous les ordinateurs en définissant une configuration de session avec une instance d’exécution restreinte (une gamme limitée d’applets de commande et de tâches que les utilisateurs finals peuvent effectuer). Un utilisateur auquel est accordé l’accès à un ordinateur avec accès linguistique complet ou uniquement les applets de commande de gestion à distance Windows PowerShell peut se connecter à d’autres ordinateurs qui sont connectés au premier ordinateur. La définition d’une instance d’exécution restreinte peut empêcher les utilisateurs d’accéder à d’autres ordinateurs depuis leur instance d’exécution Windows PowerShell autorisée, et elle renforce la sécurité de votre environnement Accès Web Windows PowerShell. Il est possible de distribuer la configuration de session (à l’aide d’une stratégie de groupe) à tous les ordinateurs que les administrateurs veulent rendre accessibles par le biais d’Accès Web Windows PowerShell. Pour plus d’informations sur les configurations de session, consultez [about\_Session\_Configurations](https://technet.microsoft.com/library/dd819508.aspx). Voici quelques exemples de ce scénario.
+Chaque session Windows PowerShell utilise une configuration de session ; si aucune n’est spécifiée pour une session, Windows PowerShell utilise la configuration de session Windows PowerShell prédéfinie par défaut, appelée Microsoft.PowerShell. La configuration de session par défaut inclut toutes les applets de commande disponibles sur un ordinateur. Les administrateurs peuvent limiter l’accès à tous les ordinateurs en définissant une configuration de session avec une instance d’exécution restreinte (une gamme limitée d’applets de commande et de tâches que les utilisateurs finals peuvent effectuer). Un utilisateur auquel est accordé l’accès à un ordinateur avec accès linguistique complet ou uniquement les applets de commande de gestion à distance Windows PowerShell peut se connecter à d’autres ordinateurs qui sont connectés au premier ordinateur. La définition d’une instance d’exécution restreinte peut empêcher les utilisateurs d’accéder à d’autres ordinateurs depuis leur instance d’exécution Windows PowerShell autorisée, et elle renforce la sécurité de votre environnement Accès Web Windows PowerShell. Il est possible de distribuer la configuration de session (à l’aide d’une stratégie de groupe) à tous les ordinateurs que les administrateurs veulent rendre accessibles par le biais d’Accès Web Windows PowerShell. Pour plus d’informations sur les configurations de session, consultez [about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx). Voici quelques exemples de ce scénario.
 
 -   Un administrateur crée un point de terminaison, appelé **PswaEndpoint**, avec une instance d’exécution restreinte. Ensuite, il crée une règle, **\*,\*,PswaEndpoint**, puis distribue le point de terminaison à d’autres ordinateurs. La règle permet à tous les utilisateurs d’accéder à tous les ordinateurs avec le point de terminaison **PswaEndpoint**. Si aucune autre règle d’autorisation n’est définie dans le jeu de règles, les ordinateurs n’ayant pas ce point de terminaison seront inaccessibles.
 
 -   L’administrateur a créé un point de terminaison avec une instance d’exécution restreinte appelée **PswaEndpoint**, puis souhaite en restreindre l’accès à des utilisateurs spécifiques. L’administrateur crée un groupe d’utilisateurs appelé **Level1Support**, puis définit la règle suivante : **Level1Support,\*,PswaEndpoint**. La règle accorde à tous les utilisateurs inclus dans le groupe **Level1Support** un accès à tous les ordinateurs dotés de la configuration **PswaEndpoint**. De même, l’accès peut être limité à un ensemble d’ordinateurs spécifique.
 
--   Certains administrateurs accordent à certains utilisateurs un accès privilégié. Par exemple, un administrateur crée deux groupes d’utilisateurs, **Admins** et **BasicSupport**. Il crée également un point de terminaison avec une instance d’exécution restreinte appelée **PswaEndpoint**, puis définit les deux règles suivantes : **Admins,\*,\*** et **BasicSupport,\*,PswaEndpoint**. La première règle octroie à tous les utilisateurs du groupe **Admin** un accès à tous les ordinateurs, et la seconde règle octroie à tous les utilisateurs du groupe **BasicSupport** un accès aux seuls ordinateurs dotés de **PswaEndpoint**..
+-   Certains administrateurs accordent à certains utilisateurs un accès privilégié. Par exemple, un administrateur crée deux groupes d’utilisateurs, **Admins** et **BasicSupport**. Il crée également un point de terminaison avec une instance d’exécution restreinte appelée **PswaEndpoint**, puis définit les deux règles suivantes : **Admins,\*,\*** et **BasicSupport,\*,PswaEndpoint**. La première règle octroie à tous les utilisateurs du groupe **Admin** un accès à tous les ordinateurs, et la seconde règle octroie à tous les utilisateurs du groupe **BasicSupport** un accès aux seuls ordinateurs dotés de **PswaEndpoint**.
 
 -   Un administrateur a configuré un environnement de test privé et souhaite autoriser tous les utilisateurs réseau approuvés à accéder à tous les ordinateurs du réseau auxquels ils ont normalement accès, avec un accès à toutes les configurations de sessions auxquelles ils ont normalement accès. S’agissant d’un environnement de test privé, l’administrateur crée une règle d’autorisation non sécurisée. L’administrateur exécute l’applet de commande <span class="code">Add-PswaAuthorizationRule \* \* \*</span>, qui utilise le caractère générique **\*** pour représenter tous les utilisateurs, tous les ordinateurs et toutes les configurations. Cette règle est l’équivalent de la commande suivante : <span class="code">Add-PswaAuthorizationRule –UserName \* -ComputerName \* -ConfigurationName \*</span>.
 
@@ -274,11 +289,11 @@ Chaque session Windows PowerShell utilise une configuration de session ; si auc
 
         Add-PswaAuthorizationRule –userName PswaServer\chrisLocal –computerName srv1.contoso.com –configurationName Microsoft.PowerShell
 
-    L’exemple de règle précédent authentifie Chris sur le serveur de passerelle, puis autorise son accès à *srv1*. Dans la page de connexion, Chris doit fournir un deuxième ensemble d’informations d’identification dans la zone **Paramètres de connexion facultatifs** (*contoso\\chris*). Le serveur de passerelle utilise l’ensemble supplémentaire d’informations d’identification pour l’authentifier sur l’ordinateur cible, *srv1.contoso.com*..
+    L’exemple de règle précédent authentifie Chris sur le serveur de passerelle, puis autorise son accès à *srv1*. Dans la page de connexion, Chris doit fournir un deuxième ensemble d’informations d’identification dans la zone **Paramètres de connexion facultatifs** (*contoso\\chris*). Le serveur de passerelle utilise l’ensemble supplémentaire d’informations d’identification pour l’authentifier sur l’ordinateur cible, *srv1.contoso.com*.
 
     Dans le scénario précédent, Accès Web Windows PowerShell établit une connexion correcte à l’ordinateur cible uniquement une fois que les opérations ci-après ont réussi et qu’au moins une règle d’autorisation l’a autorisée.
 
-    1.  Authentification sur le serveur de passerelle du groupe de travail en ajoutant un nom d’utilisateur au format *nom\_serveur*\\*nom\_utilisateur* à la règle d’autorisation
+    1.  Authentification sur le serveur de passerelle du groupe de travail en ajoutant un nom d’utilisateur au format *nom_serveur*\\*nom_utilisateur* à la règle d’autorisation
 
     2.  Authentification sur l’ordinateur cible en utilisant les informations d’identification supplémentaires fournies dans la page de connexion, dans la zone **Paramètres de connexion facultatifs**
 
@@ -293,7 +308,7 @@ Chaque session Windows PowerShell utilise une configuration de session ; si auc
     </thead>
     <tbody>
     <tr class="odd">
-    <td><p>Si la passerelle et les ordinateurs cibles se trouvent dans des groupes de travail ou domaines différents, une relation d’approbation doit être établie entre les deux ordinateurs du groupe de travail, les deux domaines ou entre le groupe de travail et le domaine. Il n’est pas possible de configurer cette relation à l’aide des applets de commande des règles d’autorisation d’Accès Web Windows PowerShell. Les règles d’autorisation ne définissent pas une relation d’approbation entre des ordinateurs ; elles peuvent uniquement autoriser les utilisateurs à se connecter à des ordinateurs cibles et configurations de sessions spécifiques. Pour plus d’informations sur la manière de configurer une relation d’approbation entre différents domaines, consultez <a href="https://technet.microsoft.com/library/cc794775.aspx">Création d’approbations de domaine et de forêt</a>. Pour plus d’informations sur la manière d’ajouter des ordinateurs de groupe de travail à une liste d’hôtes approuvés, consultez <a href="https://technet.microsoft.com/library/dd759202.aspx">Administration à distance à l’aide du Gestionnaire de serveur.</a>.</p></td>
+    <td><p>Si la passerelle et les ordinateurs cibles se trouvent dans des groupes de travail ou domaines différents, une relation d’approbation doit être établie entre les deux ordinateurs du groupe de travail, les deux domaines ou entre le groupe de travail et le domaine. Il n’est pas possible de configurer cette relation à l’aide des applets de commande des règles d’autorisation d’Accès Web Windows PowerShell. Les règles d’autorisation ne définissent pas une relation d’approbation entre des ordinateurs ; elles peuvent uniquement autoriser les utilisateurs à se connecter à des ordinateurs cibles et configurations de sessions spécifiques. Pour plus d’informations sur la manière de configurer une relation d’approbation entre différents domaines, consultez <a href="https://technet.microsoft.com/library/cc794775.aspx">Création d’approbations de domaine et de forêt</a>. Pour plus d’informations sur la manière d’ajouter des ordinateurs de groupe de travail à une liste d’hôtes approuvés, consultez <a href="https://technet.microsoft.com/library/dd759202.aspx">Administration à distance à l’aide du Gestionnaire de serveur</a>.</p></td>
     </tr>
     </tbody>
     </table>
@@ -358,20 +373,17 @@ Si le serveur de passerelle exécute Windows Server 2012 R2, Accès Web Window
 ------------------------------------------------------------------------
 
 [Installer et utiliser Accès Web Windows PowerShell](https://technet.microsoft.com/en-us/library/hh831611(v=ws.11).aspx)
-[about\_Session\_Configurations](https://technet.microsoft.com/library/dd819508.aspx)
+[about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx)
 [Applets de commande d’accès Web Windows PowerShell](https://technet.microsoft.com/library/hh918342.aspx)
 
 <span>Afficher :</span> Hérité Protégé
 
 <span class="stdr-votetitle">Cette page vous a-t-elle été utile ?</span>
-Oui
-Non
+Oui Non
 
 Vous avez d’autres commentaires ?
 
-<span class="stdr-count"><span class="stdr-charcnt">1500</span> caractères restants</span>
-Soumettre
-Ignorer
+<span class="stdr-count"><span class="stdr-charcnt">1500</span> caractères restants</span> Soumettre Ignorer
 
 <span class="stdr-thankyou">Merci !</span> <span class="stdr-appreciate">Votre avis nous intéresse.</span>
 
@@ -379,8 +391,7 @@ Ignorer
 
 |
 
-<a href="javascript:void(0)" id="SiteFeedbackLinkOpener"><span id="FeedbackButton" class="FeedbackButton clip20x21"> <img src="https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635975720914499532" alt="Site Feedback" id="feedBackImg" class="cl_footer_feedback_icon" /> </span> Commentaires sur le site</a>
-Commentaires sur le site
+<a href="javascript:void(0)" id="SiteFeedbackLinkOpener"><span id="FeedbackButton" class="FeedbackButton clip20x21"> <img src="https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635975720914499532" alt="Site Feedback" id="feedBackImg" class="cl_footer_feedback_icon" /> </span> Commentaires sur le site</a> Commentaires sur le site
 
 <a href="javascript:void(0)" id="SiteFeedbackLinkCloser">x</a>
 
@@ -415,6 +426,8 @@ Les codes et les scripts développés par un tiers et en rapport à ce site doiv
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
 
 
-<!--HONumber=May16_HO2-->
+
+
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,7 +1,7 @@
 ---
 title: Prise en main de Windows PowerShell
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: powershell,applet de commande
 description: 
 ms.topic: article
 author: jpjofre
@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: b0e2ad92-875f-421d-b612-f624e644aa69
 translationtype: Human Translation
-ms.sourcegitcommit: 35dafe18719cd26977966a26d2781fc99cbf4097
-ms.openlocfilehash: d0f5fb26844edd4e07265a8c7d638f30a51244f7
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: a031bad99e8aca1d7598f99e157723bf4360cf56
 
 ---
 
@@ -38,6 +38,6 @@ Dans cette rubrique :
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 
