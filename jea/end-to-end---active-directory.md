@@ -4,13 +4,13 @@ manager: dongill
 ms.topic: article
 author: jpjofre
 ms.prod: powershell
-keywords: powershell,cmdlet,jea
+keywords: powershell,applet de commande,jea
 ms.date: 2016-06-22
 title: de bout en bout   active directory
 ms.technology: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 5954eb797df43de6f132a434ecad7049ee0221fb
-ms.openlocfilehash: 204909c16d5e3e2099f6ba4247929d61445cd654
+ms.sourcegitcommit: 33e92c7fd6039a1e3f5f784470c7bd0e43a7f030
+ms.openlocfilehash: e7ea3957ce3bbd3ce0fc072a82cd108606f05614
 
 ---
 
@@ -27,7 +27,7 @@ Cette section va vous guider tout au long de la création d’une configuration 
 Pour suivre cette section pas à pas, vous devez utiliser un contrôleur de domaine.
 Si vous n’avez pas accès à votre contrôleur de domaine, ne vous inquiétez pas.
 Essayez de suivre en travaillant sur un autre scénario ou rôle que vous connaissez bien.
-Pour configurer rapidement un nouveau contrôleur de domaine, consultez la section [Création d’un contrôleur de domaine](#creating-a-domain-controller) en annexe.
+Pour configurer rapidement un nouveau contrôleur de domaine, consultez l’annexe [Création d’un contrôleur de domaine](.\creating-a-domain-controller.md).
 
 ## Étapes de création d’une capacité de rôle et d’une configuration de session
 
@@ -163,7 +163,7 @@ Set-ADUser -Identity $Identity -ChangePasswordAtLogon
 À présent, vos utilisateurs peuvent simplement appeler `Reset-ContosoUserPassword` sans avoir à mémoriser la syntaxe pour créer une chaîne sécurisée intégrée.
 
 ## Étape 4 : Modifier le fichier de capacité de rôle
-Dans la section [Création de capacité de rôle](#role-capability-creation), vous avez créé un fichier de capacité de rôle vierge.
+Dans la section [Création de fonctionnalité de rôle](./role-capabilities.md#role-capability-creation), vous avez créé un fichier de fonctionnalité de rôle vide.
 Dans cette section, vous allez renseigner les valeurs dans ce fichier.
 
 Commencez par ouvrir le fichier de capacité de rôle dans PowerShell ISE.
@@ -273,6 +273,6 @@ ValidatePattern est une expression régulière à laquelle doivent correspondre 
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

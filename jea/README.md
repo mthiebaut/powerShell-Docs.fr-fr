@@ -9,8 +9,8 @@ ms.date: 2016-06-22
 title: Fichier Lisez-moi
 ms.technology: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: bd7f637d0889fd0f56c3fa653389819341d2ccff
-ms.openlocfilehash: bfee5ef59a4085f0350ff454f634fc0bf5d6d837
+ms.sourcegitcommit: 8149f656f0aacbb23cacc8a1a9b45ed59866b92f
+ms.openlocfilehash: 7bb5635832e912b39ec387e8ac93ada24a434ff8
 
 ---
 
@@ -83,7 +83,7 @@ Découvrir comment auditer et créer des rapports sur toutes les actions et l’
 
 ## Commencer à créer vos propres points de terminaison JEA
 Il est facile de créer un point de terminaison JEA : tout ce dont vous avez besoin, c’est d’un système compatible JEA et d’un éditeur de texte (comme PowerShell ISE).
-Conseil utile pour démarrer : créez des fichiers squelettes à l’aide de `New-PSRoleCapabilityFile -Path <path>` et `New-PSSessionCapabilityFile -Path <Path>` sans aucun autre argument.
+Conseil utile pour démarrer : créez des fichiers squelettes en utilisant [`New-PSRoleCapabilityFile -Path <path>`](https://technet.microsoft.com/library/mt631422.aspx) et [`New-PSSessionConfigurationFile -Path <Path>`](https://technet.microsoft.com/library/mt631422.aspx) sans aucun autre argument.
 Ces fichiers squelettes contiennent tous les champs de configuration applicables, ainsi que des commentaires utiles pour expliquer à quoi peut servir chaque champ.
 
 Pour faciliter encore plus la création de points de terminaison JEA, consultez le blog [JEA Toolkit Helper](http://blogs.technet.com/b/privatecloud/archive/2015/12/20/introducing-the-updated-jea-helper-tool.aspx) qui fournit une interface graphique utilisateur avec laquelle vous pouvez créer des fichiers de configuration de session et de capacités de rôle.
@@ -92,6 +92,6 @@ La génération de capacités de rôle en fonction des journaux PowerShell est m
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 
