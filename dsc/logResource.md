@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: 97ffa20191016584fc2fba459c457787365d11ee
+ms.sourcegitcommit: 62f993e3d3e6ef744fb07920d332d476dfd24fc6
+ms.openlocfilehash: 60085295fa7df6179a81cd98859cd33e6923150f
 
 ---
 
@@ -29,11 +29,17 @@ Log [string] #ResourceName
 }
 ```
 
+REMARQUE : Par défaut, seuls les journaux des opérations relatifs à DSC sont activés.
+Pour que le journal d’analyse soit disponible ou visible, il doit être activé.
+Consultez l’article suivant.
+
+[Où se trouvent les journaux des événements DSC ?](https://msdn.microsoft.com/en-us/powershell/dsc/troubleshooting#where-are-dsc-event-logs)
+
 ## Propriétés
 |  Propriété  |  Description   | 
 |---|---| 
 | Message| Indique le message à écrire dans le journal des événements Microsoft-Windows-Desired State Configuration/Analytic.| 
-| DependsOn | Indique que la configuration d’une autre ressource doit être exécutée avant l’écriture de ce message dans le journal. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’ID __ResourceName__ et le type __ResourceType__, utilisez la syntaxe suivante pour cette propriété : `DependsOn = "[ResourceType]ResourceName"`.| 
+| DependsOn | Indique que la configuration d’une autre ressource doit être exécutée avant l’écriture de ce message dans le journal. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource __ResourceName__ de type __ResourceType__, la syntaxe pour utiliser cette propriété est `DependsOn = "[ResourceType]ResourceName"`.| 
 
 ## Exemple
 
@@ -42,15 +48,24 @@ L’exemple suivant écrit un message dans le journal des événements Microsoft
 > **Remarque** : Si vous exécutez [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx) avec cette ressource configurée, elle retourne toujours la valeur **$false**.
 
 ```powershell 
-Log LogExample
+Configuration logResourceTest
 {
-    Message = "This message will appear in the Microsoft-Windows-Desired State Configuration/Analytic event log."
-} 
+    Import-DscResource -ModuleName PSDesiredStateConfiguration
+
+    Node localhost
+
+    {
+        Log LogExample
+        {
+            Message = "This message will appear in the Microsoft-Windows-Desired State Configuration/Analytic event log."
+        }
+    }
+}
 ```
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: bcaf82cbafe67cc309765e16b3c9cd6eff0a982a
+ms.sourcegitcommit: 62f993e3d3e6ef744fb07920d332d476dfd24fc6
+ms.openlocfilehash: d07b11c148dfa747b3f9c0157191b83efb6c65df
 
 ---
 
@@ -46,7 +46,7 @@ Package [string] #ResourceName
 | Credential| Informations d’identification permettant l’accès au package sur une source distante. Cette propriété n’est pas utilisée pour installer le package. Le package est toujours installé sur le système local.| 
 | Ensure| Indique si le package est installé. Définissez cette propriété sur « Absent » pour vous assurer que le package n’est pas installé (ou désinstallé, si le package n’est pas installé). Définissez cette propriété sur « Present » (valeur par défaut) pour vous assurer que le package est installé.| 
 | LogPath| Indique le chemin complet où vous souhaitez que le fournisseur enregistre un fichier journal pour installer ou désinstaller le package.| 
-| DependsOn | Indique que la configuration d’une autre ressource doit être effectuée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’ID **ResourceName** et le type **ResourceType**, utilisez la syntaxe suivante pour cette propriété : DependsOn = "[ResourceType]ResourceName"| 
+| DependsOn | Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’ID **ResourceName** et le type **ResourceType**, utilisez la syntaxe suivante pour cette propriété : DependsOn = "[ResourceType]ResourceName"| 
 | ReturnCode| Indique le code de retour attendu. Si le code de retour réel ne correspond pas à la valeur attendue indiquée ici, la configuration retourne une erreur.| 
 
 ## Exemple
@@ -54,18 +54,21 @@ Package [string] #ResourceName
 Cet exemple exécute le programme d’installation .msi qui se trouve dans le chemin spécifié et qui possède l’ID de produit spécifié.
 
 ```powershell
-Package PackageExample
+Configuration PackageTest
 {
-    Ensure = "Present"  # You can also set Ensure to "Absent"
-    Path  = "$Env:SystemDrive\TestFolder\TestProject.msi"
-    Name = "TestPackage"
-    ProductId = "ACDDCDAF-80C6-41E6-A1B9-8ABD8A05027E"
-} 
+    Package PackageExample
+    {
+        Ensure      = "Present"  # You can also set Ensure to "Absent"
+        Path        = "$Env:SystemDrive\TestFolder\TestProject.msi"
+        Name        = "TestPackage"
+        ProductId   = "ACDDCDAF-80C6-41E6-A1B9-8ABD8A05027E"
+    } 
+}
 ```
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

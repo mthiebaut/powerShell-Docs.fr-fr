@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: 32ff157c7c8366cf0c9847dec4815d2d4b9cc5fa
+ms.sourcegitcommit: b617ae80ae6a555e531469efde07e443d83c51d8
+ms.openlocfilehash: 02721f0f6f68cc78ae0430205d06f079e3e7465a
 
 ---
 
@@ -25,7 +25,7 @@ Le script suivant configure le gestionnaire de configuration local de façon à 
 
 ```powershell
 [DSCLocalConfigurationManager()]
-configuration PullClientConfigID
+configuration PullClientConfigNames
 {
     Node localhost
     {
@@ -44,18 +44,22 @@ configuration PullClientConfigID
         }      
     }
 }
-PullClientConfigID
+PullClientConfigNames
 ```
 
 Dans le script, le bloc **ConfigurationRepositoryWeb** définit le serveur collecteur. La propriété **ServerURL** spécifie le point de terminaison pour le serveur collecteur.
 
-La propriété **RegistrationKey** est une clé partagée entre tous les nœuds clients d’un serveur collecteur et ce serveur collecteur. La même valeur est stockée dans un fichier sur le serveur collecteur. La propriété **ConfigurationNames** spécifie le nom de la configuration destinée au nœud client. Sur le serveur collecteur, le fichier MOF de configuration pour ce nœud client doit être nommé *ConfigurationNames*.mof, où *ConfigurationNames* correspond à la valeur de la propriété **ConfigurationNames** que vous définissez dans cette métaconfiguration.
+La propriété **RegistrationKey** est une clé partagée entre tous les nœuds clients d’un serveur collecteur et ce serveur collecteur. La même valeur est stockée dans un fichier sur le serveur collecteur. 
 
-Quand le script s’exécute, il crée un dossier de sortie nommé **PullClientConfigID** et y place un fichier MOF de métaconfiguration. Dans ce cas, le fichier MOF de métaconfiguration est nommé `localhost.meta.mof`.
+La propriété **ConfigurationNames** est un tableau qui spécifie les noms des configurations destinées au nœud client. Sur le serveur collecteur, le fichier MOF de configuration pour ce nœud client doit être nommé *ConfigurationNames*.mof, où *ConfigurationNames* correspond à la valeur de la propriété **ConfigurationNames** que vous définissez dans cette métaconfiguration.
 
-Pour appliquer la configuration, appelez l’applet de commande **Set-DscLocalConfigurationManager** avec le paramètre **Path** défini sur l’emplacement du fichier MOF de métaconfiguration. Par exemple : `Set-DSCLocalConfigurationManager localhost –Path .\PullClientConfigID –Verbose.`
+>**Remarque :** Si vous spécifiez plusieurs valeurs dans **ConfigurationNames**, vous devez également spécifier des blocs **PartialConfiguration** dans votre configuration. Pour plus d’informations sur les configurations partielles, voir [Configurations partielles du service de configuration d’état souhaité PowerShell](partialConfigs.md).
 
-> **Remarque** : Les clés d’enregistrement fonctionnent uniquement avec les serveurs collecteurs web. Vous devez encore utiliser **ConfigurationID** avec un serveur collecteur SMB. Pour plus d’informations sur la configuration d’un serveur collecteur à l’aide de **ConfigurationID**, consultez [Configuration d’un client collecteur à l’aide de l’ID de configuration](pullClientConfigID.md)
+Quand le script s’exécute, il crée un dossier de sortie nommé **PullClientConfigNames** et y place un fichier MOF de métaconfiguration. Dans ce cas, le fichier MOF de métaconfiguration est nommé `localhost.meta.mof`.
+
+Pour appliquer la configuration, appelez l’applet de commande **Set-DscLocalConfigurationManager** avec le paramètre **Path** défini sur l’emplacement du fichier MOF de métaconfiguration. Par exemple : `Set-DSCLocalConfigurationManager localhost –Path .\PullClientConfigNames –Verbose.`
+
+> **Remarque** : Les clés d’enregistrement fonctionnent uniquement avec les serveurs collecteurs web. Vous devez encore utiliser **ConfigurationID** avec un serveur collecteur SMB. Pour plus d’informations sur la configuration d’un serveur collecteur à l’aide de **ConfigurationID**, consultez [Configuration d’un client collecteur à l’aide de l’ID de configuration](PullClientConfigNames.md)
 
 ## Serveurs de ressources et de rapports
 
@@ -63,7 +67,7 @@ Si vous spécifiez uniquement un bloc **ConfigurationRepositoryWeb** ou **Config
 
 ```powershell
 [DSCLocalConfigurationManager()]
-configuration PullClientConfigID
+configuration PullClientConfigNames
 {
     Node localhost
     {
@@ -80,17 +84,14 @@ configuration PullClientConfigID
             RegistrationKey = 'fbc6ef09-ad98-4aad-a062-92b0e0327562'
         }
         
-        
-
         ReportServerWeb CONTOSO-PullSrv
         {
             ServerURL = 'https://CONTOSO-PullSrv:8080/PSDSCPullServer.svc'
         }
     }
 }
-PullClientConfigID
+PullClientConfigNames
 ```
-
 
 Vous pouvez également spécifier différents serveurs collecteurs pour les ressources et les rapports. Pour spécifier un serveur de ressources, vous utilisez un bloc **ResourceRepositoryWeb** (pour un serveur collecteur web) ou **ResourceRepositoryShare** (pour un serveur collecteur SMB).
 Pour spécifier un serveur de rapports, vous utilisez un bloc **ReportRepositoryWeb**. Un serveur de rapports ne peut pas être un serveur SMB.
@@ -98,7 +99,7 @@ La métaconfiguration suivante configure un client collecteur de façon à obten
 
 ```powershell
 [DSCLocalConfigurationManager()]
-configuration PullClientConfigID
+configuration PullClientConfigNames
 {
     Node localhost
     {
@@ -128,17 +129,17 @@ configuration PullClientConfigID
         }
     }
 }
-PullClientConfigID
+PullClientConfigNames
 ```
 
 ## Voir aussi
 
-* [Configuration d’un client collecteur à l’aide de l’ID de configuration](pullClientConfigID.md)
+* [Configuration d’un client collecteur à l’aide de l’ID de configuration](PullClientConfigNames.md)
 * [Configuration d’un serveur collecteur web DSC](pullServer.md)
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 
