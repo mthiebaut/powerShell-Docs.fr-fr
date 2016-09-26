@@ -9,13 +9,13 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 44d67705-87c7-4a69-a53e-6471fdebb757
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: d48ea75b99ef3d20c3e180ccec7f35adf6290a63
+ms.sourcegitcommit: 117b3fe541b7a92479e9c68e07fa21fc8add9678
+ms.openlocfilehash: 4588577c0c05fadee6b443e2fa4c32049cf99ac3
 
 ---
 
 # Comment utiliser le volet Console dans Windows PowerShell ISE
-Le volet Console dans Windows PowerShellÂ® Scripting environnement intégré (ISE) fonctionne exactement comme la fenêtre de console Windows PowerShell ISE autonome.
+Le volet Console dans l’environnement d’écriture de scripts intégré de Windows PowerShell® fonctionne exactement comme la fenêtre de console Windows PowerShell ISE autonome.
 
 Pour exécuter une commande dans le volet Console, tapez la commande, puis appuyez sur Entrée. Pour entrer plusieurs commandes à exécuter de façon séquentielle, tapez Maj+Entrée entre les commandes. Pour obtenir de l’aide sur la saisie des commandes, voir [Comment utiliser la saisie semi-automatique via la touche Tab dans le volet Script et le volet Console](How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md).
 
@@ -35,6 +35,6 @@ Depuis Windows PowerShell v3, le volet Sortie est combiné avec le volet Console
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

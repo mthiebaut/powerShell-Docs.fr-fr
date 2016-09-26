@@ -65,8 +65,23 @@ Voici les deux options pour empaqueter votre module avec la logique de chargemen
 ### Option 1 : Empaquetage d’un module pour cibler plusieurs versions et plusieurs éditions de PowerShell
 
 #### Contenu du dossier du module
-
- Microsoft.Windows.PowerShell.ScriptAnalyzer.BuiltinRules.dll Microsoft.Windows.PowerShell.ScriptAnalyzer.dll PSScriptAnalyzer.psd1 PSScriptAnalyzer.psm1 ScriptAnalyzer.format.ps1xml ScriptAnalyzer.types.ps1xml coreclr\Microsoft.Windows.PowerShell.ScriptAnalyzer.BuiltinRules.dll coreclr\Microsoft.Windows.PowerShell.ScriptAnalyzer.dll en-US\about_PSScriptAnalyzer.help.txt en-US\Microsoft.Windows.PowerShell.ScriptAnalyzer.dll-Help.xml PSv3\Microsoft.Windows.PowerShell.ScriptAnalyzer.BuiltinRules.dll PSv3\Microsoft.Windows.PowerShell.ScriptAnalyzer.dll Settings\CmdletDesign.psd1 Settings\DSC.psd1 Settings\ScriptFunctions.psd1 Settings\ScriptingStyle.psd1 Settings\ScriptSecurity.psd1
+- Microsoft.Windows.PowerShell.ScriptAnalyzer.BuiltinRules.dll 
+- Microsoft.Windows.PowerShell.ScriptAnalyzer.dll 
+- PSScriptAnalyzer.psd1
+- PSScriptAnalyzer.psm1
+- ScriptAnalyzer.format.ps1xml
+- ScriptAnalyzer.types.ps1xml
+- coreclr\Microsoft.Windows.PowerShell.ScriptAnalyzer.BuiltinRules.dll 
+- coreclr\Microsoft.Windows.PowerShell.ScriptAnalyzer.dll 
+- en-US\about_PSScriptAnalyzer.help.txt
+- en-US\Microsoft.Windows.PowerShell.ScriptAnalyzer.dll-Help.xml
+- PSv3\Microsoft.Windows.PowerShell.ScriptAnalyzer.BuiltinRules.dll 
+- PSv3\Microsoft.Windows.PowerShell.ScriptAnalyzer.dll 
+- Settings\CmdletDesign.psd1
+- Settings\DSC.psd1
+- Settings\ScriptFunctions.psd1
+- Settings\ScriptingStyle.psd1
+- Settings\ScriptSecurity.psd1
 
 #### Contenu du fichier PSScriptAnalyzer.psd1
 
@@ -214,8 +229,9 @@ Find-Module -Tag PSEditon_Core
 ## Plus d’informations
 ### [Scripts avec PSEditions](../script/scriptwithpseditionsupport.md)
 ### [Prise en charge de PSEditions sur PowerShell Gallery](../../psgallery/psgallery_pseditions.md)
+### [Mettre à jour le manifeste du module] (./psget_update-modulemanifest.md)
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

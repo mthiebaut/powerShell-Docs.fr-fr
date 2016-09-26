@@ -4,13 +4,13 @@ manager: dongill
 ms.topic: article
 author: jpjofre
 ms.prod: powershell
-keywords: powershell,cmdlet,jea
+keywords: powershell,applet de commande,jea
 ms.date: 2016-06-22
 title: "pièges liés aux capacités de rôle"
 ms.technology: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
-ms.openlocfilehash: 0e221c840f083ce0b8ecbcbb34c184bcdbc0c73e
+ms.sourcegitcommit: 2c42f8d6eaadee43a3baff1811aafb6b5c1a9be3
+ms.openlocfilehash: 2b2dfd9c39fe5d7bf4a52032653108729715e6bf
 
 ---
 
@@ -18,9 +18,9 @@ ms.openlocfilehash: 0e221c840f083ce0b8ecbcbb34c184bcdbc0c73e
 Vous pouvez tomber dans quelques pièges courants en suivant vous-même ce processus.
 Voici un guide rapide qui explique comment identifier et corriger ces problèmes lors de la modification ou la création d’un point de terminaison :
 
-#### Fonctions et applets de commande
+#### Fonctions et Applets de commande
 Les commandes PowerShell écrites dans PowerShell sont des fonctions PowerShell.
-Les commandes PowerShell écrites comme classes .NET spécialisées sont des applets de commande PowerShell.
+Les commandes PowerShell écrites comme des classes .NET spécialisées sont des applets de commande PowerShell.
 Vous pouvez déterminer le type de commande en exécutant `Get-Command`.
 
 #### VisibleProviders
@@ -33,6 +33,6 @@ Ainsi, vous pouvez quand même autoriser des utilisateurs à travailler avec des
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 

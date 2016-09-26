@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: 15e346ecd630a1256477d375bc1373f376e76f64
+ms.sourcegitcommit: 62f993e3d3e6ef744fb07920d332d476dfd24fc6
+ms.openlocfilehash: 48b68a99baa489dad38e7072b171db10ee0f7386
 
 ---
 
@@ -64,19 +64,28 @@ Registry [string] #ResourceName
 <li>Chaîne extensible (REG_EXPAND_SZ)</li></ul>
 
 ## Exemple
+Cet exemple permet de s’assurer qu’une clé nommée « ExampleKey » est présente dans la ruche **HKEY\_LOCAL\_MACHINE**.
 ```powershell
-Registry RegistryExample
+Configuration RegistryTest
 {
-    Ensure = "Present"  # You can also set Ensure to "Absent"
-    Key = "HKEY_LOCAL_MACHINE\SOFTWARE\ExampleKey"
-    ValueName = "TestValue"
-    ValueData = "TestData"
+    Registry RegistryExample
+    {
+        Ensure      = "Present"  # You can also set Ensure to "Absent"
+        Key         = "HKEY_LOCAL_MACHINE\SOFTWARE\ExampleKey"
+        ValueName   = "TestValue"
+        ValueData   = "TestData"
+    }
 }
 ```
 
+>**Remarque :** La modification d’un paramètre de Registre dans la ruche **HKEY\_CURRENT\_USER** implique que la configuration s’exécute avec les informations d’identification de l’utilisateur, plutôt qu’en tant que système.
+>Vous pouvez utiliser la propriété **PsDscRunAsCredential** pour spécifier les informations d’identification de l’utilisateur pour la configuration. Pour obtenir un exemple, consultez [Exécution de DSC avec les informations d’identification de l’utilisateur](runAsUser.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+
+
+
+<!--HONumber=Sep16_HO3-->
 
 

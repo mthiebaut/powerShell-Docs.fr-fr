@@ -74,8 +74,8 @@
 
 ### [Où puis-je obtenir d’autres informations pour en savoir plus ?](getting-started/more-powershell-learning.md)
 
-## [PowerShell Core](core-powershell/core-powershell.md)
-### [Modules Core](core-powershell/core-modules.md)
+## [Commandes PowerShell courantes](core-powershell/core-powershell.md)
+### [Modules courants](core-powershell/core-modules.md)
 ####  [Module Archive](core-powershell/core-modules/Microsoft.PowerShell.Archive-Module.md)
 ####  [Module Core](core-powershell/core-modules/Microsoft.PowerShell.Core-Module.md)
 ####  [Liste de référence des modules Core](core-powershell/core-modules/Windows-PowerShell-5.0.md)
@@ -106,6 +106,7 @@
 ####  [Comment déboguer des scripts dans PowerShell ISE](core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md)
 ####  [Comment utiliser des profils dans PowerShell ISE](core-powershell/ise/How-to-Use-Profiles-in-Windows-PowerShell-ISE.md)
 ####  [Comment utiliser le volet Console dans PowerShell ISE](core-powershell/ise/How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md)
+####  [Comment utiliser la saisie semi-automatique via la touche Tab dans les volets Script et Commande](core-powershell/ise/How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md)
 ####  [Comment écrire et exécuter des scripts dans Windows PowerShell ISE](core-powershell/ise/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md)
 ####  [Présentation de PowerShell ISE](core-powershell/ise/Introducing-the-Windows-PowerShell-ISE.md)
 ####  [Module ISE](core-powershell/ise/ISE-Module.md)
@@ -123,7 +124,6 @@
 
 ### [Console](core-powershell/console-guide.md)
 ####  [Référence des lignes de commande de la console](core-powershell/console/PowerShell.exe-Command-Line-Help.md)
-####  [Comment utiliser la saisie semi-automatique via la touche Tab dans les volets Script et Commande](core-powershell/ise/How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md)
 ####  [Utilisation du développement par tabulation](core-powershell/console/Using-Tab-Expansion.md)
 
 ### [Exécution de commandes à distance](core-powershell/Running-Remote-Commands.md)
@@ -142,6 +142,6 @@
 ## [Glossaire PowerShell](Windows-PowerShell-Glossary.md)
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Sep16_HO3-->
 
 

@@ -2,8 +2,8 @@
 title: "Améliorations du moteur PowerShell"
 author: jasonsh
 translationtype: Human Translation
-ms.sourcegitcommit: 6813902aec214aee9ede27ff79dd291364e9f443
-ms.openlocfilehash: f864850128f118704d7545b09110835ab1d51b8e
+ms.sourcegitcommit: 47c963343c541d0f2ace194f365de5fcd809ccc5
+ms.openlocfilehash: 1b35a25312b44d14ec8771be9e17aaa43e270b61
 
 ---
 
@@ -28,7 +28,7 @@ Voici quelques exemples d’améliorations (les résultats peuvent varier en fon
 | Création du cache d’analyse de commande : `powershell -command "Unknown-Command"` | 7000 | 520 |
 | <code>1..1000000 &#124; % { }</code> | 1400 | 750 |
   
-Une modification liée au démarrage peut affecter certains scénarios (non pris en charge). PowerShell ne lit plus les fichiers `$pshome\*.ps1xml`. Ces fichiers ont été convertis en C# pour éviter une surcharge du processeur et des fichiers lors du traitement des fichiers xml. Les fichiers existent toujours pour prendre en charge V2 côte à côte. Ainsi, si vous modifiez le contenu des fichiers, cela n’affecte pas V5 mais uniquement V2. Notez que la modification du contenu de ces fichiers n’a jamais été un scénario pris en charge.
+Une modification liée au démarrage peut affecter certains scénarios (non pris en charge). PowerShell ne lit plus les fichiers `$pshome\*.ps1xml`. Ces fichiers ont été convertis en C# pour éviter une surcharge du processeur et des fichiers lors du traitement des fichiers XML. Les fichiers existent toujours pour prendre en charge V2 côte à côte. Ainsi, si vous modifiez le contenu des fichiers, cela n’affecte pas V5 mais uniquement V2. Notez que la modification du contenu de ces fichiers n’a jamais été un scénario pris en charge.
 
 Une autre modification visible est la façon dont PowerShell met en cache les commandes exportées et d’autres informations pour les modules installés sur un système. Auparavant, ce cache était stocké dans le répertoire `$env:LOCALAPPDATA\Microsoft\Windows\PowerShell\CommandAnalysis`. Dans WMF 5.1, le cache est un fichier unique `$env:LOCALAPPDATA\Microsoft\Windows\PowerShell\ModuleAnalysisCache`.
 Pour plus de détails, consultez la page [analysis_cache.md]().
@@ -49,7 +49,7 @@ WMF 5.1 modifie ce comportement pour honorer `$env:PSModulePath` complètement.
 
 ### La redirection de fichiers ne code plus en dur `-Encoding Unicode` ###
 
-Dans toutes les versions précédentes de PowerShell, il était impossible de contrôler l’encodage de fichier utilisé par l’opérateur de redirection de fichier, par exemple `get-childitem > out.txt`, car PowerShell ajoutait `-Encoding Unicode`.
+Dans toutes les versions précédentes de PowerShell, il était impossible de contrôler l’encodage de fichier utilisé par l’opérateur de redirection de fichier, par exemple `Get-ChildItem > out.txt`, car PowerShell ajoutait `-Encoding Unicode`.
 
 À compter de WMF 5.1, vous pouvez modifier l’encodage de fichier de la redirection en définissant `$PSDefaultParameterValues`, par exemple
 
@@ -73,7 +73,7 @@ Ce nouveau binder a amélioré les performances de manière significative, mais 
 Dans l’exemple suivant :
 
 ```
-$obj = new-object -com wscript.shell
+$obj = New-Object -ComObject WScript.Shell
 $obj.SendKeys([char]173)
 ```
 
@@ -100,7 +100,7 @@ Dans l’exemple ci-dessus, WMF 5 écrivait incorrectement le Scripting.Diction
 
 ### `[ordered]` n’était pas autorisé à l’intérieur des classes ###
 
-WMF 5 a introduit des classes avec la validation des littéraux de type utilisée dans les classes.  `[ordered]` ressemble à un littéral de type, mais ce n’est pas un vrai type .Net.  WMF 5 signalait incorrectement une erreur sur `[ordered]` à l’intérieur d’une classe :
+WMF 5 a introduit des classes avec la validation des littéraux de type utilisée dans les classes.  `[ordered]` ressemble à un littéral de type, mais ce n’est pas un vrai type .NET.  WMF 5 signalait incorrectement une erreur sur `[ordered]` à l’intérieur d’une classe :
 
 ```
 class CThing
@@ -123,6 +123,6 @@ Get-Help n’offre aucun moyen de spécifier la version pour laquelle vous souha
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Sep16_HO3-->
 
 
