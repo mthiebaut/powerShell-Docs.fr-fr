@@ -9,14 +9,18 @@ manager: dongill
 ms.prod: powershell
 ms.technology: WMF
 translationtype: Human Translation
-ms.sourcegitcommit: f413ba6470985622e55bb4bd175d7c5d4b94c7d9
-ms.openlocfilehash: e545d49381a92ef3f7cc6a27316cbfc3a036a8c9
+ms.sourcegitcommit: 3dde62efa7ba595ed5160cc81b4e2b17a54e52a2
+ms.openlocfilehash: d4c9e88ddd6cfaec611527d19d00cbd4db9f5d1d
 
 ---
 
 #Problèmes connus dans WMF 5.1 (préversion) #
 
 > Remarque : Ces informations sont préliminaires et susceptibles d’être modifiées.
+
+##Démarrage de raccourci PowerShell en tant qu’administrateur
+Lors de l’installation de WMF, si vous essayez de démarrer PowerShell en tant qu’administrateur à partir du raccourci, vous pouvez obtenir un message « Erreur non spécifiée ».
+Rouvrez le raccourci en tant que non administrateur. Le raccourci fonctionnera maintenant même en tant qu’administrateur.
 
 ##Pester
 Dans cette version, vous devez savoir qu’il existe deux problèmes quand vous utilisez Pester sur Nano Server :
@@ -30,6 +34,6 @@ Dans cette version, vous devez savoir qu’il existe deux problèmes quand vous 
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 
