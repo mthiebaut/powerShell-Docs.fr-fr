@@ -44,9 +44,9 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
     -   [Get-DscLocalConfigurationManager](http://technet.microsoft.com/library/dn407378.aspx): affiche davantage d’informations utiles sur l’état du moteur.
 
-    -   [Test-DscConfiguration](http://technet.microsoft.com/library/dn407382.aspx) : désormais le nom de l’ordinateur avec la valeur True ou False.
+    -   [Test-DscConfiguration](http://technet.microsoft.com/library/dn407382.aspx) : renvoie maintenant le nom de l’ordinateur avec la valeur True ou False.
 
-    -   [Nouveau-DscChecksum](http://technet.microsoft.com/library/dn521622.aspx) : prend désormais en charge les chemins d’accès UNC.
+    -   [Nouveau-DscChecksum](http://technet.microsoft.com/library/dn521622.aspx) : prend maintenant en charge les chemins d’accès UNC.
 
 -   Nouvelles applets de commande dans le module [PSDesiredStateConfiguration](http://technet.microsoft.com/library/dn391651(v=wps.640).aspx)
 
@@ -58,21 +58,21 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
 -   Rehaussement du langage
 
-    -   DependsOn prend désormais en charge des ressources composites.
+    -   DependsOn prend maintenant en charge des ressources composites.
 
-    -   DependsOn prend désormais en charge les chiffres dans les noms d’instance de ressource.
+    -   DependsOn prend maintenant en charge les chiffres dans les noms d’instance de ressource.
 
     -   Les expressions de nœud évaluées comme vides ne déclenchent plus d’erreurs.
 
     -   L’erreur qui se produisait quand une expression de nœud était évaluée comme vide a été corrigée.
 
-    -   Les configurations appelant des configurations fonctionnent désormais dans la console Windows PowerShell.
+    -   Les configurations appelant des configurations fonctionnent maintenant dans la console Windows PowerShell.
 
 -   Rehaussement du mode par extraction
 
-    -   Le mode par extraction prend désormais en charge tous les fichiers ZIP.
+    -   Le mode par extraction prend maintenant en charge tous les fichiers ZIP.
 
-    -   **AllowModuleOverwrite** fonctionne désormais correctement.
+    -   **AllowModuleOverwrite** fonctionne maintenant correctement.
 
 -   Améliorations apportées à la résilience
 
@@ -80,13 +80,13 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
     -   En cas d’erreur de configuration, le fichier pending.mof n’est plus supprimé.
 
-    -   Le gestionnaire de configuration local (LCM) est désormais plus résilient en cas d’endommagement des paramètres de métaconfiguration.
+    -   Le gestionnaire de configuration local (LCM) est maintenant plus résilient en cas d’endommagement des paramètres de métaconfiguration.
 
 -   Améliorations apportées au diagnostic
 
     -   Un avertissement s’affiche lorsque le LCM modifie les paramètres que vous avez définis pour le minuteur.
 
-    -   Les fichiers journaux des erreurs contiennent désormais la pile des appels pour les ressources Windows PowerShell.
+    -   Les fichiers journaux des erreurs contiennent maintenant la pile des appels pour les ressources Windows PowerShell.
 
 -   Améliorations apportées à l’extensibilité
 
@@ -96,25 +96,25 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
         -   StopConfiguration : ne reprend pas automatiquement une configuration après le redémarrage d’un nœud.
 
-    -   Une série de tests de cohérence peut désormais se produire plus souvent qu’une opération d’extraction, ou inversement.
+    -   Une série de tests de cohérence peut maintenant se produire plus souvent qu’une opération d’extraction, ou inversement.
 
-    -   Prise en charge du contrôle de version : la configuration d’état souhaité peut désormais reconnaître un document généré sur un client plus récent (intégrée à [WMF 5.0](http://aka.ms/wmf5download)).
+    -   Prise en charge du contrôle de version : la configuration d’état souhaité peut maintenant reconnaître un document généré sur un client plus récent (intégrée à [WMF 5.0](http://aka.ms/wmf5download)).
 
 -   Améliorations apportées à la prévention des erreurs
 
-    -   La version de module est désormais appliquée avant une configuration.
+    -   La version de module est maintenant appliquée avant une configuration.
 
-    -   La variable **DebugPreference** est désormais définie correctement pour les appels Get-TargetResource, Set-TargetResource et Test-TargetResource.
+    -   La variable **DebugPreference** est maintenant définie correctement pour les appels Get-TargetResource, Set-TargetResource et Test-TargetResource.
 
 -   Améliorations apportées à la gestion des informations d’identification
 
-    -   Un certificat est désormais utilisé, si **Certificate** et **PSDscAllowPlainTextPassword** sont spécifiés.
+    -   Un certificat est maintenant utilisé, si **Certificate** et **PSDscAllowPlainTextPassword** sont spécifiés.
 
     -   Les informations d’identification sont déchiffrées, même pour les appels Get-TargetResource.
 
     -   Les informations d’identification de métaconfiguration sont chiffrées et déchiffrées.
 
-    -   Les PSCredentials sont désormais déchiffrées quand elles figurent dans un objet incorporé.
+    -   Les PSCredentials sont maintenant déchiffrées quand elles figurent dans un objet incorporé.
 
 -   Améliorations apportées aux ressources intégrées
 
@@ -122,11 +122,11 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
         -   N’installe plus le package incorrect (à partir de sources locales ou web).
 
-        -   Prend désormais en charge le protocole HTTPS.
+        -   Prend maintenant en charge le protocole HTTPS.
 
-    -   [Package resource](http://technet.microsoft.com/library/dn282132.aspx) prend désormais en charge le protocole HTTPS.
+    -   [Package resource](http://technet.microsoft.com/library/dn282132.aspx) prend maintenant en charge le protocole HTTPS.
 
-    -   [Archive resource](http://technet.microsoft.com/library/dn249917.aspx) prend désormais en charge les informations d’identification.
+    -   [Archive resource](http://technet.microsoft.com/library/dn249917.aspx) prend maintenant en charge les informations d’identification.
 
 ## <a name="BKMK_new50"></a>Nouvelles fonctionnalités dans Windows PowerShell 5.0
 
@@ -142,9 +142,9 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
 ### <a name="BKMK_newcore"></a>Nouvelles fonctionnalités de Windows PowerShell
 
--   Désormais, dans Windows PowerShell 5.0, vous pouvez développer à l’aide de classes, en utilisant une syntaxe et une sémantique formelles similaires à celles d’autres langages de programmation orientée objet. Des mots clés tels que **Class** et **Enum** ont été ajoutés au langage Windows PowerShell pour prendre en charge la nouvelle fonctionnalité. Pour plus d’informations sur l’utilisation des classes, voir about_Classes.
+-   À partir de Windows PowerShell 5.0, vous pouvez développer à l’aide de classes, en utilisant une syntaxe et une sémantique formelles similaires à celles d’autres langages de programmation orientée objet. Des mots clés tels que **Class** et **Enum** ont été ajoutés au langage Windows PowerShell pour prendre en charge la nouvelle fonctionnalité. Pour plus d’informations sur l’utilisation des classes, voir about_Classes.
 
--   Windows PowerShell 5.0 introduit un nouveau flux d’informations structurées qui permet d’échanger des données structurées entre un script et ses appelants (ou un environnement d’hébergement). Vous pouvez désormais utiliser Write-Host pour envoyer la sortie au flux d’informations. Les flux d’informations fonctionnent également pour PowerShell.Streams, les travaux, les travaux planifiés et les workflows. Les fonctionnalités suivantes prennent en charge le flux d’informations.
+-   Windows PowerShell 5.0 introduit un nouveau flux d’informations structurées qui permet d’échanger des données structurées entre un script et ses appelants (ou un environnement d’hébergement). Vous pouvez maintenant utiliser Write-Host pour envoyer la sortie au flux d’informations. Les flux d’informations fonctionnent également pour PowerShell.Streams, les travaux, les travaux planifiés et les workflows. Les fonctionnalités suivantes prennent en charge le flux d’informations.
 
     -   Une nouvelle applet de commande, Write-Information, permet de spécifier la manière dont Windows PowerShell gère les données de flux d’informations pour une commande. Write-Host est un wrapper pour Write-Information. Write-Information est également une activité de flux de travail prise en charge.
 
@@ -154,7 +154,7 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
     -   Deux nouveaux paramètres communs de workflow, PSInformation et InformationAction, ont été ajoutés.
 
-    -   Quand vous utilisez la commande Format-Table, les colonnes de table sont désormais mises en forme automatiquement en évaluant les 300 premières millisecondes de données qui transitent dans le flux.
+    -   Quand vous utilisez la commande Format-Table, les colonnes de table sont maintenant mises en forme automatiquement en évaluant les 300 premières millisecondes de données qui transitent dans le flux.
 
 -   En collaboration avec [Microsoft Research](http://research.microsoft.com/), une nouvelle applet de commande, ConvertFrom-String, a été ajoutée. L’applet de commande ConvertFrom-String permet d’extraire des objets structurés du contenu de chaînes de texte, et de les analyser. Pour plus d’informations, voir ConvertFrom-String.
 
@@ -168,17 +168,17 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
 -   Un nouveau mot clé du langage, **Hidden**, a été ajouté pour spécifier qu’un membre (une propriété ou une méthode) n’est pas affiché par défaut dans les résultats de l’applet de commande Get-Member (sauf si vous ajoutez le paramètre -Force). Les propriétés ou méthodes marquées pour être masquées n’apparaissent pas non plus dans les résultats d’IntelliSense, sauf si vous êtes dans un contexte où le membre doit être visible. Par exemple, la variable automatique $This doit afficher les membres masqués dans le contexte de la méthode Class.
 
--   Les applets de commande New-Item, Remove-Item et Get-ChildItem ont été améliorées pour prendre en charge la création et la gestion des [liens symboliques](http://en.wikipedia.org/wiki/Symbolic_link). Le paramètre **-ItemType** de l’applet de commande New-Item accepte une nouvelle valeur, **SymbolicLink**. Vous pouvez désormais créer des liens symboliques en une seule ligne, en exécutant l’applet de commande New-Item.
+-   Les applets de commande New-Item, Remove-Item et Get-ChildItem ont été améliorées pour prendre en charge la création et la gestion des [liens symboliques](http://en.wikipedia.org/wiki/Symbolic_link). Le paramètre **-ItemType** de l’applet de commande New-Item accepte une nouvelle valeur, **SymbolicLink**. Vous pouvez maintenant créer des liens symboliques en une seule ligne, en exécutant l’applet de commande New-Item.
 
 -   L’applet de commande Get-ChildItem dispose également d’un nouveau paramètre, -Depth, que vous pouvez utiliser avec le paramètre Recurse pour limiter la récursivité. Par exemple, la commande Get-ChildItem -Recurse -Depth 2 retourne des résultats à partir du dossier actif, de tous les dossiers enfants de ce dossier, et de tous les sous-dossiers des dossiers enfants.
 
--   L’applet de commande Copy-Item permet désormais de copier des fichiers ou dossiers d’une session Windows PowerShell vers une autre. Vous pouvez ainsi copier des fichiers vers des sessions connectées à des ordinateurs distants (notamment les ordinateurs exécutant [Windows Nano Server](http://blogs.technet.com/b/windowsserver/archive/2015/04/08/microsoft-announces-nano-server-for-modern-apps-and-cloud.aspx), qui n’ont donc pas d’autre interface). Pour copier des fichiers, spécifiez des ID PSSession comme valeurs pour les nouveaux paramètres -ToSession et -FromSession, en ajoutant -Path et -Destination pour spécifier respectivement le chemin d’origine et la destination. Par exemple, Copy-Item -Path c:\\myFile.txt -ToSession $s -Destination d:\\destinationFolder.
+-   L’applet de commande Copy-Item permet maintenant de copier des fichiers ou dossiers d’une session Windows PowerShell vers une autre. Vous pouvez ainsi copier des fichiers vers des sessions connectées à des ordinateurs distants (notamment les ordinateurs exécutant [Windows Nano Server](http://blogs.technet.com/b/windowsserver/archive/2015/04/08/microsoft-announces-nano-server-for-modern-apps-and-cloud.aspx), qui n’ont donc pas d’autre interface). Pour copier des fichiers, spécifiez des ID PSSession comme valeurs pour les nouveaux paramètres -ToSession et -FromSession, en ajoutant -Path et -Destination pour spécifier respectivement le chemin d’origine et la destination. Par exemple, Copy-Item -Path c:\\myFile.txt -ToSession $s -Destination d:\\destinationFolder.
 
 -   La transcription Windows PowerShell a été améliorée pour s’appliquer non seulement à l’hôte de la console (**powershell.exe**), mais aussi à toutes les applications d’hébergement telles que Windows PowerShell ISE. Vous pouvez configurer des options de transcription (notamment la transcription à l’échelle du système) en activant le paramètre de stratégie de groupe **Activer la transcription PowerShell** accessible dans Modèles d’administration/Composants Windows/Windows PowerShell.
 
 -   Une nouvelle fonctionnalité de traçage de script détaillé vous permet d’activer le suivi et l’analyse détaillés de l’utilisation des scripts Windows PowerShell sur un système. Une fois que vous avez activé le traçage de script détaillé, Windows PowerShell enregistre tous les blocs de scripts dans le journal des événements Suivi d’événements pour Windows (ETW), **Microsoft-Windows-PowerShell/Operational**.
 
--   Désormais, dans Windows PowerShell 5.0, de nouvelles applets de commande CMS (Cryptographic Message Syntax) prennent en charge le chiffrement et le déchiffrement de contenu à l’aide du format IETF standard pour protéger par chiffrement des messages, comme décrit dans le document [RFC (Request For Comments) 5652](http://tools.ietf.org/html/rfc5652). Les applets de commande Get-CmsMessage, Protect-CmsMessage et Unprotect-CmsMessage ont été ajoutées au module [Microsoft.PowerShell.Security](http://technet.microsoft.com/library/hh849807.aspx).
+-   À partir de Windows PowerShell 5.0, de nouvelles applets de commande CMS (Cryptographic Message Syntax) prennent en charge le chiffrement et le déchiffrement de contenu à l’aide du format IETF standard pour protéger par chiffrement des messages, comme décrit dans le document [RFC (Request For Comments) 5652](http://tools.ietf.org/html/rfc5652). Les applets de commande Get-CmsMessage, Protect-CmsMessage et Unprotect-CmsMessage ont été ajoutées au module [Microsoft.PowerShell.Security](http://technet.microsoft.com/library/hh849807.aspx).
 
 -   Les nouvelles applets de commande du module [Microsoft.PowerShell.Utility](http://technet.microsoft.com/library/hh849958.aspx) (Get-Runspace, Debug-Runspace, Get-RunspaceDebug, Enable-RunspaceDebug et Disable-RunspaceDebug) vous permettent de définir des options de débogage ainsi que de démarrer et d’arrêter le débogage sur une instance d’exécution. Pour le débogage d’instances d’exécution arbitraires (c’est-à-dire, autres que l’instance d’exécution par défaut pour une console Windows PowerShell ou une session Windows PowerShell ISE), Windows PowerShell permet de définir des points d’arrêt dans un script, qui interrompent l’exécution de celui-ci jusqu’à ce que vous puissiez attacher un débogueur pour déboguer le script de l’instance d’exécution. Une prise en charge du débogage imbriqué pour les instances d’exécution arbitraires a été ajoutée au débogueur de script Windows PowerShell pour les instances d’exécution.
 
@@ -190,7 +190,7 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
 -   Une nouvelle applet de commande, New-TemporaryFile, permet de créer un fichier temporaire dans le cadre d’un script. Par défaut, le fichier temporaire est créé dans ```C:\Users\<user name>\AppData\Local\Temp```.
 
--   Les applets de commande Out-File, Add-Content et Set-Content disposent désormais d’un nouveau paramètre, -NoNewline, qui omet toute nouvelle ligne après la sortie.
+-   Les applets de commande Out-File, Add-Content et Set-Content disposent maintenant d’un nouveau paramètre, -NoNewline, qui omet toute nouvelle ligne après la sortie.
 
 -   L’applet de commande New-Guid tire parti de la classe Guid du .NET Framework pour générer un GUID utile quand vous écrivez des scripts ou des ressources DSC.
 
@@ -200,21 +200,21 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
 -   Une nouvelle applet de commande, Wait-Debugger, a été ajoutée au module [Microsoft.PowerShell.Utility](http://technet.microsoft.com/library/hh849958.aspx). L’applet de commande Wait-Debugger permet d’arrêter l’exécution d’un script dans le débogueur avant d’exécuter l’instruction suivante du script.
 
--   Le débogueur Windows PowerShell Workflow prend désormais en charge l’exécution par commande ou via la touche Tab, et vous pouvez déboguer des fonctions de workflow imbriquées. Vous pouvez désormais appuyer sur **Ctrl+Pause** pour activer le débogueur dans un script en cours d’exécution, dans des sessions tant locales que distantes, et dans un script de workflow.
+-   Le débogueur Windows PowerShell Workflow prend maintenant en charge l’exécution par commande ou via la touche Tab, et vous pouvez déboguer des fonctions de workflow imbriquées. Vous pouvez maintenant appuyer sur **Ctrl+Pause** pour activer le débogueur dans un script en cours d’exécution, dans des sessions tant locales que distantes, et dans un script de workflow.
 
 -   Une applet de commande, Debug-Job, a été ajoutée au module [Microsoft.PowerShell.Core](http://technet.microsoft.com/library/hh849695.aspx). Elle permet de déboguer des scripts de travail en cours d’exécution pour Windows PowerShell Workflow, l’arrière-plan et les travaux en cours d’exécution dans des sessions à distance.
 
 -   Un nouvel état, AtBreakpoint, a été ajouté pour les travaux Windows PowerShell. L’état AtBreakpoint s’applique quand un travail exécute un script incluant une série de points d’arrêt, au moment où le script atteint un point d’arrêt. Quand un travail est interrompu à un point d’arrêt de débogage, vous devez déboguer le travail en exécutant l’applet de commande Debug-Job.
 
--   Windows PowerShell 5.0 prend en charge plusieurs versions d’un module Windows PowerShell à l’intérieur du même dossier dans $PSModulePath. Une propriété, RequiredVersion, a été ajoutée à la classe ModuleSpecification pour vous aider à obtenir la version souhaitée d’un module. Cette propriété ne peut pas être utilisée en même temps que la propriété ModuleVersion. La propriété RequiredVersion est désormais prise en charge. Elle est incluse dans la valeur du paramètre FullyQualifiedName des applets de commande Get-Module, Import-Module et Remove-Module.
+-   Windows PowerShell 5.0 prend en charge plusieurs versions d’un module Windows PowerShell à l’intérieur du même dossier dans $PSModulePath. Une propriété, RequiredVersion, a été ajoutée à la classe ModuleSpecification pour vous aider à obtenir la version souhaitée d’un module. Cette propriété ne peut pas être utilisée en même temps que la propriété ModuleVersion. La propriété RequiredVersion est maintenant prise en charge. Elle est incluse dans la valeur du paramètre FullyQualifiedName des applets de commande Get-Module, Import-Module et Remove-Module.
 
--   Vous pouvez désormais effectuer une validation de la version du module en exécutant l’applet de commande Test-ModuleManifest.
+-   Vous pouvez maintenant effectuer une validation de la version du module en exécutant l’applet de commande Test-ModuleManifest.
 
--   Les résultats de l’applet de commande Get-Command affichent désormais une colonne Version suite à l’ajout d’une nouvelle propriété, Version, à la classe CommandInfo. L’applet de commande Get-Command affiche les commandes de plusieurs versions du même module. La propriété Version fait également partie des classes dérivées de CmdletInfo:CmdletInfo et d’ApplicationInfo.
+-   Les résultats de l’applet de commande Get-Command affichent maintenant une colonne Version suite à l’ajout d’une nouvelle propriété, Version, à la classe CommandInfo. L’applet de commande Get-Command affiche les commandes de plusieurs versions du même module. La propriété Version fait également partie des classes dérivées de CmdletInfo:CmdletInfo et d’ApplicationInfo.
 
 -   L’applet de commande Get-Command dispose d’un nouveau paramètre, -ShowCommandInfo, qui retourne les informations de ShowCommand en tant que PSObjects. Cette fonctionnalité est particulièrement utile quand l’applet de commande Show-Command est exécutée dans Windows PowerShell ISE à l’aide de la communication à distance Windows PowerShell. Le paramètre -ShowCommandInfo remplace la fonction Get-SerializedCommand du module Microsoft.PowerShell.Utility, mais le script Get-SerializedCommand est toujours disponible pour prendre en charge les scripts de bas niveau.
 
--   Une nouvelle applet de commande, Get-ItemPropertyValue, permet d’obtenir la valeur d’une propriété sans utiliser de notation par points. Par exemple, dans les versions plus anciennes de Windows PowerShell, vous pouvez exécuter la commande suivante pour obtenir la valeur de la propriété de base de l’application de la clé de Registre PowerShellEngine : **(Get-ItemProperty -Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine -Name ApplicationBase).ApplicationBase**. Désormais, dans Windows PowerShell 5.0, vous pouvez exécuter **Get-ItemPropertyValue -Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine -Name ApplicationBase**.
+-   Une nouvelle applet de commande, Get-ItemPropertyValue, permet d’obtenir la valeur d’une propriété sans utiliser de notation par points. Par exemple, dans les versions plus anciennes de Windows PowerShell, vous pouvez exécuter la commande suivante pour obtenir la valeur de la propriété de base de l’application de la clé de Registre PowerShellEngine : **(Get-ItemProperty -Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine -Name ApplicationBase).ApplicationBase**. À partir de Windows PowerShell 5.0, vous pouvez exécuter **Get-ItemPropertyValue -Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine -Name ApplicationBase**.
 
 -   La console Windows PowerShell utilise à présent une coloration de la syntaxe, tout comme dans Windows PowerShell ISE.
 
@@ -224,11 +224,11 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
 -   Les applets de commande Save-Help, Update-Help, Import-PSSession, Export-PSSession et Get-Command disposent d’un nouveau paramètre, FullyQualifiedModule, de type ModuleSpecification. Ajoutez ce paramètre pour spécifier un module par son nom complet.
 
--   La valeur de **$PSVersionTable.PSVersion** a été mise à jour. Il s’agit désormais de 5.0.
+-   La valeur de **$PSVersionTable.PSVersion** a été mise à jour. Il s’agit maintenant de 5.0.
 
 ### <a name="BKMK_newDSC"></a>Nouvelles fonctionnalités dans la configuration d’état souhaité de Windows PowerShell
 
--   Le rehaussement du langage Windows PowerShell permet de définir des ressources de configuration d’état souhaité (DSC) Windows PowerShell à l’aide de classes. Import-DscResource est désormais un vrai mot clé dynamique. Windows PowerShell analyse le module racine du module spécifié, en recherchant des classes contenant l’attribut DscResource. Vous pouvez désormais utiliser des classes pour définir des ressources DSC, dans lesquelles un fichier MOF ou un sous-dossier DSCResource dans le dossier du module ne sont pas requis. Un fichier de module Windows PowerShell peut contenir plusieurs classes de ressources DSC.
+-   Le rehaussement du langage Windows PowerShell permet de définir des ressources de configuration d’état souhaité (DSC) Windows PowerShell à l’aide de classes. Import-DscResource est maintenant un vrai mot clé dynamique. Windows PowerShell analyse le module racine du module spécifié, en recherchant des classes contenant l’attribut DscResource. Vous pouvez maintenant utiliser des classes pour définir des ressources DSC, dans lesquelles un fichier MOF ou un sous-dossier DSCResource dans le dossier du module ne sont pas requis. Un fichier de module Windows PowerShell peut contenir plusieurs classes de ressources DSC.
 
 -   Un nouveau paramètre, ThrottleLimit, a été ajouté aux applets de commande suivantes dans le module PSDesiredStateConfiguration. Ajoutez le paramètre ThrottleLimit pour spécifier le nombre d’ordinateurs cibles ou d’appareils sur lesquels vous souhaitez que la commande opère simultanément.
 
@@ -254,7 +254,7 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
 -   Avec le signalement d’erreurs DSC centralisé, outre que les informations d’erreur complètes sont enregistrées dans le journal des événements, celles-ci peuvent être envoyées à un emplacement central à des fins d’analyse ultérieure. Vous pouvez utiliser cet emplacement central pour stocker des erreurs de configuration DSC qui se sont produites pour un serveur quelconque dans son environnement. Une fois le serveur de rapports défini dans la métaconfiguration, toutes les erreurs sont envoyées au serveur de rapports et stockées dans une base de données. Vous pouvez configurer cette fonctionnalité, indépendamment du fait qu’un nœud cible soit configuré ou non pour extraire des configurations d’un serveur collecteur.
 
--   Les améliorations apportées à Windows PowerShell ISE facilitent la création de ressources DSC. Vous pouvez désormais effectuer les opérations suivantes.
+-   Les améliorations apportées à Windows PowerShell ISE facilitent la création de ressources DSC. Vous pouvez maintenant effectuer les opérations suivantes.
 
     -   Énumération de toutes les ressources DSC dans un bloc **configuration** ou **node** en entrant **Ctrl+Espace** dans une ligne vide du bloc.
 
@@ -264,17 +264,17 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
     -   Saisie semi-automatique via la touche Tab améliorée pour les valeurs de propriété de ressource.
 
--   Un utilisateur peut désormais exécuter une ressource sous un ensemble spécifié d’informations d’identification en ajoutant l’attribut **PSDscRunAsCredential** à un bloc de nœud. Par exemple, PSDscRunAsCredential = Get-Credential Contoso\\DscUser. Cette fonctionnalité est utile pour créer des configurations qui exécutent Windows Installer et des programmes d’installation exécutables, accèdent à la ruche du Registre par utilisateur ou effectuent d’autres tâches en dehors du contexte de l’utilisateur actuel.
+-   Un utilisateur peut maintenant exécuter une ressource sous un ensemble spécifié d’informations d’identification en ajoutant l’attribut **PSDscRunAsCredential** à un bloc de nœud. Par exemple, PSDscRunAsCredential = Get-Credential Contoso\\DscUser. Cette fonctionnalité est utile pour créer des configurations qui exécutent Windows Installer et des programmes d’installation exécutables, accèdent à la ruche du Registre par utilisateur ou effectuent d’autres tâches en dehors du contexte de l’utilisateur actuel.
 
--   La prise en charge 32 bits (basée sur x86) a été ajoutée pour le mot clé **Configuration**.
+-   La prise en charge 32 bits (avec processeur x86) a été ajoutée pour le mot clé **Configuration**.
 
--   Windows PowerShell inclut désormais la prise en charge de l’aide personnalisée pour les configurations DSC, définie par l’ajout de \[CmdletBinding()] à la fonction de configuration générée.
+-   Windows PowerShell inclut maintenant la prise en charge de l’aide personnalisée pour les configurations DSC, définie par l’ajout de \[CmdletBinding()] à la fonction de configuration générée.
 
 -   Un nouvel attribut, **DscLocalConfigurationManager**, désigne un bloc de configuration en tant que métaconfiguration, qui sert à configurer le gestionnaire de configuration local DSC. Avec cet attribut, une configuration peut contenir uniquement des éléments qui configurent le gestionnaire de configuration local DSC. Pendant le traitement, cette configuration génère un fichier \*.meta.mof qui est ensuite envoyé aux nœuds cibles appropriés en exécutant l’applet de commande Set-DscLocalConfigurationManager.
 
--   Les configurations partielles sont désormais autorisées dans Windows PowerShell 5.0. Vous pouvez distribuer des documents de configuration à un nœud en plusieurs fragments. Pour qu’un nœud reçoive plusieurs fragments d’un document de configuration, il faut que son gestionnaire de configuration local soit configuré pour spécifier les fragments attendus.
+-   Les configurations partielles sont maintenant autorisées dans Windows PowerShell 5.0. Vous pouvez distribuer des documents de configuration à un nœud en plusieurs fragments. Pour qu’un nœud reçoive plusieurs fragments d’un document de configuration, il faut que son gestionnaire de configuration local soit configuré pour spécifier les fragments attendus.
 
--   La synchronisation entre ordinateurs est une nouveauté de DSC dans Windows PowerShell 5.0. Avec les ressources WaitFor\* intégrées (**WaitForAll**, **WaitForAny** et **WaitForSome**), vous pouvez désormais spécifier des dépendances entre ordinateurs lors d’exécutions de configuration, sans orchestration externe. Ces ressources fournissent une synchronisation de nœud à nœud à l’aide de connexions CIM sur le protocole WS-Man. Une configuration peut attendre que l’état d’une ressource spécifique d’un autre ordinateur change.
+-   La synchronisation entre ordinateurs est une nouveauté de DSC dans Windows PowerShell 5.0. Avec les ressources WaitFor\* intégrées (**WaitForAll**, **WaitForAny** et **WaitForSome**), vous pouvez maintenant spécifier des dépendances entre ordinateurs lors d’exécutions de configuration, sans orchestration externe. Ces ressources fournissent une synchronisation de nœud à nœud à l’aide de connexions CIM sur le protocole WS-Man. Une configuration peut attendre que l’état d’une ressource spécifique d’un autre ordinateur change.
 
 -   Une nouvelle fonctionnalité de sécurité de délégation, JEA (Just Enough Administration), tire parti de DSC et des instances d’exécution contraintes de Windows PowerShell pour protéger les entreprises contre la perte de données ou des actes préjudiciables commis par employés, intentionnellement ou non. Pour plus d’informations sur la fonctionnalité JEA, y compris l’emplacement à partir duquel vous pouvez télécharger la ressource DSC xJEA, voir [Just Enough Administration, Step by Step](http://blogs.technet.com/b/privatecloud/archive/2014/05/14/just-enough-administration-step-by-step.aspx) (en anglais).
 
@@ -292,17 +292,17 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
 ### <a name="BKMK_newISE"></a>Nouvelles fonctionnalités dans Windows PowerShell ISE
 
--   Vous pouvez désormais modifier des scripts et fichiers Windows PowerShell distants dans une copie locale de Windows PowerShell ISE, en exécutant Enter-PSSession pour démarrer une session à distance sur l’ordinateur qui stocke les fichiers à modifier, puis en exécutant **PSEdit <path and file name on the remote computer>**. Cette fonctionnalité facilite la modification de fichiers Windows PowerShell stockés sur l’option d’installation minimale de Windows Server, où Windows PowerShell ISE ne peut pas s’exécuter.
+-   Vous pouvez maintenant modifier des scripts et fichiers Windows PowerShell distants dans une copie locale de Windows PowerShell ISE, en exécutant Enter-PSSession pour démarrer une session à distance sur l’ordinateur qui stocke les fichiers à modifier, puis en exécutant **PSEdit <path and file name on the remote computer>**. Cette fonctionnalité facilite la modification de fichiers Windows PowerShell stockés sur l’option d’installation minimale de Windows Server, où Windows PowerShell ISE ne peut pas s’exécuter.
 
--   L’applet de commande Start-Transcript est désormais prise en charge dans Windows PowerShell ISE.
+-   L’applet de commande Start-Transcript est maintenant prise en charge dans Windows PowerShell ISE.
 
--   Vous pouvez désormais déboguer des scripts à distance dans Windows PowerShell ISE.
+-   Vous pouvez maintenant déboguer des scripts à distance dans Windows PowerShell ISE.
 
 -   Une nouvelle option de menu, **Interrompre tout** (Ctrl+B) arrête le débogueur pour les scripts s’exécutant tant en local qu’à distance.
 
 ### <a name="BKMK_newOData"></a>Nouvelles fonctionnalités dans Windows PowerShell Web Services (Extension ISS Management OData)
 
--   Désormais, dans Windows PowerShell 5.0, vous pouvez générer un ensemble d’applets de commande Windows PowerShell basées sur la fonctionnalité exposée par un point de terminaison OData, en exécutant l’applet de commande Export-ODataEndpointProxy, figurant dans le nouveau module [Microsoft.PowerShell.OdataUtils](http://technet.microsoft.com/library/dn818507(v=wps.640).aspx).
+-   À partir de Windows PowerShell 5.0, vous pouvez générer un ensemble d’applets de commande Windows PowerShell basées sur la fonctionnalité exposée par un point de terminaison OData, en exécutant l’applet de commande Export-ODataEndpointProxy, figurant dans le nouveau module [Microsoft.PowerShell.OdataUtils](http://technet.microsoft.com/library/dn818507(v=wps.640).aspx).
 
 ### <a name="BKMK_5bugfix"></a>Correctifs de bogues notables dans Windows PowerShell 5.0
 
@@ -333,19 +333,19 @@ Windows PowerShell 4.0 intègre les nouvelles fonctionnalités suivantes.
 
 -   La **configuration d’état souhaité (DSC) Windows PowerShell** est un nouveau système de gestion dans Windows PowerShell 4.0, qui permet de déployer et de gérer les données de configuration de services logiciels et l’environnement dans lequel ces services s’exécutent. Pour plus d’informations sur DSC, voir [Prendre en main la configuration d’état souhaité Windows PowerShell](https://technet.microsoft.com/en-us/library/c134aa32-b085-4656-9a89-955d8ff768d0).
 
--   L’applet de commande **Save-Help** permet désormais d’enregistrer l’aide pour des modules installés sur des ordinateurs distants. Vous pouvez utiliser Save-Help pour télécharger l'aide des modules à partir d'un client connecté à Internet (sur lequel les modules au sujet desquels vous avez besoin d'aide ne sont pas tous forcément installés), puis copier l'aide enregistrée dans un dossier partagé distant ou un ordinateur distant n'ayant pas accès à Internet.
+-   L’applet de commande **Save-Help** permet maintenant d’enregistrer l’aide pour des modules installés sur des ordinateurs distants. Vous pouvez utiliser Save-Help pour télécharger l'aide des modules à partir d'un client connecté à Internet (sur lequel les modules au sujet desquels vous avez besoin d'aide ne sont pas tous forcément installés), puis copier l'aide enregistrée dans un dossier partagé distant ou un ordinateur distant n'ayant pas accès à Internet.
 
--   Le débogueur Windows PowerShell a été amélioré pour permettre de déboguer des workflows Windows PowerShell, ainsi que des scripts qui s’exécutent sur des ordinateurs distants. Il est désormais possible de déboguer les workflows Windows PowerShell au niveau du script soit à partir de la ligne de commande Windows PowerShell, soit à partir de Windows PowerShell ISE. Les scripts Windows PowerShell, notamment les workflows de script, peuvent désormais être débogués sur des sessions à distance. Les sessions de débogage à distance sont conservées sur des sessions à distance Windows PowerShell qui sont déconnectées, puis reconnectées.
+-   Le débogueur Windows PowerShell a été amélioré pour permettre de déboguer des workflows Windows PowerShell, ainsi que des scripts qui s’exécutent sur des ordinateurs distants. Il est maintenant possible de déboguer les workflows Windows PowerShell au niveau du script soit à partir de la ligne de commande Windows PowerShell, soit à partir de Windows PowerShell ISE. Les scripts Windows PowerShell, notamment les workflows de script, peuvent maintenant être débogués sur des sessions à distance. Les sessions de débogage à distance sont conservées sur des sessions à distance Windows PowerShell qui sont déconnectées, puis reconnectées.
 
 -   Le paramètre **RunNow** pour les applets de commande **Register-ScheduledJob** et **Set-ScheduledJob** vous évite de devoir définir une date et une heure de démarrage immédiat pour les travaux à l’aide du paramètre **Trigger**.
 
--   Les applets de commande **Invoke-RestMethod** et **Invoke-WebRequest** vous permettent désormais de définir tous les en-têtes à l’aide du paramètre Headers. Bien que ce paramètre ait toujours existé, il faisait partie des quelques paramètres d'applets de commande web qui généraient des erreurs ou des exceptions.
+-   Les applets de commande **Invoke-RestMethod** et **Invoke-WebRequest** vous permettent maintenant de définir tous les en-têtes à l’aide du paramètre Headers. Bien que ce paramètre ait toujours existé, il faisait partie des quelques paramètres d'applets de commande web qui généraient des erreurs ou des exceptions.
 
--   L’applet de commande **Get-Module** dispose d’un nouveau paramètre, **FullyQualifiedName**, du type **ModuleSpecification[\[]**. Le paramètre **FullyQualifiedName** de l’applet de commande Get-Module permet désormais de spécifier un module par son nom, sa version et éventuellement son GUID.
+-   L’applet de commande **Get-Module** dispose d’un nouveau paramètre, **FullyQualifiedName**, du type **ModuleSpecification[\[]**. Le paramètre **FullyQualifiedName** de l’applet de commande Get-Module permet maintenant de spécifier un module par son nom, sa version et éventuellement son GUID.
 
 -   Le paramètre de stratégie d’exécution par défaut sur Windows Server 2012 R2 est **RemoteSigned**. Sur Windows 8.1, le paramètre par défaut ne change pas.
 
--   Désormais, dans Windows PowerShell 4.0, l’appel de méthode à l’aide de noms de méthodes dynamiques est pris en charge. Vous pouvez utiliser une variable pour stocker un nom de méthode, puis appeler la méthode de façon dynamique en appelant la variable.
+-   À partir de Windows PowerShell 4.0, l’appel de méthode à l’aide de noms de méthodes dynamiques est pris en charge. Vous pouvez utiliser une variable pour stocker un nom de méthode, puis appeler la méthode de façon dynamique en appelant la variable.
 
 -   Les travaux de flux de travail asynchrones ne sont plus supprimés au terme du délai d’attente spécifié par le paramètre commun de flux de travail **PSElapsedTimeoutSec**.
 
@@ -353,11 +353,11 @@ Windows PowerShell 4.0 intègre les nouvelles fonctionnalités suivantes.
 
 -   Le paramètre **Passthru** a été ajouté aux applets de commande **Enable-JobTrigger** et **Disable-JobTrigger**. Le paramètre Passthru affiche tous les objets créés ou modifiés par votre commande.
 
--   Les noms des paramètres utilisés pour spécifier un groupe de travail dans les applets de commande **Add-Computer** et **Remove-Computer** sont désormais cohérents. Les deux applets de commande utilisent désormais le paramètre **WorkgroupName**.
+-   Les noms des paramètres utilisés pour spécifier un groupe de travail dans les applets de commande **Add-Computer** et **Remove-Computer** sont maintenant cohérents. Les deux applets de commande utilisent maintenant le paramètre **WorkgroupName**.
 
 -   Un nouveau paramètre commun, **PipelineVariable**, a été ajouté. PipelineVariable vous permet d'enregistrer les résultats d'une commande dirigée (ou une partie de celle-ci) en tant que variable pouvant être passée via le reste du pipeline.
 
--   Le filtrage de collection à l'aide d'une syntaxe de méthode est désormais pris en charge. Cela signifie que vous pouvez à présent filtrer une collection d'objets à l'aide d'une syntaxe simplifiée, semblable à celle utilisée pour Where() ou Where-Object, dont le format est celui d'un appel de méthode. Voici un exemple : (Get-Process).where({$_.Name -match 'powershell'})
+-   Le filtrage de collection à l'aide d'une syntaxe de méthode est maintenant pris en charge. Cela signifie que vous pouvez à présent filtrer une collection d'objets à l'aide d'une syntaxe simplifiée, semblable à celle utilisée pour Where() ou Where-Object, dont le format est celui d'un appel de méthode. Voici un exemple : (Get-Process).where({$_.Name -match 'powershell'})
 
 -   L’applet de commande **Get-Process** dispose d’un nouveau paramètre de commutateur, **IncludeUserName**.
 
@@ -365,7 +365,7 @@ Windows PowerShell 4.0 intègre les nouvelles fonctionnalités suivantes.
 
 -   Dans Windows PowerShell 4.0, si un module utilise la clé **DefaultCommandPrefix** dans son manifeste ou que l’utilisateur importe un module avec le paramètre **Prefix**, la propriété **ExportedCommands** du module affiche les commandes dans le module avec le préfixe. Quand vous exécutez les commandes à l’aide de la syntaxe propre au module (NomDeModule\\NomDeCommande), les noms des commandes doivent inclure le préfixe.
 
--   La valeur de **$PSVersionTable.PSVersion** a été mise à jour. Il s’agit désormais de 4.0.
+-   La valeur de **$PSVersionTable.PSVersion** a été mise à jour. Il s’agit maintenant de 4.0.
 
 -   Le comportement de l’opérateur **Where()** a changé. `Collection.Where('property –match name')` n’accepte plus d’expression de chaîne au format `"Property –CompareOperator Value"`. En revanche, l’opérateur **Where()** accepte toujours les expressions de chaîne au format bloc de script.
 
@@ -377,11 +377,11 @@ Windows PowerShell 4.0 intègre les nouvelles fonctionnalités suivantes.
 
 ### <a name="BKMK_workflow"></a>Nouvelles fonctionnalités de Windows PowerShell Workflow
 
--   Un nouveau paramètre commun, **PipelineVariable**, est désormais pris en charge dans le contexte des pipelines itératifs, comme ceux utilisés par System Center Orchestrator. Il s’agit en fait des pipelines qui exécutent simplement les commandes de gauche à droite, par opposition à une exécution parsemée via une diffusion en continu.
+-   Un nouveau paramètre commun, **PipelineVariable**, est maintenant pris en charge dans le contexte des pipelines itératifs, comme ceux utilisés par System Center Orchestrator. Il s’agit en fait des pipelines qui exécutent simplement les commandes de gauche à droite, par opposition à une exécution parsemée via une diffusion en continu.
 
 -   La liaison de paramètre a été considérablement améliorée pour fonctionner en dehors des scénarios de saisie semi-automatique par tabulation, comme avec les commandes qui n'existent pas dans l'instance d'exécution actuelle.
 
--   Les activités de conteneur personnalisées sont désormais prises en charge dans Windows PowerShell Workflow. Si un paramètre d’activité est de type **Activity** ou **Activity\[]** ou bien une collection générique d’activités, et que l’utilisateur a fourni un bloc de script en tant qu’argument, Windows PowerShell Workflow convertit le bloc de script au format XAML, comme lors d’une compilation de script à workflow Windows PowerShell normale.
+-   Les activités de conteneur personnalisées sont maintenant prises en charge dans Windows PowerShell Workflow. Si un paramètre d’activité est de type **Activity** ou **Activity\[]** ou bien une collection générique d’activités, et que l’utilisateur a fourni un bloc de script en tant qu’argument, Windows PowerShell Workflow convertit le bloc de script au format XAML, comme lors d’une compilation de script à workflow Windows PowerShell normale.
 
 -   Après un incident, Windows PowerShell Workflow se reconnecte automatiquement aux nœuds gérés.
 
@@ -389,21 +389,21 @@ Windows PowerShell 4.0 intègre les nouvelles fonctionnalités suivantes.
 
 -   Le paramètre commun **ErrorAction** offre une nouvelle valeur valide, **Suspend**, réservée exclusivement aux workflows.
 
--   Un point de terminaison de workflow se ferme désormais automatiquement en l'absence de sessions actives, de tâches en cours et de tâches en attente. Cette fonctionnalité conserve les ressources sur l'ordinateur jouant le rôle de serveur de workflow quand les conditions de fermeture automatique sont remplies.
+-   Un point de terminaison de workflow se ferme maintenant automatiquement en l'absence de sessions actives, de tâches en cours et de tâches en attente. Cette fonctionnalité conserve les ressources sur l'ordinateur jouant le rôle de serveur de workflow quand les conditions de fermeture automatique sont remplies.
 
 ### <a name="BKMK_psws"></a>Nouvelles fonctionnalités de Windows PowerShell Web Services
 
 -   Si une erreur se produit dans Windows PowerShell Web Services (PSWS ou Extension ISS Management OData) alors qu’une applet de commande est en cours d’exécution, des messages d’erreur plus détaillés sont retournés à l’appelant. En outre, les codes d’erreur suivent [instructions relatives aux codes d’erreur d’API REST de Windows Azure](http://msdn.microsoft.com/library/windowsazure/dd179357.aspx).
 
--   Un point de terminaison peut désormais définir la version de l'API et forcer l'utilisation d'une version spécifique de l'API. En cas d'incompatibilité de version entre le client et le serveur, les erreurs sont affichées à la fois sur le client et le serveur.
+-   Un point de terminaison peut maintenant définir la version de l'API et forcer l'utilisation d'une version spécifique de l'API. En cas d'incompatibilité de version entre le client et le serveur, les erreurs sont affichées à la fois sur le client et le serveur.
 
 -   La génération automatique des valeurs des champs manquants dans le schéma de répartition simplifie la gestion du schéma. La génération se produit, comme point de départ utile, même si le schéma de distribution n'existe pas.
 
 -   La gestion des types dans PSWS a été améliorée pour prendre en charge les types qui utilisent un constructeur autre que le constructeur par défaut. Le comportement adopté est similaire à celui de **PSTypeConverter** dans Windows PowerShell. Vous pouvez ainsi utiliser des types complexes avec PSWS.
 
--   PSWS permet désormais d'étendre une instance associée lors de l'exécution d'une requête. Pour le contenu binaire plus volumineux (comme des images, des fichiers audio ou des vidéos), le coût de transfert est élevé. Il est donc préférable de transférer les données binaires sans encodage. PSWS utilise des flux de ressources nommés pour le transfert sans encodage. Le flux de ressources nommé est une propriété d’une entité de type **Edm.Stream**. Chaque flux de ressources nommé possède un URI distinct pour les opérations GET ou UPDATE.
+-   PSWS permet maintenant d'étendre une instance associée lors de l'exécution d'une requête. Pour le contenu binaire plus volumineux (comme des images, des fichiers audio ou des vidéos), le coût de transfert est élevé. Il est donc préférable de transférer les données binaires sans encodage. PSWS utilise des flux de ressources nommés pour le transfert sans encodage. Le flux de ressources nommé est une propriété d’une entité de type **Edm.Stream**. Chaque flux de ressources nommé possède un URI distinct pour les opérations GET ou UPDATE.
 
--   Les actions OData proposent désormais un mécanisme pour appeler des méthodes non CRUD (Create, Read, Update et Delete) sur une ressource. Vous pouvez appeler une action en envoyant une demande HTTP POST à l'URI qui est défini pour l'action. Les paramètres de l'action sont définis dans le corps de la demande POST.
+-   Les actions OData proposent maintenant un mécanisme pour appeler des méthodes non CRUD (Create, Read, Update et Delete) sur une ressource. Vous pouvez appeler une action en envoyant une demande HTTP POST à l'URI qui est défini pour l'action. Les paramètres de l'action sont définis dans le corps de la demande POST.
 
 -   Par souci de cohérence avec les recommandations Windows Azure, toutes les URL doivent être simplifiées. Suite à une modification apportée à **Key As Segment**, des clés uniques peuvent être représentées en tant que segments. Comme précédemment, si des références utilisent plusieurs valeurs de clé, les valeurs doivent être séparées par des virgules et incluses entre parenthèses.
 
@@ -415,45 +415,45 @@ Windows PowerShell 4.0 intègre les nouvelles fonctionnalités suivantes.
 
 -   Vous pouvez afficher les paramètres par défaut dans la page de connexion. Pour afficher les paramètres par défaut, configurez les valeurs de tous les paramètres affichés dans la zone **Paramètres de connexion facultatifs** de la page de connexion dans un fichier nommé **web.config**. Vous pouvez utiliser le fichier **web.config** pour configurer tous les paramètres de connexion facultatifs, à l’exception d’un deuxième ou d’un autre ensemble d’informations d’identification.
 
--   Dans Windows Server 2012 R2, vous pouvez gérer à distance les règles d’autorisation pour Accès Web Windows PowerShell. Les applets de commande **Add-PswaAuthorizationRule** et **Test-PswaAuthorizationRule** incluent désormais un paramètre Credential qui permet aux administrateurs de gérer les règles d’autorisation à partir d’un ordinateur distant ou dans une session Accès Web Windows PowerShell.
+-   Dans Windows Server 2012 R2, vous pouvez gérer à distance les règles d’autorisation pour Accès Web Windows PowerShell. Les applets de commande **Add-PswaAuthorizationRule** et **Test-PswaAuthorizationRule** incluent maintenant un paramètre Credential qui permet aux administrateurs de gérer les règles d’autorisation à partir d’un ordinateur distant ou dans une session Accès Web Windows PowerShell.
 
--   Vous pouvez désormais avoir plusieurs sessions Accès Web Windows PowerShell dans une même session de navigateur. Pour cela, il vous suffit d’ouvrir un nouvel onglet de navigateur pour chaque session. Il n’est plus nécessaire d’ouvrir une nouvelle session de navigateur pour se connecter à une nouvelle session dans la console web Windows PowerShell.
+-   Vous pouvez maintenant avoir plusieurs sessions Accès Web Windows PowerShell dans une même session de navigateur. Pour cela, il vous suffit d’ouvrir un nouvel onglet de navigateur pour chaque session. Il n’est plus nécessaire d’ouvrir une nouvelle session de navigateur pour se connecter à une nouvelle session dans la console web Windows PowerShell.
 
 ### <a name="BKMK_bugs"></a>Correctifs de bogues importants dans Windows PowerShell 4.0
 
--   L’applet de commande **Get-Counter** peut désormais retourner des compteurs qui contiennent une apostrophe dans les éditions françaises de Windows.
+-   L’applet de commande **Get-Counter** peut maintenant retourner des compteurs qui contiennent une apostrophe dans les éditions françaises de Windows.
 
--   Vous pouvez désormais afficher la méthode **GetType** sur des objets désérialisés.
+-   Vous pouvez maintenant afficher la méthode **GetType** sur des objets désérialisés.
 
--   Les instructions **#Requires** permettent désormais aux utilisateurs d’exiger des droits d’accès réservés aux administrateurs, si nécessaire.
+-   Les instructions **#Requires** permettent maintenant aux utilisateurs d’exiger des droits d’accès réservés aux administrateurs, si nécessaire.
 
--   L’applet de commande **Import-Csv** ignore désormais les lignes vides.
+-   L’applet de commande **Import-Csv** ignore maintenant les lignes vides.
 
 -   Un problème lié à une utilisation trop importante de la mémoire par Windows PowerShell ISE lors de l’exécution d’une commande **Invoke-WebRequest** a été résolu.
 
--   L’applet de commande **Get-Module** affiche désormais les versions des modules dans une colonne **Version**.
+-   L’applet de commande **Get-Module** affiche maintenant les versions des modules dans une colonne **Version**.
 
--   Remove-Item –Recurse supprime désormais les éléments des sous-dossiers comme prévu.
+-   Remove-Item –Recurse supprime maintenant les éléments des sous-dossiers comme prévu.
 
 -   La propriété **UserName** a été ajoutée aux objets de sortie **Get-Process**.
 
--   L’applet de commande **Invoke-RestMethod** retourne désormais tous les résultats disponibles.
+-   L’applet de commande **Invoke-RestMethod** retourne maintenant tous les résultats disponibles.
 
--   L’applet de commende **Add\-Member** s’applique désormais aux tables de hachage, même si celles-ci n’ont pas encore été sollicitées.
+-   L’applet de commende **Add\-Member** s’applique maintenant aux tables de hachage, même si celles-ci n’ont pas encore été sollicitées.
 
 -   L’applet de commande **Select-Object –Expand** n’échoue plus et ne génère plus d’exception si la valeur de la propriété est null ou vide.
 
--   L’applet de commende **Get-Process** peut désormais être utilisée dans un pipeline avec d’autres commandes qui obtiennent la propriété **ComputerName** d’objets.
+-   L’applet de commende **Get-Process** peut maintenant être utilisée dans un pipeline avec d’autres commandes qui obtiennent la propriété **ComputerName** d’objets.
 
--   Les applets de commande **ConvertTo-Json** et **ConvertFrom-Json** peuvent désormais accepter les termes entre guillemets doubles, et leurs messages d’erreur sont localisables.
+-   Les applets de commande **ConvertTo-Json** et **ConvertFrom-Json** peuvent maintenant accepter les termes entre guillemets doubles, et leurs messages d’erreur sont localisables.
 
--   L’applet de commande **Get-Job** retourne désormais toutes les travaux planifiés terminés, même dans de nouvelles sessions.
+-   L’applet de commande **Get-Job** retourne maintenant toutes les travaux planifiés terminés, même dans de nouvelles sessions.
 
--   Les problèmes liés au montage et au démontage de disques durs virtuels à l’aide du fournisseur **FileSystem** dans Windows PowerShell 4.0 ont été résolus. Windows PowerShell peut désormais détecter de nouveaux lecteurs quand ils sont montés dans la même session.
+-   Les problèmes liés au montage et au démontage de disques durs virtuels à l’aide du fournisseur **FileSystem** dans Windows PowerShell 4.0 ont été résolus. Windows PowerShell peut maintenant détecter de nouveaux lecteurs quand ils sont montés dans la même session.
 
 -   Il n’est plus nécessaire de charger explicitement les modules **ScheduledJob** et **Workflow** pour utiliser leurs types de travaux.
 
--   Les performances du processus d'importation de workflows définissant des workflows imbriqués ont été améliorées. Ce processus est désormais plus rapide.
+-   Les performances du processus d'importation de workflows définissant des workflows imbriqués ont été améliorées. Ce processus est maintenant plus rapide.
 
 ## <a name="BKMK_wps3"></a>Nouvelles fonctionnalités dans Windows PowerShell 3.0
 Windows PowerShell 3.0 intègre les nouvelles fonctionnalités suivantes.
@@ -540,7 +540,7 @@ Les avantages de Windows PowerShell Workflow sont les suivants :
 -   **Limitation des workflows et des connexions.** Vous pouvez limiter l'exécution des workflows et les connexions aux nœuds, ce qui permet de prendre en charge des scénarios évolutifs et à haute disponibilité.
 
 ### <a name="BKMK_WebAccess"></a>Windows PowerShell Web Access
-Accès Web Windows PowerShell est une fonctionnalité Windows Server 2012 qui permet aux utilisateurs d’exécuter des commandes et des scripts Windows PowerShell dans une console web. Les périphériques qui utilisent la console web ne nécessitent ni Windows PowerShell, ni un logiciel de gestion à distance, ni l’installation d’un plug-in de navigateur. Il suffit de disposer d’une passerelle Accès Web Windows PowerShell correctement configurée et d’un navigateur d’appareil client prenant en charge JavaScript® et acceptant les cookies.
+Accès Web Windows PowerShell est une fonctionnalité Windows Server 2012 qui permet aux utilisateurs d’exécuter des commandes et des scripts Windows PowerShell dans une console web. Les appareils qui utilisent la console web ne nécessitent ni Windows PowerShell, ni un logiciel de gestion à distance, ni l’installation d’un plug-in de navigateur. Il suffit de disposer d’une passerelle Accès Web Windows PowerShell correctement configurée et d’un navigateur d’appareil client prenant en charge JavaScript® et acceptant les cookies.
 
 Pour plus d’informations, voir [Déployer un Accès Windows PowerShell Web](http://go.microsoft.com/fwlink/p/?LinkID=221050).
 
@@ -556,9 +556,9 @@ Windows PowerShell 3.0 est un composant facultatif de l'environnement de préin
 ### <a name="BKMK_Disconnected"></a>Sessions déconnectées
 À compter de Windows PowerShell 3.0, les sessions persistantes gérées par l'utilisateur (« PSSessions ») que vous créez à l'aide de l'applet de commande New-PSSession sont enregistrées sur l'ordinateur distant. Elles ne dépendent donc plus de la session dans laquelle elles ont été créées.
 
-Vous pouvez désormais vous déconnecter d'une session sans interrompre les commandes en cours d'exécution dans la session. Vous pouvez fermer la session et arrêter votre ordinateur. Par la suite, vous pouvez vous reconnecter à la session à partir d'une session différente sur le même ordinateur ou un ordinateur différent.
+Vous pouvez maintenant vous déconnecter d'une session sans interrompre les commandes en cours d'exécution dans la session. Vous pouvez fermer la session et arrêter votre ordinateur. Par la suite, vous pouvez vous reconnecter à la session à partir d'une session différente sur le même ordinateur ou un ordinateur différent.
 
-Le paramètre **ComputerName** de l’applet de commande [Get-PSSession](https://technet.microsoft.com/en-us/library/b2b10531-d0df-4746-b877-e75c09955cb6) obtient désormais toutes les sessions de l’utilisateur qui se connectent à l’ordinateur, même si elles ont été démarrées dans une session différente sur un autre ordinateur. Vous pouvez vous connecter aux sessions, obtenir les résultats des commandes, démarrer de nouvelles commandes, puis vous déconnecter de la session.
+Le paramètre **ComputerName** de l’applet de commande [Get-PSSession](https://technet.microsoft.com/en-us/library/b2b10531-d0df-4746-b877-e75c09955cb6) obtient maintenant toutes les sessions de l’utilisateur qui se connectent à l’ordinateur, même si elles ont été démarrées dans une session différente sur un autre ordinateur. Vous pouvez vous connecter aux sessions, obtenir les résultats des commandes, démarrer de nouvelles commandes, puis vous déconnecter de la session.
 
 De nouvelles applets de commande ont été ajoutées pour prendre en charge la fonctionnalité Sessions déconnectées, notamment [Disconnect-PSSession](https://technet.microsoft.com/en-us/library/f8f95111-612f-4cba-9098-77904b0473d8), [Connect-PSSession](https://technet.microsoft.com/en-us/library/b803dd29-f208-4079-80d4-db04d778f060) et Receive-PSSession. Par ailleurs, de nouveaux paramètres ont été ajoutés aux applets de commande qui gèrent PSSessions, comme le paramètre **InDisconnectedSession** de l’applet de commande [Invoke-Command](https://technet.microsoft.com/en-us/library/906b4b41-7da8-4330-9363-e7164e5e6970).
 
@@ -582,7 +582,7 @@ Vous pouvez utiliser l’applet de commande [Update-Help](https://technet.micros
 
 Les modules Windows 8 et Windows Server 2012 ne contiennent pas de fichiers d’aide. Pour télécharger les derniers fichiers d’aide, tapez `Update-Help`. Pour plus d’informations, tapez `Get-Help` (sans paramètre) ou consultez [about_Updatable_Help](https://technet.microsoft.com/en-us/library/10bba75c-f4ac-4ca1-bbf3-8f34dd521ffe).
 
-Si les fichiers d’aide d’une applet de commande ne sont pas installés sur l’ordinateur, l’applet de commande [Get-Help](https://technet.microsoft.com/en-us/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) affiche désormais une aide générée automatiquement. L’aide générée automatiquement contient la syntaxe de la commande et des instructions relatives à l’utilisation de l’applet de commande [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545) pour télécharger les fichiers d’aide.
+Si les fichiers d’aide d’une applet de commande ne sont pas installés sur l’ordinateur, l’applet de commande [Get-Help](https://technet.microsoft.com/en-us/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) affiche maintenant une aide générée automatiquement. L’aide générée automatiquement contient la syntaxe de la commande et des instructions relatives à l’utilisation de l’applet de commande [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545) pour télécharger les fichiers d’aide.
 
 Tout auteur de module peut prendre en charge l'aide actualisable. Vous pouvez soit inclure des fichiers d'aide dans le module et utiliser l'aide actualisable pour les mettre à jour, soit omettre les fichiers d'aide et utiliser l'aide actualisable pour les installer. Pour plus d’informations sur la prise en charge de l’aide actualisable, voir [Prise en charge de l’aide actualisable](http://go.microsoft.com/FWLink/?LinkID=242129) dans MSDN.
 
@@ -625,7 +625,7 @@ Pour créer un fichier de configuration de session, utilisez l’applet de comma
 Pour plus d’informations, voir [about_Session_Configuration_Files](https://technet.microsoft.com/en-us/library/c7217447-1ebf-477b-a8ef-4dbe9a1473b8) et [New-PSSessionConfigurationFile](https://technet.microsoft.com/en-us/library/5f3e3633-6e90-479c-aea9-ba45a1954866).
 
 ### <a name="BKMK_ScheduledJob"></a>Travaux planifiés et intégration du Planificateur de tâches
-Vous pouvez désormais planifier des travaux Windows PowerShell en arrière-plan, puis les gérer dans Windows PowerShell et dans le Planificateur de tâches.
+Vous pouvez maintenant planifier des travaux Windows PowerShell en arrière-plan, puis les gérer dans Windows PowerShell et dans le Planificateur de tâches.
 
 Les travaux planifiés Windows PowerShell sont des tâches hybrides qui regroupent les avantages des travaux Windows PowerShell en arrière-plan et des tâches du Planificateur de tâches.
 
@@ -685,12 +685,12 @@ Windows PowerShell 3.0 étend aux ordinateurs distants les fonctionnalités de 
 Pour plus d’informations, consultez les rubriques d’aide relatives aux applets de commande [Get-Module](https://technet.microsoft.com/en-us/library/2cccd4c4-9a21-4c77-b691-984ee57242e1) et [Import-Module](https://technet.microsoft.com/en-us/library/af616c24-e122-4098-930e-1e3ea2080ade).
 
 ### <a name="BKMK_TAB"></a>Saisie semi-automatique par tabulation améliorée
-La saisie semi-automatique par le biais de la touche Tab dans la console Windows PowerShell permet désormais de terminer les noms d’applets de commande, de paramètres, de valeurs de paramètre, d’énumérations, de types .NET Framework, d’objets COM, de répertoires cachés, et bien plus. La fonctionnalité de saisie semi-automatique par tabulation a été entièrement réécrite. Elle repose à présent sur un nouvel analyseur et une nouvelle arborescence de syntaxe abstraite qui prennent en charge davantage de scénarios, y compris les arborescences d'analyse en mémoire et la saisie semi-automatique par tabulation en milieu de ligne.
+La saisie semi-automatique par le biais de la touche Tab dans la console Windows PowerShell permet maintenant de terminer les noms d’applets de commande, de paramètres, de valeurs de paramètre, d’énumérations, de types .NET Framework, d’objets COM, de répertoires cachés, et bien plus. La fonctionnalité de saisie semi-automatique par tabulation a été entièrement réécrite. Elle repose à présent sur un nouvel analyseur et une nouvelle arborescence de syntaxe abstraite qui prennent en charge davantage de scénarios, y compris les arborescences d'analyse en mémoire et la saisie semi-automatique par tabulation en milieu de ligne.
 
 ### <a name="BKMK_AutoLoad"></a>Chargement automatique des modules
-L’applet de commande [Get-Command](https://technet.microsoft.com/en-us/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) obtient désormais l’ensemble des applets de commande et des fonctions de tous les modules installés sur l’ordinateur, même si un module n’est pas importé dans la session active.
+L’applet de commande [Get-Command](https://technet.microsoft.com/en-us/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) obtient maintenant l’ensemble des applets de commande et des fonctions de tous les modules installés sur l’ordinateur, même si un module n’est pas importé dans la session active.
 
-Quand vous obtenez l'applet de commande dont vous avez besoin, vous pouvez l'utiliser immédiatement sans importer de modules. Les modules Windows PowerShell sont désormais importés automatiquement quand vous utilisez une applet de commande dans le module. Vous n'avez plus besoin de rechercher le module et de l'importer pour utiliser ses applets de commande.
+Quand vous obtenez l'applet de commande dont vous avez besoin, vous pouvez l'utiliser immédiatement sans importer de modules. Les modules Windows PowerShell sont maintenant importés automatiquement quand vous utilisez une applet de commande dans le module. Vous n'avez plus besoin de rechercher le module et de l'importer pour utiliser ses applets de commande.
 
 Pour déclencher l’importation automatique des modules, utilisez l’applet de commande dans une commande, puis exécutez **Get-Command** pour une applet de commande sans caractères génériques ou [Get-Help](https://technet.microsoft.com/en-us/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) pour une applet de commande avec caractères génériques.
 
@@ -699,7 +699,7 @@ Pour activer, désactiver et configurer l’importation automatique de modules, 
 Pour plus d’informations, voir [about_Modules [v4]](https://technet.microsoft.com/en-us/library/94f57429-a539-4aee-bb0d-205cd7e801f9), [about_Preference_Variables [v4]](https://technet.microsoft.com/en-us/library/31344314-be29-4286-b039-afa5460cbe8b) et les rubriques d’aide relatives aux applets de commande [Get-Command](https://technet.microsoft.com/en-us/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) et [Import-Module](https://technet.microsoft.com/en-us/library/af616c24-e122-4098-930e-1e3ea2080ade).
 
 ### <a name="BKMK_MOD"></a>Améliorations apportées aux fonctionnalités des modules
-Dans Windows PowerShell 3.0, les modules prennent désormais en charge des fonctionnalités avancées, notamment les nouvelles fonctionnalités suivantes.
+À partir de Windows PowerShell 3.0, les modules prennent en charge des fonctionnalités avancées, notamment les nouvelles fonctionnalités suivantes.
 
 1.  Journalisation des modules individuels (LogPipelineExecutionDetails) et nouveau paramètre de stratégie de groupe « Activer l'enregistrement des modules ».
 
@@ -725,7 +725,7 @@ Vous n'avez plus besoin d'importer tous les modules pour découvrir les commande
 La nouvelle applet de commande [Show-Command](https://technet.microsoft.com/en-us/library/65bba50b-91a8-49d5-80a2-a30fc684ba41) est conçue spécialement pour les débutants. Vous pouvez rechercher des commandes dans une fenêtre. Vous pouvez afficher toutes les commandes ou les filtrer par module, importer un module en cliquant sur un bouton, utiliser des zones de texte et des listes déroulantes pour construire une commande valide, puis copier ou exécuter la commande sans jamais quitter la fenêtre.
 
 ### <a name="BKMK_LOG"></a>Prise en charge améliorée de la journalisation, du diagnostic et de la stratégie de groupe
-Windows PowerShell 3.0 améliore la prise en charge de la journalisation et du traçage pour les commandes et les modules. Il prend également en charge les journaux de suivi d’événements pour Windows (ETW), une propriété **LogPipelineExecutionDetails** modifiable des modules, ainsi que le paramètre de stratégie de groupe « Activer l’enregistrement des modules ». Vous pouvez désormais obtenir les valeurs de paramètres à partir des détails du journal en affichant les propriétés du journal.
+Windows PowerShell 3.0 améliore la prise en charge de la journalisation et du traçage pour les commandes et les modules. Il prend également en charge les journaux de suivi d’événements pour Windows (ETW), une propriété **LogPipelineExecutionDetails** modifiable des modules, ainsi que le paramètre de stratégie de groupe « Activer l’enregistrement des modules ». Vous pouvez maintenant obtenir les valeurs de paramètres à partir des détails du journal en affichant les propriétés du journal.
 
 ### <a name="BKMK_OUT"></a>Améliorations apportées à la mise en forme et à la sortie
 Les améliorations apportées à la mise en forme et à la sortie permettent d’accroître la productivité de tous les utilisateurs de Windows PowerShell. Parmi ces améliorations, citons la redirection de la sortie de tous les flux, une applet de commande Update-Type améliorée qui ajoute dynamiquement des types sans les fichiers Format.ps1xml, le retour automatique à la ligne de la sortie, les propriétés de mise en forme par défaut des objets personnalisés, le type **PSCustomObject**, la mise en forme améliorée des objets WMI et des objets hétérogènes, ainsi que la prise en charge de la découverte des surcharges de méthode.
