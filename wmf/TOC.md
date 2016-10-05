@@ -5,7 +5,7 @@
 ### [Améliorations apportées à la Configuration d’état souhaité (DSC)](5.1/DSC-improvements.md)
 ### [Améliorations de la console PowerShell](5.1/console-improvements.md)
 ### [Améliorations du moteur PowerShell](5.1/engine-improvements.md)
-### [Améliorations de la gestion des packages](5/1/package-management-improvements.md)
+### [Améliorations de la gestion des packages](5.1/package-management-improvements.md)
 ### [Bogues corrigés dans WMF 5.1](5.1/bugfixes.md)
 ## [Installer et configurer](5.1/install-configure.md)
 ## [Problèmes connus](5.1/known-issues.md)
@@ -34,8 +34,8 @@
 ##### [Aide à la prise en charge de la configuration DSC](5.0/dsc_confighelp.md)
 ##### [Améliorations liées à la création à l’aide de PowerShell ISE](5.0/dsc_authoring.md)
 ##### [Autorisation des ressources en double identiques dans une configuration](5.0/dsc_identicalduplicate.md)
-##### [Le mot clé Import-DscResource prend en charge le paramètre -moduleversion](5.0/dsc_importdscresource.md)
-##### [Prise en charge WOW64 pour le mot clé Configuration](5.0/dsc_wow64.md)
+##### [Le mot clé Import-DscResource prend en charge le paramètre -ModuleVersion](5.0/dsc_importdscresource.md)
+##### [Prise en charge WOW64 pour le mot clé Configuration](5.0/dsc_wow64.md)
 #### [Ressources]()
 ##### [Ressources DSC basées sur une classe](5.0/dsc_classbasedresource.md)
 ##### [Débogage de script de ressources DSC](5.0/dsc_resourcedebugging.md)
@@ -46,7 +46,7 @@
 ##### [Configurer un nœud avec plusieurs fragments de configuration](5.0/dsc_partialconfig.md)
 ###### [Prise en charge du mode d’actualisation mixte](5.0/dsc_partialconfig_mixedmode.md)
 ##### [Configurer le moteur DSC avec un nouvel attribut](5.0/dsc_metaconfiguration.md)
-##### [Informations détaillées sur l’état du gestionnaire de configuration local](5.0/dsc_lcmstate.md)
+##### [Informations détaillées sur l’état du Gestionnaire de configuration local](5.0/dsc_lcmstate.md)
 ##### [Les fréquences pour RefreshMode et ConfigurationMode ne doivent pas nécessairement être des multiples l’une de l’autre](5.0/dsc_freqnomultiple.md)
 ##### [Valeur supplémentaire pour la propriété RefreshMode](5.0/dsc_refreshmode.md)
 #### [Applets de commande]()
@@ -56,16 +56,16 @@
 ##### [Remettre le document de configuration sans l’appliquer](5.0/dsc_publishconfig.md)
 ##### [Supprimer des documents DSC](5.0/dsc_removeconfigdoc.md)
 ##### [État unifié et cohérent et représentation de l’état](5.0/dsc_statestatus.md)
-##### [L’applet de commande Set-DscLocalConfigurationManager prend en charge le paramètre -force](5.0/dsc_setdsclcm.md)
+##### [L’applet de commande Set-DscLocalConfigurationManager prend en charge le paramètre -Force](5.0/dsc_setdsclcm.md)
 #### [Mode par extraction]()
 ##### [Extraction à la demande des configurations DSC](5.0/dsc_updateconfig.md)
 ##### [Séparation des ID de nœud et de configuration](5.0/dsc_nodeid.md)
-##### [Séparation des dépôts de configuration, de ressources et de rapports](5.0/dsc_repository.md)
+##### [Séparation des référentiels de configuration, de ressources et de rapports](5.0/dsc_repository.md)
 ##### [Fournir un rapport sur l’état de la configuration à l’emplacement central](5.0/dsc_reporting.md)
 ### [Auditer l’utilisation de PowerShell à l’aide de la transcription et de la journalisation](5.0/audit_overview.md)
 #### [Options de transcription améliorées](5.0/audit_transcript.md)
 #### [Traçage et journalisation de script](5.0/audit_script.md)
-#### [Applets de commande CMS (Cryptographic Message Syntax)](5.0/audit_cms.md)\
+#### [Applets de commande CMS (Cryptographic Message Syntax, syntaxe de message de chiffrement)](5.0/audit_cms.md)
 ### [Découverte, installation et inventaire des logiciels avec PackageManagement](5.0/oneget_overview.md)
 #### [Applets de commande PackageManagement](5.0/oneget_cmdlets.md)
 ### [Découverte, installation et inventaire des modules PowerShell avec PowerShellGet](5.0/psget_module_overview.md)
@@ -75,7 +75,7 @@
 #### [Applets de commande PowerShellGet pour la gestion des modules](5.0/psget_modulecmdlets.md)
 ### [Découverte, installation et gestion des scripts PowerShell avec PowerShellGet](5.0/psget_script_overview.md)
 #### [Applets de commande PowerShellGet pour la gestion des scripts](5.0/psget_scriptcmdlets.md)
-### [Applets de commande nouvelles et mises à jour d’après les commentaires de la communauté ](5.0/feedback_cmdlets.md)
+### [Applets de commande nouvelles et mises à jour d’après les commentaires de la communauté](5.0/feedback_cmdlets.md)
 #### [Liens symboliques avec les applets de commande Item](5.0/feedback_symbolic.md)
 #### [Applets de commande d’archive](5.0/feedback_archive.md)
 #### [Applets de commande de Presse-papiers](5.0/feedback_clipboard.md)
@@ -94,6 +94,6 @@
 ### [Journalisation de l’inventaire logiciel](5.0/sil_overview.md)
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

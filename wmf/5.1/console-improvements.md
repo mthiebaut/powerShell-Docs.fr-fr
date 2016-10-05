@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.technology: WMF
 translationtype: Human Translation
-ms.sourcegitcommit: 57049ff138604b0e13c8fd949ae14da05cb03a4b
-ms.openlocfilehash: 221b8095c15a810c032bd93aafe8ec886af233d9
+ms.sourcegitcommit: 749c1ca8bc617014dffacecce7d14a55adc38036
+ms.openlocfilehash: 2a17fdd4092adf734398f38bec915d53c1b3e566
 
 ---
 
@@ -18,7 +18,7 @@ ms.openlocfilehash: 221b8095c15a810c032bd93aafe8ec886af233d9
 
 ## Améliorations de la console PowerShell
 
-Les modifications suivantes ont été apportées à Powershell.exe dans WMF 5.1 pour améliorer l’expérience de la console :
+Les modifications suivantes ont été apportées à powershell.exe dans WMF 5.1 pour améliorer l’expérience de la console :
 
 ###Prise en charge de VT100
 
@@ -49,14 +49,14 @@ Ajout de la prise en charge du mode vi dans [PSReadline](https://github.com/lzyb
 
 ### Stdin redirigé avec entrée interactive 
 
-Dans les versions antérieures, démarrer PowerShell avec `powershell -File -` était nécessaire quand stdin était redirigé et que vous souhaitiez entrer des commandes de manière interactive.
+Dans les versions antérieures, vous deviez démarrer PowerShell avec `powershell -File -` quand stdin était redirigé et que vous souhaitiez entrer des commandes de manière interactive.
 
-Avec WMF 5.1, cette option difficile à découvrir n’est plus nécessaire. Vous pouvez démarrer powershell sans option, par exemple `powershell`.
+Avec WMF 5.1, cette option difficile à découvrir n’est plus nécessaire. Vous pouvez démarrer PowerShell sans option, par exemple `powershell`.
 
-Notez qu’à l’heure actuelle PSReadline ne prend pas en charge stdin redirigé, et que l’expérience de modification de ligne de commande intégrée avec stdin redirigé est très limitée (par exemple, les touches de direction ne fonctionnent pas).  Une version ultérieure de PSReadline doit résoudre ce problème.   
+Notez que PSReadline ne prend pas en charge stdin redirigé et que l’expérience de modification de ligne de commande intégrée avec stdin redirigé est très limitée (par exemple, les touches de direction ne fonctionnent pas). Une version ultérieure de PSReadline doit résoudre ce problème.   
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

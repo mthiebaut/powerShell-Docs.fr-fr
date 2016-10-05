@@ -1,7 +1,7 @@
 ---
 title: WinRMSecurityRedirect
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: powershell,applet de commande
 description: 
 ms.topic: article
 author: eslesar
@@ -122,6 +122,6 @@ Pour plus d’informations sur les risques de vol des informations d’identific
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

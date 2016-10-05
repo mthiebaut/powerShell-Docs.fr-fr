@@ -10,6 +10,6 @@ Nous avons amélioré le langage PowerShell pour la définition des classes et d
 -   Débogage de types à l’aide du langage PowerShell
 -   Génération et gestion des exceptions à l’aide de mécanismes formels et au niveau approprié
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

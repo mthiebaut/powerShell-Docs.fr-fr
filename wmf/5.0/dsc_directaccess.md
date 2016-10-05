@@ -7,6 +7,6 @@ Pour plus d’informations, consultez [Appel direct de méthodes de ressources D
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

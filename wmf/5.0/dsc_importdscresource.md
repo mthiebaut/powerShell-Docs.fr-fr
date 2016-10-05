@@ -20,6 +20,6 @@ Avant cela, la seule façon de spécifier la version du module lors du chargemen
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

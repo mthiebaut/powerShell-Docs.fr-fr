@@ -49,6 +49,6 @@ Avec WMF 5.1, cette option difficile à découvrir n’est plus nécessaire. Vo
 Notez qu’à l’heure actuelle PSReadline ne prend pas en charge stdin redirigé, et que l’expérience de modification de ligne de commande intégrée avec stdin redirigé est très limitée (par exemple, les touches de direction ne fonctionnent pas).  Une version ultérieure de PSReadline doit résoudre ce problème.   
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

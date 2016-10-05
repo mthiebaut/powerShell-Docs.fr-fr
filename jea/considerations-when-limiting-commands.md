@@ -4,7 +4,7 @@ manager: dongill
 ms.topic: article
 author: jpjofre
 ms.prod: powershell
-keywords: powershell,cmdlet,jea
+keywords: powershell,applet de commande,jea
 ms.date: 2016-06-22
 title: "éléments à prendre en considération lors de la limitation des commandes"
 ms.technology: powershell
@@ -25,6 +25,6 @@ Faites très attention quand vous exposez des commandes telles que `Copy-Item` 
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

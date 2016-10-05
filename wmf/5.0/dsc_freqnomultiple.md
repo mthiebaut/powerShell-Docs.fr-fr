@@ -4,6 +4,6 @@ Dans la version précédente de DSC, le gestionnaire de configuration local trai
 
 Pour plus d’informations, consultez [Configuration du Gestionnaire de configuration local](https://msdn.microsoft.com/powershell/dsc/metaconfig).
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

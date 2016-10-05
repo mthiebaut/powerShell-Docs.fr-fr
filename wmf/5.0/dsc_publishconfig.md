@@ -4,6 +4,6 @@ L’applet de commande [Publish-DscConfiguration](https://technet.microsoft.com/
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

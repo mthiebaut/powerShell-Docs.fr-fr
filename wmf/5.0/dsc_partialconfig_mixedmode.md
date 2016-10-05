@@ -4,6 +4,6 @@ Quand vous utilisez des configurations partielles, vous pouvez maintenant défin
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

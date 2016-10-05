@@ -1,7 +1,7 @@
 ---
 title: "Nouveautés de PowerShell 5.0 ISE"
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: powershell,applet de commande
 description: 
 ms.topic: article
 author: jpjofre
@@ -236,6 +236,6 @@ Pour plus d’informations sur l’utilisation de Windows PowerShell ISE dans Wi
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

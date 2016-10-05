@@ -226,6 +226,6 @@ Vous trouverez un exemple complet dans le [module xWebAdministration](https://po
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

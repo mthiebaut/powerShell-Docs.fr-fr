@@ -42,7 +42,7 @@ WindowsOptionalFeature [string] #ResourceName
 
 |  Propriété  |  Description   | 
 |---|---| 
-| Name| Indique le nom des fonctionnalités que vous souhaitez voir activées ou désactivées.| 
+| Nom| Indique le nom des fonctionnalités que vous souhaitez voir activées ou désactivées.| 
 | Ensure| Spécifie si les fonctionnalités sont activées. Pour vous assurer que les fonctionnalités sont activées, affectez la valeur « Present » à cette propriété. Pour vous assurer que les fonctionnalités sont désactivées, affectez la valeur « Absent ».|
 | Source| Non implémentée.|
 | NoWindowsUpdateCheck| Indique si DISM contacte Windows Update (WU) lors de la recherche des fichiers sources pour activer les fonctionnalités. Si la valeur est $true, DISM ne contacte pas Windows Update.|
@@ -57,6 +57,6 @@ WindowsOptionalFeature [string] #ResourceName
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 
