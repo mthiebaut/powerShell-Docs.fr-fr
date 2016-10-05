@@ -12,6 +12,6 @@ Voici une liste des problèmes connus avec l’installation côte à côte dans 
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

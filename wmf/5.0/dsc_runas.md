@@ -4,6 +4,6 @@ WMF 5.0 inclut la prise en charge de l’exécution de **n’importe quelle** r
 
 Pour plus d’informations, consultez [Exécution de DSC avec les informations d’identification de l’utilisateur](https://msdn.microsoft.com/powershell/dsc/runasuser).
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

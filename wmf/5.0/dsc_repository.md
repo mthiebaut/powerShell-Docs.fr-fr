@@ -4,6 +4,6 @@ Dans cette version, vous avez toute la flexibilité nécessaire pour extraire et
 
 Pour plus d’informations, consultez [Configuration d’un client collecteur à l’aide de l’ID de configuration](https://msdn.microsoft.com/powershell/dsc/pullclientconfigid) ou [Configuration d’un client collecteur à l’aide du nom de configuration](https://msdn.microsoft.com/powershell/dsc/pullclientconfignames).
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

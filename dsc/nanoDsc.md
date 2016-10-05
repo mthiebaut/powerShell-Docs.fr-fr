@@ -133,6 +133,6 @@ En raison des ensembles limités d’API Windows et de bibliothèques CLR dispon
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

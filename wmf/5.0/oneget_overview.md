@@ -10,6 +10,6 @@ PackageManagement (également appelé OneGet) constitue une nouvelle manière de
 Pour plus d’informations, consultez http://oneget.org/.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

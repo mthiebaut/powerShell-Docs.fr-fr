@@ -49,6 +49,6 @@ Les rubriques suivantes expliquent comment configurer les clients et les serveur
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

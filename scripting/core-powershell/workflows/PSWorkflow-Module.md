@@ -1,7 +1,7 @@
 ---
 title: Module PSWorkflow
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: powershell,applet de commande
 description: 
 ms.topic: article
 author: jpjofre
@@ -50,6 +50,6 @@ Cette section contient les rubriques d’aide relatives au module **PSWorkflow**
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

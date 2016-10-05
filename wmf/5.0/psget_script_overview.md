@@ -68,6 +68,6 @@ Syntaxe des applets de commande de partage de script :
 ```
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 
