@@ -10,6 +10,6 @@ Créer des configurations DSC dans Windows PowerShell ISE est beaucoup plus faci
 **Remarque :** Vous devez avoir une chaîne vide pour les valeurs de propriétés de ressources pour pouvoir utiliser Ctrl+Espace pour répertorier les options. Une pression sur la touche **Tab** permet de parcourir les options.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

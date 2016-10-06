@@ -81,6 +81,6 @@ Pour afficher les paramètres actuels du Gestionnaire de configuration local, ut
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

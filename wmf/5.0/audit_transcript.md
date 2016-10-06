@@ -7,6 +7,6 @@ Outre l’extension de la transcription, la fonctionnalité de transcription pro
 Vous pouvez configurer les options de transcription (notamment activer une transcription à l’échelle du système) avec le paramètre stratégie de groupe **Activer la transcription PowerShell** (Modèles d’administration -> Composants Windows -> Windows PowerShell).
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

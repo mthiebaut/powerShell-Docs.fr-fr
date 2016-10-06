@@ -42,7 +42,7 @@ WindowsFeatureSet [string] #ResourceName
 
 |  Propriété  |  Description   | 
 |---|---| 
-| Name| Nom des rôles ou fonctionnalités dont vous voulez garantir l’ajout ou la suppression. Il s’agit du même nom que celui de la propriété **Name** de l’applet de commande [Get-WindowsFeature](https://technet.microsoft.com/en-us/library/jj205469.aspx), et non du nom d’affichage des rôles ou des fonctionnalité.| 
+| Nom| Nom des rôles ou fonctionnalités dont vous voulez garantir l’ajout ou la suppression. Il s’agit du même nom que celui de la propriété **Name** de l’applet de commande [Get-WindowsFeature](https://technet.microsoft.com/en-us/library/jj205469.aspx), et non du nom d’affichage des rôles ou des fonctionnalité.| 
 | Credential| Informations d’identification à utiliser pour ajouter ou supprimer les rôles ou les fonctionnalités.| 
 | Ensure| Indique si les rôles ou fonctionnalités sont ajoutés. Pour vous assurer que les rôles ou fonctionnalités sont ajoutés, affectez la valeur « Present » à cette propriété. Pour vous assurer que les rôles ou fonctionnalités sont supprimés, affectez la valeur « Absent ».| 
 | IncludeAllSubFeature| Affectez la valeur **$true** à cette propriété pour inclure toutes les sous-fonctionnalités requises avec la fonctionnalité que vous spécifiez avec la propriété **Name**.| 
@@ -74,6 +74,6 @@ configuration FeatureSetTest
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

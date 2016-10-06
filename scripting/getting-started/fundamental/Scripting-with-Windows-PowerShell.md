@@ -1,7 +1,7 @@
 ---
 title: "Écriture de scripts avec Windows PowerShell"
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: powershell,applet de commande
 description: 
 ms.topic: article
 author: jpjofre
@@ -32,6 +32,6 @@ Windows PowerShell intègre les fonctionnalités suivantes :
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

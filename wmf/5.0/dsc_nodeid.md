@@ -14,6 +14,6 @@ Pour plus d’informations, consultez [Configuration d’un client collecteur à
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

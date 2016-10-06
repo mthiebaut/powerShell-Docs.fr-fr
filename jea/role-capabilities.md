@@ -4,7 +4,7 @@ manager: dongill
 ms.topic: article
 author: jpjofre
 ms.prod: powershell
-keywords: powershell,cmdlet,jea
+keywords: powershell,applet de commande,jea
 ms.date: 2016-06-22
 title: "capacités de rôle"
 ms.technology: powershell
@@ -145,6 +145,6 @@ Pour être chargés automatiquement, les modules PowerShell doivent se trouver s
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

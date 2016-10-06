@@ -19,6 +19,6 @@ Dans cette version, nous avons résolu les problèmes connus suivants de WMF 5.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

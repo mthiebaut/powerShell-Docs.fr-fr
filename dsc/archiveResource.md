@@ -41,7 +41,7 @@ Archive [string] #ResourceName
 | Path| Spécifie le chemin source du fichier d’archive.| 
 | __Somme de contrôle__| Définit le type à utiliser pour déterminer si deux fichiers sont identiques. Si __Checksum__ n’est pas spécifié, seul le nom du fichier ou du répertoire est utilisé pour la comparaison. Les valeurs valides sont les suivantes : SHA-1, SHA-256, SHA-512, createdDate, modifiedDate et none (valeur par défaut). Si vous spécifiez __Checksum__ sans __Validate__, la configuration échoue.| 
 | Ensure| Détermine s’il faut vérifier que le contenu de l’archive se trouve à la __Destination__ donnée. Définissez cette propriété sur __Present__ pour vous assurer que le contenu se trouve à l’emplacement donné. Définissez la propriété sur __Absent__ pour vous assurer que le contenu ne se trouve pas à l’emplacement donné. La valeur par défaut est __Present__.| 
-| DependsOn | Indique que la configuration d’une autre ressource doit être effectuée avant celle de cette ressource. Par exemple, si l’ID du bloc de script de configuration de ressource que vous voulez exécuter en premier est ResourceName et son type est __ResourceType__, la syntaxe de cette propriété est `DependsOn = "[ResourceType]ResourceName"`.| 
+| DependsOn | Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si l’ID du bloc de script de configuration de ressource que vous voulez exécuter en premier est ResourceName et son type est __ResourceType__, la syntaxe de cette propriété est `DependsOn = "[ResourceType]ResourceName"`.| 
 | Validate| Utilise la propriété Checksum pour déterminer si l’archive correspond à la signature. Si vous spécifiez Checksum sans Validate, la configuration échoue. Si vous spécifiez Validate sans Checksum, une somme de contrôle SHA-256 est utilisée par défaut.| 
 | Force| Certaines opérations de fichier (par exemple, le remplacement d’un fichier ou la suppression d’un répertoire non vide) entraînent une erreur. La propriété Force permet d’ignorer ces erreurs. La valeur par défaut est False.| 
 
@@ -60,6 +60,6 @@ Archive ArchiveExample {
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

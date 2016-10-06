@@ -11,6 +11,6 @@ Aucune de ces données n’est envoyée à Microsoft dans le cadre du fonctionne
 Pour plus d’informations et pour obtenir de la documentation sur les applets de commande de journalisation de l’inventaire logiciel, consultez les ressources en ligne de Windows Server 2012 R2 à l’adresse <http://technet.microsoft.com/library/dn383584.aspx>.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

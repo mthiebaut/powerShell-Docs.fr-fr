@@ -85,6 +85,6 @@ Dans WMF 5.1, vous pouvez maintenant utiliser des comptes virtuels sur Windows 
 Les comptes virtuels restent non pris en charge quand JEA est utilisé sur Windows 7.
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

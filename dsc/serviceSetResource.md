@@ -42,7 +42,7 @@ Service [string] #ResourceName
 
 |  Propriété  |  Description   | 
 |---|---| 
-| Name| Indique les noms des services. Notez qu’ils peuvent être différents des noms d’affichages. Vous pouvez obtenir une liste des services et leur état actuel avec l’applet de commande [Get-Service](https://technet.microsoft.com/en-us/library/hh849804.aspx).|
+| Nom| Indique les noms des services. Notez qu’ils peuvent être différents des noms d’affichages. Vous pouvez obtenir une liste des services et leur état actuel avec l’applet de commande [Get-Service](https://technet.microsoft.com/en-us/library/hh849804.aspx).|
 | StartupType| Indique le type de démarrage du service. Les valeurs autorisées pour cette propriété sont : **Automatic**, **Disabled** et **Manual**|  
 | BuiltInAccount| Indique le compte de connexion à utiliser pour les services. Les valeurs autorisées pour cette propriété sont : **LocalService**, **LocalSystem** et **NetworkService**.| 
 | State| Indique l’état que vous voulez assurer pour les services : **Arrêté** ou **En cours d’exécution**.| 
@@ -76,6 +76,6 @@ configuration ServiceSetTest
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

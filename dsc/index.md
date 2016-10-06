@@ -1,5 +1,5 @@
 # Fichier de test des index pour la publication ouverte
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

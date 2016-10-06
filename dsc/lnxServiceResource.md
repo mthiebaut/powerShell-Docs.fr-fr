@@ -34,7 +34,7 @@ nxService <string> #ResourceName
 ## Propriétés
 |  Propriété |  Description | 
 |---|---|
-| Name| Nom du service/démon à configurer.| 
+| Nom| Nom du service/démon à configurer.| 
 | Controller| Type de contrôleur de service à utiliser lors de la configuration du service.| 
 | Enabled| Indique si le service s’exécute au démarrage du système.| 
 | State| Indique si le service est en cours d’exécution. Définissez cette propriété sur « Stopped » pour vous assurer que le service n’est pas en cours d’exécution. Définissez cette propriété sur « Running » pour vous assurer que le service est en cours d’exécution.| 
@@ -67,6 +67,6 @@ Controller = "systemd"
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

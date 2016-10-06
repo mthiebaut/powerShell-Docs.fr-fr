@@ -9,6 +9,6 @@ JEA vous permet de créer des points de terminaison contraints spécialement con
 2. Le point de terminaison est verrouillé.  Cela signifie que PowerShell s’exécute en mode sans langage.  Seuls des commandes, scripts et exécutables spécifiques sont visibles par l’utilisateur.
 3. Des ensembles de capacités différents sont présentés aux utilisateurs qui se connectent en fonction de l’appartenance au groupe.  Vous pouvez fournir différentes capacités à différents rôles sur le même point de terminaison.
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

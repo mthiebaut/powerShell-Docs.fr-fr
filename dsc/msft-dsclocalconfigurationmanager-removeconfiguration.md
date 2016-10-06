@@ -33,7 +33,7 @@ Paramètres
 *Stage* \[in\]  
 Spécifie le document de configuration à supprimer. Les valeurs suivantes sont valides :
 
-|Valeur |Description |
+|Value |Description |
 |:--- |:---|
 |**1** | Document de configuration **Current** (current.mof). |
 |**2** | Document de configuration **Pending** (pending.mof).  |
@@ -73,6 +73,6 @@ Il s’agit d’une méthode statique.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

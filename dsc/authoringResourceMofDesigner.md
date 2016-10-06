@@ -190,6 +190,6 @@ L’outil Concepteur de ressources expose une applet de commande supplémentaire
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

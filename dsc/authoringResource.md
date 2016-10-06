@@ -32,6 +32,6 @@ Une ressource DSC est un module Windows PowerShell. Le module contient à la fo
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

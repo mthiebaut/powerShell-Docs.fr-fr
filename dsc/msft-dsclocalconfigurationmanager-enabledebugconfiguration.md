@@ -62,6 +62,6 @@ Il s’agit d’une méthode statique.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

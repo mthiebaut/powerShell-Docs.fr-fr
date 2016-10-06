@@ -9,17 +9,17 @@ manager: dongill
 ms.prod: powershell
 ms.technology: WMF
 translationtype: Human Translation
-ms.sourcegitcommit: 0a53817d6af625822d9183d2a0d5bc7bf4d2b264
-ms.openlocfilehash: 058d18deeb3d4926970ea25a157f92ad14836e4b
+ms.sourcegitcommit: c88163b5a7d8805d0dea82d321796d8f41d17bb8
+ms.openlocfilehash: 26a325dc7a18ba167ddc56ca226fce3eded79f52
 
 ---
 
 # Installer et configurer WMF 5.1 (préversion) #
 
 ## Installer .NET 4.6
-Vous devez installer le .NET Framework 4.6 pour utiliser WMF 5.1. Cette opération est nécessaire pour activer les nouvelles fonctionnalités de signature de catalogue, ce qui a un impact sur plusieurs aspects du chargement des modules et des scripts dans WMF 5.1. 
+Vous devez installer .NET Framework 4.6 pour utiliser WMF 5.1. Cette opération est nécessaire pour activer les nouvelles fonctionnalités de signature de catalogue, ce qui a un impact sur plusieurs aspects du chargement des modules et des scripts dans WMF 5.1. 
 
-Le [.NET Framework 4.6 est disponible dans l’article de la Base de connaissances 3045560](https://support.microsoft.com/en-us/kb/3045560). Des instructions d’installation sont disponibles à l’emplacement du téléchargement.
+[.NET Framework 4.6 est disponible dans l’article de la Base de connaissances 3045560](https://support.microsoft.com/en-us/kb/3045560). Des instructions d’installation sont disponibles à l’emplacement du téléchargement.
 
 > **Remarque :** Le fait que le programme d’installation de WMF 5.1 Preview ne détecte pas l’absence de .NET 4.6 est un problème connu : il vous sera donc possible d’installer WMF 5.1 Preview avant d’installer .NET 4.6. Nos tests ont montré que vous pouvez installer .NET 4.6 après avoir installé WMF 5.1 Preview. La version finale de WMF 5.1 vérifiera correctement cette configuration requise avant l’installation. 
 
@@ -60,13 +60,13 @@ L’installation de WMF 5.1 sur Windows Server 2008 SP1 ou Windows 7 SP1 néc
 - Service Pack le plus récent
 - [WMF 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=40855)
 - WMF 5.1 nécessite [Microsoft .NET Framework 4.6](https://support.microsoft.com/en-us/kb/3045560). Vous pouvez installer Microsoft .NET Framework 4.6 en suivant les instructions à l’emplacement du téléchargement.
-- Mise à jour de sécurité pour [la signature du code SHA-2](https://technet.microsoft.com/en-us/library/security/3033929). Ceci est nécessaire pour utiliser les nouvelles applets de commande PowerShell pour les fichiers catalogue Windows. 
+- Mise à jour de sécurité pour [la signature du code SHA-2](https://technet.microsoft.com/en-us/library/security/3033929). Cela est nécessaire pour utiliser les nouvelles applets de commande PowerShell pour les fichiers catalogue Windows. 
 
-> **Dépendance de WinRM** : la Configuration de l’état souhaité (DSC) Windows PowerShell dépend de WinRM. WinRM n’est pas activé par défaut sur Windows Server 2008 R2 et Windows 7. Pour activer WinRM, dans une session Windows PowerShell avec élévation des privilèges, exécutez `Set-WSManQuickConfig`.
-
-
+> **Dépendance de WinRM** : la Configuration de l’état souhaité (DSC) Windows PowerShell dépend de WinRM. WinRM n’est pas activé par défaut sur Windows Server 2008 R2 et Windows 7. Exécutez `Set-WSManQuickConfig` dans une session Windows PowerShell avec élévation des privilèges pour activer WinRM.
 
 
-<!--HONumber=Jul16_HO5-->
+
+
+<!--HONumber=Aug16_HO3-->
 
 

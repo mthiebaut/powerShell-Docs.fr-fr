@@ -4,7 +4,7 @@ manager: dongill
 ms.topic: article
 author: jpjofre
 ms.prod: powershell
-keywords: powershell,cmdlet,jea
+keywords: powershell,applet de commande,jea
 ms.date: 2016-06-22
 title: "création de rapports sur JEA"
 ms.technology: powershell
@@ -62,6 +62,6 @@ Get-PSSessionCapability -Username 'CONTOSO\OperatorUser' -ConfigurationName JEAD
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

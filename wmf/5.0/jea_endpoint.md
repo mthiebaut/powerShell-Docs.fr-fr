@@ -138,6 +138,6 @@ Enter-PSSession -ConfigurationName Maintenance -ComputerName localhost
 ```
 Une fois connecté à la session JEA, vous êtes limité à l’exécution des commandes figurant dans la liste approuvée dans les capacités de rôle auxquelles vous avez accès. Si vous essayez d’exécuter une commande non autorisée pour votre rôle, une erreur se produit.
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 
