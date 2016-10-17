@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: c05b48d2c903e59f8b65c4c8c289d2dd5c23c3f9
+ms.sourcegitcommit: e4385f0ed482b97e8794cde968de549902cc358e
+ms.openlocfilehash: 2283e797275f426b624119bd1191e58080780c09
 
 ---
 
@@ -184,12 +184,12 @@ Les messages concernant DSC pour Linux sont écrits dans les fichiers journaux s
 
 |Fichier journal|Répertoire|Description|
 |---|---|---|
-|omiserver.log|/opt/omi/var/log/|Messages relatifs au fonctionnement du serveur CIM d’OMI.|
-|dsc.log|/opt/omi/var/log/|Messages relatifs au fonctionnement de LCM (Local Configuration Manager) et à l’utilisation des ressources DSC.|
+|omiserver.log|/var/opt/omi/log|Messages relatifs au fonctionnement du serveur CIM d’OMI.|
+|dsc.log|/var/opt/omi/log|Messages relatifs au fonctionnement de LCM (Local Configuration Manager) et à l’utilisation des ressources DSC.|
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

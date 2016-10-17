@@ -1,7 +1,7 @@
 ---
 title: Ressources GroupSet dans DSC
 ms.date: 2016-05-16
-keywords: powershell, DSC, built-in, resource
+keywords: "powershell, DSC, intégrée, ressource"
 description: "Fournit un mécanisme permettant de gérer des groupes locaux sur le nœud cible."
 ms.topic: article
 author: eslesar
@@ -44,7 +44,7 @@ Group [string] #ResourceName
 | Ensure| Indique si les groupes existent. Affectez la valeur « Absent » à cette propriété pour vous assurer que les groupes n’existent pas. La valeur « Present » (valeur par défaut) permet de s’assurer que les groupes existent.| 
 | Members| Utilisez cette propriété pour remplacer l’appartenance à un groupe actuelle avec les membres spécifiés. La valeur de cette propriété est un tableau de chaînes au format *domaine*\\*nom d’utilisateur*. Si vous définissez cette propriété dans une configuration, n’utilisez pas les propriétés **MembersToExclude** et **MembersToInclude**. Cela générera une erreur.| 
 | MembersToInclude| Utilisez cette propriété pour ajouter des membres aux appartenances existantes du groupe. La valeur de cette propriété est un tableau de chaînes au format *domaine*\\*nom d’utilisateur*. Si vous définissez cette propriété dans une configuration, n’utilisez pas la propriété **Members**. Cela générera une erreur.| 
-| DependsOn | Indique que la configuration d’une autre ressource doit être effectuée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’ID __ResourceName__ et le type __ResourceType__, utilisez la syntaxe suivante pour cette propriété : DependsOn = "[ResourceType]ResourceName"| 
+| DependsOn | Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’ID __ResourceName__ et le type __ResourceType__, utilisez la syntaxe suivante pour cette propriété : DependsOn = "[ResourceType]ResourceName"| 
 
 ## Exemple 1
 
@@ -86,6 +86,6 @@ GroupSetTest -ConfigurationData $cd
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

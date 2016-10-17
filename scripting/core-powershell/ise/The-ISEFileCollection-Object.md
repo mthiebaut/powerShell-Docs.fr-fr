@@ -1,12 +1,19 @@
 ---
 title: Objet ISEFileCollection
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: powershell,applet de commande
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: 0f86a427-ea38-4bce-85f8-06c98d30d508
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: c334a38d6686be45101f4569f38411e9703c8fea
+
 ---
+
 # Objet ISEFileCollection
   L’objet **ISEFileCollection** est une collection d’objets **ISEFile**. La collection $psISE.CurrentPowerShellTab.Files en est un exemple.
 
@@ -17,8 +24,7 @@ ms.assetid: 0f86a427-ea38-4bce-85f8-06c98d30d508
 
  Crée et retourne un nouveau fichier sans titre, et l’ajoute à la collection. La propriété **IsUntitled** du nouveau fichier est **$true**.
 
- **\[fullPath\]** : chaîne facultative
- Chemin d’accès complet du fichier. Une exception est générée si vous incluez le paramètre **fullPath** et un chemin d’accès relatif, ou si vous utilisez un nom de fichier au lieu du chemin d’accès complet.
+ **\[fullPath\]** : chaîne facultative. Chemin entièrement spécifié du fichier. Une exception est générée si vous incluez le paramètre **fullPath** et un chemin d’accès relatif, ou si vous utilisez un nom de fichier au lieu du chemin d’accès complet.
 
 ```
 # Adds a new untitled file to the collection of files in the current PowerShell tab.
@@ -34,11 +40,9 @@ $psISE.CurrentPowerShellTab.Files.Add("$pshome\Examples\profile.ps1")
 
  Supprime un fichier spécifié dans l’onglet PowerShell actuel.
 
- **File** : chaîne
- Fichier ISEFile que vous souhaitez supprimer de la collection. Si le fichier n’a pas été enregistré, cette méthode lève une exception. Utilisez le paramètre booléen **Force** pour forcer la suppression d’un fichier non enregistré.
+ **File** : chaîne. Fichier ISEFile que vous souhaitez supprimer de la collection. Si le fichier n’a pas été enregistré, cette méthode lève une exception. Utilisez le paramètre booléen **Force** pour forcer la suppression d’un fichier non enregistré.
 
- **\[Force\]** : valeur booléenne facultative
- Si la valeur est **$true**, le fichier peut être supprimé même s’il n’a pas été enregistré depuis sa dernière utilisation. La valeur par défaut est **$false**.
+ **\[Force\]** : valeur booléenne facultative. Si la valeur est **$true**, le fichier peut être supprimé même s’il n’a pas été enregistré depuis sa dernière utilisation. La valeur par défaut est **$false**.
 
 ```
 # Removes the first opened file from the file collection associated with the current PowerShell tab.
@@ -51,13 +55,12 @@ $firstfile = $psISE.CurrentPowerShellTab.Files[0]
 $psISE.CurrentPowerShellTab.Files.Remove($firstfile, $true)
 ```
 
-### SetSelectedFile\ (selectedFile \)
+### SetSelectedFile\( selectedFile \)
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Sélectionne le fichier spécifié par le paramètre **selectedFile**.
 
- **selectedFile** : Microsoft.PowerShell.Host.ISE.ISEFile
- Fichier ISEFile que vous souhaitez sélectionner.
+ **selectedFile** : Microsoft.PowerShell.Host.ISE.ISEFile. Fichier ISEFile que vous souhaitez sélectionner.
 
 ```
 
@@ -76,6 +79,7 @@ $psISE.CurrentPowerShellTab.Files.SetSelectedFile($firstfile)
   
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO3-->
 
 

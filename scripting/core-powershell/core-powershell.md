@@ -1,32 +1,31 @@
 ---
 title: core powershell
 ms.date: 2016-05-11
-keywords: powershell,cmdlet
+keywords: powershell,applet de commande
 description: 
 ms.topic: article
 author: jpjofre
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: cd6e130d9f6f70449084d25eb386a3c0a2b84737
-ms.openlocfilehash: 4c22e1a2543690a971836813cb32ace74ababb4a
+ms.sourcegitcommit: ab536969fac8ded0e540da3eb138448b4f444f67
+ms.openlocfilehash: c8f97c3b565e0718b38a8e62a2b9cb9558451fc5
 
 ---
 
-#  PowerShell Core
+#  Commandes PowerShell courantes
 Cette section contient tous les documents de référence et guides détaillés sur PowerShell.  
 Contenu de cette section :
--  [Guide des modules PowerShell Core](core-modules.md)
--  [PowerShell Integrated Scripting Environment (ISE) - Guide](ise-guide.md)
--  [Guide de la fenêtre de console PowerShell](console-guide.md)
--  [Guide de la gestion à distance PowerShell](Running-Remote-Commands.md)
--  [Guide des workflows PowerShell](workflows-guide.md)
--  [Guide d’Accès Web PowerShell](web-access.md)
+-  [Modules courants PowerShell](core-modules.md)
+-  [Environnement d’écriture de scripts intégré (ISE) de PowerShell](ise-guide.md)
+-  [Fenêtre de console PowerShell](console-guide.md)
+-  [Gestion à distance de PowerShell](Running-Remote-Commands.md)
+-  [Workflows PowerShell](workflows-guide.md)
+-  [Accès web PowerShell](web-access.md)
 -  [Glossaire PowerShell](../Windows-PowerShell-Glossary.md)
 
 
 
-
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,16 +1,23 @@
 ---
 title: Fournisseurs Windows PowerShell Core
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: powershell,applet de commande
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: 6e24bf6d-4c70-4edf-956a-1e8e4779ba10
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: f6b1ca1a3253c941c76826c6644079a14f19ddcf
+
 ---
+
 # Fournisseurs Windows PowerShell Core
 Cette section contient des rubriques d’aide qui décrivent les fournisseurs Windows PowerShell dans le module **Microsoft.PowerShell.Core**.
 
-Les fournisseurs Windows PowerShell sont des programmes .NET qui vous permettent d'accéder aux données d'une banque de données spécialisée pour les afficher et les gérer facilement dans Windows PowerShell. Les données exposées par un fournisseur sont affichées dans un lecteur à la manière d'un lecteur système de fichiers. Pour plus d’informations, consultez [about_Providers [v4]](https://technet.microsoft.com/en-us/library/2d9b3f32-be78-49ad-a547-21231c803242).
+Les fournisseurs Windows PowerShell sont des programmes .NET qui vous permettent d'accéder aux données d'une banque de données spécialisée pour les afficher et les gérer facilement dans Windows PowerShell. Les données exposées par un fournisseur sont affichées dans un lecteur à la manière d'un lecteur système de fichiers. Pour plus d’informations, voir [about_Providers [v4]](https://technet.microsoft.com/en-us/library/2d9b3f32-be78-49ad-a547-21231c803242).
 
 |Fournisseur|Description|
 |------------|---------------|
@@ -29,6 +36,7 @@ Les fournisseurs Windows PowerShell sont des programmes .NET qui vous permetten
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO3-->
 
 

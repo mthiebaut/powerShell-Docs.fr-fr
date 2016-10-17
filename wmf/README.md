@@ -62,6 +62,6 @@ Pour en savoir plus sur les diverses améliorations apportées à PowerShell et 
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

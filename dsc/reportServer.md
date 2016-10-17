@@ -96,8 +96,7 @@ PullClientConfig
 
 ## Obtention des données du rapport
 
-Les rapports envoyés au serveur collecteur sont entrés dans une base de données sur le serveur. Les rapports sont disponibles par le biais d’appels au service web. Pour récupérer des rapports pour un nœud spécifique, 
-envoyez une demande HTTP au service web de rapports sous la forme suivante : `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentID = MyNodeAgentId)/Reports` où `MyNodeAgentId` est l’ID de l’agent du nœud pour lequel vous voulez obtenir des rapports. Vous pouvez obtenir l’ID de l’agent d’un nœud en appelant [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx) sur ce nœud.
+Les rapports envoyés au serveur collecteur sont entrés dans une base de données sur le serveur. Les rapports sont disponibles par le biais d’appels au service web. Pour récupérer des rapports pour un nœud spécifique, envoyez une demande HTTP au service web de rapports sous la forme suivante : `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentID = MyNodeAgentId)/Reports` où `MyNodeAgentId` est l’ID de l’agent du nœud pour lequel vous voulez obtenir des rapports. Vous pouvez obtenir l’ID de l’agent d’un nœud en appelant [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx) sur ce nœud.
 
 Les rapports sont retournés sous forme de tableau d’objets JSON.
 
@@ -221,8 +220,7 @@ ConfigurationName : Sample_ArchiveFirewall
 InDesiredState    : True
 ```
 
-Notez que ces exemples ont pour but de vous donner une idée de ce que vous pouvez faire avec les données du rapport. Pour une présentation de l’utilisation de JSON dans PowerShell, consultez
-[Playing with JSON and PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).
+Notez que ces exemples ont pour but de vous donner une idée de ce que vous pouvez faire avec les données du rapport. Pour obtenir une présentation de l’utilisation de JSON dans PowerShell, voir [Playing with JSON and PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).
 
 ## Voir aussi
 - [Configuration du Gestionnaire de configuration local](metaConfig.md)
@@ -232,6 +230,6 @@ Notez que ces exemples ont pour but de vous donner une idée de ce que vous pouv
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,3 +1,18 @@
+---
+title: "guide de l’ISE"
+ms.date: 2016-05-11
+keywords: powershell,applet de commande
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 053a4fd734b1e86c5f8ca22c8197ce4e80b6fce6
+
+---
+
 # Guide de l’ISE
 
 -  [Comment créer un onglet PowerShell dans Windows PowerShell ISE](ise/How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md)
@@ -29,6 +44,8 @@
 -  [Référence de modèle objet Windows PowerShell ISE](ise/Windows-PowerShell-ISE-Object-Model-Reference.md)
 
 
-<!--HONumber=May16_HO2-->
+
+
+<!--HONumber=Aug16_HO3-->
 
 

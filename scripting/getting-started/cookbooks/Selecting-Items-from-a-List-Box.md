@@ -1,12 +1,19 @@
 ---
-title: Sélection d'éléments dans une zone de liste
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+title: "Sélection d'éléments dans une zone de liste"
+ms.date: 2016-05-11
+keywords: powershell,applet de commande
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: 327c7cc5-21d0-4ace-b151-aa1491d1d3c2
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 7e8fd05cfedd500c51f2d7e4f6adbb7d1f27cb00
+
 ---
+
 # Sélection d'éléments dans une zone de liste
 Dans Windows PowerShell 3.0 et versions ultérieures, vous pouvez créer une boîte de dialogue qui permet aux utilisateurs de sélectionner des éléments dans un contrôle de zone de liste.
 
@@ -137,7 +144,7 @@ $listBox.Height = 80
 Dans la section suivante, spécifiez les valeurs présentées aux utilisateurs dans la zone de liste.
 
 > [!NOTE]
-> La zone de liste créée par ce script n'autorise qu'une seule sélection. Pour créer un contrôle de zone de liste autorisant plusieurs sélections, spécifiez une valeur pour la propriété **SelectionMode**, comme suit : `$listBox.SelectionMode = "MultiExtended"`. Pour plus d’informations, consultez [Zones de liste à sélection multiple](Multiple-selection-List-Boxes.md)..
+> La zone de liste créée par ce script n'autorise qu'une seule sélection. Pour créer un contrôle de zone de liste autorisant plusieurs sélections, spécifiez une valeur pour la propriété **SelectionMode**, comme suit : `$listBox.SelectionMode = "MultiExtended"`. Pour plus d’informations, voir [Zones de liste à sélection multiple](Multiple-selection-List-Boxes.md).
 
 ```
 [void] $listBox.Items.Add("atl-dc-001")
@@ -175,10 +182,11 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 ## Voir aussi
 [Hey Scripting Guy:  Why don’t these PowerShell GUI examples work?](http://go.microsoft.com/fwlink/?LinkId=506644)
 [GitHub: Dave Wyatt’s WinFormsExampleUpdates](https://github.com/dlwyatt/WinFormsExampleUpdates)
-[Astuce Windows PowerShell de la semaine : sélection d’éléments dans une zone de liste](http://technet.microsoft.com/library/ff730949.aspx)
+[Astuce Windows PowerShell de la semaine : sélection d’éléments dans une zone de liste](http://technet.microsoft.com/library/ff730949.aspx)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO3-->
 
 

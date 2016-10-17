@@ -1,6 +1,21 @@
-#  Guide des modules PowerShell Core
+---
+title: modules de base
+ms.date: 2016-05-11
+keywords: powershell,applet de commande
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: ab536969fac8ded0e540da3eb138448b4f444f67
+ms.openlocfilehash: 3bee547fc53d1164d3cbf17f033083d4f1099ae7
 
-Les modules PowerShell Core fournissent les fonctionnalités de base de PowerShell.
+---
+
+#  Modules courants PowerShell
+
+Les modules courants PowerShell fournissent les fonctionnalités de base de PowerShell.
 Ces modules couvrent essentiellement les domaines suivants :
 
 -  [Module Archive](core-modules/Microsoft.PowerShell.Archive-Module.md)
@@ -21,6 +36,7 @@ Ces modules couvrent essentiellement les domaines suivants :
 -  [Module Utility](core-modules/Microsoft.PowerShell.Utility-Module.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO3-->
 
 

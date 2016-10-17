@@ -1,12 +1,19 @@
 ---
 title: Objet PowerShellTabCollection
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+ms.date: 2016-05-11
+keywords: powershell,applet de commande
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: 81f4bf4a-83bf-415e-8378-1703792fbb58
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 4456b1e165130fd52249ffdbd7c22ff591061a8e
+
 ---
+
 # Objet PowerShellTabCollection
   L’objet collection **PowerShellTab** est une collection d’objets **PowerShellTab**. Chaque objet **PowerShellTab** fonctionne comme un environnement d’exécution distinct. Il s’agit d’une instance de la classe Microsoft.PowerShell.Host.ISE.PowerShellTabs. L’objet **$psISE.PowerShellTabs** en est un exemple.
 
@@ -61,12 +68,13 @@ $psISE.PowerShellTabs.SelectedPowerShellTab=$oldtab
 ## Voir aussi
  [Objet PowerShellTab](The-PowerShellTab-Object.md) 
  [Modèle objet de script Windows PowerShell ISE](../ise/The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
- [Référence de modèle objet Windows PowerShell ISE](../ise/Windows-PowerShell-ISE-Object-Model-Reference.md) 
+ [Informations de référence sur le modèle objet Windows PowerShell ISE](../ise/Windows-PowerShell-ISE-Object-Model-Reference.md) 
  [Hiérarchie du modèle objet ISE](../ise/The-ISE-Object-Model-Hierarchy.md)
 
   
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,32 +1,33 @@
 ---
-title: Utilisation de Windows PowerShell ISE
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+title: "Utilisation de Windows PowerShell ISE"
+ms.date: 2016-05-11
+keywords: powershell,applet de commande
+description: 
 ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
 ms.assetid: 64fb5f37-90a8-4b89-9fc8-c6b8fcc0c7d0
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 117a7a3e031ffde70ebcbcb5d180c2d7b822ac76
+
 ---
+
 # Utilisation de Windows PowerShell ISE
 Les rubriques de ce document décrivent comment utiliser les fonctionnalités de l’environnement d’écriture de scripts intégré de Windows PowerShell® (ISE) pour être plus productif.
 
-[Comment utiliser la saisie semi-automatique via la touche Tab dans les volets Script et Commande](How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md)
-Indique les étapes d’exécution de la saisie semi-automatique via la touche Tab dans les volets Script et Console.
+[Comment utiliser la saisie semi-automatique via la touche Tab dans les volets Script et Commande](How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md) Indique les étapes d’exécution de la saisie semi-automatique via la touche Tab dans les volets Script et Console.
 
-[Comment créer un onglet PowerShell dans Windows PowerShell ISE](How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md)
-Indique les étapes de création d’un onglet Windows PowerShell dans Windows PowerShell ISE.
+[Comment créer un onglet PowerShell dans Windows PowerShell ISE](How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md) Indique les étapes de création d’un onglet Windows PowerShell dans Windows PowerShell ISE.
 
-[Comment utiliser le volet Console dans Windows PowerShell ISE](How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md)
-Indique les étapes d’écriture et d’exécution de commandes dans le volet Console.
+[Comment utiliser le volet Console dans Windows PowerShell ISE](How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md) Indique les étapes d’écriture et d’exécution de commandes dans le volet Console.
 
-[Comment écrire et exécuter des scripts dans Windows PowerShell ISE](How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md)
-Indique les étapes d’écriture et d’exécution de scripts dans le volet de script.
+[Comment écrire et exécuter des scripts dans Windows PowerShell ISE](How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md) Indique les étapes d’écriture et d’exécution de scripts dans le volet Script.
 
-[Comment déboguer des scripts dans Windows PowerShell ISE](How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md)
-Indique les étapes de débogage de scripts dans Windows PowerShell ISE.
+[Comment déboguer des scripts dans Windows PowerShell ISE](How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md) Indique les étapes de débogage de scripts dans Windows PowerShell ISE.
 
-[Comment utiliser des profils dans Windows PowerShell ISE](How-to-Use-Profiles-in-Windows-PowerShell-ISE.md)
-Fournit des informations sur les étapes de création et d’utilisation de profils dans Windows PowerShell ISE.
+[Comment utiliser des profils dans Windows PowerShell ISE](How-to-Use-Profiles-in-Windows-PowerShell-ISE.md) Fournit des informations sur les étapes de création et d’utilisation de profils dans Windows PowerShell ISE.
 
 ## Voir aussi
 [Découverte de Windows PowerShell ISE](../../getting-started/fundamental/Exploring-the-Windows-PowerShell-ISE.md)
@@ -35,6 +36,7 @@ Fournit des informations sur les étapes de création et d’utilisation de prof
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO3-->
 
 
