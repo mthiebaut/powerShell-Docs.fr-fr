@@ -1,5 +1,5 @@
 ---
-title: Obtention d'informations sur les commandes
+title: Obtention d&quot;informations sur les commandes
 ms.date: 2016-05-11
 keywords: powershell,applet de commande
 description: 
@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 56f8e5b4-d97c-4e59-abbe-bf13e464eb0d
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: c60f0f63b0d64c82a3ae0716743087ee2b8740c0
+ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
+ms.openlocfilehash: 57ccd656e0b869da8aadece97e9bb871764c3f70
 
 ---
 
@@ -27,7 +27,7 @@ Cmdlet          Add-Member                      Add-Member [-MemberType] <PS...
 ...
 ```
 
-Cette sortie ressemble beaucoup à la sortie Help de Cmd.exe, à savoir un résumé des commandes internes sous forme de tableau. Dans l’extrait de la sortie de la commande **Get-Command** ci-dessus, chaque commande est de type Cmdlet (« applet de commande »). Une applet de commande est un type de commande fondamental dans Windows PowerShell qui correspond approximativement aux commandes **dir** et **cd** de Cmd.exe et aux commandes intégrées dans les interpréteurs de commandes UNIX tels que BASH.
+Cette sortie ressemble beaucoup à la sortie Help de Cmd.exe, à savoir un résumé des commandes internes sous forme de tableau. Dans l’extrait de la sortie de la commande **Get-Command** ci-dessus, chaque commande est de type Cmdlet (« applet de commande »). Une applet de commande est un type de commande fondamental de Windows PowerShell, qui correspond à peu près aux commandes **dir** et **cd** de Cmd.exe, et aux commandes intégrées dans les interpréteurs de commandes UNIX tels que BASH.
 
 Dans la sortie de la commande **Get-Command**, toutes les définitions se terminent par des points de suspension (...). Ceci indique que PowerShell ne peut pas afficher tout le contenu dans l’espace disponible. Quand Windows PowerShell affiche la sortie, il la met en forme en tant que texte et la réorganise pour faire tenir les données dans la fenêtre. Nous aborderons ce sujet plus loin dans la section sur les formateurs.
 
@@ -86,6 +86,6 @@ Get-Command -CommandType Script
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

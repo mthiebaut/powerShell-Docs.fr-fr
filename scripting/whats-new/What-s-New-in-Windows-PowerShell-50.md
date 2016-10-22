@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 1476722e-947e-425d-a86c-50037488dc6e
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 666590df32157a7477d385961dd5665094275868
+ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
+ms.openlocfilehash: 9e012dd8218a256e4236c2263babefd29ecdb016
 
 ---
 
@@ -38,11 +38,11 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
     -   [Get-DscResource](http://technet.microsoft.com/library/dn521625.aspx) : plus rapide (en particulier dans ISE).
 
-    -   [Start-DscConfiguration](http://technet.microsoft.com/library/dn521623.aspx) : un nouveau paramètre, -UseExisting, réapplique la dernière configuration appliquée.
+    -   [Start-DscConfiguration](http://technet.microsoft.com/library/dn521623.aspx) : a un nouveau paramètre, -UseExisting, qui réapplique la dernière configuration appliquée.
 
     -   [Start-DscConfiguration](http://technet.microsoft.com/library/dn521623.aspx) : le paramètre Force a été corrigé.
 
-    -   [Get-DscLocalConfigurationManager](http://technet.microsoft.com/library/dn407378.aspx): affiche davantage d’informations utiles sur l’état du moteur.
+    -   [Get-DscLocalConfigurationManager](http://technet.microsoft.com/library/dn407378.aspx) : affiche davantage d’informations utiles sur l’état du moteur.
 
     -   [Test-DscConfiguration](http://technet.microsoft.com/library/dn407382.aspx) : renvoie maintenant le nom de l’ordinateur avec la valeur True ou False.
 
@@ -170,9 +170,9 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
 -   Les applets de commande New-Item, Remove-Item et Get-ChildItem ont été améliorées pour prendre en charge la création et la gestion des [liens symboliques](http://en.wikipedia.org/wiki/Symbolic_link). Le paramètre **-ItemType** de l’applet de commande New-Item accepte une nouvelle valeur, **SymbolicLink**. Vous pouvez maintenant créer des liens symboliques en une seule ligne, en exécutant l’applet de commande New-Item.
 
--   L’applet de commande Get-ChildItem dispose également d’un nouveau paramètre, -Depth, que vous pouvez utiliser avec le paramètre Recurse pour limiter la récursivité. Par exemple, la commande Get-ChildItem -Recurse -Depth 2 retourne des résultats à partir du dossier actif, de tous les dossiers enfants de ce dossier, et de tous les sous-dossiers des dossiers enfants.
+-   L’applet de commande Get-ChildItem dispose également d’un nouveau paramètre, -Depth, que vous pouvez utiliser avec le paramètre -Recurse pour limiter la récursivité. Par exemple, la commande Get-ChildItem -Recurse -Depth 2 retourne des résultats à partir du dossier actif, de tous les dossiers enfants de ce dossier et de tous les sous-dossiers des dossiers enfants.
 
--   L’applet de commande Copy-Item permet maintenant de copier des fichiers ou dossiers d’une session Windows PowerShell vers une autre. Vous pouvez ainsi copier des fichiers vers des sessions connectées à des ordinateurs distants (notamment les ordinateurs exécutant [Windows Nano Server](http://blogs.technet.com/b/windowsserver/archive/2015/04/08/microsoft-announces-nano-server-for-modern-apps-and-cloud.aspx), qui n’ont donc pas d’autre interface). Pour copier des fichiers, spécifiez des ID PSSession comme valeurs pour les nouveaux paramètres -ToSession et -FromSession, en ajoutant -Path et -Destination pour spécifier respectivement le chemin d’origine et la destination. Par exemple, Copy-Item -Path c:\\myFile.txt -ToSession $s -Destination d:\\destinationFolder.
+-   L’applet de commande Copy-Item permet maintenant de copier des fichiers ou dossiers d’une session Windows PowerShell vers une autre. Vous pouvez ainsi copier des fichiers vers des sessions connectées à des ordinateurs distants (notamment les ordinateurs exécutant [Windows Nano Server](http://blogs.technet.com/b/windowsserver/archive/2015/04/08/microsoft-announces-nano-server-for-modern-apps-and-cloud.aspx), qui n’ont donc pas d’autre interface). Pour copier des fichiers, spécifiez des ID PSSession comme valeurs pour les nouveaux paramètres -FromSession et -ToSession, en ajoutant -Path et -Destination pour spécifier respectivement le chemin d’origine et la destination. Par exemple, Copy-Item -Path c:\\myFile.txt -ToSession $s -Destination d:\\destinationFolder.
 
 -   La transcription Windows PowerShell a été améliorée pour s’appliquer non seulement à l’hôte de la console (**powershell.exe**), mais aussi à toutes les applications d’hébergement telles que Windows PowerShell ISE. Vous pouvez configurer des options de transcription (notamment la transcription à l’échelle du système) en activant le paramètre de stratégie de groupe **Activer la transcription PowerShell** accessible dans Modèles d’administration/Composants Windows/Windows PowerShell.
 
@@ -212,7 +212,7 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
 -   Les résultats de l’applet de commande Get-Command affichent maintenant une colonne Version suite à l’ajout d’une nouvelle propriété, Version, à la classe CommandInfo. L’applet de commande Get-Command affiche les commandes de plusieurs versions du même module. La propriété Version fait également partie des classes dérivées de CmdletInfo:CmdletInfo et d’ApplicationInfo.
 
--   L’applet de commande Get-Command dispose d’un nouveau paramètre, -ShowCommandInfo, qui retourne les informations de ShowCommand en tant que PSObjects. Cette fonctionnalité est particulièrement utile quand l’applet de commande Show-Command est exécutée dans Windows PowerShell ISE à l’aide de la communication à distance Windows PowerShell. Le paramètre -ShowCommandInfo remplace la fonction Get-SerializedCommand du module Microsoft.PowerShell.Utility, mais le script Get-SerializedCommand est toujours disponible pour prendre en charge les scripts de bas niveau.
+-   L’applet de commande Get-Command dispose d’un nouveau paramètre, -ShowCommandInfo, qui retourne les informations de ShowCommand en tant que PSObjects. Cette fonctionnalité est particulièrement utile quand l’applet de commande Show-Command est exécutée dans Windows PowerShell ISE à l’aide de la communication à distance Windows PowerShell. Le paramètre -ShowCommandInfo remplace la fonction Get-SerializedCommand existante du module Microsoft.PowerShell.Utility, mais le script Get-SerializedCommand est toujours disponible pour prendre en charge les scripts de bas niveau.
 
 -   Une nouvelle applet de commande, Get-ItemPropertyValue, permet d’obtenir la valeur d’une propriété sans utiliser de notation par points. Par exemple, dans les versions plus anciennes de Windows PowerShell, vous pouvez exécuter la commande suivante pour obtenir la valeur de la propriété de base de l’application de la clé de Registre PowerShellEngine : **(Get-ItemProperty -Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine -Name ApplicationBase).ApplicationBase**. À partir de Windows PowerShell 5.0, vous pouvez exécuter **Get-ItemPropertyValue -Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine -Name ApplicationBase**.
 
@@ -367,7 +367,7 @@ Windows PowerShell 4.0 intègre les nouvelles fonctionnalités suivantes.
 
 -   La valeur de **$PSVersionTable.PSVersion** a été mise à jour. Il s’agit maintenant de 4.0.
 
--   Le comportement de l’opérateur **Where()** a changé. `Collection.Where('property –match name')` n’accepte plus d’expression de chaîne au format `"Property –CompareOperator Value"`. En revanche, l’opérateur **Where()** accepte toujours les expressions de chaîne au format bloc de script.
+-   Le comportement de l’opérateur **Where()** a changé. `Collection.Where('property -match name')` n’accepte plus d’expression de chaîne au format `"Property -CompareOperator Value"`. En revanche, l’opérateur **Where()** accepte toujours les expressions de chaîne au format bloc de script.
 
 ### <a name="BKMK_ise"></a>Nouvelles fonctionnalités de l'environnement d'écriture de scripts intégré (ISE) de Windows PowerShell
 
@@ -433,7 +433,7 @@ Windows PowerShell 4.0 intègre les nouvelles fonctionnalités suivantes.
 
 -   L’applet de commande **Get-Module** affiche maintenant les versions des modules dans une colonne **Version**.
 
--   Remove-Item –Recurse supprime maintenant les éléments des sous-dossiers comme prévu.
+-   Remove-Item -Recurse supprime maintenant les éléments des sous-dossiers comme prévu.
 
 -   La propriété **UserName** a été ajoutée aux objets de sortie **Get-Process**.
 
@@ -441,7 +441,7 @@ Windows PowerShell 4.0 intègre les nouvelles fonctionnalités suivantes.
 
 -   L’applet de commende **Add\-Member** s’applique maintenant aux tables de hachage, même si celles-ci n’ont pas encore été sollicitées.
 
--   L’applet de commande **Select-Object –Expand** n’échoue plus et ne génère plus d’exception si la valeur de la propriété est null ou vide.
+-   L’applet de commande **Select-Object -Expand** n’échoue plus et ne génère plus d’exception si la valeur de la propriété est null ou vide.
 
 -   L’applet de commende **Get-Process** peut maintenant être utilisée dans un pipeline avec d’autres commandes qui obtiennent la propriété **ComputerName** d’objets.
 
@@ -513,7 +513,7 @@ Windows PowerShell 3.0 intègre les nouvelles fonctionnalités suivantes.
 -   [Améliorations apportées à la gestion des caractères spéciaux](#BKMK_CHAR)
 
 ### <a name="BKMK_Workflow"></a>Windows PowerShell Workflow
-Grâce à Windows PowerShell® Workflow, vous bénéficiez de toute la puissance de Windows Workflow Foundation dans Windows PowerShell. Vous pouvez écrire des workflows en XAML ou dans le langage Windows PowerShell, et les exécuter de la même façon qu’une applet de commande. L’applet de commande [Get-Command](https://technet.microsoft.com/en-us/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) obtient les commandes de workflow et l’applet de commande [Get-Help](https://technet.microsoft.com/en-us/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) obtient de l’aide sur les workflows.
+Grâce au workflow Windows PowerShell®, vous bénéficiez de toute la puissance de Windows Workflow Foundation dans Windows PowerShell. Vous pouvez écrire des workflows en XAML ou dans le langage Windows PowerShell, et les exécuter de la même façon qu’une applet de commande. L’applet de commande [Get-Command](https://technet.microsoft.com/en-us/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) obtient les commandes de workflow et l’applet de commande [Get-Help](https://technet.microsoft.com/en-us/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) obtient de l’aide sur les workflows.
 
 Les workflows sont des séquences d'activités de gestion de plusieurs ordinateurs. Ces séquences sont longues, reproductibles, fréquentes, parallèles et redémarrables ; elles peuvent aussi être interrompues et suspendues. Il est possible de reprendre des workflows suite à une interruption accidentelle ou intentionnelle, une indisponibilité du réseau, un redémarrage de Windows ou une panne de courant.
 
@@ -540,7 +540,7 @@ Les avantages de Windows PowerShell Workflow sont les suivants :
 -   **Limitation des workflows et des connexions.** Vous pouvez limiter l'exécution des workflows et les connexions aux nœuds, ce qui permet de prendre en charge des scénarios évolutifs et à haute disponibilité.
 
 ### <a name="BKMK_WebAccess"></a>Windows PowerShell Web Access
-Accès Web Windows PowerShell est une fonctionnalité Windows Server 2012 qui permet aux utilisateurs d’exécuter des commandes et des scripts Windows PowerShell dans une console web. Les appareils qui utilisent la console web ne nécessitent ni Windows PowerShell, ni un logiciel de gestion à distance, ni l’installation d’un plug-in de navigateur. Il suffit de disposer d’une passerelle Accès Web Windows PowerShell correctement configurée et d’un navigateur d’appareil client prenant en charge JavaScript® et acceptant les cookies.
+Accès Web Windows PowerShell® est une fonctionnalité Windows Server 2012 qui permet aux utilisateurs d’exécuter des commandes et des scripts Windows PowerShell dans une console web. Les appareils qui utilisent la console web ne nécessitent ni Windows PowerShell, ni un logiciel de gestion à distance, ni l’installation d’un plug-in de navigateur. Il suffit de disposer d’une passerelle Accès Web Windows PowerShell correctement configurée et d’un navigateur d’appareil client prenant en charge JavaScript® et acceptant les cookies.
 
 Pour plus d’informations, voir [Déployer un Accès Windows PowerShell Web](http://go.microsoft.com/fwlink/p/?LinkID=221050).
 
@@ -759,6 +759,6 @@ Pour améliorer l’interprétation et la gestion des caractères spéciaux dans
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

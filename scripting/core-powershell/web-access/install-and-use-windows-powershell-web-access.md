@@ -8,8 +8,8 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 75e9b6525d74a8bc632b9fe2e64183717f59776f
+ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
+ms.openlocfilehash: fe79ca70ff1f9a3960b79747221a70adc46b7c67
 
 ---
 
@@ -167,7 +167,7 @@ Vous pouvez installer la passerelle Accès Web Windows PowerShell sur un serveur
 
     [Copier](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_374a9c21-4f6e-471e-b957-bb190a594533'); "Copier dans le Presse-papiers.")
 
-        Install-WindowsFeature –Name WindowsPowerShellWebAccess -ComputerName <computer_name> -IncludeManagementTools -Restart
+        Install-WindowsFeature -Name WindowsPowerShellWebAccess -ComputerName <computer_name> -IncludeManagementTools -Restart
 
     <table>
     <colgroup>
@@ -189,7 +189,7 @@ Vous pouvez installer la passerelle Accès Web Windows PowerShell sur un serveur
 
     [Copier](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_d841d509-347e-49d0-bf54-8d1f306bece6'); "Copier dans le Presse-papiers.")
 
-        Install-WindowsFeature –Name WindowsPowerShellWebAccess –VHD <path> -ComputerName <computer_name> -IncludeManagementTools -Restart
+        Install-WindowsFeature -Name WindowsPowerShellWebAccess -VHD <path> -ComputerName <computer_name> -IncludeManagementTools -Restart
 
 3.  Quand l’installation est terminée, vérifiez qu’Accès Web Windows PowerShell a été installé sur les serveurs de destination en exécutant l’applet de commande **Get-WindowsFeature** sur un serveur de destination, dans une console Windows PowerShell ouverte avec des droits d’utilisateur élevés. Vous pouvez également vérifier qu’Accès Web Windows PowerShell a été installé dans la console Gestionnaire de serveur en sélectionnant un serveur de destination dans la page **Tous les serveurs**, puis en affichant la vignette **Rôles et fonctionnalités** du serveur sélectionné. Vous pouvez aussi afficher le fichier Lisez-moi associé à Accès Web Windows PowerShell.
 
@@ -266,7 +266,7 @@ Vous pouvez terminer la configuration de l’application web d’Accès Web Wind
 
     -   PhysicalPath: %*windir*%/Web/PowerShellWebAccess/wwwroot
 
-    <span class="label">Exemple :</span> <span class="code">Install-PswaWebApplication –webApplicationName myWebApp –useTestCertificate</span>
+    <span class="label">Exemple :</span> <span class="code">Install-PswaWebApplication -webApplicationName myWebApp -useTestCertificate</span>
 
     Dans cet exemple, le site web obtenu pour Accès Web Windows PowerShell est https://&lt; *server_name*&gt;/myWebApp.
 
@@ -367,15 +367,15 @@ Pour plus de détails sur les règles d’autorisation et la sécurité d’Acc�
 
     [Copier](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_f9e7959b-75d0-4d63-8f8e-02334a8dd09d'); "Copier dans le Presse-papiers.")
 
-        Add-PswaAuthorizationRule –UserName <domain\user | computer\user> -ComputerName <computer_name> -ConfigurationName <session_configuration_name>
+        Add-PswaAuthorizationRule -UserName <domain\user | computer\user> -ComputerName <computer_name> -ConfigurationName <session_configuration_name>
 
     Cette règle d’autorisation accorde à un utilisateur spécifique l’accès à un ordinateur sur le réseau auquel il a généralement accès, avec l’accès à une configuration de session spécifique ayant comme portée les besoins ordinaires de l’utilisateur en matière de script et d’applet de commande. Dans l’exemple suivant, un utilisateur nommé <span class="code">JSmith</span> dans le domaine <span class="code">Contoso</span> se voit accorder un accès pour gérer l’ordinateur <span class="code">Contoso_214</span> et utiliser une configuration de session nommée <span class="code">NewAdminsOnly</span>.
 
     [Copier](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_ebd5bc5e-ec5d-4955-a86a-63843e480e37'); "Copier dans le Presse-papiers.")
 
-        Add-PswaAuthorizationRule –UserName Contoso\JSmith -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly
+        Add-PswaAuthorizationRule -UserName Contoso\JSmith -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly
 
-4.  Vérifiez que la règle a été créée en exécutant l’applet de commande **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domain\\user | computer\\user&gt; -ComputerName** &lt;nom_ordinateur&gt;. Par exemple, **Test-PswaAuthorizationRule –UserName Contoso\\JSmith –ComputerName Contoso_214**.
+4.  Vérifiez que la règle a été créée en exécutant l’applet de commande **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domain\\user | computer\\user&gt; -ComputerName** &lt;nom_ordinateur&gt;. Par exemple, **Test-PswaAuthorizationRule -UserName Contoso\\JSmith -ComputerName Contoso_214**.
 
 Après avoir configuré une règle d’autorisation, les utilisateurs autorisés peuvent se connecter à la console web et commencer à utiliser Accès Web Windows PowerShell.
 
@@ -601,15 +601,15 @@ Pour plus de détails sur les règles d’autorisation et la sécurité d’Acc�
 
     [Copier](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_4df22c91-f56f-4bb5-91e7-99f9b365ed5d'); "Copier dans le Presse-papiers.")
 
-        Add-PswaAuthorizationRule –UserName <domain\user | computer\user> -ComputerName <computer_name> -ConfigurationName <session_configuration_name>
+        Add-PswaAuthorizationRule -UserName <domain\user | computer\user> -ComputerName <computer_name> -ConfigurationName <session_configuration_name>
 
     Cette règle d’autorisation accorde à un utilisateur spécifique l’accès à un ordinateur sur le réseau auquel il a généralement accès, avec l’accès à une configuration de session spécifique ayant comme portée les besoins ordinaires de l’utilisateur en matière de script et d’applet de commande. Dans l’exemple suivant, un utilisateur nommé <span class="code">JSmith</span> dans le domaine <span class="code">Contoso</span> se voit accorder un accès pour gérer l’ordinateur <span class="code">Contoso_214</span> et utiliser une configuration de session nommée <span class="code">NewAdminsOnly</span>.
 
     [Copier](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_efc3999a-2905-453f-86cd-014b41658ffc'); "Copier dans le Presse-papiers.")
 
-        Add-PswaAuthorizationRule –UserName Contoso\JSmith -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly
+        Add-PswaAuthorizationRule -UserName Contoso\JSmith -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly
 
-4.  Vérifiez que la règle a été créée en exécutant l’applet de commande **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domain\\user | computer\\user&gt; -ComputerName** &lt;nom_ordinateur&gt;. Par exemple, **Test-PswaAuthorizationRule –UserName Contoso\\JSmith –ComputerName Contoso_214**.
+4.  Vérifiez que la règle a été créée en exécutant l’applet de commande **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domain\\user | computer\\user&gt; -ComputerName** &lt;nom_ordinateur&gt;. Par exemple, **Test-PswaAuthorizationRule -UserName Contoso\\JSmith -ComputerName Contoso_214**.
 
 Après avoir configuré une règle d’autorisation, les utilisateurs autorisés peuvent se connecter à la console web et commencer à utiliser Accès Web Windows PowerShell.
 
@@ -713,6 +713,6 @@ Les codes et les scripts développés par un tiers et en rapport à ce site doiv
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

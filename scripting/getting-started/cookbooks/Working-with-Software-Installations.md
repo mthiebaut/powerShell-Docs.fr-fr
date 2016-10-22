@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 51a12fe9-95f6-4ffc-81a5-4fa72a5bada9
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 13fdac5369d70289d7a0b5115a04879f707e47fc
+ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
+ms.openlocfilehash: 4334a1ff099072c2287af299d65caed3f16032fe
 
 ---
 
@@ -103,7 +103,7 @@ Uninstall  Registry      HKEY_LOCAL_MACHINE\SOFTWARE\Micr...
 > [!NOTE]
 > Le lecteur **HKLM:** étant mappé à la racine de **HKEY_LOCAL_MACHINE**, nous utilisons ce lecteur dans le chemin d’accès à la clé Uninstall. Au lieu d’utiliser **HKLM:**, nous pourrions recourir à **HKLM** ou à ** HKEY_LOCAL_MACHINE** pour spécifier le chemin d’accès au Registre. L'avantage d'utiliser un lecteur de Registre existant, c'est que nous pouvons utiliser la saisie semi-automatique par tabulation pour remplir les noms des clés, ce qui nous évite de les taper.
 
-Nous disposons désormais d'un lecteur nommé « Uninstall » qui peut servir à rechercher rapidement et facilement des installations d'applications. Nous pouvons trouver le nombre d’applications installées en comptant le nombre de clés de Registre dans le lecteur Windows PowerShell Uninstall: :
+Nous disposons désormais d'un lecteur nommé « Uninstall » qui peut servir à rechercher rapidement et facilement des installations d'applications. Nous pouvons trouver le nombre d’applications installées en comptant le nombre de clés de Registre dans le lecteur Windows PowerShell Uninstall :
 
 ```
 PS> (Get-ChildItem -Path Uninstall:).Count
@@ -117,7 +117,7 @@ $UninstallableApplications = Get-ChildItem -Path Uninstall:
 ```
 
 > [!NOTE]
-> Nous utilisons ici un nom de variable long par souci de clarté. Dans la réalité, il est inutile d'utiliser des noms longs. Bien que vous puissiez utiliser la saisie semi-automatique par tabulation pour les noms de variable, vous pouvez également utiliser des noms contenant 1 ou 2 caractères pour aller plus vite. Des noms descriptifs plus longs sont particulièrement utiles quand vous développez du code destiné à être réutilisé.
+> Nous utilisons ici un nom de variable long par souci de clarté. Dans la réalité, il est inutile d'utiliser des noms longs. Bien que vous puissiez utiliser la saisie semi-automatique via la touche Tab pour les noms de variable, vous pouvez également utiliser des noms contenant 1 ou 2 caractères pour aller plus vite. Des noms descriptifs plus longs sont particulièrement utiles quand vous développez du code destiné à être réutilisé.
 
 Pour afficher les valeurs des entrées de Registre dans les clés de Registre sous Uninstall, utilisez la méthode GetValue des clés de Registre. La valeur de la méthode est le nom de l'entrée de Registre.
 
@@ -186,6 +186,6 @@ Pour mettre à niveau une application, vous devez connaître son nom et le chemi
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

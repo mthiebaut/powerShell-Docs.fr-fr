@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 82928f2b-f96a-4ae6-a0d0-6e7b181da308
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: b6189e43fc9579a29d598deb705bb8e4e32e4a4f
+ms.sourcegitcommit: 16608d8b97ec816d77ec7b8ac2438a4d64b55fba
+ms.openlocfilehash: 34fc34fa752e8f67e9bdb015c234da83e80b7328
 
 ---
 
@@ -21,7 +21,7 @@ Windows PowerShell 3.0 est conçu pour offrir une compatibilité descendante av
 
 Pour assurer la compatibilité descendante avec les commandes et programmes hôtes qui sont affectés par ces modifications, les moteurs Windows PowerShell 2.0, Windows PowerShell 3.0 et Windows PowerShell 4.0 sont conçus pour s’exécuter côte à côte. En outre, le moteur Windows PowerShell 2.0 est inclus dans Windows Server 2012 R2, Windows 8.1, Windows 8, Windows Server 2012 et Windows Management Framework 3.0. Le moteur Windows PowerShell 2.0 est destiné à être utilisé uniquement quand un script ou un programme hôte existant ne peut pas s’exécuter parce qu’il n’est pas compatible avec Windows PowerShell 3.0, Windows PowerShell 4.0 ou Microsoft .NET Framework 4. Ces cas sont supposé être rares.
 
-Le moteur Windows PowerShell 2.0 est une fonctionnalité facultative de Windows Server 2012 R2, Windows 8.1, WindowsÂ® 8 et Windows ServerÂ® 2012. Dans les versions antérieures de Windows, quand vous installez Windows Management Framework 3.0, l’installation de Windows PowerShell 3.0 remplace complètement l’installation de Windows PowerShell 2.0 dans le répertoire d’installation de Windows PowerShell. Toutefois, le moteur Windows PowerShell 2.0 est conservé.
+Le moteur Windows PowerShell 2.0 est une fonctionnalité facultative de Windows Server 2012 R2, Windows 8.1, Windows® 8 et Windows Server® 2012. Dans les versions antérieures de Windows, quand vous installez Windows Management Framework 3.0, l’installation de Windows PowerShell 3.0 remplace complètement l’installation de Windows PowerShell 2.0 dans le répertoire d’installation de Windows PowerShell. Toutefois, le moteur Windows PowerShell 2.0 est conservé.
 
 Pour plus d’informations sur le démarrage du moteur Windows PowerShell 2.0, consultez [Démarrage du moteur Windows PowerShell 2.0](Starting-the-Windows-PowerShell-2.0-Engine.md).
 
@@ -87,6 +87,6 @@ Le package Windows Management Framework 3.0 qui installe Windows PowerShell 3.
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

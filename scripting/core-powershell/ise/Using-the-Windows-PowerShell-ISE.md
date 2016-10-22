@@ -9,13 +9,13 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 64fb5f37-90a8-4b89-9fc8-c6b8fcc0c7d0
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 117a7a3e031ffde70ebcbcb5d180c2d7b822ac76
+ms.sourcegitcommit: 16608d8b97ec816d77ec7b8ac2438a4d64b55fba
+ms.openlocfilehash: 78e9875815adfbe18f675023e9d9d0742aca2786
 
 ---
 
 # Utilisation de Windows PowerShell ISE
-Les rubriques de ce document décrivent comment utiliser les fonctionnalités de l’environnement d’écriture de scripts intégré de Windows PowerShell® (ISE) pour être plus productif.
+Les rubriques de ce document décrivent comment utiliser les fonctionnalités de l’environnement d’écriture de scripts intégré (ISE) de Windows PowerShell® pour être plus productif.
 
 [Comment utiliser la saisie semi-automatique via la touche Tab dans les volets Script et Commande](How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md) Indique les étapes d’exécution de la saisie semi-automatique via la touche Tab dans les volets Script et Console.
 
@@ -37,6 +37,6 @@ Les rubriques de ce document décrivent comment utiliser les fonctionnalités de
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO1-->
 
 

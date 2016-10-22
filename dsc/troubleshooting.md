@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 7fb70aba7d4c3c44cc89b5f8c4f6ff5aeb3b14c9
-ms.openlocfilehash: 4830be14b105485c50446f06e9d36491b4c4fe44
+ms.sourcegitcommit: c7b198d6206c57ef663ea5f4c8cef5ab5678a823
+ms.openlocfilehash: d06b330e3a64705e2f86230e8a9e344e85b8d4be
 
 ---
 
@@ -296,7 +296,7 @@ SRV1   5          6/23/2016 4:36:51 PM  Success                                 
 
 ### Obtention des détails des événements DSC
 
-L’`Trace-xDscOperation1 cmdlet returns an object containing a collection of events, their event types, and the message output generated from a particular DSC operation. Typically, when you find a failure in any of the operations using `Get-xDscOperation`, vous suivez cette opération pour déterminer lequel des événements a entraîné un échec.
+L’applet de commande `Trace-xDscOperation1`retourne un objet qui contient une collection d’événements, leur type et la sortie de message générée à partir d’une opération DSC particulière. En règle générale, quand vous trouvez une erreur dans une opération à l’aide de `Get-xDscOperation`, vous tracez l’opération pour déterminer lequel des événements a entraîné un échec.
 
 Utilisez le paramètre `SequenceID` pour obtenir les événements d’une opération spécifique d’un ordinateur spécifique. Par exemple, si vous spécifiez une valeur de 9 pour `SequenceID`, `Trace-xDscOperaion` obtient la trace de la neuvième opération DSC à partir de la dernière opération :
 
@@ -531,7 +531,7 @@ function Test-TargetResource
 } 
 ```
 
-Maintenant, créez une configuration à l’aide de la ressource ci-dessus et appelez-la `TestProviderDebugMode`:
+Maintenant, créez une configuration à l’aide de la ressource ci-dessus et appelez-la `TestProviderDebugMode` :
 
 ```powershell
 Configuration ConfigTestDebugMode
@@ -626,6 +626,6 @@ onlyProperty                            PSComputerName
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO1-->
 
 

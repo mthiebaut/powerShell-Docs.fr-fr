@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: a5f3025ff222d4a27c0da074df9e84d82c51a46f
-ms.openlocfilehash: 7bbfc31fdebdde83ac1784373b51af40b1dc9492
+ms.sourcegitcommit: 8e486891a4e5db20389d6ae65d00c42e1308af35
+ms.openlocfilehash: 4ab20cdcac6f10dc9ecab6d85b38f413e0ade8b0
 
 ---
 
@@ -150,6 +150,8 @@ Une fois l’installation du serveur collecteur terminée, vous placez les modul
 ### Format du package de module de ressources DSC
 Chaque module de ressources doit être compressé et nommé selon le modèle suivant **{Nom du module}_{Version du module}.zip**. Par exemple, un module xWebAdminstration avec une version de module 3.1.2.0 est nommé « xWebAdministration_3.2.1.0.zip ». Chaque version d’un module doit être contenue dans un seul fichier zip. Étant donné que chaque fichier zip ne contient qu’une seule version d’une ressource, le format du module ajouté dans WMF 5.0 qui contient plusieurs versions de module dans un seul répertoire n’est pas pris en charge. Cela signifie qu’avant de créer le package des modules de ressources DSC à utiliser avec le serveur collecteur, vous devez apporter une petite modification à la structure de répertoires. Le format par défaut des modules contenant les ressources DSC dans WMF 5.0 est « {Dossier du module}\{{Version du module}\DscResources\{Dossier des ressources DSC}\' ». Avant de créer les packages pour le serveur collecteur, supprimez simplement le dossier **{Version du module}** pour transformer le chemin en « {Dossier du module}\DscResources\{Dossier des ressources DSC}\' ». Ensuite, compressez le dossier comme décrit ci-dessus, et placez ces fichiers zip dans le dossier **ModulePath**.
 
+Utilisez `new-dscchecksum {module zip file}` pour créer un fichier de somme de contrôle pour le module qui vient d’être ajouté.
+
 ### Format du fichier MOF de configuration 
 Un fichier MOF de configuration doit être associé à un fichier de somme de contrôle pour que le gestionnaire de configuration local sur un nœud cible puisse valider la configuration. Pour créer une somme de contrôle, appelez l’applet de commande [New-DSCCheckSum](https://technet.microsoft.com/en-us/library/dn521622.aspx). L’applet de commande prend un paramètre **Path** qui spécifie le dossier où se trouve la configuration MOF. L’applet de commande crée un fichier de somme de contrôle nommé `ConfigurationMOFName.mof.checksum`, où `ConfigurationMOFName` est le nom du fichier MOF de configuration. S’il existe plusieurs fichiers MOF de configuration dans le dossier spécifié, une somme de contrôle est créée pour chaque configuration du dossier. Placez les fichiers MOF et leurs fichiers de somme de contrôle associés dans le dossier **ConfigurationPath**.
 
@@ -187,6 +189,6 @@ Les rubriques suivantes décrivent la configuration des clients collecteurs en d
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO1-->
 
 

@@ -9,17 +9,17 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 57125436-3d1e-4e7f-b5c4-8f0ecb49d642
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 6cdb6bb5d901c9bc7d2b7f5051e372337bbb69f9
+ms.sourcegitcommit: c40ab96196531d36001e4d94a3821d20612cbfce
+ms.openlocfilehash: 333469a642a4b88442a7d3ca8fa65f5755c69bcc
 
 ---
 
 # Démarrage de Windows PowerShell sur des versions antérieures de Windows
-Cette section explique comment démarrer Windows PowerShell et Windows PowerShell Integrated Scripting Environment (ISE) sur WindowsÂ® 7, Windows ServerÂ® 2008 R2 et Windows Server 2008. Elle explique également comment activer la fonctionnalité facultative pour Windows PowerShell ISE dans Windows PowerShell 2.0 sur Windows ServerÂ® 2008 R2 et Windows Server 2008.
+Cette section explique comment démarrer Windows PowerShell et l’environnement d’écriture de scripts intégré (ISE) de Windows PowerShell sur Windows® 7, Windows Server® 2008 R2 et Windows Server 2008. Elle explique également comment activer la fonctionnalité facultative pour Windows PowerShell ISE dans Windows PowerShell 2.0 sur Windows Server® 2008 R2 et Windows Server® 2008.
 
-Pour installer Windows PowerShell 4.0 sur des systèmes pris en charge, téléchargez et installez [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881). Pour plus d’informations, voir [Installation de Windows Server](Installing-Windows-PowerShell.md).
+Pour installer Windows PowerShell 4.0 sur des systèmes pris en charge, téléchargez et installez [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881). Pour plus d’informations, voir [Installation de Windows PowerShell](Installing-Windows-PowerShell.md).
 
-Pour installer Windows PowerShell 3.0 sur des systèmes pris en charge, téléchargez et installez [Windows Management Framework 3.0](http://go.microsoft.com/fwlink/?LinkID=240290). Pour plus d’informations, voir [Installation de Windows Server](Installing-Windows-PowerShell.md).
+Pour installer Windows PowerShell 3.0 sur des systèmes pris en charge, téléchargez et installez [Windows Management Framework 3.0](http://go.microsoft.com/fwlink/?LinkID=240290). Pour plus d’informations, voir [Installation de Windows PowerShell](Installing-Windows-PowerShell.md).
 
 ## Comment démarrer Windows PowerShell sur des versions antérieures de Windows
 Pour démarrer la version installée de Windows PowerShell 3.0 ou Windows PowerShell 4.0, le cas échéant, utilisez une des méthodes suivantes.
@@ -74,7 +74,7 @@ Utilisez une des méthodes suivantes pour démarrer Windows PowerShell ISE.
 ## Comment activer Windows PowerShell ISE sur des versions antérieures de Windows
 Dans Windows PowerShell 4.0 et Windows PowerShell 3.0, Windows PowerShell ISE est activé par défaut sur toutes les versions de Windows. S’il n’est pas activé, Windows Management Framework 4.0 ou Windows Management Framework 3.0 l’active.
 
-Dans Windows PowerShell 2.0, Windows PowerShell ISE est activé par défaut sur Windows PowerShell 7. Toutefois, sur Windows Server 2008 R2 et Windows Server 2008, c’est une fonctionnalité facultative.
+Dans Windows PowerShell 2.0, Windows PowerShell ISE est activé par défaut sur Windows 7. Toutefois, sur Windows Server 2008 R2 et Windows Server 2008, c’est une fonctionnalité facultative.
 
 Pour activer Windows PowerShell ISE dans Windows PowerShell 2.0 sur Windows Server 2008 R2 ou Windows Server 2008, utilisez la procédure suivante.
 
@@ -89,6 +89,6 @@ Pour activer Windows PowerShell ISE dans Windows PowerShell 2.0 sur Windows Ser
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

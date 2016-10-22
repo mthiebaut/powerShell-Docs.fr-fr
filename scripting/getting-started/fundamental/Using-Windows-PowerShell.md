@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: cf06f1e5-3945-47e4-98be-412f5a1f43fe
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 994e6c89f6fc20b95691f010deb3c48062cef310
+ms.sourcegitcommit: 16608d8b97ec816d77ec7b8ac2438a4d64b55fba
+ms.openlocfilehash: 9563e58d2840c7cc2120b58b041660aaeee12830
 
 ---
 
@@ -37,7 +37,7 @@ Dans cette section, vous allez découvrir Windows PowerShell, comment utiliser W
 ## Technologies connexes
 Windows PowerShell fait partie d’une famille de technologies de script associées qui vous aident à automatiser la gestion à distance d’ordinateurs Windows. Pour plus d'informations sur ces technologies, cliquez sur les liens ci-dessous.
 
--   [Flux de travail Windows PowerShell](http://technet.microsoft.com/library/jj134242.aspx). Introduits dans Windows PowerShell 3.0, Windows PowerShell Workflow permet aux professionnels de l’informatique et aux développeurs de tirer parti des avantages de [Windows Workflow Foundation](http://msdn.microsoft.com/library/ee342461.aspx) avec les fonctionnalités et la simplicité d’automatisation de Windows PowerShell.
+-   [Windows PowerShell Workflow](http://technet.microsoft.com/library/jj134242.aspx). Introduit dans Windows PowerShell 3.0, Windows PowerShell Workflow permet aux professionnels de l’informatique et aux développeurs de tirer parti des avantages de [Windows Workflow Foundation](http://msdn.microsoft.com/library/ee342461.aspx) avec les fonctionnalités et la simplicité d’automatisation de Windows PowerShell.
 
 -   [Accès Web Windows PowerShell](http://technet.microsoft.com/library/hh831611.aspx). Accès Web Windows PowerShell, une fonctionnalité introduite dans Windows Server 2012, joue le rôle de passerelle Windows PowerShell en fournissant une console web Windows PowerShell qui cible un ordinateur distant. Elle permet aux professionnels de l’informatique d’exécuter des commandes et des scripts Windows PowerShell à partir d’une console Windows PowerShell dans un navigateur web, sans nécessiter Windows PowerShell, ni de logiciel de gestion à distance ou d’installation d’un plug-in de navigateur sur le périphérique client.
 
@@ -45,9 +45,9 @@ Windows PowerShell fait partie d’une famille de technologies de script associ�
 
 -   [Prendre en main la configuration d’état souhaité Windows PowerShell](https://technet.microsoft.com/en-us/library/c134aa32-b085-4656-9a89-955d8ff768d0). La configuration d’état souhaité (DSC) Windows PowerShell, introduite dans Windows PowerShell 4.0, est une nouvelle plateforme de gestion dans Windows PowerShell qui permet de déployer et de gérer les données de configuration de services logiciels et l’environnement dans lequel ces services s’exécutent. DSC offre un ensemble d’extensions de langage, de nouvelles applets de commande et de ressources Windows PowerShell que vous pouvez utiliser pour spécifier de façon déclarative comment configurer l’état de votre environnement logiciel.
 
--   [Windows Management Framework 4.0 Preview](http://go.microsoft.com/fwlink/?LinkID=293881) inclut des mises à jour de Windows PowerShell, Windows PowerShell ISE, Windows PowerShell Web Services (extension IIS Management OData), WinRM (Gestion à distance de Windows), WMI (Infrastructure de gestion Windows), le fournisseur WMI du Gestionnaire de serveur, ainsi qu’une nouvelle fonctionnalité pour la version 4.0, la configuration d’état souhaité (DSC) Windows PowerShell. Windows Management Framework 4.0 Preview permet d’installer et d’utiliser ces technologies sur des ordinateurs Windows Server 2012, Windows® 7 SP1 et Windows Server 2008 R2 SP1.
+-   [Windows Management Framework 4.0 Preview](http://go.microsoft.com/fwlink/?LinkID=293881) inclut des mises à jour de Windows PowerShell, Windows PowerShell ISE, Windows PowerShell Web Services (extension IIS Management OData), WinRM (Gestion à distance de Windows), WMI (Infrastructure de gestion Windows), le fournisseur WMI du Gestionnaire de serveur, ainsi qu’une nouvelle fonctionnalité pour la version 4.0, la configuration d’état souhaité (DSC) Windows PowerShell. Windows Management Framework 4.0 Preview vous permet d’installer et d’utiliser ces technologies sur des ordinateurs exécutant Windows Server 2012, Windows® 7 SP1 et Windows Server 2008 R2 SP1.
 
--   [Windows Management Framework 3.0](http://www.microsoft.com/download/details.aspx?id=34595) inclut des mises à jour de Windows PowerShell, Windows PowerShell ISE, Windows PowerShell Web Services (extension IIS Management OData), WinRM (Windows Remote Management), WMI (Infrastructure de gestion Windows) et le fournisseur WMI du Gestionnaire de serveur. Windows Management Framework 3.0 Preview permet d’installer et d’utiliser ces technologies sur des ordinateurs Windows Server 7 SP1, Windows® 2008 SP2 et Windows Server 2008 R2 SP1.
+-   [Windows Management Framework 3.0](http://www.microsoft.com/download/details.aspx?id=34595) inclut des mises à jour de Windows PowerShell, Windows PowerShell ISE, Windows PowerShell Web Services (extension IIS Management OData), WinRM (Windows Remote Management), WMI (Infrastructure de gestion Windows) et le fournisseur WMI du Gestionnaire de serveur. Windows Management Framework 3.0 Preview vous permet d’installer et d’utiliser ces technologies sur des ordinateurs exécutant Windows Server 7 SP1, Windows® 2008 SP2 et Windows Server 2008 R2 SP1.
 
 ## Utilisation de Windows PowerShell
 Pour vous lancer dans l’apprentissage de Windows PowerShell, commencez par consulter les ressources suivantes :
@@ -78,6 +78,6 @@ Les rubriques suivantes décrivent comment obtenir l’aide la plus récente pou
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

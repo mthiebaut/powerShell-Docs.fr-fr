@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 62f916d9-b3a1-484a-bdfb-41f57112c22b
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 6e58c298725254a84819856070b9702340fcf81d
+ms.sourcegitcommit: 16608d8b97ec816d77ec7b8ac2438a4d64b55fba
+ms.openlocfilehash: c378e9f38c6cc9ea94ce07c320d7a42dd3f102b5
 
 ---
 
@@ -24,7 +24,7 @@ Cette rubrique décrit comment créer, modifier, exécuter et enregistrer des sc
 -   [Comment enregistrer un script](#bkmk_3)
 
 ## <a name="bkmk_1"></a>Comment créer et exécuter des scripts
-Vous pouvez ouvrir et modifier des fichiers Windows PowerShellÂ® dans le volet Script. Les types de fichiers spécifiques particulièrement intéressants dans Windows PowerShellÂ® sont les fichiers de script (.ps1), les fichiers de données de script (.psd1) et les fichiers de module de script (.psm1). Ces types de fichiers font l’objet d’une coloration de la syntaxe dans l’éditeur du volet Script. D’autres types de fichiers courants que vous pouvez ouvrir dans le volet Script sont les fichiers de configuration (.ps1xml), les fichiers XML et les fichiers texte.
+Vous pouvez ouvrir et modifier des fichiers Windows PowerShell® dans le volet Script. Les types de fichiers spécifiques particulièrement intéressants dans Windows PowerShell® sont les fichiers de script (.ps1), les fichiers de données de script (.psd1) et les fichiers de module de script (.psm1). Ces types de fichiers font l’objet d’une coloration de la syntaxe dans l’éditeur du volet Script. D’autres types de fichiers courants que vous pouvez ouvrir dans le volet Script sont les fichiers de configuration (.ps1xml), les fichiers XML et les fichiers texte.
 
 > [!NOTE]
 > La stratégie d’exécution de Windows PowerShell détermine si vous pouvez exécuter des scripts et charger des fichiers de configuration et des profils Windows PowerShell. La stratégie d’exécution par défaut, restreinte, empêche l’exécution de tous les scripts et le chargement de profils. Pour savoir comment modifier la stratégie d’exécution afin d’autoriser le chargement et l’utilisation de profils, voir [Set-ExecutionPolicy[PSITPro5_Security]](https://technet.microsoft.com/en-us/library/5690a0e1-495b-4e63-8280-65ead7bf01ab) et [about_Signing [v4]](https://technet.microsoft.com/en-us/library/fcbdd3b9-0b9f-4734-b5c7-e0dcc304fa1d).
@@ -150,11 +150,11 @@ Windows PowerShell ISE prend en charge les options d’encodage suivantes : ASC
 Windows PowerShell ISE ne modifie pas l’encodage des scripts qui ont été créés par d’autres éditeurs, même si vous utilisez les commandes Save ou Save As dans Windows PowerShell ISE.
 
 ## Voir aussi
-[Utilisation de Windows PowerShell ISE](Using-the-Windows-PowerShell-ISE.md)
+- [Utilisation de Windows PowerShell ISE](Using-the-Windows-PowerShell-ISE.md)
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

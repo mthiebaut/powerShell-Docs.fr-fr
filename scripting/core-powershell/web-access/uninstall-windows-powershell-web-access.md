@@ -8,8 +8,8 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: d54139714552943901f565a8525bb478ed308f09
+ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
+ms.openlocfilehash: d84b13db1fa5f12a7b4f8fa7b9b8cd7fb8fbae9d
 
 ---
 
@@ -74,17 +74,17 @@ Si vous avez défini un nom de site web personnalisé, ajoutez le paramètre <sp
 
     -   Dans l’écran d’**accueil** de Windows, cliquez avec le bouton droit sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**.
 
-2.  Tapez ce qui suit, puis appuyez sur **Entrée**, où *computer_name* représente le nom de l’ordinateur distant sur lequel vous souhaitez installer Accès Web Windows PowerShell, le cas échéant. Le paramètre <span class="code">–Restart</span> redémarre automatiquement les serveurs de destination si la suppression l’exige.
+2.  Tapez ce qui suit, puis appuyez sur **Entrée**, où *computer_name* représente le nom de l’ordinateur distant sur lequel vous souhaitez installer Accès Web Windows PowerShell, le cas échéant. Le paramètre <span class="code">-Restart</span> redémarre automatiquement les serveurs de destination si la suppression l’exige.
 
     [Copy](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_7b534520-f292-471f-89e3-a1079c03e369'); "Copier dans le Presse-papiers.")
 
-        Uninstall-WindowsFeature –Name WindowsPowerShellWebAccess -ComputerName <computer_name> -Restart
+        Uninstall-WindowsFeature -Name WindowsPowerShellWebAccess -ComputerName <computer_name> -Restart
 
     Pour supprimer des rôles et fonctionnalités d’un disque dur virtuel hors connexion, ajoutez les paramètres <span class="code">-ComputerName</span> et <span class="code">-VHD</span>. Le paramètre <span class="code">ComputerName</span> contient le nom du serveur sur lequel monter le disque dur virtuel, tandis que le paramètre <span class="code">VHD</span> contient le chemin du fichier VHD sur le serveur spécifié.
 
     [Copy](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_5d8f91ee-b91a-4653-b7df-e745187fd72d'); "Copier dans le Presse-papiers.")
 
-        Uninstall-WindowsFeature –Name WindowsPowerShellWebAccess –VHD <path> -ComputerName <computer_name> -Restart
+        Uninstall-WindowsFeature -Name WindowsPowerShellWebAccess -VHD <path> -ComputerName <computer_name> -Restart
 
 3.  Une fois l’installation terminée, vérifiez que vous avez bien supprimé Accès Web Windows PowerShell. Pour cela, ouvrez la page **Tous les serveurs** dans le Gestionnaire de serveur, sélectionnez un serveur sur lequel vous avez installé la fonctionnalité, puis examinez la vignette **Rôles et fonctionnalités** dans la page du serveur sélectionné. Vous pouvez également exécuter l’applet de commande <span class="code">Get-WindowsFeature</span> qui cible le serveur sélectionné (Get-WindowsFeature -ComputerName &lt;*nom_ordinateur*&gt;) pour afficher la liste des rôles et fonctionnalités installés sur le serveur.
 
@@ -219,6 +219,6 @@ Les codes et les scripts développés par un tiers et en rapport à ce site doiv
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

@@ -9,13 +9,13 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: e0d2c6e8-5126-40e7-a1e1-d1cff29fe94a
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: c1f285a1d1beb35c931c17f5944d7ec697cb152e
+ms.sourcegitcommit: 16608d8b97ec816d77ec7b8ac2438a4d64b55fba
+ms.openlocfilehash: 09e9006286ca960efafe7badd250f0357b21f608
 
 ---
 
 # Découverte de Windows PowerShell ISE
-Vous pouvez utiliser Windows PowerShellÂ® Integrated Scripting Environment (ISE) pour créer, exécuter et déboguer des commandes et des scripts. Windows PowerShell ISE se compose d’une barre de menus, d’onglets Windows PowerShell, d’une barre d’outils, d’onglets de script, d’un volet Script, d’un volet Console, d’une barre d’état, d’un curseur de taille de texte et d’une aide contextuelle.
+Vous pouvez utiliser l’environnement d’écriture de scripts intégré (ISE) de Windows PowerShell® pour créer, exécuter et déboguer des commandes et des scripts. Windows PowerShell ISE se compose d’une barre de menus, d’onglets Windows PowerShell, d’une barre d’outils, d’onglets de script, d’un volet Script, d’un volet Console, d’une barre d’état, d’un curseur de taille de texte et d’une aide contextuelle.
 
 > [!NOTE]
 > Depuis Windows PowerShell ISE 3.0, les volets Commande et Sortie ont été combinés en un seul volet Console.
@@ -76,11 +76,11 @@ Augmente ou diminue la taille du texte à l’écran.
 L’aide sur Windows PowerShell ISE est disponible sur le web dans la bibliothèque TechNet. Vous pouvez accéder à l’aide en cliquant sur **Aide Windows PowerShell ISE** dans le menu **Aide**, ou en appuyant sur la touche F1 n’importe où, sauf quand le curseur est positionné sur un nom d’applet de commande dans le volet Script ou Console. À partir du menu **Aide** vous pouvez également exécuter l’applet de commande Update-Help et afficher la fenêtre Commande qui vous aide à construire des commandes en affichant tous les paramètres disponibles pour une applet de commande, et en vous permettant d’entrer les paramètres dans un formulaire simple d’utilisation.
 
 ## Voir aussi
-[Utilisation de Windows PowerShell ISE](../../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
+- [Utilisation de Windows PowerShell ISE](../../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

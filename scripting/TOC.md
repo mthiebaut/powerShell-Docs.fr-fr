@@ -12,7 +12,7 @@
 #### [Démarrage de PowerShell sur des versions antérieures de Windows](setup/Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.md)
 ### [Installation du moteur Windows PowerShell 2.0](setup/Installing-the-Windows-PowerShell-2.0-Engine.md)
 ### [Démarrage du moteur Windows PowerShell 2.0](setup/Starting-the-Windows-PowerShell-2.0-Engine.md)
-### [Installation du Kit de développement logiciel Windows PowerShell](https://msdn.microsoft.com/en-us/library/ff458115.aspx)
+### [Installation du Kit de développement logiciel Windows PowerShell](setup/Installing-the-Windows-PowerShell-SDK.md)
 ### [Sécurité](setup/security.md)
 #### [Éléments à prendre en compte en matière de sécurité de la communication à distance PowerShell](setup/WinRMSecurity.md)
 ### [Accessibilité](setup/Accessibility-in-Windows-PowerShell-ISE.md)
@@ -29,9 +29,9 @@
 ####  [Utilisation de Windows PowerShell pour l’administration](getting-started/fundamental/Using-Windows-PowerShell-for-Administration.md)
 ####  [Utilisation de variables pour stocker des objets](getting-started/fundamental/Using-Variables-to-Store-Objects.md)
 ####  [À propos de Windows PowerShell](getting-started/fundamental/About-Windows-PowerShell.md)
-####  [Environnement d’écriture de scripts intégré de Windows PowerShell (ISE)](getting-started/fundamental/Windows-PowerShell-Integrated-Scripting-Environment--ISE-.md)
-####  [Présentation des concepts importants de Windows PowerShell : ISE](getting-started/fundamental/Understanding-Important-Windows-PowerShell-Concepts.md)
-####  [Compréhension du pipeline PowerShell](getting-started/fundamental/Understanding-the-Windows-PowerShell-Pipeline.md)
+####  [Environnement d'écriture de scripts intégré de Windows PowerShell](getting-started/fundamental/Windows-PowerShell-Integrated-Scripting-Environment--ISE-.md)
+####  [Présentation des concepts importants de Windows PowerShell (ISE)](getting-started/fundamental/Understanding-Important-Windows-PowerShell-Concepts.md)
+####  [Compréhension du pipeline Windows PowerShell](getting-started/fundamental/Understanding-the-Windows-PowerShell-Pipeline.md)
 ####  [Utilisation de noms de commande familiers](getting-started/fundamental/Using-Familiar-Command-Names.md)
 ####  [Pipeline d’objet](getting-started/fundamental/Object-Pipeline.md)
 ####  [Écriture de scripts avec Windows PowerShell](getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
@@ -49,7 +49,7 @@
 ####  [Gestion des processus avec les applets de commande Process](getting-started/cookbooks/Managing-Processes-with-Process-Cmdlets.md)
 ####  [Gestion des services](getting-started/cookbooks/Managing-Services.md)
 ####  [Gestion des lecteurs Windows PowerShell](getting-started/cookbooks/Managing-Windows-PowerShell-Drives.md)
-####  [Gestion de l’emplacement actuel](getting-started/cookbooks/Managing-Current-Location.md)
+####  [Gestion de l'emplacement actuel](getting-started/cookbooks/Managing-Current-Location.md)
 ####  [Manipulation d'éléments de manière directe](getting-started/cookbooks/Manipulating-Items-Directly.md)
 ####  [Zones de liste à sélection multiple](getting-started/cookbooks/Multiple-selection-List-Boxes.md)
 ####  [Autres objets de script utiles](getting-started/cookbooks/Other-Useful-Scripting-Objects.md)
@@ -63,7 +63,7 @@
 ####  [Tri d’objets](getting-started/cookbooks/Sorting-Objects.md)
 ####  [Utilisation des commandes de mise en forme pour modifier l’affichage d’une sortie](getting-started/cookbooks/Using-Format-Commands-to-Change-Output-View.md)
 ####  [Utilisation de classes et méthodes statiques](getting-started/cookbooks/Using-Static-Classes-and-Methods.md)
-####  [Affichage d’une structure d’objet (Get-Member)](getting-started/cookbooks/Viewing-Object-Structure--Get-Member-.md)
+####  [Affichage de structure d’objet (Get-Member)](getting-started/cookbooks/Viewing-Object-Structure--Get-Member-.md)
 ####  [Utilisation des fichiers, dossiers et clés de Registre](getting-started/cookbooks/Working-With-Files-Folders-and-Registry-Keys.md)
 ####  [Utilisation de fichiers et dossiers](getting-started/cookbooks/Working-with-Files-and-Folders.md)
 ####  [Utilisation d’objets](getting-started/cookbooks/Working-with-Objects.md)
@@ -142,6 +142,6 @@
 ## [Glossaire PowerShell](Windows-PowerShell-Glossary.md)
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Oct16_HO1-->
 
 

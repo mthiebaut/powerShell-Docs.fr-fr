@@ -9,13 +9,13 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 8734c1e1-898e-4fc1-8fc0-d1ad7d3cf077
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 3e9ba43162afb7b689bf92883f2347c2c8551ea2
+ms.sourcegitcommit: 16608d8b97ec816d77ec7b8ac2438a4d64b55fba
+ms.openlocfilehash: 4f822b0e7ddbef7382a448d9b5d1872ee0543fae
 
 ---
 
 # Module PSScriptAnalyzer
-Cette section contient les rubriques d’aide pour le module **PSScriptAnalyzer**, qui vous permet de vérifier les scripts et modules dans Windows PowerShellÂ®. Ce module est installé avec Windows PowerShell.
+Cette section contient les rubriques d’aide pour le module **PSScriptAnalyzer**, qui vous permet de vérifier les scripts et modules dans Windows PowerShell®. Ce module est installé avec Windows PowerShell.
 
 ## Rubriques d'aide
 
@@ -27,6 +27,6 @@ Cette section contient les rubriques d’aide pour le module **PSScriptAnalyzer*
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO1-->
 
 

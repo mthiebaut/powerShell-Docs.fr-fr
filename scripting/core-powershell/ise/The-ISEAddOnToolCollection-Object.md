@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 634eab89-0845-4016-974b-361b09bb8f7b
 translationtype: Human Translation
-ms.sourcegitcommit: 457451343b51891e336b0df6f979c285fb6144eb
-ms.openlocfilehash: 0a8f19693085b9b878fae60953a2cdc358ba8f4c
+ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
+ms.openlocfilehash: 575ee3b8279ad50920df17ff92d4f65467d83830
 
 ---
 
@@ -24,11 +24,11 @@ ms.openlocfilehash: 0a8f19693085b9b878fae60953a2cdc358ba8f4c
 
  Ajoute un nouvel outil complémentaire à la collection. Elle retourne l’outil complémentaire qui vient d’être ajouté. Avant d’exécuter cette commande, vous devez installer l’outil complémentaire sur l’ordinateur local et charger l’assembly.
 
- **Name** : chaîne Spécifie le nom complet de l’outil complémentaire qui est ajouté à Windows PowerShell ISE.
+ **Name** : chaîne. Spécifie le nom complet de l’outil complémentaire qui est ajouté à Windows PowerShell ISE.
 
- **ControlType** : type Spécifie le contrôle qui est ajouté.
+ **ControlType** : type. Spécifie le contrôle qui est ajouté.
 
- **\[IsVisible\]** : valeur booléenne facultative Si la valeur est **$true**, l’outil complémentaire est immédiatement visible dans le volet d’outils associé.
+ **\[IsVisible\]** : valeur booléenne facultative. Si la valeur définie est **$true**, l’outil complémentaire est immédiatement visible dans le volet d’outils associé.
 
 ```PowerShell
 # Load a DLL with an add-on and then add it to the ISE
@@ -41,7 +41,7 @@ $psISE.CurrentPowerShellTab.VerticalAddOnTools.Add("Solutions", [ISESimpleSoluti
 
  Supprime l’outil complémentaire spécifié de la collection.
 
- **Item** : Microsoft.PowerShell.Host.ISE.ISEAddOnTool Spécifie l’objet à supprimer de Windows PowerShell ISE.
+ **Item** : Microsoft.PowerShell.Host.ISE.ISEAddOnTool. Spécifie l’objet à supprimer de Windows PowerShell ISE.
 
 ```PowerShell
 # Load a DLL with an add-on and then add it to the ISE
@@ -54,7 +54,7 @@ $psISE.CurrentPowerShellTab.VerticalAddOnTools.Add("Solutions", [ISESimpleSoluti
 
  Sélectionne l’onglet PowerShell spécifié par le paramètre **psTab**.
 
- **psTab** : Microsoft.PowerShell.Host.ISE.PowerShellTab Onglet PowerShell à sélectionner.
+ **psTab** : Microsoft.PowerShell.Host.ISE.PowerShellTab. Onglet PowerShell à sélectionner.
 
 ```PowerShell
       $newTab = $psISE.PowerShellTabs.Add()
@@ -67,7 +67,7 @@ $newTab.DisplayName="Brand New Tab"
 
  Supprime l’onglet PowerShell spécifié par le paramètre **psTab**.
 
- **psTab** : Microsoft.PowerShell.Host.ISE.PowerShellTab Onglet PowerShell à supprimer.
+ **psTab** : Microsoft.PowerShell.Host.ISE.PowerShellTab. Onglet PowerShell à supprimer.
 
 ```PowerShell
 $newTab = $psISE.PowerShellTabs.Add()
@@ -87,6 +87,6 @@ $psISE.PowerShellTabs.Remove($newTab)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

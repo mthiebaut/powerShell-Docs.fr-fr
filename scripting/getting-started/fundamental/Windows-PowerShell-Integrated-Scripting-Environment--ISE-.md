@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: f156b92d-0203-46d2-89c7-b4989d32e3d2
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 061e22c26853664c89adc023d43802628859b9a6
+ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
+ms.openlocfilehash: bfb36e6313379080ee071ec1df41992b945d2d83
 
 ---
 
@@ -19,7 +19,7 @@ L’environnement d’écriture de scripts intégré de Windows PowerShell (ISE)
 
 L’environnement ISE permet d’exécuter des commandes dans un volet Console, et prend également en charge des volets que vous pouvez utiliser pour afficher simultanément le code source de votre script et d’autres outils pouvant s’intégrer à l’environnement ISE. Vous pouvez même ouvrir plusieurs fenêtres de script en même temps, ce qui est particulièrement utile lorsque vous déboguez un script qui utilise des fonctions définies dans d’autres scripts ou modules.
 
-## <a name="BKMK_NEW"></a>Nouveautés
+## Nouveautés
 Voici quelques-unes des fonctionnalités qui ont été ajoutées à l’environnement ISE dans les versions les plus récentes de PowerShell.
 
 ### Ajouté dans PowerShell 3.0 (Windows Server 2012, Windows 8)
@@ -35,7 +35,7 @@ La **liste Utilisé(s) récemment** fait désormais partie du menu Ouvrir le fic
 
 **Volet Console fusionné**. Les versions précédentes de l’environnement ISE comportaient des volets Commande et Sortie distincts. Ceux-ci sont désormais regroupés dans un seul volet qui reflète plus fidèlement ce que vous voyez dans la console Windows Powershell.
 
-**Commutateurs de ligne de commande**. Plusieurs nouveaux commutateurs de ligne de commande vous de mieux contrôler le fonctionnement de l’environnement ISE. -NoProfile démarre l’environnement ISE sans exécuter de script de profilage. -Help ouvre une fenêtre d’aide avec l’environnement ISE. -mta démarre l’environnement ISE en « mode de cloisonnement multithread ». Le mode par défaut est monothread.
+**Commutateurs de ligne de commande**. Plusieurs nouveaux commutateurs de ligne de commande vous de mieux contrôler le fonctionnement de l’environnement ISE. -NoProfile démarre l’environnement ISE sans exécuter de script de profilage. -Help ouvre une fenêtre d’aide avec l’environnement ISE. -mta démarre l’environnement ISE en « mode de multithread cloisonné ». Le mode par défaut est monothread.
 
 Les **nouvelles fonctionnalités de l’éditeur** facilitent la création et la lecture de votre code :
 
@@ -64,12 +64,12 @@ L’environnement ISE est disponible sur tout ordinateur pouvant exécuter Windo
 > [!NOTE]
 > Étant donné que Windows PowerShell ISE nécessite une interface graphique utilisateur, vous ne pouvez pas l’exécuter sur l’option d’installation minimale de Windows Server.
 
-## <a name="BKMK_LINKS"></a>Voir aussi
-[Utilisation de l’environnement d’écriture de scripts intégré de Windows PowerShell](http://technet.microsoft.com/library/cc732148.aspx)
+## Voir aussi
+- [Utilisation de l’environnement d’écriture de scripts intégré de Windows PowerShell](http://technet.microsoft.com/library/cc732148.aspx)
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

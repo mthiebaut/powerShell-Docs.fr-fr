@@ -8,8 +8,8 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: dc50a729855a71d61c187da9d698bd294f740546
+ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
+ms.openlocfilehash: f62b1e0ec9f26e1b2bcb364c78a2ce39467655a5
 
 ---
 
@@ -212,15 +212,15 @@ Les applets de commande d’Accès Web Windows PowerShell prennent en charge un 
 
     [Copier](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_1079478f-cd51-4d35-8022-4b532a9d57a4'); "Copier dans le Presse-papiers.")
 
-        Add-PswaAuthorizationRule –UserName <domain\user | computer\user> -ComputerName <computer_name> -ConfigurationName <session_configuration_name>
+        Add-PswaAuthorizationRule -UserName <domain\user | computer\user> -ComputerName <computer_name> -ConfigurationName <session_configuration_name>
 
     Cette règle d’autorisation accorde à un utilisateur spécifique l’accès à un ordinateur sur le réseau auquel il a généralement accès, avec l’accès à une configuration de session spécifique ayant comme portée les besoins ordinaires de l’utilisateur en matière de script et d’applet de commande. Dans l’exemple suivant, un utilisateur nommé <span class="code">JSmith</span> dans le domaine <span class="code">Contoso</span> se voit accorder un accès pour gérer l’ordinateur <span class="code">Contoso_214</span> et utiliser une configuration de session nommée <span class="code">NewAdminsOnly</span>.
 
     [Copier](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_4e760377-e401-4ef4-988f-7a0aec1b2a90'); "Copier dans le Presse-papiers.")
 
-        Add-PswaAuthorizationRule –UserName Contoso\JSmith -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly
+        Add-PswaAuthorizationRule -UserName Contoso\JSmith -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly
 
-4.  Vérifiez que la règle a été créée en exécutant l’applet de commande **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domain\\user | computer\\user&gt; -ComputerName** &lt;nom_ordinateur&gt;. Par exemple, **Test-PswaAuthorizationRule –UserName Contoso\\JSmith –ComputerName Contoso_214**.
+4.  Vérifiez que la règle a été créée en exécutant l’applet de commande **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domain\\user | computer\\user&gt; -ComputerName** &lt;nom_ordinateur&gt;. Par exemple, **Test-PswaAuthorizationRule -UserName Contoso\\JSmith -ComputerName Contoso_214**.
 
 #### Pour supprimer une règle d’autorisation
 
@@ -265,7 +265,7 @@ Chaque session Windows PowerShell utilise une configuration de session ; si auc
 
 -   Certains administrateurs accordent à certains utilisateurs un accès privilégié. Par exemple, un administrateur crée deux groupes d’utilisateurs, **Admins** et **BasicSupport**. Il crée également un point de terminaison avec une instance d’exécution restreinte appelée **PswaEndpoint**, puis définit les deux règles suivantes : **Admins,\*,\*** et **BasicSupport,\*,PswaEndpoint**. La première règle octroie à tous les utilisateurs du groupe **Admin** un accès à tous les ordinateurs, et la seconde règle octroie à tous les utilisateurs du groupe **BasicSupport** un accès aux seuls ordinateurs dotés de **PswaEndpoint**.
 
--   Un administrateur a configuré un environnement de test privé et souhaite autoriser tous les utilisateurs réseau approuvés à accéder à tous les ordinateurs du réseau auxquels ils ont normalement accès, avec un accès à toutes les configurations de sessions auxquelles ils ont normalement accès. S’agissant d’un environnement de test privé, l’administrateur crée une règle d’autorisation non sécurisée. L’administrateur exécute l’applet de commande <span class="code">Add-PswaAuthorizationRule \* \* \*</span>, qui utilise le caractère générique **\*** pour représenter tous les utilisateurs, tous les ordinateurs et toutes les configurations. Cette règle est l’équivalent de la commande suivante : <span class="code">Add-PswaAuthorizationRule –UserName \* -ComputerName \* -ConfigurationName \*</span>.
+-   Un administrateur a configuré un environnement de test privé et souhaite autoriser tous les utilisateurs réseau approuvés à accéder à tous les ordinateurs du réseau auxquels ils ont normalement accès, avec un accès à toutes les configurations de sessions auxquelles ils ont normalement accès. S’agissant d’un environnement de test privé, l’administrateur crée une règle d’autorisation non sécurisée. L’administrateur exécute l’applet de commande <span class="code">Add-PswaAuthorizationRule \* \* \*</span>, qui utilise le caractère générique **\*** pour représenter tous les utilisateurs, tous les ordinateurs et toutes les configurations. Cette règle est l’équivalent de la commande suivante : <span class="code">Add-PswaAuthorizationRule -UserName \* -ComputerName \* -ConfigurationName \*</span>.
 
     <table>
     <colgroup>
@@ -287,7 +287,7 @@ Chaque session Windows PowerShell utilise une configuration de session ; si auc
 
     [Copier](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_8d183d3d-1c19-44b8-9297-530b0efc7c79'); "Copier dans le Presse-papiers.")
 
-        Add-PswaAuthorizationRule –userName PswaServer\chrisLocal –computerName srv1.contoso.com –configurationName Microsoft.PowerShell
+        Add-PswaAuthorizationRule -userName PswaServer\chrisLocal -computerName srv1.contoso.com -configurationName Microsoft.PowerShell
 
     L’exemple de règle précédent authentifie Chris sur le serveur de passerelle, puis autorise son accès à *srv1*. Dans la page de connexion, Chris doit fournir un deuxième ensemble d’informations d’identification dans la zone **Paramètres de connexion facultatifs** (*contoso\\chris*). Le serveur de passerelle utilise l’ensemble supplémentaire d’informations d’identification pour l’authentifier sur l’ordinateur cible, *srv1.contoso.com*.
 
@@ -428,6 +428,6 @@ Les codes et les scripts développés par un tiers et en rapport à ce site doiv
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 
