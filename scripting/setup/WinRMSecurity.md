@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 67ef350559f9b3d17232f3c93d67634b3e939c60
-ms.openlocfilehash: b1addddd50368fadcbb2581673d3ebc7cad8e32a
+ms.sourcegitcommit: 4ddd5099ce33263d43dcbad0930e654b573a8937
+ms.openlocfilehash: fa7e5c84ac82fa72836536ece507f1751e099077
 
 ---
 
@@ -86,10 +86,6 @@ Il s’agit de la méthode la plus sûre pour s’authentifier mais, comme l’o
 
 Il existe plusieurs moyens de l’éviter :
 
-### Délégation Kerberos contrainte
-
-Pour les serveurs hautement approuvés, vous pouvez activer la [délégation Kerberos contrainte](https://technet.microsoft.com/en-us/library/cc995228.aspx). Cela permet au serveur distant d’emprunter l’identité de l’utilisateur authentifié pour une liste spécifiée d’ordinateurs et de services.
-
 ### Approbation entre les ordinateurs distants
 
 Si vous approuvez les utilisateurs connectés à distance à *Serveur1* à des ressources sur *Serveur2*, vous pouvez accorder explicitement à *Serveur1* l’accès à ces ressources.
@@ -121,6 +117,6 @@ Pour plus d’informations sur les risques de vol des informations d’identific
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 
