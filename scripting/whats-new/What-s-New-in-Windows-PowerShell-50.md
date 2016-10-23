@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 1476722e-947e-425d-a86c-50037488dc6e
 translationtype: Human Translation
-ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
-ms.openlocfilehash: 9e012dd8218a256e4236c2263babefd29ecdb016
+ms.sourcegitcommit: 1d4062490ba76a8cc62faa8fb96eff92b49169b7
+ms.openlocfilehash: 966cab74cb2519893d4744e8bd0ca12f93f73136
 
 ---
 
@@ -19,7 +19,10 @@ Windows PowerShell® 5.0 intègre plusieurs nouvelles fonctionnalités importan
 
 Windows PowerShell 5.0 offre une compatibilité descendante. Les applets de commande, fournisseurs, modules, composants logiciels enfichables, scripts, fonctions et profils conçus pour Windows PowerShell 4.0, Windows PowerShell 3.0 et Windows PowerShell 2.0 fonctionnent généralement dans Windows PowerShell 5.0 sans aucune modification.
 
-Windows PowerShell 5.0 est installé par défaut sur Windows Server® 2016 Technical Preview et Windows 10®. Pour installer Windows PowerShell 5.0 sur Windows Server 2012 R2, Windows 8.1 Entreprise ou Windows 8.1 Professionnel, téléchargez et installez [Windows Management Framework 5.0](http://aka.ms/wmf5download). Avant d'installer Windows Management Framework 5.0, veillez à prendre connaissance des détails du téléchargement et à vérifier la configuration système requise.
+# Installation de Windows PowerShell
+Windows PowerShell 5.0 est installé par défaut sur Windows Server® 2016 Technical Preview et Windows 10®. 
+
+Pour installer Windows PowerShell 5.0 sur Windows Server 2012 R2, Windows 8.1 Entreprise ou Windows 8.1 Professionnel, téléchargez et installez [Windows Management Framework 5.0](http://aka.ms/wmf5download). Avant d'installer Windows Management Framework 5.0, veillez à prendre connaissance des détails du téléchargement et à vérifier la configuration système requise.
 
 ## Dans cette rubrique
 
@@ -752,13 +755,13 @@ Grâce à la fonctionnalité **SharedHost**, plusieurs utilisateurs sur différe
 Pour améliorer l’interprétation et la gestion des caractères spéciaux dans Windows PowerShell 3.0, le paramètre **LiteralPath**, qui gère les caractères spéciaux dans les chemins d’accès, est valide sur pratiquement toutes les applets de commande possédant un paramètre **Path**, dont les nouvelles applets de commande [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545) et [Save-Help](https://technet.microsoft.com/en-us/library/aed94f90-b73f-4e25-a25d-7c18d9f161fa). L’analyseur inclut également une logique spéciale qui améliore la gestion de l’accent grave (\`) et des crochets dans les chemins et les noms de fichiers.
 
 ## Voir aussi
-[about_Windows_PowerShell_4.0](http://technet.microsoft.com/en-us/library/hh847833(v=wps.630).aspx)
-[about_Windows_PowerShell_5.0](https://technet.microsoft.com/en-us/library/6d56fa88-371e-40c9-b2de-64a2a0cd49da)
-[Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=107116)
+- [about_Windows_PowerShell_4.0](http://technet.microsoft.com/en-us/library/hh847833(v=wps.630).aspx)
+- [about_Windows_PowerShell_5.0](https://technet.microsoft.com/en-us/library/6d56fa88-371e-40c9-b2de-64a2a0cd49da)
+- [Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=107116)
 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO3-->
 
 
