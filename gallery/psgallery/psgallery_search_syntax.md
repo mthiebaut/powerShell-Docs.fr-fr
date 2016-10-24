@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: powershell,applet de commande,gallery
+ms.date: 2016-10-14
+contributor: manikb
+title: psgallery_search_syntax
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: bb42496bdc9794b8d33dc9869f33771a241d31db
+
+---
+
 # Syntaxe de recherche PowerShell Gallery
 
 PowerShell Gallery offre une zone de recherche de texte où vous pouvez utiliser des mots, des expressions et des mots clés pour limiter les résultats de la recherche.
@@ -83,6 +100,7 @@ est interprétée exactement comme cette requête :
 
 
 
-<!--HONumber=Aug16_HO3-->
+
+<!--HONumber=Oct16_HO2-->
 
 
