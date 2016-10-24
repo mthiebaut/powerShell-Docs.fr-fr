@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: c8730471-bf6a-43b8-ab1d-f9ef5a74f04e
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: fd950429d80972b6025e67ea727aa49ef195e882
+ms.sourcegitcommit: 27512f637dd44485eee38936fea4723cd17b6218
+ms.openlocfilehash: b67024fb27c08e1079caad891cfc3e621a354b27
 
 ---
 
@@ -18,7 +18,7 @@ ms.openlocfilehash: fd950429d80972b6025e67ea727aa49ef195e882
 Les interpréteurs de ligne de commande offrent souvent une manière de compléter automatiquement les noms de fichiers ou commandes longs, en accélérant la saisie de commandes et en fournissant des indications. Windows PowerShell permet de renseigner des noms de fichiers et des noms de d’applet de commande en appuyant sur la touche **Tab**.
 
 > [!NOTE]
-> Le développement par tabulation est contrôlé par la fonction interne TabExpansion. Étant donné que cette fonction peut être modifiée ou remplacée, cette explication a trait au comportement de la configuration Windows PowerShell par défaut.
+> Le développement par tabulation est contrôlé par la fonction interne TabExpansion ou TabExpansion2. Étant donné que cette fonction peut être modifiée ou remplacée, cette explication a trait au comportement de la configuration Windows PowerShell par défaut.
 
 Pour renseigner automatiquement un nom de fichier ou un chemin d’accès à partir des choix disponibles, tapez une partie du nom, puis appuyez sur la touche **Tab**. Windows PowerShell développe automatiquement le nom sur la base de la première correspondance trouvée. Des appuis répétés sur la touche **Tab** permettent de passer en revue tous les choix disponibles.
 
@@ -54,6 +54,6 @@ PS> Get-Content C:\windows\actsetup.log
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

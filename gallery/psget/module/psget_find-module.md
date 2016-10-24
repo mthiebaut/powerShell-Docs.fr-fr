@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: powershell,applet de commande,gallery
+ms.date: 2016-10-14
+contributor: manikb
+title: psget_find module
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: 67542f54cd350bd1d9512eae0a2355b47943c2f2
+
+---
+
 # Find-Module
 Recherche les modules à partir d’une galerie en ligne qui correspondent aux critères spécifiés.
 
@@ -7,7 +24,7 @@ Pour chaque module trouvé, Find-Module retourne un objet PSRepositoryItemInfo q
 
 - Find-Module peut filtrer le contenu de module avec les paramètres -Command, -DscResource, -RoleCapability et -Includes.
 - Find-Module permet de filtrer avec des paramètres de version : MinimumVersion, MaximumVersion, RequiredVersion, AllVersions.
-  - Ces paramètres sont mutuellement exclusifs, sauf MinmimumVersion et MaximumVersion.
+  - Ces paramètres sont mutuellement exclusifs, sauf MinimumVersion et MaximumVersion.
   - Ces paramètres de version sont autorisés uniquement avec le nom de module unique sans les caractères génériques.
   - Si le paramètre RequiredVersion n’est pas spécifié, Find-Module retourne la dernière version du module qui est supérieure ou égale à la version minimale spécifiée ou la dernière version du module si aucune version minimale n’est spécifiée. 
   - Si le paramètre RequiredVersion est spécifié, Find-Module retourne uniquement la version du module qui correspond exactement à la version spécifiée.
@@ -129,6 +146,8 @@ AdditionalMetadata         : {downloadCount, description, copyright, FileList...
 ```
 
 
-<!--HONumber=Aug16_HO3-->
+
+
+<!--HONumber=Oct16_HO2-->
 
 

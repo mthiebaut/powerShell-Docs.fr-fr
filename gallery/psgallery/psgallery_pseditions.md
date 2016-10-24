@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: powershell,applet de commande,gallery
+ms.date: 2016-10-14
+contributor: manikb
+title: psgallery_pseditions
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: a2e6f87603795e7781115239b87c73a076e5e6ca
+
+---
+
 # Éléments avec des éditions PowerShell compatibles
 À compter de la version 5.1, PowerShell est disponible dans différentes éditions qui indiquent la compatibilité de la plateforme et les différents ensembles de fonctionnalités.
 
@@ -22,6 +39,9 @@ Utiliser Tags:"PSEdition_Desktop" et Tags:"PSEdition_Core" pour filtrer les él�
 ### [Modules avec PSEditions](../psget/module/modulewithpseditionsupport.md)
 ### [Scripts avec PSEditions](../psget/script/scriptwithpseditionsupport.md)
 
-<!--HONumber=Aug16_HO3-->
+
+
+
+<!--HONumber=Oct16_HO2-->
 
 

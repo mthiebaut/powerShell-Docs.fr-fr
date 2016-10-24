@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: powershell,applet de commande,gallery
+ms.date: 2016-10-14
+contributor: manikb
+title: bootstrapping_nuget_proivder_and_exe
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: 0e0e1287dbe0912e90dfeabee8e22cdf78d9e82a
+
+---
+
 # Démarrage du fournisseur NuGet et de NuGet.exe pour les opérations de publication avec un seul message d’invite et démarrage du fournisseur NuGet uniquement pour les opérations autres que de publication
 
 NuGet.exe est supprimé du dernier fournisseur NuGet. Pour la publication d’un module/script, PowerShellGet nécessite NuGet.exe pour la création et l’envoi d’un fichier .nupkg vers le référentiel. Le fournisseur NuGet est obligatoire pour les opérations autres que de publication, telles que la recherche, l’installation, la mise à jour et l’enregistrement.
@@ -84,6 +101,9 @@ VERBOSE: Installing NuGet.exe.
 VERBOSE: Successfully published module 'Contoso' to the module publish location 'C:\LocalGallery'. Please allow few minutes for 'Contoso' to show up in the search results.
 ```
 
-<!--HONumber=Aug16_HO3-->
+
+
+
+<!--HONumber=Oct16_HO2-->
 
 

@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: powershell,applet de commande,gallery
+ms.date: 2016-10-14
+contributor: manikb
+title: psgallery_dispute_resolution
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: 6d7015a14f0d0a75bc28e201dceefe6c9c682b31
+
+---
+
 # Règlement des litiges
 
 Ce document est une procédure recommandée de résolution des litiges qui aide les membres de la Communauté à résoudre les litiges avec d’autres éditeurs PowerShell Gallery.
@@ -29,6 +46,8 @@ Si vous détectez un élément en violation de l’un de ces éléments, cliquez
 **Cette stratégie est susceptible d’être modifiée à la discrétion de PowerShell Gallery.**
 
 
-<!--HONumber=Aug16_HO3-->
+
+
+<!--HONumber=Oct16_HO2-->
 
 

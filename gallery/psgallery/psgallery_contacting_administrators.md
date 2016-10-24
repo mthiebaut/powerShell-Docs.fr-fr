@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: powershell,applet de commande,gallery
+ms.date: 2016-10-14
+contributor: manikb
+title: psgallery_contacting_administrators
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: 0268fed62bc4c30f5e299af0cc29a0f2316ce731
+
+---
+
 # Contacter les administrateurs de la galerie
 
 ## Quand contacter les administrateurs de la galerie
@@ -17,6 +34,8 @@ Vous devez contacter les administrateurs de la galerie dans les cas suivants :
 3. Pour toute autre question générale relative à la galerie, envoyez votre question à [UserVoice](http://windowsserver.uservoice.com/forums/301869-powershell)
 
 
-<!--HONumber=Aug16_HO3-->
+
+
+<!--HONumber=Oct16_HO2-->
 
 

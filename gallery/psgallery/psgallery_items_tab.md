@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: powershell,applet de commande,gallery
+ms.date: 2016-10-14
+contributor: manikb
+title: psgallery_items_tab
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: 6edf1451cb869f0b9400b353b3143c99c3568382
+
+---
+
 Onglet Éléments
 ==========
 
@@ -35,6 +52,9 @@ La liste déroulante Trier par permet aux utilisateurs de trier les résultats s
 La zone de recherche permet aux utilisateurs de rechercher les éléments selon les mots clés.  
 Pour plus d’informations, voir [Syntaxe de recherche](./psgallery_search_syntax.md).
 
-<!--HONumber=Aug16_HO3-->
+
+
+
+<!--HONumber=Oct16_HO2-->
 
 
