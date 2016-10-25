@@ -8,8 +8,8 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 18949229d4d9e3867cdc265c3fd958d2598186b4
-ms.openlocfilehash: 77ac8a58f87371a176ca7a3613c1f319aa69baff
+ms.sourcegitcommit: 1d4062490ba76a8cc62faa8fb96eff92b49169b7
+ms.openlocfilehash: 035fc8adc08df500069e800cfb94c5dcff46d88f
 
 ---
 
@@ -18,7 +18,7 @@ Windows PowerShell® 5.0 intègre plusieurs nouvelles fonctionnalités importan
 
 Windows PowerShell 5.0 offre une compatibilité descendante. Les applets de commande, fournisseurs, modules, composants logiciels enfichables, scripts, fonctions et profils conçus pour Windows PowerShell 4.0, Windows PowerShell 3.0 et Windows PowerShell 2.0 fonctionnent généralement dans Windows PowerShell 5.0 sans aucune modification.
 
-Windows PowerShell 5.0 est installé par défaut sur Windows Server® 2016 Technical Preview et Windows 10®. Pour installer Windows PowerShell 5.0 sur Windows Server 2012 R2, Windows 8.1 Entreprise ou Windows 8.1 Professionnel, téléchargez et installez [Windows Management Framework 5.0 Preview](http://go.microsoft.com/fwlink/?LinkID=395058). Avant d’installer Windows Management Framework 5.0 Preview, veillez à prendre connaissance des détails du téléchargement et à vérifier entièrement la configuration requise.
+Windows PowerShell 5.0 est installé par défaut sur Windows Server® 2016 et Windows® 10. Pour installer Windows PowerShell 5.0 sur Windows Server 2012 R2, Windows 8.1 Entreprise ou Windows 8.1 Professionnel, téléchargez et installez [Windows Management Framework 5.0](https://go.microsoft.com/fwlink/?linkid=830436). Avant d’installer Windows Management Framework 5.0 Preview, veillez à prendre connaissance des détails du téléchargement et à vérifier entièrement la configuration requise.
 
 ## Dans cette rubrique
 
@@ -35,6 +35,6 @@ Windows PowerShell 5.0 est installé par défaut sur Windows Server® 2016 Tec
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO3-->
 
 
