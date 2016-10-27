@@ -14,7 +14,7 @@ ms.openlocfilehash: 81a43a673285ba00710b4bbe450ecf316951746b
 
 ---
 
-#  Informations de référence sur PowerShell
+#  <a name="powershell-reference"></a>Informations de référence sur PowerShell
 
 Les documents de référence sont organisés par versions commerciales.
 
@@ -46,6 +46,7 @@ Au fil du temps, les espaces de noms sont apparus comme suit :
 - PSScriptAnalyzer, introduit dans 3.0
 - PSWorkflow, introduit dans 3.0
 - PSWorkflowUtility, introduit dans 3.0
+
 
 
 
