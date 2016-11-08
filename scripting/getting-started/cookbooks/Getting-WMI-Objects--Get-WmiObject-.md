@@ -14,12 +14,12 @@ ms.openlocfilehash: de9e8af7908ac6a72a100fd2c86b52c30c390c39
 
 ---
 
-# Obtention d’objets WMI (Get-WmiObject)
+# <a name="getting-wmi-objects-getwmiobject"></a>Obtention d’objets WMI (Get-WmiObject)
 
-## Obtention d’objets WMI (Get-WmiObject)
+## <a name="getting-wmi-objects-getwmiobject"></a>Obtention d’objets WMI (Get-WmiObject)
 WMI (Windows Management Instrumentation) est une technologie majeure pour l’administration du système Windows, car elle expose un vaste éventail d’informations de manière uniforme. Compte tenu de tout ce que WMI permet de réaliser, l’applet de commande Windows PowerShell pour l’accès aux objets WMI, **Get-WmiObject**, est l’une des plus utiles pour travailler réellement. Nous allons aborder l’utilisation de l’applet de commande Get-WmiObject pour accéder aux objets WMI, puis expliquer comment utiliser des objets WMI pour réaliser des opérations spécifiques.
 
-### Affichage de la liste des classes WMI
+### <a name="listing-wmi-classes"></a>Affichage de la liste des classes WMI
 Le premier problème que rencontrent la plupart des utilisateurs de WMI est de comprendre ce que WMI permet de faire. Les classes WMI décrivent les ressources qui peuvent être gérées. Il existe des centaines de classes WMI, dont certaines contiennent des dizaines de propriétés.
 
 L’applet de commande **Get-WmiObject** résout ce problème en rendant WMI détectable. Vous pouvez obtenir la liste des classes WMI disponibles sur l’ordinateur local en tapant ce qui suit :
@@ -72,7 +72,7 @@ __Provider                              __Win32Provider
 ...
 ```
 
-### Affichage des détails de classe WMI
+### <a name="displaying-wmi-class-details"></a>Affichage des détails de classe WMI
 Si vous connaissez déjà le nom d’une classe WMI, vous pouvez l’utiliser pour obtenir des informations immédiatement. Par exemple, une des classes WMI couramment utilisées pour récupérer des informations sur un ordinateur est **Win32_OperatingSystem**.
 
 ```
@@ -109,7 +109,7 @@ BuildNumber                               Property   System.String BuildNumb...
 ...
 ```
 
-#### Affichage de propriétés autres que par défaut avec les applets de commande Format
+#### <a name="displaying-nondefault-properties-with-format-cmdlets"></a>Affichage de propriétés autres que par défaut avec les applets de commande Format
 Si vous souhaitez des informations contenues dans la classe **Win32_OperatingSystem** qui ne sont pas affichées par défaut, vous pouvez les afficher à l’aide des applets de commande **Format**. Par exemple, si vous souhaitez afficher les données de la mémoire disponible, tapez :
 
 ```
@@ -139,6 +139,6 @@ FreeSpaceInPagingFiles : 1556644
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

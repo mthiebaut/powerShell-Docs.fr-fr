@@ -14,7 +14,7 @@ ms.openlocfilehash: 28bc665c3ffb1b74a2ff922584c31a8657842a0f
 
 ---
 
-# Utilisation de classes et méthodes statiques
+# <a name="using-static-classes-and-methods"></a>Utilisation de classes et méthodes statiques
 Certaines classes de .NET Framework ne peuvent pas être créées à l’aide de l’applet de commande **New-Object**. Par exemple, si vous essayez de créer un objet **System.Environment** ou **System.Math** avec l’applet de commande **New-Object**, vous obtenez les messages d’erreur suivants :
 
 ```
@@ -32,10 +32,10 @@ At line:1 char:11
 
 Ces erreurs se produisent parce qu’il n’existe aucun moyen de créer un objet à partir de ces classes. Ces classes sont des bibliothèques de référence de méthodes et propriétés qui ne changent pas d’état. Vous n’avez pas besoin de les créer. Vous les utilisez simplement. Les classes et méthodes telles que celles-ci sont appelées *classes statiques*, car elles ne sont pas créées, détruites ou modifiées. Par souci de clarté, nous fournirons des exemples qui utilisent des classes statiques.
 
-### Obtention de données d’environnement avec System.Environment
+### <a name="getting-environment-data-with-systemenvironment"></a>Obtention de données d’environnement avec System.Environment
 En règle générale, la première étape de l’utilisation d’un objet dans Windows PowerShell consiste à utiliser l’applet de commande Get-Member pour découvrir les membres qu’il contient. Avec des classes statiques, le processus est un peu différent, car la classe réelle n’est pas un objet.
 
-#### Référence à la classe statique System.Environment
+#### <a name="referring-to-the-static-systemenvironment-class"></a>Référence à la classe statique System.Environment
 Vous pouvez faire référence à une classe statique en entourant le nom de la classe de crochets. Par exemple, vous pouvez faire référence à la classe **System.Environment** en tapant le nom entre crochets. Cela a pour effet d’afficher des informations de type générique :
 
 ```
@@ -92,7 +92,7 @@ TickCount                               ExitCode
 
 Nous pouvons désormais sélectionner des propriétés à afficher à partir de System.Environment.
 
-#### Affichage de propriétés statiques de System.Environment
+#### <a name="displaying-static-properties-of-systemenvironment"></a>Affichage de propriétés statiques de System.Environment
 Les propriétés de System.Environment sont également statiques, et doivent être spécifiées d’une autre façon que des propriétés normales. Nous utilisons **::** pour indiquer à Windows PowerShell que nous souhaitons travailler avec une méthode ou propriété statique. Pour afficher la commande utilisée pour lancer Windows PowerShell, nous vérifions la propriété **CommandLine** en tapant ce qui suit :
 
 ```
@@ -117,7 +117,7 @@ PS> [System.Environment]::HasShutdownStarted
 False
 ```
 
-### Opérations mathématiques avec System.Math
+### <a name="doing-math-with-systemmath"></a>Opérations mathématiques avec System.Math
 La classe statique System.Math est utile pour effectuer certaines opérations mathématiques. Les membres importants de **System.Math** sont essentiellement des méthodes que nous pouvons afficher à l’aide de l’applet de commande **Get-Member**.
 
 > [!NOTE]
@@ -190,6 +190,6 @@ PS> [System.Math]::Truncate(-9.3)
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 
