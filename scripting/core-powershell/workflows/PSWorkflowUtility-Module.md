@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: c62a363a-caa2-4b6e-a079-d6e8543bc4c6
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 62cb6e90637373791e66ad1f94af085de00e4666
+ms.sourcegitcommit: 6c666e2e23cb74818e37293410dafc9033057733
+ms.openlocfilehash: c49b8f4f5969faa017a858f8b66fe9bfc5515c36
 
 ---
 
@@ -27,15 +27,15 @@ Cette section contient les rubriques d’aide pour le module **PSWorkflowUtility
 [about_WorkflowCommonParameters](https://technet.microsoft.com/en-us/library/119f968e-618e-439c-b76c-cdd17e6df27c)
 
 ## Voir aussi
-[Présentation du workflow Windows PowerShell](https://technet.microsoft.com/en-us/library/jj134242.aspx)
-[Écriture d’un workflow Windows PowerShell](https://technet.microsoft.com/en-us/library/jj574157.aspx)
-[Windows PowerShell 5.0](../core-modules/Windows-PowerShell-5.0.md)
-[Rubriques About Windows PowerShell Core](../core-modules/Windows-PowerShell-Core-About-Topics.md)
-[Écriture de scripts avec Windows PowerShell](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
+- [Présentation du workflow Windows PowerShell](https://technet.microsoft.com/en-us/library/jj134242.aspx)
+- [Écriture d'un workflow Windows PowerShell](https://technet.microsoft.com/en-us/library/jj574157.aspx)
+- [Windows PowerShell 5.0](../core-modules/Windows-PowerShell-5.0.md)
+- [Rubriques About Windows PowerShell Core](../core-modules/Windows-PowerShell-Core-About-Topics.md)
+- [Écriture de scripts avec Windows PowerShell](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO3-->
 
 
