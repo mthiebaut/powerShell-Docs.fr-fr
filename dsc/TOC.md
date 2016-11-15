@@ -6,10 +6,12 @@
 ## [Exécution de DSC avec les informations d’identification de l’utilisateur](runAsUser.md)
 ## [Spécification de dépendances entre nœuds](crossNodeDependencies.md)
 ## [Données de configuration](configData.md)
-### [Options d’informations d’identification dans les données de configuration](configDataCredentials.md)
+### [Options des informations d’identification dans les données de configuration](configDataCredentials.md)
 ## [Sécurisation du fichier MOF de configuration](secureMOF.md)
 ## [Configurations partielles](partialConfigs.md)
 ## [Écriture de l’aide pour les configurations DSC](configHelp.md)
+## [Configurer une machine virtuelle au démarrage initial à l’aide de DSC](bootstrapDsc.md)
+### [Clé de Registre DSCAutomationHostEnabled](DSCAutomationHostEnabled.md)
 
 # [Ressources](resources.md)
 ## [Ressources intégrées](builtInResource.md)
@@ -19,21 +21,21 @@
 ### [Ressource Group](groupResource.md)
 ### [Ressource Log](logResource.md)
 ### [Ressource Package](packageResource.md)
-### [Ressource Registry](registryResource.md)
+### [Ressources Registry](registryResource.md)
 ### [Ressource Script](scriptResource.md)
 ### [Ressource Service](serviceResource.md)
-### [Ressource utilisateur](userResource.md)
+### [Ressource User](userResource.md)
 ### [Ressource WindowsFeature](windowsfeatureResource.md)
 ### [Ressource WindowsProcess](windowsProcessResource.md)
 ## [Création de ressources personnalisées](authoringResource.md) 
-### [Ressources personnalisées basées sur le fichier MOF](authoringResourceMOF.md)
-#### [Ressource en C basée sur le fichier MOF#](authoringResourceMofCS.md)
+### [Ressources personnalisées MOF](authoringResourceMOF.md)
+#### [Ressource MOF dans C#](authoringResourceMofCS.md)
 ### [Ressources personnalisées basées sur une classe](authoringResourceClass.md)
 ### [Ressources composites](authoringResourceComposite.md)
-### [Écriture d’une ressource de DSC d’instance unique (recommandation)](singleInstance.md)
-### [Liste de vérification de création de ressources](resourceAuthoringChecklist.md)
-## [Débogage des ressources DSC](debugResource.md)
-## [Appel direct de méthodes de ressources DSC](directCallResource.md)
+### [Écriture d’une ressource de DSC à instance unique (bonne pratique)](singleInstance.md)
+### [Liste de vérification pour la création de ressources](resourceAuthoringChecklist.md)
+## [Débogage des ressources DSC](debugResource.md)
+## [Appel direct des méthodes des ressources DSC](directCallResource.md)
 
 # [Configuration du gestionnaire de configuration local](metaConfig.md)
 ## [Configuration du gestionnaire de configuration local dans PowerShell 4.0](metaConfig4.md)
@@ -45,7 +47,7 @@
 ### [Configuration d’un client collecteur à l’aide du nom de configuration](pullClientConfigNames.md)
 ### [Configuration d’un client collecteur à l’aide de l’ID de configuration](pullClientConfigID.md)
 ## [Utilisation d’un serveur de rapports DSC](reportServer.md)
-## [Meilleures pratiques pour le serveur collecteur](secureServer.md)
+## [Bonnes pratiques pour le serveur collecteur](secureServer.md)
 
 # [Résolution des problèmes liés à DSC](troubleshooting.md)
 
@@ -65,7 +67,7 @@
 ### [Ressource nxUser](lnxUserResource.md)
 
 # Informations de référence sur MOF DSC
-## [MSFT_DSCLocalConfigurationManager, classe](msft-dsclocalconfigurationmanager.md)
+## [Classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager.md)
 ### [Méthode ApplyConfiguration de la classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-applyconfiguration.md)
 ### [Méthode DisableDebugConfiguration de la classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-disabledebugconfiguration.md)
 ### [Méthode EnableDebugConfiguration de la classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-enabledebugconfiguration.md)
@@ -91,6 +93,6 @@
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO4-->
 
 

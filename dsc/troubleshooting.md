@@ -8,18 +8,18 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: c7b198d6206c57ef663ea5f4c8cef5ab5678a823
-ms.openlocfilehash: d06b330e3a64705e2f86230e8a9e344e85b8d4be
+ms.sourcegitcommit: 99c1ea706ca5c3fb008065e98cc99fef463b1011
+ms.openlocfilehash: caf661fe58faf8cf24c789b408505051429df3f4
 
 ---
 
-# Résolution des problèmes liés à DSC
+# <a name="troubleshooting-dsc"></a>Résolution des problèmes liés à DSC
 
 >S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Cette rubrique décrit comment résoudre les problèmes liés à DSC quand ils se produisent.
 
-## Utilisation de l’applet de commande Get-DscConfigurationStatus
+## <a name="using-getdscconfigurationstatus"></a>Utilisation de l’applet de commande Get-DscConfigurationStatus
 
 L’applet de commande, [Get-DscConfigurationStatus](https://technet.microsoft.com/en-us/library/mt517868.aspx) obtient des informations sur l’état de configuration à partir d’un nœud cible. Un objet enrichi est retourné. Il comprend des informations générales indiquant si l’exécution de la configuration a réussi ou échoué. Vous pouvez explorer l’objet pour obtenir des détails sur l’exécution de la configuration, notamment :
 
@@ -46,7 +46,7 @@ Get-DscConfigurationStatus  -All
                             [<CommonParameters>]
 ```
 
-## Exemple
+## <a name="example"></a>Exemple
 
 ```powershell
 PS C:\> $Status = Get-DscConfigurationStatus 
@@ -79,11 +79,11 @@ StartDate               :   11/24/2015  3:44:56
 PSComputerName          :
 ```
 
-## Mon script ne s’exécute pas : utilisation des journaux DSC pour diagnostiquer les erreurs de script
+## <a name="my-script-wont-run-using-dsc-logs-to-diagnose-script-errors"></a>Mon script ne s’exécute pas : utilisation des journaux DSC pour diagnostiquer les erreurs de script
 
 Comme tous les logiciels Windows, DSC enregistre les erreurs et les événements dans des [journaux](https://msdn.microsoft.com/library/windows/desktop/aa363632.aspx) qui peuvent être consultés dans l’[Observateur d’événements](http://windows.microsoft.com/windows/what-information-event-logs-event-viewer). L’examen de ces journaux peut vous aider à comprendre pourquoi une opération particulière a échoué et comment éviter que cela se reproduise. L’écriture de scripts de configuration peut être compliquée. Ainsi, pour faciliter le suivi des erreurs pendant le processus de création, utilisez la ressource Log dans DSC pour suivre la progression de votre configuration dans le journal des événements d’analyse DSC.
 
-## Où se trouvent les journaux des événements DSC ?
+## <a name="where-are-dsc-event-logs"></a>Où se trouvent les journaux des événements DSC ?
 
 Dans l’Observateur d’événements, les événements DSC se trouvent dans : **Journaux des applications et des services/Microsoft/Windows/Desired State Configuration**
 
@@ -103,7 +103,7 @@ Comme indiqué ci-dessus, le nom du journal DSC principal est **Microsoft->Windo
 wevtutil.exe set-log “Microsoft-Windows-Dsc/Analytic” /q:true /e:true
 ```
 
-## Que contiennent les journaux DSC ?
+## <a name="what-do-dsc-logs-contain"></a>Que contiennent les journaux DSC ?
 
 Les journaux DSC sont répartis sur les trois canaux de journal en fonction de l’importance du message. Le journal des opérations dans DSC contient tous les messages d’erreur et peut être utilisé pour identifier un problème. Le journal d’analyse contient un plus grand volume d’événements et peut identifier où se sont produites les erreurs. Ce canal contient également des messages détaillés (le cas échéant). Le journal de débogage contient des journaux qui peuvent vous aider à comprendre comment les erreurs se sont produites. Les messages d’événement DSC sont structurés de telle sorte que chaque message d’événement commence par un ID de tâche représentant de façon unique une opération DSC. L’exemple ci-dessous tente d’obtenir le message du premier événement enregistré dans le journal des opérations DSC.
 
@@ -120,7 +120,7 @@ Les événements DSC sont enregistrés dans une structure particulière qui perm
 **ID de tâche : <Guid>**
 **<Event Message>**
 
-## Collecte des événements d’une seule opération DSC
+## <a name="gathering-events-from-a-single-dsc-operation"></a>Collecte des événements d’une seule opération DSC
 
 Les journaux des événements DSC contiennent des événements générés par diverses opérations DSC. Toutefois, vous êtes généralement intéressé par les détails d’une seule opération en particulier. Tous les journaux DSC peuvent être regroupés par la propriété d’ID de tâche, qui est unique pour chaque opération DSC. L’ID de tâche est affiché comme première valeur de propriété de tous les événements DSC. Les étapes suivantes décrivent comment regrouper tous les événements dans une structure de tableau groupée.
 
@@ -185,7 +185,7 @@ TimeCreated                     Id LevelDisplayName Message
 
 Vous pouvez extraire les données de la variable `$SeparateDscOperations` à l’aide de [Where-Object](https://technet.microsoft.com/library/ee177028.aspx). Voici cinq scénarios dans lesquels vous pouvez extraire les données pour résoudre les problèmes liés à DSC :
 
-### 1 : échecs d’opérations
+### <a name="1-operations-failures"></a>1 : échecs d’opérations
 
 Tous les événements sont associés à des [niveaux de gravité](https://msdn.microsoft.com/library/dd996917(v=vs.85)). Ces informations peuvent être utilisées pour identifier les événements d’erreur :
 
@@ -196,7 +196,7 @@ Count Name                      Group
    38 {5BCA8BE7-5BB6-11E3-BF... {System.Diagnostics.Eventing.Reader.EventLogRecord, System.Diagnostics....
 ```
 
-### 2 : détails des opérations exécutées au cours de la dernière demi-heure
+### <a name="2-details-of-operations-run-in-the-last-half-hour"></a>2 : détails des opérations exécutées au cours de la dernière demi-heure
 
 `TimeCreated`, une propriété de chaque événement Windows, indique l’heure de création de l’événement. Vous pouvez comparer cette propriété avec un objet date/heure particulier pour filtrer tous les événements :
 
@@ -208,7 +208,7 @@ Count Name                      Group
     1 {6CEC5B09-5BB0-11E3-BF... {System.Diagnostics.Eventing.Reader.EventLogRecord}   
 ```
 
-### 3 : messages de la dernière opération
+### <a name="3-messages-from-the-latest-operation"></a>3 : messages de la dernière opération
 
 La dernière opération est stockée dans le premier index du groupe de tableaux `$SeparateDscOperations`. L’interrogation des messages du groupe pour l’index 0 retourne tous les messages de la dernière opération :
 
@@ -230,7 +230,7 @@ Displaying messages from built-in DSC resources:
  Message : [INCH-VM]:                            [] Consistency check completed. 
 ```
 
-### 4 : messages d’erreur enregistrés pour les dernières opérations ayant échoué
+### <a name="4-error-messages-logged-for-recent-failed-operations"></a>4 : messages d’erreur enregistrés pour les dernières opérations ayant échoué
 
 `$SeparateDscOperations[0].Group` contient un ensemble d’événements pour la dernière opération. Exécutez l’applet de commande `Where-Object` pour filtrer les événements selon le nom d’affichage du niveau. Les résultats sont stockés dans la variable `$myFailedEvent`, qui peut être examinée pour obtenir le message d’événement :
 
@@ -245,7 +245,7 @@ rameter to specify a configuration file and create a current configuration first
 Error Code : 1 
 ```
 
-### 5 : tous les événements générés pour un ID de tâche en particulier.
+### <a name="5-all-events-generated-for-a-particular-job-id"></a>5 : tous les événements générés pour un ID de tâche en particulier.
 
 `$SeparateDscOperations` est un tableau de groupes, chacun d’eux a comme nom l’ID de tâche unique. En exécutant l’applet de commande `Where-Object`, vous pouvez extraire les groupes d’événements qui ont un ID de tâche particulier :
 
@@ -262,11 +262,11 @@ TimeCreated                     Id LevelDisplayName Message
 12/2/2013 4:33:24 PM          4120 Information      Job {847A5619-5BB2-11E3-BF41-00155D553612} : ...  
 ```
 
-## Utilisation de xDscDiagnostics pour analyser les journaux DSC
+## <a name="using-xdscdiagnostics-to-analyze-dsc-logs"></a>Utilisation de xDscDiagnostics pour analyser les journaux DSC
 
 **xDscDiagnostics** est un module PowerShell qui se compose de plusieurs fonctions permettant d’analyser les échecs DSC sur votre ordinateur. Ces fonctions peuvent vous aider à identifier tous les événements locaux des dernières opérations DSC ou les événements DSC sur des ordinateurs distants (avec des informations d’identification valides). Ici, le terme opération DSC est utilisé pour définir une exécution DSC unique du début à la fin. Par exemple, `Test-DscConfiguration` est une opération DSC à part entière. De même, chaque autre applet de commande dans DSC (telle que `Get-DscConfiguration`, `Start-DscConfiguration`, etc.) peut être identifiée comme une opération DSC à part entière. Les fonctions sont expliquées dans [xDscDiagnostics](https://github.com/PowerShell/xDscDiagnostics). Vous accédez à l’aide en exécutant `Get-Help <cmdlet name>`.
 
-### Obtention de détails des opérations DSC 
+### <a name="getting-details-of-dsc-operations"></a>Obtention de détails des opérations DSC 
 
 La fonction `Get-xDscOperation` vous permet de rechercher les résultats des opérations DSC qui s’exécutent sur un ou plusieurs ordinateurs, et de retourner un objet qui contient la collection d’événements produits par chaque opération DSC. Par exemple, dans la sortie suivante, trois commandes ont été exécutées. La première a réussi et les deux autres ont échoué. Ces résultats sont résumés dans la sortie de `Get-xDscOperation`.
 
@@ -294,9 +294,9 @@ SRV1   4          6/23/2016 4:36:54 PM  Success  5c06402a-399b-11e6-9165-00155d3
 SRV1   5          6/23/2016 4:36:51 PM  Success                                        {@{Message=; TimeC...
 ```
 
-### Obtention des détails des événements DSC
+### <a name="getting-details-of-dsc-events"></a>Obtention des détails des événements DSC
 
-L’applet de commande `Trace-xDscOperation1`retourne un objet qui contient une collection d’événements, leur type et la sortie de message générée à partir d’une opération DSC particulière. En règle générale, quand vous trouvez une erreur dans une opération à l’aide de `Get-xDscOperation`, vous tracez l’opération pour déterminer lequel des événements a entraîné un échec.
+L’applet de commande `Trace-xDscOperation`retourne un objet qui contient une collection d’événements, leur type et la sortie de message générée à partir d’une opération DSC particulière. En règle générale, quand vous trouvez une erreur dans une opération à l’aide de `Get-xDscOperation`, vous tracez l’opération pour déterminer lequel des événements a entraîné un échec.
 
 Utilisez le paramètre `SequenceID` pour obtenir les événements d’une opération spécifique d’un ordinateur spécifique. Par exemple, si vous spécifiez une valeur de 9 pour `SequenceID`, `Trace-xDscOperaion` obtient la trace de la neuvième opération DSC à partir de la dernière opération :
 
@@ -401,7 +401,7 @@ TimeCreated                     Id LevelDisplayName Message
 
 Idéalement, commencez par utiliser `Get-xDscOperation` pour répertorier les dernières exécutions de configuration DSC sur vos ordinateurs. Ensuite, vous pouvez examiner chaque opération (à l’aide de son ID de séquence ou de tâche) avec `Trace-xDscOperation` pour découvrir ce qu’elle a effectué en arrière-plan.
 
-### Obtention des événements d’un ordinateur distant
+### <a name="getting-events-for-a-remote-computer"></a>Obtention des événements d’un ordinateur distant
 
 Utilisez le paramètre `ComputerName` de l’applet de commande `Trace-xDscOperation` pour obtenir les détails des événements d’un ordinateur distant. Avant cela, vous devez créer une règle de pare-feu pour autoriser l’administration à distance sur l’ordinateur distant :
 
@@ -447,7 +447,7 @@ SRV2   OPERATIONAL  6/24/2016 11:36:56 AM Operation Consistency Check or Pull co
 SRV2   ANALYTIC     6/24/2016 11:36:56 AM Deleting file from C:\Windows\System32\Configuration\DSCEngineCach...
 ```
 
-## Mes ressources ne sont pas mises à jour : comment réinitialiser le cache
+## <a name="my-resources-wont-update-how-to-reset-the-cache"></a>Mes ressources ne sont pas mises à jour : comment réinitialiser le cache
 
 Le moteur DSC met en cache les ressources implémentées comme module PowerShell pour des raisons d’efficacité. Toutefois, cela peut entraîner des problèmes quand vous créez et testez une ressource simultanément, car DSC charge la version mise en cache tant que le processus n’est pas redémarré. La seule façon pour que DSC charge la version la plus récente est d’arrêter explicitement le processus qui héberge le moteur DSC.
 
@@ -471,7 +471,7 @@ Select-Object -ExpandProperty HostProcessIdentifier
 Get-Process -Id $dscProcessID | Stop-Process
 ```
 
-## Utilisation de DebugMode
+## <a name="using-debugmode"></a>Utilisation de DebugMode
 
 Vous pouvez configurer le gestionnaire de configuration local DSC de façon à utiliser `DebugMode` pour toujours effacer le cache lors du redémarrage du processus hôte. Quand la valeur est **TRUE**, elle force le moteur à toujours recharger la ressource DSC PowerShell. Une fois que vous avez écrit votre ressource, vous pouvez la redéfinir avec la valeur **FALSE** pour que le moteur mette de nouveau en cache les modules.
 
@@ -612,20 +612,20 @@ onlyProperty                            PSComputerName
 14                                      localhost
 ```
 
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 
-### Référence
+### <a name="reference"></a>Référence
 * [Ressource Log dans DSC](logResource.md)
 
-### Concepts
-* [Création de ressources DSC Windows PowerShell personnalisées](authoringResource.md)
+### <a name="concepts"></a>Concepts
+* [Création de ressources personnalisées de configuration d’état souhaité Windows PowerShell](authoringResource.md)
 
-### Autres ressources
-* [Applets de commande de la configuration d’état souhaité Windows PowerShell](https://technet.microsoft.com/en-us/library/dn521624(v=wps.630).aspx)
-
-
+### <a name="other-resources"></a>Autres ressources
+* [Windows PowerShell Desired State Configuration Cmdlets](https://technet.microsoft.com/en-us/library/dn521624(v=wps.630).aspx)
 
 
-<!--HONumber=Oct16_HO1-->
+
+
+<!--HONumber=Oct16_HO4-->
 
 
