@@ -1,6 +1,6 @@
-# Problèmes connus liés à la Configuration d’état souhaité (DSC)
+# <a name="desired-state-configuration-dsc-known-issues-and-limitations"></a>Problèmes connus liés à la Configuration d’état souhaité (DSC)
 
-Modification avec rupture : les certificats utilisés pour chiffrer/déchiffrer les mots de passe dans les configurations DSC peuvent ne pas fonctionner après l’installation de WMF 5.0 RTM
+<a name="breaking-change-certificates-used-to-encryptdecrypt-passwords-in-dsc-configurations-may-not-work-after-installing-wmf-50-rtm"></a>Modification avec rupture : les certificats utilisés pour chiffrer/déchiffrer les mots de passe dans les configurations DSC peuvent ne pas fonctionner après l’installation de WMF 5.0 RTM
 --------------------------------------------------------------------------------------------------------------------------------
 
 Dans les versions WMF 4.0 et WMF 5.0 Preview, DSC n’autorisait pas les mots de passe de plus de 121 caractères dans la configuration. DSC forçait l’utilisation de mots de passe courts même si des mots de passe forts et longs étaient souhaités. Cette modification avec rupture autorise les mots de passe de longueur arbitraire dans la configuration DSC.
@@ -8,7 +8,7 @@ Dans les versions WMF 4.0 et WMF 5.0 Preview, DSC n’autorisait pas les mots 
 **Résolution :** Recréez le certificat avec l’attribut Data Encipherment ou Key Encipherment Key Usage, et avec l’attribut Document Encryption Enhanced Key Usage (1.3.6.1.4.1.311.80.1). L’article TechNet <https://technet.microsoft.com/en-us/library/dn807171.aspx> contient des informations supplémentaires.
 
 
-Les applets de commande DSC peuvent échouer après l’installation de WMF 5.0 RTM
+<a name="dsc-cmdlets-may-fail-after-installing-wmf-50-rtm"></a>Les applets de commande DSC peuvent échouer après l’installation de WMF 5.0 RTM
 ------------------------------------------------------------------------------------
 Start-DscConfiguration et d’autres applets de commande DSC peuvent échouer après l’installation de WMF 5.0 RTM avec l’erreur suivante :
 ```powershell
@@ -25,7 +25,7 @@ Remove-Item -Path $env:SystemRoot\system32\Configuration\DSCEngineCache.mof
 ```
 
 
-Les applets de commande DSC peuvent ne pas fonctionner si WMF 5.0 RTM est installé sur WMF 5.0 Production Preview
+<a name="dsc-cmdlets-may-not-work-if-wmf-50-rtm-is-installed-on-top-of-wmf-50-production-preview"></a>Les applets de commande DSC peuvent ne pas fonctionner si WMF 5.0 RTM est installé sur WMF 5.0 Production Preview
 ------------------------------------------------------
 **Résolution :** Exécutez la commande suivante dans une session PowerShell avec élévation de privilèges (Exécuter en tant qu’administrateur) :
 ```powershell
@@ -33,7 +33,7 @@ Les applets de commande DSC peuvent ne pas fonctionner si WMF 5.0 RTM est insta
 ```
 
 
-Le gestionnaire de configuration local peut basculer dans un état instable lors de l’utilisation de Get-DscConfiguration en DebugMode
+<a name="lcm-can-go-into-an-unstable-state-while-using-getdscconfiguration-in-debugmode"></a>Le gestionnaire de configuration local peut basculer dans un état instable lors de l’utilisation de Get-DscConfiguration en DebugMode
 -------------------------------------------------------------------------------
 
 Si le gestionnaire de configuration local est en DebugMode, une pression sur Ctrl+C pour arrêter le traitement de Get-DscConfiguration peut provoquer son basculement dans un état instable où la plupart des applets de commande DSC ne fonctionneront pas.
@@ -41,43 +41,43 @@ Si le gestionnaire de configuration local est en DebugMode, une pression sur Ctr
 **Résolution :** N’appuyez pas sur Ctrl+C lors du débogage de l’applet de commande Get-DscConfiguration.
 
 
-Stop-DscConfiguration peut se bloquer en DebugMode
+<a name="stopdscconfiguration-may-hang-in-debugmode"></a>Stop-DscConfiguration peut se bloquer en DebugMode
 ------------------------------------------------------------------------------------------------------------------------
 Si le gestionnaire de configuration local est en DebugMode, Stop-DscConfiguration peut se bloquer lors d’une tentative d’arrêt d’une opération démarrée par Get-DscConfiguration
 
-**Résolution :** Terminez le débogage de l’opération démarrée par Get-DscConfiguration comme décrit dans la section «[ Débogage de script de ressources DSC](#dsc-resource-script-debugging) ».
+**Résolution :** terminez le débogage de l’opération démarrée par Get-DscConfiguration comme décrit dans la section « [Débogage des ressources DSC](https://msdn.microsoft.com/powershell/dsc/debugresource) ».
 
 
-Aucun message d’erreur détaillé n’est affiché en DebugMode
+<a name="no-verbose-error-messages-are-shown-in-debugmode"></a>Aucun message d’erreur détaillé n’est affiché en DebugMode
 -----------------------------------------------------------------------------------
 Si le gestionnaire de configuration local est en DebugMode, aucun message d’erreur détaillé n’est affiché à partir des ressources DSC.
 
 **Résolution :** Désactivez *DebugMode* pour afficher les messages détaillés à partir de la ressource
 
 
-Les opérations Invoke-DscResource ne peuvent pas être récupérées par l’applet de commande Get-DscConfigurationStatus
+<a name="invokedscresource-operations-cannot-be-retrieved-by-getdscconfigurationstatus-cmdlet"></a>Les opérations Invoke-DscResource ne peuvent pas être récupérées par l’applet de commande Get-DscConfigurationStatus
 --------------------------------------------------------------------------------------
 Après l’utilisation de l’applet de commande Invoke-DscResource pour appeler directement les méthodes d’une ressource quelconque, les enregistrements de cette opération ne peuvent pas être récupérés ultérieurement par Get-DscConfigurationStatus.
 
 **Résolution :** Aucune.
 
 
-Get-DscConfigurationStatus retourne les opérations de cycle d’extraction en tant que type *Consistency*
+<a name="getdscconfigurationstatus-returns-pull-cycle-operations-as-type-consistency"></a>Get-DscConfigurationStatus retourne les opérations de cycle d’extraction en tant que type *Consistency*
 ---------------------------------------------------------------------------------
 Quand un nœud est configuré en mode d’actualisation par extraction, pour chaque opération d’extraction effectuée, l’applet de commande Get-DscConfigurationStatus indique que le type d’opération est *Consistency* au lieu de *Initial*
 
 **Résolution :** Aucune.
 
-L’applet de commande Invoke-DscResource ne retourne pas les messages dans l’ordre dans lequel ils ont été générés
+<a name="invokedscresource-cmdlet-does-not-return-message-in-the-order-they-were-produced"></a>L’applet de commande Invoke-DscResource ne retourne pas les messages dans l’ordre dans lequel ils ont été générés
 ---------------------------------------------------------------------------------
 L’applet de commande Invoke-DscResource ne retourne pas les messages détaillés, d’avertissement et d’erreur dans l’ordre dans lequel ils ont été générés par le gestionnaire de configuration local ou la ressource DSC.
 
 **Résolution :** Aucune.
 
 
-Les ressources DSC ne peuvent pas être déboguées facilement en cas d’utilisation avec Invoke-DscResource
+<a name="dsc-resources-cannot-be-debugged-easily-when-used-with-invokedscresource"></a>Les ressources DSC ne peuvent pas être déboguées facilement en cas d’utilisation avec Invoke-DscResource
 -----------------------------------------------------------------------
-Quand le gestionnaire de configuration local s’exécute en mode débogage (pour plus de détails, consultez [Débogage de script de ressources DSC](#dsc-resource-script-debugging)), l’applet de commande Invoke-DscResource ne donne pas d’informations sur l’instance d’exécution à laquelle se connecter pour le débogage.
+Quand le gestionnaire de configuration local s’exécute en mode débogage (pour plus de détails, consultez [Débogage des ressources DSC](https://msdn.microsoft.com/powershell/dsc/debugresource)), l’applet de commande Invoke-DscResource ne donne pas d’informations sur l’instance d’exécution à laquelle se connecter pour le débogage.
 **Résolution :** Effectuez la découverte et la jonction à l’instance d’exécution à l’aide des applets de commande **Get-PSHostProcessInfo**, **Enter-PSHostProcess** , **Get-Runspace** et **Debug-Runspace** pour déboguer la ressource DSC.
 
 ```powershell
@@ -106,7 +106,7 @@ Debug-Runspace -Id 2
 ```
 
 
-Différents documents de configuration partielle pour le même nœud ne peuvent pas avoir des noms de ressources identiques
+<a name="various-partial-configuration-documents-for-same-node-cannot-have-identical-resource-names"></a>Différents documents de configuration partielle pour le même nœud ne peuvent pas avoir des noms de ressources identiques
 ------------------------------------------------------------------------------------------
 
 Pour plusieurs configurations partielles déployées sur un même nœud, des noms de ressources identiques provoquent des erreurs au moment de l’exécution.
@@ -114,7 +114,7 @@ Pour plusieurs configurations partielles déployées sur un même nœud, des nom
 **Résolution :** Utilisez des noms différents pour les mêmes ressources dans différentes configurations partielles.
 
 
-Start-DscConfiguration –UseExisting ne fonctionne pas avec -Credential
+<a name="startdscconfiguration-useexisting-does-not-work-with-credential"></a>Start-DscConfiguration –UseExisting ne fonctionne pas avec -Credential
 ------------------------------------------------------------------
 
 Quand vous utilisez Start-DscConfiguration avec le paramètre –UseExisting, le paramètre –Credential est ignoré. DSC utilise l’identité de processus par défaut pour continuer l’opération. Cela provoque une erreur quand des informations d’identification différentes sont nécessaires pour continuer sur le nœud distant.
@@ -126,21 +126,21 @@ Start-DscConfiguration -UseExisting -CimSession $session
 ```
 
 
-Adresses IPv6 en tant que noms de nœuds dans les configurations DSC
+<a name="ipv6-addresses-as-node-names-in-dsc-configurations"></a>Adresses IPv6 en tant que noms de nœuds dans les configurations DSC
 --------------------------------------------------
 Les adresses IPv6 en tant que noms de nœuds dans les scripts de configuration DSC ne sont pas prises en charge dans cette version.
 
 **Résolution :** Aucune.
 
 
-Débogage des ressources DSC basées sur une classe
+<a name="debugging-of-classbased-dsc-resources"></a>Débogage des ressources DSC basées sur une classe
 --------------------------------------
 Le débogage des ressources DSC basées sur une classe n’est pas pris en charge dans cette version.
 
 **Résolution :** Aucune.
 
 
-Les variables et fonctions définies dans l’étendue $script dans une ressource DSC basée sur une classe ne sont pas conservées entre les appels à une ressource DSC 
+<a name="variables-functions-defined-in-script-scope-in-dsc-classbased-resource-are-not-preserved-across-multiple-calls-to-a-dsc-resource"></a>Les variables et fonctions définies dans l’étendue $script dans une ressource DSC basée sur une classe ne sont pas conservées entre les appels à une ressource DSC 
 -------------------------------------------------------------------------------------------------------------------------------------
 
 Plusieurs appels successifs à Start-DSCConfiguration échouent si la configuration utilise une ressource basée sur une classe qui a des variables ou des fonctions définies dans l’étendue $script.
@@ -148,32 +148,32 @@ Plusieurs appels successifs à Start-DSCConfiguration échouent si la configurat
 **Résolution :** Définissez toutes les variables et fonctions dans la classe de ressource DSC proprement dite. Aucune variable/fonction d’étendue $script.
 
 
-Débogage de ressources DSC quand une ressource utilise PSDscRunAsCredential
+<a name="dsc-resource-debugging-when-a-resource-is-using-psdscrunascredential"></a>Débogage de ressources DSC quand une ressource utilise PSDscRunAsCredential
 ----------------------------------------------------------------------
 Le débogage de ressources DSC quand une ressource utilise la propriété *PSDscRunAsCredential* dans la configuration n’est pas pris en charge dans cette version.
 
 **Résolution :** Aucune.
 
 
-PsDscRunAsCredential n’est pas pris en charge pour les ressources DSC composites
+<a name="psdscrunascredential-is-not-supported-for-dsc-composite-resources"></a>PsDscRunAsCredential n’est pas pris en charge pour les ressources DSC composites
 ----------------------------------------------------------------
 
 **Résolution :** Utilisez si possible une propriété Credential. Exemple de ServiceSet et WindowsFeatureSet
 
 
-*Get-DscResource -Syntax* ne reflète pas correctement PsDscRunAsCredential
+<a name="getdscresource-syntax-does-not-reflect-psdscrunascredential-correctly"></a>*Get-DscResource -Syntax* ne reflète pas correctement PsDscRunAsCredential
 -------------------------------------------------------------------------
 Get-DscResource -Syntax ne reflète pas correctement PsDscRunAsCredential quand la ressource la marque comme étant obligatoire ou ne la prend pas en charge.
 
 **Résolution :** Aucune. Cependant, la création de configuration dans ISE reflète les métadonnées correctes concernant la propriété PsDscRunAsCredential lors de l’utilisation d’IntelliSense.
 
 
-WindowsOptionalFeature n’est pas disponible dans Windows 7
+<a name="windowsoptionalfeature-is-not-available-in-windows-7"></a>WindowsOptionalFeature n’est pas disponible dans Windows 7
 -----------------------------------------------------
 
 La ressource DSC WindowsOptionalFeature n’est pas disponible dans Windows 7. Cette ressource nécessite le module DISM et les applets de commande DISM qui sont disponibles à partir de Windows 8 et des versions plus récentes du système d’exploitation Windows.
 
-Pour les ressources DSC basées sur une classe, Import-DscResource -ModuleVersion peut ne pas fonctionner comme prévu   
+<a name="for-classbased-dsc-resources-importdscresource-moduleversion-may-not-work-as-expected"></a>Pour les ressources DSC basées sur une classe, Import-DscResource -ModuleVersion peut ne pas fonctionner comme prévu   
 ------------------------------------------------------------------------------------------
 Si le nœud de compilation a plusieurs versions d’un module de ressource DSC basé sur une classe, `Import-DscResource -ModuleVersion` ne récupère pas la version spécifiée et génère l’erreur de compilation suivante.
 
@@ -191,7 +191,7 @@ At C:\Windows\system32\WindowsPowerShell\v1.0\Modules\PSDesiredStateConfiguratio
 Import-DscResource -ModuleName @{ModuleName='MyModuleName';RequiredVersion='1.2'}  
 ```  
 
-Certaines ressources DSC comme une ressource du Registre peuvent commencer à prendre beaucoup de temps pour traiter la demande.
+<a name="some-dsc-resources-like-registry-resource-may-start-to-take-a-long-time-to-process-the-request"></a>Certaines ressources DSC comme une ressource du Registre peuvent commencer à prendre beaucoup de temps pour traiter la demande.
 --------------------------------------------------------------------------------------------------------------------------------
 
 **Résolution 1 :** Créez une tâche planifiée qui nettoie le dossier suivant régulièrement.
@@ -228,6 +228,6 @@ Configuration $configName
 ```
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
