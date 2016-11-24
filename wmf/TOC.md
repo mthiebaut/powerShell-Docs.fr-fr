@@ -1,22 +1,24 @@
 # [Vue d’ensemble de Windows Management Framework (WMF)](README.md)
 
-# [WMF 5.1](5.1/release-notes.md)
+# [WMF 5.1](5.1/release-notes.md)
 ## [Nouveaux scénarios et fonctionnalités](5.1/scenarios-features.md)
 ### [Améliorations apportées à la Configuration d’état souhaité (DSC)](5.1/DSC-improvements.md)
 ### [Améliorations de la console PowerShell](5.1/console-improvements.md)
 ### [Améliorations du moteur PowerShell](5.1/engine-improvements.md)
 ### [Améliorations de la gestion des packages](5.1/package-management-improvements.md)
-### [Bogues corrigés dans WMF 5.1](5.1/bugfixes.md)
+### [Améliorations dans JEA](5.1/jea-improvements.md)
+### [Applets de commande de catalogue](5.1/catalog-cmdlets.md)
+### [Bogues corrigés dans WMF 5.1](5.1/bugfixes.md)
 ## [Installer et configurer](5.1/install-configure.md)
 ## [Problèmes connus](5.1/known-issues.md)
 ## [Compatibilité](5.1/Compatibility.md)
 
-# [WMF 5.0](5.0/releasenotes.md)
+# [WMF 5.0](5.0/releasenotes.md)
 ## [Détails de l'installation](5.0/requirements.md)
 ## [Limitations et problèmes connus](5.0/limitation_overview.md)
 ### [Problèmes connus liés à la Configuration d’état souhaité (DSC)](5.0/limitation_dsc.md)
 ## [État de compatibilité des produits](5.0/productincompat.md)
-## [Scénarios activés par WMF 5.0]()
+## [Scénarios activés par WMF 5.0]()
 ### [Just Enough Administration (JEA)](5.0/jea_overview.md)
 #### [Création et connexion à un point de terminaison JEA](5.0/jea_endpoint.md)
 #### [Création de rapports sur JEA](5.0/jea_report.md)
@@ -46,7 +48,7 @@
 ##### [Configurer un nœud avec plusieurs fragments de configuration](5.0/dsc_partialconfig.md)
 ###### [Prise en charge du mode d’actualisation mixte](5.0/dsc_partialconfig_mixedmode.md)
 ##### [Configurer le moteur DSC avec un nouvel attribut](5.0/dsc_metaconfiguration.md)
-##### [Informations détaillées sur l’état du Gestionnaire de configuration local](5.0/dsc_lcmstate.md)
+##### [Informations détaillées sur l’état du gestionnaire de configuration local](5.0/dsc_lcmstate.md)
 ##### [Les fréquences pour RefreshMode et ConfigurationMode ne doivent pas nécessairement être des multiples l’une de l’autre](5.0/dsc_freqnomultiple.md)
 ##### [Valeur supplémentaire pour la propriété RefreshMode](5.0/dsc_refreshmode.md)
 #### [Applets de commande]()
@@ -68,8 +70,8 @@
 #### [Applets de commande CMS (Cryptographic Message Syntax, syntaxe de message de chiffrement)](5.0/audit_cms.md)
 ### [Découverte, installation et inventaire des logiciels avec PackageManagement](5.0/oneget_overview.md)
 #### [Applets de commande PackageManagement](5.0/oneget_cmdlets.md)
-### [Découverte, installation et inventaire des modules PowerShell avec PowerShellGet](5.0/psget_module_overview.md)
-#### [Inscrire un dépôt PowerShell](5.0/psget_psrepository.md)
+### [écouverte, installation et inventaire des modules PowerShell avec PowerShellGet](5.0/psget_module_overview.md)
+#### [Inscrire un référentiel PowerShell](5.0/psget_psrepository.md)
 #### [Prise en charge des versions côte à côte sur PowerShell 5.0 ou version ultérieure](5.0/psget_modulesxsinstall.md)
 #### [Installation des dépendances de modules](5.0/psget_moduledependency.md)
 #### [Applets de commande PowerShellGet pour la gestion des modules](5.0/psget_modulecmdlets.md)
@@ -91,9 +93,9 @@
 ### [Flux d’informations](5.0/informationstream_overview.md)
 ### [Générer des applets de commande PowerShell basées sur un point de terminaison OData](5.0/odata_overview.md)
 ### [Gestion du commutateur réseau avec PowerShell](5.0/networkswitch_overview.md)
-### [Journalisation de l’inventaire logiciel](5.0/sil_overview.md)
+### [Journalisation de l’inventaire logiciel (SIL)](5.0/sil_overview.md)
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

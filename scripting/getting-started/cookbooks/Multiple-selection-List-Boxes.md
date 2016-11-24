@@ -14,10 +14,10 @@ ms.openlocfilehash: 03a9bbfb14c4587d794db2eaadf60cc7a4d4dcdc
 
 ---
 
-# Zones de liste à sélection multiple
+# <a name="multiple-selection-list-boxes"></a>Zones de liste à sélection multiple
 Dans Windows PowerShell 3.0 et versions ultérieures, vous pouvez créer un contrôle de zone de liste à sélection multiple dans un formulaire Windows Form personnalisé.
 
-## Créer des contrôles de zone de liste autorisant plusieurs sélections
+## <a name="create-list-box-controls-that-allow-multiple-selections"></a>Créer des contrôles de zone de liste autorisant plusieurs sélections
 Copiez le code suivant, puis collez-le dans Windows PowerShell ISE. Ensuite, enregistrez-le en tant que script Windows PowerShell (.ps1).
 
 ```
@@ -184,7 +184,7 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 - [Hey Scripting Guy:  Why don’t these PowerShell GUI examples work?](http://go.microsoft.com/fwlink/?LinkId=506644)
 - [GitHub: Dave Wyatt’s WinFormsExampleUpdates](https://github.com/dlwyatt/WinFormsExampleUpdates)
 - [Astuce Windows PowerShell de la semaine : Zones de liste à sélection multiple et bien plus encore](http://technet.microsoft.com/library/ff730950.aspx)
@@ -192,6 +192,6 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

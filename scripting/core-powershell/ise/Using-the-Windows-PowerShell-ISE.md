@@ -14,7 +14,7 @@ ms.openlocfilehash: 6363aff01a6018f1fc3a850c6e40ad96e485f554
 
 ---
 
-# Utilisation de Windows PowerShell ISE
+# <a name="using-the-windows-powershell-ise"></a>Utilisation de Windows PowerShell ISE
 Les rubriques de ce document décrivent comment utiliser les fonctionnalités de l’environnement d’écriture de scripts intégré (ISE) de Windows PowerShell® pour être plus productif.
 
 [Comment utiliser la saisie semi-automatique via la touche Tab dans les volets Script et Commande](How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md) Indique les étapes d’exécution de la saisie semi-automatique via la touche Tab dans les volets Script et Console.
@@ -29,14 +29,14 @@ Les rubriques de ce document décrivent comment utiliser les fonctionnalités de
 
 [Comment utiliser des profils dans Windows PowerShell ISE](How-to-Use-Profiles-in-Windows-PowerShell-ISE.md) Fournit des informations sur les étapes de création et d’utilisation de profils dans Windows PowerShell ISE.
 
-## Voir aussi
-- [Découverte de Windows PowerShell ISE](../../getting-started/fundamental/Exploring-the-Windows-PowerShell-ISE.md)
+## <a name="see-also"></a>Voir aussi
+- [Exploration de Windows PowerShell ISE](../../getting-started/fundamental/Exploring-the-Windows-PowerShell-ISE.md)
 - [Accessibilité dans Windows PowerShell ISE](../../setup/Accessibility-in-Windows-PowerShell-ISE.md)
 - [Modèle objet de script Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/69b047d0-da79-413e-b948-8e45d05d1f85)
 
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

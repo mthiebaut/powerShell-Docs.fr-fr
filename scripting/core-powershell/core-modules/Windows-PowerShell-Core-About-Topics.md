@@ -14,7 +14,7 @@ ms.openlocfilehash: c935d6f066aed1496069681723aa7bd72edbb8e3
 
 ---
 
-# Rubriques About Windows PowerShell Core
+# <a name="windows-powershell-core-about-topics"></a>Rubriques About Windows PowerShell Core
 Cette section contient les rubriques d'aide conceptuelle (« About ») pour l'ensemble des modules Windows PowerShell. Pour accéder aux rubriques About d'autres modules, consultez les rubriques d'aide propres à chaque module.
 
 |Rubrique|Description|
@@ -133,10 +133,10 @@ Cette section contient les rubriques d'aide conceptuelle (« About ») pour l'
 |[about_WQL](https://technet.microsoft.com/en-us/library/820b2d23-3473-46f5-a188-5910704c7905)|Décrit le langage de requêtes WMI (WQL) qui peut être utilisé pour obtenir des objets WMI dans Windows PowerShell.|
 |[about_WS-Management_Cmdlets [v3]](https://technet.microsoft.com/en-us/library/22738d36-4d49-472c-ae51-9365b9bbd7c2)|Décrit les applets de commande du module Microsoft.WsMan.Management. Explique comment les utiliser ensemble pour gérer les fonctionnalités de WS-Management, y compris le lecteur fournisseur WSMan.|
 
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 - [Écriture de scripts avec Windows PowerShell](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
 - [Windows PowerShell Core](https://technet.microsoft.com/en-us/library/4b75f1e4-f327-48f3-92ab-bf5435094d41)
-- [Windows PowerShell 5.0](Windows-PowerShell-5.0.md)
+- [Windows PowerShell 5.0](Windows-PowerShell-5.0.md)
 - [about_Scheduled_Jobs](https://technet.microsoft.com/en-us/library/3b546629-703c-4939-b44f-52dd567bce92)
 - [about_WMI_Cmdlets [v3]](https://technet.microsoft.com/en-us/library/9c56b172-3b25-47b2-b6e0-86db649b1c45)
 - [about_WS-Management_Cmdlets](https://technet.microsoft.com/en-us/library/6ed3370a-ea10-45a5-9493-696aeace27ed)
@@ -145,6 +145,6 @@ Cette section contient les rubriques d'aide conceptuelle (« About ») pour l'
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 
