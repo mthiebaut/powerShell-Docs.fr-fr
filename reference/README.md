@@ -14,7 +14,7 @@ ms.openlocfilehash: edafde9188cad3b21d0cd2b30cfaaf1bede9b195
 
 ---
 
-#  <a name="powershell-reference"></a>Informations de référence sur PowerShell
+#  Informations de référence sur PowerShell
 
 Les documents de référence sont organisés par versions commerciales.
 
@@ -50,6 +50,6 @@ Au fil du temps, les espaces de noms sont apparus comme suit :
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 
