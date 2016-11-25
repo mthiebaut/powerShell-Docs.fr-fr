@@ -32333,6 +32333,8 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [jea-improvements.8da2c02e4a4efc6b9f1c72743b55ba54b79a9df1.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/bda291b4f196b9d75fa4e738026fbc07afdee0ca/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/jea-improvements.8da2c02e4a4efc6b9f1c72743b55ba54b79a9df1.fr-fr.xlf)
 * Handback Datetime: 2016-11-25 14:28:42
+* Bilingual File: [jea-improvements.8da2c02e4a4efc6b9f1c72743b55ba54b79a9df1.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/bda291b4f196b9d75fa4e738026fbc07afdee0ca/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/jea-improvements.8da2c02e4a4efc6b9f1c72743b55ba54b79a9df1.fr-fr.xlf)
+* Bilingual Datetime: 2016-11-25 14:29:33
 * [Back to Top](#report-top)
 
 ##### <a name='b831555354d14bca22e5137afffadc1ed3b145542400'></a> Source: [wmf\5.1\known-issues.md](https://github.com/PowerShell/powerShell-Docs/blob/98a0e6d3c46a56cbed94de6a4bd68b88a79116ff/wmf/5.1/known-issues.md)
