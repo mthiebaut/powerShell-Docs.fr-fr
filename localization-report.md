@@ -5,12 +5,12 @@
  -------- | ----- 
  Total Files | 2424
 [ Handoff Failed Files ](#handoff-failed-list)| 1
-[ Handoff Success Files ](#handoff-success-list)| 2170
+[ Handoff Success Files ](#handoff-success-list)| 2169
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 20
 [ Handback Failed Files ](#handback-failed-list)| 2
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 0
-[ In Sync Handback Files ](#insync-handback-success-list)| 195
+[ In Sync Handback Files ](#insync-handback-success-list)| 196
 [ Ignored Files ](#ignored-list)| 36
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -2188,7 +2188,6 @@
  [wmf\5.0\networkswitch_overview.md](https://github.com/PowerShell/powerShell-Docs/blob/c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d/wmf/5.0/networkswitch_overview.md) | HandedOffSuccess | [Details](#540340775f8386d3baced6d14a1a75a8afbfd8362373)
  [wmf\5.1\DSC-improvements.md](https://github.com/PowerShell/powerShell-Docs/blob/270f2a458a40f005f462d3de5236defbb91a7362/wmf/5.1/DSC-improvements.md) | HandedOffSuccess | [Details](#c88c145c3585befcee194499f7e21aaeac67c0f32394)
  [wmf\5.1\install-configure.md](https://github.com/PowerShell/powerShell-Docs/blob/0c136264c9fe4e92771e4423011c2fa959f30e93/wmf/5.1/install-configure.md) | HandedOffSuccess | [Details](#21f26830cdc20a90ce48aa09bc7013d733242ae92396)
- [wmf\5.1\jea-improvements.md](https://github.com/PowerShell/powerShell-Docs/blob/37edecc88cf36cfb2f1800452b9586f15ce3a088/wmf/5.1/jea-improvements.md) | HandedOffSuccess | [Details](#bd01ff0d208717511505a1aedf9eeaa303d08dbe2397)
  [wmf\5.1\package-management-improvements.md](https://github.com/PowerShell/powerShell-Docs/blob/0a5dcec1089bd07b968c61b18ca4e6d59d0afd3b/wmf/5.1/package-management-improvements.md) | HandedOffSuccess | [Details](#615bdf1a82dc5078ee2f37eec70a64e25b42bda22401)
  [wmf\5.1\release-notes.md](https://github.com/PowerShell/powerShell-Docs/blob/965669e580e5322889f75f8a7684174a017d89b8/wmf/5.1/release-notes.md) | HandedOffSuccess | [Details](#e3d71b09896865ab24032f4e069e486b448d937a2402)
 
@@ -2415,6 +2414,7 @@
  [wmf\5.1\catalog-cmdlets.md](https://github.com/PowerShell/powerShell-Docs/blob/ecf70f38bbf48f410eb59b75f86eea767637757a/wmf/5.1/catalog-cmdlets.md) | InSyncHandedBackSuccess | [Details](#72df0311a1d187dc6c7c1d29b0a3d2fd243848f02390)
  [wmf\5.1\community-resources.md](https://github.com/PowerShell/powerShell-Docs/blob/1f6f18e46537d4b9f5e64c9e808e46e82b2d3050/wmf/5.1/community-resources.md) | InSyncHandedBackSuccess | [Details](#a1e178e907a9edbe652b5da32ad286550f95076f2391)
  [wmf\5.1\compatibility.md](https://github.com/PowerShell/powerShell-Docs/blob/1f6f18e46537d4b9f5e64c9e808e46e82b2d3050/wmf/5.1/compatibility.md) | InSyncHandedBackSuccess | [Details](#8e7dd69fc5ba29e719aec353afcac2471ecb23522392)
+ [wmf\5.1\jea-improvements.md](https://github.com/PowerShell/powerShell-Docs/blob/37edecc88cf36cfb2f1800452b9586f15ce3a088/wmf/5.1/jea-improvements.md) | InSyncHandedBackSuccess | [Details](#bd01ff0d208717511505a1aedf9eeaa303d08dbe2397)
  [wmf\5.1\known-issues.md](https://github.com/PowerShell/powerShell-Docs/blob/98a0e6d3c46a56cbed94de6a4bd68b88a79116ff/wmf/5.1/known-issues.md) | InSyncHandedBackSuccess | [Details](#b831555354d14bca22e5137afffadc1ed3b145542400)
  [wmf\5.1\known-issues-cache\NetworkingSwitchCmdletInput.md](https://github.com/PowerShell/powerShell-Docs/blob/34337749a77f4379b841a8478d4e6e3bc97e7ada/wmf/5.1/known-issues-cache/NetworkingSwitchCmdletInput.md) | InSyncHandedBackSuccess | [Details](#180158033e0c960f73dba66a3d77b15765e3e3822398)
  [wmf\5.1\known-issues-cache\template.md](https://github.com/PowerShell/powerShell-Docs/blob/a952a27ec1695ce9951c352446194cf72d18f50a/wmf/5.1/known-issues-cache/template.md) | InSyncHandedBackSuccess | [Details](#cfe0a6562743f1df81acb81e33c120cb67f9042c2399)
@@ -32324,15 +32324,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='bd01ff0d208717511505a1aedf9eeaa303d08dbe2397'></a> Source: [wmf\5.1\jea-improvements.md](https://github.com/PowerShell/powerShell-Docs/blob/37edecc88cf36cfb2f1800452b9586f15ce3a088/wmf/5.1/jea-improvements.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [wmf\5.1\jea-improvements.md](https://github.com/PowerShell/powerShell-Docs.fr-fr/blob/4f21ae7e8a2b9506478f4a90ee8ee4453fdcda19/wmf/5.1/jea-improvements.md)
 * Handoff File: [jea-improvements.8da2c02e4a4efc6b9f1c72743b55ba54b79a9df1.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/cef5f2734999ead22c0d334771769ace3da77c9c/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/jea-improvements.8da2c02e4a4efc6b9f1c72743b55ba54b79a9df1.fr-fr.xlf)
 * Handoff Datetime: 2016-11-23 21:54:42
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [jea-improvements.8da2c02e4a4efc6b9f1c72743b55ba54b79a9df1.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/bda291b4f196b9d75fa4e738026fbc07afdee0ca/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/jea-improvements.8da2c02e4a4efc6b9f1c72743b55ba54b79a9df1.fr-fr.xlf)
+* Handback Datetime: 2016-11-25 14:28:42
 * [Back to Top](#report-top)
 
 ##### <a name='b831555354d14bca22e5137afffadc1ed3b145542400'></a> Source: [wmf\5.1\known-issues.md](https://github.com/PowerShell/powerShell-Docs/blob/98a0e6d3c46a56cbed94de6a4bd68b88a79116ff/wmf/5.1/known-issues.md)
