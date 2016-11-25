@@ -1,28 +1,11 @@
 # <a name='report-top'></a> Localization Bilingual Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [wmf\5.1\jea-improvements.md](https://github.com/PowerShell/powerShell-Docs/blob/37edecc88cf36cfb2f1800452b9586f15ce3a088/wmf/5.1/jea-improvements.md) | InSyncHandedBackSuccess | [Details](#bd01ff0d208717511505a1aedf9eeaa303d08dbe2397)
 
 ## Item Details
-##### <a name='bd01ff0d208717511505a1aedf9eeaa303d08dbe2397'></a> Source: [wmf\5.1\jea-improvements.md](https://github.com/PowerShell/powerShell-Docs/blob/37edecc88cf36cfb2f1800452b9586f15ce3a088/wmf/5.1/jea-improvements.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [wmf\5.1\jea-improvements.md](https://github.com/PowerShell/powerShell-Docs.fr-fr/blob/4f21ae7e8a2b9506478f4a90ee8ee4453fdcda19/wmf/5.1/jea-improvements.md)
-* Handoff File: [jea-improvements.8da2c02e4a4efc6b9f1c72743b55ba54b79a9df1.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/cef5f2734999ead22c0d334771769ace3da77c9c/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/jea-improvements.8da2c02e4a4efc6b9f1c72743b55ba54b79a9df1.fr-fr.xlf)
-* Handoff Datetime: 2016-11-23 21:54:42
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [jea-improvements.8da2c02e4a4efc6b9f1c72743b55ba54b79a9df1.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/bda291b4f196b9d75fa4e738026fbc07afdee0ca/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/jea-improvements.8da2c02e4a4efc6b9f1c72743b55ba54b79a9df1.fr-fr.xlf)
-* Handback Datetime: 2016-11-25 14:28:42
-* Bilingual File: [jea-improvements.8da2c02e4a4efc6b9f1c72743b55ba54b79a9df1.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/bda291b4f196b9d75fa4e738026fbc07afdee0ca/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/jea-improvements.8da2c02e4a4efc6b9f1c72743b55ba54b79a9df1.fr-fr.xlf)
-* Bilingual Datetime: 2016-11-25 14:29:33
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
