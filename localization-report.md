@@ -5,10 +5,10 @@
  -------- | ----- 
  Total Files | 2424
 [ Handoff Failed Files ](#handoff-failed-list)| 1
-[ Handoff Success Files ](#handoff-success-list)| 2163
+[ Handoff Success Files ](#handoff-success-list)| 2162
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 19
-[ Handback Failed Files ](#handback-failed-list)| 10
+[ Handback Failed Files ](#handback-failed-list)| 11
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 0
 [ In Sync Handback Files ](#insync-handback-success-list)| 195
 [ Ignored Files ](#ignored-list)| 36
@@ -25,7 +25,6 @@
  [dsc\authoringResourceMOF.md](https://github.com/PowerShell/powerShell-Docs/blob/b414a01bcd111143791a5fac77e61ce309a0a5c5/dsc/authoringResourceMOF.md) | HandedOffSuccess | [Details](#50b99917f15d290db30da1b1b752d668d886ec5011)
  [dsc\configData.md](https://github.com/PowerShell/powerShell-Docs/blob/787ac3c3d6ffaf7b1009fe3cfd64a0aefadc32d1/dsc/configData.md) | HandedOffSuccess | [Details](#8d305c67fb22e0d27dc1a36ba93369e9633680d317)
  [dsc\configurations.md](https://github.com/PowerShell/powerShell-Docs/blob/49ddf6faf98a51f7ad5252e9563b1543478ed113/dsc/configurations.md) | HandedOffSuccess | [Details](#567ab9528402c7d39d80a997bc14b6c6992cf77220)
- [dsc\enactingConfigurations.md](https://github.com/PowerShell/powerShell-Docs/blob/49ddf6faf98a51f7ad5252e9563b1543478ed113/dsc/enactingConfigurations.md) | HandedOffSuccess | [Details](#9090f4be2987b8a56ba4d839f54e05082a8bcfa027)
  [dsc\images\CredentialEncryptionDiagram1.png](https://github.com/PowerShell/powerShell-Docs/blob/97cfb44dc3db0937a0eaae5af5113210f988aa56/dsc/images/CredentialEncryptionDiagram1.png) | HandedOffSuccess | [Details](#d9f53a805041164f5070845c0fd216b63d17ae5833)
  [dsc\lnxGettingStarted.md](https://github.com/PowerShell/powerShell-Docs/blob/e4385f0ed482b97e8794cde968de549902cc358e/dsc/lnxGettingStarted.md) | HandedOffSuccess | [Details](#2283e797275f426b624119bd1191e58080780c0944)
  [dsc\logResource.md](https://github.com/PowerShell/powerShell-Docs/blob/62f993e3d3e6ef744fb07920d332d476dfd24fc6/dsc/logResource.md) | HandedOffSuccess | [Details](#60085295fa7df6179a81cd98859cd33e6923150f51)
@@ -2215,6 +2214,7 @@
  ----------- | ------ | ------- 
  [dsc\authoringResourceComposite.md](https://github.com/PowerShell/powerShell-Docs/blob/48cfed9e0c31e24c441eafb388a799bd7fc7415f/dsc/authoringResourceComposite.md) | HandedBackFailed | [Details](#6631d60d7d82e71c315c26a0196aa3e4c1b60b1510)
  [dsc\DSCAutomationHostEnabled.md](https://github.com/PowerShell/powerShell-Docs/blob/260490003335923d4e1c6b6873b11ee71ba780c0/dsc/DSCAutomationHostEnabled.md) | HandedBackFailed | [Details](#24842d755aa34ab29c6a5b4f973052476bc907e526)
+ [dsc\enactingConfigurations.md](https://github.com/PowerShell/powerShell-Docs/blob/49ddf6faf98a51f7ad5252e9563b1543478ed113/dsc/enactingConfigurations.md) | HandedBackFailed | [Details](#9090f4be2987b8a56ba4d839f54e05082a8bcfa027)
  [gallery\psgallery\PackageManagement_Architecture .md](https://github.com/PowerShell/powerShell-Docs/blob/e6c526d1074f61154d03b92b6bf6f599976f5936/gallery/psgallery/PackageManagement_Architecture%20.md) | HandedBackFailed | [Details](#c84ff58e4378feffa15c91485826b74f421c737e120)
  [jea\prerequisites.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/prerequisites.md) | HandedBackFailed | [Details](#ac9231a475ba84e9051bbd06a65f3f20c9e49846188)
  [reference\README.md](https://github.com/PowerShell/powerShell-Docs/blob/6f2cc23f6fce9c267e793fa8653f292e6a6b98ec/reference/README.md) | HandedBackFailed | [Details](#edafde9188cad3b21d0cd2b30cfaaf1bede9b1952174)
@@ -2844,7 +2844,7 @@
 * [Back to Top](#report-top)
 
 ##### <a name='9090f4be2987b8a56ba4d839f54e05082a8bcfa027'></a> Source: [dsc\enactingConfigurations.md](https://github.com/PowerShell/powerShell-Docs/blob/49ddf6faf98a51f7ad5252e9563b1543478ed113/dsc/enactingConfigurations.md)
-* Status: HandedOffSuccess
+* Status: HandedBackFailed
 * Target File: 
 * Handoff File: [enactingConfigurations.5949c3926cc7d368fa49b0ba340a078984794e5d.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/cef5f2734999ead22c0d334771769ace3da77c9c/ol-handoff/PowerShell/powerShell-Docs.fr-fr/live/enactingConfigurations.5949c3926cc7d368fa49b0ba340a078984794e5d.fr-fr.xlf)
 * Handoff Datetime: 2016-11-23 21:54:42
@@ -2852,10 +2852,8 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [dsc\enactingConfigurations.md](https://github.com/PowerShell/powerShell-Docs.fr-fr/blob/0f4d913820cd9bb9cf1c9e94a9a20dfecf811c9f/dsc/enactingConfigurations.md)
-* Current Handback File: [enactingConfigurations.5949c3926cc7d368fa49b0ba340a078984794e5d.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/f74692a8a104f96f282ae33c0f80bdcda4600efa/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/enactingConfigurations.5949c3926cc7d368fa49b0ba340a078984794e5d.fr-fr.xlf)
-* Current Handback Datetime: 2016-06-28 15:28:27
+* Handback Datetime: 2016-12-02 23:02:53
+* Handback Error: [handback_file_rejected](#9090f4be2987b8a56ba4d839f54e05082a8bcfa027handback_file_rejected)
 * Bilingual File: [enactingConfigurations.5949c3926cc7d368fa49b0ba340a078984794e5d.fr-fr.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/f74692a8a104f96f282ae33c0f80bdcda4600efa/ol-handback/PowerShell/powerShell-Docs.fr-fr/live/enactingConfigurations.5949c3926cc7d368fa49b0ba340a078984794e5d.fr-fr.xlf)
 * Bilingual Datetime: 2016-06-28 15:32:14
 * [Back to Top](#report-top)
@@ -32680,6 +32678,12 @@
 * Error Message: file DSCAutomationHostEnabled.fba7c9b1470882c6192cbd39804769a5471d975c.fr-fr.xlf is out of handoff scope
 * Retriable: False
 * Error Details: {"internal_error_code":"handback_file_rejected","internal_error_message":"file DSCAutomationHostEnabled.fba7c9b1470882c6192cbd39804769a5471d975c.fr-fr.xlf is out of handoff scope","internal_error_retriable":false,"exception_message":"file DSCAutomationHostEnabled.fba7c9b1470882c6192cbd39804769a5471d975c.fr-fr.xlf is out of handoff scope","exception_type":"Microsoft.OpenLocalization.Common.ErrorHandling.OpenLocalizationException","stack_trace":null,"extended_information":null}
+
+##### <a name='9090f4be2987b8a56ba4d839f54e05082a8bcfa027handback_file_rejected'></a> Source: [dsc\enactingConfigurations.md](#9090f4be2987b8a56ba4d839f54e05082a8bcfa027)
+* Error Code: handback_file_rejected
+* Error Message: file enactingConfigurations.5949c3926cc7d368fa49b0ba340a078984794e5d.fr-fr.xlf is out of handoff scope
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_file_rejected","internal_error_message":"file enactingConfigurations.5949c3926cc7d368fa49b0ba340a078984794e5d.fr-fr.xlf is out of handoff scope","internal_error_retriable":false,"exception_message":"file enactingConfigurations.5949c3926cc7d368fa49b0ba340a078984794e5d.fr-fr.xlf is out of handoff scope","exception_type":"Microsoft.OpenLocalization.Common.ErrorHandling.OpenLocalizationException","stack_trace":null,"extended_information":null}
 
 ##### <a name='c84ff58e4378feffa15c91485826b74f421c737e120handback_validate_file_name_invalide'></a> Source: [gallery\psgallery\PackageManagement_Architecture .md](#c84ff58e4378feffa15c91485826b74f421c737e120)
 * Error Code: handback_validate_file_name_invalide
