@@ -1,4 +1,4 @@
-# L’applet de commande Test-DscConfiguration prend en charge les configurations de référence
+# <a name="test-dscconfiguration-cmdlet-supports-reference-configurations"></a>L’applet de commande Test-DscConfiguration prend en charge les configurations de référence
 
 L’applet de commande Test-DscConfiguration a été mise à jour pour autoriser le test de l’état de configuration souhaitée d’un ou plusieurs nœuds cibles en spécifiant un document de configuration de référence à comparer.
 
@@ -35,8 +35,3 @@ Test-DscConfiguration   -ReferenceConfiguration <string>
                         [-AsJob] 
                         [<CommonParameters>]
 ```
-
-
-<!--HONumber=Aug16_HO3-->
-
-

@@ -8,38 +8,36 @@ keywords: powershell,applet de commande,jea
 ms.date: 2016-06-22
 title: "capacités de rôle"
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 81fd386d58576a8930093b4f18ce36a4ff6cecd0
-ms.openlocfilehash: a3dd4a217f5b1fd80e97adf802c65073ca015bbc
-
+ms.openlocfilehash: d5f6311d74e47f2fa1a93909c244cddf114b0229
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
+# <a name="role-capabilities"></a>Capacités de rôle
 
-# Capacités de rôle
-
-## Vue d’ensemble
-Dans la section ci-dessus, vous avez appris que le champ « RoleDefinitions » définit quels groupes ont accès à quelles capacités de rôle.
-Vous vous êtes peut-être demandé : « Que sont les capacités de rôle ? »
+## <a name="overview"></a>Vue d’ensemble
+Dans la section ci-dessus, vous avez appris que le champ « RoleDefinitions » définit quels groupes ont accès à quelles capacités de rôle.
+Vous vous êtes peut-être demandé : « Que sont les capacités de rôle ? »
 Cette section va répondre à cette question.  
 
-## Présentation des capacités de rôle PowerShell
-Les capacités de rôle PowerShell définissent « ce » qu’un utilisateur peut faire sur un point de terminaison JEA.
+## <a name="introducing-powershell-role-capabilities"></a>Présentation des capacités de rôle PowerShell
+Les capacités de rôle PowerShell définissent « ce » qu’un utilisateur peut faire sur un point de terminaison JEA.
 Elles dressent la liste des éléments comme les commandes visibles, les applications visibles, etc.
-Les capacités de rôle sont définies par des fichiers portant une extension « .psrc ».
+Les capacités de rôle sont définies par des fichiers portant une extension « .psrc ».
 
-## Contenu des capacités de rôle
+## <a name="role-capability-contents"></a>Contenu des capacités de rôle
 Nous allons commencer en examinant et en modifiant le fichier de capacité de rôle de démonstration que vous avez utilisé précédemment.
 Imaginez que vous avez déployé votre configuration de session sur votre environnement, mais que vous avez reçu des commentaires vous invitant à modifier les capacités exposées aux utilisateurs.
 Les opérateurs ont besoin de pouvoir redémarrer les ordinateurs et aussi d’être en mesure d’obtenir des informations sur les paramètres réseau.
 L’équipe de sécurité vous a également dit que qu’il ne faut pas permettre aux utilisateurs d’exécuter « Restart-Service » sans aucune restriction.
 Vous devez restreindre les services que les opérateurs peuvent redémarrer.
 
-Pour apporter ces modifications, commencez par exécuter PowerShell ISE en tant qu’administrateur et ouvrir le fichier suivant :
+Pour apporter ces modifications, commencez par exécuter PowerShell ISE en tant qu’administrateur et ouvrir le fichier suivant :
 
 ```
 C:\Program Files\WindowsPowerShell\Modules\Demo_Module\RoleCapabilities\Maintenance.psrc
 ```
 
-Maintenant recherchez et mettez à jour les lignes suivantes dans le fichier :
+Maintenant recherchez et mettez à jour les lignes suivantes dans le fichier :
 
 ```PowerShell
 # OLD: VisibleCmdlets = 'Restart-Service'
@@ -54,13 +52,13 @@ VisibleCmdlets = 'Restart-Computer',
 VisibleExternalCommands = 'C:\Windows\system32\ipconfig.exe'
 ```
 
-Ce fichier contient quelques exemples intéressants :
+Ce fichier contient quelques exemples intéressants :
 
-1.  Vous avez restreint Restart-Service de sorte que les opérateurs puissent uniquement l’utiliser avec le paramètre -Name et qu’ils soient uniquement autorisés à spécifier « Spooler » en tant qu’argument pour ce paramètre.
-Si vous le voulez, vous pouvez également restreindre les arguments en utilisant une expression régulière qui utilise « ValidatePattern » au lieu de « ValidateSet ».
+1.  Vous avez restreint Restart-Service de sorte que les opérateurs puissent uniquement l’utiliser avec le paramètre -Name et qu’ils soient uniquement autorisés à spécifier « Spooler » en tant qu’argument pour ce paramètre.
+Si vous le voulez, vous pouvez également restreindre les arguments en utilisant une expression régulière qui utilise « ValidatePattern » au lieu de « ValidateSet ».
 
-2.  Vous avez exposé toutes les commandes avec le verbe « Get » à partir du module NetTCPIP.
-Étant donné que les commandes « Get » ne modifient généralement pas l’état du système, cette action est relativement sûre.
+2.  Vous avez exposé toutes les commandes avec le verbe « Get » à partir du module NetTCPIP.
+Étant donné que les commandes « Get » ne modifient généralement pas l’état du système, cette action est relativement sûre.
 Ceci dit, il est fortement conseillé d’examiner de près chaque commande que vous exposez par le biais de JEA.
 
 3.  Vous avez exposé un exécutable (ipconfig) en utilisant VisibleExternalCommands.
@@ -83,7 +81,7 @@ Maintenant, vérifiez que vous pouvez redémarrer l’ordinateur en exécutant R
 Restart-Computer -WhatIf
 ```
 
-Vérifiez que vous pouvez exécuter « ipconfig ».
+Vérifiez que vous pouvez exécuter « ipconfig ».
 
 ```PowerShell
 ipconfig
@@ -102,10 +100,10 @@ Quittez la session quand vous avez terminé.
 Exit-PSSession
 ```
 
-## Création de capacités de rôle
+## <a name="role-capability-creation"></a>Création de capacités de rôle
 Dans la section suivante, vous allez créer un point de terminaison JEA pour les utilisateurs du support technique AD.
 À titre de préparation, nous allons créer un fichier de capacité de rôle vierge à remplir pendant cette section.
-Les capacités de rôle doivent être créées dans un dossier « RoleCapabilities » à l’intérieur d’un module PowerShell valide afin de pouvoir être résolues lorsqu’une session démarre.
+Les capacités de rôle doivent être créées dans un dossier « RoleCapabilities » à l’intérieur d’un module PowerShell valide afin de pouvoir être résolues lorsqu’une session démarre.
 
 Les modules PowerShell sont essentiellement des packages de fonctionnalités PowerShell.
 Ils peuvent contenir des fonctions, applets de commandes, ressources DSC, capacités de rôle PowerShell, etc.
@@ -133,18 +131,12 @@ New-PSRoleCapabilityFile -Path 'C:\Program Files\WindowsPowerShell\Modules\Conto
 Félicitations ! Vous avez créé un fichier de capacité de rôle vierge.
 Il servira dans la section suivante.
 
-## Concepts clés
-**Capacité de rôle (.psrc)** : fichier qui définit ce qu’un utilisateur peut faire sur un point de terminaison JEA.
+## <a name="key-concepts"></a>Concepts clés
+**Capacité de rôle (.psrc)** : fichier qui définit ce qu’un utilisateur peut faire sur un point de terminaison JEA.
 Elle dresse la liste des éléments comme les commandes visibles, les applications de console visibles, etc.
 Pour que PowerShell détecte les capacités de rôle, vous devez les placer dans un dossier « RoleCapabilities » dans un module PowerShell valide.
 
-**Module PowerShell** : package de fonctionnalités PowerShell.
+**Module PowerShell** : package de fonctionnalités PowerShell.
 Il peut contenir des fonctions, applets de commandes, ressources DSC, capacités de rôle PowerShell, etc.
 Pour être chargés automatiquement, les modules PowerShell doivent se trouver sous un chemin dans `$env:PSModulePath`.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

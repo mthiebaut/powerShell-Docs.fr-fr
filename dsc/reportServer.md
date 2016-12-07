@@ -7,17 +7,15 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 1e7bc38f03dd72fc29d004eb92bf130c416e490a
 ms.openlocfilehash: f7f2699287e76970d0b2565f7bbd45a5d75ac93a
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="using-a-dsc-report-server"></a>Utilisation d’un serveur de rapports DSC
 
-> S’applique à : Windows PowerShell 5.0
+> S’applique à : Windows PowerShell 5.0
 
->**Remarque** : le serveur de rapports décrit dans cette rubrique n’est pas disponible dans PowerShell 4.0.
+>**Remarque** : le serveur de rapports décrit dans cette rubrique n’est pas disponible dans PowerShell 4.0.
 
 Le gestionnaire de configuration local d’un nœud peut être configuré pour envoyer des rapports sur son état de configuration à un serveur collecteur, qui peut alors être interrogé pour récupérer ces données. Chaque fois, le nœud vérifie et applique une configuration, il envoie un rapport au serveur de rapports. Ces rapports sont stockés dans une base de données sur le serveur et peuvent être récupérés en appelant le service web de création de rapports. Chaque rapport contient des informations telles que les configurations qui ont été appliquées et si l’opération a réussi, les ressources utilisées, les erreurs qui ont été levées et les heures de début et de fin.
 
@@ -96,11 +94,11 @@ PullClientConfig
 
 ## <a name="getting-report-data"></a>Obtention des données du rapport
 
-Les rapports envoyés au serveur collecteur sont entrés dans une base de données sur le serveur. Les rapports sont disponibles par le biais d’appels au service web. Pour récupérer des rapports pour un nœud spécifique, envoyez une demande HTTP au service web de rapports sous la forme suivante : `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentID = MyNodeAgentId)/Reports` où `MyNodeAgentId` est l’ID de l’agent du nœud pour lequel vous voulez obtenir des rapports. Vous pouvez obtenir l’ID de l’agent d’un nœud en appelant [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx) sur ce nœud.
+Les rapports envoyés au serveur collecteur sont entrés dans une base de données sur le serveur. Les rapports sont disponibles par le biais d’appels au service web. Pour récupérer des rapports pour un nœud spécifique, envoyez une demande HTTP au service web de rapports sous la forme suivante : `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentID = MyNodeAgentId)/Reports` où `MyNodeAgentId` est l’ID de l’agent du nœud pour lequel vous voulez obtenir des rapports. Vous pouvez obtenir l’ID de l’agent d’un nœud en appelant [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx) sur ce nœud.
 
 Les rapports sont retournés sous forme de tableau d’objets JSON.
 
-Le script suivant retourne les rapports pour le nœud sur lequel il est exécuté :
+Le script suivant retourne les rapports pour le nœud sur lequel il est exécuté :
 
 ```powershell
 function GetReport
@@ -117,7 +115,7 @@ function GetReport
     
 ## <a name="viewing-report-data"></a>Affichage des données du rapport
 
-Si vous définissez une variable sur le résultat de la fonction **GetReport**, vous pouvez afficher les champs individuels dans un élément du tableau retourné :
+Si vous définissez une variable sur le résultat de la fonction **GetReport**, vous pouvez afficher les champs individuels dans un élément du tableau retourné :
 
 ```powershell
 $reports = GetReport
@@ -157,14 +155,14 @@ StatusData           : {{"StartDate":"2016-04-03T06:21:43.7220000-07:00","IPV6Ad
 AdditionalData       : {}
 ```
 
-Par défaut, les rapports sont triés par **JobID**. Pour obtenir le rapport le plus récent, vous pouvez trier les rapports dans l’ordre décroissant de la valeur de la propriété **StartTime**, puis obtenir le premier élément du tableau :
+Par défaut, les rapports sont triés par **JobID**. Pour obtenir le rapport le plus récent, vous pouvez trier les rapports dans l’ordre décroissant de la valeur de la propriété **StartTime**, puis obtenir le premier élément du tableau :
 
 ```powershell
 $reportsByStartTime = $reports | Sort-Object {$_."StartTime" -as [DateTime] } -Descending
 $reportMostRecent = $reportsByStartTime[0]
 ```
 
-Notez que la propriété **StatusData** est un objet avec un certain nombre de propriétés. C’est là que figurent une bonne partie des données de création de rapports. Examinons les différents champs de la propriété**StatusData** pour le rapport le plus récent :
+Notez que la propriété **StatusData** est un objet avec un certain nombre de propriétés. C’est là que figurent une bonne partie des données de création de rapports. Examinons les différents champs de la propriété**StatusData** pour le rapport le plus récent :
 
 ```powershell
 $statusData = $reportMostRecent.StatusData | ConvertFrom-Json
@@ -226,10 +224,4 @@ Notez que ces exemples ont pour but de vous donner une idée de ce que vous pouv
 - [Configuration du gestionnaire de configuration local](metaConfig.md)
 - [Configuration d’un serveur collecteur web DSC](pullServer.md)
 - [Configuration d’un client collecteur à l’aide du nom de configuration](pullClientConfigNames.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

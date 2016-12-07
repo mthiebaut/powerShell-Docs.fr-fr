@@ -9,39 +9,37 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psget_get installedmodule
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 40a79a74117f28407758367f4e27b7ae26917078
-
+ms.openlocfilehash: a3c7c96bcb288dcc44aa1e4039d85def4ddb014e
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Get-InstalledModule
+# <a name="get-installedmodule"></a>Get-InstalledModule
 
 Obtient les modules installés sur un ordinateur.
 
-## Description
+## <a name="description"></a>Description
 
 L’applet de commande Get-InstalledModule obtient les modules PowerShell qui ont été installés sur un ordinateur à l’aide de l’applet de commande Install-Module.
 
 Pour chaque module installé, Get-InstalledModule retourne un objet PSRepositoryItemInfo qui peut éventuellement être transmis à Uninstall-Module pour désinstaller les modules installés.
 
 - Get-InstalledModule peut filtrer les modules installés selon le nom ou les paramètres de version.
-- Get-InstalledModule permet de filtrer avec des paramètres de version : MinimumVersion, MaximumVersion, RequiredVersion, AllVersions.
+- Get-InstalledModule permet de filtrer avec des paramètres de version : MinimumVersion, MaximumVersion, RequiredVersion, AllVersions.
   - Ces paramètres sont mutuellement exclusifs, sauf MinmimumVersion et MaximumVersion.
   - Ces paramètres de version sont autorisés uniquement avec le nom de module unique sans les caractères génériques.
   - Si le paramètre RequiredVersion n’est pas spécifié, Get-InstalledModule retourne la dernière version du module installé qui est supérieure ou égale à la version minimale spécifiée ou la dernière version du module si aucune version minimale n’est spécifiée. 
   - Si le paramètre RequiredVersion est spécifié, Get-InstalledModule retourne uniquement la version du module installé qui correspond exactement à la version spécifiée.
 
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 ```powershell
 Get-Command -Name Get-InstalledModule -Module PowerShellGet -Syntax
 ```
 
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [Get-InstalledModule](http://go.microsoft.com/fwlink/?LinkId=526863)
 
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 
 ```powershell
 
@@ -105,7 +103,7 @@ InstalledLocation          : C:\Program Files\WindowsPowerShell\Modules\DJoin\1.
 
 
 
-## Propriétés InstalledDate et UpdatedDate dans l’objet PSGetRepositoryItemInfo
+## <a name="installeddate-and-updateddate-properties-in-psgetrepositoryiteminfo-object"></a>Propriétés InstalledDate et UpdatedDate dans l’objet PSGetRepositoryItemInfo
 
     During the install operation:
         InstalledDate: current DateTime (Get-Date) value
@@ -131,10 +129,4 @@ Name          InstalledDate         UpdatedDate
 ----          -------------         -----------
 ContosoServer 2/29/2016 11:59:14 AM 2/29/2016 12:00:15 PM
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

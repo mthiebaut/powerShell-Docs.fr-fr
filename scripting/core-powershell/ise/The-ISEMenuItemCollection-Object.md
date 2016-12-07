@@ -8,19 +8,17 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 0c0f5484-3320-408e-8534-5bd1c8e48512
-translationtype: Human Translation
-ms.sourcegitcommit: 6c666e2e23cb74818e37293410dafc9033057733
-ms.openlocfilehash: 489c9492e8de213145b71a7963e180fe1a4ad5b6
-
+ms.openlocfilehash: 89f62e1dc70886bd4c3bf84a3ffc27dfdcba7a3e
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="the-isemenuitemcollection-object"></a>Objet ISEMenuItemCollection
   Un objet **ISEMenuItemCollection** est une collection d’objets **ISEMenuItem**. Il s’agit d’une instance de la classe Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection. Par exemple, l’objet **$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus** est utilisé pour personnaliser le menu **Module complémentaire** dans l’environnement d’écriture de scripts intégré (ISE) de Windows PowerShell®.
 
 ## <a name="method"></a>Méthode
 
 ### <a name="addstring-displayname-systemmanagementautomationscriptblock-action-systemwindowsinputkeygesture-shortcut-"></a>Add\(string DisplayName, System.Management.Automation.ScriptBlock Action, System.Windows.Input.KeyGesture Shortcut \)
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Ajoute un élément de menu à la collection.
 
@@ -43,7 +41,7 @@ $menuAdded = $psISE.CurrentPowerShellTab.AddOnsMenu.SubMenus.Add("_Process",{get
 ```
 
 ### <a name="clear"></a>Clear\(\)
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Supprime tous les sous-menus de l’élément de menu.
 
@@ -60,9 +58,3 @@ $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.Clear()
 - [Hiérarchie du modèle objet ISE](The-ISE-Object-Model-Hierarchy.md)
 
   
-
-
-
-<!--HONumber=Nov16_HO4-->
-
-

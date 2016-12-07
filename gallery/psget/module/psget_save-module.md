@@ -9,30 +9,28 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psget_save module
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: ee03101cc5b54ac515cfdcc318b97d9c3178cda1
-
+ms.openlocfilehash: 9e83f1eeeb8e4bee666aeb845702f6562a487d6b
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Save-Module
+# <a name="save-module"></a>Save-Module
 
 Enregistre un module localement sans l’installer.
 
-## Description
+## <a name="description"></a>Description
 
 L’applet de commande Save-Module enregistre un module localement à partir du référentiel spécifié pour inspection. Le module n’est pas installé.
 
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 ```powershell
 Get-Command -Name Save-Module -Module PowerShellGet -Syntax
 ```
 
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [Save-Module](http://go.microsoft.com/fwlink/?LinkId=531351)
 
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 
 ```powershell
 Save-Module -Repository MSPSGallery -Name ModuleWithDependencies2 -Path C:\MySavedModuleLocation
@@ -60,10 +58,4 @@ Find-Command -Name "Get-NestedRequiredModule4" -Repository "INT" | Save-Module -
 Find-RoleCapability -Name Maintenance,MyJeaRole | Save-Module -Path C:\MyModulesPath
 
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

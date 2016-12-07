@@ -9,40 +9,38 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psget_get installedscript
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: f809c5c8f5a28c01c67ee4c4453ecca7796838c4
-
+ms.openlocfilehash: d755ed5dbcee279f943d56832ffd7689e4cc6f04
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Get-InstalledScript
+# <a name="get-installedscript"></a>Get-InstalledScript
 
 Obtient les scripts installés sur un ordinateur.
 
-## Description
+## <a name="description"></a>Description
 
 L’applet de commande Get-InstalledScript obtient les scripts PowerShell installés sur un ordinateur.
 
 Pour chaque script installé, Get-InstalledScript retourne un objet PSRepositoryItemInfo qui peut éventuellement être transmis à Uninstall-Script pour désinstaller les scripts installés.
 
 - Get-InstalledScript peut filtrer les scripts installés selon le nom ou les paramètres de version.
-- Get-InstalledScript permet de filtrer avec des paramètres de version : MinimumVersion, MaximumVersion, RequiredVersion, AllVersions.
+- Get-InstalledScript permet de filtrer avec des paramètres de version : MinimumVersion, MaximumVersion, RequiredVersion, AllVersions.
   - Ces paramètres sont mutuellement exclusifs, sauf MinmimumVersion et MaximumVersion.
   - Ces paramètres de version sont autorisés uniquement avec le nom de script unique sans les caractères génériques.
   - Si le paramètre RequiredVersion n’est pas spécifié, Get-InstalledScript retourne la dernière version du script installé qui est supérieure ou égale à la version minimale spécifiée ou la dernière version du script si aucune version minimale n’est spécifiée. 
   - Si le paramètre RequiredVersion est spécifié, Get-InstalledScript retourne uniquement la version du script installé qui correspond exactement à la version spécifiée.
 
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 
 ```powershell
 Get-Command -Name Get-InstalledScript -Module PowerShellGet -Syntax
 ```
 
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [Get-InstalledScript](http://go.microsoft.com/fwlink/?LinkId=619790)
 
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 
 ```powershell
 
@@ -103,10 +101,4 @@ InstalledLocation          : C:\Program Files\WindowsPowerShell\Scripts
 
 
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

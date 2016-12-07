@@ -7,15 +7,13 @@ ms.topic: article
 author: jpjofre
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: ab536969fac8ded0e540da3eb138448b4f444f67
-ms.openlocfilehash: c8f97c3b565e0718b38a8e62a2b9cb9558451fc5
-
+ms.openlocfilehash: ad92b1b58049c3d5890c81300af0894fb0ae78ec
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-#  Commandes PowerShell courantes
+#  <a name="common-powershell"></a>Commandes PowerShell courantes
 Cette section contient tous les documents de référence et guides détaillés sur PowerShell.  
-Contenu de cette section :
+Contenu de cette section :
 -  [Modules courants PowerShell](core-modules.md)
 -  [Environnement d’écriture de scripts intégré (ISE) de PowerShell](ise-guide.md)
 -  [Fenêtre de console PowerShell](console-guide.md)
@@ -23,9 +21,3 @@ Contenu de cette section :
 -  [Workflows PowerShell](workflows-guide.md)
 -  [Accès web PowerShell](web-access.md)
 -  [Glossaire PowerShell](../Windows-PowerShell-Glossary.md)
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

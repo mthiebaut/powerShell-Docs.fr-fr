@@ -8,31 +8,29 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 57125436-3d1e-4e7f-b5c4-8f0ecb49d642
-translationtype: Human Translation
-ms.sourcegitcommit: c40ab96196531d36001e4d94a3821d20612cbfce
-ms.openlocfilehash: 333469a642a4b88442a7d3ca8fa65f5755c69bcc
-
+ms.openlocfilehash: adadad15dfca9355e31c40d502571153b0112935
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
+# <a name="starting-windows-powershell-on-earlier-versions-of-windows"></a>Démarrage de Windows PowerShell sur des versions antérieures de Windows
+Cette section explique comment démarrer Windows PowerShell et l’environnement d’écriture de scripts intégré (ISE) de Windows PowerShell sur Windows® 7, Windows Server® 2008 R2 et Windows Server 2008. Elle explique également comment activer la fonctionnalité facultative pour Windows PowerShell ISE dans Windows PowerShell 2.0 sur Windows Server® 2008 R2 et Windows Server® 2008.
 
-# Démarrage de Windows PowerShell sur des versions antérieures de Windows
-Cette section explique comment démarrer Windows PowerShell et l’environnement d’écriture de scripts intégré (ISE) de Windows PowerShell sur Windows® 7, Windows Server® 2008 R2 et Windows Server 2008. Elle explique également comment activer la fonctionnalité facultative pour Windows PowerShell ISE dans Windows PowerShell 2.0 sur Windows Server® 2008 R2 et Windows Server® 2008.
+Pour installer Windows PowerShell 4.0 sur des systèmes pris en charge, téléchargez et installez [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881). Pour plus d’informations, voir [Installation de Windows PowerShell](Installing-Windows-PowerShell.md).
 
-Pour installer Windows PowerShell 4.0 sur des systèmes pris en charge, téléchargez et installez [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881). Pour plus d’informations, voir [Installation de Windows PowerShell](Installing-Windows-PowerShell.md).
+Pour installer Windows PowerShell 3.0 sur des systèmes pris en charge, téléchargez et installez [Windows Management Framework 3.0](http://go.microsoft.com/fwlink/?LinkID=240290). Pour plus d’informations, voir [Installation de Windows PowerShell](Installing-Windows-PowerShell.md).
 
-Pour installer Windows PowerShell 3.0 sur des systèmes pris en charge, téléchargez et installez [Windows Management Framework 3.0](http://go.microsoft.com/fwlink/?LinkID=240290). Pour plus d’informations, voir [Installation de Windows PowerShell](Installing-Windows-PowerShell.md).
+## <a name="how-to-start-windows-powershell-on-earlier-versions-of-windows"></a>Comment démarrer Windows PowerShell sur des versions antérieures de Windows
+Pour démarrer la version installée de Windows PowerShell 3.0 ou Windows PowerShell 4.0, le cas échéant, utilisez une des méthodes suivantes.
 
-## Comment démarrer Windows PowerShell sur des versions antérieures de Windows
-Pour démarrer la version installée de Windows PowerShell 3.0 ou Windows PowerShell 4.0, le cas échéant, utilisez une des méthodes suivantes.
-
-#### À partir du menu Démarrer
+#### <a name="from-the-start-menu"></a>À partir du menu Démarrer
 
 -   Cliquez sur **Démarrer**, tapez **PowerShell**, puis cliquez sur **Windows PowerShell**.
 
 -   À partir du menu **Démarrer**, cliquez sur **Démarrer**, **Tous les programmes**, **Accessoires**, cliquez sur le dossier **Windows PowerShell**, puis sur **Windows PowerShell**.
 
-#### À l’invite de commandes
+#### <a name="at-the-command-prompt"></a>À l’invite de commandes
 
--   Dans Cmd.exe, Windows PowerShell ou Windows PowerShell ISE, pour démarrer Windows PowerShell, tapez :
+-   Dans Cmd.exe, Windows PowerShell ou Windows PowerShell ISE, pour démarrer Windows PowerShell, tapez :
 
     ```
     PowerShell
@@ -40,22 +38,22 @@ Pour démarrer la version installée de Windows PowerShell 3.0 ou Windows Power
 
     Vous pouvez également utiliser les paramètres du programme PowerShell.exe pour personnaliser la session. Pour plus d’informations, voir [Aide sur la ligne de commande PowerShell.exe](../core-powershell/console/PowerShell.exe-Command-Line-Help.md).
 
-#### Avec des privilèges d’administration (« Exécuter en tant qu’administrateur »)
+#### <a name="with-administrative-privileges-run-as-administrator"></a>Avec des privilèges d’administration (« Exécuter en tant qu’administrateur »)
 
 1.  Cliquez sur **Démarrer**, tapez **PowerShell**, cliquez avec le bouton droit sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**.
 
-## Comment démarrer Windows PowerShell ISE sur des versions antérieures de Windows
+## <a name="how-to-start-windows-powershell-ise-on-earlier-releases-of-windows"></a>Comment démarrer Windows PowerShell ISE sur des versions antérieures de Windows
 Utilisez une des méthodes suivantes pour démarrer Windows PowerShell ISE.
 
-#### À partir du menu Démarrer
+#### <a name="from-the-start-menu"></a>À partir du menu Démarrer
 
 -   Cliquez sur **Démarrer**, tapez **ISE**, puis cliquez sur **Windows PowerShell ISE**.
 
--   À partir du menu **Démarrer**, cliquez sur **Démarrer**, **Tous les programmes**, **Accessoires**, cliquez sur le dossier **Windows PowerShell**, puis sur **Windows PowerShell ISE**.
+-   À partir du menu **Démarrer**, cliquez sur **Démarrer**, **Tous les programmes**, **Accessoires**, cliquez sur le dossier **Windows PowerShell**, puis sur **Windows PowerShell ISE**.
 
-#### À l’invite de commandes
+#### <a name="at-the-command-prompt"></a>À l’invite de commandes
 
--   Dans Cmd.exe, Windows PowerShell ou Windows PowerShell ISE, pour démarrer Windows PowerShell, tapez :
+-   Dans Cmd.exe, Windows PowerShell ou Windows PowerShell ISE, pour démarrer Windows PowerShell, tapez :
 
     ```
     PowerShell_ISE
@@ -67,28 +65,22 @@ Utilisez une des méthodes suivantes pour démarrer Windows PowerShell ISE.
     ISE
     ```
 
-#### Avec des privilèges d’administration (« Exécuter en tant qu’administrateur »)
+#### <a name="with-administrative-privileges-run-as-administrator"></a>Avec des privilèges d’administration (« Exécuter en tant qu’administrateur »)
 
-1.  Cliquez sur **Démarrer**, tapez **ISE**, cliquez avec le bouton droit sur **Windows PowerShell ISE**, puis cliquez sur **Exécuter en tant qu’administrateur**.
+1.  Cliquez sur **Démarrer**, tapez **ISE**, cliquez avec le bouton droit sur **Windows PowerShell ISE**, puis cliquez sur **Exécuter en tant qu’administrateur**.
 
-## Comment activer Windows PowerShell ISE sur des versions antérieures de Windows
-Dans Windows PowerShell 4.0 et Windows PowerShell 3.0, Windows PowerShell ISE est activé par défaut sur toutes les versions de Windows. S’il n’est pas activé, Windows Management Framework 4.0 ou Windows Management Framework 3.0 l’active.
+## <a name="how-to-enable-windows-powershell-ise-on-earlier-releases-of-windows"></a>Comment activer Windows PowerShell ISE sur des versions antérieures de Windows
+Dans Windows PowerShell 4.0 et Windows PowerShell 3.0, Windows PowerShell ISE est activé par défaut sur toutes les versions de Windows. S’il n’est pas activé, Windows Management Framework 4.0 ou Windows Management Framework 3.0 l’active.
 
-Dans Windows PowerShell 2.0, Windows PowerShell ISE est activé par défaut sur Windows 7. Toutefois, sur Windows Server 2008 R2 et Windows Server 2008, c’est une fonctionnalité facultative.
+Dans Windows PowerShell 2.0, Windows PowerShell ISE est activé par défaut sur Windows 7. Toutefois, sur Windows Server 2008 R2 et Windows Server 2008, c’est une fonctionnalité facultative.
 
-Pour activer Windows PowerShell ISE dans Windows PowerShell 2.0 sur Windows Server 2008 R2 ou Windows Server 2008, utilisez la procédure suivante.
+Pour activer Windows PowerShell ISE dans Windows PowerShell 2.0 sur Windows Server 2008 R2 ou Windows Server 2008, utilisez la procédure suivante.
 
-#### Pour activer Windows PowerShell Integrated Scripting Environment (ISE)
+#### <a name="to-enable-windows-powershell-integrated-scripting-environment-ise"></a>Pour activer Windows PowerShell Integrated Scripting Environment (ISE)
 
 1.  Démarrez le Gestionnaire de serveur.
 
 2.  Cliquez sur **Fonctionnalités**, puis sur **Ajouter des fonctionnalités**.
 
 3.  Dans Sélectionner des fonctionnalités, cliquez sur Windows PowerShell Integrated Scripting Environment (ISE).
-
-
-
-
-<!--HONumber=Oct16_HO1-->
-
 

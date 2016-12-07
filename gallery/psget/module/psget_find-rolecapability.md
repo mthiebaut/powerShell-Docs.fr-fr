@@ -9,21 +9,19 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psget_find rolecapability
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: cdb675c32f62c5bd7acfb79357342f71960b50f4
-
+ms.openlocfilehash: 3f005bf0a9201c3762ca6399a78d4ff983409656
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Find-RoleCapability
+# <a name="find-rolecapability"></a>Find-RoleCapability
 
 Recherche les capacités de rôle dans des modules.
 
-## Description
+## <a name="description"></a>Description
 L’applet de commande Find-RoleCapability recherche les capacités de rôle PowerShell dans des modules. Find-RoleCapability recherche des modules dans les référentiels enregistrés. Pour chaque capacité de rôle qu’elle détecte, cette applet de commande retourne un objet PSGetRoleCapabilityInfo. Vous pouvez passer un objet PSGetRoleCapabilityInfo à l’applet de commande Install-Module pour installer le module qui contient la capacité de rôle.
-Les capacités de rôle PowerShell définissent, entre autres, les commandes et applications à la disposition d’un utilisateur au niveau d’un point de terminaison d’administration suffisante. Les capacités de rôle sont définies par des fichiers portant une extension .psrc.
+Les capacités de rôle PowerShell définissent, entre autres, les commandes et applications à la disposition d’un utilisateur au niveau d’un point de terminaison d’administration suffisante. Les capacités de rôle sont définies par des fichiers portant une extension .psrc.
 
-- Find-RoleCapability permet de filtrer avec des paramètres de version : MinimumVersion, RequiredVersion, AllVersions.
+- Find-RoleCapability permet de filtrer avec des paramètres de version : MinimumVersion, RequiredVersion, AllVersions.
   - Ces paramètres sont mutuellement exclusifs.
   - Ces paramètres de version sont autorisés uniquement avec le nom de module unique sans les caractères génériques.
   - Si le paramètre RequiredVersion n’est pas spécifié, Find-RoleCapability retourne la dernière version du module qui est supérieure ou égale à la version minimale spécifiée ou la dernière version du module si aucune version minimale n’est spécifiée.
@@ -32,16 +30,16 @@ Les capacités de rôle PowerShell définissent, entre autres, les commandes et 
 - Find-RoleCapability peut filtrer le langage de recherche propre au référentiel avec le paramètre -Filter.
 - Find-RoleCapability peut filtrer les modules à partir de l’ensemble ou de certains des référentiels enregistrés.
 
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 ```powershell
 Get-Command -Name Find-RoleCapability -Module PowerShellGet -Syntax
 ```
 
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [Find-RoleCapability](http://go.microsoft.com/fwlink/?LinkId=718029)
 
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 ```powershell
 
 # Find a specific role capability
@@ -83,10 +81,4 @@ Find-RoleCapability -Filter RBAC
 Find-RoleCapability -Tag Azure, DSC
 
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

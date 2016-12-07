@@ -8,25 +8,23 @@ keywords: powershell,applet de commande,jea
 ms.date: 2016-06-22
 title: "conditions préalables"
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
-ms.openlocfilehash: ac9231a475ba84e9051bbd06a65f3f20c9e49846
-
+ms.openlocfilehash: 6cd57c2fab63d2184cb5c792b63df99dbd782235
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
+# <a name="prerequisites"></a>Conditions préalables
 
-# Conditions préalables
-
-## État initial
-Avant d’entamer cette section, vérifiez les points suivants :
+## <a name="initial-state"></a>État initial
+Avant d’entamer cette section, vérifiez les points suivants :
 
 1. JEA est disponible sur votre système. Consultez le fichier [LISEZMOI](./README.md) pour connaître les systèmes d’exploitation actuellement pris en charge et les téléchargements requis.
 2. Vous possédez des droits d’administrateur sur l’ordinateur sur lequel vous testez JEA.
 3. L’ordinateur est joint à un domaine.
 Consultez la section [Création d’un contrôleur de domaine](#creating-a-domain-controller) pour configurer rapidement un nouveau domaine sur un serveur si vous n’en avez pas déjà un.
 
-## Activer la communication à distance de PowerShell
+## <a name="enable-powershell-remoting"></a>Activer la communication à distance de PowerShell
 La gestion avec JEA s’effectue via la communication à distance de PowerShell.
-Exécutez la commande suivante dans une fenêtre PowerShell de l’administrateur pour vous assurer qu’elle est activée et correctement configurée :
+Exécutez la commande suivante dans une fenêtre PowerShell de l’administrateur pour vous assurer qu’elle est activée et correctement configurée :
 
 ```PowerShell
 Enable-PSRemoting
@@ -34,7 +32,7 @@ Enable-PSRemoting
 
 Si vous ne connaissez pas bien la communication à distance de PowerShell, n’hésitez pas à exécuter `Get-Help about_Remote` pour en savoir plus sur cet important concept fondamental.
 
-## Identifier vos utilisateurs ou groupes
+## <a name="identify-your-users-or-groups"></a>Identifier vos utilisateurs ou groupes
 Pour voir JEA en action, vous devez identifier les utilisateurs et groupes non-administrateurs que vous aller utiliser tout au long de ce guide.
 
 Si vous utilisez un domaine existant, identifiez ou créez quelques utilisateurs ou groupes non privilégiés.
@@ -45,7 +43,7 @@ Si vous avez créé un domaine ex nihilo, cette tâche est beaucoup plus facile.
 Utilisez la section [Configurer des utilisateurs et des groupes](creating-a-domain-controller.md#set-up-users-and-groups) en annexe pour créer des utilisateurs et groupes non-administrateurs.
 Les valeurs par défaut de `$NonAdministrator` vont correspondre aux groupes créés dans cette section.
 
-## Configurer le fichier de capacité de rôle de maintenance
+## <a name="set-up-maintenance-role-capability-file"></a>Configurer le fichier de capacité de rôle de maintenance
 Exécutez les commandes suivantes dans PowerShell pour créer le fichier de capacité de rôle démonstration que nous allons utiliser pour la section suivante.
 Plus loin dans ce guide, vous allez découvrir à quoi sert ce fichier.
 
@@ -68,7 +66,7 @@ New-Item -Path "$env:ProgramFiles\WindowsPowerShell\Modules\Demo_Module\RoleCapa
 New-PSRoleCapabilityFile -Path "$env:ProgramFiles\WindowsPowerShell\Modules\Demo_Module\RoleCapabilities\Maintenance.psrc" @MaintenanceRoleCapabilityCreationParams
 ```
 
-## Créer et inscrire le fichier de configuration de session de démonstration
+## <a name="create-and-register-demo-session-configuration-file"></a>Créer et inscrire le fichier de configuration de session de démonstration
 Exécutez les commandes suivantes pour créer et inscrire le fichier de configuration de session de démonstration que nous allons utiliser pour la section suivante.
 Plus loin dans ce guide, vous allez découvrir à quoi sert ce fichier.
 
@@ -110,25 +108,19 @@ New-PSSessionConfigurationFile -Path "$env:ProgramData\JEAConfiguration\JEADemo.
 Register-PSSessionConfiguration -Name $sessionName -Path "$env:ProgramData\JEAConfiguration\JEADemo.pssc"
 ```
 
-## Activer l’enregistrement des modules PowerShell (facultatif)
+## <a name="enable-powershell-module-logging-optional"></a>Activer l’enregistrement des modules PowerShell (facultatif)
 Les étapes suivantes activent la journalisation de toutes les actions PowerShell sur votre système.
 Vous n’êtes pas obligé de l’activer pour que JEA fonctionne, mais elle s’avérera utile dans la section [Création de rapports sur JEA](reporting-on-jea.md).
 
 1. Ouvrez l'éditeur de stratégie de groupe locale
-2. Accédez à « Configuration de l’ordinateur\Modèles d’administration\Composants Windows\Windows PowerShell ».
-3. Double cliquez sur « Activer l’enregistrement des modules ».
-4. Cliquez sur « Activé ».
-5. Dans la section Options, cliquez sur « Afficher » en regard des noms de module.
-6. Tapez « \* » dans la fenêtre contextuelle. Ainsi, PowerShell enregistre les commandes de tous les modules.
+2. Accédez à « Configuration de l’ordinateur\Modèles d’administration\Composants Windows\Windows PowerShell ».
+3. Double cliquez sur « Activer l’enregistrement des modules ».
+4. Cliquez sur « Activé ».
+5. Dans la section Options, cliquez sur « Afficher » en regard des noms de module.
+6. Tapez « \* » dans la fenêtre contextuelle. Ainsi, PowerShell enregistre les commandes de tous les modules.
 7. Cliquez sur OK et appliquez la stratégie.
 
 Remarque : Vous pouvez également activer la transcription PowerShell à l’échelle du système via la stratégie de groupe.
 
-**Bravo ! Vous avez à présent configuré votre ordinateur avec le point de terminaison de démonstration et vous êtes prêt à découvrir JEA.**
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
+**Bravo ! Vous avez à présent configuré votre ordinateur avec le point de terminaison de démonstration et vous êtes prêt à découvrir JEA.**
 

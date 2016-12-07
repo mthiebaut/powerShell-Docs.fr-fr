@@ -1,9 +1,9 @@
-# Inscrire un dépôt PowerShell
-Vous pouvez configurer PowerShellGet pour qu’il opère sur des dépôts internes. Vous devez pour cela utiliser les ajouts suivants :
-- Register-PSRepository : inscrit un dépôt pour l’utilisateur actuel.
-- Unregister-PSRepository : supprime un dépôt inscrit pour l’utilisateur actuel.
-- Set-PSRepository : définir des valeurs pour un dépôt inscrit.
-- Get-PSRepository : obtenir tous les dépôts inscrits pour l’utilisateur actuel.
+# <a name="register-a-powershell-repository"></a>Inscrire un dépôt PowerShell
+Vous pouvez configurer PowerShellGet pour qu’il opère sur des dépôts internes. Vous devez pour cela utiliser les ajouts suivants :
+- Register-PSRepository : inscrit un dépôt pour l’utilisateur actuel.
+- Unregister-PSRepository : supprime un dépôt inscrit pour l’utilisateur actuel.
+- Set-PSRepository : définir des valeurs pour un dépôt inscrit.
+- Get-PSRepository : obtenir tous les dépôts inscrits pour l’utilisateur actuel.
 
 Après avoir inscrit un dépôt, vous pouvez utiliser Find-Module et Install-Module pour l’utiliser.
 
@@ -31,7 +31,3 @@ Install-Module SomeModule
 \#Removing a repository
 Unregister-PSRepository DemoRepo
 ```
-
-<!--HONumber=Aug16_HO3-->
-
-

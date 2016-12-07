@@ -7,15 +7,13 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
 ms.openlocfilehash: 35ac9b38086b12fb48844c56a488854f63529e21
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
+# <a name="setting-up-a-dsc-smb-pull-server"></a>Configuration d’un serveur collecteur SMB DSC
 
-# Configuration d’un serveur collecteur SMB DSC
-
->S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
+>S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Un serveur collecteur [SMB](https://technet.microsoft.com/en-us/library/hh831795.aspx) DSC est un partage de fichiers SMB qui fournit des fichiers de configuration DSC et/ou des ressources DSC aux nœuds cibles quand ces derniers les demandent.
 
@@ -23,16 +21,16 @@ Pour utiliser un serveur collecteur SMB pour DSC, vous devez effectuer les étap
 - Configurer un partage de fichiers SMB sur un serveur qui exécute PowerShell 4.0 ou version ultérieure
 - Configurer un client qui exécute PowerShell 4.0 ou version ultérieure pour l’extraction à partir de ce partage SMB
 
-## Utilisation de la ressource xSmbShare pour créer un partage de fichiers SMB
+## <a name="using-the-xsmbshare-resource-to-create-an-smb-file-share"></a>Utilisation de la ressource xSmbShare pour créer un partage de fichiers SMB
 
 Il existe plusieurs façons de configurer un partage de fichiers SMB, mais nous allons le faire à l’aide de DSC.
 
-### Installer la ressource xSmbShare
+### <a name="install-the-xsmbshare-resource"></a>Installer la ressource xSmbShare
 
 Appelez l’applet de commande [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) pour installer le module **xSmbShare**.
->**Remarque** : **Install-Module** est inclus dans le module **PowerShellGet** de PowerShell 5.0. Vous pouvez télécharger le module **PowerShellGet** pour PowerShell 3.0 et 4.0 ici : [PackageManagement PowerShell Modules Preview](https://www.microsoft.com/en-us/download/details.aspx?id=49186). **xSmbShare** contient la ressource DSC **xSmbShare** qui peut être utilisée pour créer un partage de fichiers SMB.
+>**Remarque** : **Install-Module** est inclus dans le module **PowerShellGet** de PowerShell 5.0. Vous pouvez télécharger le module **PowerShellGet** pour PowerShell 3.0 et 4.0 ici : [PackageManagement PowerShell Modules Preview](https://www.microsoft.com/en-us/download/details.aspx?id=49186). **xSmbShare** contient la ressource DSC **xSmbShare** qui peut être utilisée pour créer un partage de fichiers SMB.
 
-### Créer le répertoire et le partage de fichiers
+### <a name="create-the-directory-and-file-share"></a>Créer le répertoire et le partage de fichiers
 
 La configuration suivante utilise la ressource [File](fileResource.md) pour créer le répertoire du partage et la ressource **xSmbShare** pour configurer le partage SMB :
 
@@ -72,7 +70,7 @@ Import-DscResource -ModuleName xSmbShare
 La configuration crée le répertoire `C:\DscSmbShare` s’il n’existe pas et utilise ensuite ce répertoire comme partage de fichiers SMB. L’autorisation **FullAccess** doit être accordée à tous les comptes nécessitant d’écrire sur ou supprimer le partage de fichiers, et l’autorisation **ReadAccess** doit être accordée à tous les nœuds client obtenant des configurations et/ou ressources DSC depuis le partage (étant donné que DSC s’exécute sous le compte système par défaut, l’ordinateur doit donc avoir accès au partage).
 
 
-### Donner accès au système de fichiers pour le client collecteur
+### <a name="give-file-system-access-to-the-pull-client"></a>Donner accès au système de fichiers pour le client collecteur
 
 L’autorisation **ReadAccess** accordée à un nœud client permet à ce dernier d’accéder au partage SMB, mais pas aux fichiers et dossiers dans ce partage. Vous devez accorder explicitement l’accès au dossier et aux sous-dossiers du partage SMB pour les nœuds clients. Vous pouvez le faire avec DSC à l’aide de la ressource **cNtfsPermissionEntry**, qui est contenue dans le module [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0). La configuration suivante ajoute un bloc **cNtfsPermissionEntry** qui accorde un accès ReadAndExecute au client collecteur :
 
@@ -129,7 +127,7 @@ Import-DscResource -ModuleName cNtfsAccessControl
 }
 ```
 
-## Placement des configurations et des ressources
+## <a name="placing-configurations-and-resources"></a>Placement des configurations et des ressources
 
 Enregistrez les fichiers MOF de configuration et/ou les ressources DSC que les nœuds clients doivent extraire dans le dossier de partage SMB.
 
@@ -139,29 +137,23 @@ Les fichiers MOF de configuration doivent être nommés _ConfigurationID_.mof, o
 
 Toutes les ressources nécessaires pour le client doivent être placées dans le dossier de partage SMB sous forme de fichiers `.zip` archivés.  
 
-## Création de la somme de contrôle MOF
+## <a name="creating-the-mof-checksum"></a>Création de la somme de contrôle MOF
 Un fichier MOF de configuration doit être associé à un fichier de somme de contrôle pour que le gestionnaire de configuration local sur un nœud cible puisse valider la configuration. Pour créer une somme de contrôle, appelez l’applet de commande [New-DSCCheckSum](https://technet.microsoft.com/en-us/library/dn521622.aspx). L’applet de commande prend un paramètre **Path** qui spécifie le dossier où se trouve la configuration MOF. L’applet de commande crée un fichier de somme de contrôle nommé `ConfigurationMOFName.mof.checksum`, où `ConfigurationMOFName` est le nom du fichier MOF de configuration. S’il existe plusieurs fichiers MOF de configuration dans le dossier spécifié, une somme de contrôle est créée pour chaque configuration du dossier.
 
 Le fichier de somme de contrôle doit être présent dans le même répertoire que celui du fichier MOF de configuration (`$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration` par défaut), et avoir le même nom, mais avec l’extension `.checksum`.
 
 >**Remarque** : Si vous modifiez le fichier MOF de configuration de quelque façon que ce soit, vous devez aussi recréer le fichier de somme de contrôle.
 
-## Accusés de réception
+## <a name="acknowledgements"></a>Accusés de réception
 
 Un remerciement particulier aux personnes suivantes :
 
 - Mike F. Robbins, dont les billets sur l’utilisation de SMB pour DSC ont permis de documenter le contenu de cette rubrique. Son blog : [Mike F Robbins](http://mikefrobbins.com/).
 - Serge Nikalaichyk, qui a créé le module **cNtfsAccessControl**. La source de ce module est à l’adresse https://github.com/SNikalaichyk/cNtfsAccessControl.
 
-## Voir aussi
-- [Vue d’ensemble de la fonctionnalité Desired State Configuration de Windows PowerShell](overview.md)
+## <a name="see-also"></a>Voir aussi
+- [Présentation de la configuration d’état souhaité Windows PowerShell](overview.md)
 - [Application des configurations](enactingConfigurations.md)
 - [Configuration d’un client collecteur à l’aide de l’ID de configuration](pullClientConfigID.md)
 
  
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

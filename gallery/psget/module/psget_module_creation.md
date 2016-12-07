@@ -9,20 +9,12 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psget_module_creation
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 1e74a93792fc1d99d9bb2b29382a637a473f78b7
-
+ms.openlocfilehash: f7a789fd11371371c90c1104cda84ba94c38c5d0
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-## Quand inclure un site de projets, une URL de licence, une icône personnalisée ?
-
-
-## Quelle est la version minimale de PowerShell ?
+## <a name="when-to-include-a-project-site-license-url-custom-icon"></a>Quand inclure un site de projets, une URL de licence, une icône personnalisée ?
 
 
-
-
-<!--HONumber=Oct16_HO2-->
-
+## <a name="what-is-minimum-powershell-version"></a>Quelle est la version minimale de PowerShell ?
 

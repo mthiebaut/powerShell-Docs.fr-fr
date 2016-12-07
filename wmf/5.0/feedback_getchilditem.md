@@ -1,5 +1,5 @@
-# Get-ChildItem a un paramètre -Depth
-**Get-ChildItem** a maintenant un paramètre **–Depth** que vous pouvez utiliser avec **– Recurse** pour limiter la récursivité :
+# <a name="get-childitem-has--depth-parameter"></a>Get-ChildItem a un paramètre -Depth
+**Get-ChildItem** a maintenant un paramètre **–Depth** que vous pouvez utiliser avec **– Recurse** pour limiter la récursivité :
 
 PS C:\\Users\\slee\\Downloads\\Example&gt; Get-ChildItem -Recurse -Depth 0
 
@@ -40,8 +40,3 @@ Mode LastWriteTime Length Name
 ---- ------------- ------ ----
 
 d----- 4/14/2015 5:33 PM Depth1
-
-
-<!--HONumber=Aug16_HO3-->
-
-

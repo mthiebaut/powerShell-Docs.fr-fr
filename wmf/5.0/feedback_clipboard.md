@@ -1,5 +1,5 @@
-# Applets de commande de Presse-papiers
-**Get-Clipboard** et **Set-Clipboard** simplifient le transfert de contenu vers et à partir d’une session Windows PowerShell. Par exemple, si vous utilisez l’Explorateur Windows pour copier trois fichiers dans le Presse-papiers (en les sélectionnant et en appuyant sur `ctrl-c`, par exemple), vous pouvez ensuite accéder facilement au contenu du Presse-papiers sous forme d’une liste de fichiers :
+# <a name="clipboard-cmdlets"></a>Applets de commande de Presse-papiers
+**Get-Clipboard** et **Set-Clipboard** simplifient le transfert de contenu vers et à partir d’une session Windows PowerShell. Par exemple, si vous utilisez l’Explorateur Windows pour copier trois fichiers dans le Presse-papiers (en les sélectionnant et en appuyant sur `ctrl-c`, par exemple), vous pouvez ensuite accéder facilement au contenu du Presse-papiers sous forme d’une liste de fichiers :
 
 ```powershell 
 PS C:\\&gt; Get-Clipboard -Format FileDropList
@@ -19,8 +19,3 @@ Mode LastWriteTime Length Name
 
 
 Les applets de commande du Presse-papiers prennent en charge les images, les fichiers audio, les listes de fichiers et le texte.
-
-
-<!--HONumber=Aug16_HO3-->
-
-

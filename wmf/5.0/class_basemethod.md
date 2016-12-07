@@ -1,6 +1,6 @@
-# Appeler une méthode de classe de base
+# <a name="call-base-class-method"></a>Appeler une méthode de classe de base
 
-Vous pouvez substituer des méthodes existantes dans les sous-classes. Pour cela, déclarez les méthodes à l’aide des mêmes nom et signature :
+Vous pouvez substituer des méthodes existantes dans les sous-classes. Pour cela, déclarez les méthodes à l’aide des mêmes nom et signature :
 
 ```PowerShell
 class baseClass
@@ -16,7 +16,7 @@ class childClass1 : baseClass
 [childClass1]::new().foo() # return 200600
 ```
 
-Pour appeler des méthodes de classe de base à partir des implémentations substituées, effectuez un transtypage vers la classe de base ([baseClass]$this) lors de l’appel :
+Pour appeler des méthodes de classe de base à partir des implémentations substituées, effectuez un transtypage vers la classe de base ([baseClass]$this) lors de l’appel :
 
 ```PowerShell
 class childClass2 : baseClass
@@ -30,7 +30,7 @@ class childClass2 : baseClass
 [childClass2]::new().foo() # return 301500
 ```
 
-Toutes les méthodes PowerShell sont virtuelles. Vous pouvez masquer les méthodes .NET non virtuelles dans une sous-classe en utilisant la même syntaxe que pour une substitution : il vous suffit de déclarer des méthodes avec les mêmes nom et signature.
+Toutes les méthodes PowerShell sont virtuelles. Vous pouvez masquer les méthodes .NET non virtuelles dans une sous-classe en utilisant la même syntaxe que pour une substitution : il vous suffit de déclarer des méthodes avec les mêmes nom et signature.
 
 ```PowerShell
 class MyIntList : system.collections.generic.list[int]
@@ -46,7 +46,3 @@ $list = [MyIntList]::new()
 $list.Add(100)
 $list[0] # return 200
 ```
-
-<!--HONumber=Aug16_HO3-->
-
-

@@ -8,24 +8,22 @@ keywords: powershell,applet de commande,jea
 ms.date: 2016-06-22
 title: "déploiement et maintenance de plusieurs ordinateurs"
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
-ms.openlocfilehash: 784806197a64eb30af1ecea4af55575434ce7b87
-
+ms.openlocfilehash: 8117d0d12c062b460cb7117b54c138c8db5a1d0c
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Déploiement et maintenance de plusieurs ordinateurs
+# <a name="multi-machine-deployment-and-maintenance"></a>Déploiement et maintenance de plusieurs ordinateurs
 À ce stade, vous avez plusieurs fois déployé JEA sur des systèmes locaux.
 Étant donné que votre environnement de production comprend probablement plusieurs ordinateurs, il est important de parcourir les étapes critiques du processus de déploiement qui doivent être répétées sur chaque ordinateur.
 
-## Étapes générales :
+## <a name="high-level-steps"></a>Étapes générales :
 1.  Copiez vos modules (avec des capacités de rôle) sur chaque nœud.
 2.  Copiez vos fichiers de configuration de session sur chaque nœud.
 3.  Exécutez `Register-PSSessionConfiguration` avec votre configuration de session.
 4.  Conservez une copie de votre configuration de session et de vos kits de ressources à un emplacement sécurisé.
-Pendant que vous apportez des modifications, il est toujours intéressant de disposer d’une « seule source de vérité ».
+Pendant que vous apportez des modifications, il est toujours intéressant de disposer d’une « seule source de vérité ».
 
-## Exemple de script
+## <a name="example-script"></a>Exemple de script
 Voici un exemple de script de déploiement.
 Pour l’utiliser dans votre environnement, vous devrez utiliser les noms/chemins de partages de fichiers et modules réels.
 ```PowerShell
@@ -55,20 +53,14 @@ Invoke-Command –ComputerName 'Node1', 'Node2', 'Node3', 'NodeN' -FilePath 'C:\
 Remove-Item -Path '\\FileShare\JEA\Demo.pssc'
 Remove-Item -Path '\\FileShare\JEA\SomeModule' -Recurse
 ```
-## Modification des capacités
+## <a name="modifying-capabilities"></a>Modification des capacités
 Quand vous vous occupez d’un grand nombre d’ordinateurs, il est important que les modifications soient introduites de façon cohérente.
 Une fois que JEA a une ressource DSC, votre environnement est synchronisé.
 En attendant, nous vous recommandons vivement de conserver une copie principale de vos configurations de session et de redéployer chaque fois que vous apportez une modification.
 
-## Suppression de capacités
-Pour supprimer votre configuration JEA de vos systèmes, utilisez la commande suivante sur chaque ordinateur :
+## <a name="removing-capabilities"></a>Suppression de capacités
+Pour supprimer votre configuration JEA de vos systèmes, utilisez la commande suivante sur chaque ordinateur :
 ```PowerShell
 Unregister-PSSessionConfiguration -Name JEADemo
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

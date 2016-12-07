@@ -1,8 +1,3 @@
-# Configurer un nœud avec plusieurs fragments de configuration (configurations partielles)
+# <a name="configure-node-with-multiple-configuration-fragments-partial-configurations"></a>Configurer un nœud avec plusieurs fragments de configuration (configurations partielles)
 
-WMF 5.0 vous aide à remettre des documents de configuration à un nœud en plusieurs fragments. Pour plus d’informations, consultez [Configurations partielles](https://msdn.microsoft.com/powershell/dsc/partialconfigs).
-
-
-<!--HONumber=Aug16_HO3-->
-
-
+WMF 5.0 vous aide à remettre des documents de configuration à un nœud en plusieurs fragments. Pour plus d’informations, consultez [Configurations partielles](https://msdn.microsoft.com/powershell/dsc/partialconfigs).

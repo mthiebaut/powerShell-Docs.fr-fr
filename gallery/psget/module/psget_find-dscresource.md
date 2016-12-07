@@ -9,17 +9,15 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psget_find dscresource
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 4ee5433547266e2665e1e33b9f120f505426c8f4
-
+ms.openlocfilehash: afd13e1dd791794d62be4601477bcc77448586c5
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Find-DscResource
+# <a name="find-dscresource"></a>Find-DscResource
 
 Recherche des ressources DSC dans des modules.
 
-## Description
+## <a name="description"></a>Description
 
 L’applet de commande Find-DscResource recherche des ressources [DSC (Configuration de l’état souhaité)](https://msdn.microsoft.com/en-us/PowerShell/dsc/overview) contenues dans les modules qui correspondent aux critères spécifiés à partir des référentiels enregistrés.
 Pour chaque module qu’elle détecte, Find-DscResource retourne un objet PSGetDscResourceInfo que vous pouvez rediriger vers Install-Module pour installer les modules contenant les ressources retournées par cette applet de commande.
@@ -30,7 +28,7 @@ Les ressources de configuration de l’état souhaité (DSC) fournissent les él
 
 Une ressource peut modéliser un élément générique comme un fichier ou spécifique comme un paramètre de serveur IIS. Les groupes de ce type de ressources sont combinés dans un module DSC qui organise tous les fichiers nécessaires dans une structure portable incluant les métadonnées permettant d’identifier la façon dont sont utilisées les ressources.
 
-- Find-DscResource permet de filtrer avec des paramètres de version : MinimumVersion, RequiredVersion, AllVersions.
+- Find-DscResource permet de filtrer avec des paramètres de version : MinimumVersion, RequiredVersion, AllVersions.
   - Ces paramètres sont mutuellement exclusifs.
   - Ces paramètres de version sont autorisés uniquement avec le nom de module unique sans les caractères génériques.
   - Si le paramètre RequiredVersion n’est pas spécifié, Find-DscResource retourne la dernière version du module qui est supérieure ou égale à la version minimale spécifiée ou la dernière version du module si aucune version minimale n’est spécifiée.
@@ -39,16 +37,16 @@ Une ressource peut modéliser un élément générique comme un fichier ou spéc
 - Find-DscResource peut filtrer le langage de recherche propre au référentiel avec le paramètre -Filter.
 - Find-DscResource peut filtrer les modules à partir de l’ensemble ou de certains des référentiels enregistrés.
 
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 ```powershell
 Get-Command -Name Find-DscResource -Module PowerShellGet -Syntax
 ```
 
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [Find-DscResource](http://go.microsoft.com/fwlink/?LinkId=517196)
 
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 ```powershell
 
 # Find a specific DSC Resource
@@ -96,10 +94,4 @@ Find-DscResource -Filter Domain
 Find-DscResource -Tag Azure, DSC
 
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

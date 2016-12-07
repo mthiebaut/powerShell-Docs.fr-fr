@@ -7,19 +7,17 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: f4dc0265246195cc2320bcaf9d7f9abf7b1405a3
-ms.openlocfilehash: becacd2dcbc6fd0edd9154a45342edc5c536935b
-
+ms.openlocfilehash: 099755bf8dc41adfedf77de451dbcdf390c298e9
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
+# <a name="writing-help-for-dsc-configurations"></a>Écriture de l’aide pour les configurations DSC
 
-# Écriture de l’aide pour les configurations DSC
-
->S’applique à : Windows PowerShell 5.0
+>S’applique à : Windows PowerShell 5.0
 
 Vous pouvez utiliser l’aide basée sur les commentaires dans les configurations DSC. Les utilisateurs peuvent accéder à l’aide en appelant la fonction de configuration avec `-?` ou en utilisant l’applet de commande [Get-Help](https://technet.microsoft.com/en-us/library/hh849696.aspx). Pour plus d’informations sur l’aide PowerShell basée sur les commentaires, consultez [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/hh847834.aspx).
 
-L’exemple suivant décrit un script qui contient une configuration et une aide basée sur les commentaires associée :
+L’exemple suivant décrit un script qui contient une configuration et une aide basée sur les commentaires associée :
 
 ```powershell
 <#
@@ -63,7 +61,7 @@ configuration HelpSample1
 }
 ```
 
-## Affichage de l’aide de la configuration
+## <a name="viewing-configuration-help"></a>Affichage de l’aide de la configuration
 
 Pour afficher l’aide d’une configuration, utilisez l’applet de commande **Get-Help** avec le nom de la fonction ou tapez le nom de la fonction suivi de `-?`. Voici la sortie de la fonction précédente quand elle est passée à **Get-Help** :
 
@@ -94,12 +92,6 @@ REMARKS
     For technical information, type: "get-help HelpSample1 -full".
 ```
 
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 * [Configurations DSC](configurations.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

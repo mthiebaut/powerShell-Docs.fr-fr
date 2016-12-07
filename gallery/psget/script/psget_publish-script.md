@@ -9,31 +9,29 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psget_publish script
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: bcf1abe7021c9b48fa35f08762f4d4a0a710dfa3
-
+ms.openlocfilehash: 2619738ba76ed3b3c84d1a77771531ebd6955d6f
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Publish-Script
+# <a name="publish-script"></a>Publish-Script
 
 L’applet de commande Publish-Script publie le script spécifié sur la galerie en ligne.
 
-## Description
+## <a name="description"></a>Description
 
 L’applet de commande Publish-Script permet de publier un fichier de script avec des métadonnées valides telles que version, GUID, auteur, description, et ainsi de suite. Le paramètre de commutateur Force de l’applet de commande Publish-Script démarre NuGet.exe sans demander confirmation.
 
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 
 ```powershell
 Get-Command -Name Publish-Script -Module PowerShellGet -Syntax
 ```
 
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [Publish-Script](http://go.microsoft.com/fwlink/?LinkId=619788)
 
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 
 ```powershell
 # Publish the really basic script file with required metadata
@@ -80,10 +78,4 @@ PackageManagementProvider : NuGet
 AdditionalMetadata : {description, developmentDependency, tags, PackageManagementProvider...}
 
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

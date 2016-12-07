@@ -7,16 +7,14 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 62f993e3d3e6ef744fb07920d332d476dfd24fc6
-ms.openlocfilehash: 6b060d17fb106089528b0737ab03cc7d592d412a
-
+ms.openlocfilehash: 56eb7ef230d84cc5f5679f39e13e2019205c65f5
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Ressource Script dans DSC
+# <a name="dsc-script-resource"></a>Ressource Script dans DSC
 
  
-> S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
+> S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
 La ressource **Script** dans la configuration d’état souhaité (DSC) Windows PowerShell fournit un mécanisme pour exécuter des blocs de script Windows PowerShell sur des nœuds cibles. La ressource `Script` comprend les propriétés `GetScript`, `SetScript` et `TestScript`. Ces propriétés doivent être définies sur les blocs de script qui sont exécutés sur chaque nœud cible. 
 
@@ -29,7 +27,7 @@ Le bloc de script `SetScript` doit modifier le nœud. Il est appelé par DSC si 
 Si vous devez utiliser des variables de votre script de configuration dans les blocs de script `GetScript`, `TestScript` ou `SetScript`, utilisez l’étendue `$using:` (voir ci-dessous pour obtenir un exemple).
 
 
-## Syntaxe
+## <a name="syntax"></a>Syntaxe
 
 ```
 Script [string] #ResourceName
@@ -42,7 +40,7 @@ Script [string] #ResourceName
 }
 ```
 
-## Propriétés
+## <a name="properties"></a>Propriétés
 
 |  Propriété  |  Description   | 
 |---|---| 
@@ -52,7 +50,7 @@ Script [string] #ResourceName
 | Credential| Indique les informations d’identification à utiliser pour exécuter ce script, si elles sont nécessaires.| 
 | DependsOn| Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource **ResourceName** de type **ResourceType**, la syntaxe pour utiliser cette propriété est `DependsOn = "[ResourceType]ResourceName"`.
 
-## Exemple 1
+## <a name="example-1"></a>Exemple 1
 ```powershell
 $version = Get-Content 'version.txt'
 
@@ -74,7 +72,7 @@ Configuration ScriptTest
 }
 ```
 
-## Exemple 2
+## <a name="example-2"></a>Exemple 2
 ```powershell
 $version = Get-Content 'version.txt'
 
@@ -106,10 +104,4 @@ Configuration ScriptTest
 ```
 
 Cette ressource écrit la version de la configuration dans un fichier texte. Cette version étant disponible sur l’ordinateur client, mais pas sur les nœuds, elle doit être transmise à chacun des blocs de script de la ressource `Script` avec l’étendue `using` de PowerShell. Lors de la génération du fichier MOF du nœud, la valeur de la variable `$version` est lue à partir d’un fichier texte sur l’ordinateur client. DSC remplace les variables `$using:version` dans chaque bloc de script par la valeur de la variable `$version`.
-
-
-
-
-<!--HONumber=Sep16_HO3-->
-
 

@@ -8,19 +8,17 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 0101daf8-4e31-4e4c-ab89-01d95dcb8f46
-translationtype: Human Translation
-ms.sourcegitcommit: 6c666e2e23cb74818e37293410dafc9033057733
-ms.openlocfilehash: 9453e0ec5ce2c43a3f140e70db6f30e55c211d64
-
+ms.openlocfilehash: 88f3edf9f5e1cad0979626af6a435b9331bfb04d
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Objet ISEEditor
+# <a name="the-iseeditor-object"></a>Objet ISEEditor
   Un objet **ISEEditor** est une instance de la classe Microsoft.PowerShell.Host.ISE.ISEEditor. Le volet de la console est un objet **ISEEditor**. Chaque objet [ISEFile](The-ISEFile-Object.md) est associé à un objet **ISEEditor**. Les sections suivantes répertorient les méthodes et propriétés d’un objet **ISEEditor**.
 
-## Méthodes
+## <a name="methods"></a>Méthodes
 
-### Clear\(\)
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+### <a name="clear"></a>Clear\(\)
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Efface le texte affiché dans l’éditeur.
 
@@ -29,8 +27,8 @@ ms.openlocfilehash: 9453e0ec5ce2c43a3f140e70db6f30e55c211d64
 $psISE.CurrentPowerShellTab.ConsolePane.Clear()
 ```
 
-### EnsureVisible\(int lineNumber\)
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+### <a name="ensurevisibleint-linenumber"></a>EnsureVisible\(int lineNumber\)
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Fait défiler l’éditeur pour afficher la ligne qui correspond à la valeur du paramètre **lineNumber** spécifiée. Elle lève une exception si le numéro de ligne spécifié est en dehors de la plage 1-dernier numéro de ligne, qui définit les numéros de ligne valides.
 
@@ -42,8 +40,8 @@ $psISE.CurrentPowerShellTab.ConsolePane.Clear()
 $psISE.CurrentFile.Editor.EnsureVisible(5)
 ```
 
-### Focus\(\)
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+### <a name="focus"></a>Focus\(\)
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Définit le focus sur l’éditeur.
 
@@ -52,8 +50,8 @@ $psISE.CurrentFile.Editor.EnsureVisible(5)
 $psISE.CurrentPowerShellTab.ConsolePane.Focus()
 ```
 
-### GetLineLength\(int lineNumber \)
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+### <a name="getlinelengthint-linenumber-"></a>GetLineLength\(int lineNumber \)
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Obtient la longueur, sous forme d’entier, de la ligne spécifiée par le numéro de ligne.
 
@@ -68,8 +66,8 @@ $psISE.CurrentPowerShellTab.ConsolePane.Focus()
 $psISE.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 ```
 
-### GoToMatch\(\)
-  Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures. 
+### <a name="gotomatch"></a>GoToMatch\(\)
+  Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures. 
 
  Déplace le point d’insertion vers le caractère correspondant si la propriété **CanGoToMatch** de l’objet editor a la valeur **$true**. Ceci se produit quand le point d’insertion se situe juste avant une parenthèse ouvrante, un crochet ouvrant ou une accolade ouvrante \( \[,{ - ou juste après une parenthèse fermante, un crochet fermant ou une accolade fermante -\),\],}.  Le point d’insertion se trouve avant un caractère ouvrant ou après un caractère fermant. Si la propriété **CanGoToMatch** a la valeur **$false**, cette méthode n’a aucun effet. Consultez [CanGoToMatch](#cangotomatch).
 
@@ -77,32 +75,32 @@ $psISE.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 # Test to see if the caret is next to a parenthesis, bracket, or brace.
 ```
 
-### InsertText\( texte \)
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+### <a name="inserttext-text-"></a>InsertText\( text \)
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Remplace la sélection par du texte ou insère du texte à la position actuelle du point d’insertion.
 
- **text** : chaîne Texte à insérer.
+ **text** : chaîne Texte à insérer.
 
  Consultez l’[exemple de script](#example) plus loin dans cette rubrique.
 
-### Select\( startLine, startColumn, endLine, endColumn \)
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+### <a name="select-startline-startcolumn-endline-endcolumn-"></a>Select\( startLine, startColumn, endLine, endColumn \)
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Sélectionne le texte spécifié par les paramètres **startLine**, **startColumn**, **endLine** et **endColumn**.
 
- **startLine** : entier Ligne où commence la sélection.
+ **startLine** : entier Ligne où commence la sélection.
 
- **startColumn** : entier Colonne dans la ligne de début où commence la sélection.
+ **startColumn** : entier Colonne dans la ligne de début où commence la sélection.
 
- **endLine** : entier Ligne où se termine la sélection.
+ **endLine** : entier Ligne où se termine la sélection.
 
- **endColumn** : entier Colonne dans la ligne de fin où se termine la sélection.
+ **endColumn** : entier Colonne dans la ligne de fin où se termine la sélection.
 
  Consultez l’[exemple de script](#example) plus loin dans cette rubrique.
 
-### SelectCaretLine\(\)
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+### <a name="selectcaretline"></a>SelectCaretLine\(\)
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Sélectionne la ligne entière de texte où se trouve actuellement le point d’insertion.
 
@@ -113,22 +111,22 @@ $psISE.CurrentFile.Editor.SetCaretPosition(5,1)
 $psISE.CurrentFile.Editor.SelectCaretLine()
 ```
 
-### SetCaretPosition\( lineNumber, columnNumber \)
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+### <a name="setcaretposition-linenumber-columnnumber-"></a>SetCaretPosition\( lineNumber, columnNumber \)
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Définit la position du point d’insertion en fonction du numéro de ligne et du numéro de colonne spécifiés. Elle lève une exception si le numéro de ligne du point d’insertion ou le numéro de colonne du point d’insertion sont en dehors de leurs plages valides respectives.
 
- **lineNumber** : entier Numéro de ligne du point d’insertion.
+ **lineNumber** : entier Numéro de ligne du point d’insertion.
 
- **columnNumber** : entier Numéro de colonne du point d’insertion.
+ **columnNumber** : entier Numéro de colonne du point d’insertion.
 
 ```PowerShell
 # Set the CaretPosition.
 $psISE.CurrentFile.Editor.SetCaretPosition(5,1)
 ```
 
-### ToggleOutliningExpansion\(\)
-  Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures. 
+### <a name="toggleoutliningexpansion"></a>ToggleOutliningExpansion\(\)
+  Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures. 
 
  Développe ou réduit toutes les sections de plan.
 
@@ -137,20 +135,20 @@ $psISE.CurrentFile.Editor.SetCaretPosition(5,1)
 $psISE.CurrentFile.Editor.ToggleOutliningExpansion()
 ```
 
-## Propriétés
+## <a name="properties"></a>Propriétés
 
-###  <a name="CanGoToMatch"></a> CanGoToMatch
-  Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures. 
+###  <a name="a-namecangotomatcha-cangotomatch"></a><a name="CanGoToMatch"></a> CanGoToMatch
+  Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures. 
 
- Propriété booléenne en lecture seule qui indique si le point d’insertion se trouve à côté d’une parenthèse, d’un crochet ou d’une accolade - \(\), \[\], {}. Si le point d’insertion est situé juste avant le caractère ouvrant ou juste après le caractère fermant d’une paire, cette propriété a la valeur **$true**. Sinon, elle a la valeur **$false**.
+ Propriété booléenne en lecture seule qui indique si le point d’insertion se trouve à côté d’une parenthèse, d’un crochet ou d’une accolade - \(\), \[\], {}. Si le point d’insertion est situé juste avant le caractère ouvrant ou juste après le caractère fermant d’une paire, cette propriété a la valeur **$true**. Sinon, elle a la valeur **$false**.
 
 ```PowerShell
 # Test to see if the caret is next to a parenthesis, bracket, or brace
 $psISE.CurrentFile.Editor.CanGoToMatch
 ```
 
-###  <a name="CaretColumn"></a> CaretColumn
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+###  <a name="a-namecaretcolumna-caretcolumn"></a><a name="CaretColumn"></a> CaretColumn
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui obtient le numéro de colonne correspondant à la position du point d’insertion.
 
@@ -159,8 +157,8 @@ $psISE.CurrentFile.Editor.CanGoToMatch
 $psISE.CurrentFile.Editor.CaretColumn
 ```
 
-###  <a name="CaretLine"></a> CaretLine
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+###  <a name="a-namecaretlinea-caretline"></a><a name="CaretLine"></a> CaretLine
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui obtient le numéro de la ligne où se trouve le point d’insertion.
 
@@ -169,8 +167,8 @@ $psISE.CurrentFile.Editor.CaretColumn
 $psISE.CurrentFile.Editor.CaretLine
 ```
 
-###  <a name="caretlinetext"></a> CaretLineText
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+###  <a name="a-namecaretlinetexta-caretlinetext"></a><a name="CaretLineText"></a> CaretLineText
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui obtient la ligne entière de texte où se trouve le point d’insertion.
 
@@ -179,8 +177,8 @@ $psISE.CurrentFile.Editor.CaretLine
 $psISE.CurrentFile.Editor.CaretLineText
 ```
 
-###  <a name="LineCount"></a> LineCount
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+###  <a name="a-namelinecounta-linecount"></a><a name="LineCount"></a> LineCount
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui obtient le nombre de lignes affichées dans l’éditeur.
 
@@ -189,21 +187,21 @@ $psISE.CurrentFile.Editor.CaretLineText
 $psISE.CurrentFile.Editor.LineCount
 ```
 
-###  <a name="SelectedText"></a> SelectedText
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+###  <a name="a-nameselectedtexta-selectedtext"></a><a name="SelectedText"></a> SelectedText
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui obtient le texte sélectionné dans l’éditeur.
 
  Consultez l’[exemple de script](#example) plus loin dans cette rubrique.
 
-###  <a name="Text"></a> Texte
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+###  <a name="a-nametexta-text"></a><a name="Text"></a> Text
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture\/écriture qui obtient ou définit le texte dans l’éditeur.
 
  Consultez l’[exemple de script](#example) plus loin dans cette rubrique.
 
-##  <a name="example"></a> Exemple de script
+##  <a name="a-nameexamplea-scripting-example"></a><a name="example"></a> Exemple de script
 
 ```PowerShell
 # This illustrates how you can use the length of a line to
@@ -232,17 +230,11 @@ $myEditor.Clear()
 $myEditor.InsertText($selection.ToLower())
 ```
 
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 - [Objet ISEFile](The-ISEFile-Object.md) 
 - [Objet PowerShellTab](The-PowerShellTab-Object.md) 
 - [Modèle objet de script Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
-- [Référence de modèle objet Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md) 
+- [Informations de référence sur le modèle objet Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md) 
 - [Hiérarchie du modèle objet ISE](The-ISE-Object-Model-Hierarchy.md)
 
   
-
-
-
-<!--HONumber=Oct16_HO3-->
-
-

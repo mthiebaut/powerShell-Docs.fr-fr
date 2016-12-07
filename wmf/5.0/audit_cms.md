@@ -1,4 +1,4 @@
-# Applets de commande CMS (Cryptographic Message Syntax)
+# <a name="cryptographic-message-syntax-cms-cmdlets"></a>Applets de commande CMS (Cryptographic Message Syntax)
 
 Les applets de commande Cryptographic Message Syntax prennent en charge le chiffrement et le déchiffrement de contenu au format IETF pour la protection par chiffrement des messages comme documenté dans la [RFC5652](http://tools.ietf.org/html/rfc5652).
 
@@ -17,11 +17,11 @@ Unprotect-CmsMessage [-LiteralPath] <string> [[-To] <CmsMessageRecipient[]>] [-I
 
 La norme de chiffrement CMS implémente le chiffrement à clé publique, où les clés utilisées pour chiffrer le contenu (la *clé publique*) et les clés utilisées pour déchiffrer le contenu (la *clé privée*) sont distinctes.
 
-Votre clé publique peut être partagée à grande échelle et ne constitue pas des données sensibles. Si du contenu est chiffré avec cette clé publique, seule votre clé privée peut le déchiffrer. Pour plus d’informations sur le chiffrement à clé publique, consultez : <http://en.wikipedia.org/wiki/Public-key_cryptography>.
+Votre clé publique peut être partagée à grande échelle et ne constitue pas des données sensibles. Si du contenu est chiffré avec cette clé publique, seule votre clé privée peut le déchiffrer. Pour plus d’informations sur le chiffrement à clé publique, consultez : <http://en.wikipedia.org/wiki/Public-key_cryptography>.
 
-Pour être reconnus dans PowerShell, les certificats de chiffrement nécessitent un identificateur EKU (Unique Key Usage) pour être identifiés comme certificats de chiffrement de données (comme les identificateurs de « signature du code » ou de « courrier chiffré »).
+Pour être reconnus dans PowerShell, les certificats de chiffrement nécessitent un identificateur EKU (Unique Key Usage) pour être identifiés comme certificats de chiffrement de données (comme les identificateurs de « signature du code » ou de « courrier chiffré »).
 
-Voici un exemple de création de certificat adapté au chiffrement de document :
+Voici un exemple de création de certificat adapté au chiffrement de document :
 
 ```powershell
 (Change the text in **Subject** to your name, email, or other identifier), and put in a file (i.e.: DocumentEncryption.inf):
@@ -45,12 +45,12 @@ ValidityPeriodUnits = "1000"
 %szOID\_ENHANCED\_KEY\_USAGE% = "{text}%szOID\_DOCUMENT\_ENCRYPTION%"
 ```
 
-Ensuite, exécutez :
+Ensuite, exécutez :
 ```powershell
 certreq -new DocumentEncryption.inf DocumentEncryption.cer
 ```
 
-Et vous pouvez maintenant chiffrer et déchiffrer le contenu :
+Et vous pouvez maintenant chiffrer et déchiffrer le contenu :
 
 ```powershell
 $protected = "Hello World" | Protect-CmsMessage -To "\*me@somewhere.com\*[](mailto:*leeholm@microsoft.com*)"
@@ -70,19 +70,15 @@ $protected | Unprotect-CmsMessage
 Hello World
 ```
 
-Tout paramètre de type **CMSMessageRecipient** prend en charge les identificateurs aux formats suivants :
+Tout paramètre de type **CMSMessageRecipient** prend en charge les identificateurs aux formats suivants :
 - Un certificat réel (tel que récupéré auprès du fournisseur)
 - Chemin d’un fichier contenant le certificat
 - Chemin d’un répertoire contenant le certificat
 - Empreinte numérique du certificat (utilisé pour rechercher dans le magasin de certificats)
 - Nom du sujet du certificat (utilisé pour rechercher dans le magasin de certificats)
 
-Pour afficher des certificats de chiffrement de document dans le fournisseur de certificats, vous pouvez utiliser le paramètre dynamique **-DocumentEncryptionCert** :
+Pour afficher des certificats de chiffrement de document dans le fournisseur de certificats, vous pouvez utiliser le paramètre dynamique **-DocumentEncryptionCert** :
 
 ```powershell
 dir -DocumentEncryptionCert
 ```
-
-<!--HONumber=Aug16_HO3-->
-
-

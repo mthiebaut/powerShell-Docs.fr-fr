@@ -9,30 +9,28 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psget_set psrepository
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: f53076825f764ff805f2d956eecddbb492f7b694
-
+ms.openlocfilehash: be2c16a79a3e6873c0f7a364092def881d490091
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Set-PSRepository
+# <a name="set-psrepository"></a>Set-PSRepository
 
 Set-PSRepository définit des valeurs pour un référentiel enregistré.
 
-## Description
+## <a name="description"></a>Description
 
 L’applet de commande Set-PSRepository définit des valeurs pour un référentiel de modules enregistré.
 
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 
 ```powershell
 Get-Command -Name Set-PSRepository -Module PowerShellGet -Syntax
 ```
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [Set-PSRepository](http://go.microsoft.com/fwlink/?LinkID=517128)
 
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 
 ```powershell
 PS C:\> Register-PSRepository -Name myRepository -SourceLocation "https://www.myget.org/F/powershellgetdemo/api/v2" -InstallationPolicy Trusted
@@ -51,7 +49,7 @@ myRepository              Untrusted            https://www.myget.org/F/powershel
 ```
 
 
-### Applet de commande Set-PSRepository avec prise en charge du partage de script
+### <a name="set-psrepository-cmdlet-with-script-sharing-support"></a>Applet de commande Set-PSRepository avec prise en charge du partage de script
 
 Les applets de commande Set-PSRepository permettent d’ajouter **ScriptSourceLocation** et **ScriptPublishLocation** à PSRepository.
 ```powershell
@@ -74,10 +72,4 @@ ScriptPublishLocation : https://MyGallery.com/api/v2/package/
 ProviderOptions : {}
 
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

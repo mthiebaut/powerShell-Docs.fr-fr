@@ -7,25 +7,23 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 7f0d3167538afb1e7f0003466254059372319789
 ms.openlocfilehash: 03db9843209038f7a14b46cf8a27316f1c63a819
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="setting-up-a-pull-client-using-configuration-names"></a>Configuration d’un client collecteur à l’aide du nom de configuration
 
-> S’applique à : Windows PowerShell 5.0
+> S’applique à : Windows PowerShell 5.0
 
 Chaque nœud cible doit recevoir l’instruction d’utiliser le mode par extraction ainsi que l’URL où contacter le serveur collecteur pour obtenir des configurations.
 Pour ce faire, vous devez configurer le gestionnaire de configuration local avec les informations nécessaires.
 Pour configurer le gestionnaire de configuration local, vous créez un type spécial de configuration que vous décorez avec l’attribut **DSCLocalConfigurationManager**.
 Pour plus d’informations sur la configuration du gestionnaire de configuration local, consultez [Configuration du gestionnaire de configuration local](metaConfig.md).
 
-> **Remarque** : Cette rubrique s’applique à PowerShell 5.0.
-Pour des informations sur la configuration d’un client collecteur dans PowerShell 4.0, consultez [Configuration d’un client collecteur à l’aide de l’ID de configuration dans PowerShell 4.0](pullClientConfigID4.md)
+> **Remarque** : Cette rubrique s’applique à PowerShell 5.0.
+Pour des informations sur la configuration d’un client collecteur dans PowerShell 4.0, consultez [Configuration d’un client collecteur à l’aide de l’ID de configuration dans PowerShell 4.0](pullClientConfigID4.md)
 
-Le script suivant configure le gestionnaire de configuration local de façon à extraire des configurations d’un serveur nommé « CONTOSO-PullSrv » :
+Le script suivant configure le gestionnaire de configuration local de façon à extraire des configurations d’un serveur nommé « CONTOSO-PullSrv » :
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -59,7 +57,7 @@ La même valeur est stockée dans un fichier sur le serveur collecteur.
 La propriété **ConfigurationNames** est un tableau qui spécifie les noms des configurations destinées au nœud client.
 Sur le serveur collecteur, le fichier MOF de configuration pour ce nœud client doit être nommé *ConfigurationNames*.mof, où *ConfigurationNames* correspond à la valeur de la propriété **ConfigurationNames** que vous définissez dans cette métaconfiguration.
 
->**Remarque :** Si vous spécifiez plusieurs valeurs dans **ConfigurationNames**, vous devez également spécifier des blocs **PartialConfiguration** dans votre configuration.
+>**Remarque :** Si vous spécifiez plusieurs valeurs dans **ConfigurationNames**, vous devez également spécifier des blocs **PartialConfiguration** dans votre configuration.
 Pour plus d’informations sur les configurations partielles, voir [Configurations partielles du service de configuration d’état souhaité PowerShell](partialConfigs.md).
 
 Quand le script s’exécute, il crée un dossier de sortie nommé **PullClientConfigNames** et y place un fichier MOF de métaconfiguration.
@@ -71,7 +69,7 @@ Pour appliquer la configuration, appelez l’applet de commande **Set-DscLocalCo
 Set-DSCLocalConfigurationManager localhost –Path .\PullClientConfigNames –Verbose.
 ```
 
-> **Remarque** : Les clés d’enregistrement fonctionnent uniquement avec les serveurs collecteurs web.
+> **Remarque** : Les clés d’enregistrement fonctionnent uniquement avec les serveurs collecteurs web.
 Vous devez encore utiliser **ConfigurationID** avec un serveur collecteur SMB.
 Pour plus d’informations sur la configuration d’un serveur collecteur à l’aide de **ConfigurationID**, consultez [Configuration d’un client collecteur à l’aide de l’ID de configuration](PullClientConfigNames.md)
 
@@ -113,7 +111,7 @@ Vous pouvez également spécifier différents serveurs collecteurs pour les ress
 Pour spécifier un serveur de ressources, vous utilisez un bloc **ResourceRepositoryWeb** (pour un serveur collecteur web) ou **ResourceRepositoryShare** (pour un serveur collecteur SMB).
 Pour spécifier un serveur de rapports, vous utilisez un bloc **ReportRepositoryWeb**.
 Un serveur de rapports ne peut pas être un serveur SMB.
-La métaconfiguration suivante configure un client collecteur de façon à obtenir sa configuration de **CONTOSO-PullSrv** et ses ressources de **CONTOSO-ResourceSrv**, et à envoyer des rapports d’état à **CONTOSO-ReportSrv** :
+La métaconfiguration suivante configure un client collecteur de façon à obtenir sa configuration de **CONTOSO-PullSrv** et ses ressources de **CONTOSO-ResourceSrv**, et à envoyer des rapports d’état à **CONTOSO-ReportSrv** :
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -154,9 +152,3 @@ PullClientConfigNames
 
 * [Configuration d’un client collecteur à l’aide de l’ID de configuration](PullClientConfigNames.md)
 * [Configuration d’un serveur collecteur web DSC](pullServer.md)
-
-
-
-<!--HONumber=Nov16_HO4-->
-
-

@@ -1,4 +1,4 @@
-# Déclarer une interface implémentée
+# <a name="declare-implemented-interface"></a>Déclarer une interface implémentée
 
 Vous pouvez déclarer des interfaces implémentées après les types de base, ou immédiatement après un signe deux-points (:), si aucun type de base n’est spécifié. Séparez tous les noms de types par des virgules. Cela ressemble beaucoup à la syntaxe C#.
 
@@ -19,7 +19,3 @@ class MyComparableBar : bar, system.IComparable
     }
 }
 ```
-
-<!--HONumber=Aug16_HO3-->
-
-

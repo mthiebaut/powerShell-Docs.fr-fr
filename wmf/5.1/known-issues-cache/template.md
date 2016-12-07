@@ -1,27 +1,19 @@
 ---
 title: "exemple de modèle d’un problème ou limitation connu"
 contributor: 
-translationtype: Human Translation
-ms.sourcegitcommit: a952a27ec1695ce9951c352446194cf72d18f50a
-ms.openlocfilehash: cfe0a6562743f1df81acb81e33c120cb67f9042c
-
+ms.openlocfilehash: e3b98044902cb6665e06582c8259bd5defd6f2ca
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
+>Remarque : fournir un titre descriptif proposé et une brève description
 
->Remarque : fournir un titre descriptif proposé et une brève description
+## <a name="example-erroneous-executionpolicy-errors"></a>Exemples : erreurs ExecutionPolicy erronées ##
+Sous Windows 7, l’utilisation de modules PowerShell et de ressources DSC peut générer des erreurs liées à ExecutionPolicy.
 
-## Exemples : erreurs ExecutionPolicy erronées ##
-Sous Windows 7, l’utilisation de modules PowerShell et de ressources DSC peut générer des erreurs liées à ExecutionPolicy.
+### <a name="resolution"></a>Solution
 
-### Solution
-
-Pour résoudre le problème, affectez la valeur **RemoteSigned** à **ExecutionPolicy** en exécutant la commande suivante dans une session PowerShell avec élévation de privilèges (Exécuter en tant qu’administrateur) :
+Pour résoudre le problème, affectez la valeur **RemoteSigned** à **ExecutionPolicy** en exécutant la commande suivante dans une session PowerShell avec élévation de privilèges (Exécuter en tant qu’administrateur) :
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned
 ```
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

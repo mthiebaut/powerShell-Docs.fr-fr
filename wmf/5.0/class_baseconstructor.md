@@ -1,6 +1,6 @@
-# Appeler un constructeur de classe de base
+# <a name="call-base-class-constructor"></a>Appeler un constructeur de classe de base
 
-Pour appeler un constructeur de classe de base à partir d’une sous-classe, utilisez le mot clé **base** :
+Pour appeler un constructeur de classe de base à partir d’une sous-classe, utilisez le mot clé **base** :
 
 ```PowerShell
 class A 
@@ -21,7 +21,7 @@ class B : A
 [B]::new().a # return 103
 ```
 
-Si une classe de base a un constructeur par défaut (sans paramètre), vous pouvez omettre un appel de constructeur explicite :
+Si une classe de base a un constructeur par défaut (sans paramètre), vous pouvez omettre un appel de constructeur explicite :
 
 ```PowerShell
 class C : B
@@ -29,7 +29,3 @@ class C : B
     C([int]$c) {}
 }
 ```
-
-<!--HONumber=Aug16_HO3-->
-
-

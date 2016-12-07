@@ -7,13 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
 ms.openlocfilehash: 02bb8458796d60991a05a8250f3bf8f3261ffce1
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Fonction DSC pour demander des informations sur le nœud au serveur collecteur.
+# <a name="dsc-function-to-query-node-information-from-pull-server"></a>Fonction DSC pour demander des informations sur le nœud au serveur collecteur.
 
 ```powershell
 function QueryNodeInformation
@@ -44,17 +42,11 @@ Param (
 
 Remplacez le paramètre `Uri` par l’URI de votre serveur collecteur. Si vous voulez les informations de nœud au format XML, définissez `ContentType` avec la valeur `application/xml`.
 
-Pour récupérer les informations de nœud à partir du paramètre `$json`, utilisez la commande suivante :
+Pour récupérer les informations de nœud à partir du paramètre `$json`, utilisez la commande suivante :
 
 ```powershell
 $json = QueryNodeInformation –Uri http://localhost:7070/PSDSCComplianceServer.svc/Status 
 
 $json.value | Format-Table TargetName, ConfigurationId, ServerChecksum, NodeCompliant, LastComplianceTime, StatusCode
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

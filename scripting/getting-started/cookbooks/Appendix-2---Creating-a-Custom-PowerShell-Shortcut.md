@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 5d4fd421-5d43-4ec7-86fd-acfe887b066e
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: ceec1038516ddd4c29df770d14981c0a69437498
-
+ms.openlocfilehash: da02415aaaf0e308abb3a9c96bb19591701e3408
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Annexe 2 : création d’un raccourci PowerShell personnalisé
+# <a name="appendix-2---creating-a-custom-powershell-shortcut"></a>Annexe 2 : création d’un raccourci PowerShell personnalisé
 La procédure suivante décrit comment créer un raccourci vers Windows PowerShell offrant plusieurs options pratiques personnalisées.
 
 1.  Créez un raccourci qui pointe vers Powershell.exe.
@@ -35,17 +33,11 @@ La procédure suivante décrit comment créer un raccourci vers Windows PowerShe
 
 8.  Cliquez sur l’onglet **Disposition**.
 
-9. Dans la section **Mémoire tampon d’écran**, dans le champ **Hauteur**, tapez un nombre compris entre 1 et 9999. La hauteur représente le nombre de lignes de sortie qui sont mises en mémoire tampon. Il s’agit du nombre maximal de lignes conservées pour affichage lorsque vous faites défiler la fenêtre de console. Si ce nombre est inférieur à la hauteur affichée dans la section **Taille de la fenêtre**, la hauteur de la fenêtre est automatiquement réduite la même valeur.
+9. Dans la section **Mémoire tampon d’écran**, dans le champ **Hauteur**, tapez un nombre compris entre 1 et 9999. La hauteur représente le nombre de lignes de sortie qui sont mises en mémoire tampon. Il s’agit du nombre maximal de lignes conservées pour affichage lorsque vous faites défiler la fenêtre de console. Si ce nombre est inférieur à la hauteur affichée dans la section **Taille de la fenêtre**, la hauteur de la fenêtre est automatiquement réduite la même valeur.
 
-10. Dans la section **Taille de la fenêtre**, tapez un nombre compris entre 1 et 9999 pour la largeur. Ce nombre représente le nombre de caractères qui s’affichent dans la fenêtre de console. La largeur par défaut est 80, et la mise en forme de la sortie de Windows PowerShell est conçue pour cette largeur.
+10. Dans la section **Taille de la fenêtre**, tapez un nombre compris entre 1 et 9999 pour la largeur. Ce nombre représente le nombre de caractères qui s’affichent dans la fenêtre de console. La largeur par défaut est 80, et la mise en forme de la sortie de Windows PowerShell est conçue pour cette largeur.
 
 11. Si vous souhaitez placer la console à un endroit particulier sur le Bureau quand elle est ouverte, désactivez la case à cocher **Positionnée par le système** dans la section **Position de la fenêtre**, puis modifiez les valeurs des champs **Gauche** et **Haut** dans la section **Position de la fenêtre**.
 
 12. Cliquez sur **OK**.
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

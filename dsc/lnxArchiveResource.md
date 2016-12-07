@@ -7,17 +7,15 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
 ms.openlocfilehash: 2edbc1d11dfc7c84369430688a8b0d773277e864
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Ressource nxArchive dans DSC pour Linux
+# <a name="dsc-for-linux-nxarchive-resource"></a>Ressource nxArchive dans DSC pour Linux
 
 La ressource **nxArchive** de la configuration d’état souhaité (DSC) de Windows PowerShell fournit un mécanisme permettant de décompresser les fichiers d’archive (.zip) à un emplacement spécifique d’un nœud Linux.
 
-## Syntaxe
+## <a name="syntax"></a>Syntaxe
 
 ```
 nxArchive <string> #ResourceName
@@ -31,18 +29,18 @@ nxArchive <string> #ResourceName
 }
 ```
 
-## Propriétés
+## <a name="properties"></a>Propriétés
 
 |  Propriété |  Description | 
 |---|---|
 | SourcePath| Spécifie le chemin source du fichier d’archive. Ce fichier doit être au format .tar, .zip ou .tar.gz. | 
 | DestinationPath| Spécifie l’emplacement où le contenu de l’archive doit être extrait.| 
-| Somme de contrôle| Définit le type à utiliser pour déterminer si l’archive source a été mise à jour. Les valeurs sont « ctime », « mtime » et « md5 ». La valeur par défaut est « md5 ».| 
+| Somme de contrôle| Définit le type à utiliser pour déterminer si l’archive source a été mise à jour. Les valeurs sont « ctime », « mtime » et « md5 ». La valeur par défaut est « md5 ».| 
 | Force| Certaines opérations de fichier (par exemple, le remplacement d’un fichier ou la suppression d’un répertoire non vide) entraînent une erreur. La propriété **Force** permet d’ignorer ces erreurs. La valeur par défaut est **$false**.| 
-| DependsOn | Indique que la configuration d’une autre ressource doit être effectuée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’**ID** **ResourceName** et le type **ResourceType**, utilisez la syntaxe suivante pour cette propriété : `DependsOn = "[ResourceType]ResourceName"`.| 
-| Ensure| Détermine s’il faut vérifier que le contenu de l’archive se trouve à la **Destination** donnée. Définissez cette propriété sur Present pour vous assurer que le contenu se trouve à l’emplacement donné. Définissez la propriété sur Absent pour vous assurer que le contenu ne se trouve pas à l’emplacement donné. La valeur par défaut est « Present ».| 
+| DependsOn | Indique que la configuration d’une autre ressource doit être effectuée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’**ID** **ResourceName** et le type **ResourceType**, utilisez la syntaxe suivante pour cette propriété : `DependsOn = "[ResourceType]ResourceName"`.| 
+| Ensure| Détermine s’il faut vérifier que le contenu de l’archive se trouve à la **Destination** donnée. Définissez cette propriété sur Present pour vous assurer que le contenu se trouve à l’emplacement donné. Définissez la propriété sur Absent pour vous assurer que le contenu ne se trouve pas à l’emplacement donné. La valeur par défaut est « Present ».| 
 
-## Exemple
+## <a name="example"></a>Exemple
 
 L’exemple suivant montre comment utiliser la ressource **nxArchive** pour vous assurer que le contenu d’un fichier d’archive appelé `website.tar` existe et qu’il est extrait à une destination donnée.
 
@@ -66,10 +64,4 @@ nxArchive SyncWebDir
    DependsOn = "[nxFile]SyncArchiveFromWeb"
 } 
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

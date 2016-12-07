@@ -8,19 +8,17 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: c425d27a-bb41-4947-8d73-ba5480bc8ee0
-translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 0148f4631e34e65a4336c5d1d50e313fb6639748
-
+ms.openlocfilehash: f7c9164e09e253e8138820708ba8864841ddfff2
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Écriture de scripts avec Windows PowerShell
+# <a name="scripting-with-windows-powershell"></a>Écriture de scripts avec Windows PowerShell
 
 Windows PowerShell® est un interpréteur de ligne de commande et un langage de script basé sur les tâches, conçu spécialement pour l’administration du système. Basé sur le .NET Framework, Windows PowerShell aide les professionnels de l’informatique et les utilisateurs avancés à contrôler et à automatiser l’administration du système d’exploitation Windows et des applications s’exécutant sur Windows.
 
 Les commandes Windows PowerShell, appelées *applets de commande*, vous permettent de gérer les ordinateurs à partir de la ligne de commande. Les *fournisseurs* Windows PowerShell vous permettent d’accéder à des magasins de données, par exemple le Registre et le magasin de certificats, aussi facilement que si vous accédiez au système de fichiers. En outre, Windows PowerShell dispose d’un analyseur d’expression avancé et d’un langage de script entièrement développé.
 
-Windows PowerShell intègre les fonctionnalités suivantes :
+Windows PowerShell intègre les fonctionnalités suivantes :
 
 -   Des applets de commande permettant d'effectuer des tâches d'administration système courantes (comme la gestion du Registre, des services, des processus et des journaux des événements) et d'utiliser WMI (Windows Management Instrumentation).
 -   Un langage de script basé sur les tâches, ainsi que la prise en charge des scripts existants et des outils de ligne de commande.
@@ -28,10 +26,4 @@ Windows PowerShell intègre les fonctionnalités suivantes :
 -   Une navigation simplifiée et basée sur les commandes du système d'exploitation, ce qui permet aux utilisateurs de parcourir le Registre et d'autres magasins de données en employant les mêmes techniques que celles utilisées pour parcourir le système de fichiers.
 -   Des fonctionnalités puissantes de manipulation d'objets. Les objets peuvent être directement manipulés ou envoyés à d'autres outils ou bases de données.
 -   Une interface extensible. Les éditeurs de logiciels indépendants et les développeurs d'entreprise peuvent créer des outils personnalisés et des utilitaires pour administrer leurs logiciels.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

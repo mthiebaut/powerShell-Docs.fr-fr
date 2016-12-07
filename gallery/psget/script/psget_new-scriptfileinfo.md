@@ -9,39 +9,37 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psget_new scriptfileinfo
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 8a534132c9622c699b636252e7c4bf7eafcf4d44
-
+ms.openlocfilehash: d6b8790c3dd7ce366d608ff7bfd083ca12b201fd
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# New-ScriptFileInfo
+# <a name="new-scriptfileinfo"></a>New-ScriptFileInfo
 
 Crée un fichier de script avec des métadonnées.
 
-## Description
+## <a name="description"></a>Description
 
 L’applet de commande New-ScriptFileInfo crée un fichier de script PowerShell, dont des métadonnées sur le script.
 
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 
 ```powershell
 Get-Command -Name New-ScriptFileInfo -Module PowerShellGet -Syntax
 ```
 
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [New-ScriptFileInfo](http://go.microsoft.com/fwlink/?LinkId=619792)
 
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 
-### Paramètre PassThru
+### <a name="passthru-parameter"></a>Paramètre PassThru
 
 ```powershell
 New-ScriptFileInfo -Description "Script file description." -PassThru
 ```
 
-### Applet de commande New-ScriptFileInfo
+### <a name="new-scriptfileinfo-cmdlet"></a>Applet de commande New-ScriptFileInfo
 L’applet de commande New-ScriptFileInfo permet de créer un fichier de script avec des métadonnées telles que version, GUID, auteur, description, et ainsi de suite. 
 
 ```powershell
@@ -197,10 +195,4 @@ DefinedCommands : {Demo-ScriptFunction, Demo-ScriptWorkflow}
 DefinedFunctions : Demo-ScriptFunction
 DefinedWorkflows : Demo-ScriptWorkflow
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

@@ -1,5 +1,5 @@
 ---
-title: "Améliorations de DSC dans WMF 5.1 (préversion)"
+title: "Améliorations de DSC dans WMF 5.1 (préversion)"
 ms.date: 2016-07-13
 keywords: PowerShell, DSC, WMF
 description: 
@@ -8,17 +8,15 @@ author: keithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-translationtype: Human Translation
-ms.sourcegitcommit: 270f2a458a40f005f462d3de5236defbb91a7362
-ms.openlocfilehash: c88c145c3585befcee194499f7e21aaeac67c0f3
-
+ms.openlocfilehash: 53c3bcb76f2bb9284339a4e506f28375a14285ae
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
+#<a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Améliorations de la configuration de l’état souhaité (DSC) dans WMF 5.1
 
-#Améliorations de la configuration de l’état souhaité (DSC) dans WMF 5.1
+## <a name="dsc-class-resource-improvements"></a>Améliorations des ressources de classe DSC
 
-## Améliorations des ressources de classe DSC
-
-Dans WMF 5.1, nous avons résolu les problèmes connus suivants :
+Dans WMF 5.1, nous avons résolu les problèmes connus suivants :
 * Get-DscConfiguration peut retourner des valeurs vides (Null) ou des erreurs si un type complexe/de table de hachage est retourné par la fonction Get() d’une ressource DSC basée sur une classe.
 * Get-DscConfiguration retourne une erreur si des informations d’identification RunAs sont utilisées dans une configuration DSC.
 * Une ressource basée sur une classe ne peut pas être utilisée dans une configuration composite.
@@ -26,23 +24,23 @@ Dans WMF 5.1, nous avons résolu les problèmes connus suivants :
 * Une ressource basée sur une classe ne peut pas être utilisée comme ressource exclusive.
 
 
-## Améliorations du débogage des ressources DSC
+## <a name="dsc-resource-debugging-improvements"></a>Améliorations du débogage des ressources DSC
 
-Dans WMF 5.0, le débogueur PowerShell ne s’arrêtait pas directement sur la méthode de ressource basée sur une classe (Get/Set/Test).
-Dans WMF 5.1, le débogueur s’arrête sur la méthode de ressource basée sur une classe de la même façon que sur des méthodes de ressources basées sur un fichier MOF.
+Dans WMF 5.0, le débogueur PowerShell ne s’arrêtait pas directement sur la méthode de ressource basée sur une classe (Get/Set/Test).
+Dans WMF 5.1, le débogueur s’arrête sur la méthode de ressource basée sur une classe de la même façon que sur des méthodes de ressources basées sur un fichier MOF.
 
-## Le client collecteur DSC prend en charge TLS 1.1 et TLS 1.2 
-Avant, le client collecteur DSC ne prenait en charge que SSL 3.0 et TLS 1.0 sur des connexions HTTPS. Quand il est contraint d’utiliser des protocoles plus sécurisés, le client collecteur cesse de fonctionner. Dans WMF 5.1, le client collecteur DSC ne prend plus en charge SSL 3.0, mais prend en charge les protocoles plus sécurisés TLS 1.1 et TLS 1.2.  
+## <a name="dsc-pull-client-supports-tls-11-and-tls-12"></a>Le client collecteur DSC prend en charge TLS 1.1 et TLS 1.2 
+Avant, le client collecteur DSC ne prenait en charge que SSL 3.0 et TLS 1.0 sur des connexions HTTPS. Quand il est contraint d’utiliser des protocoles plus sécurisés, le client collecteur cesse de fonctionner. Dans WMF 5.1, le client collecteur DSC ne prend plus en charge SSL 3.0, mais prend en charge les protocoles plus sécurisés TLS 1.1 et TLS 1.2.  
 
-## Inscription du serveur collecteur améliorée ##
+## <a name="improved-pull-server-registration"></a>Inscription du serveur collecteur améliorée ##
 
-Dans les versions antérieures de WMF, les inscriptions/demandes de création de rapports simultanées auprès d’un serveur collecteur DSC lors de l’utilisation de la base de données ESENT aboutissaient à un échec de l’inscription/de la création de rapport par le Gestionnaire de configuration local. Dans ce cas, les journaux des événements sur le serveur collecteur affichent l’erreur « Le nom d’instance est déjà utilisé ».
-Cela est dû à l’utilisation d’un modèle incorrect pour accéder à la base de données ESENT dans un scénario multithread. Dans WMF 5.1, ce problème a été résolu. Les inscriptions ou demandes de création de rapports simultanées (impliquant la base de données ESENT) fonctionnent correctement dans WMF 5.1. Ce problème s’applique uniquement à la base de données ESENT et ne s’applique pas à la base de données OLE DB. 
+Dans les versions antérieures de WMF, les inscriptions/demandes de création de rapports simultanées auprès d’un serveur collecteur DSC lors de l’utilisation de la base de données ESENT aboutissaient à un échec de l’inscription/de la création de rapport par le Gestionnaire de configuration local. Dans ce cas, les journaux des événements sur le serveur collecteur affichent l’erreur « Le nom d’instance est déjà utilisé ».
+Cela est dû à l’utilisation d’un modèle incorrect pour accéder à la base de données ESENT dans un scénario multithread. Dans WMF 5.1, ce problème a été résolu. Les inscriptions ou demandes de création de rapports simultanées (impliquant la base de données ESENT) fonctionnent correctement dans WMF 5.1. Ce problème s’applique uniquement à la base de données ESENT et ne s’applique pas à la base de données OLE DB. 
 
-##Convention de nommage pour une configuration partielle de collecte
+##<a name="pull-partial-configuration-naming-convention"></a>Convention de nommage pour une configuration partielle de collecte
 Dans la version précédente, la convention de nommage pour une configuration partielle précisait que le nom du fichier MOF dans le service/serveur collecteur devait correspondre au nom de configuration partielle spécifié dans les paramètres du gestionnaire de configuration local qui, à son tour, devait correspondre au nom de configuration incorporé dans le fichier MOF. 
 
-Consultez les captures instantanées ci-dessous :
+Consultez les captures instantanées ci-dessous :
 
 •   Paramètres de configuration locale qui définissent une configuration partielle qu’un nœud est autorisé à recevoir.
 
@@ -65,7 +63,7 @@ Configuration PartialOne
 PartialOne
 ```
 
-•   « ConfigurationName » incorporé dans le fichier MOF généré.
+•   « ConfigurationName » incorporé dans le fichier MOF généré.
 
 ![Exemple de fichier mof généré](../images/PartialGeneratedMof.png)
 
@@ -92,7 +90,7 @@ Configuration PartialOne
 PartialOne
 ```
 
-Dans WMF 5.1, une configuration partielle dans le service/serveur collecteur peut être nommée `<ConfigurationName>.<NodeName>.mof`. En outre, si un ordinateur collecte une seule configuration d’un service/serveur collecteur, le fichier de configuration dans le dépôt de configuration du serveur collecteur peut avoir n’importe quel nom. Cette souplesse d’attribution des noms vous permet de gérer vos nœuds en partie à l’aide du service Azure Automation, où certains éléments de la configuration de votre nœud proviennent d’Azure Automation DSC tandis que d’autres sont gérés par vous en local.
+Dans WMF 5.1, une configuration partielle dans le service/serveur collecteur peut être nommée `<ConfigurationName>.<NodeName>.mof`. En outre, si un ordinateur collecte une seule configuration d’un service/serveur collecteur, le fichier de configuration dans le dépôt de configuration du serveur collecteur peut avoir n’importe quel nom. Cette souplesse d’attribution des noms vous permet de gérer vos nœuds en partie à l’aide du service Azure Automation, où certains éléments de la configuration de votre nœud proviennent d’Azure Automation DSC tandis que d’autres sont gérés par vous en local.
 
 La métaconfiguration ci-dessous définit un nœud à gérer à la fois localement et par le service Azure Automation.
 
@@ -132,7 +130,7 @@ La métaconfiguration ci-dessous définit un nœud à gérer à la fois localeme
    slcm -Path .\RegistrationMetaConfig -Verbose
  ```
 
-# Utilisation de PsDscRunAsCredential avec des ressources composites DSC   
+# <a name="using-psdscrunascredential-with-dsc-composite-resources"></a>Utilisation de PsDscRunAsCredential avec des ressources composites DSC   
 
 Nous avons ajouté la prise en charge de l’utilisation de [*PsDscRunAsCredential*](https://msdn.microsoft.com/cs-cz/powershell/dsc/runasuser) avec des ressources [composites](https://msdn.microsoft.com/en-us/powershell/dsc/authoringresourcecomposite) DSC.    
 
@@ -177,28 +175,28 @@ InstallWindowsFeature -ConfigurationData $configData
 
 ```
 
-##Validations des signatures de configurations et de modules DSC
+##<a name="dsc-module-and-configuration-signing-validations"></a>Validations des signatures de configurations et de modules DSC
 Dans DSC, les configurations et les modules sont distribués à des ordinateurs gérés à partir du serveur collecteur. Si le serveur collecteur est compromis, un attaquant peut potentiellement modifier les configurations et les modules sur le serveur collecteur pour les distribuer à tous les nœuds gérés, en les compromettant tous. 
 
- Dans WMF 5.1, DSC prend en charge la validation des signatures numériques sur les fichiers catalogue et de configuration (.MOF). Cette fonctionnalité empêche les nœuds d’exécuter des configurations ou des fichiers de modules qui ne sont pas signés par un signataire approuvé ou qui ont été falsifiés après avoir été signés par le signataire approuvé. 
+ Dans WMF 5.1, DSC prend en charge la validation des signatures numériques sur les fichiers catalogue et de configuration (.MOF). Cette fonctionnalité empêche les nœuds d’exécuter des configurations ou des fichiers de modules qui ne sont pas signés par un signataire approuvé ou qui ont été falsifiés après avoir été signés par le signataire approuvé. 
 
 
 
-###Comment signer des configurations et modules 
+###<a name="how-to-sign-configuration-and-module"></a>Comment signer des configurations et modules 
 ***
-* Fichiers de configuration (.MOF) : l’applet de commande PowerShell existante [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx) est étendue pour prendre en charge la signature des fichiers MOF.  
-* Modules : la signature de modules s’effectue en signant le catalogue de module correspondant en procédant comme suit : 
-    1. Créer un fichier catalogue : un fichier catalogue contient une collection de hachages de chiffrement ou d’empreintes numériques. 
+* Fichiers de configuration (.MOF) : l’applet de commande PowerShell existante [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx) est étendue pour prendre en charge la signature des fichiers MOF.  
+* Modules : la signature de modules s’effectue en signant le catalogue de module correspondant en procédant comme suit : 
+    1. Créer un fichier catalogue : un fichier catalogue contient une collection de hachages de chiffrement ou d’empreintes numériques. 
        Chaque empreinte correspond à un fichier qui est inclus dans le module. 
        La nouvelle applet de commande [New-FileCatalog](https://technet.microsoft.com/library/cc732148.aspx) a été ajoutée pour permettre aux utilisateurs de créer un fichier catalogue pour leur module.
-    2. Signer le fichier catalogue : utilisez [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx) pour signer le fichier catalogue.
+    2. Signer le fichier catalogue : utilisez [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx) pour signer le fichier catalogue.
     3. Placer le fichier catalogue dans le dossier de module.
 Par convention, le fichier catalogue de module doit être placé sous le dossier de module portant le même nom que le module.
 
-###Paramètres du gestionnaire de configuration local pour activer les validations des signatures
+###<a name="localconfigurationmanager-settings-to-enable-signing-validations"></a>Paramètres du gestionnaire de configuration local pour activer les validations des signatures
 
-####Extraction
-Le gestionnaire de configuration local d’un nœud effectue une validation des signatures des modules et des configurations en fonction de ses paramètres actifs. Par défaut, la validation des signatures est désactivée. La validation des signatures peut être activée en ajoutant le bloc « SignatureValidation » à la définition de métaconfiguration du nœud, comme indiqué ci-dessous :
+####<a name="pull"></a>Extraction
+Le gestionnaire de configuration local d’un nœud effectue une validation des signatures des modules et des configurations en fonction de ses paramètres actifs. Par défaut, la validation des signatures est désactivée. La validation des signatures peut être activée en ajoutant le bloc « SignatureValidation » à la définition de métaconfiguration du nœud, comme indiqué ci-dessous :
 
 ```PowerShell
 [DSCLocalConfigurationManager()]
@@ -229,7 +227,7 @@ Set-DscLocalConfigurationManager -Path .\EnableSignatureValidation -Verbose
 La définition de la métaconfiguration ci-dessus sur un nœud active la validation des signatures sur les configurations et modules téléchargés. Le gestionnaire de configuration local effectue les étapes suivantes pour vérifier les signatures numériques.
 
 1. Il vérifie que la signature d’un fichier de configuration (.MOF) est valide. 
-   Il utilise l’applet de commande PowerShell [Get-AuthenticodeSignature](https://technet.microsoft.com/library/hh849805.aspx) qui est étendue dans 5.1 pour prendre en charge la validation des signatures MOF.
+   Il utilise l’applet de commande PowerShell [Get-AuthenticodeSignature](https://technet.microsoft.com/library/hh849805.aspx) qui est étendue dans 5.1 pour prendre en charge la validation des signatures MOF.
 2. Il vérifie que l’autorité de certification qui a autorisé le signataire est approuvée.
 3. Il télécharge les dépendances de ressources/modules de la configuration à un emplacement temporaire.
 4. Il vérifie la signature du catalogue qui figure dans le module.
@@ -239,16 +237,16 @@ La définition de la métaconfiguration ci-dessus sur un nœud active la validat
 5. Il installe le module dans $env:ProgramFiles\WindowsPowerShell\Modules\.
 6. Il traite la configuration
 
-> Remarque : La validation des signatures sur le catalogue de module et la configuration est effectuée uniquement quand la configuration est appliquée au système pour la première fois ou quand le module est téléchargé et installé. Les séries de tests de cohérence ne valident pas la signature de Current.mof ni ses dépendances de modules.
+> Remarque : La validation des signatures sur le catalogue de module et la configuration est effectuée uniquement quand la configuration est appliquée au système pour la première fois ou quand le module est téléchargé et installé. Les séries de tests de cohérence ne valident pas la signature de Current.mof ni ses dépendances de modules.
 Si la vérification a échoué à un stade, par exemple si la configuration extraite à partir du serveur collecteur n’est pas signée, le traitement de la configuration s’arrête avec l’erreur affichée ci-dessous et tous les fichiers temporaires sont supprimés.
 
 ![Exemple de configuration de sortie d’erreur](../images/PullUnsignedConfigFail.png)
 
-De la même manière, l’extraction d’un module dont le catalogue n’est pas signé entraîne l’erreur suivante :
+De la même manière, l’extraction d’un module dont le catalogue n’est pas signé entraîne l’erreur suivante :
 
 ![Exemple de module de sortie d’erreur](../images/PullUnisgnedCatalog.png)
 
-####Envoi
+####<a name="push"></a>Envoi
 Une configuration fournie à l’aide d’une transmission de type push peut être falsifiée à sa source avant d’être remise au nœud. Le gestionnaire de configuration local effectue des étapes de validation des signatures similaires pour les configurations envoyées ou publiées.
 Voici un exemple complet de validation des signatures pour l’envoi.
 
@@ -301,10 +299,4 @@ Start-DscConfiguration -Path .\Test -Wait -Verbose -Force
 * Essayez de transmettre par push le fichier MOF signé.
 
 ![SignMofFile](../images/PushSignedMof.png)
-
-
-
-
-<!--HONumber=Sep16_HO3-->
-
 

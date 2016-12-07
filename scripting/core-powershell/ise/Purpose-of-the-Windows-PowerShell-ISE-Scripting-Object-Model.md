@@ -8,17 +8,15 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: d176a131-ab0c-43ee-80c1-f824ab8e4a05
-translationtype: Human Translation
-ms.sourcegitcommit: 641b6b2169824296b459691e67cdb771f3a07294
-ms.openlocfilehash: 63ea621ed8eb31a3be8394d99fd05dc8f663769f
-
+ms.openlocfilehash: 3213279588df19a677940b67fa1752a29a678e36
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Objectif du modèle objet de script Windows PowerShell ISE
+# <a name="purpose-of-the-windows-powershell-ise-scripting-object-model"></a>Objectif du modèle objet de script Windows PowerShell ISE
   Les objets sont associés aux forme et fonction de Windows PowerShell Integrated Scripting Environment (ISE). La référence du modèle objet fournit des détails sur les propriétés et méthodes membres exposées par ces objets. Des exemples sont fournis pour montrer comment vous pouvez utiliser des scripts pour accéder directement à ces méthodes et propriétés. Le modèle objet de script facilite l’éventail des tâches suivantes.
 
-## Personnalisation de l’apparence de Windows PowerShell ISE
- Vous pouvez utiliser le modèle objet pour modifier les options et paramètres de l’application. Vous pouvez, par exemple, les modifier comme suit :
+## <a name="customizing-the-appearance-of-windows-powershell-ise"></a>Personnalisation de l’apparence de Windows PowerShell ISE
+ Vous pouvez utiliser le modèle objet pour modifier les options et paramètres de l’application. Vous pouvez, par exemple, les modifier comme suit :
 
 -   Vous pouvez modifier la couleur des erreurs, des avertissements, des sorties détaillées et des sorties de débogage.
 
@@ -32,8 +30,8 @@ ms.openlocfilehash: 63ea621ed8eb31a3be8394d99fd05dc8f663769f
 
 -   Vous pouvez basculer entre une vue où le volet Script et le volet Sortie sont côte à côte et une vue où le volet Script est au-dessus du volet Sortie. Vous pouvez ancrer le volet Commande en bas ou en haut du volet Sortie.
 
-## Amélioration des fonctionnalités de Windows PowerShell ISE
- Vous pouvez utiliser le modèle objet pour améliorer les fonctionnalités de Windows PowerShell ISE. Par exemple, vous pouvez :
+## <a name="enhancing-the-functionality-of-windows-powershell-ise"></a>Amélioration des fonctionnalités de Windows PowerShell ISE
+ Vous pouvez utiliser le modèle objet pour améliorer les fonctionnalités de Windows PowerShell ISE. Par exemple, vous pouvez :
 
 -   Ajouter et modifier l’instance de Windows PowerShell ISE lui-même. Par exemple, pour modifier les menus, vous pouvez ajouter de nouveaux éléments de menu et mapper les nouveaux éléments de menu à des scripts.
 
@@ -41,7 +39,7 @@ ms.openlocfilehash: 63ea621ed8eb31a3be8394d99fd05dc8f663769f
 
 -   Effectuer des tâches réalisables à l’aide des boutons et des commandes de menu. Par exemple, vous pouvez renommer un onglet PowerShell.
 
--   Manipuler des tampons de texte pour les volets Commande, Sortie et Script associés à un fichier. Par exemple, vous pouvez :
+-   Manipuler des tampons de texte pour les volets Commande, Sortie et Script associés à un fichier. Par exemple, vous pouvez :
 
     -   Obtenir ou définir tout le texte.
 
@@ -57,7 +55,7 @@ ms.openlocfilehash: 63ea621ed8eb31a3be8394d99fd05dc8f663769f
 
     -   Obtenir le numéro de la dernière ligne.
 
--   Effectuer des opérations de fichier. Par exemple, vous pouvez :
+-   Effectuer des opérations de fichier. Par exemple, vous pouvez :
 
     -   Ouvrir un fichier, enregistrer un fichier ou enregistrer un fichier sous un nom différent.
 
@@ -67,18 +65,12 @@ ms.openlocfilehash: 63ea621ed8eb31a3be8394d99fd05dc8f663769f
 
     -   Sélectionner un fichier.
 
-## Automatisation des tâches
+## <a name="automating-tasks"></a>Automatisation des tâches
  Vous pouvez utiliser le modèle objet de script pour créer des raccourcis clavier pour les opérations fréquentes.
 
-## Voir aussi
- - [Hiérarchie du modèle objet ISE](The-ISE-Object-Model-Hierarchy.md) 
- - [Référence de modèle objet Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md) 
- - [Modèle objet de script Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
+## <a name="see-also"></a>Voir aussi
+- [Hiérarchie du modèle objet ISE](The-ISE-Object-Model-Hierarchy.md) 
+- [Informations de référence sur le modèle objet Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md) 
+- [Modèle objet de script Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 
   
-
-
-
-<!--HONumber=Sep16_HO3-->
-
-

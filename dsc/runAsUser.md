@@ -7,15 +7,13 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: dbe2c1ca2fb7dd65b49876f3bee6752ec9a24d6b
-
+ms.openlocfilehash: 8a8af7f4b82b856460427a68ec536e98f7cd981b
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
+# <a name="running-dsc-with-user-credentials"></a>Exécution de DSC avec les informations d’identification de l’utilisateur 
 
-# Exécution de DSC avec les informations d’identification de l’utilisateur 
-
-> S’applique à : Windows PowerShell 5.0
+> S’applique à : Windows PowerShell 5.0
 
 Vous pouvez exécuter une ressource DSC sous un jeu d’informations d’identification spécifié à l’aide de la propriété automatique **PsDscRunAsCredential** dans la configuration. Par défaut, DSC exécute chaque ressource comme compte système. Voici les heures où l’exécution en tant qu’utilisateur est nécessaire, par exemple, l’installation de packages MSI dans un contexte d’utilisateur spécifique, la définition de clés de Registre d’un utilisateur, l’accès à un annuaire local spécifique d’un utilisateur ou l’accès à un partage réseau.
 
@@ -62,10 +60,4 @@ ChangeCmdBackGroundColor -ConfigurationData $configData
 ```
 >**Remarque :** Cet exemple suppose que vous disposez d’un certificat valide dans `C:\publicKeys\targetNode.cer` et que l’empreinte du certificat est la valeur affichée.
 >Pour plus d’informations sur le chiffrement des informations d’identification dans les fichiers MOF de configuration DSC, consultez [Sécurisation du fichier MOF](secureMOF.md).
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 
