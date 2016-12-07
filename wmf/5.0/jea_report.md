@@ -1,9 +1,9 @@
-# Création de rapports sur JEA
-Pour signaler l’état de votre configuration JEA, vous pouvez utiliser :
+# <a name="reporting-on-jea"></a>Création de rapports sur JEA
+Pour signaler l’état de votre configuration JEA, vous pouvez utiliser :
 1.  **Get-PSSessionConfiguration** pour retourner une liste de tous les points de terminaison inscrits sur un ordinateur donné.
 2.  **Get-PSSessionCapability** pour créer un rapport sur les capacités dont dispose tout utilisateur donné sur un point de terminaison spécifique.
 
-Voici un exemple de **Get-PSSessionCapability** :
+Voici un exemple de **Get-PSSessionCapability** :
 ```powershell
 Get-PSSessionCapability -ConfigurationName Maintenance -Username "CONTOSO\JohnDoe"
 
@@ -29,10 +29,6 @@ Cmdlet          Restart-Service                                    3.0.0.0 Micro
 
 ```
 
-Pour générer un rapport sur les _actions_ effectuées par les utilisateurs pendant une session de JEA, vous pouvez :
-1. Activer les transcriptions de « procuration de privilège » pour ce point de terminaison JEA et consulter le répertoire de transcription pour obtenir un journal complet des actions de chaque utilisateur
+Pour générer un rapport sur les _actions_ effectuées par les utilisateurs pendant une session de JEA, vous pouvez :
+1. Activer les transcriptions de « procuration de privilège » pour ce point de terminaison JEA et consulter le répertoire de transcription pour obtenir un journal complet des actions de chaque utilisateur
 2. Activer la journalisation des modules PowerShell et inspecter les journaux des événements PowerShell
-
-<!--HONumber=Aug16_HO3-->
-
-

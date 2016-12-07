@@ -37,7 +37,7 @@
 ##### [Améliorations liées à la création à l’aide de PowerShell ISE](5.0/dsc_authoring.md)
 ##### [Autorisation des ressources en double identiques dans une configuration](5.0/dsc_identicalduplicate.md)
 ##### [Le mot clé Import-DscResource prend en charge le paramètre -ModuleVersion](5.0/dsc_importdscresource.md)
-##### [Prise en charge WOW64 pour le mot clé Configuration](5.0/dsc_wow64.md)
+##### [Prise en charge WOW64 pour le mot clé Configuration](5.0/dsc_wow64.md)
 #### [Ressources]()
 ##### [Ressources DSC basées sur une classe](5.0/dsc_classbasedresource.md)
 ##### [Débogage de script de ressources DSC](5.0/dsc_resourcedebugging.md)
@@ -72,7 +72,7 @@
 #### [Applets de commande PackageManagement](5.0/oneget_cmdlets.md)
 ### [écouverte, installation et inventaire des modules PowerShell avec PowerShellGet](5.0/psget_module_overview.md)
 #### [Inscrire un référentiel PowerShell](5.0/psget_psrepository.md)
-#### [Prise en charge des versions côte à côte sur PowerShell 5.0 ou version ultérieure](5.0/psget_modulesxsinstall.md)
+#### [Prise en charge des versions côte à côte sur PowerShell 5.0 ou version ultérieure](5.0/psget_modulesxsinstall.md)
 #### [Installation des dépendances de modules](5.0/psget_moduledependency.md)
 #### [Applets de commande PowerShellGet pour la gestion des modules](5.0/psget_modulecmdlets.md)
 ### [Découverte, installation et gestion des scripts PowerShell avec PowerShellGet](5.0/psget_script_overview.md)
@@ -94,8 +94,3 @@
 ### [Générer des applets de commande PowerShell basées sur un point de terminaison OData](5.0/odata_overview.md)
 ### [Gestion du commutateur réseau avec PowerShell](5.0/networkswitch_overview.md)
 ### [Journalisation de l’inventaire logiciel (SIL)](5.0/sil_overview.md)
-
-
-<!--HONumber=Nov16_HO4-->
-
-

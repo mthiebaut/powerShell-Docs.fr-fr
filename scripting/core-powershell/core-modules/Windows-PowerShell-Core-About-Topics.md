@@ -8,14 +8,12 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 8b950138-9782-4dfe-bd5f-6bdcea7060da
-translationtype: Human Translation
-ms.sourcegitcommit: 6c666e2e23cb74818e37293410dafc9033057733
-ms.openlocfilehash: c935d6f066aed1496069681723aa7bd72edbb8e3
-
+ms.openlocfilehash: 5343cf633d74171037ed3cdc9fcaa04495f4aaf7
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="windows-powershell-core-about-topics"></a>Rubriques About Windows PowerShell Core
-Cette section contient les rubriques d'aide conceptuelle (« About ») pour l'ensemble des modules Windows PowerShell. Pour accéder aux rubriques About d'autres modules, consultez les rubriques d'aide propres à chaque module.
+Cette section contient les rubriques d'aide conceptuelle (« About ») pour l'ensemble des modules Windows PowerShell. Pour accéder aux rubriques About d'autres modules, consultez les rubriques d'aide propres à chaque module.
 
 |Rubrique|Description|
 |---------|---------------|
@@ -38,7 +36,7 @@ Cette section contient les rubriques d'aide conceptuelle (« About ») pour l'
 |[about_Debuggers [v4]](https://technet.microsoft.com/en-us/library/2b2ce8b3-f881-4528-bd30-f453dea06755)|Décrit le débogueur de script Windows PowerShell, un jeu d’applets de commande permettant de déboguer des scripts et des fonctions.|
 |[about_Do [v4]](https://technet.microsoft.com/en-us/library/d1f65c4e-6231-44e2-b21c-78a91845ad6c)|Décrit l'instruction Do qui exécute un bloc de script une ou plusieurs fois selon une condition While ou Until.|
 |[about_Environment_Variables [v4]](https://technet.microsoft.com/en-us/library/998c8863-3794-42a8-8971-a5cadef72772)|Explique comment accéder aux variables d’environnement Windows dans Windows PowerShell.|
-|[about_Escape_Characters [v4]](https://technet.microsoft.com/en-us/library/576ca013-c4ca-4ade-bf46-b0d1ce2c778f)|Introduit le caractère d’échappement dans Windows PowerShell (\`) et explique son rôle.|
+|[about_Escape_Characters [v4]](https://technet.microsoft.com/en-us/library/576ca013-c4ca-4ade-bf46-b0d1ce2c778f)|Introduit le caractère d’échappement dans Windows PowerShell (\`) et explique son rôle.|
 |[about_Eventlogs [v4]](https://technet.microsoft.com/en-us/library/8b5279cd-daf1-4ed1-8575-2df4baf7042d)|Décrit le journal des événements Windows PowerShell dans l’observateur d’événements.|
 |[about_Execution_Policies [v4]](https://technet.microsoft.com/en-us/library/347708dc-1515-4d74-978b-8334603472e6)|Décrit les stratégies d’exécution Windows PowerShell et explique comment les gérer.|
 |[about_For [v4]](https://technet.microsoft.com/en-us/library/a2eb48d6-7d47-4087-a8d6-deb1d029a957)|Décrit la boucle **For** dans Windows PowerShell.|
@@ -118,13 +116,13 @@ Cette section contient les rubriques d'aide conceptuelle (« About ») pour l'
 |[about_Transactions [v4]](https://technet.microsoft.com/en-us/library/e6902e15-3a8c-4fd2-818a-d662de083deb)|Explique comment gérer des opérations traitées dans Windows PowerShell.|
 |[about_Trap [v4]](https://technet.microsoft.com/en-us/library/2d154e86-ee6e-46c3-8f82-511743c605e6)|Décrit le mot clé **Trap** qui gère une erreur avec fin d’exécution.|
 |[about_Try_Catch_Finally [v4]](https://technet.microsoft.com/en-us/library/86a06c14-5b2e-4982-b02e-18be8424ae47)|Décrit la gestion des erreurs à l'aide des blocs de script Try, Catch et Finally.|
-|[about_Type_Operators [v4]](https://technet.microsoft.com/en-us/library/06c35762-56f7-4592-ad47-4f8f0047085e)|Décrit les opérateurs qui fonctionnent avec des types .NET.|
-|[about_Types.ps1xml [v4]](https://technet.microsoft.com/en-us/library/bc879777-5cd6-45a9-96d8-ebe099b95456)|Décrit les fichiers Types.ps1xml qui vous permettent d’étendre les types .NET des objets utilisés dans Windows PowerShell.|
+|[about_Type_Operators [v4]](https://technet.microsoft.com/en-us/library/06c35762-56f7-4592-ad47-4f8f0047085e)|Décrit les opérateurs qui fonctionnent avec des types .NET.|
+|[about_Types.ps1xml [v4]](https://technet.microsoft.com/en-us/library/bc879777-5cd6-45a9-96d8-ebe099b95456)|Décrit les fichiers Types.ps1xml qui vous permettent d’étendre les types .NET des objets utilisés dans Windows PowerShell.|
 |[about_Updatable_Help](https://technet.microsoft.com/en-us/library/10bba75c-f4ac-4ca1-bbf3-8f34dd521ffe)|Décrit le système d’aide pouvant être mis à jour dans Windows PowerShell.|
 |[about_Variables [v4]](https://technet.microsoft.com/en-us/library/0cb2aa2b-508a-4d25-999b-e066e99a9312)|Fournit une vue d’ensemble des types de variables dans Windows PowerShell.|
 |[about_While [v4]](https://technet.microsoft.com/en-us/library/3a1a1329-2501-4e4e-8660-a2ca68c68541)|Décrit les boucles **While** dans Windows PowerShell.|
-|[about_Wildcards [v4]](https://technet.microsoft.com/en-us/library/9fe09a23-afce-4547-9e2f-c38090f77636)|Explique comment utiliser le caractère générique (\*) dans Windows PowerShell.|
-|[about_Windows_PowerShell_5.0](https://technet.microsoft.com/en-us/library/6d56fa88-371e-40c9-b2de-64a2a0cd49da)|Décrit les nouvelles fonctionnalités de Windows PowerShell 4.0 et les modifications apportées.|
+|[about_Wildcards [v4]](https://technet.microsoft.com/en-us/library/9fe09a23-afce-4547-9e2f-c38090f77636)|Explique comment utiliser le caractère générique (\*) dans Windows PowerShell.|
+|[about_Windows_PowerShell_5.0](https://technet.microsoft.com/en-us/library/6d56fa88-371e-40c9-b2de-64a2a0cd49da)|Décrit les nouvelles fonctionnalités de Windows PowerShell 4.0 et les modifications apportées.|
 |[about_Windows_PowerShell_ISE [v3]](https://technet.microsoft.com/en-us/library/dfa54d47-60c6-4fff-8197-c747e8d411bb)|Décrit l’environnement d’écriture de scripts intégré (ISE) de Windows PowerShell®.|
 |[about_Workflows](https://technet.microsoft.com/en-us/library/f2897bdd-1b9d-4679-8b19-09840bd40a22)|Présente brièvement la fonctionnalité Windows PowerShell Workflow.|
 |[about_WorkflowCommonParameters](https://technet.microsoft.com/en-us/library/119f968e-618e-439c-b76c-cdd17e6df27c)|Décrit les paramètres valides dans toutes les commandes de workflow Windows PowerShell.|
@@ -141,10 +139,4 @@ Cette section contient les rubriques d'aide conceptuelle (« About ») pour l'
 - [about_WMI_Cmdlets [v3]](https://technet.microsoft.com/en-us/library/9c56b172-3b25-47b2-b6e0-86db649b1c45)
 - [about_WS-Management_Cmdlets](https://technet.microsoft.com/en-us/library/6ed3370a-ea10-45a5-9493-696aeace27ed)
 - [Windows PowerShell SDK](http://go.microsoft.com/fwlink/?LinkID=107032)
-
-
-
-
-<!--HONumber=Nov16_HO4-->
-
 

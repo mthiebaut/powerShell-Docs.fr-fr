@@ -8,10 +8,9 @@ author: keithb
 manager: carolz
 ms.prod: powershell
 ms.technology: WMF
-translationtype: Human Translation
-ms.sourcegitcommit: ecf70f38bbf48f410eb59b75f86eea767637757a
-ms.openlocfilehash: 72df0311a1d187dc6c7c1d29b0a3d2fd243848f0
-
+ms.openlocfilehash: 6986e7b8543ce38c0330e6428ac908ca7f126e08
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
 # <a name="catalog-cmdlets"></a>Applets de commande de catalogue  
 
@@ -25,7 +24,7 @@ Nous avons ajouté deux nouvelles applets de commande au module [Microsoft.Power
 ```PowerShell
 New-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-CatalogVersion <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
-Nous prenons en charge la création des versions de catalogues 1 et 2. La version 1 utilise l’algorithme de hachage SHA1 pour créer des fichiers à hacher et la version 2 utilise SHA256. La version de catalogue 2 n’est pas prise en charge sur *Windows Server 2008 R2* ni *Windows 7*. Il est recommandé d’utiliser la version de catalogue 2 si vous utilisez les plateformes *Windows 8*, *Windows Server 2012* et versions ultérieures.  
+Nous prenons en charge la création des versions de catalogues 1 et 2. La version 1 utilise l’algorithme de hachage SHA1 pour créer des fichiers à hacher et la version 2 utilise SHA256. La version de catalogue 2 n’est pas prise en charge sur *Windows Server 2008 R2* ni *Windows 7*. Il est recommandé d’utiliser la version de catalogue 2 si vous utilisez les plateformes *Windows 8*, *Windows Server 2012* et versions ultérieures.  
 
 Pour utiliser cette commande sur un module existant, spécifiez les variables CatalogFilePath et Path de façon à ce qu’elles correspondent à l’emplacement du manifeste du module. Dans l’exemple ci-dessous, le manifeste du module se trouve dans C:\Program Files\Windows PowerShell\Modules\Pester. 
 
@@ -52,9 +51,3 @@ Test-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-Detailed] [-
 ![](../images/TestFileCatalog.jpg)
 
 Cette applet de commande compare les hachages de tous les fichiers et leurs chemins relatifs qui figurent dans le fichier catalogue à ceux enregistrés sur le disque. Si elle détecte une incompatibilité entre les hachages de fichier et les chemins, elle retourne le statut `ValidationFailed`. Les utilisateurs peuvent récupérer toutes ces informations à l’aide de l’indicateur `Detailed`. Le statut de signature du catalogue est affiché dans le champ `Signature`, ce qui revient à appeler l’applet de commande [Get-AuthenticodeSignature](https://technet.microsoft.com/en-us/library/hh849805.aspx) sur le fichier catalogue. Les utilisateurs peuvent également ignorer des fichiers pendant la validation à l’aide du paramètre `FilesToSkip`. 
-
-
-
-<!--HONumber=Nov16_HO4-->
-
-

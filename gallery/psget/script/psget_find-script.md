@@ -9,24 +9,22 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psget_find script
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 5651989acde9d47a7a07fac9284aebae84f28174
-
+ms.openlocfilehash: 09f4d6eca9cf04d03fddbe23beea6a5bc0243657
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Find-Script
+# <a name="find-script"></a>Find-Script
 
 Recherche les fichiers de script PowerShell à partir d’une galerie en ligne qui correspondent aux critères spécifiés.
 
-## Description
+## <a name="description"></a>Description
 
 Find-Script détecte les fichiers de script à partir des référentiels enregistrés qui correspondent aux critères spécifiés.
 Pour chaque script trouvé, Find-Script retourne un objet PSRepositoryItemInfo qui peut éventuellement être transmis à Install-Script pour installer les scripts.
 L’applet de commande Find-Script permet de découvrir les fichiers de script avec différents critères de recherche tels que nom, balise, filtre, nom de commande, plage de versions, version exacte, toutes les versions, y compris ses dépendances et à partir de dépôts spécifiques ou de tous les dépôts inscrits.
 
 - Find-Script peut filtrer le contenu de script avec les paramètres -Command et -Includes.
-- Find-Script permet de filtrer avec des paramètres de version : MinimumVersion, MaximumVersion, RequiredVersion, AllVersions.
+- Find-Script permet de filtrer avec des paramètres de version : MinimumVersion, MaximumVersion, RequiredVersion, AllVersions.
   - Ces paramètres sont mutuellement exclusifs, sauf MinmimumVersion et MaximumVersion.
   - Ces paramètres de version sont autorisés uniquement avec le nom de script unique sans les caractères génériques.
   - Si le paramètre RequiredVersion n’est pas spécifié, Find-Script retourne la dernière version du script qui est supérieure ou égale à la version minimale spécifiée ou la dernière version du script si aucune version minimale n’est spécifiée. 
@@ -35,19 +33,19 @@ L’applet de commande Find-Script permet de découvrir les fichiers de script a
 - Find-Script peut filtrer le langage de recherche propre au référentiel avec le paramètre -Filter.
 - Find-Script peut filtrer les scripts à partir de l’ensemble ou de certains des référentiels enregistrés.
 
-**REMARQUE :** Un référentiel PSRepository enregistré doit avoir une valeur ScriptSourceLocation valide. Vous pouvez utiliser l’applet de commande Set-PSRepository pour définir la valeur ScriptSourceLocation.
+**REMARQUE :** Un référentiel PSRepository enregistré doit avoir une valeur ScriptSourceLocation valide. Vous pouvez utiliser l’applet de commande Set-PSRepository pour définir la valeur ScriptSourceLocation.
 
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 
 ```powershell
 Get-Command -Name Find-Script -Module PowerShellGet -Syntax
 ```
 
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [Find-Script](http://go.microsoft.com/fwlink/?LinkId=619785)
 
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 
 ```powershell
 # Find a script from the registered repository with ScriptSourceLocation
@@ -157,10 +155,4 @@ Cmdlet                         {}
 
 
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

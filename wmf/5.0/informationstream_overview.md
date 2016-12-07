@@ -1,4 +1,4 @@
-# Flux d’informations
+# <a name="information-stream"></a>Flux d’informations
 
 Vous pouvez désormais utiliser un nouveau flux d’informations structuré pour transmettre des données structurées entre un script et son hôte. **Write-Host** a également été mise à jour pour envoyer sa sortie vers le flux d’informations, où vous pouvez maintenant la capturer ou la passer sous silence. La nouvelle applet de commande **Write-Information** (ainsi qu’une API WriteInformation correspondante) utilisée avec les paramètres communs **-InformationVariable** et **-InformationAction** offre davantage de souplesse et une capacité accrue.
 
@@ -112,8 +112,3 @@ ProcessId       : 4008
 NativeThreadId  : 2276
 ManagedThreadId : 14
 ```
-
-
-<!--HONumber=Aug16_HO3-->
-
-

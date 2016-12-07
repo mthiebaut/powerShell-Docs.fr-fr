@@ -1,6 +1,6 @@
-# Découverte, installation et gestion des scripts PowerShell avec PowerShellGet
+# <a name="powershell-script-discovery-install-and-management-with-powershellget"></a>Découverte, installation et gestion des scripts PowerShell avec PowerShellGet
 
-La fonctionnalité de partage de script PowerShell a été ajoutée à PowerShellGet dans la version WMF 5.0 RTM.
+La fonctionnalité de partage de script PowerShell a été ajoutée à PowerShellGet dans la version WMF 5.0 RTM.
 Les nouvelles applets de commande suivantes ont été ajoutées au module PowerShellGet pour prendre en charge les scripts PowerShell.
 ```powershell
 PS C:\\windows\\system32&gt; Get-Command \*script\* -Module PowerShellGet | Sort-Object -Property Noun, Verb
@@ -28,7 +28,7 @@ Function Update-ScriptFileInfo 1.0.0.1 PowerShellGet
 -   **Test-ScriptFileInfo** cmdlet lets you to validate and get the script file metadata.
 ```
 
-Syntaxe des applets de commande de partage de script :
+Syntaxe des applets de commande de partage de script :
 ```powershell
 **New-ScriptFileInfo** \[-Path\] &lt;string&gt; -Description &lt;string&gt; \[-Version &lt;version&gt;\] \[-Author &lt;string&gt;\] \[-Guid &lt;guid&gt;\] \[-CompanyName &lt;string&gt;\] \[-Copyright &lt;string&gt;\] \[-RequiredModules &lt;Object\[\]&gt;\] \[-ExternalModuleDependencies &lt;string\[\]&gt;\] \[-RequiredScripts &lt;string\[\]&gt;\] \[-ExternalScriptDependencies &lt;string\[\]&gt;\] \[-Tags &lt;string\[\]&gt;\] \[-ProjectUri &lt;uri&gt;\] \[-LicenseUri &lt;uri&gt;\] \[-IconUri &lt;uri&gt;\] \[-ReleaseNotes &lt;string\[\]&gt;\] \[-PassThru\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[&lt;CommonParameters&gt;\]
 
@@ -66,8 +66,3 @@ Syntaxe des applets de commande de partage de script :
 
 **Publish-Script** -LiteralPath &lt;string&gt; \[-NuGetApiKey &lt;string&gt;\] \[-Repository &lt;string&gt;\] \[-WhatIf\] \[-Confirm\] \[&lt;CommonParameters&gt;\]
 ```
-
-
-<!--HONumber=Aug16_HO3-->
-
-

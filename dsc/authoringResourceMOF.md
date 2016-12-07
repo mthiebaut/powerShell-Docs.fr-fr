@@ -1,5 +1,5 @@
 ---
-title: "Écriture d’une ressource DSC personnalisée avec MOF"
+title: "Écriture d’une ressource DSC personnalisée avec MOF"
 ms.date: 2016-05-16
 keywords: powershell,DSC
 description: 
@@ -7,25 +7,23 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: b414a01bcd111143791a5fac77e61ce309a0a5c5
-ms.openlocfilehash: 50b99917f15d290db30da1b1b752d668d886ec50
-
+ms.openlocfilehash: 1fc28589633d6279d0428179a70e7e561d753ea8
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
+# <a name="writing-a-custom-dsc-resource-with-mof"></a>Écriture d’une ressource DSC personnalisée avec MOF
 
-# Écriture d’une ressource DSC personnalisée avec MOF
+> S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
-> S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
+Dans cette rubrique, nous allons définir le schéma d’une ressource DSC Windows PowerShell personnalisée dans un fichier MOF et implémenter cette ressource dans un fichier de script Windows PowerShell. Cette ressource personnalisée permet de créer et de gérer un site web.
 
-Dans cette rubrique, nous allons définir le schéma d’une ressource DSC Windows PowerShell personnalisée dans un fichier MOF et implémenter cette ressource dans un fichier de script Windows PowerShell. Cette ressource personnalisée permet de créer et de gérer un site web.
+## <a name="creating-the-mof-schema"></a>Création du schéma MOF
 
-## Création du schéma MOF
+Le schéma définit les propriétés de votre ressource qui peuvent être configurées par un script de configuration DSC.
 
-Le schéma définit les propriétés de votre ressource qui peuvent être configurées par un script de configuration DSC.
+### <a name="folder-structure-for-a-mof-resource"></a>Structure de dossiers pour une ressource MOF
 
-### Structure de dossiers pour une ressource MOF
-
-Pour implémenter une ressource personnalisée DSC avec un schéma MOF, créez la structure de dossiers suivante. Le schéma MOF est défini dans le fichier Demo_IISWebsite.schema.mof et le script de la ressource est défini dans Demo_IISWebsite.psm1. Si vous le voulez, vous pouvez créer un fichier de manifeste de module (psd1).
+Pour implémenter une ressource personnalisée DSC avec un schéma MOF, créez la structure de dossiers suivante. Le schéma MOF est défini dans le fichier Demo_IISWebsite.schema.mof et le script de la ressource est défini dans Demo_IISWebsite.psm1. Si vous le voulez, vous pouvez créer un fichier de manifeste de module (psd1).
 
 ```
 $env:ProgramFiles\WindowsPowerShell\Modules (folder)
@@ -39,9 +37,9 @@ $env:ProgramFiles\WindowsPowerShell\Modules (folder)
 
 Notez qu’il est nécessaire de créer un dossier nommé DSCResources sous le dossier de niveau supérieur, et que le dossier de chaque ressource doit porter le même nom que la ressource.
 
-### Le contenu du fichier MOF
+### <a name="the-contents-of-the-mof-file"></a>Le contenu du fichier MOF
 
-Voici un exemple de fichier MOF qui peut être utilisé pour une ressource de site web personnalisée. Pour suivre cet exemple, enregistrez ce schéma dans un fichier et appelez le fichier *Demo_IISWebsite.schema.mof*.
+Voici un exemple de fichier MOF qui peut être utilisé pour une ressource de site web personnalisée. Pour suivre cet exemple, enregistrez ce schéma dans un fichier et appelez le fichier *Demo_IISWebsite.schema.mof*.
 
 ```
 [ClassVersion("1.0.0"), FriendlyName("Website")] 
@@ -58,22 +56,22 @@ class Demo_IISWebsite : OMI_BaseResource
 };
 ```
 
-Notez les éléments suivants concernant le code ci-dessus :
+Notez les éléments suivants concernant le code ci-dessus :
 
-* `FriendlyName` définit le nom que vous pouvez utiliser pour faire référence à cette ressource personnalisée dans les scripts de configuration DSC. Dans cet exemple, `Website` équivaut au nom convivial `Archive` de la ressource Archive intégrée.
+* `FriendlyName` définit le nom que vous pouvez utiliser pour faire référence à cette ressource personnalisée dans les scripts de configuration DSC. Dans cet exemple, `Website` équivaut au nom convivial `Archive` de la ressource Archive intégrée.
 * La classe que vous définissez pour la ressource personnalisée doit dériver de `OMI_BaseResource`.
 * Le qualificateur de type (`[Key]`) d’une propriété indique que cette propriété identifie de manière unique l’instance de ressource. Au moins une propriété `[Key]` est requise.
 * Le qualificateur `[Required]` indique que la propriété est obligatoire (une valeur doit être spécifiée dans un script de configuration qui utilise cette ressource).
 * Le qualificateur `[write]` indique que cette propriété est facultative quand vous utilisez la ressource personnalisée dans un script de configuration. Le qualificateur `[read]` indique qu’une propriété ne peut pas être définie par une configuration et qu’elle ne peut être utilisée qu’à des fins de création de rapports.
 * `Values` limite les valeurs pouvant être affectées à la propriété à la liste des valeurs définies dans `ValueMap`. Pour plus d’informations, consultez [ValueMap and Value Qualifiers](https://msdn.microsoft.com/library/windows/desktop/aa393965.aspx).
-* Il est recommandé d’utiliser une propriété appelée `Ensure` avec les valeurs `Present` et `Absent` dans votre ressource pour maintenir un style cohérent entre les ressources DSC intégrées.
-* Nommez le fichier de schéma de la ressource personnalisée comme suit : `classname.schema.mof`, où `classname` est l’identificateur qui suit le mot clé `class` dans votre définition de schéma.
+* Il est recommandé d’utiliser une propriété appelée `Ensure` avec les valeurs `Present` et `Absent` dans votre ressource pour maintenir un style cohérent entre les ressources DSC intégrées.
+* Nommez le fichier de schéma de la ressource personnalisée comme suit : `classname.schema.mof`, où `classname` est l’identificateur qui suit le mot clé `class` dans votre définition de schéma.
 
-### Écriture du script de la ressource
+### <a name="writing-the-resource-script"></a>Écriture du script de la ressource
 
-Le script de la ressource implémente la logique de la ressource. Dans ce module, vous devez inclure les trois fonctions **Get-TargetResource**, **Set-TargetResource** et **Test-TargetResource**. Les trois fonctions doivent accepter un jeu de paramètres identique à l’ensemble de propriétés définies dans le schéma MOF que vous avez créé pour votre ressource. Dans ce document, nous appelons cet ensemble de propriétés « propriétés de ressource ». Stockez ces trois fonctions dans un fichier appelé <ResourceName>.psm1. Dans l’exemple suivant, les fonctions sont stockées dans un fichier appelé Demo_IISWebsite.psm1.
+Le script de la ressource implémente la logique de la ressource. Dans ce module, vous devez inclure les trois fonctions **Get-TargetResource**, **Set-TargetResource** et **Test-TargetResource**. Les trois fonctions doivent accepter un jeu de paramètres identique à l’ensemble de propriétés définies dans le schéma MOF que vous avez créé pour votre ressource. Dans ce document, nous appelons cet ensemble de propriétés « propriétés de ressource ». Stockez ces trois fonctions dans un fichier appelé <ResourceName>.psm1. Dans l’exemple suivant, les fonctions sont stockées dans un fichier appelé Demo_IISWebsite.psm1.
 
-> **Remarque** : Quand vous exécutez le même script de configuration plusieurs fois sur votre ressource, vous ne devez pas obtenir d’erreur et la ressource doit avoir le même état que lorsque le script n’est exécuté qu’une seule fois. Pour cela, assurez-vous que vos fonctions **Get-TargetResource** et **TargetResource-Test** ne modifient pas la ressource, et que le fait d’appeler la fonction **Set-TargetResource** plusieurs fois de suite avec les mêmes valeurs de paramètres équivaut toujours à un appel unique.
+> **Remarque** : Quand vous exécutez le même script de configuration plusieurs fois sur votre ressource, vous ne devez pas obtenir d’erreur et la ressource doit avoir le même état que lorsque le script n’est exécuté qu’une seule fois. Pour cela, assurez-vous que vos fonctions **Get-TargetResource** et **TargetResource-Test** ne modifient pas la ressource, et que le fait d’appeler la fonction **Set-TargetResource** plusieurs fois de suite avec les mêmes valeurs de paramètres équivaut toujours à un appel unique.
 
 Dans l’implémentation de la fonction **Get-TargetResource**, utilisez les valeurs de propriétés de ressource de clé qui sont fournies comme paramètres pour vérifier l’état de l’instance de la ressource spécifiée. Cette fonction doit retourner une table de hachage comprenant toutes les propriétés de ressource comme clés, ainsi que les valeurs réelles de ces propriétés comme valeurs correspondantes. Le code suivant montre un exemple.
 
@@ -126,7 +124,7 @@ function Get-TargetResource
 }
 ```
 
-Selon les valeurs qui sont spécifiées pour les propriétés de ressource dans le script de configuration, la fonction **Set-TargetResource** doit effectuer l’une des opérations suivantes :
+Selon les valeurs qui sont spécifiées pour les propriétés de ressource dans le script de configuration, la fonction **Set-TargetResource** doit effectuer l’une des opérations suivantes :
 
 * Créer un site web
 * Mettre à jour un site web existant
@@ -218,9 +216,9 @@ $result
 }
 ```
 
-**Remarque** : Pour faciliter le débogage, utilisez l’applet de commande **Write-Verbose** dans l’implémentation des trois fonctions précédentes. Cette applet de commande écrit du texte dans le flux de message détaillé. Par défaut, le flux de message détaillé n’est pas affiché, mais vous pouvez l’afficher en modifiant la valeur de la variable **$VerbosePreference** ou en utilisant le paramètre **Verbose** dans DSC cmdlets = new.
+**Remarque** : Pour faciliter le débogage, utilisez l’applet de commande **Write-Verbose** dans l’implémentation des trois fonctions précédentes. Cette applet de commande écrit du texte dans le flux de message détaillé. Par défaut, le flux de message détaillé n’est pas affiché, mais vous pouvez l’afficher en modifiant la valeur de la variable **$VerbosePreference** ou en utilisant le paramètre **Verbose** dans DSC cmdlets = new.
 
-### Création du manifeste de module
+### <a name="creating-the-module-manifest"></a>Création du manifeste de module
 
 Enfin, utilisez l’applet de commande **New-ModuleManifest** pour définir un fichier <ResourceName>.psd1 pour votre module de ressource personnalisé. Quand vous appelez cette applet de commande, référencez le fichier de module de script (.psm1) décrit dans la section précédente. Ajoutez **Get-TargetResource**, **Set-TargetResource** et **Test-TargetResource** à la liste des fonctions à exporter. Voici un exemple de fichier de manifeste.
 
@@ -275,10 +273,4 @@ FunctionsToExport = @("Get-TargetResource", "Set-TargetResource", "Test-TargetRe
 # HelpInfoURI = ''
 }
 ```
-
-
-
-
-<!--HONumber=Oct16_HO1-->
-
 
