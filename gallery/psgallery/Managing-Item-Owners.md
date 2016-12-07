@@ -9,53 +9,51 @@ ms.date: 2016-10-14
 contributor: manikb
 title: "Gestion des propriétaires d’éléments"
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 00fe57762c6b2bb690255ecaea642f97124f4328
-
+ms.openlocfilehash: 36a3a3079bce642b16f0512ead2b0778b43e5d2d
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Gestion des propriétaires d’éléments
+# <a name="managing-item-owners"></a>Gestion des propriétaires d’éléments
 
 La propriété d’un élément dans PowerShell Gallery est définie par la personne qui a publié l’élément dans la galerie.
 Ces métadonnées doivent parfois être gérées au-delà de la publication initiale de l’élément, ce qui signifie que les métadonnées du propriétaire doivent être mutables alors que l’élément lui-même ne l’est pas.
 
 Tous les propriétaires d’éléments sont des homologues. Cela signifie que tout propriétaire d’élément peut publier une nouvelle version d’un élément. Cela signifie également que tout propriétaire d’élément peut supprimer n’importe quel autre propriétaire d’élément. Aucun propriétaire n’a plus d’autorité qu’un autre.  
 
-## Définition du propriétaire initial d’un élément 
+## <a name="setting-an-items-initial-owner"></a>Définition du propriétaire initial d’un élément 
 
 Quand un nouvel élément est publié dans PowerShell Gallery, le propriétaire initial est défini par l’utilisateur qui a publié l’élément. Cela est déterminé par l’utilisateur dont la clé API a été utilisée dans l’applet de commande Publish-Module.
 
-## Ajout de propriétaires
+## <a name="adding-owners"></a>Ajout de propriétaires
 
 Une fois qu’un élément a été publié dans PowerShell Gallery, il est facile d’inviter d’autres utilisateurs à devenir propriétaires d’un élément.
 
 1. [Connectez-vous](https://powershellgallery.com/users/account/LogOn) à PowerShell Gallery avec le compte qui est le propriétaire actuel d’un élément.
-2. Accédez à la page d’un élément via l’onglet « Éléments » en recherchant votre nom d’utilisateur ou en cliquant dessus, puis sur [**Gérer mes éléments**](https://www.powershellgallery.com/account/Packages).
-3. Une fois que vous êtes connecté comme propriétaire d’un élément, un lien « Gérer les propriétaires » sur lequel vous pouvez cliquer est affiché sur le côté gauche.
-4. Entrez le nom d’utilisateur de la personne à ajouter comme propriétaire, puis cliquez sur « Ajouter ».
+2. Accédez à la page d’un élément via l’onglet « Éléments » en recherchant votre nom d’utilisateur ou en cliquant dessus, puis sur [**Gérer mes éléments**](https://www.powershellgallery.com/account/Packages).
+3. Une fois que vous êtes connecté comme propriétaire d’un élément, un lien « Gérer les propriétaires » sur lequel vous pouvez cliquer est affiché sur le côté gauche.
+4. Entrez le nom d’utilisateur de la personne à ajouter comme propriétaire, puis cliquez sur « Ajouter ».
 5. Un e-mail est alors envoyé au nouveau copropriétaire pour inviter celui-ci à devenir le propriétaire d’un élément.
 6. Une fois que l’utilisateur clique sur le lien, il est copropriétaire à part entière avec contrôle total sur un élément, ce qui inclut la possibilité de supprimer d’autres utilisateurs comme propriétaires.
 
-**REMARQUE** : Tant que le nouveau propriétaire n’a pas confirmé être propriétaire, il n’est *pas* répertorié comme propriétaire d’un élément.
-Quand vous consultez la page **Gérer les propriétaires**, vous voyez une entrée « en attente d’approbation » dans les propriétaires actuels.
+**REMARQUE** : Tant que le nouveau propriétaire n’a pas confirmé être propriétaire, il n’est *pas* répertorié comme propriétaire d’un élément.
+Quand vous consultez la page **Gérer les propriétaires**, vous voyez une entrée « en attente d’approbation » dans les propriétaires actuels.
 Cette invitation peut être supprimée, de la même manière que peuvent l’être les autres propriétaires.
 Ce système d’invitation empêche les utilisateurs d’ajouter de façon factice d’autres utilisateurs comme propriétaires.
 
-Notez que les métadonnées des « Auteurs » sont purement du texte libre. Seuls les « Propriétaires » sont contrôlés.
+Notez que les métadonnées des « Auteurs » sont purement du texte libre. Seuls les « Propriétaires » sont contrôlés.
 
 
-## Suppression de propriétaires
-Quand un élément a plusieurs propriétaires et que l’un d’eux doit être supprimé, le processus est simple :
+## <a name="removing-owners"></a>Suppression de propriétaires
+Quand un élément a plusieurs propriétaires et que l’un d’eux doit être supprimé, le processus est simple :
 
 1. [Connectez-vous](https://powershellgallery.com/users/account/LogOn) à PowerShell Gallery avec le compte qui est le propriétaire actuel d’un élément.
 2. Accédez à la page d’un élément via l’onglet Éléments en recherchant votre nom d’utilisateur ou en cliquant dessus, puis sur [**Gérer mes éléments**](https://www.powershellgallery.com/account/Packages).
-3. Une fois que vous êtes connecté comme propriétaire d’un élément, un lien « Gérer les propriétaires » sur lequel vous pouvez cliquer est affiché sur le côté gauche.
-4. Cliquez sur le lien « supprimer » en regard du propriétaire à supprimer.
+3. Une fois que vous êtes connecté comme propriétaire d’un élément, un lien « Gérer les propriétaires » sur lequel vous pouvez cliquer est affiché sur le côté gauche.
+4. Cliquez sur le lien « supprimer » en regard du propriétaire à supprimer.
 
 
 
-## Transfert de la propriété d’un élément
+## <a name="transferring-item-ownership"></a>Transfert de la propriété d’un élément
 Nous recevons parfois des demandes de support pour transférer la propriété d’un élément d’un utilisateur à un autre, mais vous pouvez presque toujours le faire vous-même.
 Le transfert de la propriété d’un utilisateur à un autre est juste une combinaison des deux fonctionnalités ci-dessus.
 
@@ -68,25 +66,19 @@ Cette demande se présente sous deux formes, mais le processus fonctionne de la 
 * L’élément a été publié accidentellement à l’aide du mauvais compte
 
 
-## Éléments orphelins
+## <a name="orphaned-items"></a>Éléments orphelins
 Un dernier scénario, toutefois peu fréquent, se produit.
 Des éléments sont devenus orphelins et le compte des propriétaires d’éléments ne peut pas être utilisé pour ajouter de nouveaux propriétaires.
-Voici quelques exemples de ce scénario :
+Voici quelques exemples de ce scénario :
 
 * Le compte du propriétaire est associé à une adresse e-mail qui n’existe plus et l’utilisateur a oublié son mot de passe
 * Le propriétaire inscrit a quitté la société qui produit l’élément et n’est pas joignable pour mettre à jour la propriété de l’élément
 * En raison d’un bogue qui a affecté uniquement un petit nombre d’éléments, l’élément est, d’une certaine manière, sans propriétaire dans la galerie
 
-Les administrateurs PowerShell Gallery peuvent accéder au lien « Gérer les propriétaires » de n’importe quel élément.
-Si vous êtes le propriétaire légitime d’un élément et que vous ne pouvez pas joindre le propriétaire actuel pour obtenir des autorisations de propriété, utilisez le lien « Signaler un abus » dans la galerie pour joindre les administrateurs PowerShell Gallery.
+Les administrateurs PowerShell Gallery peuvent accéder au lien « Gérer les propriétaires » de n’importe quel élément.
+Si vous êtes le propriétaire légitime d’un élément et que vous ne pouvez pas joindre le propriétaire actuel pour obtenir des autorisations de propriété, utilisez le lien « Signaler un abus » dans la galerie pour joindre les administrateurs PowerShell Gallery.
 Nous suivons alors un processus pour vérifier votre propriété de l’élément.
-Si nous déterminons que vous devez être un propriétaire de l’élément, nous utilisons alors nous-mêmes le lien « Gérer les propriétaires » de l’élément et nous vous envoyons l’invitation pour devenir propriétaire.
+Si nous déterminons que vous devez être un propriétaire de l’élément, nous utilisons alors nous-mêmes le lien « Gérer les propriétaires » de l’élément et nous vous envoyons l’invitation pour devenir propriétaire.
 Nous n’effectuons cette opération qu’après avoir vérifié que vous devez être un propriétaire. Ce processus varie selon les circonstances.
 Nous utilisons souvent l’URL du projet de l’élément pour trouver un moyen de contacter le propriétaire du projet, mais nous pouvons aussi utiliser Twitter, l’e-mail ou d’autres moyens.
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

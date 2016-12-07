@@ -9,30 +9,28 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psget_update script
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 8c5211a51a9ff8bce641fde8deacd2d288916602
-
+ms.openlocfilehash: b95ab77ba04d70d470a9740b452f415c872f8fa7
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Update-Script
+# <a name="update-script"></a>Update-Script
 
 L’applet de commande Update-Script permet d’effectuer une mise à jour sur place des fichiers de script qui ont été installés à l’aide de l’applet de commande Install-Script.
 
-## Description
+## <a name="description"></a>Description
 
 L’applet de commande Update-Script met à jour le script spécifié à partir du référentiel à partir duquel il a été précédemment installé.
 
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 
 ```powershell
 Get-Command -Name Update-Script -Module PowerShellGet -Syntax
 ```
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [Update-Script](http://go.microsoft.com/fwlink/?LinkId=619787)
 
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 ```powershell
 Install-Script -Name Fabrikam-Script -RequiredVersion 1.0 -Repository GalleryINT -Scope
 Get-InstalledScript -Name Fabrikam-Script
@@ -72,10 +70,4 @@ Version Name Type Repository Description
 2.5 Required-Script2 Script GalleryINT Description for the Required-Script2 script
 2.0 Script-WithDependencies2 Script GalleryINT Description for the Script-WithDependencies2 script
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

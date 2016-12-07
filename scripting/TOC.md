@@ -1,17 +1,17 @@
 # [Scripts PowerShell](PowerShell-Scripting.md)
 
 ## [What’s new with PowerShell](whats-new/What-s-New-With-PowerShell.md) (Nouveautés de PowerShell)
-### [PowerShell v5.0](whats-new/What-s-New-in-Windows-PowerShell-50.md)
-### [PowerShell 5.0 ISE](whats-new/What-s-New-in-the-PowerShell-50-ISE.md)
+### [PowerShell v5.0](whats-new/What-s-New-in-Windows-PowerShell-50.md)
+### [PowerShell 5.0 ISE](whats-new/What-s-New-in-the-PowerShell-50-ISE.md)
 
 ## [Installation](setup/setup-reference.md)
 ### [Configuration nécessaire pour PowerShell](setup/Windows-PowerShell-System-Requirements.md)
 ### [Installation de PowerShell](setup/Installing-Windows-PowerShell.md)
 ### [Démarrage de PowerShell](setup/Starting-Windows-PowerShell.md)
-#### [Démarrage de la version 32 bits de PowerShell](setup/Starting-the-32-Bit-Version-of-Windows-PowerShell.md)
+#### [Démarrage de la version 32 bits de PowerShell](setup/Starting-the-32-Bit-Version-of-Windows-PowerShell.md)
 #### [Démarrage de PowerShell sur des versions antérieures de Windows](setup/Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.md)
-### [Installation du moteur Windows PowerShell 2.0](setup/Installing-the-Windows-PowerShell-2.0-Engine.md)
-### [Démarrage du moteur Windows PowerShell 2.0](setup/Starting-the-Windows-PowerShell-2.0-Engine.md)
+### [Installation du moteur Windows PowerShell 2.0](setup/Installing-the-Windows-PowerShell-2.0-Engine.md)
+### [Démarrage du moteur Windows PowerShell 2.0](setup/Starting-the-Windows-PowerShell-2.0-Engine.md)
 ### [Installation du Windows PowerShell SDK](setup/Installing-the-Windows-PowerShell-SDK.md)
 ### [Sécurité](setup/security.md)
 #### [Éléments à prendre en compte en matière de sécurité de la communication à distance PowerShell](setup/WinRMSecurity.md)
@@ -72,7 +72,7 @@
 ####  [Utilisation de clés de Registre](getting-started/cookbooks/Working-with-Registry-Keys.md)
 ####  [Utilisation d’installations de logiciels](getting-started/cookbooks/Working-with-Software-Installations.md)
 
-### [Où puis-je obtenir d’autres informations pour en savoir plus ?](getting-started/more-powershell-learning.md)
+### [Où puis-je obtenir d’autres informations pour en savoir plus ?](getting-started/more-powershell-learning.md)
 
 ## [Commandes PowerShell courantes](core-powershell/core-powershell.md)
 ### [Modules courants](core-powershell/core-modules.md)
@@ -96,7 +96,7 @@
 ### [Environnement d’écriture de scripts intégré (ISE)](core-powershell/ise-guide.md)
 ####  [Informations de référence sur le modèle objet ISE](core-powershell/ise/Windows-PowerShell-ISE-Object-Model-Reference.md)
 ####  [Modèle objet de script ISE](core-powershell/ise/The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
-####  [Utilisation de Windows PowerShell ISE](core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
+####  [Utilisation de Windows PowerShell ISE](core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
 ####  [Objet ISEFile](core-powershell/ise/The-ISEFile-Object.md)
 ####  [Objet ISEOptions](core-powershell/ise/The-ISEOptions-Object.md)
 ####  [Objet ISESnippetCollection](core-powershell/ise/The-ISESnippetCollection-Object.md)
@@ -140,8 +140,3 @@
 ####  [Utiliser la console web Windows PowerShell](core-powershell/web-access/use-the-web-based-windows-powershell-console.md)
 
 ## [Glossaire PowerShell](Windows-PowerShell-Glossary.md)
-
-
-<!--HONumber=Nov16_HO4-->
-
-

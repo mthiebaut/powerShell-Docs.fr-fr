@@ -9,18 +9,16 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psget_install script
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: df04c387f09ad603d001bb94ee4cdeabc6d9d5a6
-
+ms.openlocfilehash: ac2473283a80e76d4823d85d4c4481d349a95a12
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Install-Script
+# <a name="install-script"></a>Install-Script
 
 Installe les fichiers de script PowerShell à partir de référentiels en ligne sur l’ordinateur local.
 
 
-## Description
+## <a name="description"></a>Description
 
 L’applet de commande Install-Script acquiert une charge utile de script à partir d’un référentiel, vérifie que la charge utile est un script PowerShell valide et copie le fichier de script à un emplacement d’installation spécifié.
 
@@ -37,14 +35,14 @@ Vous pouvez filtrer vos résultats selon les versions minimales et exactes des m
 
 - Aucune prise en charge des versions côte à côte pour les fichiers de script PowerShell
 - Prise en charge de l’installation de dépendances de scripts
-- **Untrusted prompt :** (Invite pour les référentiels non approuvés) L’acceptation par l’utilisateur est obligatoire pour installer les modules à partir d’un référentiel non approuvé.
+- **Untrusted prompt :** (Invite pour les référentiels non approuvés) L’acceptation par l’utilisateur est obligatoire pour installer les modules à partir d’un référentiel non approuvé.
 - -Force réinstalle le module installé
-- RequiredVersion installe la version spécifiée côte à côte avec les versions existantes sur PowerShell versions 5.0 ou ultérieures.
+- RequiredVersion installe la version spécifiée côte à côte avec les versions existantes sur PowerShell versions 5.0 ou ultérieures.
 
 Les caractères génériques ne sont pas pris en charge dans -Name sur les applets de commande Install-Module, Save-Module, Uninstall-Module, Install-Script, Save-Script et Uninstall-Script.
 
-### Étendue
-Spécifie l’étendue d’installation du module. Les valeurs acceptables pour ce paramètre sont : AllUsers et CurrentUser.
+### <a name="scope"></a>Étendue
+Spécifie l’étendue d’installation du module. Les valeurs acceptables pour ce paramètre sont : AllUsers et CurrentUser.
 
 L’étendue d’installation par défaut est AllUsers.
 
@@ -53,12 +51,12 @@ L’étendue AllUsers permet d’installer les modules à un emplacement qui est
 L’étendue CurrentUser permet d’installer les modules uniquement dans $home\Documents\WindowsPowerShell\Modules, afin que le module ne soit disponible que pour l’utilisateur actuel.
 
 
-Spécifie l’étendue d’installation du script. Les valeurs valides sont : AllUsers et CurrentUser. La valeur par défaut est CurrentUser.
+Spécifie l’étendue d’installation du script. Les valeurs valides sont : AllUsers et CurrentUser. La valeur par défaut est CurrentUser.
 
 L’étendue AllUsers indique d’installer un script dans %systemdrive%:\ProgramFiles\WindowsPowerShell\Scripts afin que le script soit disponible pour tous les utilisateurs. L’étendue CurrentUser indique d’installer le script dans $home\Documents\WindowsPowerShell\Scripts afin que le script ne soit disponible que pour l’utilisateur actuel.
 
 
-## NoPathUpdate
+## <a name="nopathupdate"></a>NoPathUpdate
 
 - Le paramètre de commutateur NoPathUpdate sur l’applet de commande Install-Script contourne l’invite d’ajout de l’emplacement d’installation de script à la variable d’environnement PATH.
 - Toute utilisation de la commande WITH –NoPathUpdate spécifiée entraîne l’absence d’invite et la mise à jour de PATH NOT (le paramètre force peut être ignoré ici).
@@ -67,34 +65,34 @@ L’étendue AllUsers indique d’installer un script dans %systemdrive%:\Progra
 - Tout cela s’applique uniquement lors de la première utilisation d’Install-Script dans une étendue donnée.
 
 
-## Remarques
+## <a name="notes"></a>Remarques
 
-Cette applet de commande s’exécute sur Windows PowerShell 3.0 ou versions ultérieures de Windows PowerShell, sur Windows 7 ou Windows 2008 R2 et versions ultérieures de Windows.
+Cette applet de commande s’exécute sur Windows PowerShell 3.0 ou versions ultérieures de Windows PowerShell, sur Windows 7 ou Windows 2008 R2 et versions ultérieures de Windows.
 
 Si un module installé ne peut pas être importé (autrement dit, s’il ne dispose pas d’un fichier .psm1, .psd1 ou .dll du même nom dans le dossier), l’installation échoue, sauf si vous ajoutez le paramètre Force à votre commande.
 
-Si une version du module sur l’ordinateur correspond à la valeur spécifiée pour le paramètre Name et que vous n’avez pas ajouté le paramètre MinimumVersion ou RequiredVersion, Install-Script se poursuit de manière silencieuse sans installer ce module. Si les paramètres MinimumVersion ou RequiredVersion sont spécifiés et que le module existant ne correspond pas aux valeurs de ce paramètre, une erreur se produit. Pour être plus précis : si la version du module actuellement installé est inférieure à la valeur du paramètre MinimumVersion ou différente de la valeur du paramètre RequiredVersion, une erreur se produit. Si la version du module installé est supérieure à la valeur du paramètre MinimumVersion ou égale à la valeur du paramètre RequiredVersion, Install-Script se poursuit de manière silencieuse sans installer ce module.
+Si une version du module sur l’ordinateur correspond à la valeur spécifiée pour le paramètre Name et que vous n’avez pas ajouté le paramètre MinimumVersion ou RequiredVersion, Install-Script se poursuit de manière silencieuse sans installer ce module. Si les paramètres MinimumVersion ou RequiredVersion sont spécifiés et que le module existant ne correspond pas aux valeurs de ce paramètre, une erreur se produit. Pour être plus précis : si la version du module actuellement installé est inférieure à la valeur du paramètre MinimumVersion ou différente de la valeur du paramètre RequiredVersion, une erreur se produit. Si la version du module installé est supérieure à la valeur du paramètre MinimumVersion ou égale à la valeur du paramètre RequiredVersion, Install-Script se poursuit de manière silencieuse sans installer ce module.
 
 Install-Script retourne une erreur s’il n’existe aucun module dans la galerie en ligne qui correspond au nom spécifié.
 
 Pour installer plusieurs modules, spécifiez un tableau de noms de modules, séparés par des virgules. Vous ne pouvez pas ajouter MinimumVersion ou RequiredVersion si vous spécifiez plusieurs noms de modules.
 
-Par défaut, les modules sont installés dans le dossier Program Files, afin d’éviter toute confusion quand vous installez les ressources DSC (Configuration de l’état souhaité) de Windows PowerShell. Vous pouvez diriger plusieurs objets PSGetItemInfo vers Install-Script ; il s’agit d’une autre façon de spécifier plusieurs modules à installer dans une seule commande.
+Par défaut, les modules sont installés dans le dossier Program Files, afin d’éviter toute confusion quand vous installez les ressources DSC (Configuration de l’état souhaité) de Windows PowerShell. Vous pouvez diriger plusieurs objets PSGetItemInfo vers Install-Script ; il s’agit d’une autre façon de spécifier plusieurs modules à installer dans une seule commande.
 
 Pour éviter d’exécuter des modules qui contiennent du code malveillant, les modules installés ne sont pas automatiquement importés par l’installation. Comme bonne pratique de sécurité, évaluez le code du module avant d’exécuter des applets de commande ou des fonctions dans un module pour la première fois.
 
 
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 
 ```powershell
 Get-Command -Name Install-Script -Module PowerShellGet -Syntax
 ```
 
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [Install-Script](http://go.microsoft.com/fwlink/?LinkId=619784)
 
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 
 ```powershell
 
@@ -476,7 +474,7 @@ The scripts install location 'C:\Program Files\WindowsPowerShell\Scripts' is req
 
 ```
 
-## Applet de commande Install-Script dans les opérations de pipeline
+## <a name="install-script-cmdlet-in-pipeline-operations"></a>Applet de commande Install-Script dans les opérations de pipeline
 
 ```powershell
 
@@ -503,11 +501,11 @@ Get-InstalledModule
 
 ```
 
-## Prise en charge des versions côte à côte sur PowerShell 5.0 ou version ultérieure
+## <a name="side-by-side-version-support-on-powershell-50-or-newer"></a>Prise en charge des versions côte à côte sur PowerShell 5.0 ou version ultérieure
 
-PowerShellGet assure la prise en charge des versions de modules côte à côte dans les applets de commande Install-Script, Update-Script et Publish-Script qui s’exécutent dans Windows PowerShell 5.0 ou versions ultérieures.
+PowerShellGet assure la prise en charge des versions de modules côte à côte dans les applets de commande Install-Script, Update-Script et Publish-Script qui s’exécutent dans Windows PowerShell 5.0 ou versions ultérieures.
 
-### Exemples Install-Script
+### <a name="install-script-examples"></a>Exemples Install-Script
 
 ```powershell
 # Install a version of the module
@@ -539,7 +537,7 @@ Version    Name                                Repository           Description
 
 ```
 
-## Installer un module avec ses dépendances
+## <a name="install-module-with-its-dependencies"></a>Installer un module avec ses dépendances
 
 ```powershell
 
@@ -633,7 +631,7 @@ Version    Name                                Repository           Description
 
 ```
 
-## Scénarios d’erreur
+## <a name="error-scenarios"></a>Scénarios d’erreur
 
 ```powershell
 
@@ -651,7 +649,7 @@ Install-Script ContosoClient,ContosoServer -MinimumVersion 2.0
 
 ```
 
-## Installation d’un script avec des modules et scripts dépendants
+## <a name="installing-a-script-with-dependent-scripts-and-modules"></a>Installation d’un script avec des modules et scripts dépendants
 
 ```powershell
 # Installing a script with dependent scripts and modules
@@ -724,10 +722,10 @@ Function Test-FunctionFromScript\_Script-WithDependencies2 { Get-Date }
 Workflow Test-WorkflowFromScript\_Script-WithDependencies2 { Get-Date }
 ```
 
-## Applets de commande Install-Script et Get-InstalledScript
+## <a name="install-script-and-get-installedscript-cmdlets"></a>Applets de commande Install-Script et Get-InstalledScript
 L’applet de commande Install-Script permet d’installer un fichier de script spécifique et ses dépendances à l’étendue spécifiée. Par défaut, les scripts sont installés dans l’étendue AllUsers. L’applet de commande Get-InstalledScript permet d’obtenir la liste des fichiers de script qui ont été installés à l’aide de l’applet de commande Install-Script.
 
-Note d’utilisation : Pour permettre la gestion et la localisation des scripts une fois qu’ils sont installés, Install-script crée un dossier par défaut pour le stockage des scripts dans $home\Documents\WindowsPowerShell\Scripts et ajoute ce dossier à votre environnement PATH. Si la modification du chemin constitue un problème, utilisez Save-Script au lieu d’Install-Script. Get-InstalledScripts et Uninstall-Script ne fonctionnent qu’avec les scripts placés sur le système à l’aide d’Install-Script.
+Note d’utilisation : Pour permettre la gestion et la localisation des scripts une fois qu’ils sont installés, Install-script crée un dossier par défaut pour le stockage des scripts dans $home\Documents\WindowsPowerShell\Scripts et ajoute ce dossier à votre environnement PATH. Si la modification du chemin constitue un problème, utilisez Save-Script au lieu d’Install-Script. Get-InstalledScripts et Uninstall-Script ne fonctionnent qu’avec les scripts placés sur le système à l’aide d’Install-Script.
 ```powershell
 # Install locations for scripts:
 # Default scope is AllUsers.
@@ -904,10 +902,4 @@ Param()
 Function Test-FunctionFromScript\_Script-WithDependencies2 { Get-Date }
 Workflow Test-WorkflowFromScript\_Script-WithDependencies2 { Get-Date }
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

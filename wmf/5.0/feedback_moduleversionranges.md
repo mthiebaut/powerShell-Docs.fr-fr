@@ -1,5 +1,5 @@
-# Prise en charge des modules pour la déclaration des plages de versions (1.*, etc.)
-Combiné avec **-MinimumVersion**, **-MaximumVersion** permet désormais à l’utilisateur d’obtenir/importer un module dans une plage spécifique. Le paramètre prend également en charge **.***. L’exemple suivant illustre son fonctionnement :
+# <a name="modules-support-for-declaring-version-ranges-1-etc"></a>Prise en charge des modules pour la déclaration des plages de versions (1.*, etc.)
+Combiné avec **-MinimumVersion**, **-MaximumVersion** permet désormais à l’utilisateur d’obtenir/importer un module dans une plage spécifique. Le paramètre prend également en charge **.***. L’exemple suivant illustre son fonctionnement :
 
 ```PowerShell
 Now, you can combine **-MinimumVersion** and **-MaximumVersion** to import module within specific range:
@@ -14,8 +14,3 @@ VERBOSE: Importing cmdlet 'Set-PSReadlineKeyHandler'.
 VERBOSE: Importing cmdlet 'Set-PSReadlineOption'.
 VERBOSE: Importing function 'PSConsoleHostReadline'.
 ```
-
-
-<!--HONumber=Aug16_HO3-->
-
-
