@@ -15,7 +15,7 @@ translationtype: HT
 # <a name="prerequisites"></a>Conditions préalables
 
 ## <a name="initial-state"></a>État initial
-Avant d’entamer cette section, vérifiez les points suivants :
+Avant d’entamer cette section, vérifiez les points suivants :
 
 1. JEA est disponible sur votre système. Consultez le fichier [LISEZMOI](./README.md) pour connaître les systèmes d’exploitation actuellement pris en charge et les téléchargements requis.
 2. Vous possédez des droits d’administrateur sur l’ordinateur sur lequel vous testez JEA.
@@ -24,7 +24,7 @@ Consultez la section [Création d’un contrôleur de domaine](#creating-a-domai
 
 ## <a name="enable-powershell-remoting"></a>Activer la communication à distance de PowerShell
 La gestion avec JEA s’effectue via la communication à distance de PowerShell.
-Exécutez la commande suivante dans une fenêtre PowerShell de l’administrateur pour vous assurer qu’elle est activée et correctement configurée :
+Exécutez la commande suivante dans une fenêtre PowerShell de l’administrateur pour vous assurer qu’elle est activée et correctement configurée :
 
 ```PowerShell
 Enable-PSRemoting
@@ -113,11 +113,11 @@ Les étapes suivantes activent la journalisation de toutes les actions PowerShel
 Vous n’êtes pas obligé de l’activer pour que JEA fonctionne, mais elle s’avérera utile dans la section [Création de rapports sur JEA](reporting-on-jea.md).
 
 1. Ouvrez l'éditeur de stratégie de groupe locale
-2. Accédez à « Configuration de l’ordinateur\Modèles d’administration\Composants Windows\Windows PowerShell ».
-3. Double cliquez sur « Activer l’enregistrement des modules ».
-4. Cliquez sur « Activé ».
-5. Dans la section Options, cliquez sur « Afficher » en regard des noms de module.
-6. Tapez « \* » dans la fenêtre contextuelle. Ainsi, PowerShell enregistre les commandes de tous les modules.
+2. Accédez à « Configuration de l’ordinateur\Modèles d’administration\Composants Windows\Windows PowerShell ».
+3. Double cliquez sur « Activer l’enregistrement des modules ».
+4. Cliquez sur « Activé ».
+5. Dans la section Options, cliquez sur « Afficher » en regard des noms de module.
+6. Tapez « \* » dans la fenêtre contextuelle. Ainsi, PowerShell enregistre les commandes de tous les modules.
 7. Cliquez sur OK et appliquez la stratégie.
 
 Remarque : Vous pouvez également activer la transcription PowerShell à l’échelle du système via la stratégie de groupe.
