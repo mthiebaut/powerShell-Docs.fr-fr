@@ -7,18 +7,15 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: c915ebd021ed20209bc491505d45cff2ac89f21d
 ms.openlocfilehash: 41177f2eb2bbcf2dddaf232141fb483efaaeeea5
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-
-# Méthode SendConfigurationApplyAsync de la classe MSFT_DSCLocalConfigurationManager
+# <a name="sendconfigurationapplyasync-method-of-the-msftdsclocalconfigurationmanager-class"></a>Méthode SendConfigurationApplyAsync de la classe MSFT_DSCLocalConfigurationManager
 
 Envoie le document de configuration de façon asynchrone au nœud géré et utilise l’agent de configuration pour appliquer la configuration.
 
-Syntaxe
+<a name="syntax"></a>Syntaxe
 ------
 
 ```mof
@@ -29,7 +26,7 @@ uint32 SendConfigurationApplyAsync(
 );
 ```
 
-Paramètres
+<a name="parameters"></a>Paramètres
 ----------
 
 *ConfigurationData* \[in\]  
@@ -41,23 +38,23 @@ Données d’environnement pour la configuration.
 *jobId* \[in\]  
 ID du travail pour lequel envoyer la configuration.
 
-## Valeur renvoyée
+## <a name="return-value"></a>Valeur renvoyée
 ------------
 
 Retourne zéro en cas de réussite ; sinon, retourne un code d’erreur.
 
-## Remarques
+## <a name="remarks"></a>Remarques
 
 Il s’agit d’une méthode statique.
 
-## Spécifications
+## <a name="requirements"></a>Spécifications
 ------------
 >**MOF :** DscCore.mof
 
 >**Espace de noms** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
@@ -67,11 +64,5 @@ Il s’agit d’une méthode statique.
 
  
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

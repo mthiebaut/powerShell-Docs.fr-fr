@@ -9,26 +9,24 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psgallery_status
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 69df41ae0a9dfd9fb71655cf6334f60f1d39ae94
-
+ms.openlocfilehash: 2e9eed63e0cc6fbf66543ea528581c2728e999c7
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-État de PowerShell Gallery
+<a name="powershell-gallery-status"></a>État de PowerShell Gallery
 =========================
 
 
-## 10/08/2016 - Résolu : Impossible d’envoyer des e-mails à cgadmin@microsoft.com
+## <a name="8102016---resolved-unable-to-send-emails-to-cgadminmicrosoftcom"></a>10/08/2016 - Résolu : Impossible d’envoyer des e-mails à cgadmin@microsoft.com
 
-__Résumé de l’impact__ : Entre le 05/08/2016 et le 10/08/2016, les clients n’ont pas pu envoyer d’e-mails à cgadmin@microsoft.com ni utiliser la fonctionnalité Nous contacter.  
+__Résumé de l’impact__ : Entre le 05/08/2016 et le 10/08/2016, les clients n’ont pas pu envoyer d’e-mails à cgadmin@microsoft.com, ni utiliser la fonctionnalité Nous contacter.  
 __Cause racine__ : Les ingénieurs ont identifié une modification de la configuration du compte e-mail.  
 __Résolution__ : Les ingénieurs ont travaillé à la résolution du problème de configuration.  
-__Étapes suivantes__ : Si vous avez utilisé le lien Nous contacter ou envoyé un e-mail à cgadmin@microsoft.com pendant cette période et que nous n’avons pas répondu, réessayez. Nous vous remercions de votre patience.
+__Étapes suivantes__ : Si vous avez utilisé le lien Nous contacter ou envoyé un e-mail à cgadmin@microsoft.com pendant cette période et que nous n’avons pas répondu, réessayez. Nous vous remercions de votre patience.
 
 
 
-## 13/07/2016 – Échec du téléchargement d’éléments
+## <a name="7132016---download-items-failed"></a>13/07/2016 – Échec du téléchargement d’éléments
 
 __Résumé de l’impact__ : Entre le 11/07/2016 et le 13/07/2016, un sous-ensemble de clients a rencontré des problèmes lors du téléchargement d’éléments à partir de PowerShell Gallery. Vraisemblablement le problème s’est manifesté dans le message d’erreur suivant retourné par Install-Module/Install-Script et Save-Module/Save-Script :
 
@@ -48,7 +46,7 @@ __Prévention__ : Les ingénieurs ont désactivé Azure CDN dans PowerShell Gal
 __Étapes suivantes__ : Rechercher la cause racine sous-jacente et développer une solution pour empêcher que le problème se reproduise.
 
 
-## 19/05/2016 – Échec du téléchargement d’éléments
+## <a name="5192016---download-items-failed"></a>19/05/2016 – Échec du téléchargement d’éléments
 __Résumé de l’impact__ : Entre le 17/05/2016 et le 19/05/2016, un sous-ensemble de clients a rencontré des problèmes lors du téléchargement d’éléments à partir de PowerShell Gallery. Vraisemblablement le problème s’est manifesté dans le message d’erreur suivant retourné par Install-Module/Install-Script et Save-Module/Save-Script :
 
 ```PowerShell
@@ -75,10 +73,4 @@ Microsoft.PowerShell.PackageManagement.Cmdlets.SavePackage
 __Cause racine préliminaire__ : Les ingénieurs ont identifié une panne au niveau du fournisseur sous-jacent d’Azure Content Delivery Network (CDN), qui a été déployé dans PowerShell Gallery le 17/05/2016.  
 __Prévention__ : Les ingénieurs ont désactivé Azure CDN dans PowerShell Gallery.  
 __Étapes suivantes__ : Rechercher la cause racine sous-jacente et développer une solution pour empêcher que le problème se reproduise.
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

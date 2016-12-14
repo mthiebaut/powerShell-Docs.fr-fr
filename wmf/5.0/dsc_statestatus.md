@@ -1,4 +1,4 @@
-# État unifié et cohérent et représentation de l’état
+# <a name="unified-and-consistent-state-and-status-representation"></a>État unifié et cohérent et représentation de l’état
 
 Une série d’améliorations ont été apportées dans cette version pour l’état du gestionnaire de configuration local et le statut DSC générés par des automatisations. Il s’agit notamment de représentations de l’état et du statut unifiées et cohérentes, d’une propriété d’heure et de date facile à gérer pour les objets de statut retournés par l’applet de commande Get-DscConfigurationStatus, et d’une propriété améliorée pour les détails sur l’état du gestionnaire de configuration local retournés par l’applet de commande Get-DscLocalConfigurationManager.
 
@@ -12,7 +12,7 @@ La représentation de l’état du gestionnaire de configuration local et du sta
 
 Le tableau ci-dessous illustre les propriétés d’état et de statut résultantes dans quelques scénarios classiques.
 
-| **Scénario**                    | **LCMState\***       | **Statut** | **Redémarrage demandé**  | **ResourcesInDesiredState**  | **ResourcesNotInDesiredState** |
+| **Scénario**                    | **LCMState\***       | **État** | **Redémarrage demandé**  | **ResourcesInDesiredState**  | **ResourcesNotInDesiredState** |
 |---------------------------------|----------------------|------------|---------------|------------------------------|--------------------------------|
 | S**^**                          | Idle                 | Opération réussie    | $false        | S                            | $null                          |
 | F**^**                          | PendingConfiguration | Échec    | $false        | $null                        | F                              |
@@ -26,8 +26,7 @@ Le tableau ci-dessous illustre les propriétés d’état et de statut résultan
 | r, F                            | PendingReboot        | Opération réussie    | $true         | $null                        | r                              |
 
 ^
-S<sub>i</sub> : série de ressources appliquée avec succès F<sub>i</sub> : série de ressources appliquée sans succès r : ressource qui nécessite un redémarrage
-\*
+S<sub>i</sub> : série de ressources appliquée avec succès F<sub>i</sub> : série de ressources appliquée sans succès r : ressource qui nécessite un redémarrage \*
 
 ```powershell
 $LCMState = (Get-DscLocalConfigurationManager).LCMState
@@ -39,7 +38,7 @@ $ResourcesInDesiredState = (Get-DscConfigurationStatus).ResourcesInDesiredState
 
 $ResourcesNotInDesiredState = (Get-DscConfigurationStatus).ResourcesNotInDesiredState
 ```
-## Améliorations apportées à l’applet de commande Get-DscConfigurationStatus
+## <a name="enhancement-in-get-dscconfigurationstatus-cmdlet"></a>Améliorations apportées à l’applet de commande Get-DscConfigurationStatus
 
 Quelques améliorations ont été apportées à l’applet de commande Get-DscConfigurationStatus dans cette version. Auparavant, la propriété StartDate des objets retournés par l’applet de commande était de type String. Elle est désormais de type Datetime, ce qui simplifie la sélection et le filtrage complexes basés sur les propriétés intrinsèques d’un objet Datetime.
 ```powershell
@@ -81,7 +80,7 @@ Success 11/13/2015 11:20:44 AM Initial True
 Success 11/13/2015 11:20:44 AM LocalConfigurationManager False
 ```
 
-## Amélioration apportée à l’applet de commande Get-DscLocalConfigurationManager
+## <a name="enhancement-in-get-dsclocalconfigurationmanager-cmdlet"></a>Amélioration apportée à l’applet de commande Get-DscLocalConfigurationManager
 Un nouveau champ LCMStateDetail a été ajouté à l’objet retourné à partir de l’applet de commande Get-DscLocalConfigurationManager. Ce champ est renseigné quand LCMState est « Occupé ». Vous pouvez le récupérer avec l’applet de commande suivante :
 ```powershell
 (Get-DscLocalConfigurationManager).LCMStateDetail
@@ -103,8 +102,3 @@ LCM State: Idle,
 LCM State: Busy, LCM is performing a consistency check.
 LCM State: Idle,
 ```
-
-
-<!--HONumber=Aug16_HO3-->
-
-

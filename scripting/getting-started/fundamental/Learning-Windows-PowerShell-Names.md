@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: b4d0fd22-8298-4ee6-82ae-9b6f2907c986
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 1dd7dade688b56e3ac544c0562ad6bad4a4284a7
-
+ms.openlocfilehash: 6bd3c3d9b9f05f8ea633ee23fdce7608e985abd7
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Apprentissage des noms dans Windows PowerShell
+# <a name="learning-windows-powershell-names"></a>Apprentissage des noms dans Windows PowerShell
 L’apprentissage des noms et des paramètres des commandes nécessite beaucoup de temps avec la plupart des interfaces de ligne de commande. Le problème est qu’il existe très peu de modèles, de sorte que la seule façon d’apprendre consiste à mémoriser chaque commande et chaque paramètre que vous devez utiliser régulièrement.
 
 Lorsque vous utilisez une nouvelle commande ou un nouveau paramètre, vous ne pouvez généralement pas utiliser les connaissances acquises, car vous devez apprendre un nouveau nom. Si l’on considère la manière les interfaces croissent à partir d’un petit ensemble d’outils au gré des ajouts incrémentiels de fonctionnalités, on comprend aisément pourquoi la structure n’est pas standard. Avec les noms de commande, en particulier, cela peut sembler logique, car chaque commande est un outil distinct, mais il existe un meilleur moyen de gérer les noms de commande.
@@ -27,7 +25,7 @@ Bien qu’il existe des différences techniques importantes entre un service et 
 
 Windows PowerShell exploite ces similitudes pour réduire le nombre de noms distincts que vous devez connaître pour comprendre et utiliser les applets de commande.
 
-### Utilisation de noms de type verbe-substantif pour les applets de commande afin de réduire la mémorisation des commandes
+### <a name="cmdlets-use-verb-noun-names-to-reduce-command-memorization"></a>Utilisation de noms de type verbe-substantif pour les applets de commande afin de réduire la mémorisation des commandes
 Windows PowerShell utilise un système d’affectation de noms de type « verbe-substantif », où le nom de chaque applet de commande se compose d’un verbe standard associé à un nom spécifique à l’aide d’un trait d’union. Les verbes qu’utilise Windows PowerShell ne sont pas toujours des verbes anglais, mais ils désignent des actions spécifiques dans Windows PowerShell. Les noms sont très semblables à des noms communs dans n’importe quelle langue. Ils décrivent certains types d’objets qui sont importants dans l’administration du système. Il est facile de démontrer comment ces noms en deux parties contribuent à réduire l’effort d’apprentissage en examinant quelques exemples de verbes et de noms.
 
 Les noms sont moins restreints, mais ils doivent toujours décrire l’objet de l’action d’une commande. Windows PowerShell dispose de commandes telles que **Get-Process**, **Stop-Process**, **Get-Service** et **Stop-Service**.
@@ -76,7 +74,7 @@ CommandType     Name                            Definition
 Function        Clear-Host                      $spaceType = [System.Managem...
 ```
 
-### Utilisation de paramètres standard par les applets de commande
+### <a name="cmdlets-use-standard-parameters"></a>Utilisation de paramètres standard par les applets de commande
 Comme mentionné précédemment, les commandes utilisées dans les interfaces de ligne de commande traditionnelles n’ont généralement pas de noms de paramètre cohérents. Parfois, les paramètres n’ont pas de nom du tout. Quand ils en ont un, il s’agit souvent d’un caractère unique ou de mots abrégés pouvant être tapés rapidement, mais qui ne sont pas facilement compréhensibles pour des néophytes.
 
 Contrairement à la plupart des autres interfaces de ligne de commande traditionnelles, Windows PowerShell traite les paramètres directement et utilise cet accès direct aux paramètres en même temps que des instructions à l’adresse des développeurs afin de normaliser les noms de paramètre. Si cette solution ne garantit pas que chaque applet de commande soit toujours conforme aux normes, elle y contribue.
@@ -86,20 +84,14 @@ Contrairement à la plupart des autres interfaces de ligne de commande tradition
 
 Voici quelques-unes des caractéristiques générales des noms et utilisations des paramètres standard.
 
-#### Paramètre Help (?)
+#### <a name="the-help-parameter-"></a>Paramètre Help (?)
 Si vous spécifiez le paramètre **-?** pour une applet de commande, celle-ci n’est pas exécutée. Au lieu de cela, Windows PowerShell affiche l’aide sur l’applet de commande.
 
-#### Paramètres communs
+#### <a name="common-parameters"></a>Paramètres communs
 Windows PowerShell dispose de plusieurs paramètres appelés *paramètres communs*. Étant donné que ces paramètres sont contrôlés par le moteur Windows PowerShell, chaque fois qu’une applet de commande les implémente, ils se comportent de la même façon. Les paramètres communs sont **WhatIf**, **Confirm**, **Verbose**, **Debug**, **Warn**, **ErrorAction**, **ErrorVariable**, **OutVariable** et **OutBuffer**.
 
-#### Paramètres suggérés
+#### <a name="suggested-parameters"></a>Paramètres suggérés
 Les principales applets de commande Windows PowerShell utilisent des noms standard pour des paramètres similaires. Bien que le mode d’utilisation des noms de paramètre ne soit pas imposé, il existe des instructions d’utilisation explicites visant à encourager la normalisation.
 
 Par exemple, les instructions recommandent d’attribuer à un paramètre faisant référence à un ordinateur un nom de type **ComputerName**, plutôt que Serveur, Hôte, Système, Nœud ou un autre nom commun. Parmi les noms de paramètres importants suggérés figurent **Force**, **Exclude**, **Include**, **PassThru**, **Path** et **CaseSensitive**.
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

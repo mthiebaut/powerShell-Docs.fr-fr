@@ -8,16 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: c62a363a-caa2-4b6e-a079-d6e8543bc4c6
-translationtype: Human Translation
-ms.sourcegitcommit: 6c666e2e23cb74818e37293410dafc9033057733
-ms.openlocfilehash: c49b8f4f5969faa017a858f8b66fe9bfc5515c36
-
+ms.openlocfilehash: ae1be5a6204c93b3c8600c4fe7ea6e958904a6b2
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Module PSWorkflowUtility
+# <a name="psworkflowutility-module"></a>Module PSWorkflowUtility
 Cette section contient les rubriques d’aide pour le module **PSWorkflowUtility**. Celui-ci comprend des commandes qui permettent de gérer la fonctionnalité de workflow Windows PowerShell. Le module **PSWorkflowUtility** est installé avec Windows PowerShell.
 
-## Rubriques d'aide
+## <a name="help-topics"></a>Rubriques d'aide
 [Applets de commande Workflow Utility](http://go.microsoft.com/fwlink/?LinkId=254141)
 
 [Module PSWorkflow](PSWorkflow-Module.md)
@@ -26,16 +24,10 @@ Cette section contient les rubriques d’aide pour le module **PSWorkflowUtility
 
 [about_WorkflowCommonParameters](https://technet.microsoft.com/en-us/library/119f968e-618e-439c-b76c-cdd17e6df27c)
 
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 - [Présentation du workflow Windows PowerShell](https://technet.microsoft.com/en-us/library/jj134242.aspx)
-- [Écriture d'un workflow Windows PowerShell](https://technet.microsoft.com/en-us/library/jj574157.aspx)
-- [Windows PowerShell 5.0](../core-modules/Windows-PowerShell-5.0.md)
-- [Rubriques About Windows PowerShell Core](../core-modules/Windows-PowerShell-Core-About-Topics.md)
+- [Écriture d’un workflow Windows PowerShell](https://technet.microsoft.com/en-us/library/jj574157.aspx)
+- [Windows PowerShell 5.0](../core-modules/Windows-PowerShell-5.0.md)
+- [Rubriques d’aide sur Windows PowerShell Core](../core-modules/Windows-PowerShell-Core-About-Topics.md)
 - [Écriture de scripts avec Windows PowerShell](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
-
-
-
-
-<!--HONumber=Oct16_HO3-->
-
 

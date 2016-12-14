@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: b0e2ad92-875f-421d-b612-f624e644aa69
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: a031bad99e8aca1d7598f99e157723bf4360cf56
-
+ms.openlocfilehash: bb852b8d5cb5202568a80517074cc8ff6f40ea0f
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Prise en main de Windows PowerShell
+# <a name="getting-started-with-windows-powershell"></a>Prise en main de Windows PowerShell
 Windows PowerShell est un interpréteur de ligne de commande Windows spécialement conçu pour les administrateurs système. Windows PowerShell inclut une invite interactive et un environnement de script utilisables indépendamment ou conjointement.
 
 Contrairement à la plupart des interpréteurs de commandes, qui acceptent et retournent du texte, Windows PowerShell est basé sur le Common Language Runtime (CLR) Microsoft .NET Framework et sur .NET Framework, et accepte et retourne des objets .NET Framework. Ce changement fondamental dans l’environnement apporte des outils et méthodes entièrement nouveaux pour la gestion et la configuration de Windows.
@@ -27,17 +25,11 @@ Ce Guide de prise en main fournit une introduction à Windows PowerShell : lang
 
 Dans cette rubrique :
 
--   [Configuration requise pour Windows PowerShell](../setup/Windows-PowerShell-System-Requirements.md)
+-   [Configuration nécessaire pour Windows PowerShell](../setup/Windows-PowerShell-System-Requirements.md)
 
 -   [Installation de Windows PowerShell](../setup/Installing-Windows-PowerShell.md)
 
 -   [Démarrage de Windows PowerShell](../setup/Starting-Windows-PowerShell.md)
 
 -   [Préparation à l’utilisation de Windows PowerShell](Getting-Ready-to-Use-Windows-PowerShell.md)
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

@@ -8,16 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 7a410e4d-514b-4813-ba0c-0d8cef88df31
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 66c2a8c8afab49f16e8ef7d0b5ba3a2a65c92490
-
+ms.openlocfilehash: 9d9566328cac84ae6b450d9dedeb75a37d6dcba5
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Gestion des services
+# <a name="managing-services"></a>Gestion des services
 Il existe huit principales applets de commande Service, conçues pour un vaste éventail de tâches de service. Nous examinons ici uniquement le listage et la modification de l’état en cours d’exécution des services, mais vous pouvez obtenir une liste des applets de commande Service à l’aide de l’applet de commande **Get-Help \&#42;-Service**. Vous pouvez également trouver des informations sur chaque applet de commande Service à l’aide de la commande **Get-Help<NomAppletDeCommande>**, par exemple, **Get-Help New-Service**.
 
-## Obtention de services
+## <a name="getting-services"></a>Obtention de services
 Vous pouvez obtenir les services sur un ordinateur local ou distant à l’aide de l’applet de commande **Get-Service**. Comme avec la commande **Get-Process**, l’utilisation de la commande **Get-Service** sans paramètre a pour effet de retourner tous les services. Vous pouvez filtrer par nom, même en utilisant un astérisque comme caractère générique :
 
 ```
@@ -53,7 +51,7 @@ Vous pouvez utiliser le paramètre ComputerName de l’applet de commande Get-Se
 Get-Service -ComputerName Server01
 ```
 
-## Obtention de services requis et dépendants
+## <a name="getting-required-and-dependent-services"></a>Obtention de services requis et dépendants
 L’applet de commande Get-Service dispose de deux paramètres très utiles dans l’administration des services. Le paramètre DependentServices obtient les services dépendant de ce service. Le paramètre RequiredServices obtient les services dont ce service dépend.
 
 Ces paramètres affichent simplement les valeurs des propriétés DependentServices et ServicesDependedOn (alias=RequiredServices) de l’objet System.ServiceProcess.ServiceController que l’applet de commande Get-Service retourne, mais ils simplifient les commandes et facilitent sensiblement l’obtention de ces informations.
@@ -88,7 +86,7 @@ Vous pouvez même obtenir tous les services qui ont des dépendances. C’est pr
 Get-Service -Name * | where {$_.RequiredServices -or $_.DependentServices} | Format-Table -Property Status, Name, RequiredServices, DependentServices -auto
 ```
 
-## Arrêt, démarrage, interruption et redémarrage de services
+## <a name="stopping-starting-suspending-and-restarting-services"></a>Arrêt, démarrage, interruption et redémarrage de services
 Les applets de commande Service ont toutes la même forme générale. Les services peuvent être spécifiés par un nom commun ou nom d’affichage, et prennent des listes et des caractères génériques pour valeurs. Pour arrêter le spouleur d’impression, utilisez ce qui suit :
 
 ```
@@ -138,22 +136,16 @@ Ces applets de commande Service ne dispose pas de paramètre ComputerName, mais 
 Invoke-Command -ComputerName Server01 {Restart-Service Spooler}
 ```
 
-## Définition des propriétés d’un service
+## <a name="setting-service-properties"></a>Définition des propriétés d’un service
 L’applet de commande de Set-Service modifie les propriétés d’un service sur un ordinateur local ou distant. Étant donné que l’état d’un service est une propriété, vous pouvez utiliser cette applet de commande pour démarrer, arrêter et suspendre un service. L’applet de commande Set-Service dispose également d’un paramètre StartupType qui permet de modifier le type de démarrage du service.
 
 Pour utiliser l’applet de commande Set-Service sur Windows Vista et des versions ultérieures de Windows, ouvrez Windows PowerShell avec l’option Exécuter en tant qu’administrateur.
 
 Pour plus d’informations, voir [Set-Service [m2]](https://technet.microsoft.com/en-us/library/b71e29ed-372b-4e32-a4b7-5eb6216e56c3)
 
-## Voir aussi
-[Get-Service [m2]](https://technet.microsoft.com/en-us/library/0a09cb22-0a1c-4a79-9851-4e53075f9cf6)
-[Set-Service [m2]](https://technet.microsoft.com/en-us/library/b71e29ed-372b-4e32-a4b7-5eb6216e56c3)
-[Restart-Service [m2]](https://technet.microsoft.com/en-us/library/45acf50d-2277-4523-baf7-ce7ced977d0f)
-[Suspend-Service [m2]](https://technet.microsoft.com/en-us/library/c8492b87-0e21-4faf-8054-3c83c2ec2826)
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
+## <a name="see-also"></a>Voir aussi
+- [Get-Service [m2]](https://technet.microsoft.com/en-us/library/0a09cb22-0a1c-4a79-9851-4e53075f9cf6)
+- [Set-Service [m2]](https://technet.microsoft.com/en-us/library/b71e29ed-372b-4e32-a4b7-5eb6216e56c3)
+- [Restart-Service [m2]](https://technet.microsoft.com/en-us/library/45acf50d-2277-4523-baf7-ce7ced977d0f)
+- [Suspend-Service [m2]](https://technet.microsoft.com/en-us/library/c8492b87-0e21-4faf-8054-3c83c2ec2826)
 

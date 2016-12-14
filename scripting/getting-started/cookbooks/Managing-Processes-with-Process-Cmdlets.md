@@ -8,16 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 5038f612-d149-4698-8bbb-999986959e31
-translationtype: Human Translation
-ms.sourcegitcommit: f891988cce205b5729d0da6c4ce23da5fbd53b7f
-ms.openlocfilehash: 3812d0492da1879df50538533740ff857af7b15d
-
+ms.openlocfilehash: 7f7097966aff6ae73b50521b86f932ffdfadf937
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Gestion des processus avec les applets de commande Process
+# <a name="managing-processes-with-process-cmdlets"></a>Gestion des processus avec les applets de commande Process
 Les applets de commande Process de Windows PowerShell permettent de gérer des processus locaux et distants dans Windows PowerShell.
 
-## Obtention de processus (Get-Process)
+## <a name="getting-processes-get-process"></a>Obtention de processus (Get-Process)
 Pour obtenir les processus en cours d’exécution sur l’ordinateur local, exécutez l’applet de commande **Get-Process** sans paramètres.
 
 Vous pouvez obtenir des processus particuliers en spécifiant leur nom ou leur ID. La commande suivante obtient le processus Idle :
@@ -103,7 +101,7 @@ Handles  NPM(K)  PM(K) WS(K) VM(M) CPU(s)  Id ProcessName  MachineName
     605       9  30668 29800   155 7.11    3052 powershell Server02
 ```
 
-## Arrêt des processus (Stop-Process)
+## <a name="stopping-processes-stop-process"></a>Arrêt des processus (Stop-Process)
 Windows PowerShell offre une flexibilité certaine pour l’affichage des processus, mais qu’en est-il de l’arrêt d’un processus ?
 
 L’applet de commande **Stop-Process** prend un nom ou un ID pour spécifier un processus à arrêter. Votre capacité à arrêter des processus dépend des autorisations dont vous disposez. Certains processus ne peuvent pas être arrêtés. Par exemple, si vous essayez d’arrêter le processus inactif, vous obtenez une erreur :
@@ -150,7 +148,7 @@ L’applet de commande Stop-Process ne prend pas de paramètre ComputerName. Par
 Invoke-Command -ComputerName Server01 {Stop-Process Powershell}
 ```
 
-## Arrêt de toutes les autres sessions Windows PowerShell
+## <a name="stopping-all-other-windows-powershell-sessions"></a>Arrêt de toutes les autres sessions Windows PowerShell
 Il est parfois utile de pouvoir arrêter toutes les sessions Windows PowerShell en cours d’exécution autres que la session active. Si une session utilise trop de ressources ou n’est pas accessible (par exemple, si elle s’exécute à distance ou dans une autre session de bureau), il se peut que vous ne puissiez pas l’arrêter directement. Toutefois, si vous essayez d’arrêter toutes les sessions en cours d’exécution, il se peut que la session active s’arrête à la place.
 
 Chaque session Windows PowerShell a un PID de variable d’environnement qui contient l’ID du processus Windows PowerShell. Vous pouvez contrôler la valeur de $PID par rapport à l’ID de chaque session, et arrêter uniquement les sessions Windows PowerShell dont l’ID diffère. La commande de pipeline suivante effectue cette opération et retourne la liste des sessions terminées (en raison de l’utilisation du paramètre **PassThru**) :
@@ -168,19 +166,13 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
     287       9    21044      26928   143     1.02   3672 powershell
 ```
 
-## Démarrage, débogage et attente de processus
+## <a name="starting-debugging-and-waiting-for-processes"></a>Démarrage, débogage et attente de processus
 Windows PowerShell comprend également des applets de commande permettant de démarrer (ou redémarrer) un processus, de déboguer un processus, et d’attendre qu’un processus s’achève avant d’exécuter une commande. Pour plus d’informations sur ces applets de commande, voir la rubrique d’aide sur chacune d’elles.
 
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 - [Get-Process [m2]](https://technet.microsoft.com/en-us/library/27a05dbd-4b69-48a3-8d55-b295f6225f15)
 - [Stop-Process [m2]](https://technet.microsoft.com/en-us/library/12454238-9881-457a-bde4-fb6cd124deec)
 - [Start-Process](https://technet.microsoft.com/en-us/library/41a7e43c-9bb3-4dc2-8b0c-f6c32962e72c)
 - [Wait-Process](https://technet.microsoft.com/en-us/library/9222af7a-789d-4a09-aa90-09d7c256c799)
 - [Debug-Process](https://technet.microsoft.com/en-us/library/eea1dace-3913-4dbd-b659-5a94a610eee1)
 - [Invoke-Command](https://technet.microsoft.com/en-us/library/22fd98ba-1874-492e-95a5-c069467b8462)
-
-
-
-<!--HONumber=Oct16_HO3-->
-
-

@@ -9,21 +9,13 @@ ms.date: 2016-10-14
 contributor: manikb
 title: "vue d’ensemble"
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: e2f00a4ec1e287471d9c7c1c5e95d6c7111e5bf1
-
+ms.openlocfilehash: 11861846269c0588bd8ef3bb556f7c2d01bed0a5
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Vue d’ensemble de PowerShellGet
+# <a name="powershellget-overview"></a>Vue d’ensemble de PowerShellGet
 
 Le module PowerShellGet contient des applets de commande permettant de détecter, d’installer, de mettre à jour et de publier les artefacts PowerShell, tels que les modules, les ressources DSC, les fonctionnalités de rôle et les scripts à partir du référentiel https://www.PowerShellGallery.com et d’autres référentiels privés.
 
-## [Référence d’applet de commande PowerShellGet](./psget_cmdlets_reference.md)
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
+## <a name="powershellget-cmdlet-referencepsgetcmdletsreferencemd"></a>[Référence d’applet de commande PowerShellGet](./psget_cmdlets_reference.md)
 

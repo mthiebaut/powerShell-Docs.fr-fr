@@ -8,18 +8,16 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 634eab89-0845-4016-974b-361b09bb8f7b
-translationtype: Human Translation
-ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
-ms.openlocfilehash: 575ee3b8279ad50920df17ff92d4f65467d83830
-
+ms.openlocfilehash: aaeb83313ea5613bdce1bbc233ce9a4cbe86f530
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Objet ISEAddOnToolCollection
+# <a name="the-iseaddontoolcollection-object"></a>Objet ISEAddOnToolCollection
   L’objet **ISEAddOnToolCollection** est une collection d’objets **ISEAddOnTool**. L’objet **$psISE.CurrentPowerShellTab.VerticalAddOnTools** en est un exemple.
 
-## Méthodes
+## <a name="methods"></a>Méthodes
 
-### Add\( Name, ControlType, \[IsVisible\] \)
+### <a name="add-name-controltype-isvisible-"></a>Add\( Name, ControlType, \[IsVisible\] \)
   Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures. 
 
  Ajoute un nouvel outil complémentaire à la collection. Elle retourne l’outil complémentaire qui vient d’être ajouté. Avant d’exécuter cette commande, vous devez installer l’outil complémentaire sur l’ordinateur local et charger l’assembly.
@@ -36,7 +34,7 @@ ms.openlocfilehash: 575ee3b8279ad50920df17ff92d4f65467d83830
 $psISE.CurrentPowerShellTab.VerticalAddOnTools.Add("Solutions", [ISESimpleSolution.Solution], $true)
 ```
 
-### Remove\( Item \)
+### <a name="remove-item-"></a>Remove\( Item \)
   Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures. 
 
  Supprime l’outil complémentaire spécifié de la collection.
@@ -49,7 +47,7 @@ $psISE.CurrentPowerShellTab.VerticalAddOnTools.Add("Solutions", [ISESimpleSoluti
 $psISE.CurrentPowerShellTab.VerticalAddOnTools.Add("Solutions", [ISESimpleSolution.Solution], $true)
 ```
 
-### SetSelectedPowerShellTab\( psTab \)
+### <a name="setselectedpowershelltab-pstab-"></a>SetSelectedPowerShellTab\( psTab \)
   Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures. 
 
  Sélectionne l’onglet PowerShell spécifié par le paramètre **psTab**.
@@ -62,7 +60,7 @@ $psISE.CurrentPowerShellTab.VerticalAddOnTools.Add("Solutions", [ISESimpleSoluti
 $newTab.DisplayName="Brand New Tab"
 ```
 
-### Remove\( psTab \)
+### <a name="remove-pstab-"></a>Remove\( psTab \)
   Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures. 
 
  Supprime l’onglet PowerShell spécifié par le paramètre **psTab**.
@@ -77,16 +75,10 @@ sleep 5
 $psISE.PowerShellTabs.Remove($newTab)
 ```
 
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 - [Objet PowerShellTab](The-PowerShellTab-Object.md) 
 - [Modèle objet de script Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
-- [Référence de modèle objet Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md) 
+- [Informations de référence sur le modèle objet Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md) 
 - [Hiérarchie du modèle objet ISE](The-ISE-Object-Model-Hierarchy.md)
 
   
-
-
-
-<!--HONumber=Oct16_HO1-->
-
-

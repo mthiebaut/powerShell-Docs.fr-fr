@@ -7,18 +7,16 @@ ms.topic: article
 author: jpjofre
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 053a4fd734b1e86c5f8ca22c8197ce4e80b6fce6
-
+ms.openlocfilehash: 52103ee815f97068efc2c4cf666589e9d240bf92
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
+# <a name="ise-guide"></a>Guide de l’ISE
 
-# Guide de l’ISE
-
--  [Comment créer un onglet PowerShell dans Windows PowerShell ISE](ise/How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md)
+-  [Comment créer un onglet PowerShell dans Windows PowerShell ISE](ise/How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md)
 -  [Comment déboguer des scripts dans Windows PowerShell ISE](ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md)
 -  [Comment utiliser des profils dans Windows PowerShell ISE](ise/How-to-Use-Profiles-in-Windows-PowerShell-ISE.md)
--  [Comment utiliser la saisie semi-automatique via la touche Tab dans les volets Script et Commande](ise/How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md)
+-  [Comment utiliser la saisie semi-automatique via la touche Tab dans les volets Script et Console](ise/How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md)
 -  [Comment utiliser le volet Console dans Windows PowerShell ISE](ise/How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md)
 -  [Comment écrire et exécuter des scripts dans Windows PowerShell ISE](ise/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md)
 -  [Présentation de Windows PowerShell ISE](ise/Introducing-the-Windows-PowerShell-ISE.md)
@@ -41,11 +39,5 @@ ms.openlocfilehash: 053a4fd734b1e86c5f8ca22c8197ce4e80b6fce6
 -  [Objet PowerShellTabCollection](ise/The-PowerShellTabCollection-Object.md)
 -  [Modèle objet de script Windows PowerShell ISE](ise/The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 -  [Utilisation de Windows PowerShell ISE](ise/Using-the-Windows-PowerShell-ISE.md)
--  [Référence de modèle objet Windows PowerShell ISE](ise/Windows-PowerShell-ISE-Object-Model-Reference.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
+-  [Informations de référence sur le modèle objet Windows PowerShell ISE](ise/Windows-PowerShell-ISE-Object-Model-Reference.md)
 

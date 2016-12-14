@@ -7,18 +7,15 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: c915ebd021ed20209bc491505d45cff2ac89f21d
 ms.openlocfilehash: 4129c83dd0b72159cbf1d47c037b9d462ca45f0e
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-
-# Méthode ResourceTest de la classe MSFT_DSCLocalConfigurationManager
+# <a name="resourcetest-method-of-the-msftdsclocalconfigurationmanager-class"></a>Méthode ResourceTest de la classe MSFT_DSCLocalConfigurationManager
 
 Appelle directement la méthode **Test** d’une ressource DSC.
 
-Syntaxe
+<a name="syntax"></a>Syntaxe
 ------
 
 ```mof
@@ -30,7 +27,7 @@ uint32 ResourceTest(
 );
 ```
 
-Paramètres
+<a name="parameters"></a>Paramètres
 ----------
 
 *ResourceType* \[in\]  
@@ -45,23 +42,23 @@ Spécifie le nom de propriété de ressource et sa valeur dans une table de hach
 *InDesiredState* \[out\]  
 En retour, cette propriété est définie avec la valeur **true** si le nœud cible est dans l’état souhaité.
 
-## Valeur renvoyée
+## <a name="return-value"></a>Valeur renvoyée
 ------------
 
 Retourne zéro en cas de réussite ; sinon, retourne un code d’erreur.
 
-## Remarques
+## <a name="remarks"></a>Remarques
 
 Il s’agit d’une méthode statique.
 
-## Spécifications
+## <a name="requirements"></a>Spécifications
 ------------
 >**MOF :** DscCore.mof
 
 >**Espace de noms** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
@@ -71,11 +68,5 @@ Il s’agit d’une méthode statique.
 
  
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -8,19 +8,17 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 51a12fe9-95f6-4ffc-81a5-4fa72a5bada9
-translationtype: Human Translation
-ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
-ms.openlocfilehash: 4334a1ff099072c2287af299d65caed3f16032fe
-
+ms.openlocfilehash: 27b9d9c71412a06a8890b56163d0e6acb7ecd1f4
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Utilisation des installations de logiciels
+# <a name="working-with-software-installations"></a>Utilisation des installations de logiciels
 Les applications conçues pour utiliser Windows Installer sont accessibles via la classe WMI **Win32_Product**. Toutefois, certaines applications ne font pas appel à Windows Installer. Étant donné que Windows Installer offre la plus vaste palette de techniques standard associées aux applications installables, nous allons examiner principalement ces applications. En général, les applications qui utilisent d'autres routines d'installation ne sont pas gérées par Windows Installer. Les techniques spécifiques à employer avec ces applications dépendent du programme d'installation et des décisions prises par le développeur de l'application.
 
 > [!NOTE]
 > Dans la plupart des cas, les applications installées par copie des fichiers de l'application sur l'ordinateur ne peuvent pas être gérées au moyen des techniques présentées ici. Vous pouvez gérer ces applications en tant que fichiers et dossiers en utilisant les techniques présentées dans la section « Utilisation des fichiers et dossiers ».
 
-### Affichage de la liste des applications Windows Installer
+### <a name="listing-windows-installer-applications"></a>Affichage de la liste des applications Windows Installer
 Pour répertorier les applications installées avec Windows Installer sur un système local ou distant, utilisez la requête WMI simple suivante :
 
 ```
@@ -85,7 +83,7 @@ Get-WmiObject -Class Win32_Product -ComputerName .  | Format-Wide -Column 1
 
 Si nous disposons de plusieurs méthodes pour examiner les applications faisant appel à Windows Installer pour l'installation, notre analyse ne tient pas compte des autres applications pour le moment. Étant donné que la plupart des applications standard inscrivent leur programme de désinstallation auprès de Windows, nous pouvons les rechercher dans le Registre Windows pour les utiliser localement.
 
-### Affichage de la liste de toutes les applications non installables
+### <a name="listing-all-uninstallable-applications"></a>Affichage de la liste de toutes les applications non installables
 Bien qu'aucune méthode ne garantisse l'identification de toutes les applications présentes sur un système, il est possible de trouver tous les programmes répertoriés dans la boîte de dialogue Ajout/Suppression de programmes. Cette dernière recherche les applications dans la clé de Registre suivante :
 
 **HKEY_LOCAL_MACHINE\\Logiciel\\Microsoft\\Windows\\CurrentVersion\\Désinstaller**.
@@ -141,13 +139,13 @@ SKC  VC Name                           Property
   0  24 {E38C00D0-A68B-4318-A8A6-F7... {AuthorizedCDFPrefix, Comments, Conta...
 ```
 
-### Installation d'applications
+### <a name="installing-applications"></a>Installation d'applications
 Vous pouvez utiliser la classe **Win32_Product** pour installer, localement ou à distance, des packages Windows Installer.
 
 > [!NOTE]
 > Dans Windows Vista, Windows Server 2008 et versions ultérieures de Windows, vous devez démarrer Windows PowerShell avec l'option « Exécuter en tant qu'administrateur » pour installer une application.
 
-Pour effectuer une installation à distance, utilisez un chemin d'accès réseau UNC (Universal Naming Convention) pour spécifier le chemin d'accès au package .msi, car le sous-système WMI ne prend pas en charge les chemins d'accès Windows PowerShell. Par exemple, pour installer le package NewPackage.msi situé dans le partage réseau \\\\AppServ\\dsp sur l’ordinateur distant PC01, tapez la commande suivante à l’invite Windows PowerShell :
+Pour effectuer une installation à distance, utilisez un chemin d'accès réseau UNC (Universal Naming Convention) pour spécifier le chemin d'accès au package .msi, car le sous-système WMI ne prend pas en charge les chemins d'accès Windows PowerShell. Par exemple, pour installer le package NewPackage.msi situé dans le partage réseau \\\\AppServ\\dsp sur l’ordinateur distant PC01, tapez la commande suivante à l’invite Windows PowerShell :
 
 ```
 (Get-WMIObject -ComputerName PC01 -List | Where-Object -FilterScript {$_.Name -eq "Win32_Product"}).Install(\\AppSrv\dsp\NewPackage.msi)
@@ -155,7 +153,7 @@ Pour effectuer une installation à distance, utilisez un chemin d'accès réseau
 
 Les applications qui n'utilisent pas la technologie Windows Installer peuvent faire appel à leurs propres méthodes de déploiement automatisé. Pour déterminer s'il existe ou non une méthode d'automatisation du déploiement, examinez la documentation de l'application ou consultez le système d'aide du fournisseur de l'application. Dans certains cas, même si le fournisseur d'une application n'a pas spécifiquement prévu d'automatiser l'installation, le fabricant du logiciel d'installation peut proposer certaines techniques d'automatisation.
 
-### Suppression d'applications
+### <a name="removing-applications"></a>Suppression d'applications
 La procédure de suppression d'un package Windows Installer à l'aide de Windows PowerShell est semblable à la procédure d'installation. Voici un exemple qui sélectionne le package à désinstaller d’après son nom. Dans certains cas, il peut être plus facile d’utiliser un filtre avec **IdentifyingNumber** :
 
 ```
@@ -176,16 +174,10 @@ Get-ChildItem -Path Uninstall: | Where-Object -FilterScript { $_.GetValue("Displ
 
 Toutefois, pour exploiter ces chaînes provenant directement de l'invite Windows PowerShell, vous devrez peut-être les modifier.
 
-### Mise à niveau d'applications Windows Installer
+### <a name="upgrading-windows-installer-applications"></a>Mise à niveau d'applications Windows Installer
 Pour mettre à niveau une application, vous devez connaître son nom et le chemin d'accès au package de mise à niveau de l'application. Muni de ces informations, vous pouvez mettre à niveau une application avec une seule commande Windows PowerShell :
 
 ```
 (Get-WmiObject -Class Win32_Product -ComputerName . -Filter "Name='OldAppName'").Upgrade(\\AppSrv\dsp\OldAppUpgrade.msi)
 ```
-
-
-
-
-<!--HONumber=Oct16_HO1-->
-
 

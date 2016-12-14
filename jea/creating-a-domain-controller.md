@@ -8,24 +8,22 @@ keywords: powershell,applet de commande,jea
 ms.date: 2016-06-22
 title: "création d’un contrôleur de domaine"
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: d4a72a7c5883b1d3ba8de3dbc9cfe016a6fb3498
-ms.openlocfilehash: 8473eb668e4da5bab01c2f2b7647cbced413bd22
-
+ms.openlocfilehash: 80b957ed666ca626c6083041cf99c263e2e0dc27
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-### Création d’un contrôleur de domaine
+### <a name="creating-a-domain-controller"></a>Création d’un contrôleur de domaine
 
 Ce document part du principe que votre ordinateur est joint à un domaine.
 Si vous n’avez pas de domaine à rejoindre, cette section peut vous aider à rapidement mettre en place un contrôleur de domaine à l’aide de DSC.
 
-#### Conditions préalables
+#### <a name="prerequisites"></a>Conditions préalables
 
 1.  L’ordinateur se trouve sur un réseau interne.
 2.  L’ordinateur n’est pas joint à un domaine existant.
 3.  L’ordinateur exécute Windows Server 2016 ou WMF 5.0 y est installé.
 
-#### Installer xActiveDirectory
+#### <a name="install-xactivedirectory"></a>Installer xActiveDirectory
 Si votre ordinateur a une connexion Internet active, exécutez la commande suivante dans une fenêtre PowerShell avec élévation de privilèges :
 ```PowerShell
 Install-Module xActiveDirectory -Force
@@ -37,9 +35,9 @@ Pour confirmer la réussite de l’installation, exécutez la commande suivante�
 Get-Module xActiveDirectory -ListAvailable
 ```
 
-#### Configurer un domaine avec DSC
+#### <a name="set-up-a-domain-with-dsc"></a>Configurer un domaine avec DSC
 Copiez le script suivant dans PowerShell pour que votre ordinateur devienne un contrôleur de domaine dans un nouveau domaine.
-**NOTE DE L’AUTEUR : IL EXISTE UN PROBLÈME CONNU LIÉ AUX INFORMATIONS D’IDENTIFICATION FOURNIES QUI NE SONT PAS UTILISÉES.  POUR PLUS DE SÉCURITÉ, N’OUBLIEZ PAS VOTRE MOT DE PASSE D’ADMINISTRATEUR LOCAL.**
+**NOTE DE L’AUTEUR : IL EXISTE UN PROBLÈME CONNU LIÉ AUX INFORMATIONS D’IDENTIFICATION FOURNIES QUI NE SONT PAS UTILISÉES.  POUR PLUS DE SÉCURITÉ, N’OUBLIEZ PAS VOTRE MOT DE PASSE D’ADMINISTRATEUR LOCAL.**
 
 ```PowerShell
 Set-Item WSMan:\localhost\Client\TrustedHosts -Value $env:COMPUTERNAME -Force
@@ -115,7 +113,7 @@ Start-DSCConfiguration -path .\DomainController -ComputerName $env:Computername 
 Votre ordinateur va redémarrer plusieurs fois.
 Vous savez que le processus est terminé une fois que vous voyez un fichier appelé « C:\temp.txt » indiquant que le domaine a été créé.
 
-#### Configurer des utilisateurs et groupes
+#### <a name="set-up-users-and-groups"></a>Configurer des utilisateurs et groupes
 Les commandes suivantes configurent un groupe Opérateur et support technique dans votre domaine et un utilisateur non-administrateur correspondant qui est membre de ce groupe.
 ```PowerShell
 # Make Groups
@@ -134,10 +132,4 @@ Enable-ADAccount -Identity $HelpDeskUser
 Add-ADGroupMember -Identity $NonAdminOperatorGroup -Members $OperatorUser
 Add-ADGroupMember -Identity $NonAdminHelpDeskGroup -Members $HelpDeskUser
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

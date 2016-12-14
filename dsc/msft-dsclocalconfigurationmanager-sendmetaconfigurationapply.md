@@ -7,17 +7,15 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: c915ebd021ed20209bc491505d45cff2ac89f21d
 ms.openlocfilehash: a81b41f66883b3cf0931905d24c8ff92ef55b6c7
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Méthode SendMetaConfigurationApply de la classe MSFT_DSCLocalConfigurationManager
+# <a name="sendmetaconfigurationapply-method-of-the-msftdsclocalconfigurationmanager-class"></a>Méthode SendMetaConfigurationApply de la classe MSFT_DSCLocalConfigurationManager
 
 Définissez les paramètres du Gestionnaire de configuration local qui permettent de contrôler l’agent de configuration.
 
-Syntaxe
+<a name="syntax"></a>Syntaxe
 ------
 
 ```mof
@@ -27,7 +25,7 @@ uint32 SendMetaConfigurationApply(
 );
 ```
 
-Paramètres
+<a name="parameters"></a>Paramètres
 ----------
 
 *ConfigurationData* \[in\]  
@@ -36,23 +34,23 @@ Données d’environnement pour la configuration.
 *force* \[in\]  
 **true** pour forcer l’arrêt de la configuration.
 
-## Valeur renvoyée
+## <a name="return-value"></a>Valeur renvoyée
 ------------
 
 Retourne zéro en cas de réussite ; sinon, retourne un code d’erreur.
 
-## Remarques
+## <a name="remarks"></a>Remarques
 
 Il s’agit d’une méthode statique.
 
-## Spécifications
+## <a name="requirements"></a>Spécifications
 ------------
 >**MOF :** DscCore.mof
 
 >**Espace de noms** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
@@ -62,11 +60,5 @@ Il s’agit d’une méthode statique.
 
  
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

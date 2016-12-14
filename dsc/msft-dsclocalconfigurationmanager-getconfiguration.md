@@ -7,17 +7,15 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 919438862ca9786447b690d2db10e905da0a7c42
 ms.openlocfilehash: 19d4790f22491e0bb11de1e315d1ee3b07929d55
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Méthode GetConfiguration de la classe MSFT_DSCLocalConfigurationManager
+# <a name="getconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Méthode GetConfiguration de la classe MSFT_DSCLocalConfigurationManager
 
 Envoie le document de configuration au nœud géré et utilise la méthode **Get** de l’agent de configuration pour appliquer la configuration.
 
-Syntaxe
+<a name="syntax"></a>Syntaxe
 ------
 
 ```mof
@@ -27,7 +25,7 @@ uint32 GetConfiguration(
 );
 ```
 
-Paramètres
+<a name="parameters"></a>Paramètres
 ----------
 
 *configurationData* \[in\]  
@@ -36,23 +34,23 @@ Spécifie les données de configuration à envoyer.
 *configurations* \[out\]  
 En retour, contient une instance incorporée des configurations.
 
-## Valeur renvoyée
+## <a name="return-value"></a>Valeur renvoyée
 ------------
 
 Retourne zéro en cas de réussite ; sinon, retourne un code d’erreur.
 
-## Remarques
+## <a name="remarks"></a>Remarques
 
 Il s’agit d’une méthode statique.
 
-## Spécifications
+## <a name="requirements"></a>Spécifications
 ------------
 >**MOF :** DscCore.mof
 
 >**Espace de noms** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
@@ -60,11 +58,5 @@ Il s’agit d’une méthode statique.
 
  
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

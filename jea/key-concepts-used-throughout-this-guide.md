@@ -8,19 +8,17 @@ keywords: powershell,applet de commande,jea
 ms.date: 2016-06-22
 title: "concepts clés utilisés dans ce guide"
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
-ms.openlocfilehash: 178fea44987b0c457b8e5d23fbe851ee12f03b31
-
+ms.openlocfilehash: 873ab19fdf43ec4ac41cc546aa94b64fbc607984
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Concepts clés utilisés dans ce guide
-**Qu’est-ce que JEA exactement ?**
+# <a name="key-concepts-used-throughout-this-guide"></a>Concepts clés utilisés dans ce guide
+**Qu’est-ce que JEA exactement ?**
 
 JEA est une extension des [points de terminaison contraints](http://blogs.technet.com/b/heyscriptingguy/archive/2014/03/31/introduction-to-powershell-endpoints.aspx) PowerShell qui permet d’ajouter des définitions de rôle, des comptes virtuels et plusieurs autres améliorations pour faciliter encore plus le verrouillage de vos points de terminaison de gestion.
 Un point de terminaison JEA se compose d’un fichier de configuration de session PowerShell et d’un ou plusieurs fichiers de capacités de rôle.
 
-**Que sont les fichiers de configuration de session et de capacités de rôle ?**
+**Que sont les fichiers de configuration de session et de fonctionnalité de rôle ?**
 
 Les fichiers de configuration de session PowerShell (.pssc) définissent *qui* peut se connecter à un point de terminaison PowerShell et *comment* il est configuré.
 C’est là que vous mappez des utilisateurs et groupes de sécurité sur des rôles de gestion spécifiques et que vous configurez des paramètres globaux comme les comptes virtuels et les stratégies de transcription.
@@ -30,7 +28,7 @@ Les fichiers de capacités de rôle PowerShell (.psrc) définissent *ce que* les
 Ils vous permettent de restreindre les applets de commande, fonctions, fournisseurs et programmes externes qu’utilisateur peut utiliser pendant sa session JEA.
 Les fichiers de capacités de rôle sont souvent génériques pour le rôle servi (administrateur DNS, support technique de niveau 1, audit d’inventaire en lecture seule, etc.) et ils appartiennent à des modules PowerShell, ce qui facilite leur partage au sein de votre environnement et avec d’autres personnes.
 
-**Comment les comptes virtuels sont-ils exploités par JEA ?**
+**Comment les comptes virtuels sont-ils exploités par JEA ?**
 
 Dans le fichier de configuration de session PowerShell, vous pouvez configurer des sessions JEA pour utiliser des comptes « d’identification » virtuels.
 Les comptes virtuels sont des comptes privilégiés à usage unique préparés pour l’utilisateur spécifique qui tente d’établir une connexion au cours de cette session spécifique dans le contexte d’exécution des commandes de l’utilisateur.
@@ -53,10 +51,4 @@ En outre, si un script/une commande autorisé(e) tente d’accéder à des resso
 
 **« Utilisateur connecté »** : utilisateur non-administrateur qui se connecte au point de terminaison JEA et auquel des rôles sont attribués.
 Toutes les commandes que cet utilisateur exécute sont exécutées dans le contexte de l’utilisateur d’identification ou compte virtuel.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

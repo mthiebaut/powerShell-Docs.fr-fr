@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 6e24bf6d-4c70-4edf-956a-1e8e4779ba10
-translationtype: Human Translation
-ms.sourcegitcommit: 6c666e2e23cb74818e37293410dafc9033057733
-ms.openlocfilehash: 39692bf9deda498e05742f0b746af0bd54cb07c3
-
+ms.openlocfilehash: 59b4554c31a95a2d2537a431fccb2d7b67da7e95
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Fournisseurs Windows PowerShell Core
+# <a name="windows-powershell-core-providers"></a>Fournisseurs Windows PowerShell Core
 Cette section contient des rubriques d’aide qui décrivent les fournisseurs Windows PowerShell dans le module **Microsoft.PowerShell.Core**.
 
 Les fournisseurs Windows PowerShell sont des programmes .NET qui vous permettent d'accéder aux données d'une banque de données spécialisée pour les afficher et les gérer facilement dans Windows PowerShell. Les données exposées par un fournisseur sont affichées dans un lecteur à la manière d'un lecteur système de fichiers. Pour plus d’informations, voir [about_Providers [v4]](https://technet.microsoft.com/en-us/library/2d9b3f32-be78-49ad-a547-21231c803242).
@@ -28,15 +26,9 @@ Les fournisseurs Windows PowerShell sont des programmes .NET qui vous permetten
 |[Fournisseur Registry [v3]](https://technet.microsoft.com/en-us/library/d3c8013c-8caa-48d7-9feb-bfef0d95926e)|Fournit l'accès aux valeurs et aux clés du Registre système.|
 |[Fournisseur Variable [v3]](https://technet.microsoft.com/en-us/library/78dbcbbd-7946-4b9b-b75b-146f247f821c)|Fournit l'accès aux variables Windows PowerShell et à leurs valeurs.|
 
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 - [Fournisseur Certificate [v3]](https://technet.microsoft.com/en-us/library/3f743541-d0c6-4670-809a-b16fb01f7c4d)
 - [Fournisseur WSMan [v3]](https://technet.microsoft.com/en-us/library/4c3d8d36-4f7a-4211-996f-64110e4b2eb7)
 - [about_Providers [v4]](https://technet.microsoft.com/en-us/library/2d9b3f32-be78-49ad-a547-21231c803242)
 - [Module Microsoft.PowerShell.Core](Microsoft.PowerShell.Core-Module.md)
-
-
-
-
-<!--HONumber=Oct16_HO3-->
-
 

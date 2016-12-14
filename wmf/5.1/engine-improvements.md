@@ -8,18 +8,16 @@ author: keithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-translationtype: Human Translation
-ms.sourcegitcommit: 45182af45b2d1510b7ad8e9f2ac35fa5346ddb66
-ms.openlocfilehash: bb7efc55b1c948c349aa778b700e5cb1277b9762
-
+ms.openlocfilehash: 118cb91528824b75e28a1eadaa377a696c67f2dd
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-#Améliorations du moteur PowerShell
+#<a name="powershell-engine-improvements"></a>Améliorations du moteur PowerShell
 
 Les améliorations suivantes du moteur principal PowerShell ont été implémentées dans WMF 5.1 :
 
 
-## Performances ##
+## <a name="performance"></a>Performances ##
 
 Les performances ont été améliorées dans certains domaines importants :
 
@@ -31,8 +29,8 @@ Voici quelques exemples d’améliorations (les résultats peuvent varier en fon
 | Scénario | Durée 5.0 (ms) | Durée 5.1 (ms) |
 | -------- | :---------------: | :---------------: |
 | `powershell -command "echo 1"` | 900 | 250 |
-| Première exécution PowerShell : `powershell -command "Unknown-Command"` | 30 000 | 13 000 |
-| Création du cache d’analyse de commande : `powershell -command "Unknown-Command"` | 7000 | 520 |
+| Première exécution PowerShell : `powershell -command "Unknown-Command"` | 30 000 | 13 000 |
+| Création du cache d’analyse de commande : `powershell -command "Unknown-Command"` | 7000 | 520 |
 | <code>1..1000000 &#124; % { }</code> | 1400 | 750 |
   
 > Notez qu’une modification liée au démarrage peut affecter certains scénarios non pris en charge. 
@@ -42,9 +40,3 @@ Notez que la modification du contenu de ces fichiers n’a jamais été un scén
 
 Une autre modification visible est la façon dont PowerShell met en cache les commandes exportées et d’autres informations pour les modules installés sur un système. Auparavant, ce cache était stocké dans le répertoire `$env:LOCALAPPDATA\Microsoft\Windows\PowerShell\CommandAnalysis`. Dans WMF 5.1, le cache est un fichier unique `$env:LOCALAPPDATA\Microsoft\Windows\PowerShell\ModuleAnalysisCache`.
 Pour plus de détails, voir la page [Cache d’analyse de module](scenarios-features.md#module-analysis-cache).
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

@@ -7,13 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: 962941ba946a67256baf141bd195361c94a68f90
-
+ms.openlocfilehash: a8faf242fcc8c72461d6cb7609a562fbb92dfdb9
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Utilisation de DSC sur Nano Server
+# <a name="using-dsc-on-nano-server"></a>Utilisation de DSC sur Nano Server
 
 > S’applique à : Windows PowerShell 5.0
 
@@ -26,7 +24,7 @@ New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -Base
 Pour plus d’informations sur l’installation et l’utilisation de Nano Server, ainsi que sur le mode de gestion de Nano Server avec la communication à distance PowerShell, voir [Prise en main de Nano Server](https://technet.microsoft.com/en-us/library/mt126167.aspx).
 
 
-## Fonctionnalités DSC disponibles sur Nano Server
+## <a name="dsc-features-available-on-nano-server"></a>Fonctionnalités DSC disponibles sur Nano Server
 
  Comme Nano Server ne prend en charge qu’un ensemble limité d’API par rapport à une version complète de Windows Server, DSC sur Nano Server n’a pas exactement les mêmes fonctionnalités que DSC exécuté sur les références complètes pour l’instant. En effet, DSC sur Nano Server est en cours de développement et ne dispose pas encore de toutes les fonctionnalités.
  
@@ -99,7 +97,7 @@ Pour plus d’informations sur l’installation et l’utilisation de Nano Serve
   * WaitForSome (voir [Spécification de dépendances entre nœuds](crossNodeDependencies.md))
 
 * Ressources partiellement fonctionnelles
-  * [Group](groupResource.md)
+  * [Groupe](groupResource.md)
   * GroupSet
   
   **Problème :** les ressources ci-dessus échouent si une instance spécifique est appelée deux fois (exécution de la même configuration deux fois)
@@ -109,13 +107,13 @@ Pour plus d’informations sur l’installation et l’utilisation de Nano Serve
   
   **Problème :** fonctionne uniquement pour le démarrage/l’arrêt du service (état). Échoue si vous essayez de modifier d’autres attributs de service, comme StartupType, les informations d’identification, la description, etc. L’erreur levée est semblable à :
   
-  *Impossible de trouver le type [management.managementobject] : vérifiez que l’assembly contenant ce type est chargé.*
+  *Impossible de trouver le type [management.managementobject] : vérifiez que l’assembly contenant ce type est chargé.*
   
 * Ressources non fonctionnelles
   * [User](userResource.md)
   
 
-## Fonctionnalités DSC non disponibles sur Nano Server
+## <a name="dsc-features-not-available-on-nano-server"></a>Fonctionnalités DSC non disponibles sur Nano Server
 
 Les fonctionnalités DSC suivantes ne sont pas disponibles sur Nano Server :
 
@@ -123,16 +121,10 @@ Les fonctionnalités DSC suivantes ne sont pas disponibles sur Nano Server :
 * Serveur collecteur : vous ne pouvez pas configurer un serveur collecteur sur Nano Server pour le moment
 * Tout ce qui n’est pas dans la liste des fonctionnalités marche
 
-## Utilisation de ressources DSC personnalisées sur Nano Server
+## <a name="using-custom-dsc-resources-on-nano-server"></a>Utilisation de ressources DSC personnalisées sur Nano Server
  
 En raison des ensembles limités d’API Windows et de bibliothèques CLR disponibles sur Nano Server, les ressources DSC qui fonctionnent sur la version CLR complète de Windows ne fonctionnent pas nécessairement sur Nano Server. Effectuez les tests de bout en bout avant de déployer des ressources personnalisées DSC dans un environnement de production.
 
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 - [Prise en main de Nano Server](https://technet.microsoft.com/en-us/library/mt126167.aspx)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

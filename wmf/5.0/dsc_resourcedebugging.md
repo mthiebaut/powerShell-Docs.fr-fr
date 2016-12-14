@@ -1,6 +1,4 @@
-# Débogage de script de ressources DSC
-WMF 5.0 Production Preview inclut la prise en charge du débogage des scripts de ressources DSC pendant qu’ils s’exécutent sur des nœuds cibles. Pour plus d’informations, consultez [Débogage des ressources DSC](https://msdn.microsoft.com/powershell/dsc/debugresource).
+# <a name="dsc-resource-script-debugging"></a>Débogage de script de ressources DSC
 
-<!--HONumber=Aug16_HO3-->
-
-
+WMF 5.0 inclut la prise en charge du débogage des scripts de ressources DSC pendant qu’ils s’exécutent sur des nœuds cibles.
+Pour plus d’informations, consultez [Débogage des ressources DSC](https://msdn.microsoft.com/powershell/dsc/debugresource).

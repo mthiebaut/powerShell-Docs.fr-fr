@@ -8,18 +8,16 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 01df8b22-2d22-4e2c-a18d-c004cd3cc284
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 94117fcf337ecf550d6df1d167e608ba64582c03
-
+ms.openlocfilehash: f616fbbc073c5e8870d7c8c55d6d2eb40fd3957c
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Suppression d’objets du pipeline (Where-Object)
+# <a name="removing-objects-from-the-pipeline-where-object"></a>Suppression d’objets du pipeline (Where-Object)
 Dans Windows PowerShell, vous générez et transmettez souvent à un pipeline plus d’objets que souhaité. Vous pouvez spécifier les propriétés d’objets particuliers à afficher à l’aide des applets de commande **Format**, mais cela ne résout pas le problème de la suppression d’objets entiers de l’affichage. Il se peut que vous souhaitiez filtrer des objets avant la fin d’un pipeline afin de pouvoir effectuer des actions uniquement sur un sous-ensemble des objets générés initialement.
 
 Windows PowerShell inclut une applet de commande **Where-Object** qui permet de tester chaque objet dans le pipeline et de le transmettre dans le pipeline uniquement s’il répond à une condition de test particulière. Les objets qui ne passent pas le test sont supprimés du pipeline. Vous fournissez la condition de test en tant que la valeur du paramètre **Where-ObjectFilterScript**.
 
-### Exécution de tests simples avec l’applet de commande Where-objet
+### <a name="performing-simple-tests-with-where-object"></a>Exécution de tests simples avec l’applet de commande Where-objet
 La valeur de **FilterScript** est un *bloc de script* (une ou plusieurs commandes Windows PowerShell entourées d’accolades {}) qui prend la valeur true ou false. Un tel bloc de script peut être très simple, mais sa création nécessite de connaître un autre concept de Windows PowerShell, à savoir l’opérateur de comparaison. Un opérateur de comparaison compare les éléments figurant de part et d’autre de celui-ci. Un opérateur de comparaison commence par un caractère « - » suivi d’un nom. Les opérateurs de comparaison de base fonctionnent sur pratiquement tout type d’objet. Certains opérateurs de comparaison plus avancés fonctionnent uniquement sur du texte ou des tableaux.
 
 > [!NOTE]
@@ -48,7 +46,7 @@ PS> 1,2,3,4 | Where-Object -FilterScript {$_ -lt 3}
 2
 ```
 
-### Filtrage basé sur les propriétés de l’objet
+### <a name="filtering-based-on-object-properties"></a>Filtrage basé sur les propriétés de l’objet
 Comme $_ fait référence à l’objet de pipeline actif, nous pouvons accéder à ses propriétés pour nos tests.
 
 Par exemple, nous pouvons examiner la classe Win32_SystemDriver dans WMI. Il peut y avoir des centaines de pilotes système sur un système particulier, mais il se peut que vous vous intéressiez uniquement à certains pilotes, par exemple, à ceux qui sont en cours d’exécution. Si vous utilisez l’applet de commande Get-Member pour afficher les membres de Win32_SystemDriver (**Get-WmiObject -Class Win32_SystemDriver | Get-Member -MemberType Property**), vous constatez que la propriété pertinente est State, et qu’elle a la valeur « Running » quand le pilote est en cours d’exécution. Vous pouvez filtrer les pilotes du système afin de sélectionner uniquement ceux qui sont en cours d’exécution, en tapant ce qui suit :
@@ -106,10 +104,4 @@ Les opérateurs logiques standards sont répertoriés dans le tableau suivant.
 |-or|Opérateur logique ou ; true si l’un des côtés est vrai|(1 -eq 1) -or (1 -eq 2)|
 |-not|Opérateur logique non ; inverse les valeurs true et false|-not (1 -eq 2)|
 |\!|Opérateur logique non ; inverse les valeurs true et false|\!(1 -eq 2)|
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

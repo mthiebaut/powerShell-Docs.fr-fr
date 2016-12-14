@@ -1,4 +1,4 @@
-# Instructions d’installation
+# <a name="installation-instructions"></a>Instructions d’installation
 
 Téléchargez le package correspondant à votre système d’exploitation et à votre architecture :
 
@@ -13,13 +13,13 @@ Téléchargez le package correspondant à votre système d’exploitation et à 
 | Windows 7 SP1          | x86          | [Win7-KB3134760-x86.msu](http://go.microsoft.com/fwlink/?LinkID=717962) |
 
 
-**Pour installer WMF 5.0 à partir de l’Explorateur Windows (ou de l’Explorateur de fichiers dans Windows Server 2012 R2 et Windows 8.1)**
+**Pour installer WMF 5.0 à partir de l’Explorateur Windows (ou de l’Explorateur de fichiers dans Windows Server 2012 R2 et Windows 8.1) :**
 
 1. Accédez au dossier dans lequel vous avez téléchargé le fichier MSU.
 
 2. Double-cliquez sur le fichier MSU pour l’exécuter.
 
-**Pour installer WMF 5.0 à partir de l’invite de commandes** 
+**Pour installer WMF 5.0 à partir de l’invite de commandes :** 
 
 1. Après avoir téléchargé le package correspondant à l’architecture de votre ordinateur, ouvrez une fenêtre d’invite de commandes avec des droits d’utilisateur élevés (Exécuter en tant qu’administrateur). Dans les options d’installation Server Core de Windows Server 2012 R2, Windows Server 2012 ou Windows Server 2008 R2 SP1, une invite de commandes s’ouvre avec des droits d’utilisateur avec élévation de privilèges par défaut.
 
@@ -32,17 +32,12 @@ Téléchargez le package correspondant à votre système d’exploitation et à 
     - Sur les ordinateurs qui exécutent Windows 8.1 x86, exécutez **Win8.1-KB3134758-x86.msu /quiet**.
     - Sur les ordinateurs qui exécutent Windows 7 SP1 x86, exécutez **Win7-KB3134760-x86.msu /quiet**.
 
-**Notes d’installation supplémentaires pour Windows Server 2008 SP1 et Windows 7 SP1 :**
+**Notes d’installation supplémentaires pour Windows Server 2008 SP1 et Windows 7 SP1 :**
 
 Vérifiez que les conditions préalables suivantes sont remplies :
 - Le Service Pack le plus récent est installé.
 - [WMF 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=40855) est installé.
 
 *Dépendance de WinRM :* La Configuration de l’état souhaité (DSC) Windows PowerShell dépend de WinRM. WinRM n’est pas activé par défaut sur Windows Server 2008 R2 et Windows 7. Pour activer WinRM, dans une session Windows PowerShell avec élévation des privilèges, exécutez **Set-WSManQuickConfig**.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

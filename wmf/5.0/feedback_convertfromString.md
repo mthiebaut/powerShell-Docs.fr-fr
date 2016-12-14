@@ -1,4 +1,4 @@
-# Extraire et analyser des objets structurés hors de contenu String
+# <a name="extract-and-parse-structured-objects-out-of-string"></a>Extraire et analyser des objets structurés hors de contenu String
 Cet article présente également certaines fonctionnalités supplémentaires pour l’applet de commande ConvertFrom-String :
 
 -   Suppression de la propriété de texte d’étendue par défaut. Vous pouvez l’inclure avec le paramètre -IncludeExtent.
@@ -8,7 +8,7 @@ Cet article présente également certaines fonctionnalités supplémentaires pou
 -   Nouveau paramètre -UpdateTemplate pour enregistrer les résultats de l’algorithme d’apprentissage dans un commentaire dans le fichier de modèle. Ainsi, le processus d’apprentissage (l’étape la plus lente) a un coût unique. L’exécution de Convert-String avec un modèle qui contient l’algorithme d’apprentissage encodé est désormais presque instantanée.
 
 
-Extraire et analyser des objets structurés hors de contenu String
+<a name="extract-and-parse-structured-objects-out-of-string-content"></a>Extraire et analyser des objets structurés hors de contenu String
 ----------------------------------------------------------
 
 En collaboration avec [Microsoft Research](http://research.microsoft.com/), une nouvelle applet de commande **ConvertFrom-String** a été ajoutée.
@@ -80,9 +80,4 @@ Placez des accolades autour des données que vous souhaitez extraire, en leur do
 > Ana Trujillo...                Ana Trujillo       Redmond  WA Antonio Moreno...              Antonio Moreno     Renton   WA Thomas Hardy...                Thomas Hardy       Seattle  WA Christina Berglund...          Christina Berglund Redmond  WA Hanna Moos...                  Hanna Moos         Puyallup WA
 
 Pour effectuer des manipulations de données supplémentaires sur le texte extrait, la propriété **ExtentText** capture le texte brut à partir duquel l’enregistrement a été extrait. Pour nous faire part de vos commentaires sur cette fonctionnalité ou pour partager du contenu pour lequel vous avez des difficultés à écrire des exemples, envoyez-nous un message à l’adresse <psdmfb@microsoft.com>.
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

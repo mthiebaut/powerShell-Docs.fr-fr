@@ -8,16 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: a43cc55f-70c1-45c8-9467-eaad0d57e3b5
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 39266e1e4ae2101de26277c20a98596f62cf223d
-
+ms.openlocfilehash: 5fbe64a5720bf76565452a271dbcb34ffe6563de
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Exécution de tâches de mise en réseau
+# <a name="performing-networking-tasks"></a>Exécution de tâches de mise en réseau
 TCP/IP étant le protocole réseau le plus utilisé, la plupart des tâches d’administration de protocole réseau de bas niveau impliquent TCP/IP. Dans cette section, nous utilisons Windows PowerShell et WMI pour effectuer ces tâches.
 
-### Affichage de la liste des adresses IP pour un ordinateur
+### <a name="listing-ip-addresses-for-a-computer"></a>Affichage de la liste des adresses IP pour un ordinateur
 Pour obtenir toutes les adresses IP utilisées sur l’ordinateur local, entrez la commande suivante :
 
 ```
@@ -26,7 +24,7 @@ Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -C
 
 La sortie de cette commande diffère de la plupart des listes de propriétés, car les valeurs sont entourées d’accolades :
 
-<pre>IPAddress
+<a name="preipaddress"></a><pre>IPAddress
 ---------
 {192.168.1.80} {192.168.148.1} {192.168.171.1} {0.0.0.0}</pre>
 
@@ -36,7 +34,7 @@ Pour comprendre pourquoi des accolades s’affichent, utilisez l’applet de com
 
 La propriété IPAddress pour chaque carte réseau est en réalité un tableau. Les accolades dans la définition indiquent qu’**IPAddress** n’est pas une valeur **System.String**, mais un tableau de valeurs **System.String**.
 
-### Affichage de la liste des données de configuration IP
+### <a name="listing-ip-configuration-data"></a>Affichage de la liste des données de configuration IP
 Pour afficher les données de configuration IP détaillées de chaque carte réseau, utilisez la commande suivante :
 
 ```
@@ -53,7 +51,7 @@ Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -C
 
 Cette commande retourne des informations détaillées sur DHCP, DNS, le routage et d’autres propriétés de configuration IP secondaires.
 
-### Test ping des ordinateurs
+### <a name="pinging-computers"></a>Test ping des ordinateurs
 Vous pouvez effectuer un simple test ping sur un ordinateur à l’aide de la méthode **Win32_PingStatus**. La commande suivante exécute le test ping, mais retourne un résultat assez long :
 
 ```
@@ -89,14 +87,14 @@ Notez que cette technique pour la génération d’une plage d’adresses est é
 
 `$ips = 1..254 | ForEach-Object -Process {"192.168.1." + $_}`
 
-### Récupération des propriétés d’une carte réseau
+### <a name="retrieving-network-adapter-properties"></a>Récupération des propriétés d’une carte réseau
 Plus haut dans ce guide, nous avons signalé que vous pouviez extraire des propriétés de configuration générale à l’aide de la méthode **Win32_NetworkAdapterConfiguration**. Bien qu’il ne s’agisse pas strictement d’informations TCP/IP, les informations de carte réseau telles que les adresses MAC et les types de cartes peuvent être utiles pour comprendre ce qui se passe sur un ordinateur. Pour obtenir un résumé de ces informations, utilisez la commande suivante :
 
 ```
 Get-WmiObject -Class Win32_NetworkAdapter -ComputerName .
 ```
 
-### Attribution de domaine DNS pour une carte réseau
+### <a name="assigning-the-dns-domain-for-a-network-adapter"></a>Attribution de domaine DNS pour une carte réseau
 Pour attribuer le domaine DNS pour une résolution de noms automatique, utilisez la méthode **Win32_NetworkAdapterConfiguration SetDNSDomain**. Étant donné que vous attribuez le domaine DNS indépendamment pour chaque configuration de carte réseau, vous devez utiliser une instruction **ForEach-Object** pour attribuer le domaine à chaque carte :
 
 ```
@@ -111,10 +109,10 @@ Vous pouvez filtrer la commande à l’aide de l’applet de commande **Where-Ob
 Get-WmiObject -Class Win32_NetworkAdapterConfiguration -ComputerName . | Where-Object -FilterScript {$_.IPEnabled} | ForEach-Object -Process {$_.SetDNSDomain("fabrikam.com")}
 ```
 
-### Exécution de tâches de configuration DHCP
+### <a name="performing-dhcp-configuration-tasks"></a>Exécution de tâches de configuration DHCP
 La modification des détails DHCP implique l’utilisation d’un ensemble de cartes réseau, tout comme la configuration DNS. Vous pouvez effectuer diverses actions à l’aide de WMI. Nous allons en décrire quelques-unes parmi les plus courantes.
 
-#### Détermination des cartes avec DHCP activé
+#### <a name="determining-dhcp-enabled-adapters"></a>Détermination des cartes avec DHCP activé
 Pour rechercher les cartes avec DHCP activé sur un ordinateur, utilisez la commande suivante :
 
 ```
@@ -127,14 +125,14 @@ Pour exclure les cartes présentant des problèmes de configuration IP, vous pou
 Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter "IPEnabled=true and DHCPEnabled=true" -ComputerName .
 ```
 
-#### Récupération des propriétés DHCP
+#### <a name="retrieving-dhcp-properties"></a>Récupération des propriétés DHCP
 Étant donné que les propriétés DHCP d’une carte commencent généralement par « DHCP », vous pouvez utiliser le paramètre Property de l’applet de commande Format-Table pour afficher uniquement ces propriétés :
 
 ```
 Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter "DHCPEnabled=true" -ComputerName . | Format-Table -Property DHCP*
 ```
 
-#### Activation du protocole DHCP sur chaque carte
+#### <a name="enabling-dhcp-on-each-adapter"></a>Activation du protocole DHCP sur chaque carte
 Pour activer le protocole DHCP sur toutes les cartes, utilisez la commande suivante :
 
 ```
@@ -143,7 +141,7 @@ Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=true -C
 
 Vous pouvez utiliser l’instruction **Filter** « IPEnabled=true et DHCPEnabled=false » pour éviter d’activer le protocole DHCP là où il est déjà activé, mais l’omission de cette étape ne génère pas d’erreurs.
 
-#### Résiliation et renouvellement de baux DHCP sur des cartes spécifiques
+#### <a name="releasing-and-renewing-dhcp-leases-on-specific-adapters"></a>Résiliation et renouvellement de baux DHCP sur des cartes spécifiques
 La classe **Win32_NetworkAdapterConfiguration** dispose des méthodes **ReleaseDHCPLease** et **RenewDHCPLease**. Toutes deux sont utilisées de la même façon. En règle générale, utilisez ces méthodes si vous devez uniquement résilier ou renouveler des adresses pour une carte sur un sous-réseau spécifique. La manière la plus simple de filtrer des cartes sur un sous-réseau consiste à choisir uniquement les configurations de carte qui utilisent la passerelle pour ce sous-réseau. Par exemple, la commande suivante libère tous les baux DHCP sur les cartes de l’ordinateur local qui obtiennent des baux DHCP à partir de 192.168.1.254 :
 
 ```
@@ -159,7 +157,7 @@ Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter "IPEnabled=true a
 > [!NOTE]
 > Lorsque vous utilisez ces méthodes sur un ordinateur distant, n’oubliez pas que vous risquez de perdre l’accès au système distant si vous êtes connecté à celui-ci via la carte dont le bail a été résilié ou renouvelé.
 
-#### Résiliation et renouvellement de baux DHCP sur toutes les cartes
+#### <a name="releasing-and-renewing-dhcp-leases-on-all-adapters"></a>Résiliation et renouvellement de baux DHCP sur toutes les cartes
 Vous pouvez effectuer des résiliations ou renouvellements d’adresse DHCP sur toutes les cartes en utilisant les méthodes **Win32_NetworkAdapterConfiguration**, **ReleaseDHCPLeaseAll** et **RenewDHCPLeaseAll**. Toutefois, la commande doit s’appliquer à la classe WMI, plutôt qu’à une carte particulière, car la résiliation et le renouvellement de baux de façon globale sont effectuées sur la classe, et non sur une carte spécifique.
 
 Vous pouvez obtenir une référence à une classe WMI plutôt qu’à des instances de classe, en répertoriant toutes les classes WMI, puis en sélectionnant uniquement la classe souhaitée par son nom. Par exemple, la commande suivante retourne la classe Win32_NetworkAdapterConfiguration :
@@ -180,7 +178,7 @@ Vous pouvez utiliser le même format de commande pour appeler la méthode **Rene
 ( Get-WmiObject -List | Where-Object -FilterScript {$_.Name -eq "Win32_NetworkAdapterConfiguration"} ).RenewDHCPLeaseAll()
 ```
 
-### Création d’un partage réseau
+### <a name="creating-a-network-share"></a>Création d’un partage réseau
 Pour créer un partage réseau, utilisez la méthode **Win32_Share créer**:
 
 ```
@@ -193,7 +191,7 @@ Vous pouvez également créer le partage en utilisant la commande **net share** 
 net share tempshare=c:\temp /users:25 /remark:"test share of the temp folder"
 ```
 
-### Suppression d’un partage réseau
+### <a name="removing-a-network-share"></a>Suppression d’un partage réseau
 Vous pouvez supprimer un partage réseau avec la commande **Win32_Share**, mais le processus diffère légèrement de la création d’un partage, car vous devez récupérer le partage spécifique à supprimer, plutôt que la classe **Win32_Share**. L’instruction suivante supprime le partage « TempShare » :
 
 ```
@@ -207,8 +205,8 @@ PS> net share tempshare /delete
 tempshare was deleted successfully.
 ```
 
-### Connexion d’un lecteur réseau accessible à Windows
-L’applet de commande **New-PSDrive** crée un lecteur Windows PowerShell, mais les lecteurs créés de cette façon sont disponibles uniquement pour Windows PowerShell. Pour créer un lecteur réseau, vous pouvez utiliser l’objet COM **WScript.Network**. La commande suivante mappe le partage \\\\FPS01\\users au disque local B:
+### <a name="connecting-a-windows-accessible-network-drive"></a>Connexion d’un lecteur réseau accessible à Windows
+L’applet de commande **New-PSDrive** crée un lecteur Windows PowerShell, mais les lecteurs créés de cette façon sont disponibles uniquement pour Windows PowerShell. Pour créer un lecteur réseau, vous pouvez utiliser l’objet COM **WScript.Network**. La commande suivante mappe le partage \\\\FPS01\\users au lecteur local B:
 
 ```
 (New-Object -ComObject WScript.Network).MapNetworkDrive("B:", "\\FPS01\users")
@@ -221,10 +219,4 @@ net use B: \\FPS01\users
 ```
 
 Les lecteurs mappés avec **WScript.Network** ou net use sont immédiatement disponibles pour Windows PowerShell.
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 6dc7052d-cc5a-4220-950f-98f963a2b587
-translationtype: Human Translation
-ms.sourcegitcommit: 416d21d2a2fa3d837eba19b1023e4045a124e23c
-ms.openlocfilehash: 9229df48b00c125e04d0f97536697495d0ca01ed
-
+ms.openlocfilehash: 2564ab148fb1de1cb58ee775d2000d321a1d36c1
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Préparation à l’utilisation de Windows PowerShell
+# <a name="getting-ready-to-use-windows-powershell"></a>Préparation à l’utilisation de Windows PowerShell
 Une fois Windows PowerShell installé et démarré, envisagez les options de configuration suivantes. Vous pouvez effectuer ces tâches à tout moment.
 
 -   **Installez les fichiers d’aide.** Les applets de commande incluses dans Windows PowerShell 3.0 ne sont pas fournies avec des fichiers d’aide. En revanche, vous pouvez utiliser l’applet de commande [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545) pour télécharger et installer les fichiers d’aide les plus récents sur votre ordinateur. Lorsque les fichiers sont installés, vous pouvez utiliser l’applet de commande [Get-Help](https://technet.microsoft.com/en-us/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) pour les afficher sur la ligne de commande. Pour plus d’informations, voir [about_Updatable_Help](https://technet.microsoft.com/en-us/library/10bba75c-f4ac-4ca1-bbf3-8f34dd521ffe).
@@ -27,13 +25,7 @@ Une fois Windows PowerShell installé et démarré, envisagez les options de con
 
     REMARQUE : Si la communication à distance est activée sur un ordinateur exécutant Windows PowerShell 2.0, la communication à distance reste activée après l’installation de Windows Management Framework 3.0. Toutefois, sur Windows Server 2008 (pas sur Windows Server 2008 R2), vous devez réactiver la communication à distance après l’installation de Windows Management Framework 3.0.
 
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 - [Installation de Windows PowerShell](../setup/Installing-Windows-PowerShell.md)
 - [Démarrage de Windows PowerShell [ps]](https://technet.microsoft.com/en-us/library/8ec8c2d7-8e7c-4722-a3d2-498fe5739a8e)
-
-
-
-
-<!--HONumber=Oct16_HO3-->
-
 

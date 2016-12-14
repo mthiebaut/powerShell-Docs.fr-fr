@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 56f8e5b4-d97c-4e59-abbe-bf13e464eb0d
-translationtype: Human Translation
-ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
-ms.openlocfilehash: 57ccd656e0b869da8aadece97e9bb871764c3f70
-
+ms.openlocfilehash: b91b68f6d7bfee668edc4731f23b21233d9367d5
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Obtention d'informations sur les commandes
+# <a name="getting-information-about-commands"></a>Obtention d'informations sur les commandes
 L’applet de commande Windows PowerShell **Get-Command** permet d’obtenir toutes les commandes disponibles dans la session active. Quand vous tapez **Get-Command** dans une invite Windows PowerShell, la sortie est similaire à ce qui suit :
 
 ```
@@ -49,7 +47,7 @@ Get-Help [[-Name] <String>] [-Path <String>] [-Category <String[]>] [-Component 
  [-Role <String[]>] [-Parameter <String>] [-Online] [-Verbose] [-Debug] [-ErrorAction <ActionPreference>] [-WarningAction <ActionPreference>] [-ErrorVariable <String>] [-WarningVariable <String>] [-OutVariable <String>] [-OutBuffer <Int32>]
 ```
 
-### Affichage des types de commandes disponibles
+### <a name="displaying-available-command-types"></a>Affichage des types de commandes disponibles
 La commande **Get-Command** ne répertorie pas toutes les commandes disponibles dans Windows PowerShell. La commande **Get-Command** répertorie uniquement les applets de commande dans la session active. Windows PowerShell prend en charge plusieurs autres types de commandes. Les alias, fonctions et scripts sont aussi des commandes Windows PowerShell, bien qu'ils ne soient pas abordés en détail dans le Guide d'utilisation de Windows PowerShell. Les fichiers externes exécutables ou possédant un gestionnaire de type de fichier inscrit sont également considérés comme des commandes.
 
 Pour obtenir toutes les commandes dans la session, tapez :
@@ -82,10 +80,4 @@ Pour afficher les scripts dans le chemin de recherche de Windows PowerShell, tap
 ```
 Get-Command -CommandType Script
 ```
-
-
-
-
-<!--HONumber=Oct16_HO1-->
-
 

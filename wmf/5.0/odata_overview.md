@@ -1,5 +1,5 @@
-# Générer des applets de commande PowerShell basées sur un point de terminaison OData
-Générer des applets de commande Windows PowerShell basées sur un point de terminaison OData
+# <a name="generate-powershell-cmdlets-based-on-odata-endpoint"></a>Générer des applets de commande PowerShell basées sur un point de terminaison OData
+<a name="generate-windows-powershell-cmdlets-based-on-an-odata-endpoint"></a>Générer des applets de commande Windows PowerShell basées sur un point de terminaison OData
 --------------------------------------------------------------
 
 **Export-ODataEndpointProxy** est une applet de commande qui génère un ensemble d’applets de commande Windows PowerShell basé sur les fonctionnalités exposées par un point de terminaison OData donné.
@@ -40,7 +40,7 @@ Certaines parties des principaux cas d’usage de cette fonctionnalité sont tou
 -   Associations
 -   Transfert de flux
 
-Générer des applets de commande Windows PowerShell basées sur un point de terminaison OData avec ODataUtils
+<a name="generate-windows-powershell-cmdlets-based-on-an-odata-endpoint-with-odatautils"></a>Générer des applets de commande Windows PowerShell basées sur un point de terminaison OData avec ODataUtils
 ------------------------------------------------------------------------------
 Le module ODataUtils permet de générer des applets de commande Windows PowerShell à partir de points de terminaison REST qui prennent en charge OData. Le module Windows PowerShell Microsoft.PowerShell.ODataUtils offre les améliorations incrémentielles suivantes.
 -   Informations supplémentaires sur les canaux du point de terminaison côté serveur vers le côté client.
@@ -98,8 +98,3 @@ L’applet de commande Export-ODataEndpointProxy et les applets de commande du p
 
 Export-ODataEndpointProxy -Uri $endPointUri -OutputModule $generatedProxyModuleDir -Force -AllowUnSecureConnection -Verbose -Headers @{'subscription-key'='XXXX'}
 ```
-
-
-<!--HONumber=Aug16_HO3-->
-
-

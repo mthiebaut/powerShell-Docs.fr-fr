@@ -8,17 +8,15 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: c3636b45-61aa-4720-85f0-58312c4fc8f9
-translationtype: Human Translation
-ms.sourcegitcommit: 7caac42751c580d588fcf19db7253c8b75d6c865
-ms.openlocfilehash: 7af27dc9bd8e93d1df5258b0d8df8af12726f568
-
+ms.openlocfilehash: 8df8b9bb74eba5921263ad9d802dcece41261f9a
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Installation du SDK Windows PowerShell
+# <a name="installing-the-windows-powershell-sdk"></a>Installation du SDK Windows PowerShell
 
 La rubrique suivante explique comment installer le SDK PowerShell sur différentes versions de Windows.
 
-## Installation du SDK Windows PowerShell 3.0 pour Windows 8 et Windows Server 2012
+## <a name="installing-windows-powershell-30-sdk-for-windows-8-and-windows-server-2012"></a>Installation du SDK Windows PowerShell 3.0 pour Windows 8 et Windows Server 2012
 
 Windows PowerShell 3.0 est automatiquement installé avec Windows 8 et Windows Server 2012.
 De plus, vous pouvez télécharger et installer les assemblys de référence pour Windows PowerShell 3.0 avec le SDK Windows 8.
@@ -32,33 +30,33 @@ Par ailleurs, Windows PowerShell 3.0 est rétrocompatible avec le SDK Windows P
 Pour plus d’informations sur la façon de télécharger le SDK Windows PowerShell 2.0, voir ci-dessous.
 (Même si les exemples de code 2.0 sont compatibles avec Windows 8 et Windows PowerShell 3.0, notez que vous ne pouvez pas installer Windows PowerShell 2.0 sur une plateforme Windows 8.)
 
-##Installation du SDK Windows PowerShell 3.0 pour Windows 7 et Windows Server 2008 R2
+##<a name="installing-windows-powershell-30-sdk-for-windows-7-and-windows-server-2008-r2"></a>Installation du SDK Windows PowerShell 3.0 pour Windows 7 et Windows Server 2008 R2
 
 PowerShell 2.0 est automatiquement installé sur Windows 7 et Windows Server 2008 R2.
 Par ailleurs, vous pouvez installer PowerShell 3.0 sur ces systèmes.
 (Pour plus d’informations, voir [Installation de Windows PowerShell](Installing-Windows-PowerShell.md).)
 Comme indiqué plus haut, vous pouvez aussi installer le SDK Windows 8 sur Windows 7 et Windows Server 2008 R2.
 
-## Installation du SDK Windows PowerShell 2.0 pour Windows 7, Vista, XP, Server 2003 et Server 2008
+## <a name="installing-windows-powershell-20-sdk-for-windows-7-vista-xp-server-2003-and-server-2008"></a>Installation du SDK Windows PowerShell 2.0 pour Windows 7, Vista, XP, Server 2003 et Server 2008
 
 Le SDK Windows PowerShell 2.0 fournit les assemblys de référence nécessaires à l’écriture d’applets de commande, de fournisseurs et d’applications d’hébergement. Il propose aussi un exemple de code C# qui peut vous servir de point de départ pour commencer à écrire du code.
 
 Pour installer ce SDK, voir le [SDK Windows PowerShell 2.0 ](http://go.microsoft.com/fwlink/?LinkId=184611).
 
-## Assemblys de référence
+## <a name="reference-assemblies"></a>Assemblys de référence
 
 Les assemblys de référence sont installés dans l’emplacement par défaut suivant : `c:\Program Files\Reference Assemblies\Microsoft\WindowsPowerShell\V1.0`.
 
 > **Remarque** : Le code compilé sur les assemblys Windows PowerShell 2.0 ne peut pas être chargé dans les installations de Windows PowerShell 1.0.
 >En revanche, le code compilé sur les assemblys Windows PowerShell 1.0 peut être chargé dans les installations de Windows PowerShell 2.0.
 
-## exemples
+## <a name="samples"></a>exemples
 
 Les exemples de code sont installés dans l’emplacement par défaut suivant : `C:\Program Files\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\`.
 
 Les sections suivantes fournissent une brève description de la fonction de chaque exemple.
 
-## Exemples d’applet de commande
+## <a name="cmdlet-samples"></a>Exemples d’applet de commande
 **GetProcessSample01**
 
 Montre comment écrire une applet de commande simple qui obtient tous les processus sur l’ordinateur local.
@@ -105,7 +103,7 @@ Montre comment déclarer des alias de paramètres et comment prendre en charge l
 
 Montre comment déclarer des jeux de paramètres, l’objet que prend l’applet de commande comme entrée et comment spécifier le jeu de paramètres à utiliser par défaut.
 
-## Exemples de communication à distance
+## <a name="remoting-samples"></a>Exemples de communication à distance
 
 **RemoteRunspace01**
 
@@ -127,7 +125,7 @@ Montre comment examiner une classe .NET existante et vérifier que les informat
 
 Montre comment examiner une classe .NET existante et vérifier que les instances de cette classe et des classes dérivées sont désérialisées (réactivées) en objets .NET dynamiques.
 
-## Exemples d’événements
+## <a name="event-samples"></a>Exemples d’événements
 
 **Event01**
 
@@ -138,7 +136,7 @@ Montre comment créer une applet de commande pour l’inscription d’événemen
 Montre comment recevoir des notifications d’événements Windows PowerShell générés sur des ordinateurs distants.
 Il utilise l’événement PSEventReceived exposé via la classe [Runspace](https://technet.microsoft.com/library/system.management.automation.runspaces.runspace.aspx).
 
-## Exemples d’applications d’hébergement
+## <a name="hosting-application-samples"></a>Exemples d’applications d’hébergement
 
 **Runspace01**
 
@@ -204,7 +202,7 @@ Montre comment créer une instance d’exécution contrainte en utilisant un obj
 
 Montre comment utiliser un pool d’instances d’exécution pour exécuter plusieurs commandes simultanément.
 
-## Exemples d’hôtes
+## <a name="host-samples"></a>Exemples d’hôtes
 
 **Host01**
 
@@ -236,7 +234,7 @@ Cette application hôte prend aussi en charge les appels à des ordinateurs dist
 Montre comment créer une application hôte basée sur une console interactive qui lit les commandes à partir de la ligne de commande, exécute les commandes, puis affiche les résultats dans la console.
 Par ailleurs, cet exemple utilise les API génératrices de jetons pour spécifier la couleur du texte entré par l’utilisateur.
 
-## Exemples de fournisseurs
+## <a name="provider-samples"></a>Exemples de fournisseurs
 
 **AccessDBProviderSample01**
 
@@ -271,9 +269,3 @@ La classe de fournisseur de cet exemple dérive de la classe [NavigationCmdletPr
 Montre comment remplacer les méthodes de contenu pour prendre en charge les appels aux applets de commande Clear-Content, Get-Content et Set-Content.
 Ces méthodes doivent être implémentées quand l’utilisateur a besoin de gérer le contenu des éléments situés dans le magasin de données.
 La classe de fournisseur de cet exemple dérive de la classe [NavigationCmdletProvider](https://technet.microsoft.com/library/system.management.automation.provider.navigationcmdletprovider.aspx) et implémente l’interface [IContentCmdletProvider](https://technet.microsoft.com/library/system.management.automation.provider.icontentcmdletprovider.aspx).
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

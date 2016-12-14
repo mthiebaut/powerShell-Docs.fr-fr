@@ -1,4 +1,4 @@
-# Informations détaillées sur l’état du gestionnaire de configuration local
+# <a name="detailed-information-about-lcm-state"></a>Informations détaillées sur l’état du gestionnaire de configuration local
 
 Nous avons apporté des améliorations à l’exposition des détails concernant l’état du gestionnaire de configuration local. Le LCMState retourné par Get-DscLocalConfigurationManager peut maintenant contenir les valeurs suivantes :
 
@@ -8,8 +8,3 @@ Nous avons apporté des améliorations à l’exposition des détails concernant
 * **PendingConfiguration**
 
 Nous avons également ajouté une propriété LCMStateDetail qui contient davantage d’informations sur l’état.
-
-
-<!--HONumber=Aug16_HO3-->
-
-

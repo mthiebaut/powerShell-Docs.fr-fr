@@ -7,16 +7,14 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: a750fb208e73ce2ebffb2fa86a55c825169d8ad8
-
+ms.openlocfilehash: 58ba849bbf0789a66bc752385c7954edf95c9d03
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Options relatives aux informations d’identification dans les données de configuration
+# <a name="credentials-options-in-configuration-data"></a>Options relatives aux informations d’identification dans les données de configuration
 >S’applique à : Windows PowerShell 5.0
 
-## Mots de passe en texte brut et utilisateurs de domaine
+## <a name="plain-text-passwords-and-domain-users"></a>Mots de passe en texte brut et utilisateurs de domaine
 
 Les configurations DSC qui contiennent des informations d’identification non chiffrées génèrent un message d’erreur concernant les mots de passe en texte brut.
 En outre, DSC génère un avertissement lorsque des informations d’identification de domaine sont utilisées.
@@ -24,7 +22,7 @@ Pour empêcher ces messages d’erreur et d’avertissement, utilisez les mots c
 * **PsDscAllowPlainTextPassword**
 * **PsDscAllowDomainUser**
 
-## Gestion des informations d’identification dans DSC
+## <a name="handling-credentials-in-dsc"></a>Gestion des informations d’identification dans DSC
 
 Par défaut, les ressources de configuration DSC sont exécutées en tant que `Local System`.
 Toutefois, certaines ressources nécessitent des informations d’identification, par exemple quand la ressource `Package` doit installer des logiciels sous un compte d’utilisateur spécifique.
@@ -59,7 +57,7 @@ Elle accepte à la fois la propriété `Credential` et la propriété automatiqu
 Toutefois, la ressource utilise uniquement la propriété `Credential`.
 Pour en savoir plus sur `PsDscRunAsCredential`, lisez les [notes de version de WMF](https://msdn.microsoft.com/en-us/powershell/wmf/dsc_runas).
 
-## Exemple : Propriété d’informations d’identification de la ressource Group
+## <a name="example-the-group-resource-credential-property"></a>Exemple : Propriété d’informations d’identification de la ressource Group
 
 DSC s’exécute sous `Local System`. Il dispose donc déjà des autorisations pour modifier les utilisateurs et les groupes locaux.
 Si le membre ajouté est un compte local, aucune information d’identification n’est nécessaire.
@@ -69,7 +67,7 @@ Les requêtes anonymes envoyées à Active Directory ne sont pas autorisées.
 La propriété `Credential` de la ressource `Group` correspond au compte de domaine utilisé pour interroger Active Directory.
 Dans la majorité des cas, il peut s’agir d’un compte d’utilisateur générique, car par défaut, les utilisateurs peuvent *lire* la plupart des objets dans Active Directory.
 
-## Exemple de configuration
+## <a name="example-configuration"></a>Exemple de configuration
 
 L’exemple de code suivant utilise DSC pour ajouter un utilisateur de domaine à un groupe local :
 
@@ -124,7 +122,7 @@ Cet exemple comprend deux problèmes :
 1.  L’erreur explique que les mots de passe en texte brut ne sont pas recommandés
 2.  L’avertissement recommande de ne pas utiliser d’informations d’identification de domaine
 
-## PsDscAllowPlainTextPassword
+## <a name="psdscallowplaintextpassword"></a>PsDscAllowPlainTextPassword
 
 Le premier message d’erreur comprend une URL vers de la documentation.
 Ce lien explique comment chiffrer des mots de passe avec une structure [ConfigurationData](https://msdn.microsoft.com/en-us/powershell/dsc/configdata) et un certificat.
@@ -169,17 +167,17 @@ DomainCredentialExample -DomainCredential $cred -ConfigurationData $cd
 
 **Microsoft recommande d’éviter les mots de passe en texte brut en raison de l’important risque de sécurité qu’ils présentent.**
 
-## Informations d’identification de domaine
+## <a name="domain-credentials"></a>Informations d’identification de domaine
 
 Si vous exécutez à nouveau l’exemple de script de configuration (avec ou sans chiffrement), vous obtiendrez toujours l’avertissement selon lequel l’utilisation d’informations d’identification de compte de domaine n’est pas recommandée.
 L’utilisation d’un compte local élimine les risques d’exposition des informations d’identification de domaine qui pourraient être utilisées sur d’autres serveurs.
 
-**Quand vous utilisez des informations d’identification avec des ressources DSC, préférez un compte local à un compte de domaine quand cela est possible.**
+**Quand vous utilisez des informations d’identification avec des ressources DSC, préférez un compte local à un compte de domaine quand cela est possible.**
 
-Si la propriété `Username` des informations d’identification comprend un « \' » ou un « @ », DSC la traite comme un compte de domaine.
+Si la propriété `Username` des informations d’identification comprend un « \' » ou un « '@' », DSC la traite comme un compte de domaine.
 Il existe une exception pour « localhost », « 127.0.0.1 » et « :: 1 » dans la partie du nom d’utilisateur consacrée au domaine.
 
-## PsDscAllowDomainUser
+## <a name="psdscallowdomainuser"></a>PsDscAllowDomainUser
 
 Dans l’exemple de ressource `Group` DSC ci-dessus, le fait d’interroger un domaine Active Directory *nécessite* un compte de domaine.
 Dans ce cas, ajoutez la propriété `PSDscAllowDomainUser` au bloc `ConfigurationData` comme suit :
@@ -198,10 +196,4 @@ $cd = @{
 ```
 
 Le script de configuration va maintenant générer le fichier MOF sans avertissement ni erreur.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 
