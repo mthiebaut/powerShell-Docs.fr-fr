@@ -8,13 +8,11 @@ author: keithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-translationtype: Human Translation
-ms.sourcegitcommit: b32cb86b7a18fee929cc81360d81f479571a74c2
-ms.openlocfilehash: a7ef0ddf4d093a89f32f3484dfbef78fb159f0c2
-
+ms.openlocfilehash: eacd33d2a0a92977a3990132e23eef9871a7f0dc
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Windows Management Framework
+# <a name="windows-management-framework"></a>Windows Management Framework
 
 Windows Management Framework (WMF) est le mécanisme de remise qui fournit une interface de gestion cohérente sur les différentes versions de Windows et Windows Server.
 Quand WMF est installé, les clients peuvent interagir de manière transparente entre des combinaisons de systèmes d’exploitation dans leur environnement.
@@ -31,19 +29,19 @@ L’installation de WMF ajoute ou met à jour les fonctionnalités suivantes :
 - Journalisation de l’inventaire logiciel
 - Fournisseur CIM de Gestionnaire de serveur
 
-## Notes de publication de WMF
+## <a name="wmf-release-notes"></a>Notes de publication de WMF
 Pour en savoir plus sur les diverses améliorations apportées à PowerShell et d’autres composants d’une version donnée de WMF, consultez les liens ci-dessous pour consulter les notes de publication :
 
 
-- [WMF 5.1 (préversion)](5.1/release-notes.md)
-- [WMF 5.0](5.0/releasenotes.md)
+- [WMF 5.1 (préversion)](5.1/release-notes.md)
+- [WMF 5.0](5.0/releasenotes.md)
 
 
-## Disponibilité de WMF sur les systèmes d’exploitation Windows
+## <a name="wmf-availability-across-windows-operating-systems"></a>Disponibilité de WMF sur les systèmes d’exploitation Windows
 
 >TODO : Ajouter des liens vers des DLC WMF spécifiques sur l’en-tête de colonne
 
-| Version du système d'exploitation | [WMF 5.1 préversion*]() | [WMF 5.0]() | [WMF 4.0]() |  [WMF 3.0]() | [WMF (2.0)]() |
+| Version du système d'exploitation | [WMF 5.1 Preview*]() | [WMF 5.0]() | [WMF 4.0]() |  [WMF 3.0]() | [WMF (2.0)]() |
 | ------------------------ | ----------- | ----------- | ----------- | ------------ |  ------------- |
 | Windows Server 2016 | Fourni par défaut* | Fourni par défaut* |  |  |  |
 | Windows 10 | Fourni par défaut* | Fourni par défaut*  | | | |  
@@ -59,9 +57,3 @@ Pour en savoir plus sur les diverses améliorations apportées à PowerShell et 
 | Windows XP | | | |  | Oui |
 
 >TODO : Expliquer * dans le tableau ci-dessus
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-
