@@ -1,15 +1,16 @@
 ---
-title: "Accessibilité dans Windows PowerShell ISE"
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: "Accessibilité dans Windows PowerShell ISE"
+ms.technology: powershell
 ms.assetid: a078f9d1-dd6b-4323-b16d-0622cd993aa8
-ms.openlocfilehash: 698cef0d283b061a53d9230d42062c547666d127
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 0c9877e9de958405be7ade4ab6470b1d97b916fc
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Accessibilité dans Windows PowerShell ISE
@@ -25,7 +26,7 @@ Cette rubrique décrit les fonctionnalités d’accessibilité de Windows PowerS
 
 Microsoft s'attache à rendre ses produits et services conviviaux. Les rubriques suivantes fournissent des informations sur les fonctionnalités, les produits et les services qui rendent Windows PowerShell ISE plus accessible aux personnes handicapées.
 
-Windows PowerShell ISE prend en charge l’affichage à contraste élevé. Pour les malvoyants, les informations de point d’arrêt sont disponibles via les applets de commande pour la gestion des points d’arrêt, telles que [Get-PSBreakpoint](https://technet.microsoft.com/en-us/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6) et [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420). Pour plus d’informations, voir « Comment gérer des points d’arrêt » dans [Comment déboguer des scripts dans Windows PowerShell ISE](../core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md#bkmk_1). En plus des fonctionnalités et utilitaires d’accessibilité dans Microsoft Windows, les fonctionnalités suivantes rendent Windows PowerShell ISE plus accessible aux personnes handicapées :
+Windows PowerShell ISE prend en charge l’affichage à contraste élevé. Pour les malvoyants, les informations de point d’arrêt sont disponibles via les applets de commande pour la gestion des points d’arrêt, telles que [Get-PSBreakpoint](https://technet.microsoft.com/en-us/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6) et [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420). Pour plus d’informations, voir « Comment gérer des points d’arrêt » dans [Comment déboguer des scripts dans Windows PowerShell ISE](../core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md#bkmk_1). En plus des fonctionnalités et utilitaires d’accessibilité dans Microsoft Windows, les fonctionnalités suivantes rendent Windows PowerShell ISE plus accessible aux personnes handicapées :
 
 -   Raccourcis clavier
 
@@ -43,7 +44,7 @@ Pour modifier la taille et l’emplacement des volets Console et Script, vous po
 2.  Lorsque le pointeur de la souris prend la forme d’une flèche à deux pointes, faites glisser la bordure pour modifier la taille du volet.
 
 ### <a name="to-move-the-script-pane-and-console-pane"></a>Pour déplacer les volets Script et Console
-Effectuez l'une des opérations suivantes :
+Effectuez l'une des opérations suivantes :
 
 -   Pour déplacer le volet Script au-dessus du volet Console, appuyez sur **Ctrl+1** ou, dans la barre d’outils, cliquez sur l’icône **Afficher le volet Script en haut**, ou encore, dans le menu **Affichage**, cliquez sur **Afficher le volet Script en haut**.
 
@@ -82,8 +83,8 @@ Lorsque vous exécutez des scripts dans le volet Script, vous pouvez utiliser le
 |**Exécuter**|F5|
 |**Exécuter la sélection**|F8|
 |**Arrêter l’exécution**|CTRL+PAUSE. Vous pouvez utiliser Ctrl+C quand le contexte est sans ambiguïté (quand aucun texte n’est sélectionné).|
-|**Tab** (pour accéder au script suivant)|Ctrl+Tab **Remarque :** L’usage de la touche Tab pour accéder au script suivant fonctionne uniquement quand un seul onglet PowerShell est ouvert ou, si plusieurs onglets PowerShell sont ouverts, quand le focus est dans le volet Script.|
-|**Tab** (pour accéder au script précédent)|Ctrl+Maj+Tab **Remarque :** L’usage de la touche Tab pour accéder au script précédent fonctionne uniquement quand un seul onglet PowerShell est ouvert ou, si plusieurs onglets PowerShell sont ouverts, quand le focus est dans le volet Script.|
+|**Tab** (pour accéder au script suivant)|Ctrl+Tab **Remarque :** L’usage de la touche Tab pour accéder au script suivant fonctionne uniquement quand un seul onglet PowerShell est ouvert ou, si plusieurs onglets PowerShell sont ouverts, quand le focus est dans le volet Script.|
+|**Tab** (pour accéder au script précédent)|Ctrl+Maj+Tab **Remarque :** L’usage de la touche Tab pour accéder au script précédent fonctionne uniquement quand un seul onglet PowerShell est ouvert ou, si plusieurs onglets PowerShell sont ouverts, quand le focus est dans le volet Script.|
 
 ## <a name="a-namebkmk4akeyboard-shortcuts-for-customizing-the-view"></a><a name="bkmk_4"></a>Raccourcis clavier pour la personnalisation de l’affichage
 Pour personnaliser l’affichage dans Windows PowerShell ISE, vous pouvez utiliser les raccourcis clavier suivants. Ils sont accessibles à partir de tous les volets de l’application.
@@ -117,7 +118,7 @@ Lors du débogage de scripts, vous pouvez utiliser les raccourcis clavier suivan
 |**Arrêter le débogueur**|Maj+F5|Volet Script, lors du débogage d’un script|
 
 > [!NOTE]
-> Lors du débogage de scripts dans Windows PowerShell ISE, vous pouvez également utiliser les raccourcis clavier conçus pour la console Windows PowerShell. Pour utiliser ces raccourcis, vous devez les taper dans le volet Console, puis appuyer sur Entrée.
+> Lors du débogage de scripts dans Windows PowerShell ISE, vous pouvez également utiliser les raccourcis clavier conçus pour la console Windows PowerShell. Pour utiliser ces raccourcis, vous devez les taper dans le volet Console, puis appuyer sur Entrée.
 
 |Action|Raccourci clavier|Utiliser dans|
 |----------|---------------------|----------|
@@ -150,5 +151,5 @@ Pour démarrer la console Windows PowerShell (PowerShell.exe) ou pour quitter Wi
 |**Démarrer PowerShell.exe** (console Windows PowerShell)|Ctrl+Maj+P|
 
 ## <a name="see-also"></a>Voir aussi
-- [Utilisation de Windows PowerShell ISE](../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
+- [Utilisation de Windows PowerShell ISE](../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
 

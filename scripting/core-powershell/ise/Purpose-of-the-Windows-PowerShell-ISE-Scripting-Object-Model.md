@@ -1,22 +1,23 @@
 ---
-title: "Objectif du modèle objet de script Windows PowerShell ISE"
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: "Objectif du modèle objet de script Windows PowerShell ISE"
+ms.technology: powershell
 ms.assetid: d176a131-ab0c-43ee-80c1-f824ab8e4a05
-ms.openlocfilehash: 3213279588df19a677940b67fa1752a29a678e36
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 079b23ca1338fdb888e13cc187e9498a141916aa
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="purpose-of-the-windows-powershell-ise-scripting-object-model"></a>Objectif du modèle objet de script Windows PowerShell ISE
   Les objets sont associés aux forme et fonction de Windows PowerShell Integrated Scripting Environment (ISE). La référence du modèle objet fournit des détails sur les propriétés et méthodes membres exposées par ces objets. Des exemples sont fournis pour montrer comment vous pouvez utiliser des scripts pour accéder directement à ces méthodes et propriétés. Le modèle objet de script facilite l’éventail des tâches suivantes.
 
 ## <a name="customizing-the-appearance-of-windows-powershell-ise"></a>Personnalisation de l’apparence de Windows PowerShell ISE
- Vous pouvez utiliser le modèle objet pour modifier les options et paramètres de l’application. Vous pouvez, par exemple, les modifier comme suit :
+ Vous pouvez utiliser le modèle objet pour modifier les options et paramètres de l’application. Vous pouvez, par exemple, les modifier comme suit :
 
 -   Vous pouvez modifier la couleur des erreurs, des avertissements, des sorties détaillées et des sorties de débogage.
 
@@ -31,7 +32,7 @@ translationtype: HT
 -   Vous pouvez basculer entre une vue où le volet Script et le volet Sortie sont côte à côte et une vue où le volet Script est au-dessus du volet Sortie. Vous pouvez ancrer le volet Commande en bas ou en haut du volet Sortie.
 
 ## <a name="enhancing-the-functionality-of-windows-powershell-ise"></a>Amélioration des fonctionnalités de Windows PowerShell ISE
- Vous pouvez utiliser le modèle objet pour améliorer les fonctionnalités de Windows PowerShell ISE. Par exemple, vous pouvez :
+ Vous pouvez utiliser le modèle objet pour améliorer les fonctionnalités de Windows PowerShell ISE. Par exemple, vous pouvez :
 
 -   Ajouter et modifier l’instance de Windows PowerShell ISE lui-même. Par exemple, pour modifier les menus, vous pouvez ajouter de nouveaux éléments de menu et mapper les nouveaux éléments de menu à des scripts.
 
@@ -39,7 +40,7 @@ translationtype: HT
 
 -   Effectuer des tâches réalisables à l’aide des boutons et des commandes de menu. Par exemple, vous pouvez renommer un onglet PowerShell.
 
--   Manipuler des tampons de texte pour les volets Commande, Sortie et Script associés à un fichier. Par exemple, vous pouvez :
+-   Manipuler des tampons de texte pour les volets Commande, Sortie et Script associés à un fichier. Par exemple, vous pouvez :
 
     -   Obtenir ou définir tout le texte.
 
@@ -55,7 +56,7 @@ translationtype: HT
 
     -   Obtenir le numéro de la dernière ligne.
 
--   Effectuer des opérations de fichier. Par exemple, vous pouvez :
+-   Effectuer des opérations de fichier. Par exemple, vous pouvez :
 
     -   Ouvrir un fichier, enregistrer un fichier ou enregistrer un fichier sous un nom différent.
 

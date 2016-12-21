@@ -1,18 +1,19 @@
 ---
-title: "Comment créer un onglet PowerShell dans Windows PowerShell ISE"
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: "Comment créer un onglet PowerShell dans Windows PowerShell ISE"
+ms.technology: powershell
 ms.assetid: c10c18c7-9ece-4fd0-83dc-a19c53d4fd83
-ms.openlocfilehash: fb568b1194a3d123913e635d26b5fbd2ad76c531
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 1c57e557e2fefbdf67b6a3c71721cd2a916a0ec5
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
-# <a name="how-to-create-a-powershell-tab-in-windows-powershell-ise"></a>Comment créer un onglet PowerShell dans Windows PowerShell ISE
+# <a name="how-to-create-a-powershell-tab-in-windows-powershell-ise"></a>Comment créer un onglet PowerShell dans Windows PowerShell ISE
 Les onglets de l’environnement d’écriture de scripts intégré de Windows PowerShell® permettent de créer et d’utiliser simultanément plusieurs environnements d’exécution au sein de la même application. Chaque onglet PowerShell correspond à un environnement d’exécution ou à une session distincts.
 
 > [!NOTE]
@@ -21,7 +22,7 @@ Les onglets de l’environnement d’écriture de scripts intégré de Windows P
 Pour ouvrir ou fermer un onglet dans Windows PowerShell, procédez comme suit. Pour renommer un onglet, définissez la propriété [DisplayName](The-PowerShellTab-Object.md#Displayname) sur l’objet de script Onglet Windows PowerShell.
 
 ## <a name="to-create-and-use-a-new-powershell-tab"></a>Pour créer et utiliser un onglet PowerShell
-Dans le menu **Fichier**, cliquez sur **Nouvel onglet PowerShell**. Le nouvel onglet PowerShell s’ouvre toujours comme la fenêtre active. Les onglets PowerShell sont numérotés de façon incrémentielle dans l’ordre de leur ouverture. Chaque onglet est associé à sa propre fenêtre de console Windows PowerShell. Vous pouvez avoir jusqu’à 32 onglets PowerShell avec leur propre session ouverte simultanément (ce nombre est limité à 8 sur Windows PowerShell ISE 2.0.)
+Dans le menu **Fichier**, cliquez sur **Nouvel onglet PowerShell**. Le nouvel onglet PowerShell s’ouvre toujours comme la fenêtre active. Les onglets PowerShell sont numérotés de façon incrémentielle dans l’ordre de leur ouverture. Chaque onglet est associé à sa propre fenêtre de console Windows PowerShell. Vous pouvez avoir jusqu’à 32 onglets PowerShell avec leur propre session ouverte simultanément (ce nombre est limité à 8 sur Windows PowerShell ISE 2.0.)
 
 Notez qu’un clic sur l’icône **Nouveau** ou **Ouvrir** dans la barre d’outils ne crée pas d’onglet avec une session distincte.  Au lieu de cela, ces boutons ouvrent un fichier de script nouveau ou existant sur l’onglet actif avec une session. Vous pouvez avoir plusieurs fichiers script ouverts avec chaque onglet et session. Les onglets de script pour une session s’affichent sous les onglets de la session uniquement lorsque la session associée est active.
 
@@ -31,7 +32,7 @@ Pour activer un onglet PowerShell, cliquez dessus. Pour opérer une sélection p
 Dans le menu **Fichier**, cliquez sur **Nouvel onglet PowerShell à distance** pour établir une session sur un ordinateur distant. Une boîte de dialogue s’affiche et vous invite à entrer les détails requis pour établir la connexion à distance. L’onglet à distance fonctionne exactement comme un onglet PowerShell local, mais les commandes et les scripts sont exécutés sur l’ordinateur distant.
 
 ## <a name="to-close-a-powershell-tab"></a>Pour fermer un onglet PowerShell
-Pour fermer un onglet, vous pouvez utiliser l’une des techniques suivantes :
+Pour fermer un onglet, vous pouvez utiliser l’une des techniques suivantes :
 
 -   Cliquez sur l’onglet que vous souhaitez fermer.
 
@@ -40,6 +41,6 @@ Pour fermer un onglet, vous pouvez utiliser l’une des techniques suivantes :
 Si des fichiers non enregistrés sont ouverts dans l’onglet PowerShell que vous fermez, vous êtes invité à les enregistrer ou les ignorer. Pour plus d’informations sur l’enregistrement d’un script, voir [Comment enregistrer un script](https://technet.microsoft.com/library/162f594d-efd3-4234-9960-45e56e6eadc8).
 
 ## <a name="see-also"></a>Voir aussi
-- [Utilisation de Windows PowerShell ISE](Using-the-Windows-PowerShell-ISE.md)
-- [Comment utiliser le volet Console dans Windows PowerShell ISE](How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md)
+- [Utilisation de Windows PowerShell ISE](Using-the-Windows-PowerShell-ISE.md)
+- [Comment utiliser le volet Console dans Windows PowerShell ISE](How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md)
 

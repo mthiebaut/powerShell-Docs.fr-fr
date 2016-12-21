@@ -1,84 +1,85 @@
 ---
-title: Configuration requise pour Windows PowerShell
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: Configuration requise pour Windows PowerShell
+ms.technology: powershell
 ms.assetid: 6d1d3c75-3be4-4fc9-8805-ca9b2c454d42
-ms.openlocfilehash: 9510e13156b0dd0da8e5c4f94cfaf7b3152f3ad0
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: a3cb7f421fdb3c3023a783434f257d92609e1127
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="windows-powershell-system-requirements"></a>Configuration requise pour Windows PowerShell
-Cette rubrique répertorie la configuration système requise pour Windows PowerShell 3.0, Windows PowerShell 4.0 et Windows PowerShell 5.0, et pour des fonctionnalités spéciales comme l’environnement d’écriture de scripts intégré de Windows PowerShell (ISE), les commandes CIM et les workflows.
+Cette rubrique répertorie la configuration système requise pour Windows PowerShell 3.0, Windows PowerShell 4.0 et Windows PowerShell 5.0, et pour des fonctionnalités spéciales comme l’environnement d’écriture de scripts intégré de Windows PowerShell (ISE), les commandes CIM et les workflows.
 
-Windows® 8.1 et Windows Server® 2012 R2 incluent tous les programmes obligatoires. Cette rubrique est conçue pour les utilisateurs de versions antérieures de Windows.
+Windows® 8.1 et Windows Server® 2012 R2 incluent tous les programmes obligatoires. Cette rubrique est conçue pour les utilisateurs de versions antérieures de Windows.
 
 ## <a name="operating-system-requirements"></a>Systèmes d'exploitation requis
-Windows PowerShell 5.0 s’exécute sur les versions suivantes de Windows.
+Windows PowerShell 5.0 s’exécute sur les versions suivantes de Windows.
 
--   Windows Server 2016, installé par défaut
+-   Windows Server 2016, installé par défaut
 
--   Windows Server 2012 R2. Installez [Windows Management Framework 5.0](http://go.microsoft.com/fwlink/?LinkID=242919) pour exécuter Windows PowerShell 5.0
+-   Windows Server 2012 R2. Installez [Windows Management Framework 5.0](http://go.microsoft.com/fwlink/?LinkID=242919) pour exécuter Windows PowerShell 5.0
 
--   Windows Server 2012. Installez [Windows Management Framework 5.0](http://go.microsoft.com/fwlink/?LinkID=242919) pour exécuter Windows PowerShell 5.0
+-   Windows Server 2012. Installez [Windows Management Framework 5.0](http://go.microsoft.com/fwlink/?LinkID=242919) pour exécuter Windows PowerShell 5.0
 
--   Windows Server 2008 R2 avec Service Pack 1. Installez [Windows Management Framework 5.0](http://go.microsoft.com/fwlink/?LinkID=242919) pour exécuter Windows PowerShell 5.0
+-   Windows Server 2008 R2 avec Service Pack 1. Installez [Windows Management Framework 5.0](http://go.microsoft.com/fwlink/?LinkID=242919) pour exécuter Windows PowerShell 5.0
 
--   Windows 8.1
+-   Windows 8.1
 
--   Windows 7 avec Service Pack 1. Installez [Windows Management Framework 5.0](http://go.microsoft.com/fwlink/?LinkID=242919) pour exécuter Windows PowerShell 5.0
+-   Windows 7 avec Service Pack 1. Installez [Windows Management Framework 5.0](http://go.microsoft.com/fwlink/?LinkID=242919) pour exécuter Windows PowerShell 5.0
 
-Windows PowerShell 4.0 s’exécute sur les versions suivantes de Windows.
+Windows PowerShell 4.0 s’exécute sur les versions suivantes de Windows.
 
--   Windows 8.1, installé par défaut
+-   Windows 8.1, installé par défaut
 
--   Windows Server 2012 R2, installé par défaut
+-   Windows Server 2012 R2, installé par défaut
 
--   Windows® 7 avec Service Pack 1, installer [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkId=293881) pour exécuter Windows PowerShell 4.0
+-   Windows® 7 avec Service Pack 1, installer [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkId=293881) pour exécuter Windows PowerShell 4.0
 
--   Windows Server® 2008 R2 avec Service Pack 1, installer [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkId=293881) pour exécuter Windows PowerShell 4.0
+-   Windows Server® 2008 R2 avec Service Pack 1, installer [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkId=293881) pour exécuter Windows PowerShell 4.0
 
-Windows PowerShell 3.0 s’exécute sur les versions suivantes de Windows.
+Windows PowerShell 3.0 s’exécute sur les versions suivantes de Windows.
 
--   Windows 8, installé par défaut
+-   Windows 8, installé par défaut
 
--   Windows Server 2012, installé par défaut
+-   Windows Server 2012, installé par défaut
 
--   Windows® 7 avec Service Pack 1, installer [Windows Management Framework 3.0](http://www.microsoft.com/download/details.aspx?id=34595) pour exécuter Windows PowerShell 3.0
+-   Windows® 7 avec Service Pack 1, installer [Windows Management Framework 3.0](http://www.microsoft.com/download/details.aspx?id=34595) pour exécuter Windows PowerShell 3.0
 
--   Windows Server® 2008 R2 avec Service Pack 1, installer [Windows Management Framework 3.0](http://www.microsoft.com/download/details.aspx?id=34595) pour exécuter Windows PowerShell 3.0
+-   Windows Server® 2008 R2 avec Service Pack 1, installer [Windows Management Framework 3.0](http://www.microsoft.com/download/details.aspx?id=34595) pour exécuter Windows PowerShell 3.0
 
--   Windows Server® 2008 avec Service Pack 2, installer [Windows Management Framework 3.0](http://www.microsoft.com/download/details.aspx?id=34595) pour exécuter Windows PowerShell 3.0
+-   Windows Server® 2008 avec Service Pack 2, installer [Windows Management Framework 3.0](http://www.microsoft.com/download/details.aspx?id=34595) pour exécuter Windows PowerShell 3.0
 
 ## <a name="microsoft-net-framework-requirements"></a>Configuration requise pour Microsoft .NET Framework
-Windows PowerShell 5.0 nécessite l’installation complète du Microsoft .NET Framework 4.5. Windows 8.1 et Windows Server 2012 R2 incluent le Microsoft .NET Framework 4.5 par défaut.
+Windows PowerShell 5.0 nécessite l’installation complète du Microsoft .NET Framework 4.5. Windows 8.1 et Windows Server 2012 R2 incluent le Microsoft .NET Framework 4.5 par défaut.
 
-Windows PowerShell 4.0 nécessite l’installation complète du Microsoft .NET Framework 4.5. Windows 8.1 et Windows Server 2012 R2 incluent le Microsoft .NET Framework 4.5 par défaut.
+Windows PowerShell 4.0 nécessite l’installation complète du Microsoft .NET Framework 4.5. Windows 8.1 et Windows Server 2012 R2 incluent le Microsoft .NET Framework 4.5 par défaut.
 
-Windows PowerShell 3.0 nécessite l’installation complète du Microsoft .NET Framework 4. Windows 8 et Windows Server 2012 incluent le Microsoft .NET Framework 4.5 par défaut, ce qui répond à cette exigence.
+Windows PowerShell 3.0 nécessite l’installation complète du Microsoft .NET Framework 4. Windows 8 et Windows Server 2012 incluent le Microsoft .NET Framework 4.5 par défaut, ce qui répond à cette exigence.
 
-Pour installer Microsoft .NET Framework 4.5 (dotNetFx45_Full_setup.exe), voir [Microsoft .NET Framework 4.5](http://go.microsoft.com/fwlink/?LinkID=242919) sur le Centre de téléchargement Microsoft.
+Pour installer Microsoft .NET Framework 4.5 (dotNetFx45_Full_setup.exe), voir [Microsoft .NET Framework 4.5](http://go.microsoft.com/fwlink/?LinkID=242919) sur le Centre de téléchargement Microsoft.
 
-Pour effectuer l’installation complète de Microsoft .NET Framework 4 (dotNetFx40_Full_setup.exe), voir [Microsoft .NET Framework 4 (programme d’installation web)](http://go.microsoft.com/fwlink/?LinkID=212931) sur le Centre de téléchargement Microsoft.
+Pour effectuer l’installation complète de Microsoft .NET Framework 4 (dotNetFx40_Full_setup.exe), voir [Microsoft .NET Framework 4 (programme d’installation web)](http://go.microsoft.com/fwlink/?LinkID=212931) sur le Centre de téléchargement Microsoft.
 
-## <a name="windows-management-framework-40"></a>Windows Management Framework 4.0
-Windows PowerShell 5.0 nécessite la préinstallation de Windows Management Framework 4.0 sur Windows Server 2008 R2 SP1 et Windows 7 SP1.
+## <a name="windows-management-framework-40"></a>Windows Management Framework 4.0
+Windows PowerShell 5.0 nécessite la préinstallation de Windows Management Framework 4.0 sur Windows Server 2008 R2 SP1 et Windows 7 SP1.
 
-## <a name="ws-management-30"></a>WS-Management 3.0
-Windows PowerShell 3.0 et Windows PowerShell 4.0 nécessitent WS-Management 3.0, qui prend en charge le service WinRM et le protocole WSMan. Ce programme est inclus dans Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows Management Framework 4.0 et Windows Management Framework 3.0.
+## <a name="ws-management-30"></a>WS-Management 3.0
+Windows PowerShell 3.0 et Windows PowerShell 4.0 nécessitent WS-Management 3.0, qui prend en charge le service WinRM et le protocole WSMan. Ce programme est inclus dans Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows Management Framework 4.0 et Windows Management Framework 3.0.
 
-## <a name="windows-management-instrumentation-30"></a>WMI (Windows Management Instrumentation) 3.0
-Windows PowerShell 3.0 et Windows PowerShell 4.0 nécessitent WMI (Windows Management Instrumentation) 3.0. Ce programme est inclus dans Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows Management Framework 4.0 et Windows Management Framework 3.0. Si ce programme n’est pas installé sur l’ordinateur, les fonctionnalités qui requièrent WMI, telles que les commandes CIM, ne fonctionnent pas.
+## <a name="windows-management-instrumentation-30"></a>WMI (Windows Management Instrumentation) 3.0
+Windows PowerShell 3.0 et Windows PowerShell 4.0 nécessitent WMI (Windows Management Instrumentation) 3.0. Ce programme est inclus dans Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows Management Framework 4.0 et Windows Management Framework 3.0. Si ce programme n’est pas installé sur l’ordinateur, les fonctionnalités qui requièrent WMI, telles que les commandes CIM, ne fonctionnent pas.
 
 ## <a name="common-language-runtime-40"></a>Common Language Runtime (CLR) 4.0
-Windows PowerShell 3.0, Windows PowerShell 4.0 et Windows PowerShell 5.0 sont compilés pour le Common Language Runtime (CLR) 4.0.
+Windows PowerShell 3.0, Windows PowerShell 4.0 et Windows PowerShell 5.0 sont compilés pour le Common Language Runtime (CLR) 4.0.
 
 ## <a name="graphical-user-interface-requirements"></a>Configuration requise de l’interface graphique utilisateur
-Windows PowerShell est une application console qui ne nécessite pas d’interface utilisateur graphique. Elle est donc particulièrement adaptée aux ordinateurs qui n’ont pas d’écran, de moniteur ou d’interface utilisateur, notamment avec les options d’installation minimale de Windows Server 2012 R2 ou Windows Server 2012.
+Windows PowerShell est une application console qui ne nécessite pas d’interface utilisateur graphique. Elle est donc particulièrement adaptée aux ordinateurs qui n’ont pas d’écran, de moniteur ou d’interface utilisateur, notamment avec les options d’installation minimale de Windows Server 2012 R2 ou Windows Server 2012.
 
 Toutefois, certains éléments, tels les suivants, requièrent une interface graphique utilisateur. Pour plus d’informations, consultez la rubrique d’aide de chaque élément.
 
@@ -101,16 +102,16 @@ Toutefois, certains éléments, tels les suivants, requièrent une interface gra
     2.  Paramètre **ShowSecurityDescriptorUI** des applets de commande [Register-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) et [Set-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/b21fbad3-1759-4260-b206-dcb8431cd6ea).
 
 ## <a name="windows-powershell-engine-requirements"></a>Configuration requise pour le moteur Windows PowerShell
-Windows PowerShell 4.0 est conçu pour offrir une compatibilité descendante avec Windows PowerShell 3.0 et Windows PowerShell 2.0. Les applets de commande, fournisseurs, composants logiciels enfichables, modules et scripts écrits pour Windows PowerShell 2.0 et Windows PowerShell 3.0 s’exécutent sans modification dans Windows PowerShell 4.0.
+Windows PowerShell 4.0 est conçu pour offrir une compatibilité descendante avec Windows PowerShell 3.0 et Windows PowerShell 2.0. Les applets de commande, fournisseurs, composants logiciels enfichables, modules et scripts écrits pour Windows PowerShell 2.0 et Windows PowerShell 3.0 s’exécutent sans modification dans Windows PowerShell 4.0.
 
-Toutefois, en raison d’une modification de la stratégie d’activation du runtime dans le Microsoft .NET Framework 4, les programmes hôtes de Windows PowerShell écrits pour Windows PowerShell 2.0 et compilés avec le Common Language Runtime (CLR) 2.0 ne peuvent pas s’exécuter sans modification dans Windows PowerShell 3.0, qui est compilé avec le CLR 4.0.
+Toutefois, en raison d’une modification de la stratégie d’activation du runtime dans le Microsoft .NET Framework 4, les programmes hôtes de Windows PowerShell écrits pour Windows PowerShell 2.0 et compilés avec le Common Language Runtime (CLR) 2.0 ne peuvent pas s’exécuter sans modification dans Windows PowerShell 3.0, qui est compilé avec le CLR 4.0.
 
-Le moteur Windows PowerShell 2.0 nécessite au minimum le Microsoft .NET Framework 2.0.50727. Cette condition est remplie par Microsoft .NET Framework 3.5 Service Pack 1. Cette condition n’est pas remplie par Microsoft .NET Framework 4 et versions ultérieures de Microsoft .NET Framework.
+Le moteur Windows PowerShell 2.0 nécessite au minimum le Microsoft .NET Framework 2.0.50727. Cette condition est remplie par Microsoft .NET Framework 3.5 Service Pack 1. Cette condition n’est pas remplie par Microsoft .NET Framework 4 et versions ultérieures de Microsoft .NET Framework.
 
-Pour plus d’informations sur l’ajout ou l’installation du moteur Windows PowerShell 2.0, et l’ajout ou l’installation des versions requises du Microsoft .NET Framework, consultez [Installation du moteur Windows PowerShell 2.0](Installing-the-Windows-PowerShell-2.0-Engine.md). Pour plus d’informations sur le démarrage du moteur Windows PowerShell 2.0, consultez [Démarrage du moteur Windows PowerShell 2.0](Starting-the-Windows-PowerShell-2.0-Engine.md).
+Pour plus d’informations sur l’ajout ou l’installation du moteur Windows PowerShell 2.0, et l’ajout ou l’installation des versions requises du Microsoft .NET Framework, consultez [Installation du moteur Windows PowerShell 2.0](Installing-the-Windows-PowerShell-2.0-Engine.md). Pour plus d’informations sur le démarrage du moteur Windows PowerShell 2.0, consultez [Démarrage du moteur Windows PowerShell 2.0](Starting-the-Windows-PowerShell-2.0-Engine.md).
 
 ## <a name="windows-preinstallation-environment"></a>Environnement de préinstallation Windows
-Windows PowerShell 2.0, Windows PowerShell 3.0 et Windows PowerShell 4.0 s’exécutent dans l’environnement de préinstallation Windows (Windows PE). Toutefois, les applets de commande suivantes ne sont pas pris en charge.
+Windows PowerShell 2.0, Windows PowerShell 3.0 et Windows PowerShell 4.0 s’exécutent dans l’environnement de préinstallation Windows (Windows PE). Toutefois, les applets de commande suivantes ne sont pas pris en charge.
 
 -   [Applets de commande du service de transfert intelligent en arrière-plan (BITS)](http://go.microsoft.com/fwlink/?LinkId=257514)
 

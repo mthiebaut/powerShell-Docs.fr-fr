@@ -1,19 +1,20 @@
 ---
-title: "Zones de liste à sélection multiple"
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: "Zones de liste à sélection multiple"
+ms.technology: powershell
 ms.assetid: f74cd5d9-da57-4802-b614-0b194a7bc8f8
-ms.openlocfilehash: 0c17cb271441ed20b36176e2c5d8cecdad586e8b
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 5d079859309947fcb6ee034b1be9d6dd300510af
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="multiple-selection-list-boxes"></a>Zones de liste à sélection multiple
-Dans Windows PowerShell 3.0 et versions ultérieures, vous pouvez créer un contrôle de zone de liste à sélection multiple dans un formulaire Windows Form personnalisé.
+Dans Windows PowerShell 3.0 et versions ultérieures, vous pouvez créer un contrôle de zone de liste à sélection multiple dans un formulaire Windows Form personnalisé.
 
 ## <a name="create-list-box-controls-that-allow-multiple-selections"></a>Créer des contrôles de zone de liste autorisant plusieurs sélections
 Copiez le code suivant, puis collez-le dans Windows PowerShell ISE. Ensuite, enregistrez-le en tant que script Windows PowerShell (.ps1).
@@ -74,7 +75,7 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-Le script commence par charger deux classes .NET Framework : **System.Drawing** et **System.Windows.Forms**. Démarrez ensuite une nouvelle instance de la classe .NET Framework **System.Windows.Forms.Form**. Celle-ci affiche une fenêtre ou un formulaire vide où vous pouvez commencer à ajouter des contrôles.
+Le script commence par charger deux classes .NET Framework : **System.Drawing** et **System.Windows.Forms**. Démarrez ensuite une nouvelle instance de la classe .NET Framework **System.Windows.Forms.Form**. Celle-ci affiche une fenêtre ou un formulaire vide où vous pouvez commencer à ajouter des contrôles.
 
 ```
 $form = New-Object System.Windows.Forms.Form
@@ -84,7 +85,7 @@ Après avoir créé une instance de la classe Form, affectez des valeurs à troi
 
 -   **Text.** Il s'agit du titre de la fenêtre.
 
--   **Size.** Il s'agit de la taille du formulaire en pixels. Le script précédent crée un formulaire de 300 pixels de largeur par 200 pixels de hauteur.
+-   **Size.** Il s'agit de la taille du formulaire en pixels. Le script précédent crée un formulaire de 300 pixels de largeur par 200 pixels de hauteur.
 
 -   **StartingPosition.** Cette propriété facultative a la valeur **CenterScreen** dans le script précédent. Si vous n'ajoutez pas cette propriété, Windows sélectionne un emplacement quand le formulaire est ouvert. Si vous affectez à **StartingPosition** la valeur **CenterScreen**, le formulaire s’affiche automatiquement au milieu de l’écran à chaque chargement.
 
@@ -94,7 +95,7 @@ $form.Size = New-Object System.Drawing.Size(300,200)
 $form.StartPosition = "CenterScreen"
 ```
 
-Ensuite, créez un bouton **OK** dans votre formulaire. Spécifiez la taille et le comportement du bouton **OK**. Dans cet exemple, le bouton se trouve à 120 pixels du bord supérieur du formulaire et à 75 pixels du bord gauche. Le bouton mesure 23 pixels de haut et 75 pixels de long. Le script utilise des types Windows Forms prédéfinis pour déterminer le comportement du bouton.
+Ensuite, créez un bouton **OK** dans votre formulaire. Spécifiez la taille et le comportement du bouton **OK**. Dans cet exemple, le bouton se trouve à 120 pixels du bord supérieur du formulaire et à 75 pixels du bord gauche. Le bouton mesure 23 pixels de haut et 75 pixels de long. Le script utilise des types Windows Forms prédéfinis pour déterminer le comportement du bouton.
 
 ```
 $OKButton = New-Object System.Windows.Forms.Button
@@ -106,7 +107,7 @@ $form.AcceptButton = $OKButton
 $form.Controls.Add($OKButton)
 ```
 
-De la même façon, créez un bouton **Annuler**. Le bouton **Annuler** se trouve à 120 pixels du bord supérieur de la fenêtre, mais à 150 pixels du bord gauche.
+De la même façon, créez un bouton **Annuler**. Le bouton **Annuler** se trouve à 120 pixels du bord supérieur de la fenêtre, mais à 150 pixels du bord gauche.
 
 ```
 $CancelButton = New-Object System.Windows.Forms.Button
@@ -185,5 +186,5 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 ## <a name="see-also"></a>Voir aussi
 - [Hey Scripting Guy:  Why don’t these PowerShell GUI examples work?](http://go.microsoft.com/fwlink/?LinkId=506644)
 - [GitHub: Dave Wyatt’s WinFormsExampleUpdates](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Astuce Windows PowerShell de la semaine : Zones de liste à sélection multiple et bien plus encore](http://technet.microsoft.com/library/ff730950.aspx)
+- [Astuce Windows PowerShell de la semaine : Zones de liste à sélection multiple et bien plus encore](http://technet.microsoft.com/library/ff730950.aspx)
 

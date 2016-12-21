@@ -1,15 +1,16 @@
 ---
-title: Objet ISESnippetCollection
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: Objet ISESnippetCollection
+ms.technology: powershell
 ms.assetid: ae974955-4282-4cbc-8c42-0fff1904ef32
-ms.openlocfilehash: d8b5db28b0a8ce24d35b2684dd473bdea104d225
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: ad6d8ba7a68654f15566d1a74ef6a30898f21c1e
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="the-isesnippetcollection-object"></a>Objet ISESnippetCollection
@@ -18,11 +19,11 @@ translationtype: HT
 ## <a name="methods"></a>Méthodes
 
 ### <a name="load-filepathname-"></a>Load\( FilePathName \)
-  Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures. 
+  Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures. 
 
  Charge un fichier .snippets.ps1xml qui contient des extraits de code défini par l’utilisateur. L’applet de commande New-IseSnippet est le moyen le plus simple de créer des extraits de code, car elle les stocke automatiquement dans votre dossier de profil pour qu’ils se chargent à chaque démarrage de Windows PowerShell ISE.
 
- **FilePathName** : chaîne Chemin et nom d’un fichier .snippets.ps1xml qui contient les définitions des extraits de code.
+ **FilePathName** : chaîne Chemin et nom d’un fichier .snippets.ps1xml qui contient les définitions des extraits de code.
 
 ```
 # Loads a custom snippet file into the current PowerShell tab.

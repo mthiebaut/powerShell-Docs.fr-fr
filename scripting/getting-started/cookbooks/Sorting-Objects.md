@@ -1,27 +1,28 @@
 ---
-title: "Tri d’objets"
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: "Tri d’objets"
+ms.technology: powershell
 ms.assetid: 8530caa8-3ed4-4c56-aed7-1295dd9ba199
-ms.openlocfilehash: 99ca62261f8302673f886149a7715ce06efa16cb
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 00ee71337331c730f37723152175e2ca10263191
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="sorting-objects"></a>Tri d’objets
 Vous pouvez organiser des données affichées pour faciliter leur analyse en utilisant l’applet de commande **Sort-Object**. L’applet de commande **Sort-Object** prend le nom d’une ou plusieurs propriétés pour trier et retourner les données triées sur les valeurs de ces propriétés.
 
-Prenez le problème de l’affichage de la liste d’instances Win32_SystemDriver. Si vous souhaitez trier sur l’état (**State**), puis sur le nom (**Name**), vous pouvez taper ce qui suit :
+Prenez le problème de l’affichage de la liste d’instances Win32_SystemDriver. Si vous souhaitez trier sur l’état (**State**), puis sur le nom (**Name**), vous pouvez taper ce qui suit :
 
 ```
 Get-WmiObject -Class Win32_SystemDriver | Sort-Object -Property State,Name | Format-Table -Property Name,State,Started,DisplayName -AutoSize -Wrap
 ```
 
-Bien que l’affichage soit long, les éléments sont regroupés par état :
+Bien que l’affichage soit long, les éléments sont regroupés par état :
 
 ```
 Name           State   Started DisplayName

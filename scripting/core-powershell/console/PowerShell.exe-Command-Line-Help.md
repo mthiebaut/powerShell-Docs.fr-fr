@@ -1,15 +1,16 @@
 ---
-title: Aide sur la ligne de commande PowerShell.exe
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: Aide sur la ligne de commande PowerShell.exe
+ms.technology: powershell
 ms.assetid: 1ab7b93b-6785-42c6-a1c9-35ff686a958f
-ms.openlocfilehash: f2a682671bb39de943fac47488e2a1c651423b53
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 609682294c344129f96afd0241116bb19154d19e
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="powershellexe-command-line-help"></a>Aide sur la ligne de commande PowerShell.exe
@@ -55,7 +56,7 @@ En règle générale, les paramètres de commutateur d’un script sont inclus o
 
 Dans de rares cas, vous pouvez être amené à fournir une valeur booléenne pour un paramètre de commutateur. Pour fournir une valeur booléenne pour un paramètre de commutateur dans la valeur du paramètre **File**, placez le nom et la valeur de celui-ci entre accolades, comme suit : `-File .\Get-Script.ps1 {-All:$False}`
 
-### <a name="-inputformat-text-xml"></a>-InputFormat {Text | XML}
+### <a name="-inputformat-text--xml"></a>-InputFormat {Text | XML}
 Décrit le format des données envoyées à Windows PowerShell. Les valeurs valides sont « Text » (chaînes de texte) ou « XML » (format CLIXML sérialisé).
 
 ### <a name="-mta"></a>-Mta
@@ -73,7 +74,7 @@ Ne présente pas d’invite interactive à l’utilisateur.
 ### <a name="-noprofile"></a>-NoProfile
 Ne charge pas le profil Windows PowerShell.
 
-### <a name="-outputformat-text-xml"></a>-OutputFormat {Text | XML}
+### <a name="-outputformat-text--xml"></a>-OutputFormat {Text | XML}
 Détermine la mise en forme de la sortie de Windows PowerShell. Les valeurs valides sont « Text » (chaînes de texte) ou « XML » (format CLIXML sérialisé).
 
 ### <a name="-psconsolefile-filepath"></a>-PSConsoleFile <FilePath>

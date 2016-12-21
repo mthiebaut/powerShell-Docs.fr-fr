@@ -1,15 +1,16 @@
 ---
-title: "Comment écrire et exécuter des scripts dans Windows PowerShell ISE"
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: "Comment écrire et exécuter des scripts dans Windows PowerShell ISE"
+ms.technology: powershell
 ms.assetid: 62f916d9-b3a1-484a-bdfb-41f57112c22b
-ms.openlocfilehash: f38c9f310c528a9daff2784ab3a686309e624ecb
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 2478db382639ef315574bb7c79faec7cf2ae1c96
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="how-to-write-and-run-scripts-in-the-windows-powershell-ise"></a>Comment écrire et exécuter des scripts dans Windows PowerShell ISE
@@ -34,7 +35,7 @@ Dans la barre d’outils, cliquez sur **Nouveau** ou, dans le menu **Fichier**, 
 Dans la barre d’outils, cliquez sur **Ouvrir...** ou, dans le menu **Fichier**, cliquez sur **Ouvrir**. Dans la boîte de dialogue **Ouvrir**, sélectionnez le fichier à ouvrir. Le fichier ouvert s’affiche dans un nouvel onglet.
 
 ### <a name="to-close-a-script-tab"></a>Pour fermer un onglet de script
-Cliquez sur l’onglet de script du script que vous voulez fermer, puis effectuez l’une des opérations suivantes :
+Cliquez sur l’onglet de script du script que vous voulez fermer, puis effectuez l’une des opérations suivantes :
 
 1.  Cliquez sur l’icône **Fermer** (X) sous l’onglet de script.
 
@@ -118,7 +119,7 @@ Appuyez sur **Ctrl+S** ou, dans la barre d’outils, cliquez sur l’icône **En
 
 2.  Dans le champ **Nom de fichier**, entrez un nom pour le fichier.
 
-3.  Dans le champ **Type de fichier**, sélectionnez un type de fichier. Par exemple, dans le champ **Type de fichier**, sélectionnez « Scripts PowerShell (\* .ps1) ».
+3.  Dans le champ **Type de fichier**, sélectionnez un type de fichier. Par exemple, dans le champ **Type de fichier**, sélectionnez « Scripts PowerShell (\* .ps1) ».
 
 4.  Cliquez sur **Enregistrer**.
 
@@ -143,10 +144,10 @@ La commande suivante obtient l’encodage du fichier actuel.
 $psise.CurrentFile.encoding
 ```
 
-Windows PowerShell ISE prend en charge les options d’encodage suivantes : ASCII, BigEndianUnicode, Unicode, UTF32, UTF7, UTF8 et Default. La valeur de l’option Default varie selon le système.
+Windows PowerShell ISE prend en charge les options d’encodage suivantes : ASCII, BigEndianUnicode, Unicode, UTF32, UTF7, UTF8 et Default. La valeur de l’option Default varie selon le système.
 
 Windows PowerShell ISE ne modifie pas l’encodage des scripts qui ont été créés par d’autres éditeurs, même si vous utilisez les commandes Save ou Save As dans Windows PowerShell ISE.
 
 ## <a name="see-also"></a>Voir aussi
-- [Utilisation de Windows PowerShell ISE](Using-the-Windows-PowerShell-ISE.md)
+- [Utilisation de Windows PowerShell ISE](Using-the-Windows-PowerShell-ISE.md)
 

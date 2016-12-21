@@ -1,15 +1,16 @@
 ---
-title: Comment utiliser des profils dans Windows PowerShell ISE
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: Comment utiliser des profils dans Windows PowerShell ISE
+ms.technology: powershell
 ms.assetid: 0219626a-6da5-4acc-b630-d058e8b29cc6
-ms.openlocfilehash: dc85d616aac580effc7170935a3edb35e1a54e04
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 8825eb6db73ce6e611f10f116a8d8f923c277b0c
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="how-to-use-profiles-in-windows-powershell-ise"></a>Comment utiliser des profils dans Windows PowerShell ISE
@@ -18,7 +19,7 @@ Cette rubrique explique comment utiliser des profils dans l’environnement d’
 Un profil est un script Windows PowerShell ISE qui s’exécute automatiquement quand vous démarrez une nouvelle session.  Vous pouvez créer un ou plusieurs profils Windows PowerShell pour Windows PowerShell ISE, et les utiliser pour ajouter la configuration à l’environnement Windows PowerShell ou Windows PowerShell ISE, en le préparant pour votre utilisation, avec les variables, alias, fonctions et préférences de police et de couleur dont vous voulez disposer. Un profil affecte chaque session Windows PowerShell ISE que vous démarrez.
 
 > [!NOTE]
-> La stratégie d’exécution de Windows PowerShell détermine si vous pouvez exécuter des scripts et charger un profil. La stratégie d’exécution par défaut, « Restricted », empêche l’exécution de tous les scripts, y compris des profils. Si vous utilisez la stratégie « Restricted », le profil ne peut pas se charger. Pour plus d’informations sur la stratégie d’exécution, voir [about_Execution_Policies [v4]](https://technet.microsoft.com/library/347708dc-1515-4d74-978b-8334603472e6(v=wps.630)).
+> La stratégie d’exécution de Windows PowerShell détermine si vous pouvez exécuter des scripts et charger un profil. La stratégie d’exécution par défaut, « Restricted », empêche l’exécution de tous les scripts, y compris des profils. Si vous utilisez la stratégie « Restricted », le profil ne peut pas se charger. Pour plus d’informations sur la stratégie d’exécution, voir [about_Execution_Policies [v4]](https://technet.microsoft.com/library/347708dc-1515-4d74-978b-8334603472e6(v=wps.630)).
 
 ## <a name="selecting-a-profile-to-use-in-the-windows-powershell-ise"></a>Sélection d’un profil à utiliser dans Windows PowerShell ISE
 Windows PowerShell ISE prend en charge les profils pour l’utilisateur actuel et tous les utilisateurs. Il prend également en charge les profils Windows PowerShell qui s’appliquent à tous les ordinateurs hôtes.
@@ -39,28 +40,28 @@ Les éléments suivants sont des profils qui peuvent être créés et utilisés 
 | **Tous les utilisateurs, Tous les ordinateurs hôtes** | `$PROFILE.AllUsersAllHosts` |
 
 ## <a name="to-create-a-new-profile"></a>Pour créer un profil
-Pour créer un profil « Utilisateur actuel, Windows PowerShell ISE », exécutez la commande suivante :
+Pour créer un profil « Utilisateur actuel, Windows PowerShell ISE », exécutez la commande suivante :
 
 ```PowerShell
 if (!(Test-Path -Path $PROFILE )) 
 { New-Item -Type File -Path $PROFILE -Force }
 ```
 
-Pour créer un profil « Tous les utilisateurs, Windows PowerShell ISE », exécutez la commande suivante :
+Pour créer un profil « Tous les utilisateurs, Windows PowerShell ISE », exécutez la commande suivante :
 
 ```PowerShell
 if (!(Test-Path -Path $PROFILE.AllUsersCurrentHost)) 
 { New-Item -Type File -Path $PROFILE.AllUsersCurrentHost -Force }
 ```
 
-Pour créer un profil « Utilisateur actuel, Tous les ordinateurs hôtes », exécutez la commande suivante :
+Pour créer un profil « Utilisateur actuel, Tous les ordinateurs hôtes », exécutez la commande suivante :
 
 ```PowerShell
 if (!(Test-Path -Path $PROFILE.CurrentUserAllHosts)) 
 { New-Item -Type File -Path $PROFILE.CurrentUserAllHosts -Force }
 ```
 
-Pour créer un profil « Tous les utilisateurs, Tous les ordinateurs hôtes », tapez :
+Pour créer un profil « Tous les utilisateurs, Tous les ordinateurs hôtes », tapez :
 
 ```PowerShell
 if (!(Test-Path -Path $PROFILE.AllUsersAllHosts)) 
@@ -69,17 +70,17 @@ if (!(Test-Path -Path $PROFILE.AllUsersAllHosts))
 
 ## <a name="to-edit-a-profile"></a>Pour modifier un profil
 
-1.  Pour ouvrir le profil, exécutez la commande psedit avec la variable qui spécifie le profil que vous souhaitez modifier. Par exemple, pour ouvrir le profil « Utilisateur actuel, Windows PowerShell ISE », tapez : `psEdit $PROFILE`
+1.  Pour ouvrir le profil, exécutez la commande psedit avec la variable qui spécifie le profil que vous souhaitez modifier. Par exemple, pour ouvrir le profil « Utilisateur actuel, Windows PowerShell ISE », tapez : `psEdit $PROFILE`
 
-2.  Ajoutez des éléments à votre profil. Voici quelques exemples pour vous aider à démarrer :
+2.  Ajoutez des éléments à votre profil. Voici quelques exemples pour vous aider à démarrer :
 
-    -   Pour modifier la couleur d’arrière-plan par défaut du volet Console en bleu, dans le type de fichier de profil : `$psISE.Options.OutputPaneBackground = 'blue'`. Pour plus d’informations sur la variable $psISE, voir [Référence de modèle objet Windows PowerShell ISE](#windows-powershell-ise-object-model-reference).
+    -   Pour modifier la couleur d’arrière-plan par défaut du volet Console en bleu, dans le type de fichier de profil : `$psISE.Options.OutputPaneBackground = 'blue'`. Pour plus d’informations sur la variable $psISE, voir [Référence de modèle objet Windows PowerShell ISE](#windows-powershell-ise-object-model-reference).
 
-    -   Pour modifier la taille de police en 20, dans le type de fichier de profil : `$psISE.Options.FontSize =20`
+    -   Pour modifier la taille de police en 20, dans le type de fichier de profil : `$psISE.Options.FontSize =20`
 
 3.  Pour enregistrer votre fichier de profil, dans le menu **Fichier**, cliquez sur **Enregistrer**. À l’ouverture suivante de Windows PowerShell ISE, vos personnalisations sont appliquées.
 
 ## <a name="see-also"></a>Voir aussi
 - [about_Profiles [v4]](https://technet.microsoft.com/library/e1d9e30a-70cc-4f36-949f-fc7cd96b4054(v=wps.630))
-- [Utilisation de Windows PowerShell ISE](Using-the-Windows-PowerShell-ISE.md)
+- [Utilisation de Windows PowerShell ISE](Using-the-Windows-PowerShell-ISE.md)
 

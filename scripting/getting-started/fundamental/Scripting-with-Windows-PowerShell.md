@@ -1,15 +1,16 @@
 ---
-title: "Écriture de scripts avec Windows PowerShell"
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: "Écriture de scripts avec Windows PowerShell"
+ms.technology: powershell
 ms.assetid: c425d27a-bb41-4947-8d73-ba5480bc8ee0
-ms.openlocfilehash: f7c9164e09e253e8138820708ba8864841ddfff2
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 31a13a72688b89de4f0f29b81790b515988ecbf0
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="scripting-with-windows-powershell"></a>Écriture de scripts avec Windows PowerShell
@@ -18,7 +19,7 @@ Windows PowerShell® est un interpréteur de ligne de commande et un langage de 
 
 Les commandes Windows PowerShell, appelées *applets de commande*, vous permettent de gérer les ordinateurs à partir de la ligne de commande. Les *fournisseurs* Windows PowerShell vous permettent d’accéder à des magasins de données, par exemple le Registre et le magasin de certificats, aussi facilement que si vous accédiez au système de fichiers. En outre, Windows PowerShell dispose d’un analyseur d’expression avancé et d’un langage de script entièrement développé.
 
-Windows PowerShell intègre les fonctionnalités suivantes :
+Windows PowerShell intègre les fonctionnalités suivantes :
 
 -   Des applets de commande permettant d'effectuer des tâches d'administration système courantes (comme la gestion du Registre, des services, des processus et des journaux des événements) et d'utiliser WMI (Windows Management Instrumentation).
 -   Un langage de script basé sur les tâches, ainsi que la prise en charge des scripts existants et des outils de ligne de commande.

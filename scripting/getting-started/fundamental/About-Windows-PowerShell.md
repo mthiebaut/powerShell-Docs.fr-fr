@@ -1,28 +1,29 @@
 ---
-title: "À propos de Windows PowerShell"
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: "À propos de Windows PowerShell"
+ms.technology: powershell
 ms.assetid: 979654ae-7994-47f8-be43-d79e7a140143
-ms.openlocfilehash: 7c2c69b128aca00235330796c1f8a46cb81a3c5f
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: f00627072543ca2b2ddcd27ea4220f9368046afd
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
-# <a name="about-windows-powershell"></a>À propos de Windows PowerShell
+# <a name="about-windows-powershell"></a>À propos de Windows PowerShell
 Windows PowerShell est conçu pour améliorer l’environnement de script et de ligne de commande en éliminant des problèmes connus de longue date et en ajoutant de nouvelles fonctionnalités.
 
 ## <a name="discoverability"></a>Détectabilité
-Windows PowerShell facilite la découverte de ses fonctionnalités. Par exemple, pour obtenir la liste des applets de commande qui permettent d’afficher et de modifier les services Windows, tapez :
+Windows PowerShell facilite la découverte de ses fonctionnalités. Par exemple, pour obtenir la liste des applets de commande qui permettent d’afficher et de modifier les services Windows, tapez :
 
 ```
 Get-Command *-Service
 ```
 
-Après avoir découvert l’applet de commande qui effectue une tâche, vous pouvez en apprendre davantage sur l’applet de commande à l’aide de l’applet de commande Get-Help. Par exemple, pour afficher l’aide concernant l’applet de commande Get-Service, tapez ce qui suit :
+Après avoir découvert l’applet de commande qui effectue une tâche, vous pouvez en apprendre davantage sur l’applet de commande à l’aide de l’applet de commande Get-Help. Par exemple, pour afficher l’aide concernant l’applet de commande Get-Service, tapez ce qui suit :
 
 ```
 Get-Help Get-Service

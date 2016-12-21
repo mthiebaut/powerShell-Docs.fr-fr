@@ -1,19 +1,20 @@
 ---
-title: "Pipeline d’objet"
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: "Pipeline d’objet"
+ms.technology: powershell
 ms.assetid: 523d8ae4-d743-47a4-b79a-806130ca688a
-ms.openlocfilehash: 570805d6ceb4613f0efc8095f08ce79d90514f62
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 531c3c00ddcc0cc8299875392832fb1dad9f49d8
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="object-pipeline"></a>Pipeline d’objet
-Les pipelines agissent comme une série de segments de canal connectés. Les éléments se déplaçant dans pipeline passent par chaque segment. Pour créer un pipeline dans Windows PowerShell, vous interconnectez des commandes à l’aide que l’opérateur barre verticale « | » (pipe). La sortie de chaque commande est utilisée en tant qu’entrée pour la commande suivante.
+Les pipelines agissent comme une série de segments de canal connectés. Les éléments se déplaçant dans pipeline passent par chaque segment. Pour créer un pipeline dans Windows PowerShell, vous interconnectez des commandes à l’aide que l’opérateur barre verticale « | » (pipe). La sortie de chaque commande est utilisée en tant qu’entrée pour la commande suivante.
 
 Les pipelines constituent indubitablement le concept plus important utilisé dans les interfaces de ligne de commande. Correctement utilisés, les pipelines non seulement réduisent l’effort que nécessite la saisie de commandes complexes, mais aussi facilitent l’affichage du flux de travail dans les commandes. Une caractéristique utile connexe des pipelines est que, comme ils opèrent sur chaque élément séparément, vous n’avez pas à les modifier selon qu’ils contiennent zéro, un ou plusieurs éléments. En outre, chaque commande dans un pipeline (appelée élément de pipeline) transmet généralement sa sortie à la commande suivante, élément par élément. Généralement, cela réduit la demande de ressources de commandes complexes, et permet de commencer à recevoir la sortie immédiatement.
 

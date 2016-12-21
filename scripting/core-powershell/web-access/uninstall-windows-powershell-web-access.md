@@ -1,23 +1,24 @@
 ---
-title: "Désinstaller Accès Web Windows PowerShell"
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: 9e03bca75eeb6acf3f1433a9baaed0c1674ab1be
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: "Désinstaller Accès Web Windows PowerShell"
+ms.technology: powershell
+ms.openlocfilehash: 1673892b5430f8c49b6ea5ffacf8be0e9e2b3fdf
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 #  <a name="uninstall-windows-powershell-web-access"></a>désinstaller Accès Web Windows PowerShell
 
-Mise à jour : 24 juin 2013
+Mise à jour : 24 juin 2013
 
-S’applique à : Windows Server 2012 R2, Windows Server 2012
+S’applique à : Windows Server 2012 R2, Windows Server 2012
 
-Suivez les étapes de cette rubrique pour supprimer le site web et l’application Accès Web Windows PowerShell du serveur de passerelle qui exécute Windows Server 2012 R2 ou Windows Server 2012. Avant de commencer, informez les utilisateurs de la console Web de la suppression du site Web.
+Suivez les étapes de cette rubrique pour supprimer le site web et l’application Accès Web Windows PowerShell du serveur de passerelle qui exécute Windows Server 2012 R2 ou Windows Server 2012. Avant de commencer, informez les utilisateurs de la console Web de la suppression du site Web.
 
 <a href="" id="BKMK_uninstall"></a>
 
@@ -25,7 +26,7 @@ Suivez les étapes de cette rubrique pour supprimer le site web et l’applicati
 
 Avant de désinstaller Accès Web Windows PowerShell du serveur de passerelle, exécutez l’applet de commande <span class="code">Uninstall-PswaWebApplication</span>pour supprimer le site web et les applications web Accès Web Windows PowerShell ou utilisez la procédure du Gestionnaire des services Internet, [Pour supprimer le site web et les applications web Accès Web Windows PowerShell à l’aide du Gestionnaire de services Internet](#BKMK_delsite).
 
-La désinstallation d’Accès Web Windows PowerShell ne désinstalle pas IIS ni d’autres fonctionnalités automatiquement installées, car Accès Web Windows PowerShell en a besoin pour s’exécuter. Le processus de désinstallation laisse les fonctionnalités installées dont dépendait Accès Web Windows PowerShell ; vous pouvez désinstaller ces fonctionnalités séparément si besoin.
+La désinstallation d’Accès Web Windows PowerShell ne désinstalle pas IIS ni d’autres fonctionnalités automatiquement installées, car Accès Web Windows PowerShell en a besoin pour s’exécuter. Le processus de désinstallation laisse les fonctionnalités installées dont dépendait Accès Web Windows PowerShell ; vous pouvez désinstaller ces fonctionnalités séparément si besoin.
 
 <a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Désinstallation (rapide) recommandée</span></a>
 <a href="/en-us/library/dn282396(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
@@ -149,7 +150,7 @@ Les procédures de cette section vous permettent de désinstaller l’applicatio
 
 2.  Dans le menu **Gérer**, cliquez sur **Supprimer des rôles et fonctionnalités**.
 
-3.  Dans la page **Sélectionner le serveur de destination**, sélectionnez le serveur ou le disque dur virtuel hors connexion sur lequel vous souhaitez supprimer la fonctionnalité. Pour sélectionner un disque dur virtuel hors connexion, choisissez d’abord le serveur sur lequel monter le disque dur virtuel, puis sélectionnez le fichier VHD. Une fois que vous avez sélectionné le serveur de destination, cliquez sur **Suivant**.
+3.  Dans la page **Sélectionner le serveur de destination**, sélectionnez le serveur ou le disque dur virtuel hors connexion sur lequel vous souhaitez supprimer la fonctionnalité. Pour sélectionner un disque dur virtuel hors connexion, choisissez d’abord le serveur sur lequel monter le disque dur virtuel, puis sélectionnez le fichier VHD. Une fois que vous avez sélectionné le serveur de destination, cliquez sur **Suivant**.
 
 4.  Cliquez de nouveau sur **Suivant** pour passer à la page **Supprimer des fonctionnalités**.
 
@@ -163,14 +164,14 @@ Les procédures de cette section vous permettent de désinstaller l’applicatio
 ------------------------------------------------------------------------
 
 [Installer et utiliser Accès Web Windows PowerShell](https://technet.microsoft.com/en-us/library/hh831611(v=ws.11).aspx)
-[Aide du Gestionnaire des services Internet 7.0](https://technet.microsoft.com/library/cc732664.aspx)
+[Aide du Gestionnaire des services Internet 7.0](https://technet.microsoft.com/library/cc732664.aspx)
 
 <span>Afficher :</span> Hérité Protégé
 
 <span class="stdr-votetitle">Cette page vous a-t-elle été utile ?</span>
 Oui Non
 
-Vous avez d’autres commentaires ?
+Vous avez d’autres commentaires ?
 
 <span class="stdr-count"><span class="stdr-charcnt">1500</span> caractères restants</span> Soumettre Ignorer
 
@@ -186,11 +187,11 @@ Vous avez d’autres commentaires ?
 
 Faites-nous part de votre expérience...
 
-La page s’est elle chargée rapidement ?
+La page s’est elle chargée rapidement ?
 
 <span> Oui<span> </span></span> <span> Non<span> </span></span>
 
-Êtes-vous satisfait de la conception de la page ?
+Êtes-vous satisfait de la conception de la page ?
 
 <span> Oui<span> </span></span> <span> Non<span> </span></span>
 

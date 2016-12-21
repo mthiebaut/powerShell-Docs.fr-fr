@@ -1,15 +1,16 @@
 ---
-title: "Changement de l’état de l’ordinateur"
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: "Changement de l’état de l’ordinateur"
+ms.technology: powershell
 ms.assetid: 8093268b-27f8-4a49-8871-142c5cc33f01
-ms.openlocfilehash: 60652b67a98179f0dab137e3360766d2e6936d81
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: e743bd7f893427f62a37d295c26c1b5aea2185f0
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="changing-computer-state"></a>Changement de l’état de l’ordinateur
@@ -31,19 +32,19 @@ Pour arrêter des sessions particulières sur un serveur Terminal Server, utilis
 ### <a name="logging-off-the-current-session"></a>Déconnexion de la session en cours
 Pour vous déconnecter d’une session sur le système local, vous pouvez utiliser différentes techniques. La solution la plus simple consiste à utiliser l’outil en ligne de commande Bureau à distance/Services Terminal Server, **logoff.exe** (pour plus d’informations, à l’invite Windows PowerShell, tapez **logoff /?**). Pour fermer la session active, tapez **logoff** sans argument.
 
-Vous pouvez également recouvrir à l’outil **shutdown.exe** avec son option logoff :
+Vous pouvez également recouvrir à l’outil **shutdown.exe** avec son option logoff :
 
 ```
 shutdown.exe -l
 ```
 
-Une troisième option consiste à utiliser WMI. La classe Win32_OperatingSystem dispose d’une méthode Win32Shutdown. L’appel de la méthode avec l’indicateur 0 déclenche la fermeture de session :
+Une troisième option consiste à utiliser WMI. La classe Win32_OperatingSystem dispose d’une méthode Win32Shutdown. L’appel de la méthode avec l’indicateur 0 déclenche la fermeture de session :
 
 ```
 (Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(0)
 ```
 
-Pour plus d’informations et pour découvrir d’autres fonctionnalités de la méthode Win32Shutdown, voir « Méthode Win32Shutdown de la classe Win32_OperatingSystem » dans MSDN.
+Pour plus d’informations et pour découvrir d’autres fonctionnalités de la méthode Win32Shutdown, voir « Méthode Win32Shutdown de la classe Win32_OperatingSystem » dans MSDN.
 
 ### <a name="shutting-down-or-restarting-a-computer"></a>Arrêt ou redémarrage d’un ordinateur
 L’arrêt et le redémarrage d’ordinateurs sont généralement des tâches de même type. Les outils permettant d’arrêter un ordinateur permettent généralement aussi de le redémarrer, et inversement. Deux options simples permettent de redémarrer un ordinateur à partir de Windows PowerShell. Utilisez Tsshutdn.exe ou Shutdown.exe avec des arguments appropriés. Vous pouvez obtenir des informations d’utilisation détaillées à partir de **tsshutdn.exe /?** ou de **shutdown.exe /?**.

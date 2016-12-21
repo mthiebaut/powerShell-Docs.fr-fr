@@ -1,15 +1,16 @@
 ---
-title: Autres objets de script utiles
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: Autres objets de script utiles
+ms.technology: powershell
 ms.assetid: 4d781196-720b-4ccc-90d2-c570e5e719f5
-ms.openlocfilehash: 114f7b60bf44e0cfc2c9e2bad223552cb141d145
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: a1e3ad310303fe02ee61bcd6d2681df6d91a4924
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="other-useful-scripting-objects"></a>Autres objets de script utiles
@@ -43,8 +44,8 @@ $psLocalHelp | Format-List
 
 |||
 |-|-|
-|Clé : Add-Computer|Valeur : WindowsPowerShellHelp.chm::/html/093f660c-b8d5-43cf-aa0c-54e5e54e76f9.htm|
-|Clé : Add-Content|Valeur : WindowsPowerShellHelp.chm::/html/0c836a1b-f389-4e9a-9325-0f415686d194.htm|
+|Clé : Add-Computer|Valeur : WindowsPowerShellHelp.chm::/html/093f660c-b8d5-43cf-aa0c-54e5e54e76f9.htm|
+|Clé : Add-Content|Valeur : WindowsPowerShellHelp.chm::/html/0c836a1b-f389-4e9a-9325-0f415686d194.htm|
 
  Le script suivant ajoute une entrée à la liste.
 
@@ -64,8 +65,8 @@ $psOnlineHelp | Format-List
 
 |||
 |-|-|
-|Clé : Add-Computer|Valeur : http://go.microsoft.com/fwlink/p/?LinkID=135194|
-|Clé : Add-Content|Valeur : http://go.microsoft.com/fwlink/p/?LinkID=113278|
+|Clé : Add-Computer|Valeur : http://go.microsoft.com/fwlink/p/?LinkID=135194|
+|Clé : Add-Content|Valeur : http://go.microsoft.com/fwlink/p/?LinkID=113278|
 
  Le script suivant ajoute une entrée à la liste.
 

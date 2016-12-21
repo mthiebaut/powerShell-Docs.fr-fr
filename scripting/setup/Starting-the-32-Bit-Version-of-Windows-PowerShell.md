@@ -1,15 +1,16 @@
 ---
-title: "Démarrage de la version 32 bits de Windows PowerShell"
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: "Démarrage de la version 32 bits de Windows PowerShell"
+ms.technology: powershell
 ms.assetid: 12b31890-2609-4a76-8c24-0ebe78084f50
-ms.openlocfilehash: e6e9d951b2dd10637bbf2c6afda774cd9ba32a8d
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 691818e242600234564479aa97255567760139e0
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="starting-the-32-bit-version-of-windows-powershell"></a>Démarrage de la Version 32 bits de Windows PowerShell
@@ -58,3 +59,4 @@ Pour démarrer une version 32 bits de Windows PowerShell, procédez de l’une 
 -   Dans l’écran **Démarrer** ou sur le Bureau, tapez **PowerShell (x86)**, puis cliquez sur **Windows PowerShell (x86)**.
 
 -   Via la ligne de commande, entrez : `%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe`
+

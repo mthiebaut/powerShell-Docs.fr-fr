@@ -1,28 +1,29 @@
 ---
-title: "Découverte de Windows PowerShell ISE"
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: "Découverte de Windows PowerShell ISE"
+ms.technology: powershell
 ms.assetid: e0d2c6e8-5126-40e7-a1e1-d1cff29fe94a
-ms.openlocfilehash: 590996f2db730a7841eb7a85036e4f36e59e46ff
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 8d2c803386233390440972b66a6d616b58439a6b
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="exploring-the-windows-powershell-ise"></a>Découverte de Windows PowerShell ISE
 Vous pouvez utiliser l’environnement d’écriture de scripts intégré (ISE) de Windows PowerShell® pour créer, exécuter et déboguer des commandes et des scripts. Windows PowerShell ISE se compose d’une barre de menus, d’onglets Windows PowerShell, d’une barre d’outils, d’onglets de script, d’un volet Script, d’un volet Console, d’une barre d’état, d’un curseur de taille de texte et d’une aide contextuelle.
 
 > [!NOTE]
-> Depuis Windows PowerShell ISE 3.0, les volets Commande et Sortie ont été combinés en un seul volet Console.
+> Depuis Windows PowerShell ISE 3.0, les volets Commande et Sortie ont été combinés en un seul volet Console.
 
 ## <a name="menu-bar"></a>Barre de menus
-La barre de menus contient les menus **Fichier**, **Modifier**, **Affichage**, **Outils**, **Débogage**, **Modules complémentaires** et **Aide**. Les boutons dans les menus permettent d’effectuer des tâches liées à l’écriture et à l’exécution de scripts, ainsi qu’à l’exécution de commandes dans Windows PowerShell ISE. En outre, il est possible de placer un [outil complémentaire](../../core-powershell/ise/The-ISEAddOnTool-Object.md) sur la barre de menus en exécutant des scripts qui utilisent le [Modèle objet de script Windows PowerShell ISE](../../core-powershell/ise/The-Windows-PowerShell-ISE-Scripting-Object-Model.md).
+La barre de menus contient les menus **Fichier**, **Modifier**, **Affichage**, **Outils**, **Débogage**, **Modules complémentaires** et **Aide**. Les boutons dans les menus permettent d’effectuer des tâches liées à l’écriture et à l’exécution de scripts, ainsi qu’à l’exécution de commandes dans Windows PowerShell ISE. En outre, il est possible de placer un [outil complémentaire](../../core-powershell/ise/The-ISEAddOnTool-Object.md) sur la barre de menus en exécutant des scripts qui utilisent le [Modèle objet de script Windows PowerShell ISE](../../core-powershell/ise/The-Windows-PowerShell-ISE-Scripting-Object-Model.md).
 
 > [!NOTE]
-> Dans Windows PowerShell ISE 2.0, les menus **Outils** et **Modules complémentaires** n’étaient pas présents.
+> Dans Windows PowerShell ISE 2.0, les menus **Outils** et **Modules complémentaires** n’étaient pas présents.
 
 ## <a name="windows-powershell-tabs"></a>Onglets Windows PowerShell
 Un onglet Windows PowerShell est un environnement dans lequel s’exécute un script Windows PowerShell. Vous pouvez ouvrir de nouveaux onglets Windows PowerShell dans Windows PowerShell ISE pour créer des environnements distincts sur votre ordinateur local ou sur des ordinateurs distants. Vous pouvez avoir au maximum huit onglets PowerShell ouverts simultanément.
@@ -74,5 +75,5 @@ Augmente ou diminue la taille du texte à l’écran.
 L’aide sur Windows PowerShell ISE est disponible sur le web dans la bibliothèque TechNet. Vous pouvez accéder à l’aide en cliquant sur **Aide Windows PowerShell ISE** dans le menu **Aide**, ou en appuyant sur la touche F1 n’importe où, sauf quand le curseur est positionné sur un nom d’applet de commande dans le volet Script ou Console. À partir du menu **Aide** vous pouvez également exécuter l’applet de commande Update-Help et afficher la fenêtre Commande qui vous aide à construire des commandes en affichant tous les paramètres disponibles pour une applet de commande, et en vous permettant d’entrer les paramètres dans un formulaire simple d’utilisation.
 
 ## <a name="see-also"></a>Voir aussi
-- [Utilisation de Windows PowerShell ISE](../../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
+- [Utilisation de Windows PowerShell ISE](../../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
 

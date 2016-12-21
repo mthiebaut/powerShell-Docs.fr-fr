@@ -1,15 +1,16 @@
 ---
-title: Objet ISEFile
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: Objet ISEFile
+ms.technology: powershell
 ms.assetid: 1c6d91f3-c556-42a2-a017-79b6b7b4b7db
-ms.openlocfilehash: 1bfccad79ffbaeb12b39e156fa2cde3d58d01e7f
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: fe0b2396de747bf88e780df505f5f7991e3e0b6f
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="the-isefile-object"></a>Objet ISEFile
@@ -18,7 +19,7 @@ translationtype: HT
 ## <a name="methods"></a>Méthodes
 
 ###  <a name="a-namesave-overridea-save-saveencoding-"></a><a name="save-override"></a> Save\( \[saveEncoding\] \)
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Enregistre le fichier sur le disque.
 
@@ -26,7 +27,7 @@ translationtype: HT
  Paramètre facultatif d’encodage de caractères à utiliser pour le fichier enregistré. La valeur par défaut est **UTF8**.
 
  **Exceptions**
- -   **System.IO.IOException** : le fichier n’a pas pu être enregistré.
+ -   **System.IO.IOException** : le fichier n’a pas pu être enregistré.
 
 ```
 # Save the file using the default encoding (UTF8)
@@ -42,21 +43,21 @@ $myfile.Encoding
 ```
 
 ###  <a name="a-namesaveasa-saveasfilename-saveencoding"></a><a name="saveas"></a> SaveAs\(filename, \[saveEncoding\]\)
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Enregistre le fichier avec le nom de fichier et l’encodage spécifiés.
 
- **filename** : chaîne Nom à utiliser pour enregistrer le fichier.
+ **filename** : chaîne Nom à utiliser pour enregistrer le fichier.
 
  **\[saveEncoding\]** (facultatif) [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx)
  Paramètre facultatif d’encodage de caractères à utiliser pour le fichier enregistré. La valeur par défaut est **UTF8**.
 
  **Exceptions**
- -   **System.ArgumentNullException** : le paramètre **filename** est Null.
+ -   **System.ArgumentNullException** : le paramètre **filename** est Null.
 
--   **System.ArgumentException** : le paramètre **filename** est vide.
+-   **System.ArgumentException** : le paramètre **filename** est vide.
 
--   **System.IO.IOException** : le fichier n’a pas pu être enregistré.
+-   **System.IO.IOException** : le fichier n’a pas pu être enregistré.
 
 ```
 # Save the file with a full path and name. 
@@ -70,7 +71,7 @@ $psIse.CurrentFile.SaveAs( $fullPath, [System.Text.Encoding]::UTF8 )
 ## <a name="properties"></a>Propriétés
 
 ###  <a name="a-namedisplaynamea-displayname"></a><a name="Displayname"></a> DisplayName
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui obtient la chaîne contenant le nom complet de ce fichier. Le nom est affiché dans l’onglet **Fichier** en haut de l’éditeur. La présence d’un astérisque \(\*\) à la fin du nom indique que le fichier comporte des modifications qui n’ont pas encore été enregistrées.
 
@@ -81,7 +82,7 @@ $psIse.CurrentFile.DisplayName
 ```
 
 ###  <a name="a-nameeditora-editor"></a><a name="Editor"></a> Editor
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui obtient l’[objet editor](The-ISEEditor-Object.md) utilisé pour le fichier spécifié.
 
@@ -92,7 +93,7 @@ $psIse.CurrentFile.Editor.Text
 ```
 
 ###  <a name="a-nameencodinga-encoding"></a><a name="Encoding"></a> Encoding
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui obtient l’encodage du fichier initial. Il s’agit d’un objet **System.Text.Encoding**.
 
@@ -103,7 +104,7 @@ $psIse.CurrentFile.Encoding
 ```
 
 ###  <a name="a-namefullpatha-fullpath"></a><a name="FullPath"></a> FullPath
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui obtient la chaîne spécifiant le chemin complet du fichier ouvert.
 
@@ -114,7 +115,7 @@ $psIse.CurrentFile.FullPath
 ```
 
 ###  <a name="a-nameissaveda-issaved"></a><a name="IsSaved"></a> IsSaved
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété booléenne en lecture seule qui renvoie la valeur **$true** si le fichier a été enregistré depuis sa dernière modification.
 
@@ -126,7 +127,7 @@ $myfile.IsSaved
 ```
 
 ###  <a name="a-nameisuntitleda-isuntitled"></a><a name="IsUntitled"></a> IsUntitled
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui renvoie la valeur **$true** si le fichier n’a pas encore de titre.
 

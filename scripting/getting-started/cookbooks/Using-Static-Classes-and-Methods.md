@@ -1,19 +1,20 @@
 ---
-title: "Utilisation de classes et méthodes statiques"
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: "Utilisation de classes et méthodes statiques"
+ms.technology: powershell
 ms.assetid: 418ad766-afa6-4b8c-9a44-471889af7fd9
-ms.openlocfilehash: 1d8b45bbfe14bdca7ddfa3fd26d1e66a0a82efbc
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 999b87744ae8478658b2cc33b48956594f48588d
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="using-static-classes-and-methods"></a>Utilisation de classes et méthodes statiques
-Certaines classes de .NET Framework ne peuvent pas être créées à l’aide de l’applet de commande **New-Object**. Par exemple, si vous essayez de créer un objet **System.Environment** ou **System.Math** avec l’applet de commande **New-Object**, vous obtenez les messages d’erreur suivants :
+Certaines classes de .NET Framework ne peuvent pas être créées à l’aide de l’applet de commande **New-Object**. Par exemple, si vous essayez de créer un objet **System.Environment** ou **System.Math** avec l’applet de commande **New-Object**, vous obtenez les messages d’erreur suivants :
 
 ```
 PS> New-Object System.Environment
@@ -34,7 +35,7 @@ Ces erreurs se produisent parce qu’il n’existe aucun moyen de créer un obje
 En règle générale, la première étape de l’utilisation d’un objet dans Windows PowerShell consiste à utiliser l’applet de commande Get-Member pour découvrir les membres qu’il contient. Avec des classes statiques, le processus est un peu différent, car la classe réelle n’est pas un objet.
 
 #### <a name="referring-to-the-static-systemenvironment-class"></a>Référence à la classe statique System.Environment
-Vous pouvez faire référence à une classe statique en entourant le nom de la classe de crochets. Par exemple, vous pouvez faire référence à la classe **System.Environment** en tapant le nom entre crochets. Cela a pour effet d’afficher des informations de type générique :
+Vous pouvez faire référence à une classe statique en entourant le nom de la classe de crochets. Par exemple, vous pouvez faire référence à la classe **System.Environment** en tapant le nom entre crochets. Cela a pour effet d’afficher des informations de type générique :
 
 ```
 PS> [System.Environment]
@@ -45,11 +46,11 @@ True     False    Environment                              System.Object
 ```
 
 > [!NOTE]
-> Comme mentionné précédemment, Windows PowerShell ajoute automatiquement « **System.** » aux noms de type lorsque vous utilisez l’applet de commande **New-Object**. La même chose se produisant en cas d’utilisation d’un nom de type entre crochets, vous pouvez spécifier **\[System.Environment]** en tant que **\[Environment]**.
+> Comme mentionné précédemment, Windows PowerShell ajoute automatiquement « **System.** » aux noms de type lorsque vous utilisez l’applet de commande **New-Object**. La même chose se produisant en cas d’utilisation d’un nom de type entre crochets, vous pouvez spécifier **\[System.Environment]** en tant que **\[Environment]**.
 
 La classe **System.Environment** contient des informations générales sur l’environnement de travail pour le processus actuel, c’est-à-dire powershell.exe lorsque vous travaillez dans Windows PowerShell.
 
-Si vous essayez d’afficher les détails de cette classe en tapant **\[System.Environment] | Get-Member**, le type d’objet est signalé comme étant **System.RuntimeType**, pas **System.Environment** :
+Si vous essayez d’afficher les détails de cette classe en tapant **\[System.Environment] | Get-Member**, le type d’objet est signalé comme étant **System.RuntimeType**, pas **System.Environment** :
 
 ```
 PS> [System.Environment] | Get-Member
@@ -57,7 +58,7 @@ PS> [System.Environment] | Get-Member
    TypeName: System.RuntimeType
 ```
 
-Pour afficher les membres statiques avec Get-Member, spécifiez le paramètre **Static** paramètre :
+Pour afficher les membres statiques avec Get-Member, spécifiez le paramètre **Static** paramètre :
 
 ```
 PS> [System.Environment] | Get-Member -Static
@@ -91,14 +92,14 @@ TickCount                               ExitCode
 Nous pouvons désormais sélectionner des propriétés à afficher à partir de System.Environment.
 
 #### <a name="displaying-static-properties-of-systemenvironment"></a>Affichage de propriétés statiques de System.Environment
-Les propriétés de System.Environment sont également statiques, et doivent être spécifiées d’une autre façon que des propriétés normales. Nous utilisons **::** pour indiquer à Windows PowerShell que nous souhaitons travailler avec une méthode ou propriété statique. Pour afficher la commande utilisée pour lancer Windows PowerShell, nous vérifions la propriété **CommandLine** en tapant ce qui suit :
+Les propriétés de System.Environment sont également statiques, et doivent être spécifiées d’une autre façon que des propriétés normales. Nous utilisons **::** pour indiquer à Windows PowerShell que nous souhaitons travailler avec une méthode ou propriété statique. Pour afficher la commande utilisée pour lancer Windows PowerShell, nous vérifions la propriété **CommandLine** en tapant ce qui suit :
 
 ```
 PS> [System.Environment]::Commandline
 "C:\Program Files\Windows PowerShell\v1.0\powershell.exe"
 ```
 
-Pour vérifier la version du système d’exploitation, affichez la propriété OSVersion en tapant ce qui suit :
+Pour vérifier la version du système d’exploitation, affichez la propriété OSVersion en tapant ce qui suit :
 
 ```
 PS> [System.Environment]::OSVersion
@@ -108,7 +109,7 @@ PS> [System.Environment]::OSVersion
             Win32NT Service Pack 2      5.1.2600.131072     Microsoft Windows...
 ```
 
-Nous pouvons vérifier si l’ordinateur est en cours d’arrêt en affichant la propriété **HasShutdownStarted** :
+Nous pouvons vérifier si l’ordinateur est en cours d’arrêt en affichant la propriété **HasShutdownStarted** :
 
 ```
 PS> [System.Environment]::HasShutdownStarted
@@ -160,7 +161,7 @@ Tanh            Method     static System.Double Tanh(Double value)
 Truncate        Method     static System.Decimal Truncate(Decimal d), static...
 ```
 
-Cette opération affiche plusieurs méthodes mathématiques. Voici une liste de commandes qui illustrent le fonctionnement de certaines méthodes courantes :
+Cette opération affiche plusieurs méthodes mathématiques. Voici une liste de commandes qui illustrent le fonctionnement de certaines méthodes courantes :
 
 ```
 PS> [System.Math]::Sqrt(9)

@@ -1,15 +1,16 @@
 ---
-title: Objet ISEMenuItemCollection
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: Objet ISEMenuItemCollection
+ms.technology: powershell
 ms.assetid: 0c0f5484-3320-408e-8534-5bd1c8e48512
-ms.openlocfilehash: 89f62e1dc70886bd4c3bf84a3ffc27dfdcba7a3e
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 45e9123df5f22f37d2a76e49db6df5aa98824e1c
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="the-isemenuitemcollection-object"></a>Objet ISEMenuItemCollection
@@ -18,7 +19,7 @@ translationtype: HT
 ## <a name="method"></a>Méthode
 
 ### <a name="addstring-displayname-systemmanagementautomationscriptblock-action-systemwindowsinputkeygesture-shortcut-"></a>Add\(string DisplayName, System.Management.Automation.ScriptBlock Action, System.Windows.Input.KeyGesture Shortcut \)
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Ajoute un élément de menu à la collection.
 
@@ -41,7 +42,7 @@ $menuAdded = $psISE.CurrentPowerShellTab.AddOnsMenu.SubMenus.Add("_Process",{get
 ```
 
 ### <a name="clear"></a>Clear\(\)
-  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+  Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Supprime tous les sous-menus de l’élément de menu.
 

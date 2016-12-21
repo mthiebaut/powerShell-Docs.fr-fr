@@ -1,15 +1,16 @@
 ---
-title: "Présentation des concepts importants de Windows PowerShell"
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: "Présentation des concepts importants de Windows PowerShell"
+ms.technology: powershell
 ms.assetid: 3e601e38-4520-4578-a48d-b6779f1d35ee
-ms.openlocfilehash: b18fbf9ac462deece2bdef6743afbda2ea194c42
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 00a04da3f463b50c64b18d3bbaf17fc22f1e9e3b
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="understanding-important-windows-powershell-concepts"></a>Présentation des concepts importants de Windows PowerShell
@@ -35,7 +36,7 @@ Lorsque vous tapez une commande, Windows PowerShell traite toujours directement 
 
 Les outils en ligne de commande traditionnels ont leurs propres modes de demande et d’affichage de l’aide. Certains outils en ligne de commande utilisent **/?** pour déclencher l’affichage de l’aide. D’autres utilisent **-?**, **/H**, voire **//**. Certains affichent l’aide dans une fenêtre d’interface graphique utilisateur, plutôt que dans l’affichage de la console. Certains outils complexes, tels que des programmes de mise à jour d’application, décompressent des fichiers internes avant d’afficher leur aide. Si vous utilisez un paramètre incorrect, l’outil peut ignorer ce que vous avez tapé et commencer à exécuter une tâche automatiquement.
 
-Lorsque vous entrez une commande dans Windows PowerShell, tout ce que vous saisissez est automatiquement analysé et pré-traité. Si vous utilisez le paramètre **-?** avec une applet de commande Windows PowerShell, il signifie toujours « afficher l’aide pour cette commande ». Les développeurs d’applets de commande n’ont pas besoin d’analyser la commande ; il leur suffit de fournir le texte d’aide.
+Lorsque vous entrez une commande dans Windows PowerShell, tout ce que vous saisissez est automatiquement analysé et pré-traité. Si vous utilisez le paramètre **-?** avec une applet de commande Windows PowerShell, il signifie toujours « afficher l’aide pour cette commande ». Les développeurs d’applets de commande n’ont pas besoin d’analyser la commande ; il leur suffit de fournir le texte d’aide.
 
 Il est important de comprendre que les fonctionnalités d’aide de Windows PowerShell sont disponibles même lorsque vous exécutez des outils en ligne de commande traditionnels dans Windows PowerShell. Windows PowerShell traite les paramètres et transmet les résultats aux outils externes.
 
