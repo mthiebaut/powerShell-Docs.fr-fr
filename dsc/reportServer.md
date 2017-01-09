@@ -7,8 +7,8 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: 81b8a150e35728d35af34b75493f9288c39a411d
-ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
+ms.openlocfilehash: 17b56a0ce25d3154e21f18269926a0c41aae833b
+ms.sourcegitcommit: d7b28f28a09caa7fa48b0f66c5c437f128ce316f
 translationtype: HT
 ---
 # <a name="using-a-dsc-report-server"></a>Utilisation d’un serveur de rapports DSC
@@ -94,7 +94,7 @@ PullClientConfig
 
 ## <a name="getting-report-data"></a>Obtention des données du rapport
 
-Les rapports envoyés au serveur collecteur sont entrés dans une base de données sur le serveur. Les rapports sont disponibles par le biais d’appels au service web. Pour récupérer des rapports pour un nœud spécifique, envoyez une demande HTTP au service web de rapports sous la forme suivante : `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentID= 'MyNodeAgentId')/Reports` où `MyNodeAgentId` est l’ID de l’agent du nœud pour lequel vous voulez obtenir des rapports. Vous pouvez obtenir l’ID de l’agent d’un nœud en appelant [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx) sur ce nœud.
+Les rapports envoyés au serveur collecteur sont entrés dans une base de données sur le serveur. Les rapports sont disponibles par le biais d’appels au service web. Pour récupérer des rapports pour un nœud spécifique, envoyez une demande HTTP au service web de rapports sous la forme suivante : `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId= 'MyNodeAgentId')/Reports` où `MyNodeAgentId` est l’ID de l’agent du nœud pour lequel vous voulez obtenir des rapports. Vous pouvez obtenir l’ID de l’agent d’un nœud en appelant [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx) sur ce nœud.
 
 Les rapports sont retournés sous forme de tableau d’objets JSON.
 
@@ -104,7 +104,7 @@ Le script suivant retourne les rapports pour le nœud sur lequel il est exécut�
 function GetReport
 {
     param($AgentId = "$((glcm).AgentId)", $serviceURL = "http://CONTOSO-REPORT:8080/PSDSCPullServer.svc")
-    $requestUri = "$serviceURL/Nodes(AgentID= '$AgentId')/Reports"
+    $requestUri = "$serviceURL/Nodes(AgentId= '$AgentId')/Reports"
     $request = Invoke-WebRequest -Uri $requestUri  -ContentType "application/json;odata=minimalmetadata;streaming=true;charset=utf-8" `
                -UseBasicParsing -Headers @{Accept = "application/json";ProtocolVersion = "2.0"} `
                -ErrorAction SilentlyContinue -ErrorVariable ev

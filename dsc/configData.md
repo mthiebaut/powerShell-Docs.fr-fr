@@ -7,17 +7,17 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: 72555a36819c9717fafdd3daede8fa2f02c692b2
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: f8f8ef06cd79af294bad7bb8cf3d6676ab9a69bc
+ms.sourcegitcommit: f06ef671c0a646bdd277634da89cc11bc2a78a41
 translationtype: HT
 ---
 # <a name="separating-configuration-and-environment-data"></a>Séparation des données de configuration et d’environnement
 
->S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
+>S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
 À l’aide du paramètre DSC intégré **ConfigurationData**, vous pouvez définir les données qui peuvent être utilisées dans une configuration. Cela vous permet de créer une configuration unique utilisée pour plusieurs nœuds ou différents environnements. Par exemple, si vous développez une application, vous pouvez utiliser une seule configuration pour les environnements de développement et de production et utiliser les données de configuration pour spécifier les données de chaque environnement.
 
-Examinons un exemple très simple pour voir comment cela fonctionne. Nous allons créer une configuration unique qui garantit la présence d’**IIS** sur certains nœuds et la présence d’**Hyper-V** sur d’autres : 
+Examinons un exemple très simple pour voir comment cela fonctionne. Nous allons créer une configuration unique qui garantit la présence d’**IIS** sur certains nœuds et la présence d’**Hyper-V** sur d’autres : 
 
 ```powershell
 Configuration MyDscConfiguration {
@@ -50,7 +50,7 @@ $MyData =
 
         @{
             NodeName    = 'VM-2'
-            FeatureName = 'VMHost'
+            Role = 'VMHost'
         }
     )
 }
@@ -66,7 +66,7 @@ Voyons maintenant en détail comment cela fonctionne.
 
 Une configuration DSC prend un paramètre nommé **ConfigurationData**, que vous spécifiez lorsque vous compilez la configuration. Pour plus d’informations sur la compilation de configurations, voir [Configurations DSC](configurations.md).
 
-Le paramètre **ConfigurationData** est une table de hachage qui doit contenir au moins une clé nommée **AllNodes**. Il peut également avoir d’autres clés :
+Le paramètre **ConfigurationData** est une table de hachage qui doit contenir au moins une clé nommée **AllNodes**. Il peut également avoir d’autres clés :
 
 ```powershell
 $MyData = 
@@ -76,7 +76,7 @@ $MyData =
 }
 ```
 
-La valeur de la clé **AllNodes** est un tableau. Chaque élément de ce tableau est également une table de hachage qui doit contenir au moins une clé nommée **NodeName** :
+La valeur de la clé **AllNodes** est un tableau. Chaque élément de ce tableau est également une table de hachage qui doit contenir au moins une clé nommée **NodeName** :
 
 ```powershell
 $MyData = 
@@ -102,7 +102,7 @@ $MyData =
 }
 ```
 
-Vous pouvez ajouter d’autres clés à chaque table de hachage :
+Vous pouvez ajouter d’autres clés à chaque table de hachage :
 
 ```powershell
 $MyData = 
@@ -131,7 +131,7 @@ $MyData =
 }
 ```
 
-Pour appliquer une propriété à tous les nœuds, vous pouvez créer un membre du tableau **AllNodes** dont un **NodeName** a la valeur `*`. Par exemple, pour attribuer la propriété `LogPath` à tous les nœuds, vous pouvez procéder ainsi :
+Pour appliquer une propriété à tous les nœuds, vous pouvez créer un membre du tableau **AllNodes** dont un **NodeName** a la valeur `*`. Par exemple, pour attribuer la propriété `LogPath` à tous les nœuds, vous pouvez procéder ainsi :
 
 ```powershell
 $MyData = 
@@ -174,7 +174,7 @@ Ceci équivaut à ajouter une propriété portant le nom `LogPath` avec la valeu
 
 Vous pouvez définir **ConfigurationData** soit comme variable dans le même fichier de script qu’une configuration (comme dans nos exemples précédents), soit dans un fichier .psd1 distinct. Pour définir **ConfigurationData** dans un fichier .psd1, créez un fichier contenant uniquement la table de hachage qui représente les données de configuration.
 
-Par exemple, vous pouvez créer un fichier nommé `MyData.psd1` avec le contenu suivant :
+Par exemple, vous pouvez créer un fichier nommé `MyData.psd1` avec le contenu suivant :
 
 ```powershell
 @{
@@ -193,7 +193,7 @@ Par exemple, vous pouvez créer un fichier nommé `MyData.psd1` avec le contenu 
 }
 ```
 
-Pour utiliser les données de configuration qui sont définies dans un fichier .psd1, vous passez le chemin et le nom de ce fichier comme valeur du paramètre **ConfigurationData** lors de la compilation de la configuration :
+Pour utiliser les données de configuration qui sont définies dans un fichier .psd1, vous passez le chemin et le nom de ce fichier comme valeur du paramètre **ConfigurationData** lors de la compilation de la configuration :
 
 ```powershell
 MyDscConfiguration -ConfigurationData .\MyData.psd1
@@ -201,7 +201,7 @@ MyDscConfiguration -ConfigurationData .\MyData.psd1
 
 ## <a name="using-configurationdata-variables-in-a-configuration"></a>Utilisation de variables ConfigurationData dans une configuration
 
-DSC fournit trois variables spéciales qui peuvent être utilisées dans un script de configuration : **$AllNodes**, **$Node** et **$ConfigurationData**.
+DSC fournit trois variables spéciales qui peuvent être utilisées dans un script de configuration : **$AllNodes**, **$Node** et **$ConfigurationData**.
 
 - **$AllNodes** fait référence à l’ensemble de la collection de nœuds définis dans **ConfigurationData**. Vous pouvez filtrer la collection **AllNodes** à l’aide de **.Where()** et **.ForEach()**.
 - **Node** fait référence à une entrée particulière dans la collection **AllNodes** une fois qu’elle a été filtrée à l’aide de **.Where()** ou **.ForEach()**.
@@ -213,7 +213,7 @@ Examinons un exemple complet qui utilise une configuration unique pour configure
 
 ### <a name="configuration-data-file"></a>Fichier de données de configuration
 
-Nous allons définir les données de l’environnement de développement et de production dans un fichier nommé `DevProdEnvData.psd1` comme suit :
+Nous allons définir les données de l’environnement de développement et de production dans un fichier nommé `DevProdEnvData.psd1` comme suit :
 
 ```powershell
 @{
