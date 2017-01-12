@@ -1,126 +1,103 @@
 ---
-description: 
-manager: dongill
+manager: carmonm
 ms.topic: article
-author: jpjofre
+author: rpsqrd
+ms.author: ryanpu
 ms.prod: powershell
 keywords: powershell,applet de commande,jea
-ms.date: 2016-06-22
-title: "conditions préalables"
+ms.date: 2016-12-05
+title: "Conditions préalables pour JEA"
 ms.technology: powershell
-ms.openlocfilehash: 6cd57c2fab63d2184cb5c792b63df99dbd782235
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: c709b3692705db327245e4e1b3fde800ac7d57a9
+ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
 translationtype: HT
 ---
 # <a name="prerequisites"></a>Conditions préalables
 
-## <a name="initial-state"></a>État initial
-Avant d’entamer cette section, vérifiez les points suivants :
+> S’applique à : Windows PowerShell 5.0
 
-1. JEA est disponible sur votre système. Consultez le fichier [LISEZMOI](./README.md) pour connaître les systèmes d’exploitation actuellement pris en charge et les téléchargements requis.
-2. Vous possédez des droits d’administrateur sur l’ordinateur sur lequel vous testez JEA.
-3. L’ordinateur est joint à un domaine.
-Consultez la section [Création d’un contrôleur de domaine](#creating-a-domain-controller) pour configurer rapidement un nouveau domaine sur un serveur si vous n’en avez pas déjà un.
+Just Enough Administration est une fonctionnalité incluse dans Windows PowerShell 5.0 et versions ultérieures.
+Cette rubrique décrit les conditions préalables à satisfaire pour pouvoir commencer à utiliser JEA.
+
+## <a name="install-jea"></a>Installer JEA
+JEA est disponible avec Windows PowerShell 5.0 et versions ultérieures. Mais, pour les fonctionnalités complètes, il est recommandé d’installer la dernière version de PowerShell disponible pour votre système.
+Le tableau suivant décrit la disponibilité de JEA sur chaque système d’exploitation pris en charge.
+
+Système d'exploitation          | Disponibilité de JEA
+--------------------------|------------------------------------------------------
+Windows Server 2016       | Préinstallé
+Windows Server 2012 R2    | Fonctionnalité complète avec WMF 5.1
+Windows Server 2012       | Fonctionnalité complète avec WMF 5.1
+Windows Server 2008 R2    | Fonctionnalité complète avec WMF 5.1
+Windows 10 1607           | Préinstallé
+Windows 10 1603, 1511     | Préinstallé, avec des fonctionnalités réduites<sup>1</sup>
+Windows 10 1507           | Non disponible
+Windows 8, 8.1            | Fonctionnalité complète avec WMF 5.1
+Windows 7                 | Fonctionnalité limitée<sup>2</sup> avec WMF 5.1
+
+<sup>1</sup> Les versions Windows 10 1511 et 1603 ne prennent pas en charge les fonctionnalités JEA suivantes : exécution en tant que compte de service administré de groupe, les règles d’accès conditionnel dans des configurations de session, le lecteur utilisateur et l’octroi de l’accès à des comptes d’utilisateurs locaux.
+Pour obtenir un support pour ces fonctionnalités, vous devez mettre à jour Windows à la version 1607 (Mise à jour anniversaire) ou à une version ultérieure.
+
+<sup>2</sup> JEA ne peut pas être configuré pour utiliser des comptes virtuels dans Windows 7.
+
+### <a name="check-which-version-of-powershell-is-installed"></a>Vérifier la version de PowerShell installée.
+Pour vérifier la version de PowerShell installée sur votre système, consultez la variable `$PSVersionTable` dans une invite de Windows PowerShell.
+
+```powershell
+PS C:\> $PSVersionTable.PSVersion
+
+Major  Minor  Build  Revision
+-----  -----  -----  --------
+5      1      14393  1000
+```
+
+Vous êtes prêt à utiliser JEA si la version *principale* est supérieure ou égale à **5**.
+Pour optimiser l’expérience et accéder à toutes les fonctionnalités les plus récentes, il est recommandé de mettre à niveau vers la version de PowerShell **5.1** lorsque cela est possible.
+
+### <a name="install-windows-management-framework"></a>Installer Windows Management Framework
+Si vous exécutez une version antérieure de PowerShell, vous devez mettre à jour votre système avec la dernière mise à jour de Windows Management Framework (WMF).
+Les packages de mise à jour et un lien vers les dernières notes de publication de WMF sont disponibles dans le [Centre de téléchargement](https://aka.ms/WMF5).
+
+Il est fortement recommandé de tester la compatibilité de votre charge de travail avec WMF avant de mettre à niveau tous vos serveurs.
+
+Les utilisateurs Windows 10 doivent installer les dernières mises à jour de la fonctionnalité pour obtenir la version actuelle de Windows PowerShell.
 
 ## <a name="enable-powershell-remoting"></a>Activer la communication à distance de PowerShell
-La gestion avec JEA s’effectue via la communication à distance de PowerShell.
-Exécutez la commande suivante dans une fenêtre PowerShell de l’administrateur pour vous assurer qu’elle est activée et correctement configurée :
+La communication à distance PowerShell est la base de JEA.
+Il est donc important d’assurer que la communication à distance PowerShell est activée et [correctement sécurisée](https://msdn.microsoft.com/en-us/powershell/scripting/setup/winrmsecurity) sur votre système avant de pouvoir utiliser JEA.
 
-```PowerShell
+La communication à distance PowerShell est activée par défaut dans Windows Server 2012, 2012 R2 et 2016.
+Vous pouvez activer la communication à distance PowerShell en exécutant la commande suivante dans une fenêtre PowerShell élevée.
+
+```powershell
 Enable-PSRemoting
 ```
 
-Si vous ne connaissez pas bien la communication à distance de PowerShell, n’hésitez pas à exécuter `Get-Help about_Remote` pour en savoir plus sur cet important concept fondamental.
-
-## <a name="identify-your-users-or-groups"></a>Identifier vos utilisateurs ou groupes
-Pour voir JEA en action, vous devez identifier les utilisateurs et groupes non-administrateurs que vous aller utiliser tout au long de ce guide.
-
-Si vous utilisez un domaine existant, identifiez ou créez quelques utilisateurs ou groupes non privilégiés.
-Vous donnerez à ces non-administrateurs un accès à JEA.
-Chaque fois que vous voyez la variable `$NonAdministrator` en haut d’un script, attribuez-la à vos utilisateurs ou groupes non-administrateurs.
-
-Si vous avez créé un domaine ex nihilo, cette tâche est beaucoup plus facile.
-Utilisez la section [Configurer des utilisateurs et des groupes](creating-a-domain-controller.md#set-up-users-and-groups) en annexe pour créer des utilisateurs et groupes non-administrateurs.
-Les valeurs par défaut de `$NonAdministrator` vont correspondre aux groupes créés dans cette section.
-
-## <a name="set-up-maintenance-role-capability-file"></a>Configurer le fichier de capacité de rôle de maintenance
-Exécutez les commandes suivantes dans PowerShell pour créer le fichier de capacité de rôle démonstration que nous allons utiliser pour la section suivante.
-Plus loin dans ce guide, vous allez découvrir à quoi sert ce fichier.
-
-```PowerShell
-# Fields in the role capability
-$MaintenanceRoleCapabilityCreationParams = @{
-    Author = 'Contoso Admin'
-    CompanyName = 'Contoso'
-    VisibleCmdlets = 'Restart-Service'
-    FunctionDefinitions =
-            @{ Name = 'Get-UserInfo'; ScriptBlock = { $PSSenderInfo } }
-}
-
-# Create the demo module, which will contain the maintenance Role Capability File
-New-Item -Path "$env:ProgramFiles\WindowsPowerShell\Modules\Demo_Module" -ItemType Directory
-New-ModuleManifest -Path "$env:ProgramFiles\WindowsPowerShell\Modules\Demo_Module\Demo_Module.psd1"
-New-Item -Path "$env:ProgramFiles\WindowsPowerShell\Modules\Demo_Module\RoleCapabilities" -ItemType Directory
-
-# Create the Role Capability file
-New-PSRoleCapabilityFile -Path "$env:ProgramFiles\WindowsPowerShell\Modules\Demo_Module\RoleCapabilities\Maintenance.psrc" @MaintenanceRoleCapabilityCreationParams
-```
-
-## <a name="create-and-register-demo-session-configuration-file"></a>Créer et inscrire le fichier de configuration de session de démonstration
-Exécutez les commandes suivantes pour créer et inscrire le fichier de configuration de session de démonstration que nous allons utiliser pour la section suivante.
-Plus loin dans ce guide, vous allez découvrir à quoi sert ce fichier.
-
-```PowerShell
-# Determine domain
-$domain = (Get-CimInstance -ClassName Win32_ComputerSystem).Domain
-
-# Replace with your non-admin group name
-$NonAdministrator = "$domain\JEA_NonAdmin_Operator"
-
-# Specify the settings for this JEA endpoint
-# Note: You will not be able to use a virtual account if you are using WMF 5.0 on Windows 7 or Windows Server 2008 R2
-$JEAConfigParams = @{
-    SessionType = 'RestrictedRemoteServer'
-    RunAsVirtualAccount = $true
-    RoleDefinitions = @{
-        $NonAdministrator = @{ RoleCapabilities = 'Maintenance' }
-    }
-    TranscriptDirectory = "$env:ProgramData\JEAConfiguration\Transcripts"
-}
-
-# Set up a folder for the Session Configuration files
-if (-not (Test-Path "$env:ProgramData\JEAConfiguration"))
-{
-    New-Item -Path "$env:ProgramData\JEAConfiguration" -ItemType Directory
-}
-
-# Specify the name of the JEA endpoint
-$sessionName = 'JEA_Demo'
-
-if (Get-PSSessionConfiguration -Name $sessionName -ErrorAction SilentlyContinue)
-{
-    Unregister-PSSessionConfiguration -Name $sessionName -ErrorAction Stop
-}
-
-New-PSSessionConfigurationFile -Path "$env:ProgramData\JEAConfiguration\JEADemo.pssc" @JEAConfigParams
-
-# Register the session configuration
-Register-PSSessionConfiguration -Name $sessionName -Path "$env:ProgramData\JEAConfiguration\JEADemo.pssc"
-```
-
-## <a name="enable-powershell-module-logging-optional"></a>Activer l’enregistrement des modules PowerShell (facultatif)
+## <a name="enable-powershell-module-and-script-block-logging-optional"></a>Activer la journalisation des modules PowerShell et des blocs de script (facultatif)
 Les étapes suivantes activent la journalisation de toutes les actions PowerShell sur votre système.
-Vous n’êtes pas obligé de l’activer pour que JEA fonctionne, mais elle s’avérera utile dans la section [Création de rapports sur JEA](reporting-on-jea.md).
+La journalisation des modules PowerShell n’est pas obligatoire pour JEA. Cependant, il est fortement recommandé de l’activer afin de vous assurer que les commandes utilisées par les utilisateurs sont journalisées dans un emplacement central.
 
-1. Ouvrez l'éditeur de stratégie de groupe locale
-2. Accédez à « Configuration de l’ordinateur\Modèles d’administration\Composants Windows\Windows PowerShell ».
-3. Double cliquez sur « Activer l’enregistrement des modules ».
-4. Cliquez sur « Activé ».
-5. Dans la section Options, cliquez sur « Afficher » en regard des noms de module.
-6. Tapez « \* » dans la fenêtre contextuelle. Ainsi, PowerShell enregistre les commandes de tous les modules.
-7. Cliquez sur OK et appliquez la stratégie.
+Vous pouvez configurer la stratégie de journalisation des modules PowerShell à l’aide de la stratégie de groupe.
 
-Remarque : Vous pouvez également activer la transcription PowerShell à l’échelle du système via la stratégie de groupe.
+1. Ouvrez l’éditeur d'objets de stratégie de groupe local sur une station de travail ou un objet de stratégie de groupe dans la console de gestion des stratégies de groupe sur un contrôleur de domaine Active Directory
+2. Accédez à **Configuration ordinateur\\Modèles d’administration\\Composants Windows\\Windows PowerShell**.
+3. Double cliquez sur **Activer l’enregistrement des modules**.
+4. Cliquez sur **Activé**.
+5. Dans la section Options, cliquez sur **Afficher** en regard des noms de module.
+6. Tapez « **\*** » dans la fenêtre contextuelle. Cette commande ordonne à PowerShell de journaliser les commandes de tous les modules.
+7. Cliquez sur **OK** pour définir la stratégie.
+8. Double-cliquez sur **Activer la journalisation de blocs de scripts PowerShell**
+9. Cliquez sur **Activé**.
+10. Cliquez sur **OK pour définir la stratégie
+11. (sur les ordinateurs joints à un domaine uniquement). Exécutez **gpupdate** ou attendez que la stratégie de groupe traite la stratégie mise à jour et applique les paramètres.
 
-**Bravo ! Vous avez à présent configuré votre ordinateur avec le point de terminaison de démonstration et vous êtes prêt à découvrir JEA.**
+Vous pouvez également activer la transcription PowerShell à l’échelle du système par le biais de la stratégie de groupe.
 
+## <a name="next-steps"></a>Étapes suivantes
+
+- [Créer un fichier de fonctionnalité de rôle](role-capabilities.md)
+- [Créer un fichier de configuration de session](session-configurations.md)
+
+## <a name="see-also"></a>Voir aussi
+- [Informations supplémentaires sur la sécurité de la communication à distance PowerShell et WinRM](https://msdn.microsoft.com/en-us/powershell/scripting/setup/winrmsecurity)
+- [*PowerShell ♥ the Blue Team*, billet de blog sur la sécurité](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/)

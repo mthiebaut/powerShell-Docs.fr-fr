@@ -1,21 +1,22 @@
 ---
-title: "Répétition d’une tâche pour plusieurs objets (ForEach Object)"
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: "Répétition d’une tâche pour plusieurs objets ForEach Object"
+ms.technology: powershell
 ms.assetid: 6697a12d-2470-4ed6-b5bb-c35e5d525eb6
-ms.openlocfilehash: 4b219e4499482eafa6eddf1461b74c62ba091d1a
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: ba366c62686ee289ccdfc7b2f7c93d0b60f3f51b
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="repeating-a-task-for-multiple-objects-foreach-object"></a>Répétition d’une tâche pour plusieurs objets (ForEach-Object)
 L’applet de commande **ForEach-Object** utilise des blocs de script et le descripteur $_ pour l’objet de pipeline actuel, afin de vous permettre d’exécuter une commande sur chaque objet figurant dans le pipeline. Vous pouvez l’utiliser pour effectuer des tâches complexes.
 
-Une situation où elle peut être utile est la manipulation de données pour les rendre plus exploitables. Par exemple, la classe Win32_LogicalDisk de WMI permet de retourner des informations d’espace libre sur chaque disque local. Toutefois, les données retournées sont exprimées en octets, ce qui rend leur lecture difficile :
+Une situation où elle peut être utile est la manipulation de données pour les rendre plus exploitables. Par exemple, la classe Win32_LogicalDisk de WMI permet de retourner des informations d’espace libre sur chaque disque local. Toutefois, les données retournées sont exprimées en octets, ce qui rend leur lecture difficile :
 
 ```
 PS> Get-WmiObject -Class Win32_LogicalDisk
@@ -28,20 +29,20 @@ Size         : 203912880128
 VolumeName   : Local Disk
 ```
 
-Il est possible de convertir la valeur FreeSpace en mégaoctets, en divisant chaque valeur par 1024 à deux reprises. Après la première division, les données sont exprimées en kilo-octets (Ko) et, après la seconde division, en mégaoctets (Mo). Vous pouvez faire cela dans un bloc de script ForEach-Object en tapant ce qui suit :
+Il est possible de convertir la valeur FreeSpace en mégaoctets, en divisant chaque valeur par 1024 à deux reprises. Après la première division, les données sont exprimées en kilo-octets (Ko) et, après la seconde division, en mégaoctets (Mo). Vous pouvez faire cela dans un bloc de script ForEach-Object en tapant ce qui suit :
 
 ```
 Get-WmiObject -Class Win32_LogicalDisk | ForEach-Object -Process {($_.FreeSpace)/1024.0/1024.0}
 48318.01171875
 ```
 
-Malheureusement, la sortie est désormais constituée de données sans étiquette associée. De telles propriétés WMI étant en lecture seule, vous ne pouvez pas convertir FreeSpace directement. Si vous tapez ce qui suit :
+Malheureusement, la sortie est désormais constituée de données sans étiquette associée. De telles propriétés WMI étant en lecture seule, vous ne pouvez pas convertir FreeSpace directement. Si vous tapez ce qui suit :
 
 ```
 Get-WmiObject -Class Win32_LogicalDisk | ForEach-Object -Process {$_.FreeSpace = ($_.FreeSpace)/1024.0/1024.0}
 ```
 
-Vous obtenez un message d’erreur :
+Vous obtenez un message d’erreur :
 
 ```
 "FreeSpace" is a ReadOnly property.

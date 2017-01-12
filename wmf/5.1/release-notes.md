@@ -1,5 +1,5 @@
 ---
-title: "Notes de publication de WMF 5.1 (préversion)"
+title: Notes de publication de WMF 5.1
 ms.date: 2016-07-27
 keywords: PowerShell, DSC, WMF
 description: 
@@ -8,15 +8,15 @@ author: jkeithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-ms.openlocfilehash: 60350cdc816e3a480a033adb3721ad4dabddfff9
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 15de6aca52624134998b2d08fcfff9e1bcc1af7b
+ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
 translationtype: HT
 ---
-# <a name="windows-management-framework-wmf-51-preview-release-notes"></a>Notes de publication de Windows Management Framework (WMF) 5.1 Preview #
+# <a name="windows-management-framework-wmf-51-release-notes"></a>Notes de publication de Windows Management Framework (WMF) 5.1 #
 
-WMF 5.1 Preview comprend les composants PowerShell, WMI, WinRM et SIL (Software Inventory and Licensing), qui sont publiés avec Windows Server 2016. WMF 5.1 peut être installé sur Windows 7, Windows 8.1, Windows Server 2008 R2, 2012 et 2012 R2, et fournit plusieurs améliorations par rapport à WMF 5.0 RTM, notamment :
+WMF 5.1 comprend les composants PowerShell, WMI, WinRM et SIL (Software Inventory and Licensing), qui sont publiés avec Windows Server 2016. WMF 5.1 peut être installé sur Windows 7, Windows 8.1, Windows Server 2008 R2, 2012 et 2012 R2, et fournit plusieurs améliorations par rapport à WMF 5.0 RTM, notamment :
 
-- Nouvelles applets de commande : groupes et utilisateurs locaux ; Get-ComputerInfo
+- Nouvelles applets de commande : groupes et utilisateurs locaux ; Get-ComputerInfo
 - Améliorations de PowerShellGet avec l’utilisation imposée de modules signés et l’installation de modules JEA
 - Ajout de la prise en charge de PackageManagement pour les conteneurs, l’installation de CBS, l’installation basée sur des fichiers .exe et les packages CAB
 - Améliorations du débogage pour les classes DSC et PowerShell
@@ -25,9 +25,9 @@ WMF 5.1 Preview comprend les composants PowerShell, WMI, WinRM et SIL (Software 
 
 **Remarques importantes :**
 
-- **La préversion de WMF 5.1 requiert .NET Framework 4.6**. L’installation réussit, mais des fonctionnalités clés échouent si .NET 4.6 n’est pas installé. Des instructions sont disponibles dans la rubrique [Installer et configurer WMF 5.1 (Preview)](https://msdn.microsoft.com/en-us/powershell/wmf/5.1/install-configure). 
-- **WMF 5.1 Preview n’est pas pris en charge pour les déploiements de production** pour l’instant. Cette préversion est destinée à fournir des informations sur le contenu de la version et à vous donner la possibilité de fournir des commentaires à l’équipe PowerShell.
-- WMF 5.1 Preview peut être installé directement sur WMF 5.0.
-- Le fait que WMF 4.0 est actuellement nécessaire pour pouvoir installer WMF 5.1 Preview sur Windows 7 et Windows Server 2008 R2 est un problème connu. Cette condition requise devrait être supprimée avant la version finale.
-- L’installation des prochaines versions de WMF 5.1, notamment la version RTM, nécessitera la désinstallation de WMF 5.1 Preview.
+- **WMF 5.1 nécessite .NET Framework 4.5**. L’installation réussit, mais des fonctionnalités clés échouent si .NET 4.5 n’est pas installé. Des instructions sont disponibles dans la rubrique [Installer et configurer WMF 5.1](https://msdn.microsoft.com/en-us/powershell/wmf/5.1/install-configure). 
+- La version préliminaire de WMF 5.1 doit être désinstallée avant d’installer la version WMF 5.1 RTM.
+- WMF 5.1 peut être installé directement sur WMF 5.0 ou WMF 4.0.
+- Il n’est __pas nécessaire__ d’installer WMF 4.0 avant d’installer WMF 5.1 sur Windows 7 et Windows Server 2008 R2. C’était un problème lié à version 5.1 WMF qui a été résolu.  
+
 

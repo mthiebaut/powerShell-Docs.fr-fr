@@ -1,142 +1,275 @@
 ---
-description: 
-manager: dongill
+manager: carmonm
 ms.topic: article
-author: jpjofre
+author: rpsqrd
+ms.author: ryanpu
 ms.prod: powershell
 keywords: powershell,applet de commande,jea
-ms.date: 2016-06-22
-title: "capacités de rôle"
+ms.date: 2016-12-05
+title: "Capacités de rôle JEA"
 ms.technology: powershell
-ms.openlocfilehash: d5f6311d74e47f2fa1a93909c244cddf114b0229
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: e67b38344e2d1d0d347c7850f2097e31c0945e15
+ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
 translationtype: HT
 ---
-# <a name="role-capabilities"></a>Capacités de rôle
+# <a name="jea-role-capabilities"></a>Capacités de rôle JEA
 
-## <a name="overview"></a>Vue d’ensemble
-Dans la section ci-dessus, vous avez appris que le champ « RoleDefinitions » définit quels groupes ont accès à quelles capacités de rôle.
-Vous vous êtes peut-être demandé : « Que sont les capacités de rôle ? »
-Cette section va répondre à cette question.  
+> S’applique à : Windows PowerShell 5.0
 
-## <a name="introducing-powershell-role-capabilities"></a>Présentation des capacités de rôle PowerShell
-Les capacités de rôle PowerShell définissent « ce » qu’un utilisateur peut faire sur un point de terminaison JEA.
-Elles dressent la liste des éléments comme les commandes visibles, les applications visibles, etc.
-Les capacités de rôle sont définies par des fichiers portant une extension « .psrc ».
+Lorsque vous créez un point de terminaison JEA, vous devez définir une ou plusieurs « capacités de rôle », qui décrivent *ce que* quelqu’un peut faire dans une session JEA.
+Une capacité de rôle est un fichier de données PowerShell avec l’extension .psrc qui liste toutes les applets de commande, toutes les fonctions, tous les fournisseurs et tous les programmes externes devant être accessibles aux utilisateurs qui se connectent.
 
-## <a name="role-capability-contents"></a>Contenu des capacités de rôle
-Nous allons commencer en examinant et en modifiant le fichier de capacité de rôle de démonstration que vous avez utilisé précédemment.
-Imaginez que vous avez déployé votre configuration de session sur votre environnement, mais que vous avez reçu des commentaires vous invitant à modifier les capacités exposées aux utilisateurs.
-Les opérateurs ont besoin de pouvoir redémarrer les ordinateurs et aussi d’être en mesure d’obtenir des informations sur les paramètres réseau.
-L’équipe de sécurité vous a également dit que qu’il ne faut pas permettre aux utilisateurs d’exécuter « Restart-Service » sans aucune restriction.
-Vous devez restreindre les services que les opérateurs peuvent redémarrer.
+Cette rubrique décrit comment créer un fichier de capacités de rôle PowerShell pour vos utilisateurs JEA.
 
-Pour apporter ces modifications, commencez par exécuter PowerShell ISE en tant qu’administrateur et ouvrir le fichier suivant :
+## <a name="determine-which-commands-to-allow"></a>Déterminer les commandes à autoriser
 
-```
-C:\Program Files\WindowsPowerShell\Modules\Demo_Module\RoleCapabilities\Maintenance.psrc
-```
+La première étape de la création d’un fichier de capacités de rôle consiste à prendre en considération ce à quoi les utilisateurs de ce rôle auront besoin d’accéder.
+Ce processus de collecte des exigences peut prendre un certain temps, mais il est très important.
+En donnant accès aux utilisateurs à trop peu de fonctions et d’applets de commande, vous les empêchez de faire leur travail.
+Si vous autorisez l’accès à un trop grand nombre d’applets de commande et de fonctions, les utilisateurs pourront faire plus que prévu avec leurs privilèges Administrateur implicites, ce qui affaiblira votre position en matière de sécurité.
 
-Maintenant recherchez et mettez à jour les lignes suivantes dans le fichier :
+Vos choix vis-à-vis de ce processus dépendent de votre organisation et de vos objectifs, mais les conseils suivants peuvent vous aider à vérifier que vous êtes sur la bonne voie.
 
-```PowerShell
-# OLD: VisibleCmdlets = 'Restart-Service'
-VisibleCmdlets = 'Restart-Computer',
-                 @{
-                     Name = 'Restart-Service'
-                     Parameters = @{ Name = 'Name'; ValidateSet = 'Spooler' }
-                 },
-                 'NetTCPIP\Get-*'
+1. **Identifiez** les commandes que les utilisateurs emploient pour effectuer leur travail. Cela peut impliquer d’observer le personnel informatique, de consulter les scripts d’automatisation et d’analyser les journaux ou les transcriptions de sessions PowerShell.
+2. **Transposez** l’utilisation des outils de ligne de commande à leurs équivalents PowerShell, si possible, pour assurer la meilleure expérience d’audit et de personnalisation JEA. Les programmes externes ne peuvent pas avoir de contraintes aussi granulaires que les fonctions et applets de commande PowerShell natives de JEA.
+3. **Restreignez** si nécessaire la portée des applets de commande pour n’autoriser que des paramètres ou des valeurs de paramètres spécifiques. C’est particulièrement important si les utilisateurs ne doivent pouvoir gérer qu’une partie d’un système.
+4. **Créez** des fonctions personnalisées pour remplacer des commandes complexes ou difficiles à contraindre dans JEA. Une fonction simple qui inclut une commande complexe dans un wrapper ou applique une logique de validation supplémentaire peut offrir des contrôles supplémentaires aux administrateurs et plus de simplicité aux utilisateurs finaux.
+5. **Testez** la liste étendue des commandes admissibles avec vos utilisateurs et/ou services d’automatisation et effectuez les ajustements nécessaires.
 
-# OLD: VisibleExternalCommands = 'Item1', 'Item2'
-VisibleExternalCommands = 'C:\Windows\system32\ipconfig.exe'
-```
+N’oubliez pas que les commandes d’une session JEA sont souvent exécutées avec des privilèges Administrateur (ou avec élévation de privilèges autre).
+Une sélection rigoureuse des commandes disponibles est essentielle pour que le point de terminaison JEA n’autorise pas l’utilisateur connecté à élever ses autorisations.
+Voici quelques exemples de commandes qui peuvent être utilisées à des fins malveillantes si elles sont autorisées sans contraintes.
+Notez que cette liste n’est pas exhaustive et ne doit être utilisée que comme point de départ pour prendre les précautions qui s’imposent.
 
-Ce fichier contient quelques exemples intéressants :
+### <a name="examples-of-potentially-dangerous-commands"></a>Exemples de commandes potentiellement dangereuses
 
-1.  Vous avez restreint Restart-Service de sorte que les opérateurs puissent uniquement l’utiliser avec le paramètre -Name et qu’ils soient uniquement autorisés à spécifier « Spooler » en tant qu’argument pour ce paramètre.
-Si vous le voulez, vous pouvez également restreindre les arguments en utilisant une expression régulière qui utilise « ValidatePattern » au lieu de « ValidateSet ».
+Risque | Exemple | Commandes associées
+-----|---------|-----------------
+Accorder des privilèges Administrateur à l’utilisateur connecté pour contourner JEA | `Add-LocalGroupMember -Member 'CONTOSO\jdoe' -Group 'Administrators'` | `Add-ADGroupMember`, `Add-LocalGroupMember`, `net.exe`, `dsadd.exe`
+Exécuter du code arbitraire, notamment des logiciels malveillants, du code malveillant exploitant une faille de sécurité ou des scripts personnalisés afin de contourner les protections | `Start-Process -FilePath '\\san\share\malware.exe'` | `Start-Process`, `New-Service`, `Invoke-Item`, `Invoke-WmiMethod`, `Invoke-CimMethod`, `Invoke-Expression`, `Invoke-Command`, `New-ScheduledTask`, `Register-ScheduledJob`
 
-2.  Vous avez exposé toutes les commandes avec le verbe « Get » à partir du module NetTCPIP.
-Étant donné que les commandes « Get » ne modifient généralement pas l’état du système, cette action est relativement sûre.
-Ceci dit, il est fortement conseillé d’examiner de près chaque commande que vous exposez par le biais de JEA.
+## <a name="create-a-role-capability-file"></a>Créer un fichier de capacités de rôle
 
-3.  Vous avez exposé un exécutable (ipconfig) en utilisant VisibleExternalCommands.
-Vous pouvez également exposer des scripts PowerShell complets avec ce champ.
-Il est important de toujours fournir le chemin complet des commandes externes pour veiller à ce qu’aucun programme portant le même nom (et potentiellement malveillant) placé dans le chemin de l’utilisateur ne soit exécuté à la place.
+Vous pouvez créer un fichier de capacités de rôle PowerShell avec l’applet de commande [New-PSRoleCapabilityFile](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/New-PSRoleCapabilityFile).
 
-Enregistrez le fichier et reconnectez-vous au point de terminaison de démonstration pour vérifier que les modifications ont fonctionné.
-
-```PowerShell
-Enter-PSSession -ComputerName . -ConfigurationName JEADemo2 -Credential $NonAdminCred
-Get-Command
-```
-Étant donné que vous avez modifié uniquement le fichier de capacité de rôle, il est inutile réinscrire la configuration de session.
-PowerShell recherche automatiquement votre capacité de rôle mise à jour quand un utilisateur se connecte.
-Dans la mesure où les capacités de rôle sont chargées au démarrage de la session, les sessions existantes ne sont pas affectées par les mises à jour apportées aux fichiers de capacités de rôle.
-
-Maintenant, vérifiez que vous pouvez redémarrer l’ordinateur en exécutant Restart-Computer avec le paramètre -WhatIf (sauf si vous souhaitez réellement redémarrer l’ordinateur).
-
-```PowerShell
-Restart-Computer -WhatIf
+```powershell
+New-PSRoleCapabilityFile -Path .\MyFirstJEARole.psrc
 ```
 
-Vérifiez que vous pouvez exécuter « ipconfig ».
+Le fichier de capacités de rôle résultant peut être ouvert dans un éditeur de texte et modifié pour autoriser les commandes souhaitées pour le rôle.
+La documentation d’aide PowerShell contient plusieurs exemples de configuration du fichier.
 
-```PowerShell
-ipconfig
+### <a name="allowing-powershell-cmdlets-and-functions"></a>Autoriser les fonctions et les applets de commande PowerShell
+
+Pour autoriser les utilisateurs à exécuter des fonctions ou des applets de commande PowerShell, ajoutez le nom de l’applet de commande ou de la fonction au champ VisbibleCmdlets ou VisibleFunctions.
+Si vous ne savez pas si une commande est une applet de commande ou une fonction, vous pouvez exécuter `Get-Command <name>` et vérifier la propriété « CommandType » dans la sortie.
+
+```powershell
+VisibleCmdlets = 'Restart-Computer', 'Get-NetIPAddress'
 ```
 
-Enfin, vérifiez que Restart-Service ne fonctionne que pour le service Spooler.
+La portée d’une applet de commande ou d’une fonction donnée est parfois trop vaste pour les besoins de vos utilisateurs.
+Un administrateur DNS, par exemple, n’a probablement besoin que de l’accès nécessaire pour redémarrer le service DNS.
+Dans un environnement mutualisé où les locataires ont accès à des outils de gestion en libre-service, ils doivent être limités à la gestion de leurs propres ressources.
+Dans ce cas, vous pouvez restreindre les paramètres exposés à partir de l’applet de commande ou de la fonction.
 
-```PowerShell
-Restart-Service Spooler # This should work
-Restart-Service WSearch # This should fail
+```powershell
+
+VisibleCmdlets = @{ Name = 'Restart-Computer'; Parameters = @{ Name = 'Name' }}
+
 ```
 
-Quittez la session quand vous avez terminé.
+Dans des scénarios plus avancés, vous devrez peut-être également restreindre les valeurs que les utilisateurs peuvent fournir à ces paramètres.
+Les capacités de rôle vous permettent de définir un ensemble de valeurs autorisées ou un modèle d’expression régulière évalué pour déterminer si une entrée donnée est autorisée.
 
-```PowerShell
-Exit-PSSession
+```powershell
+VisibleCmdlets = @{ Name = 'Restart-Service'; Parameters = @{ Name = 'Name'; ValidateSet = 'Dns', 'Spooler' }},
+                 @{ Name = 'Start-Website'; Parameters = @{ Name = 'Name'; ValidatePattern = 'HR_*' }}
 ```
 
-## <a name="role-capability-creation"></a>Création de capacités de rôle
-Dans la section suivante, vous allez créer un point de terminaison JEA pour les utilisateurs du support technique AD.
-À titre de préparation, nous allons créer un fichier de capacité de rôle vierge à remplir pendant cette section.
-Les capacités de rôle doivent être créées dans un dossier « RoleCapabilities » à l’intérieur d’un module PowerShell valide afin de pouvoir être résolues lorsqu’une session démarre.
+> [!NOTE]
+> Les [paramètres PowerShell communs](https://technet.microsoft.com/en-us/library/hh847884.aspx) sont toujours autorisés, même si vous limitez les paramètres disponibles.
+> Vous ne devez pas les lister explicitement dans le champ Paramètres.
 
-Les modules PowerShell sont essentiellement des packages de fonctionnalités PowerShell.
-Ils peuvent contenir des fonctions, applets de commandes, ressources DSC, capacités de rôle PowerShell, etc.
-Pour plus d’informations sur les modules, exécutez `Get-Help about_Modules` dans une console PowerShell.
+Le tableau ci-dessous décrit les différentes façons de personnaliser une fonction ou une applet de commande visible.
+Vous pouvez associer les méthodes suivantes comme vous le souhaitez dans le champ VisibleCmdlets.
 
-Pour créer un module PowerShell avec un fichier de capacité de rôle vierge, exécutez les commandes suivantes :  
+Exemple                                                                                      | Cas d’usage
+---------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------
+`'My-Func'` ou `@{ Name = 'My-Func' }`                                                       | Permet à l’utilisateur d’exécuter `My-Func` sans aucune restriction sur les paramètres.
+`'MyModule\My-Func'`                                                                         | Permet à l’utilisateur d’exécuter `My-Func` à partir du module `MyModule` sans aucune restriction sur les paramètres.
+`'My-*'`                                                                                     | Permet à l’utilisateur d’exécuter toutes les applets de commande ou fonctions avec le verbe `My`.
+`'*-Func'`                                                                                   | Permet à l’utilisateur d’exécuter toutes les applets de commande ou fonctions avec le nom `Func`.
+`@{ Name = 'My-Func'; Parameters = @{ Name = 'Param1'}, @{ Name = 'Param2' }}`               | Permet à l’utilisateur d’exécuter `My-Func` avec les paramètres `Param1` et/ou `Param2`. Toutes les valeurs peuvent être transmises aux paramètres.
+`@{ Name = 'My-Func'; Parameters = @{ Name = 'Param1'; ValidateSet = 'Value1', 'Value2' }}`  | Permet à l’utilisateur d’exécuter `My-Func` avec le paramètre `Param1`. Seules les valeurs « Value1 » et « Value2 » peuvent être transmises au paramètre.
+`@{ Name = 'My-Func'; Parameters = @{ Name = 'Param1'; ValidatePattern = 'contoso.*' }}`     | Permet à l’utilisateur d’exécuter `My-Func` avec le paramètre `Param1`. Toutes les valeurs commençant par « contoso » peuvent être transmises au paramètre.
 
-```PowerShell
-# Create a new folder for the module.
-New-Item -Path 'C:\Program Files\WindowsPowerShell\Modules\Contoso_AD_Module' -ItemType Directory
 
-# Add a module manifest to contain metadata for this module.
-New-ModuleManifest -Path 'C:\Program Files\WindowsPowerShell\Modules\Contoso_AD_Module\Contoso_AD_Module.psd1' -RootModule Contoso_AD_Module.psm1
+> [!WARNING]
+> Les meilleures pratiques de sécurité déconseillent d’utiliser des caractères génériques pour définir des fonctions ou des applets de commande visibles.
+> Au contraire, listez explicitement chaque commande approuvée de façon qu’aucune autre commande partageant le même schéma d’affectation de noms ne soit autorisée par inadvertance.
 
-# Create a blank script module. You'll use this for custom functions in the next section.
-New-Item -Path 'C:\Program Files\WindowsPowerShell\Modules\Contoso_AD_Module\Contoso_AD_Module.psm1' -ItemType File
+Vous ne pouvez pas appliquer à la fois un ValidatePattern et un ValidateSet à la même applet de commande ou fonction.
 
-# Create a RoleCapabilities folder in the Contoso_AD_Module folder. PowerShell expects Role Capabilities to be located in a "RoleCapabilities" folder within a module.
-New-Item -Path 'C:\Program Files\WindowsPowerShell\Modules\Contoso_AD_Module\RoleCapabilities' -ItemType Directory
+Si vous le faites, le ValidatePattern remplacera le ValidateSet.
 
-# Create a blank Role Capability in your RoleCapabilities folder. Running this command without any additional parameters just creates a blank template.
-New-PSRoleCapabilityFile -Path 'C:\Program Files\WindowsPowerShell\Modules\Contoso_AD_Module\RoleCapabilities\ADHelpDesk.psrc'
+Pour plus d’informations sur ValidatePattern, consultez [cet article *Hey, Scripting Guy!*](https://blogs.technet.microsoft.com/heyscriptingguy/2011/01/11/validate-powershell-parameters-before-running-the-script/) et le contenu de référence [Expressions régulières PowerShell](https://technet.microsoft.com/en-us/library/hh847880.aspx).
+
+### <a name="allowing-external-commands-and-powershell-scripts"></a>Autoriser des commandes externes et des scripts PowerShell
+
+Pour permettre aux utilisateurs de lancer des exécutables et des scripts PowerShell (.ps1) dans une session JEA, vous devez ajouter le chemin d’accès complet de chaque programme dans le champ VisibleExternalCommands.
+
+```powershell
+VisibleExternalCommands = 'C:\Windows\System32\whoami.exe', 'C:\Program Files\Contoso\Scripts\UpdateITSoftware.ps1'
 ```
 
-Félicitations ! Vous avez créé un fichier de capacité de rôle vierge.
-Il servira dans la section suivante.
+Il est recommandé, si possible, d’utiliser des applets de commande/fonctions PowerShell équivalentes de tous les exécutables externes que vous autorisez, car vous contrôlez les paramètres autorisés avec les applets de commande/fonctions PowerShell.
 
-## <a name="key-concepts"></a>Concepts clés
-**Capacité de rôle (.psrc)** : fichier qui définit ce qu’un utilisateur peut faire sur un point de terminaison JEA.
-Elle dresse la liste des éléments comme les commandes visibles, les applications de console visibles, etc.
-Pour que PowerShell détecte les capacités de rôle, vous devez les placer dans un dossier « RoleCapabilities » dans un module PowerShell valide.
+De nombreux exécutables permettent de lire l’état actuel puis de le modifier en fournissant simplement d’autres paramètres.
 
-**Module PowerShell** : package de fonctionnalités PowerShell.
-Il peut contenir des fonctions, applets de commandes, ressources DSC, capacités de rôle PowerShell, etc.
-Pour être chargés automatiquement, les modules PowerShell doivent se trouver sous un chemin dans `$env:PSModulePath`.
+Par exemple, prenons le rôle d’un administrateur de serveurs de fichiers qui souhaite connaître les partages réseau hébergés par l’ordinateur local.
+Il est possible pour cela d’utiliser `net share`.
+Toutefois, autoriser net.exe est très dangereux, car l’administrateur pourrait tout aussi facilement utiliser la commande pour obtenir des privilèges Administrateur avec `net group Administrators unprivilegedjeauser /add`.
+Il est préférable d’autoriser [Get-SmbShare](https://technet.microsoft.com/en-us/library/jj635704.aspx), qui donne le même résultat mais a une portée bien plus limitée.
 
+Lorsque vous mettez des commandes externes à la disposition des utilisateurs dans une session JEA, spécifiez toujours le chemin d’accès complet à l’exécutable pour éviter qu’un programme portant le même nom (et potentiellement malveillant), placé ailleurs sur le système, ne soit exécuté à la place.
+
+### <a name="allowing-access-to-powershell-providers"></a>Autoriser l’accès aux fournisseurs PowerShell
+
+Par défaut, les fournisseurs PowerShell sont disponibles dans les sessions JEA.
+
+Il s’agit principalement de réduire le risque de divulgation d’informations sensibles et de paramètres de configuration à l’utilisateur qui établit la connexion.
+
+Si nécessaire, vous pouvez autoriser l’accès aux fournisseurs de PowerShell à l’aide de la commande `VisibleProviders`.
+Pour obtenir la liste complète des fournisseurs, exécutez `Get-PSProvider`.
+
+```powershell
+VisibleProviders = 'Registry'
+```
+
+Pour des tâches simples qui requièrent l’accès au système de fichiers, au registre, au magasin de certificats ou à d’autres fournisseurs sensibles, vous pouvez également envisager d’écrire une fonction personnalisée qui fonctionne avec le fournisseur au nom de l’utilisateur.
+Les fonctions, applets de commande et programmes externes disponibles dans une session JEA ne sont pas soumis aux mêmes contraintes que JEA : ils peuvent accéder à tous les fournisseurs par défaut.
+Envisagez également d’utiliser le [lecteur utilisateur](session-configurations.md#user-drive) lorsqu’il est nécessaire de copier des fichiers vers/à partir d’un point de terminaison JEA.
+
+### <a name="creating-custom-functions"></a>Créer des fonctions personnalisées
+
+Vous pouvez créer des fonctions personnalisées dans un fichier de capacités de rôle pour simplifier les tâches complexes de vos utilisateurs finaux.
+Les fonctions personnalisées sont également utiles lorsque vous avez besoin d’une logique de validation avancée pour les valeurs de paramètres des applets de commande.
+Vous pouvez écrire des fonctions simples dans le champ **FunctionDefinitions** :
+
+```powershell
+VisibleFunctions = 'Get-TopProcess'
+
+FunctionDefinitions = @{
+    Name = 'Get-TopProcess'
+
+    ScriptBlock = {
+        param($Count = 10)
+
+        Get-Process | Sort-Object -Property CPU -Descending | Microsoft.PowerShell.Utility\Select-Object -First $Count
+    }
+}
+```
+
+> [!IMPORTANT]
+> N’oubliez pas d’ajouter le nom de vos fonctions personnalisées au champ **VisibleFunctions** pour qu’elles puissent être exécutées par les utilisateurs JEA.
+
+
+Le corps (bloc de script) des fonctions personnalisées s’exécute dans le mode de langage par défaut du système et n’est pas soumis aux contraintes de langage de JEA.
+Cela signifie que les fonctions peuvent accéder au système de fichiers et au registre, puis exécuter des commandes qui n’étaient pas visibles dans le fichier de capacités de rôle.
+Prenez soin d’éviter d’autoriser l’exécution de code arbitraire lorsque vous utilisez les paramètres et d’éviter d’injecter directement l’entrée utilisateur dans des applets de commande comme `Invoke-Expression`.
+
+Dans l’exemple ci-dessus, vous remarquerez que le nom du module complet (FQMN) `Microsoft.PowerShell.Utility\Select-Object` a été utilisé à la place du nom raccourci `Select-Object`.
+Les fonctions définies dans les fichiers de capacités de rôle sont toujours soumises à la portée des sessions JEA, qui comprend les fonctions de proxy créées par JEA pour contraindre les commandes existantes.
+
+Select-Object est une applet de commande contrainte par défaut dans toutes les sessions JEA qui ne vous permet pas de sélectionner des propriétés arbitraires sur les objets.
+Pour utiliser Select-Object sans contraintes dans les fonctions, vous devez demander explicitement l’implémentation complète en spécifiant le FQMN.
+Une applet de commande contrainte dans une session JEA présente le même comportement lorsqu’elle est appelée à partir d’une fonction, conformément à la [précédence des commandes](https://msdn.microsoft.com/en-us/powershell/reference/3.0/microsoft.powershell.core/about/about_command_precedence) de PowerShell.
+
+Si vous écrivez de nombreuses fonctions personnalisées, il peut être plus facile de les placer dans un [Module de script PowerShell](https://msdn.microsoft.com/en-us/library/dd878340(v=vs.85).aspx).
+Vous pouvez ensuite rendre ces fonctions visibles dans la session JEA à l’aide du champ VisibleFunctions, comme avec des modules intégrés et tiers.
+
+## <a name="place-role-capabilities-in-a-module"></a>Placer les capacités de rôle dans un module
+
+Pour que PowerShell trouve un fichier de capacités de rôle, celui-ci doit être stocké dans le dossier « RoleCapabilities » d’un module PowerShell.
+Le module peut être stocké dans un dossier inclus dans la variable d’environnement `$env:PSModulePath`, cependant vous ne devez pas le placer dans System32 (réservé aux modules intégrés) ou dans un dossier où des utilisateurs non fiables qui établissent la connexion pourraient modifier les fichiers.
+Voici un exemple de création d’un module de script PowerShell de base, appelé *ContosoJEA* dans le chemin d’accès « Program Files ».
+
+```powershell
+# Create a folder for the module
+$modulePath = Join-Path $env:ProgramFiles "WindowsPowerShell\Modules\ContosoJEA"
+New-Item -ItemType Directory -Path $modulePath
+
+# Create an empty script module and module manifest. At least one file in the module folder must have the same name as the folder itself.
+New-Item -ItemType File -Path (Join-Path $modulePath "ContosoJEAFunctions.psm1")
+New-ModuleManifest -Path (Join-Path $modulePath "ContosoJEA.psd1") -RootModule "ContosoJEAFunctions.psm1"
+
+# Create the RoleCapabilities folder and copy in the PSRC file
+$rcFolder = Join-Path $modulePath "RoleCapabilities"
+New-Item -ItemType Directory $rcFolder
+Copy-Item -Path .\MyFirstJEARole.psrc -Destination $rcFolder
+```
+
+Consultez la page [Comprendre un module PowerShell](https://msdn.microsoft.com/en-us/library/dd878324.aspx) pour plus d’informations sur les modules PowerShell, les manifestes de modules et la variable d’environnement PSModulePath.
+
+## <a name="updating-role-capabilities"></a>Mettre à jour les capacités de rôle
+
+
+Vous pouvez mettre à jour un fichier de capacités de rôle à tout moment en enregistrant simplement les modifications dans le fichier de capacités de rôle.
+Les nouvelles sessions JEA lancées après la mise à jour de la capacité du rôle reflèteront les fonctionnalités modifiées.
+
+C’est pourquoi il est très important de contrôler l’accès au dossier de capacités de rôle.
+Seuls les administrateurs de confiance doivent pouvoir modifier les fichiers de capacités de rôle.
+Si un utilisateur non fiable peut modifier les fichiers de capacités de rôle, il peut facilement s’accorder l’accès aux applets de commande qui lui permettront d’élever ses privilèges.
+
+
+Les administrateurs qui souhaitent verrouiller l’accès aux capacités de rôle doivent vérifier que le système local a un accès en lecture aux fichiers de capacités de rôle et aux modules qui les contiennent.
+
+## <a name="how-role-capabilities-are-merged"></a>Fusionner les capacités de rôle
+
+Les utilisateurs peuvent accéder à plusieurs capacités de rôle lorsqu’ils intègrent une session JEA en fonction du mappage des rôles dans le [fichier de configuration de session](session-configurations.md).
+Dans ce cas, JEA tente de donner à l’utilisateur l’ensemble de commandes *le plus permissif* autorisé par les rôles.
+
+**VisibleCmdlets et VisibleFunctions**
+
+La logique de fusion la plus complexe affecte les applets de commande et les fonctions, dont les paramètres et les valeurs de paramètres peuvent être limités dans JEA.
+
+Les règles sont les suivantes :
+
+
+1. Si une applet de commande n’est visible que dans un rôle, elle sera visible par l’utilisateur avec n’importe quelles contraintes de paramètres applicables.
+2. Si une applet de commande est visible dans plusieurs rôles, et que chaque rôle a les mêmes contraintes sur l’applet de commande, l’applet de commande sera visible par l’utilisateur avec ces contraintes.
+3. Si une applet de commande est visible dans plusieurs rôles, et que les rôles autorisent différents ensembles de paramètres, l’applet de commande et tous les paramètres définis sur tous les rôles seront visibles par l’utilisateur. Si un rôle n’a pas de contraintes sur les paramètres, tous les paramètres seront autorisées.
+4. Si un rôle définit un ensemble ou un modèle de validation d’un paramètre d’applet de commande, et que l’autre rôle autorise le paramètre mais ne contraint pas les valeurs du paramètre, l’ensemble ou le modèle de validation sera ignoré.
+5. Si un ensemble de validation est défini pour le même paramètre d’applet de commande dans plusieurs rôles, toutes les valeurs de tous les ensembles de validation seront autorisées.
+6. Si un modèle de validation est défini pour le même paramètre d’applet de commande dans plusieurs rôles, toutes les valeurs qui correspondent aux modèles seront autorisées.
+7. Si un ensemble de validation est défini dans un ou plusieurs rôles, et qu’un modèle de validation est défini dans un autre rôle pour le même paramètre d’applet de commande, l’ensemble de validation est ignoré et la règle (6) s’applique aux modèles de validation restants.
+
+Le tableau ci-dessous présente quelques exemples de cette logique dans la pratique, avec deux rôles, A et B, affectés à un utilisateur dans une session JEA.
+
+Règle | Rôle A VisibleCmdlets                                                                          | Rôle B VisibleCmdlets                                                                             | Autorisations effectives de l’utilisateur
+-----|------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------
+1    | `Get-Service`                                                                                  | Non applicable                                                                                               | `Get-Service`
+1    | Non applicable                                                                                            | `Get-Service`                                                                                     | `Get-Service`
+2    | `Get-Service`                                                                                  | `Get-Service`                                                                                     | `Get-Service`
+3    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName' }}`                             | `Get-Service`                                                                                     | `Get-Service`
+3    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName' }}`                             | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'Name' }}`                                       | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName' }, @{ Name = 'Name' }}`
+4    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client' }}` | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName' }}`                                | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName' }}`
+5    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client' }}` | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DHCP Client' }}`   | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client', 'DHCP Client' }}`
+6    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidatePattern = 'DNS.*' }}`  | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidatePattern = 'contoso.*' }}` | `@{ Name = ’Get-Service’; Parameters = @{ Name = ’DisplayName’; ValidatePattern = ’(DNS.*)\|(contoso.*)’ }}`
+7    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client' }}` | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidatePattern = 'contoso.*' }}` | `@{ Name = ’Get-Service’; Parameters = @{ Name = ’DisplayName’; ValidatePattern = ’(DNS.*)\|(contoso.*)’ }}`
+
+
+
+**VisibleExternalCommands, VisibleAliases, VisibleProviders, ScriptsToProcess**
+
+Tous les autres champs du fichier de capacités de rôle sont simplement ajoutés à un ensemble cumulatif de commandes externes admissibles, d’alias, de fournisseurs et de scripts de démarrage.
+Les commandes, alias, fournisseurs ou scripts disponibles dans une capacité de rôle seront accessibles à l’utilisateur JEA.
+
+Veillez à ce que l’ensemble combiné de fournisseurs d’une capacité de rôle et les applets de commande/fonctions/commandes d’une autre n’autorisent pas les utilisateurs connectés à accéder involontairement aux ressources système.
+Par exemple, si un rôle autorise l’applet de commande `Remove-Item` et un autre le fournisseur `FileSystem`, il existe un risque qu’un utilisateur JEA supprime des fichiers arbitraires sur votre ordinateur.
+Vous trouverez des informations supplémentaires sur l’identification des autorisations effectives des utilisateurs dans la [rubrique Audit de JEA](audit-and-report.md).
+
+## <a name="next-steps"></a>Étapes suivantes
+
+- [Créer un fichier de configuration de session](session-configurations.md)

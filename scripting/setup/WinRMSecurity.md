@@ -1,19 +1,20 @@
 ---
-title: WinRMSecurity
-ms.date: 2016-05-11
-keywords: powershell,applet de commande
 description: 
+manager: carmonm
 ms.topic: article
-author: eslesar
-manager: dongill
+author: jpjofre
 ms.prod: powershell
-ms.openlocfilehash: d1a75f4167a2f0af60801f33b79fb07cf7fe9398
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+keywords: powershell,applet de commande
+ms.date: 2016-12-12
+title: WinRMSecurity
+ms.technology: powershell
+ms.openlocfilehash: 31b5ec784d394568c462a1e133b501f0a8884f2e
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="powershell-remoting-security-considerations"></a>Éléments à prendre en compte en matière de sécurité de la communication à distance PowerShell
 
-La communication à distance PowerShell est la méthode recommandée pour gérer les systèmes Windows. La communication à distance PowerShell est activée par défaut dans Windows Server 2012 R2. Ce document couvre les questions de sécurité, les recommandations et les bonnes pratiques lors de l’utilisation de la communication à distance PowerShell.
+La communication à distance PowerShell est la méthode recommandée pour gérer les systèmes Windows. La communication à distance PowerShell est activée par défaut dans Windows Server 2012 R2. Ce document couvre les questions de sécurité, les recommandations et les bonnes pratiques lors de l’utilisation de la communication à distance PowerShell.
 
 ## <a name="what-is-powershell-remoting"></a>Présentation de la communication à distance PowerShell
 
@@ -23,16 +24,16 @@ La communication à distance PowerShell n’est pas identique à l’utilisation
 
 ##  <a name="powershell-remoting-default-settings"></a>Paramètres par défaut de la communication à distance PowerShell
 
-La communication à distance PowerShell et WinRM écoutent sur les ports suivants :
+La communication à distance PowerShell et WinRM écoutent sur les ports suivants :
 
-- HTTP : 5985
-- HTTPS : 5986
+- HTTP : 5985
+- HTTPS : 5986
 
 Par défaut, la communication à distance PowerShell autorise uniquement les connexions des membres du groupe de l’administrateur. Les sessions étant lancées dans le contexte de l’utilisateur, tous les contrôles d’accès au système d’exploitation appliqués à des utilisateurs et des groupes continuent de leur être appliqués pendant la connexion via la communication à distance PowerShell.
 
 Sur les réseaux privés, la règle de Pare-feu Windows par défaut pour la communication à distance PowerShell accepte toutes les connexions. Sur les réseaux publics, la règle de Pare-feu Windows par défaut autorise les connexions de communication à distance PowerShell uniquement sur le même sous-réseau. Vous devez modifier explicitement cette règle pour ouvrir la communication à distance PowerShell à toutes les connexions sur un réseau public.
 
->**Avertissement :** La règle de pare-feu pour les réseaux publics est destinée à protéger l’ordinateur contre les tentatives de connexions externes potentiellement malveillantes. Soyez prudent lors de la suppression de cette règle.
+>**Avertissement :** La règle de pare-feu pour les réseaux publics est destinée à protéger l’ordinateur contre les tentatives de connexions externes potentiellement malveillantes. Soyez prudent lors de la suppression de cette règle.
 
 ## <a name="process-isolation"></a>Isolation des processus
 
@@ -45,7 +46,7 @@ FireEye a fourni un bon résumé des journaux des événements et autres preuves
 
 ## <a name="encryption-and-transport-protocols"></a>Protocoles de transport et chiffrement
 
-Il est utile de prendre en compte la connexion de communication à distance PowerShell sous deux angles : l’authentification initiale et les communications en cours. 
+Il est utile de prendre en compte la connexion de communication à distance PowerShell sous deux angles : l’authentification initiale et les communications en cours. 
 
 Quel que soit le protocole de transport utilisé (HTTP ou HTTPS), la communication à distance PowerShell chiffre toujours toutes les communications après l’authentification initiale avec une clé symétrique AES-256 par session.
     
@@ -56,7 +57,7 @@ L’authentification confirme l’identité du client auprès du serveur et, id�
 Quand un client se connecte à un serveur de domaine à l’aide de son nom d’ordinateur (par exemple, serveur01 ou serveur01.contoso.com), le protocole d’authentification par défaut est [Kerberos](https://msdn.microsoft.com/en-us/library/windows/desktop/aa378747.aspx).
 Kerberos garantit l’identité de l’utilisateur et l’identité du serveur sans envoyer aucune sorte d’informations d’identification réutilisables.
 
-Quand un client se connecte à un serveur de domaine avec son adresse IP ou qu’il se connecte à un serveur de groupe de travail, l’authentification Kerberos n’est pas possible. Dans ce cas, la communication à distance PowerShell s’appuie sur le [protocole d’authentification NTLM](https://msdn.microsoft.com/en-us/library/windows/desktop/aa378749.aspx). Le protocole d’authentification NTLM garantit l’identité de l’utilisateur sans envoyer aucune sorte d’informations d’identification délégables. Pour prouver l’identité de l’utilisateur, le protocole NTLM nécessite que le client et le serveur calculent une clé de session à partir du mot de passe de l’utilisateur sans jamais s’échanger le mot de passe proprement dit. Le serveur ne connaissant en général pas le mot de passe de l’utilisateur, il communique avec le contrôleur de domaine qui connaît ce mot de passe et calcule la clé de session pour le serveur. 
+Quand un client se connecte à un serveur de domaine avec son adresse IP ou qu’il se connecte à un serveur de groupe de travail, l’authentification Kerberos n’est pas possible. Dans ce cas, la communication à distance PowerShell s’appuie sur le [protocole d’authentification NTLM](https://msdn.microsoft.com/en-us/library/windows/desktop/aa378749.aspx). Le protocole d’authentification NTLM garantit l’identité de l’utilisateur sans envoyer aucune sorte d’informations d’identification délégables. Pour prouver l’identité de l’utilisateur, le protocole NTLM nécessite que le client et le serveur calculent une clé de session à partir du mot de passe de l’utilisateur sans jamais s’échanger le mot de passe proprement dit. Le serveur ne connaissant en général pas le mot de passe de l’utilisateur, il communique avec le contrôleur de domaine qui connaît ce mot de passe et calcule la clé de session pour le serveur. 
       
 Le protocole NTLM ne garantit cependant pas l’identité du serveur. Comme avec tous les protocoles qui utilisent NTLM pour l’authentification, un pirate ayant accès au compte d’un ordinateur appartenant à un domaine peut appeler le contrôleur de domaine pour calculer une clé de session NTLM et donc emprunter l’identité du serveur.
 
@@ -80,30 +81,11 @@ Une fois l’authentification initiale terminée, le [protocole de communication
 ## <a name="making-the-second-hop"></a>Second saut
 
 Par défaut, la communication à distance PowerShell utilise Kerberos (s’il est disponible) ou NTLM pour l’authentification. Ces deux protocoles permettent de s’authentifier auprès de l’ordinateur distant sans lui envoyer d’informations d’identification.
-Il s’agit de la méthode la plus sûre pour s’authentifier mais, comme l’ordinateur distant ne dispose pas des informations d’identification de l’utilisateur, il ne peut pas accéder aux autres ordinateurs ni services au nom de l’utilisateur. Ce problème est connu sous le nom de « double saut ».
+Il s’agit de la méthode la plus sûre pour s’authentifier mais, comme l’ordinateur distant ne dispose pas des informations d’identification de l’utilisateur, il ne peut pas accéder aux autres ordinateurs ni services au nom de l’utilisateur. Ce problème est connu sous le nom de « deuxième saut ».
 
-Il existe plusieurs moyens de l’éviter :
+Il existe plusieurs moyens de l’éviter. Pour connaître la description de ces méthodes, ainsi que les avantages et les inconvénients de chacune, consultez [Effectuer le deuxième saut dans la communication à distance PowerShell](PS-remoting-second-hop.md).
 
-### <a name="trust-between-remote-computers"></a>Approbation entre les ordinateurs distants
 
-Si vous approuvez les utilisateurs connectés à distance à *Serveur1* à des ressources sur *Serveur2*, vous pouvez accorder explicitement à *Serveur1* l’accès à ces ressources.
-
-### <a name="use-explicit-credentials-when-accessing-remote-resources"></a>Utiliser des informations d’identification explicites lors de l’accès aux ressources distantes
-
-Vous pouvez transmettre explicitement vos informations d’identification à une ressource distante à l’aide du paramètre **Credential** d’une applet de commande. Par exemple :
-
-```powershell
-$myCredential = Get-Credential
-New-PSDrive -Name Tools \\Server2\Shared\Tools -Credential $myCredential 
-```
-
-### <a name="credssp"></a>CredSSP
-
-Vous pouvez utiliser le protocole [Credential Security Support Provider (CredSSP)](https://msdn.microsoft.com/en-us/library/windows/desktop/bb931352.aspx) pour l’authentification (en spécifiant « CredSSP » comme valeur du paramètre `Authentication` d’un appel à l’applet de commande [New-PSSession](https://technet.microsoft.com/en-us/library/hh849717.aspx). Le protocole CredSSP transmettant les informations d’identification en texte brut au serveur, son utilisation vous expose à des risques de vol de ces informations. Si l’ordinateur distant est compromis, la personne malveillante a accès aux informations d’identification de l’utilisateur. CredSSP est désactivé par défaut sur les ordinateurs clients et serveurs. Vous devez activer CredSSP uniquement dans les environnements les plus approuvés, Par exemple un administrateur de domaine qui se connecte à un contrôleur de domaine, car le contrôleur de domaine est hautement approuvé.
-
-Pour plus d’informations sur les questions de sécurité lors de l’utilisation de CredSSP pour la communication à distance PowerShell, voir [Accidental Sabotage: Beware of CredSSP](http://www.powershellmagazine.com/2014/03/06/accidental-sabotage-beware-of-credssp).
-
-Pour plus d’informations sur les risques de vol des informations d’identification, voir [Atténuation des attaques PtH (Pass-The-Hash) et autres risques de vol des informations d’identification](https://www.microsoft.com/en-us/download/details.aspx?id=36036).
 
 
 

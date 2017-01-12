@@ -7,22 +7,22 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: e62d4bf50e122d2e381cebf8fa594dda4f888e47
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: f419394b7699544567bf17945a55773ed3024f24
+ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
 translationtype: HT
 ---
 # <a name="setting-up-a-dsc-web-pull-server"></a>Configuration d’un serveur collecteur web DSC
 
-> S’applique à : Windows PowerShell 5.0
+> S’applique à : Windows PowerShell 5.0
 
 Un serveur collecteur web DSC est un service web dans IIS qui utilise une interface OData pour que les fichiers de configuration DSC soient disponibles à la demande pour les nœuds cibles.
 
-Configuration requise pour utiliser un serveur collecteur :
+Configuration requise pour utiliser un serveur collecteur :
 
-* Un serveur en cours d’exécution :
+* Un serveur en cours d’exécution :
   - WMF/PowerShell 5.0 ou version supérieure
   - Rôle serveur IIS
-  - Service DSC
+  - Service DSC
 * Idéalement, des moyens de générer un certificat pour sécuriser les informations d’identification transmises au gestionnaire de configuration local sur les nœuds cibles
 
 Vous pouvez ajouter le rôle serveur IIS et le service DSC avec l’Assistant Ajout de rôles et fonctionnalités dans le Gestionnaire de serveur, ou à l’aide de PowerShell. Les exemples de scripts inclus dans cette rubrique gèrent également ces deux étapes pour vous.
@@ -30,9 +30,9 @@ Vous pouvez ajouter le rôle serveur IIS et le service DSC avec l’Assistant Aj
 ## <a name="using-the-xwebservice-resource"></a>Utilisation de la ressource xWebService
 Le moyen le plus simple de configurer un serveur collecteur web consiste à utiliser la ressource xWebService, incluse dans le module xPSDesiredStateConfiguration. Les étapes suivantes expliquent comment utiliser la ressource dans une configuration qui configure le service web.
 
-1. Appelez l’applet de commande [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) pour installer le module **xPSDesiredStateConfiguration**. **Remarque** : **Install-Module** est inclus dans le module **PowerShellGet** de PowerShell 5.0. Vous pouvez télécharger le module **PowerShellGet** pour PowerShell 3.0 et 4.0 ici : [PackageManagement PowerShell Modules Preview](https://www.microsoft.com/en-us/download/details.aspx?id=49186). 
+1. Appelez l’applet de commande [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) pour installer le module **xPSDesiredStateConfiguration**. **Remarque** : **Install-Module** est inclus dans le module **PowerShellGet** de PowerShell 5.0. Vous pouvez télécharger le module **PowerShellGet** pour PowerShell 3.0 et 4.0 ici : [PackageManagement PowerShell Modules Preview](https://www.microsoft.com/en-us/download/details.aspx?id=49186). 
 1. Obtenez un certificat SSL pour le serveur collecteur DSC auprès d’une autorité de certification approuvée, au sein de votre organisation ou auprès d’une autorité publique. Le certificat reçu de l’autorité est généralement au format PFX. Installez le certificat sur le nœud qui sera le serveur DSC à l’emplacement par défaut, c’est-à-dire : CERT:\LocalMachine\My. Notez l’empreinte de certificat.
-1. Sélectionnez un GUID à utiliser comme clé d’inscription. Pour en générer un à l’aide de PowerShell, entrez ce qui suit à l’invite PowerShell et appuyez sur Entrée : « ``` [guid]::newGuid()``` » ou « ```New-Guid``` ». Cette clé est utilisée par les nœuds clients comme une clé partagée pour l’authentification lors de l’inscription. Pour plus d’informations, voir la section [Clé d’inscription](#RegKey) ci-dessous.
+1. Sélectionnez un GUID à utiliser comme clé d’inscription. Pour en générer un à l’aide de PowerShell, entrez ce qui suit à l’invite PowerShell et appuyez sur Entrée : « ``` [guid]::newGuid()``` » ou « ```New-Guid``` ». Cette clé est utilisée par les nœuds clients comme une clé partagée pour l’authentification lors de l’inscription. Pour plus d’informations, voir la section [Clé d’inscription](#RegKey) ci-dessous.
 1. Dans PowerShell ISE, démarrez (F5) le script de configuration suivant (inclus dans le dossier Example du module **xPSDesiredStateConfiguration** en tant que Sample_xDscWebService.ps1). Ce script configure le serveur collecteur.
   
 ```powershell
@@ -88,7 +88,7 @@ configuration Sample_xDscPullServer
 
 ```
 
-1. Exécutez la configuration, en passant l’empreinte du certificat SSL comme paramètre **certificateThumbPrint** et une clé d’inscription GUID comme paramètre **RegistrationKey** :
+1. Exécutez la configuration, en passant l’empreinte du certificat SSL comme paramètre **certificateThumbPrint** et une clé d’inscription GUID comme paramètre **RegistrationKey** :
 
 ```powershell
 # To find the Thumbprint for an installed SSL certificate for use with the pull server list all certifcates in your local store 
@@ -104,7 +104,7 @@ Start-DscConfiguration -Path c:\Configs\PullServer -Wait -Verbose
 
 ## <a name="registration-key"></a>Clé d’inscription
 Pour que les nœuds clients puissent s’inscrire auprès du serveur afin de pouvoir utiliser les noms de configuration au lieu de l’ID de configuration, une clé d’inscription, créée par la configuration ci-dessus, est enregistrée dans un fichier nommé `RegistrationKeys.txt` dans `C:\Program Files\WindowsPowerShell\DscService`. La clé d’inscription fonctionne comme un secret partagé utilisé lors de l’inscription initiale par le client avec le serveur collecteur. Le client génère un certificat auto-signé qui est utilisé pour l’authentification unique auprès du serveur collecteur une fois l’inscription terminée. L’empreinte de ce certificat est stockée localement et associée à l’URL du serveur collecteur.
-> **Remarque** : Les clés d’inscription ne sont pas prises en charge dans PowerShell 4.0. 
+> **Remarque** : Les clés d’inscription ne sont pas prises en charge dans PowerShell 4.0. 
 
 Pour configurer un nœud pour l’authentification auprès du serveur collecteur, la clé d’inscription doit se trouver dans la métaconfiguration de tous les nœuds cibles que vous prévoyez d’inscrire auprès de ce serveur. Notez que la propriété **RegistrationKey** dans la métaconfiguration ci-dessous est supprimée une fois que l’ordinateur cible a été correctement inscrit, et que la valeur « 140a952b-b9d6-406b-b416-e0f759c9c0e4 » doit correspondre à la valeur stockée dans le fichier RegistrationKeys.txt sur le serveur collecteur. Conservez la valeur de la clé d’inscription en lieu sûr, car elle permet d’inscrire n’importe quel ordinateur cible auprès du serveur.
 
@@ -145,10 +145,12 @@ Si la propriété **ConfigurationID** est absente du fichier de métaconfigurati
 >**Remarque** : dans un scénario PUSH, la version actuelle contient un bogue qui demande de définir une propriété ConfigurationID dans le fichier de métaconfiguration pour les nœuds qui n’ont jamais été inscrits auprès d’un serveur collecteur. Cette opération permet de forcer le protocole du serveur collecteur V1 et d’éviter les messages d’échec d’inscription.
 
 ## <a name="placing-configurations-and-resources"></a>Placement des configurations et des ressources
+
 Une fois l’installation du serveur collecteur terminée, vous placez les modules et configurations à extraire par les nœuds cibles dans les dossiers définis par les propriétés **ConfigurationPath** et **ModulePath** de la configuration du serveur collecteur. Ces fichiers doivent se trouver dans un format spécifique afin que le serveur collecteur puisse les traiter correctement. 
 
 ### <a name="dsc-resource-module-package-format"></a>Format du package de module de ressources DSC
-Chaque module de ressources doit être compressé et nommé selon le modèle suivant **{Nom du module}_{Version du module}.zip**. Par exemple, un module xWebAdminstration avec une version de module 3.1.2.0 est nommé « xWebAdministration_3.2.1.0.zip ». Chaque version d’un module doit être contenue dans un seul fichier zip. Étant donné que chaque fichier zip ne contient qu’une seule version d’une ressource, le format du module ajouté dans WMF 5.0 qui contient plusieurs versions de module dans un seul répertoire n’est pas pris en charge. Cela signifie qu’avant de créer le package des modules de ressources DSC à utiliser avec le serveur collecteur, vous devez apporter une petite modification à la structure de répertoires. Le format par défaut des modules contenant les ressources DSC dans WMF 5.0 est « {Dossier du module}\{{Version du module}\DscResources\{Dossier des ressources DSC}\' ». Avant de créer les packages pour le serveur collecteur, supprimez simplement le dossier **{Version du module}** pour transformer le chemin en « {Dossier du module}\DscResources\{Dossier des ressources DSC}\' ». Ensuite, compressez le dossier comme décrit ci-dessus, et placez ces fichiers zip dans le dossier **ModulePath**.
+
+Chaque module de ressources doit être compressé et nommé selon le modèle `{Module Name}_{Module Version}.zip` suivant. Par exemple, un module xWebAdminstration avec une version de module 3.1.2.0 est nommé « xWebAdministration_3.2.1.0.zip ». Chaque version d’un module doit être contenue dans un seul fichier zip. Étant donné que chaque fichier zip ne contient qu’une seule version d’une ressource, le format du module ajouté dans WMF 5.0 qui contient plusieurs versions de module dans un seul répertoire n’est pas pris en charge. Cela signifie qu’avant de créer le package des modules de ressources DSC à utiliser avec le serveur collecteur, vous devez apporter une petite modification à la structure de répertoires. Le format par défaut des modules contenant les ressources DSC dans WMF 5.0 est « {Dossier du module}\{{Version du module}\DscResources\{Dossier des ressources DSC}\' ». Avant de créer les packages pour le serveur collecteur, supprimez simplement le dossier **{Version du module}** pour transformer le chemin en « {Dossier du module}\DscResources\{Dossier des ressources DSC}\' ». Ensuite, compressez le dossier comme décrit ci-dessus, et placez ces fichiers zip dans le dossier **ModulePath**.
 
 Utilisez `new-dscchecksum {module zip file}` pour créer un fichier de somme de contrôle pour le module qui vient d’être ajouté.
 
@@ -174,7 +176,7 @@ Pour faciliter la configuration, la validation et la gestion du serveur collecte
 
 
 ## <a name="pull-client-configuration"></a>Configuration du client collecteur 
-Les rubriques suivantes décrivent la configuration des clients collecteurs en détail :
+Les rubriques suivantes décrivent la configuration des clients collecteurs en détail :
 
 * [Configuration d’un client collecteur DSC à l’aide de l’ID de configuration](pullClientConfigID.md)
 * [Configuration d’un client collecteur DSC à l’aide du nom de configuration](pullClientConfigNames.md)
