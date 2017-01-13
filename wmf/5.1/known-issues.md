@@ -8,8 +8,8 @@ author: krishna
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-ms.openlocfilehash: 8f1b550e92c3c280b84664e0b1f9695172370522
-ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
+ms.openlocfilehash: b341f57592feb183eb0e7228cdc08460e370369f
+ms.sourcegitcommit: f06ef671c0a646bdd277634da89cc11bc2a78a41
 translationtype: HT
 ---
 # <a name="known-issues-in-wmf-51"></a>Problèmes connus dans WMF 5.1 #
@@ -18,7 +18,7 @@ translationtype: HT
 
 ## <a name="starting-powershell-shortcut-as-administrator"></a>Démarrage de raccourci PowerShell en tant qu’administrateur
 Lors de l’installation de WMF, si vous essayez de démarrer PowerShell en tant qu’administrateur à partir du raccourci, vous pouvez obtenir un message « Erreur non spécifiée ».
-Rouvrez le raccourci en tant que non administrateur. Le raccourci fonctionnera maintenant même en tant qu’administrateur.
+Rouvrez le raccourci comme non-administrateur. Le raccourci fonctionne désormais même comme administrateur.
 
 ## <a name="pester"></a>Pester
 Dans cette version, vous devez savoir qu’il existe deux problèmes quand vous utilisez Pester sur Nano Server :

@@ -8,8 +8,8 @@ keywords: powershell,applet de commande,jea
 ms.date: 2016-12-05
 title: Configuration de session JEA
 ms.technology: powershell
-ms.openlocfilehash: 1d410e345ff31a5f8149810fb9c3b07e92b27e05
-ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
+ms.openlocfilehash: 32602293afd3a94767682d32a053281ec021cc33
+ms.sourcegitcommit: f06ef671c0a646bdd277634da89cc11bc2a78a41
 translationtype: HT
 ---
 # <a name="jea-session-configurations"></a>Configuration de session JEA
@@ -49,7 +49,9 @@ Les sessions configurées de cette façon fonctionnent en [mode NoLanguage](http
 - Get-Help
 - Measure-Object (measure)
 - Out-Default
-- Select-Object (select) Aucun fournisseur PowerShell n’est disponible, ni aucun programme externe (exécutables, scripts, etc.).
+- Select-Object (select)
+
+Aucun fournisseur PowerShell n’est disponible, ni aucun programme externe (exécutables, scripts, etc.).
 
 Il vous faudra configurer d’autres champs pour la session JEA.
 Ils sont décrits dans les sections suivantes.
