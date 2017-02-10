@@ -280,7 +280,7 @@ L’utilisation d’un compte local élimine les risques d’exposition des info
 **Quand vous utilisez des informations d’identification avec des ressources DSC, préférez un compte local à un compte de domaine quand cela est possible.**
 
 Si la propriété `Username` des informations d’identification comprend un « \' » ou un « '@' », DSC la traite comme un compte de domaine.
-Il existe une exception pour « localhost », « 127.0.0.1 » et « :: 1 » dans la partie du nom d’utilisateur consacrée au domaine.
+Il existe une exception pour « localhost », « 127.0.0.1 » et « ::&1; » dans la partie du nom d’utilisateur consacrée au domaine.
 
 ## <a name="psdscallowdomainuser"></a>PsDscAllowDomainUser
 
