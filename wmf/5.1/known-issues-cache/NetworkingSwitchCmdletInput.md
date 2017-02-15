@@ -1,15 +1,15 @@
 ---
 title: "Échec des applets de commande du Gestionnaire de commutateur réseau"
 contributor: vaibch
-ms.openlocfilehash: e32e31762b665a7e2c6f6938fe494cb6127d4264
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 8495d79aec54d93f94e745e2efccb5116ad5d944
+ms.sourcegitcommit: a3966253a165d193a42b43b9430a4dc76988f82f
 translationtype: HT
 ---
-Les applets de commande du Gestionnaire de commutateur réseau peuvent être utilisées pour gérer les commutateurs réseau via WSMAN. Quelques applets de commande de ce module peuvent accepter des valeurs provenant de pipelines. Dans WMF 5.1 Preview, l’exécution des applets de commande qui peuvent accepter une valeur provenant d’un pipeline échoue quand les valeurs ne sont pas passées via des pipelines.
+Les applets de commande du Gestionnaire de commutateur réseau peuvent être utilisées pour gérer les commutateurs réseau via WSMAN. Quelques applets de commande de ce module peuvent accepter des valeurs provenant de pipelines. Dans WMF 5.1 Preview, l’exécution des applets de commande qui peuvent accepter une valeur provenant d’un pipeline échoue quand les valeurs ne sont pas passées via des pipelines.
 
-Si le paramètre « InputObject » n’est pas utilisé, l’applet de commande doit continuer à s’exécuter sans erreurs.
+Si le paramètre « InputObject » n’est pas utilisé, l’applet de commande doit continuer à s’exécuter sans erreurs.
 
-Voici la liste des applets de commande affectées (ces applets de commande peuvent accepter une valeur pour le paramètre « InputObject » provenant d’un pipeline). Si cette valeur n’est pas passée depuis un pipeline, l’exécution de l’applet de commande échoue.
+Voici la liste des applets de commande affectées (ces applets de commande peuvent accepter une valeur pour le paramètre « InputObject » provenant d’un pipeline). Si cette valeur n’est pas passée depuis un pipeline, l’exécution de l’applet de commande échoue.
 
 - Disable-NetworkSwitchEthernetPort
 - Enable-NetworkSwitchEthernetPort
@@ -23,13 +23,14 @@ Voici la liste des applets de commande affectées (ces applets de commande peuve
 - Set-NetworkSwitchVlanProperty
 
 ### <a name="resolution"></a>Solution
-Les applets de commande fonctionnent correctement quand la valeur du paramètre InputObject leur est passée via un pipeline. Voici quelques exemples qui fonctionnent pour les applets de commande ci-dessus :
+Les applets de commande fonctionnent correctement quand la valeur du paramètre InputObject leur est passée via un pipeline. Voici quelques exemples qui fonctionnent pour les applets de commande ci-dessus :
 
 - Disable-NetworkSwitchEthernetPort
 ```powershell
 $port = Get-CimInstance -Namespace root/interop -ClassName CIM_EthernetPort -CimSession $cimSession | Select-Object -First 1
 $port | Disable-NetworkSwitchEthernetPort -CimSession $cimSession
 ```
+
 - Enable-NetworkSwitchEthernetPort
 ```powershell
 $port = Get-CimInstance -Namespace root/interop -ClassName CIM_EthernetPort -CimSession $cimSession | Select-Object -First 1

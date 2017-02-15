@@ -7,44 +7,44 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: bf5b3da641facfdfa395aacf0eadcf773b8c4b02
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 38751d62a56dc90ff69fe3ab6e92829fb33edb2b
+ms.sourcegitcommit: a81ffb39f370b95ae802cd054dc4480c9e68cf77
 translationtype: HT
 ---
->S’applique à : Windows PowerShell 5.0
+>S’applique à : Windows PowerShell 5.0
 
->**Remarque :** La clé de Registre **DSCAutomationHostEnabled** décrite dans cette rubrique n’est pas disponible dans PowerShell 4.0.
-Pour plus d’informations sur la configuration de nouvelles machines virtuelles au démarrage initial dans PowerShell 4.0, consultez [Want to Automatically Configure Your Machines Using DSC at Initial Boot-up](https://blogs.msdn.microsoft.com/powershell/2014/02/28/want-to-automatically-configure-your-machines-using-dsc-at-initial-boot-up/)
+>**Remarque :** La clé de Registre **DSCAutomationHostEnabled** décrite dans cette rubrique n’est pas disponible dans PowerShell 4.0.
+Pour plus d’informations sur la configuration de nouvelles machines virtuelles au démarrage initial dans PowerShell 4.0, consultez [Want to Automatically Configure Your Machines Using DSC at Initial Boot-up](https://blogs.msdn.microsoft.com/powershell/2014/02/28/want-to-automatically-configure-your-machines-using-dsc-at-initial-boot-up/)
 
 # <a name="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc"></a>Configurer une machine virtuelle au démarrage initial à l’aide de DSC
 
 ## <a name="requirements"></a>Spécifications
 
-Pour exécuter ces exemples, vous avez besoin des éléments suivants :
+Pour exécuter ces exemples, vous avez besoin des éléments suivants :
 
-- Un disque dur virtuel démarrable avec lequel travailler. Vous pouvez télécharger une image ISO avec une copie d’évaluation de Windows Server 2016 auprès du   [TechNet Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016). Vous trouverez des instructions sur la création d’un disque dur virtuel à partir d’une image ISO dans [Creating Bootable Virtual Hard Disks](https://technet.microsoft.com/en-us/library/gg318049.aspx).
+- Un disque dur virtuel démarrable avec lequel travailler. Vous pouvez télécharger une image ISO avec une copie d’évaluation de Windows Server 2016 auprès du   [TechNet Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016). Vous trouverez des instructions sur la création d’un disque dur virtuel à partir d’une image ISO dans [Creating Bootable Virtual Hard Disks](https://technet.microsoft.com/en-us/library/gg318049.aspx).
 - Un ordinateur hôte où Hyper-V est activé. Pour plus d’informations, consultez [Vue d’ensemble d’Hyper-V](https://technet.microsoft.com/library/hh831531.aspx).
 
 À l’aide de DSC, vous pouvez automatiser l’installation et la configuration de logiciels d’un ordinateur au démarrage initial.
 Pour cela, vous injectez un document MOF de configuration ou une métaconfiguration dans un média démarrable (comme un disque dur virtuel) afin qu’ils soient exécutés lors du processus de démarrage initial.
 Ce comportement est spécifié par la [clé de Registre DSCAutomationHostEnabled](DSCAutomationHostEnabled.md) sous **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies**.
-Par défaut, la valeur de cette clé est 2, ce qui permet à DSC de s’exécuter au moment du démarrage.
+Par défaut, la valeur de cette clé est 2, ce qui permet à DSC de s’exécuter au moment du démarrage.
 
-Si vous ne voulez pas que DSC s’exécute au démarrage, définissez la valeur de la [clé de Registre DSCAutomationHostEnabled](DSCAutomationHostEnabled.md) sur 0.
+Si vous ne voulez pas que DSC s’exécute au démarrage, définissez la valeur de la [clé de Registre DSCAutomationHostEnabled](DSCAutomationHostEnabled.md) sur 0.
 
-- [Injection d’un document MOF de configuration dans un disque dur virtuel](##Inject-a-configuration-MOF-document-into-a-VHD)
-- [Injecter une métaconfiguration DSC dans un disque dur virtuel](##Inject-a-DSC-metaconfiguration-into-a-VHD)
-- [Désactiver DSC au démarrage](##Disable-DSC-at-boot-time)
+- Injecter un document MOF de configuration dans un disque dur virtuel
+- Injecter une métaconfiguration DSC dans un disque dur virtuel
+- Désactiver DSC au démarrage
 
->**Remarque :** Vous pouvez injecter à la fois `Pending.mof` et `MetaConfig.mof` dans un ordinateur en même temps.
+>**Remarque :** Vous pouvez injecter à la fois `Pending.mof` et `MetaConfig.mof` dans un ordinateur en même temps.
 Si les deux fichiers sont présents, les paramètres spécifiés dans `MetaConfig.mof` sont prioritaires.
 
 ## <a name="inject-a-configuration-mof-document-into-a-vhd"></a>Injecter un document MOF de configuration dans un disque dur virtuel
 
 Pour promulguer une configuration au démarrage initial, vous pouvez injecter un document MOF de configuration compilé dans le disque dur virtuel sous la forme de son fichier `Pending.mof`.
-Si la clé de Registre **DSCAutomationHostEnabled** est définie sur 2 (la valeur par défaut), DSC applique la configuration définie par `Pending.mof` quand l’ordinateur démarre pour la première fois.
+Si la clé de Registre **DSCAutomationHostEnabled** est définie sur 2 (la valeur par défaut), DSC applique la configuration définie par `Pending.mof` quand l’ordinateur démarre pour la première fois.
 
-Pour cet exemple, nous utilisons la configuration suivante, qui installe IIS sur le nouvel ordinateur :
+Pour cet exemple, nous utilisons la configuration suivante, qui installe IIS sur le nouvel ordinateur :
 
 ```powershell
 Configuration SampleIISInstall
@@ -64,16 +64,16 @@ Configuration SampleIISInstall
 
 ### <a name="to-inject-the-configuration-mof-document-on-the-vhd"></a>Pour injecter le document MOF de configuration sur le disque dur virtuel
 
-1. Montez le disque dur virtuel dans lequel vous voulez injecter la configuration en appelant l’applet de commande [Mount-VHD](https://technet.microsoft.com/library/hh848551.aspx). Par exemple :
+1. Montez le disque dur virtuel dans lequel vous voulez injecter la configuration en appelant l’applet de commande [Mount-VHD](https://technet.microsoft.com/library/hh848551.aspx). Par exemple :
 
     ```powershell
     Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
     ```
-2. Sur un ordinateur exécutant PowerShell 5.0 ou ultérieur, enregistrez la configuration ci-dessus (**SampleIISInstall**) dans un fichier de script PowerShell (.ps1).
+2. Sur un ordinateur exécutant PowerShell 5.0 ou ultérieur, enregistrez la configuration ci-dessus (**SampleIISInstall**) dans un fichier de script PowerShell (.ps1).
 
 3. Dans une console PowerShell, accédez au dossier où vous avez enregistré le fichier .ps1.
 
-4. Exécutez les commandes PowerShell suivantes pour compiler le document MOF. Pour plus d’informations sur la compilation des configurations DSC, consultez [Configurations DSC](configurations.md) :
+4. Exécutez les commandes PowerShell suivantes pour compiler le document MOF. Pour plus d’informations sur la compilation des configurations DSC, consultez [Configurations DSC](configurations.md) :
 
     ```powershell
     . .\SampleIISInstall.ps1
@@ -81,12 +81,12 @@ Configuration SampleIISInstall
     ```
 
 5. Cette opération crée un fichier `localhost.mof` dans un nouveau dossier nommé `SampleIISInstall`.
-Renommez le fichier en `Pending.mof` et déplacez-le à l’emplacement approprié sur le disque dur virtuel en utilisant l’applet de commande [Move-Item](https://technet.microsoft.comlibrary/hh849852.aspx). Par exemple :
+Renommez le fichier en `Pending.mof` et déplacez-le à l’emplacement approprié sur le disque dur virtuel en utilisant l’applet de commande [Move-Item](https://technet.microsoft.comlibrary/hh849852.aspx). Par exemple :
 
     ```powershell
         Move-Item -Path C:\DSCTest\SampleIISInstall\localhost.mof -Destination E:\Windows\Sytem32\Configuration\Pending.mof
     ```
-6. Démontez le disque dur virtuel en appelant l’applet de commande [Dismount-VHD](https://technet.microsoft.com/library/hh848562.aspx). Par exemple :
+6. Démontez le disque dur virtuel en appelant l’applet de commande [Dismount-VHD](https://technet.microsoft.com/library/hh848562.aspx). Par exemple :
 
     ```powershell
     Dismount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
@@ -98,11 +98,11 @@ Vous pouvez le vérifier en appelant l’applet de commande [Get-WindowsFeature]
 ## <a name="inject-a-dsc-metaconfiguration-into-a-vhd"></a>Injecter une métaconfiguration DSC dans un disque dur virtuel
 
 Vous pouvez également configurer un ordinateur pour extraire une configuration au démarrage initial en injectant une métaconfiguration (consultez [Configuration du gestionnaire de configuration local](metaConfig.md)) dans le disque dur virtuel sous la forme de son fichier `MetaConfig.mof`.
-Si la clé de Registre **DSCAutomationHostEnabled** est définie sur 2 (la valeur par défaut), DSC applique la métaconfiguration définie par `MetaConfig.mof` au gestionnaire de configuration local quand l’ordinateur démarre pour la première fois.
+Si la clé de Registre **DSCAutomationHostEnabled** est définie sur 2 (la valeur par défaut), DSC applique la métaconfiguration définie par `MetaConfig.mof` au gestionnaire de configuration local quand l’ordinateur démarre pour la première fois.
 Si la métaconfiguration spécifie que le gestionnaire de configuration local doit extraire les configurations à partir d’un serveur collecteur, l’ordinateur tente d’extraire une configuration auprès de ce serveur collecteur au démarrage initial.
 Pour plus d’informations sur la configuration d’un serveur collecteur DSC, consultez [Configuration d’un serveur collecteur web DSC](pullServer.md).
 
-Pour cet exemple, nous utilisons la configuration décrite dans la section précédente (**SampleIISInstall**) et la métaconfiguration suivante :
+Pour cet exemple, nous utilisons la configuration décrite dans la section précédente (**SampleIISInstall**) et la métaconfiguration suivante :
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -128,7 +128,7 @@ configuration PullClientBootstrap
 
 ### <a name="to-inject-the-metaconfiguration-mof-document-on-the-vhd"></a>Pour injecter le document MOF de métaconfiguration sur le disque dur virtuel
 
-1. Montez le disque dur virtuel dans lequel vous voulez injecter la métaconfiguration en appelant l’applet de commande [Mount-VHD](https://technet.microsoft.com/library/hh848551.aspx). Par exemple :
+1. Montez le disque dur virtuel dans lequel vous voulez injecter la métaconfiguration en appelant l’applet de commande [Mount-VHD](https://technet.microsoft.com/library/hh848551.aspx). Par exemple :
 
     ```powershell
     Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
@@ -136,11 +136,11 @@ configuration PullClientBootstrap
 
 2. [Configurez un serveur collecteur web DSC](pullServer.md), puis enregistrez la configuration **SampleIISInistall** dans le dossier approprié.
 
-3. Sur un ordinateur exécutant PowerShell 5.0 ou ultérieur, enregistrez la métaconfiguration ci-dessus (**PullClientBootstrap**) dans un fichier de script PowerShell (.ps1).
+3. Sur un ordinateur exécutant PowerShell 5.0 ou ultérieur, enregistrez la métaconfiguration ci-dessus (**PullClientBootstrap**) dans un fichier de script PowerShell (.ps1).
 
 4. Dans une console PowerShell, accédez au dossier où vous avez enregistré le fichier .ps1.
 
-5. Exécutez les commandes PowerShell suivantes pour compiler le document MOF de métaconfiguration (pour plus d’informations sur la compilation des configurations DSC, consultez [Configurations DSC](configurations.md) :
+5. Exécutez les commandes PowerShell suivantes pour compiler le document MOF de métaconfiguration (pour plus d’informations sur la compilation des configurations DSC, consultez [Configurations DSC](configurations.md) :
 
     ```powershell
     . .\PullClientBootstrap.ps1
@@ -154,7 +154,7 @@ Renommez le fichier en `MetaConfig.mof` et déplacez-le à l’emplacement appro
     Move-Item -Path C:\DSCTest\PullClientBootstrap\localhost.meta.mof -Destination E:\Windows\Sytem32\Configuration\MetaConfig.mof
     ```
 
-7. Démontez le disque dur virtuel en appelant l’applet de commande [Dismount-VHD](https://technet.microsoft.com/library/hh848562.aspx). Par exemple :
+7. Démontez le disque dur virtuel en appelant l’applet de commande [Dismount-VHD](https://technet.microsoft.com/library/hh848562.aspx). Par exemple :
 
     ```powershell
     Dismount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
@@ -166,9 +166,9 @@ Vous pouvez le vérifier en appelant l’applet de commande [Get-WindowsFeature]
 
 ## <a name="disable-dsc-at-boot-time"></a>Désactiver DSC au démarrage
 
-Par défaut, la valeur de la clé **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DSCAutomationHostEnabled** est définie sur 2, ce qui permet l’exécution d’une configuration DSC si l’ordinateur est dans un état en attente ou en cours. Si vous ne voulez pas qu’une configuration s’exécute au démarrage initial, vous devez définir la valeur de cette clé sur 0 :
+Par défaut, la valeur de la clé **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DSCAutomationHostEnabled** est définie sur 2, ce qui permet l’exécution d’une configuration DSC si l’ordinateur est dans un état en attente ou en cours. Si vous ne voulez pas qu’une configuration s’exécute au démarrage initial, vous devez définir la valeur de cette clé sur 0 :
 
-1. Montez le disque dur virtuel en appelant l’applet de commande [Mount-VHD](https://technet.microsoft.com/library/hh848551.aspx). Par exemple :
+1. Montez le disque dur virtuel en appelant l’applet de commande [Mount-VHD](https://technet.microsoft.com/library/hh848551.aspx). Par exemple :
 
     ```powershell
     Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
@@ -186,13 +186,13 @@ Par défaut, la valeur de la clé **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Window
     Set-Location HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies`
     ```
 
-4. Remplacez la valeur de `DSCAutomationHostEnabled` par 0.
+4. Remplacez la valeur de `DSCAutomationHostEnabled` par 0.
 
     ```powershell
     Set-ItemProperty -Path . -Name DSCAutomationHostEnabled -Value 0
     ```
 
-5. Déchargez le Registre en exécutant les commandes suivantes :
+5. Déchargez le Registre en exécutant les commandes suivantes :
 
     ```powershell
     [gc]::Collect()
