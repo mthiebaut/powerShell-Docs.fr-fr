@@ -8,11 +8,11 @@ author: keithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-ms.openlocfilehash: 581d80d476e918a78775291521abfd254703a7b7
-ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
+ms.openlocfilehash: 1bf1bf914982e0d52e592e6ef421d36b1915b338
+ms.sourcegitcommit: 267688f61dcc76fd685c1c34a6c7bfd9be582046
 translationtype: HT
 ---
-#<a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Améliorations de la configuration de l’état souhaité (DSC) dans WMF 5.1
+# <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Améliorations de la configuration de l’état souhaité (DSC) dans WMF 5.1
 
 ## <a name="dsc-class-resource-improvements"></a>Améliorations des ressources de classe DSC
 
@@ -25,7 +25,6 @@ Dans WMF 5.1, nous avons résolu les problèmes connus suivants :
 
 
 ## <a name="dsc-resource-debugging-improvements"></a>Améliorations du débogage des ressources DSC
-
 Dans WMF 5.0, le débogueur PowerShell ne s’arrêtait pas directement sur la méthode de ressource basée sur une classe (Get/Set/Test).
 Dans WMF 5.1, le débogueur s’arrête sur la méthode de ressource basée sur une classe de la même façon que sur des méthodes de ressources basées sur un fichier MOF.
 
@@ -37,16 +36,26 @@ Avant, le client collecteur DSC ne prenait en charge que SSL 3.0 et TLS 1.0 su
 Dans les versions antérieures de WMF, les inscriptions/demandes de création de rapports simultanées auprès d’un serveur collecteur DSC lors de l’utilisation de la base de données ESENT aboutissaient à un échec de l’inscription/de la création de rapport par le Gestionnaire de configuration local. Dans ce cas, les journaux des événements sur le serveur collecteur affichent l’erreur « Le nom d’instance est déjà utilisé ».
 Cela est dû à l’utilisation d’un modèle incorrect pour accéder à la base de données ESENT dans un scénario multithread. Dans WMF 5.1, ce problème a été résolu. Les inscriptions ou demandes de création de rapports simultanées (impliquant la base de données ESENT) fonctionnent correctement dans WMF 5.1. Ce problème s’applique uniquement à la base de données ESENT et ne s’applique pas à la base de données OLE DB. 
 
-##<a name="pull-partial-configuration-naming-convention"></a>Convention de nommage pour une configuration partielle de collecte
+## <a name="enable-circular-log-on-esent-database-instance"></a>Activer le journal circulaire sur l’instance de la base de données ESENT
+Dans la version antérieure de DSC-PullServer, les fichiers journaux de la base de données ESENT saturaient l’espace disque du serveur collecteur, car l’instance de la base de données était créée sans journalisation circulaire. Dans cette version, le client peut utiliser le fichier web.config du serveur collecteur pour contrôler le comportement de la journalisation circulaire. Par défaut, CircularLogging a la valeur TRUE.
+```
+<appSettings>
+     <add key="dbprovider" value="ESENT" />
+    <add key="dbconnectionstr" value="C:\Program Files\WindowsPowerShell\DscService\Devices.edb" />
+    <add key="CheckpointDepthMaxKB" value="512" />
+    <add key="UseCircularESENTLogs" value="TRUE" />
+  </appSettings>
+```
+## <a name="pull-partial-configuration-naming-convention"></a>Convention de nommage pour une configuration partielle de collecte
 Dans la version précédente, la convention de nommage pour une configuration partielle précisait que le nom du fichier MOF dans le service/serveur collecteur devait correspondre au nom de configuration partielle spécifié dans les paramètres du gestionnaire de configuration local qui, à son tour, devait correspondre au nom de configuration incorporé dans le fichier MOF. 
 
 Consultez les captures instantanées ci-dessous :
 
-•   Paramètres de configuration locale qui définissent une configuration partielle qu’un nœud est autorisé à recevoir.
+•    Paramètres de configuration locale qui définissent une configuration partielle qu’un nœud est autorisé à recevoir.
 
 ![Exemple de métaconfiguration](../images/MetaConfigPartialOne.png)
 
-•   Exemple de définition de configuration partielle 
+•    Exemple de définition de configuration partielle 
 
 ```PowerShell
 Configuration PartialOne
@@ -63,11 +72,11 @@ Configuration PartialOne
 PartialOne
 ```
 
-•   « ConfigurationName » incorporé dans le fichier MOF généré.
+•    « ConfigurationName » incorporé dans le fichier MOF généré.
 
 ![Exemple de fichier mof généré](../images/PartialGeneratedMof.png)
 
-•   FileName dans le dépôt de configuration de collecte 
+•    FileName dans le dépôt de configuration de collecte 
 
 ![FileName dans le dépôt de configuration](../images/PartialInConfigRepository.png)
 

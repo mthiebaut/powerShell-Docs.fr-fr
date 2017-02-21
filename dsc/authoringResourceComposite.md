@@ -1,13 +1,21 @@
 ---
-title:   Composite resources: Using a DSC configuration as a resource ms.date:  2016-05-16 keywords:  powershell,DSC description:  
-ms.topic:  article author:  eslesar manager:  dongill ms.prod:  powershell
+title: "Ressources composites : utilisation d’une configuration DSC comme ressource"
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+ms.openlocfilehash: 36851c9616cfb9a2fc79925e4187effa913341ad
+ms.sourcegitcommit: c7577f7a1e902a41df6d337e5d85361d1814f90a
+translationtype: HT
 ---
+# <a name="composite-resources-using-a-dsc-configuration-as-a-resource"></a>Ressources composites : utilisation d’une configuration DSC comme ressource
 
-# <a name="composite-resources-using-a-dsc-configuration-as-a-resource"></a>Ressources composites : utilisation d’une configuration DSC comme ressource
+> S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
-> S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
-
-Les configurations peuvent parfois s’avérer longues et complexes, faire appel à de nombreuses ressources différentes et définir un grand nombre de propriétés. Pour vous faciliter la vie, vous pouvez utiliser une configuration DSC Windows PowerShell comme ressource pour d’autres configurations. Nous l’appelons « ressource composite ». Une ressource composite est une configuration DSC qui accepte des paramètres. Les paramètres de la configuration font office de propriétés de la ressource. La configuration est enregistrée dans un fichier avec une extension **.schema.psm1**. Elle remplace à la fois le schéma MOF et le script de ressource dans une ressource DSC classique. Pour plus d’informations sur les ressources DSC, consultez [DSC Resources](resources.md).
+Les configurations peuvent parfois s’avérer longues et complexes, faire appel à de nombreuses ressources différentes et définir un grand nombre de propriétés. Pour vous faciliter la vie, vous pouvez utiliser une configuration DSC Windows PowerShell comme ressource pour d’autres configurations. Nous l’appelons « ressource composite ». Une ressource composite est une configuration DSC qui accepte des paramètres. Les paramètres de la configuration font office de propriétés de la ressource. La configuration est enregistrée dans un fichier avec une extension **.schema.psm1**. Elle remplace à la fois le schéma MOF et le script de ressource dans une ressource DSC classique. Pour plus d’informations sur les ressources DSC, consultez [DSC Resources](resources.md).
 
 ## <a name="creating-the-composite-resource"></a>Création de la ressource composite
 
@@ -127,13 +135,13 @@ Configuration xVirtualMachine
 
 ### <a name="saving-the-configuration-as-a-composite-resource"></a>Enregistrement de la configuration comme ressource composite
 
-Pour utiliser la configuration paramétrable comme ressource DSC, enregistrez-la dans une structure de répertoires similaire à celle d’une ressource MOF, puis attribuez-lui un nom et une extension **.schema.psm1**. Pour cet exemple, nous allons nommer le fichier **xVirtualMachine.schema.psm1**. Vous devez également créer un manifeste nommé **xVirtualMachine.psd1** contenant la ligne suivante. Notez que cela vient s’ajouter à **MyDscResources.psd1**, manifeste de module de toutes les ressources situé dans le dossier **MyDscResources**.
+Pour utiliser la configuration paramétrable comme ressource DSC, enregistrez-la dans une structure de répertoires similaire à celle d’une ressource MOF, puis attribuez-lui un nom et une extension **.schema.psm1**. Pour cet exemple, nous allons nommer le fichier **xVirtualMachine.schema.psm1**. Vous devez également créer un manifeste nommé **xVirtualMachine.psd1** contenant la ligne suivante. Notez que cela vient s’ajouter à **MyDscResources.psd1**, manifeste de module de toutes les ressources situé dans le dossier **MyDscResources**.
 
 ```powershell
 RootModule = 'xVirtualMachine.schema.psm1'
 ```
 
-Quand vous avez terminé, la structure de dossiers doit ressembler à ceci :
+Quand vous avez terminé, la structure de dossiers doit ressembler à ceci :
 
 ```
 $env: psmodulepath
@@ -145,7 +153,7 @@ $env: psmodulepath
                 |- xVirtualMachine.schema.psm1
 ```
 
-La ressource est désormais détectable à l’aide de l’applet de commande Get-DscResource. Ses propriétés sont détectables par cette applet de commande ou par la saisie semi-automatique **Ctrl+Espace** dans Windows PowerShell ISE.
+La ressource est désormais détectable à l’aide de l’applet de commande Get-DscResource. Ses propriétés sont détectables par cette applet de commande ou par la saisie semi-automatique **Ctrl+Espace** dans Windows PowerShell ISE.
 
 ## <a name="using-the-composite-resource"></a>Utilisation de la ressource composite
 
@@ -184,6 +192,6 @@ configuration RenameVM
 
 ## <a name="see-also"></a>Voir aussi
 ### <a name="concepts"></a>Concepts
-* [Écriture d’une ressource DSC personnalisée avec MOF](authoringResourceMOF.md)
+* [Écriture d’une ressource DSC personnalisée avec MOF](authoringResourceMOF.md)
 * [Get Started with Windows PowerShell Desired State Configuration](overview.md)
 

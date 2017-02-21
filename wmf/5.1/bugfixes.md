@@ -8,8 +8,8 @@ author: keithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-ms.openlocfilehash: 09316fef0594697a60a1bd4acabf39588f75edc2
-ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
+ms.openlocfilehash: 8957f4709c95ccb5b72c4fa9b42c9fe9ef93dffe
+ms.sourcegitcommit: 58e5e77050ba32717ce3e31e314f0f25cb7b2979
 translationtype: HT
 ---
 # <a name="bug-fixes-in-wmf-51"></a>Résolutions de bogues dans WMF 5.1#
@@ -98,3 +98,16 @@ Avant WMF 5.1, si plusieurs versions d’un module étaient installées et que 
 WMF 5.1 résout ce problème en retournant l’aide de la version la plus récente de la rubrique.
 
 `Get-Help` n’offre aucun moyen de spécifier la version pour laquelle vous souhaitez obtenir de l’aide. Pour contourner ce problème, accédez au répertoire de modules et affichez l’aide directement avec un outil tel que votre éditeur favori. 
+
+### <a name="powershellexe-reading-from-stdin-stopped-working"></a>Impossible de lire powershell.exe à partir de STDIN
+
+Les clients utilisent `powershell -command -` à partir d’applications natives pour passer des commandes PowerShell dans le script par le biais de STDIN. Malheureusement, cela ne fonctionne plus en raison d’autres modifications apportées à l’hôte de la console.
+
+https://windowsserver.uservoice.com/forums/301869-powershell/suggestions/15854689-powershell-exe-command-is-broken-on-windows-10
+
+### <a name="powershellexe-creates-spike-in-cpu-usage-on-startup"></a>powershell.exe crée un pic d’utilisation du processeur au démarrage
+
+PowerShell utilise une requête WMI pour vérifier s’il a été démarré par le biais d’une stratégie de groupe afin de ne pas causer de retard au niveau de la connexion.
+La requête WMI finit par injecter tzres.mui.dll dans chaque processus sur le système, car la classe WMI Win32_Process tente de récupérer des informations sur le fuseau horaire local.
+Il en résulte une hausse soudaine de l’utilisation du processeur dans wmiprvse (hôte du fournisseur WMI).
+Pour y remédier tout en obtenant les mêmes informations, utilisez des appels d’API Win32 à la place de WMI.

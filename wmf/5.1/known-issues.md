@@ -8,8 +8,8 @@ author: krishna
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-ms.openlocfilehash: b341f57592feb183eb0e7228cdc08460e370369f
-ms.sourcegitcommit: f06ef671c0a646bdd277634da89cc11bc2a78a41
+ms.openlocfilehash: 260a3bc443302f2d582f455aafb30ed717d95c84
+ms.sourcegitcommit: cfe32f213819ae76de05da564c3e2c4b7ecfda2f
 translationtype: HT
 ---
 # <a name="known-issues-in-wmf-51"></a>Problèmes connus dans WMF 5.1 #
@@ -41,3 +41,25 @@ Dans cette version, vous devez savoir qu’il existe deux problèmes quand vous 
 
     $PreviousDSCStates | Remove-Item -ErrorAction SilentlyContinue -Verbose
  ```  
+
+## <a name="jea-virtual-accounts"></a>Comptes virtuels JEA
+Si des configurations de session et des points de terminaison JEA sont configurés pour utiliser des comptes virtuels dans WMF 5.0, il n’en est pas de même après la mise à niveau vers WMF 5.1.
+Les commandes exécutées dans des sessions JEA s’exécutent alors sous l’identité de l’utilisateur connecté et non sous un compte d’administrateur temporaire, ce qui peut empêcher l’utilisateur d’exécuter des commandes nécessitant des privilèges élevés.
+Pour restaurer les comptes virtuels, vous devez désinscrire et réinscrire toute configuration de session utilisant des comptes virtuels.
+
+```powershell
+# Find the JEA endpoint by its name
+$jea = Get-PSSessionConfiguration -Name MyJeaEndpoint
+
+# Copy the cached PSSC file so it can be re-registered
+$pssc = Copy-Item $jea.ConfigFilePath $env:temp -PassThru
+
+# Unregister the current PSSC
+Unregister-PSSessionConfiguration -Name $jea.Name
+
+# Re-register the PSSC
+Register-PSSessionConfiguration -Name $jea.Name -Path $pssc.FullName -Force
+
+# Ensure the access policies remain the same
+Set-PSSessionConfiguration -Name $newjea.Name -SecurityDescriptorSddl $jea.SecurityDescriptorSddl
+```

@@ -38,7 +38,7 @@
 ## [Appel direct des méthodes des ressources DSC](directCallResource.md)
 
 # [Configuration du gestionnaire de configuration local](metaConfig.md)
-## [Configuration du gestionnaire de configuration local dans PowerShell 4.0](metaConfig4.md)
+## [Configuration du gestionnaire de configuration local dans PowerShell 4.0](metaConfig4.md)
 
 # Modèle DSC par extraction
 ## [Configuration d’un serveur collecteur web](pullServer.md)

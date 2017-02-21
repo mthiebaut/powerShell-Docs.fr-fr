@@ -1,20 +1,21 @@
 ---
 title: Notes de publication de WMF 5.1
-ms.date: 2016-07-27
+ms.date: 2017-01-20
 keywords: PowerShell, DSC, WMF
 description: 
 ms.topic: article
-author: jkeithb
-manager: dongill
+author: keithb
+manager: carmonm
 ms.prod: powershell
 ms.technology: WMF
-ms.openlocfilehash: 0a499bbfd2517c1f44e41f1096cda0c23b1c3df8
-ms.sourcegitcommit: f06ef671c0a646bdd277634da89cc11bc2a78a41
+ms.openlocfilehash: 48821f41b7a05860dc9f6a8916817f8e9ca28e6d
+ms.sourcegitcommit: 9fe4d1ef90fd11267a00e955d80ed6d27c8d7d5a
 translationtype: HT
 ---
 # <a name="windows-management-framework-wmf-51-release-notes"></a>Notes de publication de Windows Management Framework (WMF) 5.1 #
 
-WMF 5.1 comprend les composants PowerShell, WMI, WinRM et SIL (Software Inventory and Licensing), qui sont publiés avec Windows Server 2016. WMF 5.1 peut être installé sur Windows 7, Windows 8.1, Windows Server 2008 R2, 2012 et 2012 R2, et fournit plusieurs améliorations par rapport à WMF 5.0 RTM, notamment :
+WMF 5.1 comprend les composants PowerShell, WMI, WinRM et SIL (Software Inventory and Licensing) qui sont publiés avec Windows Server 2016.
+WMF 5.1 peut être installé sur Windows 7, Windows 8.1, Windows Server 2008 R2, 2012 et 2012 R2, et fournit plusieurs améliorations par rapport à WMF 5.0 RTM, notamment :
 
 - Nouvelles applets de commande : groupes et utilisateurs locaux ; Get-ComputerInfo
 - Améliorations de PowerShellGet avec l’utilisation imposée de modules signés et l’installation de modules JEA
@@ -25,7 +26,7 @@ WMF 5.1 comprend les composants PowerShell, WMI, WinRM et SIL (Software Inventor
 
 **Remarques importantes :**
 
-- **WMF 5.1 nécessite .NET Framework 4.6**. L’installation réussit, mais des fonctionnalités clés échouent si .NET 4.6 n’est pas installé. Des instructions sont disponibles dans la rubrique [Installer et configurer WMF 5.1](https://msdn.microsoft.com/en-us/powershell/wmf/5.1/install-configure). 
+- **WMF 5.1 nécessite le .NET Framework 4.5.2**. L’installation réussit, mais des fonctionnalités clés échouent si le .NET Framework 4.5.2 n’est pas installé. Des instructions sont disponibles dans la rubrique [Installer et configurer WMF 5.1](https://msdn.microsoft.com/en-us/powershell/wmf/5.1/install-configure).
 - La version préliminaire de WMF 5.1 doit être désinstallée avant d’installer la version WMF 5.1 RTM.
 - WMF 5.1 peut être installé directement sur WMF 5.0 ou WMF 4.0.
 - Il n’est __pas nécessaire__ d’installer WMF 4.0 avant d’installer WMF 5.1 sur Windows 7 et Windows Server 2008 R2. C’était un problème lié à version 5.1 WMF qui a été résolu.  

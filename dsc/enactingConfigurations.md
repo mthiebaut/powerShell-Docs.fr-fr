@@ -7,8 +7,8 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: 69248223a67c8dbbea421f80b57cb245489fbc4f
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 7059d0a0ac3ad81353d1e758bc24fc236656c199
+ms.sourcegitcommit: 89e7ae30faff5f96641fc72764bdc76e0e257bc2
 translationtype: HT
 ---
 # <a name="enacting-configurations"></a>Application des configurations
@@ -19,7 +19,7 @@ Il existe deux façons de promulguer des configurations DSC PowerShell : le mo
 
 ## <a name="push-mode"></a>Mode par envoi
 
-![Mode par envoi](images/Push.png "How push mode works")
+![Mode par envoi](images/Push.png "Fonctionnement du mode par envoi")
 
 Avec le mode par envoi, l’utilisateur applique activement une configuration à un nœud cible en appelant l’applet de commande [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx).
 
@@ -30,11 +30,13 @@ Après la création et la compilation d’une configuration, vous pouvez la prom
 
 ## <a name="pull-mode"></a>Mode par extraction
 
-![Mode par extraction](images/Pull.png "How pull mode works")
+![Mode par extraction](images/Pull.png "Fonctionnement du mode par extraction")
 
-Avec le mode par extraction, les clients d’extraction sont configurés de façon à obtenir leur configuration d’état souhaité à partir d’un serveur collecteur. De même, le serveur a été configuré pour héberger le service DSC et a été approvisionné avec les configurations et les ressources nécessaires par les clients d’extraction. Chacun des clients d’extraction est associé à une tâche planifiée qui effectue une vérification de conformité à intervalles réguliers sur la configuration du nœud. Quand l’événement est déclenché pour la première fois, le gestionnaire de configuration local du client d’extraction valide la configuration. Si le client d’extraction est configuré comme souhaité, rien ne se produit. Dans le cas contraire, le gestionnaire de configuration local envoie une demande au serveur collecteur pour obtenir une configuration donnée. Si cette configuration existe sur le serveur collecteur et si les vérifications de validation initiales renvoient un résultat positif, la configuration est passée au client d’extraction, où elle est ensuite exécutée par le gestionnaire de configuration local.
+Avec le mode par extraction, les clients d’extraction sont configurés de façon à obtenir leur configuration d’état souhaité à partir d’un serveur collecteur. De même, le serveur a été configuré pour héberger le service DSC et a été approvisionné avec les configurations et les ressources nécessaires par les clients d’extraction. Chacun des clients d’extraction est associé à une tâche planifiée qui effectue une vérification de conformité à intervalles réguliers sur la configuration du nœud. Quand l’événement est déclenché pour la première fois, le gestionnaire de configuration local sur le client d’extraction envoie une requête au serveur collecteur pour obtenir la configuration spécifiée dans le gestionnaire de configuration local. Si cette configuration existe sur le serveur collecteur et si les vérifications de validation initiales renvoient un résultat positif, la configuration est passée au client d’extraction, où elle est ensuite exécutée par le gestionnaire de configuration local.
 
-Pour plus d’informations sur le déploiement d’un serveur collecteur DSC local, consultez le guide de planification et de configuration du serveur collecteur DSC.
+Le gestionnaire de configuration local vérifie que le client est conforme à la configuration à intervalles réguliers, dont la fréquence est spécifiée par la propriété **ConfigurationModeFrequencyMins** du gestionnaire de configuration local. Le gestionnaire de configuration local vérifie la présence de configurations mises à jour sur le serveur collecteur à intervalles réguliers, dont la fréquence est spécifiée par la propriété **RefreshModeFrequency** du gestionnaire de configuration local. Pour plus d’informations sur la configuration du gestionnaire de configuration local, consultez [Configuration du gestionnaire de configuration local](metaConfig.md).
+
+Pour plus d’informations sur la configuration d’un serveur collecteur DSC, consultez [Configuration d’un serveur collecteur web DSC](pullServer.md).
 
 Si vous préférez utiliser un service en ligne pour héberger le serveur d’extraction, utilisez le service [Azure Automation DSC](https://azure.microsoft.com/en-us/documentation/articles/automation-dsc-overview/).
 
