@@ -7,8 +7,8 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: 3835495705297616a41329bcfdaad42b464115d8
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 8443860628617eb56ce370be62f9618f19f78077
+ms.sourcegitcommit: 26f4e52f3dd008b51b7eae7b634f0216eec6200e
 translationtype: HT
 ---
 # <a name="dsc-for-linux-nxservice-resource"></a>Ressource nxService dans DSC pour Linux
@@ -21,7 +21,7 @@ La ressource **nxService** dans DSC (Desired State Configuration) PowerShell fou
 nxService <string> #ResourceName
 {
     Name = <string>
-    [ Controller = <string> { init | upstart | system }  ]
+    [ Controller = <string> { init | upstart | systemd }  ]
     [ Enabled = <bool> ]
     [ State = <string> { Running | Stopped } ]
     [ DependsOn = <string[]> ]
@@ -35,8 +35,8 @@ nxService <string> #ResourceName
 | Nom| Nom du service/démon à configurer.| 
 | Controller| Type de contrôleur de service à utiliser lors de la configuration du service.| 
 | Enabled| Indique si le service s’exécute au démarrage du système.| 
-| State| Indique si le service est en cours d’exécution. Définissez cette propriété sur « Stopped » pour vous assurer que le service n’est pas en cours d’exécution. Définissez cette propriété sur « Running » pour vous assurer que le service est en cours d’exécution.| 
-| DependsOn | Indique que la configuration d’une autre ressource doit être effectuée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’**ID** **ResourceName** et le type **ResourceType**, utilisez la syntaxe suivante pour cette propriété : `DependsOn = "[ResourceType]ResourceName"`.| 
+| State| Indique si le service est en cours d’exécution. Définissez cette propriété sur « Stopped » pour vous assurer que le service n’est pas en cours d’exécution. Définissez cette propriété sur « Running » pour vous assurer que le service est en cours d’exécution.| 
+| DependsOn | Indique que la configuration d’une autre ressource doit être effectuée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’**ID** **ResourceName** et le type **ResourceType**, utilisez la syntaxe suivante pour cette propriété : `DependsOn = "[ResourceType]ResourceName"`.| 
 
 
 ## <a name="additional-information"></a>Informations supplémentaires
@@ -45,7 +45,7 @@ La ressource **nxService** ne crée pas de fichier de définition ni de script p
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant configure le service « httpd » (pour Apache HTTP Server) qui est inscrit auprès du contrôleur de service **SystemD**.
+L’exemple suivant configure le service « httpd » (pour Apache HTTP Server) qui est inscrit auprès du contrôleur de service **SystemD**.
 
 ```
 Import-DSCResource -Module nx 
