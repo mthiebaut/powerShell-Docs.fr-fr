@@ -7,8 +7,8 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: f8f8ef06cd79af294bad7bb8cf3d6676ab9a69bc
-ms.sourcegitcommit: f06ef671c0a646bdd277634da89cc11bc2a78a41
+ms.openlocfilehash: 27d9a259d119099c45d7ecd3a15cd26654071d42
+ms.sourcegitcommit: 26f4e52f3dd008b51b7eae7b634f0216eec6200e
 translationtype: HT
 ---
 # <a name="separating-configuration-and-environment-data"></a>Séparation des données de configuration et d’environnement
@@ -46,7 +46,7 @@ $MyData =
         @{
             NodeName    = 'VM-1'
             Role = 'WebServer'
-        }
+        },
 
         @{
             NodeName    = 'VM-2'
@@ -183,7 +183,7 @@ Par exemple, vous pouvez créer un fichier nommé `MyData.psd1` avec le contenu 
         @{
             NodeName    = 'VM-1'
             FeatureName = 'Web-Server'
-        }
+        },
 
         @{
             NodeName    = 'VM-2'
@@ -211,7 +211,7 @@ DSC fournit trois variables spéciales qui peuvent être utilisées dans un scri
 
 Examinons un exemple complet qui utilise une configuration unique pour configurer les environnements de développement et de production d’un site web. Dans l’environnement de développement, IIS et SQL Server sont installés sur un même nœud. Dans l’environnement de production, IIS et SQL Server sont installés sur des nœuds séparés. Nous allons utiliser un fichier de données de configuration .psd1 pour spécifier les données des deux environnements.
 
-### <a name="configuration-data-file"></a>Fichier de données de configuration
+ ### <a name="configuration-data-file"></a>Fichier de données de configuration
 
 Nous allons définir les données de l’environnement de développement et de production dans un fichier nommé `DevProdEnvData.psd1` comme suit :
 
@@ -237,7 +237,7 @@ Nous allons définir les données de l’environnement de développement et de p
             Role            = "Web"
             SiteContents    = "C:\Website\Prod\SiteContents\"
             SitePath        = "\\Prod-IIS\Website\"
-        }
+        },
 
         @{
             NodeName         = "Dev"
@@ -250,23 +250,22 @@ Nous allons définir les données de l’environnement de développement et de p
     )
 
 }
-
-    )
-
-}
 ```
 
-### <a name="configuration-file"></a>Fichier de configuration
+### <a name="configuration-script-file"></a>Fichier de script de configuration
 
-À présent, dans la configuration, nous allons filtrer les nœuds que nous avons définis dans `DevProdEnvData.psd1` selon leur rôle (`MSSQL`, `Dev` ou les deux) et les configurer en conséquence. Dans l’environnement de développement, SQL Server et IIS se trouvent sur le même nœud, tandis que dans l’environnement de production, ils se trouvent sur deux nœuds différents. Le contenu du site est également différent, comme spécifié par les propriétés `SiteContents`.
+À présent, dans la configuration définie dans un fichier .ps1, nous allons filtrer les nœuds que nous avons définis dans `DevProdEnvData.psd1` selon leur rôle (`MSSQL`, `Dev` ou les deux) et les configurer en conséquence. Dans l’environnement de développement, SQL Server et IIS se trouvent sur le même nœud, tandis que dans l’environnement de production, ils se trouvent sur deux nœuds différents. Le contenu du site est également différent, comme spécifié par les propriétés `SiteContents`.
 
 À la fin du script de configuration, nous appelons la configuration (nous la compilons dans un document MOF), en passant `DevProdEnvData.psd1` comme paramètre `$ConfigurationData`.
+
+>**Remarque :** Cette configuration exige l’installation des modules `xSqlPs` et `xWebAdministration` sur le nœud cible.
 
 ```powershell
 Configuration MyWebApp
 {
     Import-DscResource -Module PSDesiredStateConfiguration
     Import-DscResource -Module xSqlPs
+    Import-DscResource -Module xWebAdministration
 
     Node $AllNodes.Where{$_.Role -contains "MSSQL"}.Nodename
    {
@@ -289,7 +288,7 @@ Configuration MyWebApp
         }
    }
 
-   Node $AllNodes.Where($_.Role -contains "Web")
+   Node $AllNodes.Where($_.Role -contains "Web").NodeName
    {
         # Install the IIS role
         WindowsFeature IIS
