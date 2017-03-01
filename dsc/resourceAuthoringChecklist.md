@@ -74,7 +74,7 @@ If ($error.count –ne 0) {
     Throw “Module was not imported correctly. Errors returned: $error”
 }
 ```
-## <a name="resource-is-idempotent-in-the-positive-case"></a>La ressource est idempotent dans le cas positif 
+## <a name="resource-is-idempotent-in-the-positive-case"></a>La ressource est idempotente dans le cas positif 
 L’une des caractéristiques fondamentales des ressources DSC doit être l’idempotence. Cela signifie que l’application d’une configuration DSC contenant cette ressource plusieurs fois aboutit toujours au même résultat. Par exemple, si nous créons une configuration qui contient la ressource de fichier suivante :
 ```powershell
 File file {
@@ -83,7 +83,7 @@ File file {
 } 
 ```
 Après une première application, le fichier test.txt doit apparaître dans le dossier C:\test. Toutefois, les exécutions suivantes de la même configuration ne doivent pas modifier l’état de l’ordinateur (par exemple, aucune copie du fichier test.txt ne doit être créée).
-Pour vérifier qu’une ressource est idempotent, vous pouvez appeler **Set-TargetResource** à plusieurs reprises lors de tests directs de la ressource, ou appeler **Start-DscConfiguration** à plusieurs reprises lors de tests de bout en bout. Le résultat doit être le même après chaque exécution. 
+Pour vérifier qu’une ressource est idempotente, vous pouvez appeler **Set-TargetResource** à plusieurs reprises lors de tests directs de la ressource, ou appeler **Start-DscConfiguration** à plusieurs reprises lors de tests de bout en bout. Le résultat doit être le même après chaque exécution. 
 
 
 ## <a name="test-user-modification-scenario"></a>Scénario de modification par l’utilisateur de test ##
