@@ -7,8 +7,8 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: 802f9b0cde5d56ed3da327593753aedcf89e00f6
-ms.sourcegitcommit: a81ffb39f370b95ae802cd054dc4480c9e68cf77
+ms.openlocfilehash: 6916432b0978cd1cda76a2dab997b10873de5899
+ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
 translationtype: HT
 ---
 # <a name="setting-up-a-dsc-web-pull-server"></a>Configuration d’un serveur collecteur web DSC
@@ -106,7 +106,7 @@ Start-DscConfiguration -Path c:\Configs\PullServer -Wait -Verbose
 Pour que les nœuds clients puissent s’inscrire auprès du serveur afin de pouvoir utiliser les noms de configuration au lieu de l’ID de configuration, une clé d’inscription, créée par la configuration ci-dessus, est enregistrée dans un fichier nommé `RegistrationKeys.txt` dans `C:\Program Files\WindowsPowerShell\DscService`. La clé d’inscription fonctionne comme un secret partagé utilisé lors de l’inscription initiale par le client avec le serveur collecteur. Le client génère un certificat auto-signé qui est utilisé pour l’authentification unique auprès du serveur collecteur une fois l’inscription terminée. L’empreinte de ce certificat est stockée localement et associée à l’URL du serveur collecteur.
 > **Remarque** : Les clés d’inscription ne sont pas prises en charge dans PowerShell 4.0. 
 
-Pour configurer un nœud pour l’authentification auprès du serveur collecteur, la clé d’inscription doit se trouver dans la métaconfiguration de tous les nœuds cibles que vous prévoyez d’inscrire auprès de ce serveur. Notez que la propriété **RegistrationKey** dans la métaconfiguration ci-dessous est supprimée une fois que l’ordinateur cible a été correctement inscrit, et que la valeur «&140;a952b-b9d6-406b-b416-e0f759c9c0e4 » doit correspondre à la valeur stockée dans le fichier RegistrationKeys.txt sur le serveur collecteur. Conservez la valeur de la clé d’inscription en lieu sûr, car elle permet d’inscrire n’importe quel ordinateur cible auprès du serveur.
+Pour configurer un nœud pour l’authentification auprès du serveur collecteur, la clé d’inscription doit se trouver dans la métaconfiguration de tous les nœuds cibles que vous prévoyez d’inscrire auprès de ce serveur. Notez que la propriété **RegistrationKey** dans la métaconfiguration ci-dessous est supprimée une fois que l’ordinateur cible a été correctement inscrit, et que la valeur « 140a952b-b9d6-406b-b416-e0f759c9c0e4 » doit correspondre à la valeur stockée dans le fichier RegistrationKeys.txt sur le serveur collecteur. Conservez la valeur de la clé d’inscription en lieu sûr, car elle permet d’inscrire n’importe quel ordinateur cible auprès du serveur.
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -172,7 +172,7 @@ Pour faciliter la configuration, la validation et la gestion du serveur collecte
      Publish-DSCModuleAndMof -Source C:\LocalDepot -Force
 ```
 
-1. Script qui valide la configuration du serveur collecteur. [PullServerSetupTests.ps1](https://github.com/PowerShell/xPSDesiredStateConfiguration/blob/dev/Examples/PullServerDeploymentVerificationTest/PullServerSetupTests.ps1).
+1. Script qui valide la configuration du serveur collecteur. [PullServerSetupTests.ps1](https://github.com/PowerShell/xPSDesiredStateConfiguration/blob/dev/DSCPullServerSetup/PullServerDeploymentVerificationTest/PullServerSetupTests.ps1).
 
 
 ## <a name="pull-client-configuration"></a>Configuration du client collecteur 
