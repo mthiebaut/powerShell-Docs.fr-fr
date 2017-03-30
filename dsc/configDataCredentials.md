@@ -7,8 +7,8 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: 162ae26dec67e8259661bb58c1b713818627220b
-ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
+ms.openlocfilehash: e6ea0992f90a72da6426d9112950c925ab6cd32b
+ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
 translationtype: HT
 ---
 # <a name="credentials-options-in-configuration-data"></a>Options relatives aux informations d’identification dans les données de configuration
@@ -82,10 +82,8 @@ configuration unencryptedPasswordDemo
             Ensure = "Present"
             MembersToInclude = "User1"
         }
-
     }
 
-    
     Node "TestMachine2"
     {
         # Now we'll use a node-specific password to this machine
@@ -112,7 +110,6 @@ configuration unencryptedPasswordDemo
             Ensure = "Present"
             MembersToInclude = "User2"
         }
-      
     }
 
 }
@@ -160,7 +157,8 @@ Cet exemple utilise une ressource [Group](https://msdn.microsoft.com/en-us/power
 Elle peut créer des groupes locaux et ajouter ou supprimer des membres.
 Elle accepte à la fois la propriété `Credential` et la propriété automatique `PsDscRunAsCredential`.
 Toutefois, la ressource utilise uniquement la propriété `Credential`.
-Pour en savoir plus sur `PsDscRunAsCredential`, lisez les [notes de version de WMF](https://msdn.microsoft.com/en-us/powershell/wmf/dsc_runas).
+
+Pour plus d’informations sur la propriété `PsDscRunAsCredential`, consultez [Exécution de DSC avec les informations d’identification de l’utilisateur](runAsUser.md).
 
 ## <a name="example-the-group-resource-credential-property"></a>Exemple : Propriété d’informations d’identification de la ressource Group
 
@@ -279,8 +277,8 @@ L’utilisation d’un compte local élimine les risques d’exposition des info
 
 **Quand vous utilisez des informations d’identification avec des ressources DSC, préférez un compte local à un compte de domaine quand cela est possible.**
 
-Si la propriété `Username` des informations d’identification comprend un « \' » ou un « '@' », DSC la traite comme un compte de domaine.
-Il existe une exception pour « localhost », « 127.0.0.1 » et « ::&1; » dans la partie du nom d’utilisateur consacrée au domaine.
+Si la propriété `Username` des informations d’identification comprend un « \' » ou un « @ », DSC la traite comme un compte de domaine.
+Il existe une exception pour « localhost », « 127.0.0.1 » et « :: 1 » dans la partie du nom d’utilisateur consacrée au domaine.
 
 ## <a name="psdscallowdomainuser"></a>PsDscAllowDomainUser
 

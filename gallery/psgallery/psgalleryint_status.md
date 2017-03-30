@@ -9,12 +9,20 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psgalleryint_status
 ms.technology: powershell
-ms.openlocfilehash: 5fcb09a43a8e4544072f34f2112bb7bc097f02cc
-ms.sourcegitcommit: 26c3acb3dae9f7c3868a5f0d6144e9e1a0d02557
+ms.openlocfilehash: a889620aff415146d1808df052ffc43732640ae7
+ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
 translationtype: HT
 ---
 <a name="powershell-gallery-status"></a>État de PowerShell Gallery
 =========================
+
+## <a name="03272017---unable-to-see-individual-module-and-script-pages"></a>27/03/2017 - Impossible de voir les pages individuelles de module et de script
+
+__Résumé de l’impact__ : les liens directs vers les pages individuelles de module et de script sur https://www.powershellgallery.com sont actuellement rompus. Cela est actuellement signalé dans toutes les régions. Cela un impact sur les applets de commande PowerShellGet, par ex., Install-Module, Install-Script, Update-Module, Update-Script, Publish-Module, Publish-Scirpt devrait continuer à fonctionner.
+
+__Cause première__ : les ingénieurs ont identifié la cause. Il s’agit d’un problème d’affichage des boutons des médias sociaux (comme Facebook) sur la page.  
+
+__Résolution__ : les ingénieurs travaillent sur un correctif pour résoudre ce problème. 
 
 ## <a name="12152016---unable-to-send-emails-via-powershellgallery-website"></a>15/12/2016 - Impossible d’envoyer des courriers électroniques sur le site web PowerShell Gallery
 
@@ -25,7 +33,7 @@ __Étapes__ : si vous avez utilisé les liens Contacter les propriétaires, Gér
 
 
 ## <a name="8102016---resolved-unable-to-send-emails-to-cgadminmicrosoftcom"></a>10/08/2016 - Résolu : Impossible d’envoyer des e-mails à cgadmin@microsoft.com
-__Résumé de l’impact__ : Entre le 05/08/2016 et le 10/08/2016, les clients n’ont pas pu envoyer d’e-mails à cgadmin@microsoft.com, ni utiliser la fonctionnalité Nous contacter.  
+__Résumé de l’impact__ : entre le 05/08/2016 et le 10/08/2016, les clients n’ont pas pu envoyer d’e-mails à cgadmin@microsoft.com ni utiliser la fonctionnalité Nous contacter.  
 __Cause racine__ : Les ingénieurs ont identifié une modification de la configuration du compte e-mail.  
 __Résolution__ : Les ingénieurs ont travaillé à la résolution du problème de configuration.  
 __Étapes suivantes__ : Si vous avez utilisé le lien Nous contacter ou envoyé un e-mail à cgadmin@microsoft.com pendant cette période et que nous n’avons pas répondu, réessayez. Nous vous remercions de votre patience.

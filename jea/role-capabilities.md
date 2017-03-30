@@ -5,11 +5,11 @@ author: rpsqrd
 ms.author: ryanpu
 ms.prod: powershell
 keywords: powershell,applet de commande,jea
-ms.date: 2016-12-05
+ms.date: 2017-03-07
 title: "Capacités de rôle JEA"
 ms.technology: powershell
-ms.openlocfilehash: e67b38344e2d1d0d347c7850f2097e31c0945e15
-ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
+ms.openlocfilehash: 49623e69b186fd09679bf7e0186dec3961e719ba
+ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
 translationtype: HT
 ---
 # <a name="jea-role-capabilities"></a>Capacités de rôle JEA
@@ -236,7 +236,6 @@ La logique de fusion la plus complexe affecte les applets de commande et les fon
 
 Les règles sont les suivantes :
 
-
 1. Si une applet de commande n’est visible que dans un rôle, elle sera visible par l’utilisateur avec n’importe quelles contraintes de paramètres applicables.
 2. Si une applet de commande est visible dans plusieurs rôles, et que chaque rôle a les mêmes contraintes sur l’applet de commande, l’applet de commande sera visible par l’utilisateur avec ces contraintes.
 3. Si une applet de commande est visible dans plusieurs rôles, et que les rôles autorisent différents ensembles de paramètres, l’applet de commande et tous les paramètres définis sur tous les rôles seront visibles par l’utilisateur. Si un rôle n’a pas de contraintes sur les paramètres, tous les paramètres seront autorisées.
@@ -245,19 +244,29 @@ Les règles sont les suivantes :
 6. Si un modèle de validation est défini pour le même paramètre d’applet de commande dans plusieurs rôles, toutes les valeurs qui correspondent aux modèles seront autorisées.
 7. Si un ensemble de validation est défini dans un ou plusieurs rôles, et qu’un modèle de validation est défini dans un autre rôle pour le même paramètre d’applet de commande, l’ensemble de validation est ignoré et la règle (6) s’applique aux modèles de validation restants.
 
-Le tableau ci-dessous présente quelques exemples de cette logique dans la pratique, avec deux rôles, A et B, affectés à un utilisateur dans une session JEA.
+Vous trouverez ci-dessous un exemple de la façon dont les rôles sont fusionnés en fonction de ces règles :
 
-Règle | Rôle A VisibleCmdlets                                                                          | Rôle B VisibleCmdlets                                                                             | Autorisations effectives de l’utilisateur
------|------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------
-1    | `Get-Service`                                                                                  | Non applicable                                                                                               | `Get-Service`
-1    | Non applicable                                                                                            | `Get-Service`                                                                                     | `Get-Service`
-2    | `Get-Service`                                                                                  | `Get-Service`                                                                                     | `Get-Service`
-3    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName' }}`                             | `Get-Service`                                                                                     | `Get-Service`
-3    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName' }}`                             | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'Name' }}`                                       | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName' }, @{ Name = 'Name' }}`
-4    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client' }}` | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName' }}`                                | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName' }}`
-5    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client' }}` | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DHCP Client' }}`   | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client', 'DHCP Client' }}`
-6    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidatePattern = 'DNS.*' }}`  | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidatePattern = 'contoso.*' }}` | `@{ Name = ’Get-Service’; Parameters = @{ Name = ’DisplayName’; ValidatePattern = ’(DNS.*)\|(contoso.*)’ }}`
-7    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client' }}` | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidatePattern = 'contoso.*' }}` | `@{ Name = ’Get-Service’; Parameters = @{ Name = ’DisplayName’; ValidatePattern = ’(DNS.*)\|(contoso.*)’ }}`
+```powershell
+# Role A Visible Cmdlets
+$roleA = @{
+    VisibleCmdlets = 'Get-Service',
+                     @{ Name = 'Restart-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client' } }
+}
+
+# Role B Visible Cmdlets
+$roleB = @{
+    VisibleCmdlets = @{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidatePattern = 'DNS.*' } },
+                     @{ Name = 'Restart-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Server' } }
+}
+
+# Resulting permisisons for a user who belongs to both role A and B
+# - The constraint in role B for the DisplayName parameter on Get-Service is ignored becuase of rule #4
+# - The ValidateSets for Restart-Service are merged because both roles use ValidateSet on the same parameter per rule #5
+$mergedAandB = @{
+    VisibleCmdlets = 'Get-Service',
+                     @{ Name = 'Restart-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client', 'DNS Server' } }
+}
+```
 
 
 

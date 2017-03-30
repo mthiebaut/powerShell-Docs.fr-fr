@@ -5,11 +5,11 @@ author: rpsqrd
 ms.author: ryanpu
 ms.prod: powershell
 keywords: powershell,applet de commande,jea
-ms.date: 2016-12-05
+ms.date: 2017-03-07
 title: "Considérations de sécurité JEA"
 ms.technology: powershell
-ms.openlocfilehash: 03d34a7c8241aee1578a1cf2e794046578669dce
-ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
+ms.openlocfilehash: 02384465e3c1b6d9633cc346ba88a2566fea1af1
+ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
 translationtype: HT
 ---
 # <a name="jea-security-considerations"></a>Considérations de sécurité JEA
@@ -35,12 +35,11 @@ L’utilisateur qui se connecte ne connaît pas les informations d’identificat
 
 Par défaut, les comptes virtuels appartiennent au groupe Administrateurs local sur la machine.
 Ainsi, ils disposent des droits complets pour gérer n’importe quel élément sur le système, mais pas de droits pour gérer les ressources sur le réseau.
-Lors de l’authentification sur d’autres machines, le contexte de l’utilisateur est le compte d’ordinateur local, pas le compte virtuel.
+Lors de l’authentification sur d’autres machines, le contexte de l’utilisateur est celui du compte d’ordinateur local, pas le compte virtuel.
 
-Sur un contrôleur de domaine Active Directory, les comptes virtuels obtiennent des privilèges*Administrateur du domaine* par défaut.
-Cela est dû au fait qu’il n’existe aucun groupe d’administrateurs locaux sur un contrôleur de domaine.
-En conséquence, les comptes virtuels sur les contrôleurs de domaine sont des comptes de domaine et peuvent être utilisés sur d’autres machines.
-Lors de la configuration de sessions JEA sur un contrôleur de domaine, vous devez être prudent afin d’éviter l’exposition de commandes qui pourrait être utilisées pour gérer d’autres ordinateurs sur le réseau.
+Les contrôleurs de domaine constituent un cas particulier, car il n’existe aucun concept de groupe d’administrateurs locaux.
+Au lieu de cela, les comptes virtuels appartiennent aux Administrateurs du domaine et peuvent gérer les services d’annuaire sur le contrôleur de domaine.
+L’identité du domaine est toujours limitée à une utilisation sur le contrôleur de domaine où la session JEA a été instanciée, et tout accès au réseau semblera provenir de l’objet ordinateur de contrôleur de domaine.
 
 Dans les deux cas, vous pouvez également définir explicitement les groupes de sécurité auxquels le compte virtuel doit appartenir.
 Il s’agit d’une bonne pratique si la tâche que vous effectuez peut être réalisée sans privilèges d’administrateur local ou de domaine.
@@ -52,8 +51,8 @@ Le tableau ci-dessous résume les options de configuration possibles et les auto
 
 Type d’ordinateur                | Configuration du groupe du compte virtuel | Contexte de l’utilisateur local                                      | Contexte de l’utilisateur réseau
 -----------------------------|-------------------------------------|---------------------------------------------------------|--------------------------------------------------
-Contrôleur de domaine            | Par défaut                             | Utilisateur de domaine, membre de « *DOMAIN*\Domain Admins »         | Utilisateur de domaine, membre de « *DOMAIN*\Domain Admins »
-Contrôleur de domaine            | Groupes de domaine A et B               | Utilisateur de domaine, membre de « *DOMAIN*\A », « *DOMAIN*\B »       | Utilisateur de domaine, membre de « *DOMAIN*\A », « *DOMAIN*\B »
+Contrôleur de domaine            | Par défaut                             | Utilisateur de domaine, membre de « *DOMAIN*\Domain Admins »         | Compte d'ordinateur
+Contrôleur de domaine            | Groupes de domaine A et B               | Utilisateur de domaine, membre de « *DOMAIN*\A », « *DOMAIN*\B »       | Compte d'ordinateur
 Serveur membre ou station de travail | Par défaut                             | Utilisateur local, membre de « *BUILTIN*\Administrators »        | Compte d'ordinateur
 Serveur membre ou station de travail | Groupes locaux C et D                | Utilisateur local, le membre de« *COMPUTER*\C » et « *COMPUTER*\D » | Compte d'ordinateur
 
@@ -71,8 +70,8 @@ Les autorisations effectives du gMSA sont définies par les groupes de sécurit�
 Lorsqu’un point de terminaison JEA est configuré pour utiliser un compte gMSA, les actions de tous les utilisateurs JEA semblent provenir du même compte de service administré de groupe.
 La seule manière de tracer des actions jusqu’à un utilisateur spécifique consiste à identifier le jeu de commandes exécuté dans une transcription de session PowerShell.
 
-**Informations d’identification de relais** : si vous ne spécifiez pas une exécution en tant que compte, PowerShell utilise les informations d’identification de l’utilisateur qui se connecte pour exécuter des commandes sur le serveur distant.
-Cette configuration n’est pas recommandée pour JEA, car elle vous oblige à accorder un accès direct à l’utilisateur qui se connecte à des groupes d’administration privilégiés.
+Les **informations d’identification de relais** sont utilisées si vous ne spécifiez pas une exécution en tant que compte et si vous voulez que PowerShell utilise les informations d’identification de l’utilisateur qui se connecte pour exécuter des commandes sur le serveur distant.
+Cette configuration n’est *pas* recommandée pour JEA, car elle vous oblige à accorder un accès direct à l’utilisateur qui se connecte à des groupes d’administration privilégiés.
 Si l’utilisateur connecté possède déjà des privilèges d’administrateur, il peut éviter JEA et gérer le système par d’autres moyens sans contrainte.
 Consultez la section ci-dessous pour en savoir plus et découvrir comment [JEA ne protège pas contre les administrateurs](#jea-does-not-protect-against-admins).
 

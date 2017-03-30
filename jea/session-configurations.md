@@ -5,11 +5,11 @@ author: rpsqrd
 ms.author: ryanpu
 ms.prod: powershell
 keywords: powershell,applet de commande,jea
-ms.date: 2016-12-05
+ms.date: 2017-03-08
 title: Configuration de session JEA
 ms.technology: powershell
-ms.openlocfilehash: 32602293afd3a94767682d32a053281ec021cc33
-ms.sourcegitcommit: f06ef671c0a646bdd277634da89cc11bc2a78a41
+ms.openlocfilehash: e98214d1777a1530b5a18ac9df1a6185d6d73979
+ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
 translationtype: HT
 ---
 # <a name="jea-session-configurations"></a>Configuration de session JEA
@@ -175,55 +175,13 @@ Comme l’indique l’exemple ci-dessus, les capacités de rôle sont référenc
 Si plusieurs capacités de rôle sont disponibles sur le système avec le même nom plat, PowerShell utilise son ordre de recherche implicite pour sélectionner le fichier effectif de capacités de rôle.
 Il ne donnera **pas** accès à tous les fichiers de capacités de rôle portant le même nom.
 
-L’ordre de recherche des capacités de rôle JEA est déterminé par l’ordre des chemins d’accès dans `$env:PSModulePath` et par le nom du module parent.
-Le chemin d’accès du module par défaut dans PowerShell est le suivant :
+JEA utilise la variable d’environnement `$env:PSModulePath` pour déterminer les chemins d’accès à analyser pour rechercher les fichiers de capacités de rôle.
+Dans chacun de ces chemins d’accès, JEA recherche les modules PowerShell valides contenant un sous-dossier « RoleCapabilities ».
+Tout comme pour l’importation de modules, JEA préfère les capacités de rôle qui sont livrées avec Windows aux capacités de rôle personnalisées portant le même nom.
+Pour tous les autres conflits d’affectation de noms, la priorité est déterminée par l’ordre dans lequel Windows énumère les fichiers dans le répertoire (pas forcément par ordre alphabétique).
+Le premier fichier de capacités de rôle trouvé qui correspond au nom requis sera utilisé pour l’utilisateur qui se connecte.
 
-```powershell
-PS C:\> $env:PSModulePath
-
-
-C:\Users\Alice\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\
-```
-
-Les chemins d’accès qui apparaissent avant (à gauche) dans la liste PSModulePath ont la précédence par rapport aux chemins d’accès de droite.
-
-Dans chaque chemin d’accès, il peut y avoir zéro module PowerShell ou plus.
-Les capacités de rôle sont sélectionnées dans le premier module, par ordre alphabétique, qui contient un fichier de capacités de rôle correspondant au nom souhaité.
-
-Pour illustrer cette précédence, prenons l’exemple suivant, où le signe plus (+) indique un dossier, et le signe moins (-) un fichier.
-
-```
-+ C:\Program Files\WindowsPowerShell\Modules
-    + ContosoMaintenance
-        - ContosoMaintenance.psd1
-        + RoleCapabilities
-            - DnsAdmin.psrc
-            - DnsOperator.psrc
-            - DnsAuditor.psrc
-    + FabrikamModule
-        - FabrikamModule.psd1
-        + RoleCapabilities
-            - DnsAdmin.psrc
-            - FileServerAdmin.psrc
-
-+ C:\Windows\System32\WindowsPowerShell\v1.0\Modules
-    + BuiltInModule
-        - BuiltInModule.psd1
-        + RoleCapabilities
-            - DnsAdmin.psrc
-            - OtherBuiltinRole.psrc
-```
-
-Il existe plusieurs fichiers de capacités de rôle installés sur ce système.
-Que se passe-t-il si un fichier de configuration de session donne accès à l’utilisateur au rôle « DnsAdmin » ?
-
-
-Le fichier effectif de capacités de rôle sera celui situé à l’adresse « C:\\Program Files\\WindowsPowerShell\\Modules\\ContosoMaintenance\\RoleCapabilities\\DnsAdmin.psrc ».
-
-Si vous vous demandez pourquoi, n’oubliez pas les deux ordres de précédence :
-
-1. Dans la variable `$env:PSModulePath`, le dossier Program Files apparaît avant le dossier System32, donc elle privilégie les fichiers du dossier Program Files.
-2. Par ordre alphabétique, le module ContosoMaintenance précède le module FabrikamModule, donc elle sélectionne le rôle DnsAdmin de ContosoMaintenance.
+Étant donné que l’ordre de recherche des capacités de rôle n’est pas déterministe lorsque deux ou plusieurs capacités de rôle partagent le même nom, il est **fortement recommandé** de vous assurer que les capacités de rôle ont des noms uniques sur votre ordinateur.
 
 ### <a name="conditional-access-rules"></a>Règles d’accès conditionnel
 
