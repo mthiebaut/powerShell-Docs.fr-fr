@@ -5,10 +5,10 @@ keywords: powershell,DSC
 description: 
 ms.topic: article
 author: eslesar
-manager: dongill
+manager: carmonm
 ms.prod: powershell
-ms.openlocfilehash: b84b70edeafca3112356224c9ae14c6497170ac5
-ms.sourcegitcommit: f06ef671c0a646bdd277634da89cc11bc2a78a41
+ms.openlocfilehash: af86f1f93a1035ec52a8b029acdd826e8463e2c2
+ms.sourcegitcommit: ba8ed836799ef465e507fa1b8d341ba38459d863
 translationtype: HT
 ---
 # <a name="pull-server-best-practices"></a>Bonnes pratiques pour le serveur collecteur
@@ -117,13 +117,12 @@ Lors de la configuration de clients, vous aurez besoin d’un nom de serveur pou
 
 Un CNAME DNS vous permet de créer un alias pour faire référence à votre enregistrement d’hôte (A). L’objectif d’avoir un enregistrement de nom supplémentaire est d’augmenter la flexibilité dans le cas où une modification s’avérerait nécessaire. Un CNAME permet d’isoler la configuration du client afin que les modifications apportées à l’environnement de serveur, telles que le remplacement d’un serveur collecteur ou l’ajout de serveurs collecteurs supplémentaires, ne nécessitent pas une modification correspondante dans la configuration du client.
 
-Quand vous choisissez un nom pour l’enregistrement DNS, gardez à l’esprit l’architecture de la solution. Si vous utilisez l’équilibrage de charge, le certificat servant à sécuriser le trafic sur HTTPS doit partager le même nom que l’enregistrement DNS. De même, si vous utilisez un partage de fichiers à haute disponibilité, le nom virtuel du cluster est utilisé.
+Quand vous choisissez un nom pour l’enregistrement DNS, gardez à l’esprit l’architecture de la solution. Si vous utilisez l’équilibrage de charge, le certificat servant à sécuriser le trafic sur HTTPS doit partager le même nom que l’enregistrement DNS. 
 
 Scénario |Bonne pratique
 :---|:---
 Environnement de test |Reproduisez l’environnement de production planifié, si possible. Un nom d’hôte de serveur convient aux configurations simples. Si DNS n’est pas disponible, une adresse IP peut être utilisée à la place d’un nom d’hôte.|
 Déploiement à nœud unique |Créez un enregistrement DNS CNAME qui pointe vers le nom d’hôte du serveur.|
-Déploiement à haute disponibilité |Si les clients se connectent par l’intermédiaire d’une solution d’équilibrage de charge, créez un nom d’hôte pour l’adresse IP virtuelle et un enregistrement CNAME qui fait référence à ce nom d’hôte. Si vous utilisez le tourniquet (round robin) DNS pour distribuer les demandes du client entre les serveurs collecteurs, vous devez configurer les enregistrements de noms pour inclure les noms d’hôtes de toutes les instances de serveurs collecteurs déployés.|
 
 Pour plus d’informations, consultez [Configuration du tourniquet (round robin) DNS dans Windows Server](https://technet.microsoft.com/en-us/library/cc787484(v=ws.10).aspx).
 
@@ -154,13 +153,6 @@ Avez-vous choisi, pour l’environnement de serveur collecteur, un nom DNS que v
 
 Vous pouvez déployer un serveur collecteur à l’aide d’un service web hébergé sur IIS ou d’un partage de fichiers SMB. Dans la plupart des cas, l’option de service web offre une plus grande souplesse. Il n’est pas rare que le trafic HTTPS traverse les limites du réseau, tandis que le trafic SMB est souvent filtré ou bloqué entre les réseaux. Le service web offre également la possibilité d’inclure un serveur de mise en conformité ou Web Reporting Manager (ces deux sujets seront traités dans une future version de ce document) qui fournissent un mécanisme permettant aux clients de signaler l’état à un serveur pour une visibilité centralisée. SMB fournit une option pour les environnements où la stratégie indique qu’un serveur web ne doit pas être utilisé et pour les autres exigences liées à l’environnement qui font qu’un rôle serveur web n’est pas souhaitable. Dans les deux cas, n’oubliez pas d’évaluer les exigences de signature et de chiffrement du trafic. HTTPS, la signature SMB et les stratégies IPSEC sont toutes des options qui méritent d’être examinées.
 
-#### <a name="designing-for-high-availability"></a>Conception pour une haute disponibilité  
-Le rôle serveur collecteur peut être déployé dans une architecture à haute disponibilité. Le rôle service web peut être à équilibrage de charge, et les fichiers et dossiers qui incluent des modules DSC et des configurations DSC peuvent se trouver sur un stockage à haute disponibilité.
-
-Gardez à l’esprit qu’une fois les configurations et les modules remis à un nœud cible, toutes les données nécessaires pour effectuer des tests et pour définir des configurations sont stockées localement sur chaque nœud. Seules les modifications sont fournies par le serveur collecteur. Une panne de service pour un serveur collecteur n’est pas une interruption, sauf si les déploiements sont actifs.  En général, la haute disponibilité n’est garantie que pour les plus grands environnements.
-
-La configuration d’un environnement de serveur collecteur à haute disponibilité impose de prendre des décisions concernant la façon de distribuer les demandes du client entre plusieurs nœuds de serveur, ainsi que la façon de partager les fichiers de serveur nécessaires entre ces nœuds.
-
 #### <a name="load-balancing"></a>Équilibrage de charge  
 Les clients qui interagissent avec le service web adressent une demande d’informations qui sont retournées dans une réponse unique. Aucune demande séquentielle n’est nécessaire. La plateforme d’équilibrage de charge n’a donc pas besoin de garantir la conservation des sessions sur un serveur unique à un moment donné.
 
@@ -173,17 +165,6 @@ Quelles informations seront nécessaires pour la demande ?|
 Devrez-vous demander une adresse IP supplémentaire ou l’équipe responsable de l’équilibrage de charge gérera-t-elle ce point ?|
 Avez-vous des enregistrements DNS obligatoires, et seront-ils exigés par l’équipe responsable de la configuration de la solution d’équilibrage de charge ?|
 La solution d’équilibrage de charge exige-t-elle que l’infrastructure à clé publique (PKI) soit gérée par l’appareil ou peut-elle équilibrer la charge du trafic HTTPS tant qu’il n’y a aucune exigence liée à la session ?|
-
-### <a name="shared-storage"></a>Stockage partagé
-
-Dans un scénario à haute disponibilité où plusieurs serveurs sont configurés comme serveurs collecteurs et où les connexions sont à charge équilibrée entre elles, il est essentiel que les ressources et les configurations disponibles à partir de ces serveurs soient identiques. La meilleure façon d’y parvenir consiste à stocker ce contenu sur un emplacement à haute disponibilité tel qu’un partage de fichiers en cluster. Vous pouvez spécifier l’emplacement du partage dans la configuration de chaque serveur. Pour plus d’informations sur les options de stockage partagé, consultez Vue d’ensemble des serveurs de fichiers avec montée en puissance parallèle pour les données d’application.
-
-Tâche de planification|
----|
-Quelle solution sera utilisée pour héberger le partage à haute disponibilité ?|
-Qui gèrera la demande d’un nouveau partage à haute disponibilité ?|
-Combien de temps faut-il en moyenne pour rendre disponible un partage à haute disponibilité ?|
-De quelles informations les équipes responsables du stockage et/ou du clustering auront-elles besoin ?|
 
 ### <a name="staging-configurations-and-modules-on-the-pull-server"></a>Configurations et modules intermédiaires sur le serveur collecteur
 
