@@ -25,5 +25,5 @@ Chaque dossier de ce référentiel est publié sur [MSDN](https://msdn.microsoft
 
 Nous fusionnons activement les contributions dans ce dépôt via une [demande Pull](https://help.github.com/articles/using-pull-requests/) dans la branche de *préproduction*. Notez qu’avant d’envoyer une demande Pull, vous devez [signer un contrat de licence de contribution](https://cla.microsoft.com/) pour garantir que la communauté est libre d’utiliser vos envois.
 Pour plus d’informations sur la contribution, lisez notre [guide des contributions](CONTRIBUTING.md).
-Il existe un [guide de style](./style.md) préliminaire que vous pouvez consulter avant d’apporter des contributions.
+Il existe un [guide de style](./STYLE.md) préliminaire que vous pouvez consulter avant d’apporter des contributions.
 Utilisez les modèles « Issue » et « Pull Request » afin que la documentation soit cohérente entre les versions. 
