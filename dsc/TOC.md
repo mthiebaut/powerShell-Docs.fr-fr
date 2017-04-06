@@ -5,11 +5,13 @@
 
 # [Configurations](configurations.md)
 ## [Application des configurations](enactingConfigurations.md)
+## [Séparation des données de configuration et d’environnement](separatingEnvData.md)
 ## [Utilisation de ressources avec plusieurs versions](sxsResource.md)
 ## [Exécution de DSC avec les informations d’identification de l’utilisateur](runAsUser.md)
 ## [Spécification de dépendances entre nœuds](crossNodeDependencies.md)
 ## [Données de configuration](configData.md)
 ### [Options des informations d’identification dans les données de configuration](configDataCredentials.md)
+## [Imbrication des configurations](compositeConfigs.md)
 ## [Sécurisation du fichier MOF de configuration](secureMOF.md)
 ## [Configurations partielles](partialConfigs.md)
 ## [Écriture de l’aide pour les configurations DSC](configHelp.md)
