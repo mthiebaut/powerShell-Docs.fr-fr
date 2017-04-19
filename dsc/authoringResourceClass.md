@@ -1,5 +1,5 @@
 ---
-title: "Écriture d’une ressource DSC personnalisée avec les classes PowerShell"
+title: "Écriture d’une ressource DSC personnalisée avec les classes PowerShell"
 ms.date: 2016-05-16
 keywords: powershell,DSC
 description: 
@@ -7,25 +7,27 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: a8c2094cbef1bb14c4a9082ff78fae78ec0c2e65
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: feec9b9e242ef6f43c272bfeb179d11944d1cb06
+ms.sourcegitcommit: 1002c473b88abb209e4188bb626d93675c3614e2
 translationtype: HT
 ---
-# <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>Écriture d’une ressource DSC personnalisée avec les classes PowerShell
+# <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>Écriture d’une ressource DSC personnalisée avec les classes PowerShell
 
-> S’applique à : Windows PowerShell 5.0
+> S’applique à : Windows PowerShell 5.0
 
-Grâce à l’introduction des classes PowerShell dans Windows PowerShell 5.0, vous pouvez maintenant définir une ressource DSC en créant une classe. La classe définit à la fois le schéma et l’implémentation de la ressource. Il est donc inutile de créer un fichier MOF séparé. La structure des dossiers d’une ressource basée sur une classe est également plus simple, car le dossier **DSCResources** n’est plus nécessaire.
+Grâce à l’introduction des classes PowerShell dans Windows PowerShell 5.0, vous pouvez maintenant définir une ressource DSC en créant une classe. La classe définit à la fois le schéma et l’implémentation de la ressource. Il est donc inutile de créer un fichier MOF séparé. La structure des dossiers d’une ressource basée sur une classe est également plus simple, car le dossier **DSCResources** n’est plus nécessaire.
 
-Dans une ressource DSC basée sur une classe, le schéma est défini comme propriétés de la classe qui peuvent être modifiées à l’aide d’attributs pour spécifier le type de la propriété. La ressource est implémentée par les méthodes **Get()**, **Set()** et **Test()** (équivalentes aux fonctions **Get-TargetResource**, **Set-TargetResource** et **Test-TargetResource** d’une ressource de script).
+Dans une ressource DSC basée sur une classe, le schéma est défini comme propriétés de la classe qui peuvent être modifiées à l’aide d’attributs pour spécifier le type de la propriété. La ressource est implémentée par les méthodes **Get()**, **Set()** et **Test()** (équivalentes aux fonctions **Get-TargetResource**, **Set-TargetResource** et **Test-TargetResource** d’une ressource de script).
 
 Dans cette rubrique, nous allons créer une ressource simple nommée **FileResource** qui gère un fichier situé dans un chemin spécifié.
 
 Pour plus d’informations sur les ressources DSC, consultez [Création de ressources DSC Windows PowerShell personnalisées](authoringResource.md)
 
+>**Remarque :** Les collections génériques ne sont pas prises en charge dans les ressources de classe.
+
 ## <a name="folder-structure-for-a-class-resource"></a>Structure des dossiers pour une ressource de classe
 
-Pour implémenter une ressource personnalisée DSC avec une classe PowerShell, créez la structure de dossiers suivante. La classe est définie dans **MyDscResource.psm1** et le manifeste du module est défini dans **MyDscResource.psd1**.
+Pour implémenter une ressource personnalisée DSC avec une classe PowerShell, créez la structure de dossiers suivante. La classe est définie dans **MyDscResource.psm1** et le manifeste du module est défini dans **MyDscResource.psd1**.
 
 ```
 $env:ProgramFiles\WindowsPowerShell\Modules (folder)
@@ -36,7 +38,7 @@ $env:ProgramFiles\WindowsPowerShell\Modules (folder)
 
 ## <a name="create-the-class"></a>Créer la classe
 
-Le mot clé class vous permet de créer une classe PowerShell. Pour spécifier qu’une classe est une ressource DSC, utilisez l’attribut **DscResource()**. Le nom de la classe correspond au nom de la ressource DSC.
+Le mot clé class vous permet de créer une classe PowerShell. Pour spécifier qu’une classe est une ressource DSC, utilisez l’attribut **DscResource()**. Le nom de la classe correspond au nom de la ressource DSC.
 
 ```powershell
 [DscResource()]
@@ -46,7 +48,7 @@ class FileResource {
 
 ### <a name="declare-properties"></a>Déclarer des propriétés
 
-Le schéma de la ressource DSC est défini comme propriétés de la classe. Nous déclarons trois propriétés de la manière suivante.
+Le schéma de la ressource DSC est défini comme propriétés de la classe. Nous déclarons trois propriétés de la manière suivante.
 
 ```powershell
 [DscProperty(Key)]
@@ -62,7 +64,7 @@ Le schéma de la ressource DSC est défini comme propriétés de la classe. Nous
 [Nullable[datetime]] $CreationTime
 ```
 
-Notez que les propriétés sont modifiées par les attributs. La signification des attributs est la suivante :
+Notez que les propriétés sont modifiées par les attributs. La signification des attributs est la suivante :
 
 - **DscProperty(Key)** : la propriété est obligatoire. La propriété est une clé. Les valeurs de toutes les propriétés marquées comme des clés doivent être combinées pour pouvoir identifier de manière unique une instance de ressource au sein d’une configuration.
 - **DscProperty(Mandatory)** : la propriété est obligatoire.
