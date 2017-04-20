@@ -9,20 +9,22 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psgallery_status
 ms.technology: powershell
-ms.openlocfilehash: 1886715c4b948e4bc59a51fb96d54b56b5b5afed
-ms.sourcegitcommit: 809e4f1bdf218b283e84438151030bfa94ca956d
+ms.openlocfilehash: a260b9b696b41947fbbb789fd165dfe4bdac1dc3
+ms.sourcegitcommit: 214b8442f05618d078837889cbb6a30b42c01edb
 translationtype: HT
 ---
 <a name="powershell-gallery-status"></a>État de PowerShell Gallery
 =========================
 
-## <a name="04112017---users-unable-to-log-in"></a>11/04/2017 - Les utilisateurs ne peuvent pas se connecter
+## <a name="04112017---users-unable-to-log-in-with-azure-active-directory-aad-accounts"></a>11/04/2017 - Les utilisateurs ne parviennent pas à se connecter avec un compte Azure Active Directory (AAD)
 
-__Résumé de l’impact__ : Certains utilisateurs ne peuvent pas se connecter à PowerShell Gallery à l’aide de comptes Azure AD. L’équipe des opérations de PowerShell Gallery étudie le problème. Le problème ne semble pas affecter les utilisateurs qui ont un compte Microsoft (ceux avec des domaines tels que Outlook.com, Live.com, etc.) 
+__Résumé de l’impact__ : certains utilisateurs ne parvenaient pas à se connecter à PowerShell Gallery avec un compte Azure AD. 
  
-__Cause première__ : À définir  
+__Cause racine__: lors d’une mise à jour visant à sécuriser l’interaction avec AAD, une modification de paramètre a été oubliée. Les tests effectués pour valider la modification n’incluaient pas tous les types de comptes AAD ; par conséquent, le déploiement s’est poursuivi.
 
-__Étapes suivantes__ : Nous travaillons en collaboration avec l’équipe Azure AD pour étudier le problème. 
+__Résolution__ : les ingénieurs ont identifié le paramètre manquant et ont résolu le problème. 
+
+__Étapes suivantes__ : nous allons modifier nos tests afin d’inclure un ensemble plus large de types de comptes AAD.
 
 ## <a name="03272017---resolved-unable-to-see-individual-module-and-script-pages"></a>27/03/2017 - RÉSOLU : Impossible de voir les pages individuelles de module et de script
 
