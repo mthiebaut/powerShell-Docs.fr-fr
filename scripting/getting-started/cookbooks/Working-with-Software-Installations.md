@@ -9,9 +9,11 @@ ms.date: 2016-12-12
 title: Utilisation des installations de logiciels
 ms.technology: powershell
 ms.assetid: 51a12fe9-95f6-4ffc-81a5-4fa72a5bada9
-ms.openlocfilehash: 123ad074fc626bc2c93c4c61f30f056e92cd9d51
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 3ab302d585b69df69faa59c0561216899dd7ee9a
+ms.sourcegitcommit: 6057e6d22ef8a2095af610e0d681e751366a9773
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 05/08/2017
 ---
 # <a name="working-with-software-installations"></a>Utilisation des installations de logiciels
 Les applications conçues pour utiliser Windows Installer sont accessibles via la classe WMI **Win32_Product**. Toutefois, certaines applications ne font pas appel à Windows Installer. Étant donné que Windows Installer offre la plus vaste palette de techniques standard associées aux applications installables, nous allons examiner principalement ces applications. En général, les applications qui utilisent d'autres routines d'installation ne sont pas gérées par Windows Installer. Les techniques spécifiques à employer avec ces applications dépendent du programme d'installation et des décisions prises par le développeur de l'application.
@@ -92,7 +94,7 @@ Bien qu'aucune méthode ne garantisse l'identification de toutes les application
 Nous pouvons également examiner cette clé pour trouver des applications. Pour faciliter l'affichage de la clé Uninstall, nous pouvons mapper un lecteur Windows PowerShell à cet emplacement de Registre :
 
 ```
-PS>    
+PS> New-PSDrive -Name Uninstall -PSProvider Registry -Root HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall    
 
 Name       Provider      Root                                   CurrentLocation
 ----       --------      ----                                   ---------------
@@ -100,7 +102,7 @@ Uninstall  Registry      HKEY_LOCAL_MACHINE\SOFTWARE\Micr...
 ```
 
 > [!NOTE]
-> Le lecteur **HKLM:** étant mappé à la racine de **HKEY_LOCAL_MACHINE**, nous utilisons ce lecteur dans le chemin d’accès à la clé Uninstall. Au lieu d’utiliser **HKLM:**, nous pourrions recourir à **HKLM** ou à ** HKEY_LOCAL_MACHINE** pour spécifier le chemin d’accès au Registre. L'avantage d'utiliser un lecteur de Registre existant, c'est que nous pouvons utiliser la saisie semi-automatique par tabulation pour remplir les noms des clés, ce qui nous évite de les taper.
+> Le lecteur **HKLM:** étant mappé à la racine de **HKEY_LOCAL_MACHINE**, nous utilisons ce lecteur dans le chemin d’accès à la clé Uninstall. Au lieu d’utiliser **HKLM:**, nous pourrions recourir à **HKLM** ou à  **HKEY_LOCAL_MACHINE** pour spécifier le chemin d’accès au Registre. L'avantage d'utiliser un lecteur de Registre existant, c'est que nous pouvons utiliser la saisie semi-automatique par tabulation pour remplir les noms des clés, ce qui nous évite de les taper.
 
 Nous disposons désormais d'un lecteur nommé « Uninstall » qui peut servir à rechercher rapidement et facilement des installations d'applications. Nous pouvons trouver le nombre d’applications installées en comptant le nombre de clés de Registre dans le lecteur Windows PowerShell Uninstall :
 
