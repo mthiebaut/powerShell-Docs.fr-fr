@@ -8,9 +8,11 @@ author: keithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-ms.openlocfilehash: 1bf1bf914982e0d52e592e6ef421d36b1915b338
-ms.sourcegitcommit: 267688f61dcc76fd685c1c34a6c7bfd9be582046
-translationtype: HT
+ms.openlocfilehash: 4c5dfaaf368097c18a2788a9df15632ce116dbbb
+ms.sourcegitcommit: ee407927101c3b166cc200a39a6ea786a1c21f95
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 05/08/2017
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Améliorations de la configuration de l’état souhaité (DSC) dans WMF 5.1
 
@@ -37,10 +39,10 @@ Dans les versions antérieures de WMF, les inscriptions/demandes de création de
 Cela est dû à l’utilisation d’un modèle incorrect pour accéder à la base de données ESENT dans un scénario multithread. Dans WMF 5.1, ce problème a été résolu. Les inscriptions ou demandes de création de rapports simultanées (impliquant la base de données ESENT) fonctionnent correctement dans WMF 5.1. Ce problème s’applique uniquement à la base de données ESENT et ne s’applique pas à la base de données OLE DB. 
 
 ## <a name="enable-circular-log-on-esent-database-instance"></a>Activer le journal circulaire sur l’instance de la base de données ESENT
-Dans la version antérieure de DSC-PullServer, les fichiers journaux de la base de données ESENT saturaient l’espace disque du serveur collecteur, car l’instance de la base de données était créée sans journalisation circulaire. Dans cette version, le client peut utiliser le fichier web.config du serveur collecteur pour contrôler le comportement de la journalisation circulaire. Par défaut, CircularLogging a la valeur TRUE.
+Dans la version antérieure de DSC-PullServer, les fichiers journaux de la base de données ESENT saturaient l’espace disque du serveur collecteur, car l’instance de la base de données était créée sans journalisation circulaire. Dans cette version, vous pouvez utiliser le fichier web.config du serveur collecteur pour contrôler le comportement de la journalisation circulaire. Par défaut, CircularLogging a la valeur TRUE.
 ```
 <appSettings>
-     <add key="dbprovider" value="ESENT" />
+    <add key="dbprovider" value="ESENT" />
     <add key="dbconnectionstr" value="C:\Program Files\WindowsPowerShell\DscService\Devices.edb" />
     <add key="CheckpointDepthMaxKB" value="512" />
     <add key="UseCircularESENTLogs" value="TRUE" />
@@ -136,14 +138,14 @@ La métaconfiguration ci-dessous définit un nœud à gérer à la fois localeme
    }
 
    RegistrationMetaConfig
-   slcm -Path .\RegistrationMetaConfig -Verbose
+   Set-DscLocalConfigurationManager -Path .\RegistrationMetaConfig -Verbose
  ```
 
 # <a name="using-psdscrunascredential-with-dsc-composite-resources"></a>Utilisation de PsDscRunAsCredential avec des ressources composites DSC   
 
 Nous avons ajouté la prise en charge de l’utilisation de [*PsDscRunAsCredential*](https://msdn.microsoft.com/cs-cz/powershell/dsc/runasuser) avec des ressources [composites](https://msdn.microsoft.com/en-us/powershell/dsc/authoringresourcecomposite) DSC.    
 
-Les utilisateurs peuvent maintenant spécifier une valeur pour PsDscRunAsCredential lors de l’utilisation des ressources composites dans des configurations. Le cas échéant, toutes les ressources sont exécutées dans une ressource composite en tant qu’utilisateur RunAs. Si une ressource composite appelle une autre ressource composite, toutes ses ressources sont également exécutées en tant qu’utilisateur RunAs. Les informations d’identification RunAs sont propagées à tout niveau de la hiérarchie des ressources composites. Si une ressource à l’intérieur d’une ressource composite spécifie sa propre valeur pour PsDscRunAsCredential, une erreur de fusion se produit pendant la compilation de la configuration.
+Vous pouvez maintenant spécifier une valeur pour PsDscRunAsCredential lors de l’utilisation des ressources composites dans des configurations. Le cas échéant, toutes les ressources sont exécutées dans une ressource composite en tant qu’utilisateur RunAs. Si une ressource composite appelle une autre ressource composite, toutes ses ressources sont également exécutées en tant qu’utilisateur RunAs. Les informations d’identification RunAs sont propagées à tout niveau de la hiérarchie des ressources composites. Si une ressource à l’intérieur d’une ressource composite spécifie sa propre valeur pour PsDscRunAsCredential, une erreur de fusion se produit pendant la compilation de la configuration.
 
 Cet exemple illustre son utilisation avec la ressource composite [WindowsFeatureSet](https://msdn.microsoft.com/en-us/powershell/wmf/dsc_newresources) incluse dans le module PSDesiredStateConfiguration. 
 
@@ -223,7 +225,7 @@ Configuration EnableSignatureValidation
       RegistrationKey = 'd6750ff1-d8dd-49f7-8caf-7471ea9793fc' # Replace this with correct registration key.
     }
     SignatureValidation validations{
-        # By default, LCM will use default Windows trusted publisher store to validate the certificate chain. If TrustedStorePath property is specified, LCM will use this custom store for retrieving the trusted publishers to validate the content.
+        # By default, LCM uses the default Windows trusted publisher store to validate the certificate chain. If TrustedStorePath property is specified, LCM uses this custom store for retrieving the trusted publishers to validate the content.
         TrustedStorePath = 'Cert:\LocalMachine\DSCStore'            
         SignedItemType = 'Configuration','Module'         # This is a list of DSC artifacts, for which LCM need to verify their digital signature before executing them on the node.       
     }

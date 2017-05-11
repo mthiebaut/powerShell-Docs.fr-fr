@@ -7,9 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: ec773688540a3f4a2f128f66d311926fd5b9a935
-ms.sourcegitcommit: 6d27d6db5ab0e2d5b6c7229e2e2d2e57915ea22d
-translationtype: HT
+ms.openlocfilehash: efd15e1cee366ee887d302c7e681f18a93c68080
+ms.sourcegitcommit: ee407927101c3b166cc200a39a6ea786a1c21f95
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 05/08/2017
 ---
 # <a name="windows-powershell-desired-state-configuration-overview"></a>Vue d’ensemble de la fonctionnalité Desired State Configuration de Windows PowerShell 
 
@@ -28,9 +30,9 @@ DSC est une plateforme déclarative employée pour la configuration, le déploie
 - Les [configurations](configurations.md) sont des scripts PowerShell déclaratifs qui définissent et configurent des instances de ressources.
     Quand une configuration est exécutée, DSC (et toutes les ressources appelées par cette configuration) « fait simplement en sorte » que le système se trouve dans l’état souhaité défini par la configuration. 
     Les configurations DSC sont également idempotent, c’est-à-dire que le Gestionnaire de configuration local (ou « LCM ») s’assure en permanence que les machines restent configurées dans l’état déclaré dans la configuration.
-- Les ressources constituent la base de DSC. Elles contiennent le code qui place et conserve la cible d’une configuration dans l’état spécifié. 
+- Les [ressources](resources.md) constituent la base de DSC. Elles contiennent le code qui place et conserve la cible d’une configuration dans l’état spécifié. 
     Les ressources sont stockées dans les modules PowerShell et peuvent être créées pour modéliser des éléments généraux, comme un fichier ou un processus Windows, ou des éléments plus spécifiques, tels qu’un serveur IIS ou une machine virtuelle Azure.
-- Le LCM est le moteur utilisé par DSC pour faciliter les interactions entre les ressources et les configurations. 
+- Le [LCM](metaConfig.md) est le moteur utilisé par DSC pour faciliter les interactions entre les ressources et les configurations. 
     Le LCM interroge régulièrement le système, via le flux de contrôle implémenté par les ressources, pour s’assurer que le système est dans l’état déclaré dans une configuration. 
     Si le système n’est pas dans l’état souhaité, le LCM effectue des appels aux code dans les ressources pour « faire en sorte » qu’il soit conforme à l’état déclaré dans la configuration. 
 

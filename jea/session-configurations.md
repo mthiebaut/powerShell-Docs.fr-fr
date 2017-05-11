@@ -5,12 +5,14 @@ author: rpsqrd
 ms.author: ryanpu
 ms.prod: powershell
 keywords: powershell,applet de commande,jea
-ms.date: 2017-03-08
+ms.date: 2017-04-25
 title: Configuration de session JEA
 ms.technology: powershell
-ms.openlocfilehash: e98214d1777a1530b5a18ac9df1a6185d6d73979
-ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
-translationtype: HT
+ms.openlocfilehash: 8773096627217663362e61fb158cc900aea20f43
+ms.sourcegitcommit: 6057e6d22ef8a2095af610e0d681e751366a9773
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 05/08/2017
 ---
 # <a name="jea-session-configurations"></a>Configuration de session JEA
 
@@ -40,7 +42,7 @@ New-PSSessionConfigurationFile -SessionType RestrictedRemoteServer -Path .\MyJEA
 
 Vous pouvez ouvrir le fichier de configuration de session dans l’éditeur de texte de votre choix.
 Le champ `-SessionType RestrictedRemoteServer` indique que la configuration de session sera utilisée par JEA pour une gestion sécurisée.
-Les sessions configurées de cette façon fonctionnent en [mode NoLanguage](https://technet.microsoft.com/en-us/library/dn433292.aspx) et seules les huit applets de commande par défaut suivantes (et les alias) sont disponibles :
+Les sessions configurées de cette façon fonctionnent en [mode NoLanguage](https://technet.microsoft.com/en-us/library/dn433292.aspx) et seules les huit commandes par défaut suivantes (et les alias) sont disponibles :
 
 - Clear-Host (cls, clear)
 - Exit-PSSession (exsn, exit)
@@ -139,7 +141,7 @@ MountUserDrive = $true
 ```
 
 Par défaut, le lecteur utilisateur vous permet de stocker 50 Mo de données maximum par utilisateur.
-Vous pouvez limiter la quantité de données qu’un utilisateur peut consommer avec le champ *UserDriveMaxmimumSize*.
+Vous pouvez limiter la quantité de données qu’un utilisateur peut consommer avec le champ *UserDriveMaximumSize*.
 
 ```powershell
 # Enables the user drive with a per-user limit of 500MB (524288000 bytes)
@@ -169,6 +171,15 @@ RoleDefinitions = @{
 
 Si un utilisateur appartient à plusieurs groupes de la définition des rôles, il a accès aux rôles de chacun d’entre eux.
 Si deux rôles accordent l’accès aux mêmes applets de commande, l’ensemble de paramètres le plus permissif est accordé à l’utilisateur.
+
+Quand vous spécifiez des utilisateurs ou des groupes locaux dans le champ des définitions de rôle, veillez à utiliser le nom de l’ordinateur (et non *localhost* ou *.*) avant la barre oblique inverse.
+Pour vérifier le nom de l’ordinateur, inspectez la variable `$env:computername`.
+
+```powershell
+RoleDefinitions = @{
+    'MyComputerName\MyLocalGroup' = @{ RoleCapabilities = 'DnsAuditor' }
+}
+```
 
 ### <a name="role-capability-search-order"></a>Ordre de recherche des capacités de rôle
 Comme l’indique l’exemple ci-dessus, les capacités de rôle sont référencées par le nom plat (nom du fichier sans l’extension) du fichier de capacités de rôle.

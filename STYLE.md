@@ -40,7 +40,7 @@ Header 2
 * Ne démarrez pas les commandes PowerShell par « C:\ PS> »
 * La sortie émise par les commandes PowerShell doit être placée en commentaire pour éviter que la mise en surbrillance de la syntaxe ne lui soit appliquée
 * Les noms des propriétés et les noms des paramètres doivent être en **gras**
-
+* Les applets de commande PowerShell utilisent la « [casse Pascal](https://en.wikipedia.org/wiki/PascalCase) ». Les verbes sont séparés des noms par un trait d’union.
 
 ## <a name="lists"></a>Listes
 

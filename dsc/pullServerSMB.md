@@ -7,15 +7,17 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: df994500ce5f46d62f143af07d8ce86dddf44c3e
-ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
-translationtype: HT
+ms.openlocfilehash: f16af7664ac5d07b5884070534bed20e8cf2fcd9
+ms.sourcegitcommit: 6057e6d22ef8a2095af610e0d681e751366a9773
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 05/08/2017
 ---
 # <a name="setting-up-a-dsc-smb-pull-server"></a>Configuration d’un serveur collecteur SMB DSC
 
 >S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Un serveur collecteur [SMB](https://technet.microsoft.com/en-us/library/hh831795.aspx) DSC est un partage de fichiers SMB qui fournit des fichiers de configuration DSC et/ou des ressources DSC aux nœuds cibles quand ces derniers les demandent.
+Un serveur collecteur [SMB](https://technet.microsoft.com/en-us/library/hh831795.aspx) DSC est un ordinateur qui héberge des partages de fichiers SMB qui fournissent des fichiers de configuration DSC et des ressources DSC aux nœuds cibles quand ces derniers les demandent.
 
 Pour utiliser un serveur collecteur SMB pour DSC, vous devez effectuer les étapes suivantes :
 - Configurer un partage de fichiers SMB sur un serveur qui exécute PowerShell 4.0 ou version ultérieure
@@ -32,7 +34,7 @@ Appelez l’applet de commande [Install-Module](https://technet.microsoft.com/en
 
 ### <a name="create-the-directory-and-file-share"></a>Créer le répertoire et le partage de fichiers
 
-La configuration suivante utilise la ressource [File](fileResource.md) pour créer le répertoire du partage et la ressource **xSmbShare** pour configurer le partage SMB :
+La configuration suivante utilise la ressource [File](fileResource.md) pour créer le répertoire du partage et la ressource **xSmbShare** pour configurer le partage SMB :
 
 ```powershell
 Configuration SmbShare {
@@ -67,7 +69,7 @@ Import-DscResource -ModuleName xSmbShare
 }
 ```
 
-La configuration crée le répertoire `C:\DscSmbShare` s’il n’existe pas et utilise ensuite ce répertoire comme partage de fichiers SMB. L’autorisation **FullAccess** doit être accordée à tous les comptes nécessitant d’écrire sur ou supprimer le partage de fichiers, et l’autorisation **ReadAccess** doit être accordée à tous les nœuds client obtenant des configurations et/ou ressources DSC depuis le partage (étant donné que DSC s’exécute sous le compte système par défaut, l’ordinateur doit donc avoir accès au partage).
+La configuration crée le répertoire `C:\DscSmbShare` s’il n’existe pas et utilise ensuite ce répertoire comme partage de fichiers SMB. L’autorisation **FullAccess** doit être accordée à tous les comptes nécessitant des droits en écriture/suppression dans le partage de fichiers, et l’autorisation **ReadAccess** doit être accordée à tous les nœuds client obtenant des configurations et/ou ressources DSC à partir du partage (étant donné que DSC s’exécute sous le compte système par défaut, l’ordinateur doit donc avoir accès au partage).
 
 
 ### <a name="give-file-system-access-to-the-pull-client"></a>Donner accès au système de fichiers pour le client collecteur
@@ -146,7 +148,7 @@ Le fichier de somme de contrôle doit être présent dans le même répertoire q
 
 ## <a name="setting-up-a-pull-client-for-smb"></a>Configuration d’un client collecteur pour SMB
 
-Pour configurer un client qui extrait des configurations et/ou des ressources à partir d’un partage SMB, configurez le Gestionnaire de configuration local (LCM) avec des blocs **ConfigurationRepositoryShare** et **ResourceRepositoryShare** qui spécifient le partage à partir duquel l’extraction doit être réalisée.
+Pour configurer un client qui extrait des configurations et/ou des ressources à partir d’un partage SMB, configurez le Gestionnaire de configuration local (LCM) du client avec des blocs **ConfigurationRepositoryShare** et **ResourceRepositoryShare** qui spécifient le partage à partir duquel les configurations et les ressources DSC sont extraites.
 
 Pour plus d’informations sur la configuration du gestionnaire de configuration local, consultez [Configuration d’un client collecteur à l’aide de l’ID de configuration](pullClientConfigID.md).
 
