@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
 title: "Utilisation de clés de Registre"
-ms.technology: powershell
 ms.assetid: 91bfaecd-8684-48b4-ad86-065dfe6dc90a
-ms.openlocfilehash: 8554bd1752ecddd87d70c2f31de357ce5da26ba5
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: efb2c016afa2212c2907c0740ad26c4e4cddd3af
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="working-with-registry-keys"></a>Utilisation de clés de Registre
 Étant donné que les clés de Registre sont des éléments sur des lecteurs Windows PowerShell, leur utilisation est très similaire à l’utilisation de fichiers et dossiers. Une différence importante est que chaque élément sur un lecteur Windows PowerShell basé sur un Registre est un conteneur, tout comme un dossier sur un lecteur du système de fichiers. En revanche, les entrées de Registre et les valeurs qui leur sont associées sont des propriétés des éléments, pas des éléments distincts.

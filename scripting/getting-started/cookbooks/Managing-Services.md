@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
 title: Gestion des services
-ms.technology: powershell
 ms.assetid: 7a410e4d-514b-4813-ba0c-0d8cef88df31
-ms.openlocfilehash: b4910eed852e777a1b407d436b2e6daa8c12a003
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 9fd6c8bcfecc99756188409629ddf94b880aab91
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="managing-services"></a>Gestion des services
 Il existe huit principales applets de commande Service, conçues pour un vaste éventail de tâches de service. Nous examinons ici uniquement le listage et la modification de l’état en cours d’exécution des services, mais vous pouvez obtenir une liste des applets de commande Service à l’aide de l’applet de commande **Get-Help \&#42;-Service**. Vous pouvez également trouver des informations sur chaque applet de commande Service à l’aide de la commande **Get-Help<NomAppletDeCommande>**, par exemple, **Get-Help New-Service**.

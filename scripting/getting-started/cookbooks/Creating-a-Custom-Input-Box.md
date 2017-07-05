@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
 title: "Création d&quot;une zone d&quot;entrée personnalisée"
-ms.technology: powershell
 ms.assetid: 0b12e56c-299f-40ee-afbf-d30d23ed2565
-ms.openlocfilehash: 7fcb3246e685d4f939ad6232d3afbd56feea96fe
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 52f2556267af1e53ee823868f64138e67673beba
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="creating-a-custom-input-box"></a>Création d'une zone d'entrée personnalisée
 Dans Windows PowerShell 3.0 et versions ultérieures, utilisez les fonctionnalités de création de formulaires de Microsoft .NET Framework pour créer une zone d'entrée graphique personnalisée à l'aide d'un script.

@@ -1,16 +1,12 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
 title: "Nouveautés de PowerShell"
-ms.technology: powershell
-ms.openlocfilehash: 2791d61e7d69b8f82ec4cb9a67440e7d7cb15290
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 146b6cbfb5903874d27872711369d517ade67a93
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="what39s-new-with-powershell"></a>Nouveautés de PowerShell
 Windows PowerShell® 5.0 intègre plusieurs nouvelles fonctionnalités importantes qui, en plus d’étendre et de simplifier son utilisation, vous permettent de contrôler et de gérer des environnements Windows plus aisément et de façon plus poussée.  Les principales améliorations sont dans les domaines de la configuration d’état souhaité, de la sécurité, des performances, de l’accès distant et des améliorations apportées au langage.

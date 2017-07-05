@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
 title: Concepts de base de Windows PowerShell
-ms.technology: powershell
 ms.assetid: 6b3cbbc8-060c-4877-b00b-7300dbbe4e28
-ms.openlocfilehash: 338d11350cd9baba82df7700e9df3688259a3907
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: f8a520f1fbe97737c7d0c2acab0129f88b5ed425
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="windows-powershell-basics"></a>Concepts de base de Windows PowerShell
 Les interfaces graphiques utilisateur utilisent des concepts de base bien connus de la plupart des utilisateurs d’ordinateur. Les utilisateurs s’appuient sur leur connaissance de ces interfaces pour accomplir des tâches. Les systèmes d’exploitation présentent aux utilisateurs une représentation graphique des éléments qui peuvent être parcourus, généralement avec des menus déroulants pour accéder à des fonctionnalités spécifiques, et des menus contextuels pour accéder à des fonctionnalités spécifique du contexte.
