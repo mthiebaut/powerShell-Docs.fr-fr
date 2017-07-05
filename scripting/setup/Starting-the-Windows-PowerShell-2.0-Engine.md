@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
 title: "Démarrage du moteur Windows PowerShell 2.0"
-ms.technology: powershell
 ms.assetid: edafc2fa-7576-49c2-bbba-9336f4bcfc28
-ms.openlocfilehash: 4f388bc2e397d12b73718e6bc326bb448ed3ae16
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 15f578e2fbf0b10afa307cde0a32123a8026a282
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="starting-the-windows-powershell-20-engine"></a>Démarrage du moteur Windows PowerShell 2.0
 Cette section explique comment démarrer le moteur Windows PowerShell 2.0 sur Windows 8.1, Windows Server 2012 R2, Windows 8 et Windows Server 2012, qui incluent le moteur Windows PowerShell 2.0, et sur d’autres systèmes sur lesquels Windows PowerShell 2.0, Windows PowerShell 3.0 et Windows PowerShell 4.0 sont installés.

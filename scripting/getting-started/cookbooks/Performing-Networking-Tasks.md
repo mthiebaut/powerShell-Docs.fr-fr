@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
 title: "Exécution de tâches de mise en réseau"
-ms.technology: powershell
 ms.assetid: a43cc55f-70c1-45c8-9467-eaad0d57e3b5
-ms.openlocfilehash: 1c938500da191c2791b3178971cdcea28f57aacd
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 4d7a91595b9d9d637ce915be2c2be9c20879dd8b
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="performing-networking-tasks"></a>Exécution de tâches de mise en réseau
 TCP/IP étant le protocole réseau le plus utilisé, la plupart des tâches d’administration de protocole réseau de bas niveau impliquent TCP/IP. Dans cette section, nous utilisons Windows PowerShell et WMI pour effectuer ces tâches.
@@ -31,7 +27,12 @@ La sortie de cette commande diffère de la plupart des listes de propriétés, c
 
 Pour comprendre pourquoi des accolades s’affichent, utilisez l’applet de commande Get-Member pour examiner la propriété **IPAddress** :
 
-<pre>PS> Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName. | Get-Member -Name IPAddress TypeName: System.Management.ManagementObject#root\cimv2\Win32_NetworkAdapter Configuration Name      MemberType Definition ----      ---------- ---------- IPAddress Property   System.String[] IPAddress {get;}</pre>
+<pre>PS> Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName . | Get-Member -Name IPAddress
+TypeName: System.Management.ManagementObject#root\cimv2\Win32_NetworkAdapter
+Configuration
+Name      MemberType Definition
+----      ---------- ----------
+IPAddress Property   System.String[] IPAddress {get;}</pre>
 
 La propriété IPAddress pour chaque carte réseau est en réalité un tableau. Les accolades dans la définition indiquent qu’**IPAddress** n’est pas une valeur **System.String**, mais un tableau de valeurs **System.String**.
 

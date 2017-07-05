@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
 title: Module PSWorkflow
-ms.technology: powershell
 ms.assetid: 117316fe-2f82-4fc9-b5dc-794ae9e3f258
-ms.openlocfilehash: 28a74da26826e60122c6fd0bb2787ee60b1ec699
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 2a3325e03eb9409a58012e6c754157e86fd24378
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="psworkflow-module"></a>Module PSWorkflow
 Cette section contient les rubriques d’aide relatives au module **PSWorkflow**. Celui-ci comprend des applets de commande qui prennent en charge la fonctionnalité Windows PowerShell Workflow. Le module **PSWorkflow** est installé avec Windows PowerShell.

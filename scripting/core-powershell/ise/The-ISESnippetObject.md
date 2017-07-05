@@ -1,24 +1,20 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
 title: Objet ISESnippet
-ms.technology: powershell
 ms.assetid: 98bc8113-c3cd-4201-bdb9-9d9bdb7e266c
-ms.openlocfilehash: 51ecf1261857e278c6d02ecb3cce16454ecfd4c4
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 5cc49cd504a1343a5737f78eb886bb41591d087d
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="the-isesnippetobject"></a>Objet ISESnippet
   Un objet **ISESnippet** est une instance de la classe Microsoft.PowerShell.Host.ISE.ISESnippet. Les membres de la collection **$psISE.CurrentPowerShellTab.Snippets** sont tous des exemples d’objets **ISESnippet**. La façon la plus simple de créer un extrait de code est d’utiliser l’applet de commande [New-IseSnippet&#91;PSITPro5_ISE&#93;](https://technet.microsoft.com/en-us/library/0a6339a3-2683-4a8e-8929-90ad9a95c3e0).
 
 ## <a name="properties"></a>Propriétés
 
-###  <a name="a-namedisplaynamea-author"></a><a name="DisplayName"></a> Author
+###  <a name="DisplayName"></a> Author
   Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures. 
 
  Propriété en lecture seule qui obtient le nom de l’auteur de l’extrait de code.
@@ -29,7 +25,7 @@ $psISE.CurrentPowerShellTab.Snippets.Item(0).Author
 
 ```
 
-###  <a name="a-nameactiona-codefragment"></a><a name="Action"></a> CodeFragment
+###  <a name="Action"></a> CodeFragment
   Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures. 
 
  Propriété en lecture seule qui obtient le fragment de code à insérer dans l’éditeur.
@@ -40,7 +36,7 @@ $psISE.CurrentPowerShellTab.Snippets.Item(0).CodeFragment
 
 ```
 
-###  <a name="a-nameshortcuta-shortcut"></a><a name="Shortcut"></a> Shortcut
+###  <a name="Shortcut"></a> Shortcut
   Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures. 
 
  Propriété en lecture seule qui obtient le raccourci clavier Windows associé à l’élément de menu.

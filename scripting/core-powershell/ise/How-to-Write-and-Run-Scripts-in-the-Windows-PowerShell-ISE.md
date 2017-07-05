@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
 title: "Comment écrire et exécuter des scripts dans Windows PowerShell ISE"
-ms.technology: powershell
 ms.assetid: 62f916d9-b3a1-484a-bdfb-41f57112c22b
-ms.openlocfilehash: 2478db382639ef315574bb7c79faec7cf2ae1c96
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 871a4b6f4575af4f823a6957dc971335497320a4
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="how-to-write-and-run-scripts-in-the-windows-powershell-ise"></a>Comment écrire et exécuter des scripts dans Windows PowerShell ISE
 Cette rubrique décrit comment créer, modifier, exécuter et enregistrer des scripts dans le volet Script.
@@ -22,7 +18,7 @@ Cette rubrique décrit comment créer, modifier, exécuter et enregistrer des sc
 
 -   [Comment enregistrer un script](#bkmk_3)
 
-## <a name="a-namebkmk1ahow-to-create-and-run-scripts"></a><a name="bkmk_1"></a>Comment créer et exécuter des scripts
+## <a name="bkmk_1"></a>Comment créer et exécuter des scripts
 Vous pouvez ouvrir et modifier des fichiers Windows PowerShell® dans le volet Script. Les types de fichiers spécifiques particulièrement intéressants dans Windows PowerShell® sont les fichiers de script (.ps1), les fichiers de données de script (.psd1) et les fichiers de module de script (.psm1). Ces types de fichiers font l’objet d’une coloration de la syntaxe dans l’éditeur du volet Script. D’autres types de fichiers courants que vous pouvez ouvrir dans le volet Script sont les fichiers de configuration (.ps1xml), les fichiers XML et les fichiers texte.
 
 > [!NOTE]
@@ -58,7 +54,7 @@ Dans la barre d’outils, cliquez sur **Exécuter le Script** ou, dans le menu *
 ### <a name="to-stop-a-running-script"></a>Pour arrêter un script en cours d’exécution
 Dans la barre d’outils, cliquez sur **Arrêter l’opération**, puis appuyez sur Ctrl+Pause, ou, dans le menu **Fichier**, cliquez sur **Arrêter l’opération**. Appuyer sur **Ctrl+C** fonctionne également, sauf si du texte est sélectionné, auquel cas l’appui sur **Ctrl+C** mappe à la fonction de copie pour le texte sélectionné.
 
-## <a name="a-namebkmk2ahow-to-write-and-edit-text-in-the-script-pane"></a><a name="bkmk_2"></a>Comment écrire et modifier du texte dans le volet Script
+## <a name="bkmk_2"></a>Comment écrire et modifier du texte dans le volet Script
 Pour modifier le texte dans le volet Script, procédez comme suit. Vous pouvez copier, couper, coller, rechercher et remplacer du texte. Vous pouvez également annuler et rétablir la dernière action exécutée. Les raccourcis clavier pour exécuter ces actions sont les mêmes que ceux utilisés pour toutes les applications Windows.
 
 ### <a name="to-enter-text-in-the-script-pane"></a>Pour entrer du texte dans le volet Script
@@ -107,7 +103,7 @@ Appuyez sur **Ctrl+Z** ou, dans la barre d’outils, cliquez sur l’icône **An
 ### <a name="to-redo-an-action-in-the-script-pane"></a>Pour rétablir une action dans le volet Script
 Appuyez sur **Ctrl+Y** ou, dans la barre d’outils, cliquez sur l’icône **Rétablir**, ou encore, dans le menu **Modifier**, cliquez sur **Rétablir**.
 
-## <a name="a-namebkmk3ahow-to-save-a-script"></a><a name="bkmk_3"></a>Comment enregistrer un script
+## <a name="bkmk_3"></a>Comment enregistrer un script
 Pour enregistrer et nommer un script, procédez comme suit. Un astérisque apparaît en regard du nom de script pour marquer un fichier qui n’a pas été enregistré depuis sa modification. L’astérisque disparaît lors de l’enregistrement du fichier.
 
 ### <a name="to-save-a-script"></a>Pour enregistrer un script

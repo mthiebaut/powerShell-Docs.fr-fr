@@ -1,24 +1,20 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
 title: Objet ISEFile
-ms.technology: powershell
 ms.assetid: 1c6d91f3-c556-42a2-a017-79b6b7b4b7db
-ms.openlocfilehash: fe0b2396de747bf88e780df505f5f7991e3e0b6f
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 0e1c09c4a92868448d76cc7b4954d250773ce2f2
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="the-isefile-object"></a>Objet ISEFile
   Un objet **ISEFile** représente un fichier dans l’environnement d’écriture de scripts intégré (ISE) de Windows PowerShell®. Il s’agit d’une instance de la classe Microsoft.PowerShell.Host.ISE.ISEFile. Cette rubrique répertorie les méthodes et propriétés membres de cet objet. **$psISE.CurrentFile** et les fichiers de la collection Files dans un onglet PowerShell sont tous des instances de la classe Microsoft.PowerShell.Host.ISE.ISEFile.
 
 ## <a name="methods"></a>Méthodes
 
-###  <a name="a-namesave-overridea-save-saveencoding-"></a><a name="save-override"></a> Save\( \[saveEncoding\] \)
+###  <a name="save-override"></a> Save\( \[saveEncoding\] \)
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Enregistre le fichier sur le disque.
@@ -42,7 +38,7 @@ $myfile.Encoding
 
 ```
 
-###  <a name="a-namesaveasa-saveasfilename-saveencoding"></a><a name="saveas"></a> SaveAs\(filename, \[saveEncoding\]\)
+###  <a name="saveas"></a> SaveAs\(filename, \[saveEncoding\]\)
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Enregistre le fichier avec le nom de fichier et l’encodage spécifiés.
@@ -70,7 +66,7 @@ $psIse.CurrentFile.SaveAs( $fullPath, [System.Text.Encoding]::UTF8 )
 
 ## <a name="properties"></a>Propriétés
 
-###  <a name="a-namedisplaynamea-displayname"></a><a name="Displayname"></a> DisplayName
+###  <a name="Displayname"></a> DisplayName
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui obtient la chaîne contenant le nom complet de ce fichier. Le nom est affiché dans l’onglet **Fichier** en haut de l’éditeur. La présence d’un astérisque \(\*\) à la fin du nom indique que le fichier comporte des modifications qui n’ont pas encore été enregistrées.
@@ -81,7 +77,7 @@ $psIse.CurrentFile.DisplayName
 
 ```
 
-###  <a name="a-nameeditora-editor"></a><a name="Editor"></a> Editor
+###  <a name="Editor"></a> Editor
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui obtient l’[objet editor](The-ISEEditor-Object.md) utilisé pour le fichier spécifié.
@@ -92,7 +88,7 @@ $psIse.CurrentFile.Editor.Text
 
 ```
 
-###  <a name="a-nameencodinga-encoding"></a><a name="Encoding"></a> Encoding
+###  <a name="Encoding"></a> Encoding
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui obtient l’encodage du fichier initial. Il s’agit d’un objet **System.Text.Encoding**.
@@ -103,7 +99,7 @@ $psIse.CurrentFile.Encoding
 
 ```
 
-###  <a name="a-namefullpatha-fullpath"></a><a name="FullPath"></a> FullPath
+###  <a name="FullPath"></a> FullPath
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui obtient la chaîne spécifiant le chemin complet du fichier ouvert.
@@ -114,7 +110,7 @@ $psIse.CurrentFile.FullPath
 
 ```
 
-###  <a name="a-nameissaveda-issaved"></a><a name="IsSaved"></a> IsSaved
+###  <a name="IsSaved"></a> IsSaved
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété booléenne en lecture seule qui renvoie la valeur **$true** si le fichier a été enregistré depuis sa dernière modification.
@@ -126,7 +122,7 @@ $myfile.IsSaved
 
 ```
 
-###  <a name="a-nameisuntitleda-isuntitled"></a><a name="IsUntitled"></a> IsUntitled
+###  <a name="IsUntitled"></a> IsUntitled
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui renvoie la valeur **$true** si le fichier n’a pas encore de titre.

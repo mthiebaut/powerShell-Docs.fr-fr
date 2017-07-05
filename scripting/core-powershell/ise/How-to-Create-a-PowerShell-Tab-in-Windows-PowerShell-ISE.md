@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
 title: "Comment créer un onglet PowerShell dans Windows PowerShell ISE"
-ms.technology: powershell
 ms.assetid: c10c18c7-9ece-4fd0-83dc-a19c53d4fd83
-ms.openlocfilehash: 1c57e557e2fefbdf67b6a3c71721cd2a916a0ec5
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 7dc92275c30ad783ad71b2a4825e9cc0d26d1691
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="how-to-create-a-powershell-tab-in-windows-powershell-ise"></a>Comment créer un onglet PowerShell dans Windows PowerShell ISE
 Les onglets de l’environnement d’écriture de scripts intégré de Windows PowerShell® permettent de créer et d’utiliser simultanément plusieurs environnements d’exécution au sein de la même application. Chaque onglet PowerShell correspond à un environnement d’exécution ou à une session distincts.

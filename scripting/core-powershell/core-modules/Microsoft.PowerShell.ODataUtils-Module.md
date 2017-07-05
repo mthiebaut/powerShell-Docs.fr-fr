@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
 title: Module Microsoft.PowerShell.ODataUtils
-ms.technology: powershell
 ms.assetid: bd5f47f0-428e-4be6-b02f-2b5609111ee9
-ms.openlocfilehash: ea4ed050d05de22588051408ba26cb81116ce087
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 7a0d904fe8e31e0d226d12b2f96ace021334b8b1
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="microsoftpowershellodatautils-module"></a>Module Microsoft.PowerShell.ODataUtils
 Cette section contient les rubriques d’aide pour le module **Microsoft.PowerShell.ODataUtils**. Le module **Microsoft.PowerShell.ODataUtils** est installé avec Windows PowerShell 5.0.

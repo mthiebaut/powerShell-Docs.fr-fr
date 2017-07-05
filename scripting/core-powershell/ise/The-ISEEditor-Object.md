@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
 title: Objet ISEEditor
-ms.technology: powershell
 ms.assetid: 0101daf8-4e31-4e4c-ab89-01d95dcb8f46
-ms.openlocfilehash: f4bc79e88dfe528b27817670232a445c4e0c610e
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 41f2a6f7684275ad9d6d967ea67b64ca02c1c100
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="the-iseeditor-object"></a>Objet ISEEditor
   Un objet **ISEEditor** est une instance de la classe Microsoft.PowerShell.Host.ISE.ISEEditor. Le volet de la console est un objet **ISEEditor**. Chaque objet [ISEFile](The-ISEFile-Object.md) est associé à un objet **ISEEditor**. Les sections suivantes répertorient les méthodes et propriétés d’un objet **ISEEditor**.
@@ -138,7 +134,7 @@ $psISE.CurrentFile.Editor.ToggleOutliningExpansion()
 
 ## <a name="properties"></a>Propriétés
 
-###  <a name="a-namecangotomatcha-cangotomatch"></a><a name="CanGoToMatch"></a> CanGoToMatch
+###  <a name="CanGoToMatch"></a> CanGoToMatch
   Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures. 
 
  Propriété booléenne en lecture seule qui indique si le point d’insertion se trouve à côté d’une parenthèse, d’un crochet ou d’une accolade - \(\), \[\], {}. Si le point d’insertion est situé juste avant le caractère ouvrant ou juste après le caractère fermant d’une paire, cette propriété a la valeur **$true**. Sinon, elle a la valeur **$false**.
@@ -148,7 +144,7 @@ $psISE.CurrentFile.Editor.ToggleOutliningExpansion()
 $psISE.CurrentFile.Editor.CanGoToMatch
 ```
 
-###  <a name="a-namecaretcolumna-caretcolumn"></a><a name="CaretColumn"></a> CaretColumn
+###  <a name="CaretColumn"></a> CaretColumn
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui obtient le numéro de colonne correspondant à la position du point d’insertion.
@@ -158,7 +154,7 @@ $psISE.CurrentFile.Editor.CanGoToMatch
 $psISE.CurrentFile.Editor.CaretColumn
 ```
 
-###  <a name="a-namecaretlinea-caretline"></a><a name="CaretLine"></a> CaretLine
+###  <a name="CaretLine"></a> CaretLine
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui obtient le numéro de la ligne où se trouve le point d’insertion.
@@ -168,7 +164,7 @@ $psISE.CurrentFile.Editor.CaretColumn
 $psISE.CurrentFile.Editor.CaretLine
 ```
 
-###  <a name="a-namecaretlinetexta-caretlinetext"></a><a name="CaretLineText"></a> CaretLineText
+###  <a name="CaretLineText"></a> CaretLineText
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui obtient la ligne entière de texte où se trouve le point d’insertion.
@@ -178,7 +174,7 @@ $psISE.CurrentFile.Editor.CaretLine
 $psISE.CurrentFile.Editor.CaretLineText
 ```
 
-###  <a name="a-namelinecounta-linecount"></a><a name="LineCount"></a> LineCount
+###  <a name="LineCount"></a> LineCount
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui obtient le nombre de lignes affichées dans l’éditeur.
@@ -188,21 +184,21 @@ $psISE.CurrentFile.Editor.CaretLineText
 $psISE.CurrentFile.Editor.LineCount
 ```
 
-###  <a name="a-nameselectedtexta-selectedtext"></a><a name="SelectedText"></a> SelectedText
+###  <a name="SelectedText"></a> SelectedText
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui obtient le texte sélectionné dans l’éditeur.
 
  Consultez l’[exemple de script](#example) plus loin dans cette rubrique.
 
-###  <a name="a-nametexta-text"></a><a name="Text"></a> Text
+###  <a name="Text"></a> Text
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture\/écriture qui obtient ou définit le texte dans l’éditeur.
 
  Consultez l’[exemple de script](#example) plus loin dans cette rubrique.
 
-##  <a name="a-nameexamplea-scripting-example"></a><a name="example"></a> Exemple de script
+##  <a name="example"></a> Exemple de script
 
 ```PowerShell
 # This illustrates how you can use the length of a line to

@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
 title: Objet ISEAddOnTool
-ms.technology: powershell
 ms.assetid: ce84d8bc-07ba-41f6-bdde-d6f3fddcd1e3
-ms.openlocfilehash: c1ab4220fdede7cabec99fd2d9dfb39648503f28
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 15f0cdd1425b9f87edeb0404fc385275e4a9d1d8
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="the-iseaddontool-object"></a>Objet ISEAddOnTool
   Un objet **ISEAddonTool** représente un outil complémentaire installé qui apporte des fonctionnalités supplémentaires à Windows PowerShell ISE. L’outil **Commandes** en est un exemple. Vous pouvez l’afficher en cliquant sur **Affichage**, puis sur **Afficher le composant additionnel de commande**. Vous pouvez ensuite utiliser cet outil par le biais des différents objets **ISEAddOnTool** disponibles.
@@ -25,7 +21,7 @@ translationtype: HT
 
 ## <a name="properties"></a>Propriétés
 
-###  <a name="a-namecontrola-control"></a><a name="Control"></a> Control
+###  <a name="Control"></a> Control
   Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures.
 
  La propriété **Control** fournit un accès en lecture à de nombreux détails de l’outil complémentaire Commandes.
@@ -141,7 +137,7 @@ Dispatcher                  : System.Windows.Threading.Dispatcher
 
 ```
 
-###  <a name="a-nameisvisiblea-isvisible"></a><a name="IsVisible"></a> IsVisible
+###  <a name="IsVisible"></a> IsVisible
   Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures.
 
  Propriété booléenne qui indique si l’outil complémentaire est actuellement visible dans le volet associé. S’il est visible, vous pouvez définir la propriété **IsVisible** à la valeur **$false** pour masquer l’outil, ou définir la propriété **IsVisible** à la valeur **$true** pour afficher un outil complémentaire dans l’onglet PowerShell correspondant. Notez qu’un outil complémentaire masqué n’est plus accessible via l’objet **CurrentVisibleHorizontalTool** ou **CurrentVisibleVerticalTool**, et qu’il ne peut donc pas être affiché en définissant cette propriété sur cet objet.
@@ -154,7 +150,7 @@ $psISE.CurrentPowerShellTab.VerticalAddOnTools[0].IsVisible=$true
 
 ```
 
-###  <a name="a-namenamea-name"></a><a name="name"></a> Name
+###  <a name="name"></a> Name
   Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures.
 
  Propriété en lecture seule qui obtient le nom de l’outil complémentaire.

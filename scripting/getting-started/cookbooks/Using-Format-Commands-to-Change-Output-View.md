@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
 title: "Utilisation des commandes de mise en forme pour modifier l’affichage d’une sortie"
-ms.technology: powershell
 ms.assetid: 63515a06-a6f7-4175-a45e-a0537f4f6d05
-ms.openlocfilehash: 0ab2e2b669e07b8b1bff16586bc7243d4cecaa1d
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 0163fcb21d586fc98902d9bdcfab6fe4eb97c225
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="using-format-commands-to-change-output-view"></a>Utilisation des commandes de mise en forme pour modifier l’affichage d’une sortie
 Windows PowerShell dispose d’un ensemble d’applets de commande qui vous permettent de contrôler les propriétés affichées pour des objets spécifiques. Les noms de toutes les applets de commande commencent par le verbe **Format**. Elles vous permettent de sélectionner une ou plusieurs propriétés à afficher.

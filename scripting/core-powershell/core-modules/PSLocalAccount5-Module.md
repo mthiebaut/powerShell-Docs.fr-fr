@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
 title: Module PSLocalAccount5
-ms.technology: powershell
 ms.assetid: 763b406f-2d89-4b45-b689-3d5b28f26022
-ms.openlocfilehash: aa2bb3e6ea91d8f9dd7500f4450fc4af5e5a7559
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: dc9786f015e180815ca08317bdde605ccff44f31
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="pslocalaccount5-module"></a>Module PSLocalAccount5
 Cette section contient les rubriques d’aide pour le module **PSLocalAccounts5**.
