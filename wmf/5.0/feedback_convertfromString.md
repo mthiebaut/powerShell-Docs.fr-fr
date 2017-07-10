@@ -1,4 +1,16 @@
-# <a name="extract-and-parse-structured-objects-out-of-string"></a>Extraire et analyser des objets structurés hors de contenu String
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: wmf,powershell,configuration
+ms.openlocfilehash: 3413672e73705252225300a853c10a514500baa2
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
+---
+<a id="extract-and-parse-structured-objects-out-of-string" class="xliff"></a>
+# Extraire et analyser des objets structurés hors de contenu String
 Cet article présente également certaines fonctionnalités supplémentaires pour l’applet de commande ConvertFrom-String :
 
 -   Suppression de la propriété de texte d’étendue par défaut. Vous pouvez l’inclure avec le paramètre -IncludeExtent.
@@ -8,7 +20,8 @@ Cet article présente également certaines fonctionnalités supplémentaires pou
 -   Nouveau paramètre -UpdateTemplate pour enregistrer les résultats de l’algorithme d’apprentissage dans un commentaire dans le fichier de modèle. Ainsi, le processus d’apprentissage (l’étape la plus lente) a un coût unique. L’exécution de Convert-String avec un modèle qui contient l’algorithme d’apprentissage encodé est désormais presque instantanée.
 
 
-<a name="extract-and-parse-structured-objects-out-of-string-content"></a>Extraire et analyser des objets structurés hors de contenu String
+<a id="extract-and-parse-structured-objects-out-of-string-content" class="xliff"></a>
+Extraire et analyser des objets structurés hors de contenu String
 ----------------------------------------------------------
 
 En collaboration avec [Microsoft Research](http://research.microsoft.com/), une nouvelle applet de commande **ConvertFrom-String** a été ajoutée.
@@ -17,8 +30,7 @@ Cette applet de commande prend en charge deux modes : l’analyse délimitée d
 
 Par défaut, l’analyse délimitée fractionne l’entrée au niveau de l’espace blanc et elle affecte des noms de propriétés aux groupes résultants. Vous pouvez personnaliser le délimiteur :
 
-> 1 \[C:\\temp\]
-> &gt;&gt; "Hello World" | ConvertFrom-String | Format-Table -Auto
+> 1 \[C:\\temp\] &gt;&gt; "Hello World" | ConvertFrom-String | Format-Table -Auto
 
 P1    P2
 --    --

@@ -1,66 +1,68 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: powershell,applet de commande,gallery
-ms.date: 2016-10-14
-contributor: manikb
+ms.date: 2017-06-12
+contributor: JKeithB
+ms.topic: conceptual
+keywords: gallery,powershell,cmdlet,psgallery
 title: psgallery_search_syntax
-ms.technology: powershell
-ms.openlocfilehash: 36b551cd6576b1d2a9ca696f2bfdab570ea2523f
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.openlocfilehash: 409ae607557af760f9cec4e3c54f39e51b5fac18
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="gallery-search-syntax"></a>Syntaxe de recherche PowerShell Gallery
+<a id="gallery-search-syntax" class="xliff"></a>
+# Syntaxe de recherche PowerShell Gallery
 
 PowerShell Gallery offre une zone de recherche de texte où vous pouvez utiliser des mots, des expressions et des mots clés pour limiter les résultats de la recherche.
 
-## <a name="search-by-keywords"></a>Recherche par mots clés
+<a id="search-by-keywords" class="xliff"></a>
+## Recherche par mots clés
 
     dsc azure sql
 
-La recherche fera de son mieux pour trouver des documents pertinents contenant les 3 mots clés et retourner les documents correspondants.
+La recherche fera de son mieux pour trouver des documents pertinents contenant les 3 mots clés et retourner les documents correspondants.
 
-## <a name="search-using-phrases-and-keywords"></a>Recherche à l’aide d’expressions et de mots clés
+<a id="search-using-phrases-and-keywords" class="xliff"></a>
+## Recherche à l’aide d’expressions et de mots clés
 
     "azure sql" deployment
 
-Si vous entrez une expression entre guillemets (« »), vous indiquez de rechercher une expression spécifique et non des mots clés distincts.
-Les documents correspondants doivent généralement contenir l’expression exacte « sql azure », y compris avec des différences de casse, par exemple « SQL Azure » et également le mot « déploiement ».
+Si vous entrez une expression entre guillemets (« »), vous indiquez de rechercher une expression spécifique et non des mots clés distincts.
+Les documents correspondants doivent généralement contenir l’expression exacte « sql azure », y compris avec des différences de casse, par exemple « SQL Azure » et également le mot « déploiement ».
 
-## <a name="filtering-on-fields"></a>Filtrage sur les champs
+<a id="filtering-on-fields" class="xliff"></a>
+## Filtrage sur les champs
 
-Vous pouvez rechercher un ID (ou « Id » ou « id ») d’élément spécifique ou certains autres champs en ajoutant en préfixe le nom du champ au terme recherché.
+Vous pouvez rechercher un ID (ou « Id » ou « id ») d’élément spécifique ou certains autres champs en ajoutant en préfixe le nom du champ au terme recherché.
 
-Actuellement, les champs sur lesquels la recherche peut porter sont « Id », « Version », « Tags », « Author », « Owner », « Functions », « Cmdlets », « DscResources » et « PowerShellVersion ».
+Actuellement, les champs sur lesquels la recherche peut porter sont « Id », « Version », « Tags », « Author », « Owner », « Functions », « Cmdlets », « DscResources » et « PowerShellVersion ».
 
-[Quelle est la différence entre l’ID et le titre ? L’ID est le nom que vous utilisez dans la console. Le titre est ce qui figure en haut de la page de l’élément dans les résultats de la recherche.]
+[Quelle est la différence entre l’ID et le titre ? L’ID est le nom que vous utilisez dans la console. Le titre est ce qui figure en haut de la page de l’élément dans les résultats de la recherche.]
 
-## <a name="examples"></a>Exemples
+<a id="examples" class="xliff"></a>
+## Exemples
 
     ID:"PSReadline"
     id:"AzureRM.Profile"
 
-recherche des éléments avec « PSReadline » ou « AzureRM.Profile » dans leur champ ID, respectivement.
+recherche des éléments avec « PSReadline » ou « AzureRM.Profile » dans leur champ ID, respectivement.
 
     Id:"AzureRM.Profile"
 
-est une autre façon de rechercher des éléments avec « AzureRM.Profile » dans leur champ ID.
+est une autre façon de rechercher des éléments avec « AzureRM.Profile » dans leur champ ID.
 
-Le filtre Id étant une correspondance avec la sous-chaîne, si vous recherchez ce qui suit :
+Le filtre Id étant une correspondance avec la sous-chaîne, si vous recherchez ce qui suit :
 
     Id:"azure"
     
-Vous obtiendrez des résultats comme « AzureRM.Profile » et « Azure.Storage ».
+Vous obtiendrez des résultats comme « AzureRM.Profile » et « Azure.Storage ».
 
 Vous pouvez également rechercher plusieurs mots clés dans un champ unique. Vous pouvez aussi combiner et associer des champs.
 
     id:azure tags:intellisense
     id:azure id:storage
 
-Vous pouvez effectuer des recherches d’expressions :
+Vous pouvez effectuer des recherches d’expressions :
 
     id:"azure.storage"
 
@@ -88,11 +90,11 @@ Pour rechercher tous les éléments avec la version PowerShell spécifiée
     PowerShellVersion:"2.0"
 
 
-Enfin, si vous utilisez un champ non pris en charge, tel que « commandes », nous l’ignorons simplement et effectuons une recherche dans tous les champs. Par conséquent, la requête suivante
+Enfin, si vous utilisez un champ non pris en charge, tel que « commandes », nous l’ignorons simplement et effectuons une recherche dans tous les champs. Par conséquent, la requête suivante
 
     commands:blobs storage
     
-est interprétée exactement comme cette requête :
+est interprétée exactement comme cette requête :
 
     blobs storage
 

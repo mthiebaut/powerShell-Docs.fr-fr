@@ -1,4 +1,16 @@
-# <a name="test-dscconfiguration-cmdlet-supports-reference-configurations"></a>L’applet de commande Test-DscConfiguration prend en charge les configurations de référence
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: wmf,powershell,configuration
+ms.openlocfilehash: 2d629d98b59c455011f4a5d955ef666218ae2f3f
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
+---
+<a id="test-dscconfiguration-cmdlet-supports-reference-configurations" class="xliff"></a>
+# L’applet de commande Test-DscConfiguration prend en charge les configurations de référence
 
 L’applet de commande Test-DscConfiguration a été mise à jour pour autoriser le test de l’état de configuration souhaitée d’un ou plusieurs nœuds cibles en spécifiant un document de configuration de référence à comparer.
 
@@ -35,3 +47,4 @@ Test-DscConfiguration   -ReferenceConfiguration <string>
                         [-AsJob] 
                         [<CommonParameters>]
 ```
+

@@ -1,17 +1,17 @@
 ---
-title: Ressources WindowsFeatureSet dans DSC
-ms.date: 2016-05-24
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: a920e02d891492c170e672db2f0771950dcb758c
-ms.sourcegitcommit: 1002c473b88abb209e4188bb626d93675c3614e2
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,installation
+title: Ressources WindowsFeatureSet dans DSC
+ms.openlocfilehash: 3cdabc36ef35c2bf912ac54393fe40024a8e8bc0
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-windowsfeatureset-resource"></a>Ressources WindowsFeatureSet dans DSC
+<a id="dsc-windowsfeatureset-resource" class="xliff"></a>
+# Ressources WindowsFeatureSet dans DSC
 
 > S’applique à : Windows PowerShell 5.0
 
@@ -20,7 +20,8 @@ Cette ressource est une [ressource composite](authoringResourceComposite.md) qui
 
 Utilisez cette ressource quand vous voulez configurer certaines fonctionnalités de Windows au même état.
 
-## <a name="syntax"></a>Syntaxe
+<a id="syntax" class="xliff"></a>
+## Syntaxe
 
 ```
 WindowsFeatureSet [string] #ResourceName
@@ -36,7 +37,8 @@ WindowsFeatureSet [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriétés
+<a id="properties" class="xliff"></a>
+## Propriétés
 
 |  Propriété  |  Description   | 
 |---|---| 
@@ -48,7 +50,8 @@ WindowsFeatureSet [string] #ResourceName
 | DependsOn| Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource __ResourceName__ de type __ResourceType__, la syntaxe pour utiliser cette propriété est `DependsOn = "[ResourceType]ResourceName"`.| 
 | Source| Indique l’emplacement du fichier source à utiliser pour l’installation, si nécessaire.| 
 
-## <a name="example"></a>Exemple
+<a id="example" class="xliff"></a>
+## Exemple
 
 La configuration suivante garantit que les fonctionnalités **Serveur Web** (IIS) et **Serveur SMTP**, et toutes leurs sous-fonctionnalités, sont installées.
 

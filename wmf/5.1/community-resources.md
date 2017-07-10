@@ -1,18 +1,17 @@
 ---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: wmf,powershell,configuration
 title: "Ressources de la communauté"
-ms.date: 2016-05-16
-keywords: PowerShell, DSC, WMF
-description: 
-ms.topic: article
-author: keithb
-manager: dongill
-ms.prod: powershell
-ms.technology: WMF
-ms.openlocfilehash: 82e6539484aa11bb370f3011bb12ea51f9d55047
-ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
-translationtype: HT
+ms.openlocfilehash: 1a4b49f0773c7d54b6dbb504a9d44cae7e0ef924
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="community-resources"></a>Ressources de la communauté #
+<a id="community-resources" class="xliff"></a>
+# Ressources de la communauté #
 > Remarque : Ces informations sont préliminaires et susceptibles d’être modifiées.
 
 L’équipe PowerShell encourage les clients à envoyer leurs commentaires sur le produit et propose aux utilisateurs plusieurs manières de nous contacter.
@@ -32,5 +31,5 @@ Il existe de nombreux référentiels que nous mettons à jour et utilisons pour 
 * [Powershell-Docs](https://github.com/PowerShell/powershell-docs), où toute la documentation (notamment ce contenu) est conservée. 
 * [PowerShell](https://github.com/PowerShell/powershell) est l’emplacement de PowerShell Core, la future version de PowerShell. Il s’agit de l’emplacement où proposer des recommandations liées aux fonctionnalités ou poser des questions concernant PowerShell Core.   
 * Le référentiel [PowerShellGet](https://github.com/PowerShell/powershellget) est réservé aux modules et aux applets de commande PowerShellGet.
-* [DSCResources] (https://github.com/PowerShell/DscResources) contient l’ensemble des modules DSC maintenu par l’équipe PowerShell et publié dans la galerie PowerShell dans le Kit de ressources DSC.
+* [DSCResources](https://github.com/PowerShell/DscResources) contient l’ensemble des modules DSC maintenu par l’équipe PowerShell et publié dans la galerie PowerShell dans le Kit de ressources DSC.
 

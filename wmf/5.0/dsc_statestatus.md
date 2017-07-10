@@ -1,4 +1,16 @@
-# <a name="unified-and-consistent-state-and-status-representation"></a>État unifié et cohérent et représentation de l’état
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: wmf,powershell,configuration
+ms.openlocfilehash: 32f8e20889ddc526def4b925e8d0761a2e851e19
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
+---
+<a id="unified-and-consistent-state-and-status-representation" class="xliff"></a>
+# État unifié et cohérent et représentation de l’état
 
 Une série d’améliorations ont été apportées dans cette version pour l’état du gestionnaire de configuration local et le statut DSC générés par des automatisations. Il s’agit notamment de représentations de l’état et du statut unifiées et cohérentes, d’une propriété d’heure et de date facile à gérer pour les objets de statut retournés par l’applet de commande Get-DscConfigurationStatus, et d’une propriété améliorée pour les détails sur l’état du gestionnaire de configuration local retournés par l’applet de commande Get-DscLocalConfigurationManager.
 
@@ -25,8 +37,7 @@ Le tableau ci-dessous illustre les propriétés d’état et de statut résultan
 | r, S                            | PendingReboot        | Opération réussie    | $true         | $null                        | r                              |
 | r, F                            | PendingReboot        | Opération réussie    | $true         | $null                        | r                              |
 
-^
-S<sub>i</sub> : série de ressources appliquée avec succès F<sub>i</sub> : série de ressources appliquée sans succès r : ressource qui nécessite un redémarrage \*
+^ S<sub>i</sub> : série de ressources appliquée avec succès F<sub>i</sub> : série de ressources appliquée sans succès r : ressource qui nécessite un redémarrage \*
 
 ```powershell
 $LCMState = (Get-DscLocalConfigurationManager).LCMState
@@ -38,7 +49,8 @@ $ResourcesInDesiredState = (Get-DscConfigurationStatus).ResourcesInDesiredState
 
 $ResourcesNotInDesiredState = (Get-DscConfigurationStatus).ResourcesNotInDesiredState
 ```
-## <a name="enhancement-in-get-dscconfigurationstatus-cmdlet"></a>Améliorations apportées à l’applet de commande Get-DscConfigurationStatus
+<a id="enhancement-in-get-dscconfigurationstatus-cmdlet" class="xliff"></a>
+## Améliorations apportées à l’applet de commande Get-DscConfigurationStatus
 
 Quelques améliorations ont été apportées à l’applet de commande Get-DscConfigurationStatus dans cette version. Auparavant, la propriété StartDate des objets retournés par l’applet de commande était de type String. Elle est désormais de type Datetime, ce qui simplifie la sélection et le filtrage complexes basés sur les propriétés intrinsèques d’un objet Datetime.
 ```powershell
@@ -80,7 +92,8 @@ Success 11/13/2015 11:20:44 AM Initial True
 Success 11/13/2015 11:20:44 AM LocalConfigurationManager False
 ```
 
-## <a name="enhancement-in-get-dsclocalconfigurationmanager-cmdlet"></a>Amélioration apportée à l’applet de commande Get-DscLocalConfigurationManager
+<a id="enhancement-in-get-dsclocalconfigurationmanager-cmdlet" class="xliff"></a>
+## Amélioration apportée à l’applet de commande Get-DscLocalConfigurationManager
 Un nouveau champ LCMStateDetail a été ajouté à l’objet retourné à partir de l’applet de commande Get-DscLocalConfigurationManager. Ce champ est renseigné quand LCMState est « Occupé ». Vous pouvez le récupérer avec l’applet de commande suivante :
 ```powershell
 (Get-DscLocalConfigurationManager).LCMStateDetail
@@ -102,3 +115,4 @@ LCM State: Idle,
 LCM State: Busy, LCM is performing a consistency check.
 LCM State: Idle,
 ```
+

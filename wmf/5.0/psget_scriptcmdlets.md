@@ -1,9 +1,22 @@
-# <a name="powershellget-cmdlets-for-script-management"></a>Applets de commande PowerShellGet pour la gestion des scripts
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: wmf,powershell,configuration
+ms.openlocfilehash: 2d56df459a4e09a16ab16c02f7ca2744c779206f
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
+---
+<a id="powershellget-cmdlets-for-script-management" class="xliff"></a>
+# Applets de commande PowerShellGet pour la gestion des scripts
 
-## <a name="find-script-cmdlet"></a>Applet de commande Find-Script
+<a id="find-script-cmdlet" class="xliff"></a>
+## Applet de commande Find-Script
 L’applet de commande Find-Script permet de découvrir les fichiers de script avec différents critères de recherche tels que nom, balise, filtre, nom de commande, plage de versions, version exacte, toutes les versions, y compris ses dépendances et à partir de dépôts spécifiques ou de tous les dépôts inscrits.
 
-Exemple d'utilisation :
+Exemple d'utilisation :
 ```powershell
 \# Find a script from the registered repository with ScriptSourceLocation
 Find-Script -Repository GalleryINT -Name Required-Script2
@@ -139,7 +152,8 @@ Workflow {Test-WorkflowFromScript\_Fabrikam-ClientScript}
 Command {Test-FunctionFromScript\_Fabrikam-ClientScript, Test-WorkflowFromScript\_Fabrikam-ClientScript}
 ```
 
-## <a name="save-script-cmdlet"></a>Applet de commande Save-Script
+<a id="save-script-cmdlet" class="xliff"></a>
+## Applet de commande Save-Script
 L’applet de commande Save-Script permet d’examiner le fichier de script en l’enregistrant à un emplacement spécifié.
 ```powershell
 \# Save a script file to the specified location for the script analysis
@@ -152,10 +166,11 @@ Version Name Author Description
 1.5 Fabrikam-ClientScript manikb Description for the Fabrikam-ClientScript script
 ```
 
-## <a name="install-script-and-get-installedscript-cmdlets"></a>Applets de commande Install-Script et Get-InstalledScript
+<a id="install-script-and-get-installedscript-cmdlets" class="xliff"></a>
+## Applets de commande Install-Script et Get-InstalledScript
 L’applet de commande Install-Script permet d’installer un fichier de script spécifique et ses dépendances à l’étendue spécifiée. Par défaut, les scripts sont installés dans l’étendue AllUsers. L’applet de commande Get-InstalledScript permet d’obtenir la liste des fichiers de script qui ont été installés à l’aide de l’applet de commande Install-Script.
 
-Note d’utilisation : Pour permettre la gestion et la localisation des scripts une fois qu’ils sont installés, Install-script crée un dossier par défaut pour le stockage des scripts dans $home\Documents\WindowsPowerShell\Scripts et ajoute ce dossier à votre environnement PATH. Si la modification du chemin constitue un problème, utilisez Save-Script au lieu d’Install-Script. Get-InstalledScripts et Uninstall-Script ne fonctionnent qu’avec les scripts placés sur le système à l’aide d’Install-Script.
+Note d’utilisation : Pour permettre la gestion et la localisation des scripts une fois qu’ils sont installés, Install-script crée un dossier par défaut pour le stockage des scripts dans $home\Documents\WindowsPowerShell\Scripts et ajoute ce dossier à votre environnement PATH. Si la modification du chemin constitue un problème, utilisez Save-Script au lieu d’Install-Script. Get-InstalledScripts et Uninstall-Script ne fonctionnent qu’avec les scripts placés sur le système à l’aide d’Install-Script.
 ```powershell
 \# Install locations for scripts:
 \# Default scope is AllUsers.
@@ -333,7 +348,8 @@ Function Test-FunctionFromScript\_Script-WithDependencies2 { Get-Date }
 Workflow Test-WorkflowFromScript\_Script-WithDependencies2 { Get-Date }
 ```
 
-## <a name="update-script-cmdlet"></a>Applet de commande Update-Script
+<a id="update-script-cmdlet" class="xliff"></a>
+## Applet de commande Update-Script
 L’applet de commande Update-Script permet d’effectuer une mise à jour sur place des fichiers de script qui ont été installés à l’aide de l’applet de commande Install-Script.
 ```powershell
 Install-Script -Name Fabrikam-Script -RequiredVersion 1.0 -Repository GalleryINT -Scope
@@ -375,7 +391,8 @@ Version Name Type Repository Description
 2.0 Script-WithDependencies2 Script GalleryINT Description for the Script-WithDependencies2 script
 ```
 
-## <a name="uninstall-script-cmdlet"></a>Applet de commande Uninstall-Script
+<a id="uninstall-script-cmdlet" class="xliff"></a>
+## Applet de commande Uninstall-Script
 ```powershell
 Uninstall-Script cmdlet lets you to uninstall the installed script files.
 Get-InstalledScript | Uninstall-Script -WhatIf
@@ -412,7 +429,8 @@ At C:\\Program Files\\WindowsPowerShell\\Modules\\PowerShellGet\\1.0.0.1\\PSModu
 + FullyQualifiedErrorId : NoMatchFound,Microsoft.PowerShell.PackageManagement.Cmdlets.GetPackage
 ```
 
-## <a name="new-scriptfileinfo-and-test-scriptfileinfo-cmdlets"></a>Applets de commande New-ScriptFileInfo et Test-ScriptFileInfo
+<a id="new-scriptfileinfo-and-test-scriptfileinfo-cmdlets" class="xliff"></a>
+## Applets de commande New-ScriptFileInfo et Test-ScriptFileInfo
 L’applet de commande New-ScriptFileInfo permet de créer un fichier de script avec des métadonnées telles que version, GUID, auteur, description, et ainsi de suite. L’applet de commande test-ScriptFileInfo permet de valider et d’obtenir les métadonnées du fichier de script.
 ```powershell
 \# Create a new script file with minimum required metadata values
@@ -564,7 +582,8 @@ DefinedFunctions : Demo-ScriptFunction
 DefinedWorkflows : Demo-ScriptWorkflow
 ```
 
-## <a name="update-scriptfileinfo-cmdlet"></a>Applet de commande Update-ScriptFileInfo
+<a id="update-scriptfileinfo-cmdlet" class="xliff"></a>
+## Applet de commande Update-ScriptFileInfo
 L’applet de commande Update-ScriptFileInfo permet de mettre à jour les métadonnées existantes du fichier de script.
 ```powershell
 \# Use Update-ScriptFileInfo cmdlet to update the script metadata
@@ -575,7 +594,8 @@ Version Name Author Description
 2.0 Demo-ScriptWithComplet... manikb my new script file
 ```
 
-## <a name="register-psrepository-and-set-psrepository-cmdlets-with-script-sharing-support"></a>Applets de commande Register-PSRepository et Set-PSRepository avec prise en charge du partage de script
+<a id="register-psrepository-and-set-psrepository-cmdlets-with-script-sharing-support" class="xliff"></a>
+## Applets de commande Register-PSRepository et Set-PSRepository avec prise en charge du partage de script
 Les applets de commande Register-PSRepository et Set-PSRepository permettent d’ajouter **ScriptSourceLocation** et **ScriptPublishLocation** à PSRepository.
 ```powershell
 \# Register an GalleryINT repository with Scripts and Modules support
@@ -633,7 +653,8 @@ ScriptPublishLocation : https://MyGallery.com/api/v2/package/
 ProviderOptions : {}
 ```
 
-## <a name="publish-script-cmdlet"></a>Applet de commande Publish-Script
+<a id="publish-script-cmdlet" class="xliff"></a>
+## Applet de commande Publish-Script
 L’applet de commande Publish-Script permet de publier un fichier de script avec des métadonnées valides telles que version, GUID, auteur, description, et ainsi de suite.
 ```powershell
 \# Publish the really basic script file with required metadata
