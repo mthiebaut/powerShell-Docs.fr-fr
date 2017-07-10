@@ -1,21 +1,22 @@
 ---
-title: "Méthode ResourceGet de la classe MSFT_DSCLocalConfigurationManager"
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 1666b85402f17230090f7290c8cb400dd9fbf0a6
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+title: "Méthode ResourceGet de la classe MSFT_DSCLocalConfigurationManager"
+ms.openlocfilehash: 7d8b185c49778253dcb4e983ad948775c4cb0842
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="resourceget-method-of-the-msftdsclocalconfigurationmanager-class"></a>Méthode ResourceGet de la classe MSFT_DSCLocalConfigurationManager
+<a id="resourceget-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
+# Méthode ResourceGet de la classe MSFT_DSCLocalConfigurationManager
 
 Appelle directement la méthode **Get** d’une ressource DSC.
 
-<a name="syntax"></a>Syntaxe
+<a id="syntax" class="xliff"></a>
+Syntaxe
 ------
 
 ```mof
@@ -27,7 +28,8 @@ uint32 ResourceGet(
 );
 ```
 
-<a name="parameters"></a>Paramètres
+<a id="parameters" class="xliff"></a>
+Paramètres
 ----------
 
 *ResourceType* \[in\]  
@@ -42,23 +44,27 @@ Spécifie le nom de propriété de ressource et sa valeur dans une table de hach
 *configurations* \[out\]  
 En retour, contient une instance incorporée des configurations.
 
-## <a name="return-value"></a>Valeur renvoyée
+<a id="return-value" class="xliff"></a>
+## Valeur renvoyée
 ------------
 
 Retourne zéro en cas de réussite ; sinon, retourne un code d’erreur.
 
-## <a name="remarks"></a>Remarques
+<a id="remarks" class="xliff"></a>
+## Remarques
 
 Il s’agit d’une méthode statique.
 
-## <a name="requirements"></a>Spécifications
+<a id="requirements" class="xliff"></a>
+## Spécifications
 ------------
 >**MOF :** DscCore.mof
 
 >**Espace de noms** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-## <a name="see-also"></a>Voir aussi
+<a id="see-also" class="xliff"></a>
+## Voir aussi
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

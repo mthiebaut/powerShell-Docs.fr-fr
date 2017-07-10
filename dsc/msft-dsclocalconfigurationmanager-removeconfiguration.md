@@ -1,21 +1,22 @@
 ---
-title: "Méthode RemoveConfiguration de la classe MSFT_DSCLocalConfigurationManager"
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 4f3d74949d98e3ab3f5136303e229c23ed903c5d
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+title: "Méthode RemoveConfiguration de la classe MSFT_DSCLocalConfigurationManager"
+ms.openlocfilehash: faa113c442b80eea3ac474220b098b7d80ec50a8
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="removeconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Méthode RemoveConfiguration de la classe MSFT_DSCLocalConfigurationManager
+<a id="removeconfiguration-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
+# Méthode RemoveConfiguration de la classe MSFT_DSCLocalConfigurationManager
 
 Supprime les fichiers de configuration.
 
-<a name="syntax"></a>Syntaxe
+<a id="syntax" class="xliff"></a>
+Syntaxe
 ------
 
 ```mof
@@ -25,7 +26,8 @@ uint32 RemoveConfiguration(
 );
 ```
 
-<a name="parameters"></a>Paramètres
+<a id="parameters" class="xliff"></a>
+Paramètres
 ----------
 
 *Stage* \[in\]  
@@ -40,23 +42,27 @@ Spécifie le document de configuration à supprimer. Les valeurs suivantes sont 
 *Force* \[in\]  
 **true** pour forcer la suppression de la configuration.
 
-## <a name="return-value"></a>Valeur renvoyée
+<a id="return-value" class="xliff"></a>
+## Valeur renvoyée
 ------------
 
 Retourne zéro en cas de réussite ; sinon, retourne un code d’erreur.
 
-## <a name="remarks"></a>Remarques
+<a id="remarks" class="xliff"></a>
+## Remarques
 
 Il s’agit d’une méthode statique.
 
-## <a name="requirements"></a>Spécifications
+<a id="requirements" class="xliff"></a>
+## Spécifications
 ------------
 >**MOF :** DscCore.mof
 
 >**Espace de noms** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-## <a name="see-also"></a>Voir aussi
+<a id="see-also" class="xliff"></a>
+## Voir aussi
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
