@@ -1,18 +1,15 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
 title: "résolution des problèmes d’accès dans Accès Web Windows PowerShell"
-ms.technology: powershell
-ms.openlocfilehash: 26de977d2c85e26f445eecb1278e6a7278e7dfd6
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: c10e19b177110ff62d44f28b6a523380b55b79e0
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/08/2017
 ---
-#  <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Résolution des problèmes d’accès dans Accès Web Windows PowerShell
+<a id="troubleshooting-access-problems-in-windows-powershell-web-access" class="xliff"></a>
+#  Résolution des problèmes d’accès dans Accès Web Windows PowerShell
 
 Mise à jour : 24 juin 2013
 

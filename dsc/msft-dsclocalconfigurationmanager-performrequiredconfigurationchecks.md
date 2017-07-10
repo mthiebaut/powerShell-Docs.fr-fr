@@ -1,21 +1,22 @@
 ---
-title: "Méthode PerformRequiredConfigurationChecks de la classe MSFT_DSCLocalConfigurationManager"
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: f9eb975845f6ccabcac80e2591fd987f80f81331
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+title: "Méthode PerformRequiredConfigurationChecks de la classe MSFT_DSCLocalConfigurationManager"
+ms.openlocfilehash: 26110b3920104da7343b8d55cf63440c12accbbc
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="performrequiredconfigurationchecks-method-of-the-msftdsclocalconfigurationmanager-class"></a>Méthode PerformRequiredConfigurationChecks de la classe MSFT_DSCLocalConfigurationManager
+<a id="performrequiredconfigurationchecks-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
+# Méthode PerformRequiredConfigurationChecks de la classe MSFT_DSCLocalConfigurationManager
 
 Commence une vérification de cohérence à l’aide du Planificateur de tâches.
 
-<a name="syntax"></a>Syntaxe
+<a id="syntax" class="xliff"></a>
+Syntaxe
 ------
 
 ```mof
@@ -24,7 +25,8 @@ uint32 PerformRequiredConfigurationChecks(
 );
 ```
 
-<a name="parameters"></a>Paramètres
+<a id="parameters" class="xliff"></a>
+Paramètres
 ----------
 
 *Flags* \[in\]  
@@ -37,23 +39,27 @@ Masque de bits qui spécifie le type de vérification de cohérence à exécuter
 |**4** | La configuration doit être extraite du serveur collecteur spécifié dans la métaconfiguration du nœud. Cette valeur doit toujours être combinée avec **1** avec une valeur de **5**. |
 |**8** | Envoyez l’état au serveur de rapports. |
 
-## <a name="return-value"></a>Valeur renvoyée
+<a id="return-value" class="xliff"></a>
+## Valeur renvoyée
 ------------
 
 Retourne zéro en cas de réussite ; sinon, retourne un code d’erreur.
 
-## <a name="remarks"></a>Remarques
+<a id="remarks" class="xliff"></a>
+## Remarques
 
 Il s’agit d’une méthode statique.
 
-## <a name="requirements"></a>Spécifications
+<a id="requirements" class="xliff"></a>
+## Spécifications
 ------------
 >**MOF :** DscCore.mof
 
 >**Espace de noms** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-## <a name="see-also"></a>Voir aussi
+<a id="see-also" class="xliff"></a>
+## Voir aussi
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

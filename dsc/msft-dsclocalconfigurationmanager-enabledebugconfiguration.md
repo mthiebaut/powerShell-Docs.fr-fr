@@ -1,21 +1,22 @@
 ---
-title: "Méthode EnableDebugConfiguration de la classe MSFT_DSCLocalConfigurationManager"
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: f74e9941180c00a1aae1bd1d7b48fa4de0c8790d
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+title: "Méthode EnableDebugConfiguration de la classe MSFT_DSCLocalConfigurationManager"
+ms.openlocfilehash: 7220c972b3f43b4697cf71df54d2d43881938367
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="enabledebugconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Méthode EnableDebugConfiguration de la classe MSFT_DSCLocalConfigurationManager
+<a id="enabledebugconfiguration-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
+# Méthode EnableDebugConfiguration de la classe MSFT_DSCLocalConfigurationManager
 
 Active le débogage des ressources DSC.
 
-<a name="syntax"></a>Syntaxe
+<a id="syntax" class="xliff"></a>
+Syntaxe
 ------
 
 ```mof
@@ -24,29 +25,34 @@ uint32 EnableDebugConfiguration(
 );
 ```
 
-<a name="parameters"></a>Paramètres
+<a id="parameters" class="xliff"></a>
+Paramètres
 ----------
 
 *BreakAll* \[in\]  
 Définit un point d’arrêt au niveau de chaque ligne dans le script de ressources.
 
-## <a name="return-value"></a>Valeur renvoyée
+<a id="return-value" class="xliff"></a>
+## Valeur renvoyée
 ------------
 
 Retourne zéro en cas de réussite ; sinon, retourne un code d’erreur.
 
-## <a name="remarks"></a>Remarques
+<a id="remarks" class="xliff"></a>
+## Remarques
 
 Il s’agit d’une méthode statique.
 
-## <a name="requirements"></a>Spécifications
+<a id="requirements" class="xliff"></a>
+## Spécifications
 ------------
 >**MOF :** DscCore.mof
 
 >**Espace de noms** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-## <a name="see-also"></a>Voir aussi
+<a id="see-also" class="xliff"></a>
+## Voir aussi
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

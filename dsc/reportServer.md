@@ -1,17 +1,17 @@
 ---
-title: "Utilisation d’un serveur de rapports DSC"
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 17b56a0ce25d3154e21f18269926a0c41aae833b
-ms.sourcegitcommit: d7b28f28a09caa7fa48b0f66c5c437f128ce316f
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+title: "Utilisation d’un serveur de rapports DSC"
+ms.openlocfilehash: dd61d6ffff43ac2d1ec663b566e39dfc7d6c6565
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="using-a-dsc-report-server"></a>Utilisation d’un serveur de rapports DSC
+<a id="using-a-dsc-report-server" class="xliff"></a>
+# Utilisation d’un serveur de rapports DSC
 
 > S’applique à : Windows PowerShell 5.0
 
@@ -19,7 +19,8 @@ translationtype: HT
 
 Le gestionnaire de configuration local d’un nœud peut être configuré pour envoyer des rapports sur son état de configuration à un serveur collecteur, qui peut alors être interrogé pour récupérer ces données. Chaque fois, le nœud vérifie et applique une configuration, il envoie un rapport au serveur de rapports. Ces rapports sont stockés dans une base de données sur le serveur et peuvent être récupérés en appelant le service web de création de rapports. Chaque rapport contient des informations telles que les configurations qui ont été appliquées et si l’opération a réussi, les ressources utilisées, les erreurs qui ont été levées et les heures de début et de fin.
 
-## <a name="configuring-a-node-to-send-reports"></a>Configuration d’un nœud pour envoyer des rapports
+<a id="configuring-a-node-to-send-reports" class="xliff"></a>
+## Configuration d’un nœud pour envoyer des rapports
 
 Vous indiquez à un nœud d’envoyer des rapports à un serveur en utilisant un bloc **ReportServerWeb** dans la configuration du gestionnaire de configuration local du nœud (pour plus d’informations sur la configuration du gestionnaire de configuration local, consultez [Configuration du gestionnaire de configuration local](metaConfig.md)). Le serveur auquel le nœud envoie des rapports doit être configuré comme un serveur web collecteur (vous ne pouvez pas envoyer de rapports à un partage SMB). Pour plus d’informations sur la configuration d’un serveur collecteur, consultez [Configuration d’un serveur collecteur web DSC](pullServer.md). Le serveur de rapports peut être le même service duquel le nœud extrait des configurations et obtient des ressources, mais il peut également être un service différent.
  
@@ -92,7 +93,8 @@ PullClientConfig
 
 >**Remarque :** vous pouvez donner le nom de votre choix au service web quand vous configurez un serveur collecteur, mais la propriété **ServerURL** doit correspondre au nom du service.
 
-## <a name="getting-report-data"></a>Obtention des données du rapport
+<a id="getting-report-data" class="xliff"></a>
+## Obtention des données du rapport
 
 Les rapports envoyés au serveur collecteur sont entrés dans une base de données sur le serveur. Les rapports sont disponibles par le biais d’appels au service web. Pour récupérer des rapports pour un nœud spécifique, envoyez une demande HTTP au service web de rapports sous la forme suivante : `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId= 'MyNodeAgentId')/Reports` où `MyNodeAgentId` est l’ID de l’agent du nœud pour lequel vous voulez obtenir des rapports. Vous pouvez obtenir l’ID de l’agent d’un nœud en appelant [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx) sur ce nœud.
 
@@ -113,7 +115,8 @@ function GetReport
 }
 ```
     
-## <a name="viewing-report-data"></a>Affichage des données du rapport
+<a id="viewing-report-data" class="xliff"></a>
+## Affichage des données du rapport
 
 Si vous définissez une variable sur le résultat de la fonction **GetReport**, vous pouvez afficher les champs individuels dans un élément du tableau retourné :
 
@@ -220,7 +223,8 @@ InDesiredState    : True
 
 Notez que ces exemples ont pour but de vous donner une idée de ce que vous pouvez faire avec les données du rapport. Pour obtenir une présentation de l’utilisation de JSON dans PowerShell, voir [Playing with JSON and PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).
 
-## <a name="see-also"></a>Voir aussi
+<a id="see-also" class="xliff"></a>
+## Voir aussi
 - [Configuration du gestionnaire de configuration local](metaConfig.md)
 - [Configuration d’un serveur collecteur web DSC](pullServer.md)
 - [Configuration d’un client collecteur à l’aide du nom de configuration](pullClientConfigNames.md)

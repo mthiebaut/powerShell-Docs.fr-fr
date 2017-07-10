@@ -1,22 +1,23 @@
 ---
-title: "Prise en main de la configuration de l’état souhaité (DSC) Windows PowerShell"
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 3a59f76919c0a63f269ca587d358020825412be4
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+title: "Prise en main de la configuration de l’état souhaité (DSC) Windows PowerShell"
+ms.openlocfilehash: 403badd11749cfa5c6a5d07e1b537fa3a5f954da
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="getting-started-with-powershell-desired-state-configuration"></a>Prise en main de la configuration de l’état souhaité (DSC) Windows PowerShell #
+<a id="getting-started-with-powershell-desired-state-configuration" class="xliff"></a>
+# Prise en main de la configuration de l’état souhaité (DSC) Windows PowerShell #
 
 Ce guide explique comment créer des documents de configuration d’état souhaité PowerShell et comment les appliquer aux ordinateurs. Il suppose une connaissance de base des applets de commande PowerShell, des modules et des fonctions. 
 
 
-## <a name="create-a-configuration"></a>Créer une configuration ##
+<a id="create-a-configuration" class="xliff"></a>
+## Créer une configuration ##
 
 Les [**configurations**](https://msdn.microsoft.com/en-us/powershell/dsc/configurations) sont des documents qui décrivent un environnement. Les environnements sont constitués de **nœuds** qui sont généralement des machines physiques ou virtuelles. 
 
@@ -39,7 +40,8 @@ configuration MyFirstConfiguration
 
 }
 ```
-## <a name="parts-of-a-configuration"></a>Composants d’une configuration ##
+<a id="parts-of-a-configuration" class="xliff"></a>
+## Composants d’une configuration ##
 **Configuration** est un mot clé qui date de PowerShell 4.0. Il désigne un type spécial de fonction PowerShell utilisée par DSC. Dans cet exemple, la fonction se nomme myFirstConfiguration. 
 
 La ligne suivante est une instruction d’importation, similaire à l’importation d’un module. Nous l’aborderons plus tard.

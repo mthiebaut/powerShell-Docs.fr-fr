@@ -1,23 +1,24 @@
 ---
+ms.date: 2017-06-12
+author: eslesar
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
 title: Ressources DSC PackageManagementSource
-ms.date: 
-keywords: powershell,DSC
-description: 
-ms.topic: article
-author: brywang-msft
-manager: kriscv
-ms.prod: powershell
-ms.openlocfilehash: 22e61490e7b3f98335334a2703ec9639cbdaa87e
-ms.sourcegitcommit: 89e7ae30faff5f96641fc72764bdc76e0e257bc2
-translationtype: HT
+ms.openlocfilehash: 80d157aff5bf7685a797baaf6a26215f02473096
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-packagemanagementsource-resource"></a>Ressources DSC PackageManagementSource
+<a id="dsc-packagemanagementsource-resource" class="xliff"></a>
+# Ressources DSC PackageManagementSource
 
 > S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
 La ressource **PackageManagementSource** dans la configuration d’état souhaité (DSC) Windows PowerShell fournit un mécanisme permettant d’inscrire ou de désinscrire des sources de gestion des packages sur un nœud cible. **Les sources de gestion des packages inscrites de cette façon sont inscrites sous le contexte système et peuvent être utilisées par le compte système ou le moteur DSC.** Cette ressource nécessite le module **PackageManagement** qui est disponible sur le site http://PowerShellGallery.com.
 
-## <a name="syntax"></a>Syntaxe
+<a id="syntax" class="xliff"></a>
+## Syntaxe
 
 ```
 PSModule [string] #ResourceName
@@ -31,7 +32,8 @@ PSModule [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriétés
+<a id="properties" class="xliff"></a>
+## Propriétés
 |  Propriété  |  Description   | 
 |---|---| 
 | Nom| Spécifie le nom de la source du package à inscrire ou à désinscrire sur votre système.| 
@@ -41,7 +43,8 @@ PSModule [string] #ResourceName
 | SourceUri| Spécifie l’URI de la source du package.| 
 | SourceCredential| Informations d’identification permettant l’accès au package sur une source distante.| 
 
-## <a name="example"></a>Exemple
+<a id="example" class="xliff"></a>
+## Exemple
 
 Cet exemple inscrit la source du package http://nuget.org à l’aide de la ressource DSC **PackageManagementSource**.
 
@@ -58,3 +61,4 @@ Configuration PackageManagementSourceTest
     }
 }
 ```
+

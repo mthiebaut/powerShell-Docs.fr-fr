@@ -1,23 +1,24 @@
 ---
-title: MSFT_DSCLocalConfigurationManager, classe
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: b9cb89bb120151df69e3cb26b50c3a0d15c23711
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+title: MSFT_DSCLocalConfigurationManager, classe
+ms.openlocfilehash: 35f732698fcc58f7bd43945edd10c143ffb79af9
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="msftdsclocalconfigurationmanager-class"></a>MSFT_DSCLocalConfigurationManager, classe
+<a id="msftdsclocalconfigurationmanager-class" class="xliff"></a>
+# MSFT_DSCLocalConfigurationManager, classe
 
 Gestionnaire de configuration local qui contrôle les états des fichiers de configuration et utilise l’agent de configuration pour appliquer les configurations.
 
 La syntaxe suivante est simplifiée par rapport au code MOF (Managed Object Format) et inclut toutes les propriétés héritées.
 
-## <a name="syntax"></a>Syntaxe
+<a id="syntax" class="xliff"></a>
+## Syntaxe
 ------
 
 ``` syntax
@@ -27,14 +28,16 @@ class MSFT_DSCLocalConfigurationManager
 };
 ```
 
-## <a name="members"></a>Members
+<a id="members" class="xliff"></a>
+## Members
 -------
 
 La classe **MSFT_DSCLocalConfigurationManager** comprend les membres suivants :
 
 -   [Méthodes][]
 
-### <a name="methods"></a>Méthodes
+<a id="methods" class="xliff"></a>
+### Méthodes
 
 La classe **MSFT_DSCLocalConfigurationManager** comprend les méthodes suivantes.
 
@@ -64,7 +67,8 @@ La classe **MSFT_DSCLocalConfigurationManager** comprend les méthodes suivantes
 
  
 
-## <a name="requirements"></a>Spécifications
+<a id="requirements" class="xliff"></a>
+## Spécifications
 ------------
 >**MOF :** DscCore.mof
 

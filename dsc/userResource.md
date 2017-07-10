@@ -1,17 +1,17 @@
 ---
-title: Ressource User dans DSC
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 0953000ba7930116679e4371f6acad5298725fdb
-ms.sourcegitcommit: 55b2457a19a2fa679fda8dc17a747ef21a98adc1
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+title: Ressource User dans DSC
+ms.openlocfilehash: a4e4e8af4fcfe5c997c460613174d8583261dedf
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-#<a name="dsc-user-resource"></a>Ressource User dans DSC#
+<a id="dsc-user-resource" class="xliff"></a>
+#Ressource User dans DSC#
 
  
 >S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -20,7 +20,8 @@ translationtype: HT
 La ressource __User__ dans la configuration d’état souhaité (DSC) Windows PowerShell fournit un mécanisme pour gérer des comptes d’utilisateur locaux sur le nœud cible.
 
 
-##<a name="syntax"></a>Syntaxe##
+<a id="syntax" class="xliff"></a>
+##Syntaxe##
 
 ```
 User [string] #ResourceName
@@ -38,7 +39,8 @@ User [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriétés
+<a id="properties" class="xliff"></a>
+## Propriétés
 |  Propriété  |  Description   | 
 |---|---| 
 | UserName| Indique le nom du compte pour lequel vous voulez garantir un état spécifique.| 
@@ -52,7 +54,8 @@ User [string] #ResourceName
 | PasswordNeverExpires| Indique si le mot de passe doit expirer. Pour vous assurer que le mot de passe pour ce compte n’expire jamais, définissez cette propriété sur __$true__, et sur __$false__ si le mot de passe doit expirer. La valeur par défaut est __$false__.| 
 | DependsOn | Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource __ResourceName__ de type __ResourceType__, la syntaxe permettant d’utiliser cette propriété est `DependsOn = "[ResourceType]ResourceName"`.| 
 
-## <a name="example"></a>Exemple
+<a id="example" class="xliff"></a>
+## Exemple
 
 ```powershell
 User UserExample

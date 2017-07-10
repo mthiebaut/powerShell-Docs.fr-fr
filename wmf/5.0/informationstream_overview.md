@@ -1,4 +1,16 @@
-# <a name="information-stream"></a>Flux d’informations
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: wmf,powershell,setup
+ms.openlocfilehash: 4ccbdcc0eb3cd07b46ab51b63689fe21873cdd7e
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
+---
+<a id="information-stream" class="xliff"></a>
+# Flux d’informations
 
 Vous pouvez désormais utiliser un nouveau flux d’informations structuré pour transmettre des données structurées entre un script et son hôte. **Write-Host** a également été mise à jour pour envoyer sa sortie vers le flux d’informations, où vous pouvez maintenant la capturer ou la passer sous silence. La nouvelle applet de commande **Write-Information** (ainsi qu’une API WriteInformation correspondante) utilisée avec les paramètres communs **-InformationVariable** et **-InformationAction** offre davantage de souplesse et une capacité accrue.
 
@@ -112,3 +124,4 @@ ProcessId       : 4008
 NativeThreadId  : 2276
 ManagedThreadId : 14
 ```
+

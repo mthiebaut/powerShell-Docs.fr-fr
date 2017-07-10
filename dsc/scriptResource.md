@@ -1,20 +1,20 @@
 ---
-title: Ressource Script dans DSC
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 56eb7ef230d84cc5f5679f39e13e2019205c65f5
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+title: Ressource Script dans DSC
+ms.openlocfilehash: 81718de0b0c8463189e33e565dc9ff39692dbe8b
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-script-resource"></a>Ressource Script dans DSC
+<a id="dsc-script-resource" class="xliff"></a>
+# Ressource Script dans DSC
 
  
-> S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
+> S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
 La ressource **Script** dans la configuration d’état souhaité (DSC) Windows PowerShell fournit un mécanisme pour exécuter des blocs de script Windows PowerShell sur des nœuds cibles. La ressource `Script` comprend les propriétés `GetScript`, `SetScript` et `TestScript`. Ces propriétés doivent être définies sur les blocs de script qui sont exécutés sur chaque nœud cible. 
 
@@ -27,7 +27,8 @@ Le bloc de script `SetScript` doit modifier le nœud. Il est appelé par DSC si 
 Si vous devez utiliser des variables de votre script de configuration dans les blocs de script `GetScript`, `TestScript` ou `SetScript`, utilisez l’étendue `$using:` (voir ci-dessous pour obtenir un exemple).
 
 
-## <a name="syntax"></a>Syntaxe
+<a id="syntax" class="xliff"></a>
+## Syntaxe
 
 ```
 Script [string] #ResourceName
@@ -40,7 +41,8 @@ Script [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriétés
+<a id="properties" class="xliff"></a>
+## Propriétés
 
 |  Propriété  |  Description   | 
 |---|---| 
@@ -50,7 +52,8 @@ Script [string] #ResourceName
 | Credential| Indique les informations d’identification à utiliser pour exécuter ce script, si elles sont nécessaires.| 
 | DependsOn| Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource **ResourceName** de type **ResourceType**, la syntaxe pour utiliser cette propriété est `DependsOn = "[ResourceType]ResourceName"`.
 
-## <a name="example-1"></a>Exemple 1
+<a id="example-1" class="xliff"></a>
+## Exemple 1
 ```powershell
 $version = Get-Content 'version.txt'
 
@@ -72,7 +75,8 @@ Configuration ScriptTest
 }
 ```
 
-## <a name="example-2"></a>Exemple 2
+<a id="example-2" class="xliff"></a>
+## Exemple 2
 ```powershell
 $version = Get-Content 'version.txt'
 
@@ -84,7 +88,7 @@ Configuration ScriptTest
     {
         GetScript = { 
             $currentVersion = Get-Content (Join-Path -Path $env:SYSTEMDRIVE -ChildPath 'version.txt')
-            return @{ 'Result' = "Version: $currentVersion" }
+            return @{ 'Version' = "$currentVersion" }
         }          
         TestScript = { 
             $state = $GetScript

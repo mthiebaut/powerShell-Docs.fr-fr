@@ -1,18 +1,17 @@
 ---
-manager: carmonm
-ms.topic: article
+ms.date: 2017-06-12
 author: rpsqrd
-ms.author: ryanpu
-ms.prod: powershell
-keywords: powershell,applet de commande,jea
-ms.date: 2017-03-07
+ms.topic: conceptual
+keywords: jea,powershell,security
 title: "Vue d’ensemble de Just Enough Administration"
-ms.technology: powershell
-ms.openlocfilehash: 2206ccbbcf5996b1bf8db9a46acab2f18f8020dd
-ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
-translationtype: HT
+ms.openlocfilehash: a664a8ad44916f8112f7ef7bac145a54b83f126d
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="just-enough-administration"></a>Just Enough Administration
+<a id="just-enough-administration" class="xliff"></a>
+# Just Enough Administration
 
 Just Enough Administration (JEA) est une technologie de sécurité qui permet une administration déléguée de tout ce qui peut être géré avec PowerShell.
 Avec JEA, vous pouvez :
@@ -38,7 +37,8 @@ Cela signifie que vous pouvez leur octroyer un accès approprié pour réparer u
 Mieux encore, quand la session JEA est configurée pour utiliser des comptes virtuels privilégiés temporaires, vos administrateurs DNS peuvent se connecter au serveur en utilisant des informations d’identification d’utilisateurs *non administrateurs* et exécuter quand même des commandes qui exigent généralement des privilèges d’administrateur.
 Cette fonctionnalité vous permet de supprimer des utilisateurs dans des rôles d’administrateur local ou de domaine largement privilégiés et, à la place, de contrôler soigneusement ce qu’ils sont en mesure d’effectuer sur chaque machine.
 
-## <a name="get-started-with-jea"></a>Bien démarrer avec JEA
+<a id="get-started-with-jea" class="xliff"></a>
+## Bien démarrer avec JEA
 
 Vous pouvez commencer à utiliser JEA dès aujourd'hui sur n’importe quelle machine exécutant Windows Server 2016 ou Windows 10.
 Vous pouvez également exécuter JEA sur d’anciens systèmes d’exploitation avec une mise à jour de Windows Management Framework.
@@ -52,6 +52,8 @@ Pour en savoir plus sur la configuration requise pour utiliser JEA et découvrir
 - [Considérations de sécurité](security-considerations.md) : passez en revue les bonnes pratiques et les implications des options de configuration de JEA.
 - [Audit et rapport de JEA](audit-and-report.md) : découvrez comment auditer les points de terminaison JEA et créer des rapports.
 
-## <a name="samples-and-dsc-resource"></a>Exemples et ressources DSC
+<a id="samples-and-dsc-resource" class="xliff"></a>
+## Exemples et ressources DSC
 
 Vous trouverez des exemples de configurations JEA et la ressource DSC JEA dans le [référentiel GitHub JEA](https://github.com/PowerShell/JEA).
+

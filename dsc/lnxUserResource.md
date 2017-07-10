@@ -1,21 +1,22 @@
 ---
-title: Ressource nxUser dans DSC pour Linux
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 9d27299aca8dee3e0390c9c8fc900832eb7e960c
-ms.sourcegitcommit: b3724fac99e52c712b18c4effbb9ee13711d0238
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+title: Ressource nxUser dans DSC pour Linux
+ms.openlocfilehash: d708edcee592835ce448752465125d451afbd45b
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-for-linux-nxuser-resource"></a>Ressource nxUser dans DSC pour Linux
+<a id="dsc-for-linux-nxuser-resource" class="xliff"></a>
+# Ressource nxUser dans DSC pour Linux
 
 La ressource **nxUser** dans DSC (Desired State Configuration) PowerShell fournit un mécanisme permettant de gérer des utilisateurs locaux sur un nœud Linux.
 
-## <a name="syntax"></a>Syntaxe
+<a id="syntax" class="xliff"></a>
+## Syntaxe
 
 ```
 nxUser <string> #ResourceName
@@ -34,7 +35,8 @@ nxUser <string> #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriétés
+<a id="properties" class="xliff"></a>
+## Propriétés
 
 |  Propriété |  Indique le nom du compte pour lequel vous souhaitez garantir un état spécifique. | 
 |---|---|
@@ -49,7 +51,8 @@ nxUser <string> #ResourceName
 | GroupID| Indique l’ID de groupe principal de l’utilisateur.| 
 | DependsOn | Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’ID « ResourceName » et le type « ResourceType », utilisez la syntaxe suivante pour cette propriété : `DependsOn = "[ResourceType]ResourceName"`.| 
 
-## <a name="example"></a>Exemple
+<a id="example" class="xliff"></a>
+## Exemple
 
 L’exemple suivant vérifie que l’utilisateur « monuser » existe et qu’il est membre du groupe « DBusers ».
 

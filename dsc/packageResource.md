@@ -1,23 +1,24 @@
 ---
-title: Ressource Package dans DSC
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 343bd3c625e2df9f34480ea8065e3039d6069d61
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+title: Ressource Package dans DSC
+ms.openlocfilehash: f7bcbd387db422037614feee7c4a00d93b3cec4e
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-package-resource"></a>Ressource Package dans DSC
+<a id="dsc-package-resource" class="xliff"></a>
+# Ressource Package dans DSC
 
-> S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
+> S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
 La ressource **Package** dans DSC Windows PowerShell fournit un mécanisme permettant d’installer ou de désinstaller des packages, tels que les packages Windows Installer et setup.exe, sur un nœud cible.
 
-## <a name="syntax"></a>Syntaxe
+<a id="syntax" class="xliff"></a>
+## Syntaxe
 
 ```
 Package [string] #ResourceName
@@ -34,7 +35,8 @@ Package [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriétés
+<a id="properties" class="xliff"></a>
+## Propriétés
 |  Propriété  |  Description   | 
 |---|---| 
 | Name| Indique le nom du package pour lequel vous souhaitez garantir un état spécifique.| 
@@ -42,14 +44,15 @@ Package [string] #ResourceName
 | ProductId| Indique l’ID de produit qui identifie le package de manière unique.| 
 | Arguments| Chaîne d’arguments transmise telle quelle au package.| 
 | Credential| Informations d’identification permettant l’accès au package sur une source distante. Cette propriété n’est pas utilisée pour installer le package. Le package est toujours installé sur le système local.| 
-| Ensure| Indique si le package est installé. Définissez cette propriété sur « Absent » pour vous assurer que le package n’est pas installé (ou désinstallé, si le package n’est pas installé). Définissez cette propriété sur « Present » (valeur par défaut) pour vous assurer que le package est installé.| 
+| Ensure| Indique si le package est installé. Définissez cette propriété sur « Absent » pour vous assurer que le package n’est pas installé (ou désinstallé, si le package n’est pas installé). Définissez cette propriété sur « Present » (valeur par défaut) pour vous assurer que le package est installé.| 
 | LogPath| Indique le chemin complet où vous souhaitez que le fournisseur enregistre un fichier journal pour installer ou désinstaller le package.| 
-| DependsOn | Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’ID **ResourceName** et le type **ResourceType**, utilisez la syntaxe suivante pour cette propriété : DependsOn = "[ResourceType]ResourceName"| 
+| DependsOn | Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’ID **ResourceName** et le type **ResourceType**, utilisez la syntaxe suivante pour cette propriété : DependsOn = "[ResourceType]ResourceName"| 
 | ReturnCode| Indique le code de retour attendu. Si le code de retour réel ne correspond pas à la valeur attendue indiquée ici, la configuration retourne une erreur.| 
 
-## <a name="example"></a>Exemple
+<a id="example" class="xliff"></a>
+## Exemple
 
-Cet exemple exécute le programme d’installation .msi qui se trouve dans le chemin spécifié et qui possède l’ID de produit spécifié.
+Cet exemple exécute le programme d’installation .msi qui se trouve dans le chemin spécifié et qui possède l’ID de produit spécifié.
 
 ```powershell
 Configuration PackageTest

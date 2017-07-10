@@ -1,44 +1,47 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: powershell,applet de commande,gallery
-ms.date: 2016-10-14
+ms.date: 2017-06-12
 contributor: manikb
-title: psget_update modulemanifest
-ms.technology: powershell
-ms.openlocfilehash: 85153872326c5af8f869bc2254040eca1a152f8b
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: reference
+keywords: gallery,powershell,cmdlet,psget
+title: Update-ModuleManifest
+ms.openlocfilehash: ce3f6f173535d98648eb51adb1dbf84764e4f434
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="update-modulemanifest"></a>Update-ModuleManifest
+<a id="update-modulemanifest" class="xliff"></a>
+# Update-ModuleManifest
 Met à jour un fichier manifeste de module.
 
-## <a name="description"></a>Description
+<a id="description" class="xliff"></a>
+## Description
 
 L’applet de commande Update-ModuleManifest met à jour un fichier manifeste de module (.psd1).
 
-### <a name="notes"></a>Remarques
-    - DscResourcesToExport est pris en charge uniquement dans la dernière version de PowerShell (version 5.0). Nous ne pourrons pas mettre à jour le champ si vous exécutez une version précédente de PowerShell.
+<a id="notes" class="xliff"></a>
+### Remarques
+    - DscResourcesToExport est pris en charge uniquement dans la dernière version de PowerShell (version 5.0). Nous ne pourrons pas mettre à jour le champ si vous exécutez une version précédente de PowerShell.
 
-## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
+<a id="cmdlet-syntax" class="xliff"></a>
+## Syntaxe de l’applet de commande
 ```powershell
 Get-Command -Name Update-ModuleManifest -Module PowerShellGet -Syntax
 ```
 
-## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
+<a id="cmdlet-online-help-reference" class="xliff"></a>
+## Référence de l’aide en ligne de l’applet de commande
 
 [Update-ModuleManifest](http://go.microsoft.com/fwlink/?LinkId=619311)
 
-## <a name="example-commands"></a>Exemples de commandes
+<a id="example-commands" class="xliff"></a>
+## Exemples de commandes
 
 Cette nouvelle applet de commande aide à mettre à jour le fichier manifeste avec des valeurs de propriétés d’entrée. Elle accepte les mêmes paramètres que New-ModuleManifest.
 
-Nous constatons que de nombreux auteurs de modules souhaiteraient spécifier « \* » dans des valeurs exportées telles que FunctionsToExport, CmdletsToExport, et ainsi de suite. Lors de la publication de module dans PowerShell Gallery, les commandes et fonctions non spécifiées ne sont pas peuplées correctement dans la galerie. Nous suggérons donc aux auteurs de modules de mettre à jour leurs manifestes avec les valeurs appropriées.
+Nous constatons que de nombreux auteurs de modules souhaiteraient spécifier « \* » dans des valeurs exportées telles que FunctionsToExport, CmdletsToExport, et ainsi de suite. Lors de la publication de module dans PowerShell Gallery, les commandes et fonctions non spécifiées ne sont pas peuplées correctement dans la galerie. Nous suggérons donc aux auteurs de modules de mettre à jour leurs manifestes avec les valeurs appropriées.
 
-Si vous avez des modules qui ont des propriétés exportées, Update-ModuleManifest remplit le fichier manifeste spécifié avec les informations des applets de commande, variables, fonctions exportées, et ainsi de suite :
+Si vous avez des modules qui ont des propriétés exportées, Update-ModuleManifest remplit le fichier manifeste spécifié avec les informations des applets de commande, variables, fonctions exportées, et ainsi de suite :
 ```powershell
 Get-Content -Path "C:\Temp\PSGTEST-TestPackageMetadata\2.5\PSGTEST-TestPackageMetadata.psd1"
 @{
@@ -62,7 +65,7 @@ AliasesToExport = '*'
 }
 ```
 
-Après Update-ModuleManifest :
+Après Update-ModuleManifest :
 ```powershell
 Update-ModuleManifest -Path "C:\Temp\PSGTEST-TestPackageMetadata\2.5\PSGTEST-TestPackageMetadata.psd1"
 Get-Content -Path "C:\Temp\PSGTEST-TestPackageMetadata\2.5\PSGTEST-TestPackageMetadata.psd1"

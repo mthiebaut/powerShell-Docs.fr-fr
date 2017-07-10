@@ -1,17 +1,17 @@
 ---
-title: "Écriture d’une ressource DSC personnalisée avec les classes PowerShell"
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: feec9b9e242ef6f43c272bfeb179d11944d1cb06
-ms.sourcegitcommit: 1002c473b88abb209e4188bb626d93675c3614e2
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+title: "Écriture d’une ressource DSC personnalisée avec les classes PowerShell"
+ms.openlocfilehash: 6e482f45c7d09898d46de20f43dcf16ecf3da7da
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>Écriture d’une ressource DSC personnalisée avec les classes PowerShell
+<a id="writing-a-custom-dsc-resource-with-powershell-classes" class="xliff"></a>
+# Écriture d’une ressource DSC personnalisée avec les classes PowerShell
 
 > S’applique à : Windows PowerShell 5.0
 
@@ -25,7 +25,8 @@ Pour plus d’informations sur les ressources DSC, consultez [Création de resso
 
 >**Remarque :** Les collections génériques ne sont pas prises en charge dans les ressources de classe.
 
-## <a name="folder-structure-for-a-class-resource"></a>Structure des dossiers pour une ressource de classe
+<a id="folder-structure-for-a-class-resource" class="xliff"></a>
+## Structure des dossiers pour une ressource de classe
 
 Pour implémenter une ressource personnalisée DSC avec une classe PowerShell, créez la structure de dossiers suivante. La classe est définie dans **MyDscResource.psm1** et le manifeste du module est défini dans **MyDscResource.psd1**.
 
@@ -36,7 +37,8 @@ $env:ProgramFiles\WindowsPowerShell\Modules (folder)
            MyDscResource.psd1 
 ```
 
-## <a name="create-the-class"></a>Créer la classe
+<a id="create-the-class" class="xliff"></a>
+## Créer la classe
 
 Le mot clé class vous permet de créer une classe PowerShell. Pour spécifier qu’une classe est une ressource DSC, utilisez l’attribut **DscResource()**. Le nom de la classe correspond au nom de la ressource DSC.
 
@@ -46,7 +48,8 @@ class FileResource {
 }
 ```
 
-### <a name="declare-properties"></a>Déclarer des propriétés
+<a id="declare-properties" class="xliff"></a>
+### Déclarer des propriétés
 
 Le schéma de la ressource DSC est défini comme propriétés de la classe. Nous déclarons trois propriétés de la manière suivante.
 
@@ -81,7 +84,8 @@ enum Ensure
 }
 ```
 
-### <a name="implementing-the-methods"></a>Implémentation des méthodes
+<a id="implementing-the-methods" class="xliff"></a>
+### Implémentation des méthodes
 
 Les méthodes **Get()**, **Set()** et **Test()** sont équivalentes aux fonctions **Get-TargetResource**, **Set-TargetResource** et **Test-TargetResource** d’une ressource de script.
 
@@ -218,7 +222,8 @@ Ce code comprend également la fonction CopyFile(), une fonction d’assistance 
     }
 ```
 
-### <a name="the-complete-file"></a>Le fichier dans son intégralité
+<a id="the-complete-file" class="xliff"></a>
+### Le fichier dans son intégralité
 Voici le fichier dans son intégralité.
 
 ```powershell
@@ -417,7 +422,8 @@ class FileResource
 ```
 
 
-## <a name="create-a-manifest"></a>Créer un manifeste
+<a id="create-a-manifest" class="xliff"></a>
+## Créer un manifeste
 
 Pour rendre une ressource de classe disponible pour le moteur DSC, vous devez inclure une instruction **DscResourcesToExport** dans le fichier manifeste qui indique au module d’exporter les ressources. Notre manifeste ressemble à ceci :
 
@@ -455,7 +461,8 @@ PowerShellVersion = '5.0'
 } 
 ```
 
-## <a name="test-the-resource"></a>Tester la ressource
+<a id="test-the-resource" class="xliff"></a>
+## Tester la ressource
 
 Après avoir enregistré la classe et les fichiers manifeste dans la structure de dossiers comme décrit précédemment, vous pouvez créer une configuration qui utilise la nouvelle ressource. Pour plus d’informations sur l’exécution d’une configuration DSC, consultez [Application des configurations](enactingConfigurations.md). La configuration suivante vérifie si le fichier situé à l’emplacement `c:\test\test.txt` existe et, dans le cas contraire, copie le fichier à partir de `c:\test.txt` (vous devez créer `c:\test.txt` avant d’exécuter la configuration).
 
@@ -474,7 +481,49 @@ Test
 Start-DscConfiguration -Wait -Force Test
 ```
 
-## <a name="see-also"></a>Voir aussi
-### <a name="concepts"></a>Concepts
+<a id="supporting-psdscrunascredential" class="xliff"></a>
+## Prise en charge de PsDscRunAsCredential
+
+>**Remarque :** **PsDscRunAsCredential** est pris en charge dans PowerShell 5.0 et versions ultérieures.
+
+La propriété **PsDscRunAsCredential** peut être utilisée dans le bloc de ressources [Configurations DSC](configurations.md) pour spécifier que la ressource doit être exécutée sous un jeu d’informations d’identification spécifié.
+Pour plus d’informations, consultez [Exécution de DSC avec les informations d’identification de l’utilisateur](runAsUser.md).
+
+<a id="require-or-disallow-psdscrunascredential-for-your-resource" class="xliff"></a>
+### Exiger ou désactiver PsDscRunAsCredential pour votre ressource
+
+L’attribut **DscResource()** accepte un paramètre facultatif, **RunAsCredential**.
+Ce paramètre prend une des trois valeurs suivantes :
+
+- `Optional` **PsDscRunAsCredential** est facultatif pour les configurations qui appellent cette ressource. Il s’agit de la valeur par défaut.
+- `Mandatory` **PsDscRunAsCredential** doit être utilisé pour toute configuration qui appelle cette ressource.
+- `NotSupported` Les configurations qui appellent cette ressource ne peuvent pas utiliser **PsDscRunAsCredential**.
+- `Default` Identique à `Optional`.
+
+Par exemple, utilisez l’attribut suivant pour spécifier que votre ressource personnalisée ne prend pas en charge **PsDscRunAsCredential** :
+
+```powershell
+[DscResource(RunAsCredential=NotSupported)]
+class FileResource {
+}
+```
+
+<a id="access-the-user-context" class="xliff"></a>
+### Accéder au contexte de l’utilisateur
+
+Pour accéder au contexte utilisateur dans une ressource personnalisée, vous pouvez utiliser la variable automatique `$global:PsDscContext`.
+
+Par exemple, le code suivant écrit le contexte de l’utilisateur sous lequel la ressource s’exécute dans le flux de sortie des messages :
+
+```powershell
+if (PsDscContext.RunAsUser) {
+    Write-Verbose "User: $global:PsDscContext.RunAsUser";
+}
+```
+
+<a id="see-also" class="xliff"></a>
+## Voir aussi
+<a id="concepts" class="xliff"></a>
+### Concepts
 [Création de ressources personnalisées de configuration d’état souhaité Windows PowerShell](authoringResource.md)
 

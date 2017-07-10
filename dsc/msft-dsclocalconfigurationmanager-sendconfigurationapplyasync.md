@@ -1,21 +1,22 @@
 ---
-title: "Méthode SendConfigurationApplyAsync de la classe MSFT_DSCLocalConfigurationManager"
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 41177f2eb2bbcf2dddaf232141fb483efaaeeea5
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+title: "Méthode SendConfigurationApplyAsync de la classe MSFT_DSCLocalConfigurationManager"
+ms.openlocfilehash: e680bfd1c5b39d364c90cf5ef6b43d0a568af23a
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="sendconfigurationapplyasync-method-of-the-msftdsclocalconfigurationmanager-class"></a>Méthode SendConfigurationApplyAsync de la classe MSFT_DSCLocalConfigurationManager
+<a id="sendconfigurationapplyasync-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
+# Méthode SendConfigurationApplyAsync de la classe MSFT_DSCLocalConfigurationManager
 
 Envoie le document de configuration de façon asynchrone au nœud géré et utilise l’agent de configuration pour appliquer la configuration.
 
-<a name="syntax"></a>Syntaxe
+<a id="syntax" class="xliff"></a>
+Syntaxe
 ------
 
 ```mof
@@ -26,7 +27,8 @@ uint32 SendConfigurationApplyAsync(
 );
 ```
 
-<a name="parameters"></a>Paramètres
+<a id="parameters" class="xliff"></a>
+Paramètres
 ----------
 
 *ConfigurationData* \[in\]  
@@ -38,23 +40,27 @@ Données d’environnement pour la configuration.
 *jobId* \[in\]  
 ID du travail pour lequel envoyer la configuration.
 
-## <a name="return-value"></a>Valeur renvoyée
+<a id="return-value" class="xliff"></a>
+## Valeur renvoyée
 ------------
 
 Retourne zéro en cas de réussite ; sinon, retourne un code d’erreur.
 
-## <a name="remarks"></a>Remarques
+<a id="remarks" class="xliff"></a>
+## Remarques
 
 Il s’agit d’une méthode statique.
 
-## <a name="requirements"></a>Spécifications
+<a id="requirements" class="xliff"></a>
+## Spécifications
 ------------
 >**MOF :** DscCore.mof
 
 >**Espace de noms** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-## <a name="see-also"></a>Voir aussi
+<a id="see-also" class="xliff"></a>
+## Voir aussi
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

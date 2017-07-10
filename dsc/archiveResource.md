@@ -1,23 +1,24 @@
 ---
-title: Ressource Archive DSC
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 77398d26f59975469e7c752a8d7f4f8bbbe4f553
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+title: Ressource Archive DSC
+ms.openlocfilehash: 035f7cc1b7f21f7a0df2d72db0ba83bc0688356c
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-archive-resource"></a>Ressource Archive DSC
+<a id="dsc-archive-resource" class="xliff"></a>
+# Ressource Archive DSC
 
 > S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
 La ressource Archive de la configuration d’état souhaité (DSC) de Windows PowerShell fournit un mécanisme permettant de décompresser les fichiers d’archive (.zip) à un emplacement spécifique.
 
-## <a name="syntax"></a>Syntaxe 
+<a id="syntax" class="xliff"></a>
+## Syntaxe 
 ```MOF
 Archive [string] #ResourceName
 {
@@ -31,7 +32,8 @@ Archive [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriétés
+<a id="properties" class="xliff"></a>
+## Propriétés
 
 |  Propriété  |  Description   | 
 |---|---| 
@@ -43,7 +45,8 @@ Archive [string] #ResourceName
 | Validate| Utilise la propriété Checksum pour déterminer si l’archive correspond à la signature. Si vous spécifiez Checksum sans Validate, la configuration échoue. Si vous spécifiez Validate sans Checksum, une somme de contrôle SHA-256 est utilisée par défaut.| 
 | Force| Certaines opérations de fichier (par exemple, le remplacement d’un fichier ou la suppression d’un répertoire non vide) entraînent une erreur. La propriété Force permet d’ignorer ces erreurs. La valeur par défaut est False.| 
 
-## <a name="example"></a>Exemple
+<a id="example" class="xliff"></a>
+## Exemple
 
 L’exemple suivant montre comment utiliser la ressource Archive pour vous assurer que le contenu d’un fichier d’archive appelé Test.zip existe et qu’il est extrait à une destination donnée.
 

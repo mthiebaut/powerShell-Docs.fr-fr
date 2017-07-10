@@ -1,12 +1,27 @@
-# <a name="the-powershell-gallery"></a>PowerShell Gallery
+---
+ms.date: 2017-06-12
+contributor: JKeithB
+ms.topic: conceptual
+keywords: gallery, powershell, applet de commande, psgallery, psget
+title: PowerShell Gallery
+ms.openlocfilehash: 3e324f15b251822163c3ea9b6655767419a5ac4e
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
+---
+<a id="the-powershell-gallery" class="xliff"></a>
+# PowerShell Gallery
 
 PowerShell Gallery est le référentiel central pour le contenu PowerShell. Les nouvelles commandes PowerShell ou les ressources DSC (configuration de l’état souhaité) sont disponibles dans la galerie.
 
-# <a name="powershellget-overview"></a>Vue d’ensemble de PowerShellGet
+<a id="powershellget-overview" class="xliff"></a>
+## Vue d’ensemble de PowerShellGet
 
 Le module PowerShellGet contient des applets de commande permettant de détecter, d’installer, de mettre à jour et de publier les artefacts PowerShell, tels que les modules, les ressources DSC, les fonctionnalités de rôle et les scripts à partir du référentiel https://www.PowerShellGallery.com et d’autres référentiels privés.
 
-## <a name="getting-started-with-the-gallery"></a>Prise en main de la galerie
+<a id="getting-started-with-the-gallery" class="xliff"></a>
+## Prise en main de la galerie
 
 L’installation d’éléments à partir de la galerie nécessite la dernière version du module PowerShellGet, qui est disponible dans Windows 10, dans Windows Management Framework (WMF) 5.0 ou dans le programme d’installation basé sur MSI (pour PowerShell 3 et 4).
 
@@ -24,7 +39,8 @@ Avec le module [PowerShellGet](http://go.microsoft.com/fwlink/?LinkID=760387&clc
 
 Pour plus d’informations sur l’utilisation des commandes PowerShellGet avec la galerie, consultez la page [Getting Started](psgallery/psgallery_gettingstarted.md). Vous pouvez également exécuter *Update-Help-Module PowerShellGet* pour installer l’aide locale sur ces commandes.
 
-## <a name="supported-operating-systems"></a>Systèmes d’exploitation pris en charge
+<a id="supported-operating-systems" class="xliff"></a>
+## Systèmes d’exploitation pris en charge
 
 Le module **PowerShellGet** nécessite **PowerShell 3.0 ou ultérieur**.
 
@@ -41,7 +57,8 @@ Par conséquent, **PowerShellGet** nécessite l’un des systèmes d’exploitat
 **PowerShellGet** nécessite également .NET Framework 4.5 ou ultérieur. Vous pouvez installer .NET Framework 4.5 ou ultérieur à partir [d’ici](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx).
 
 
-## <a name="got-a-question-have-feedback"></a>Vous avez une question ? Vous avez des commentaires ?
+<a id="got-a-question-have-feedback" class="xliff"></a>
+## Vous avez une question ? Vous avez des commentaires ?
 
 Des informations supplémentaires relatives à PowerShell Gallery et PowerShellGet sont disponibles dans la page [Getting Started](psgallery/psgallery_gettingstarted.md). Envoyez vos commentaires et signalez les problèmes à l’aide de [UserVoice](http://windowsserver.uservoice.com/forums/301869-powershell).
 

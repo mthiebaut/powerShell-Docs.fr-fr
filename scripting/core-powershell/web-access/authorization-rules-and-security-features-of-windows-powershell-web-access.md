@@ -1,18 +1,15 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
 title: "Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell"
-ms.technology: powershell
-ms.openlocfilehash: f2ed4355536ed92048dde66617d36d36958fd75f
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 706830f618173879185f5b84570fdc7782434d59
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/08/2017
 ---
-# <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell
+<a id="authorization-rules-and-security-features-of-windows-powershell-web-access" class="xliff"></a>
+# Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell
 
 Mise à jour : 24 juin 2013
 
@@ -197,7 +194,8 @@ Les applets de commande d’Accès Web Windows PowerShell prennent en charge un 
 </tbody>
 </table>
 
-#### <a name="to-add-a-restrictive-authorization-rule"></a>Pour ajouter une règle d’autorisation restrictive
+<a id="to-add-a-restrictive-authorization-rule" class="xliff"></a>
+#### Pour ajouter une règle d’autorisation restrictive
 
 1.  Effectuez une des opérations suivantes pour ouvrir une session Windows PowerShell avec des droits utilisateur élevés.
 
@@ -221,7 +219,8 @@ Les applets de commande d’Accès Web Windows PowerShell prennent en charge un 
 
 4.  Vérifiez que la règle a été créée en exécutant l’applet de commande **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domain\\user | computer\\user&gt; -ComputerName** &lt;nom_ordinateur&gt;. Par exemple, **Test-PswaAuthorizationRule -UserName Contoso\\JSmith -ComputerName Contoso_214**.
 
-#### <a name="to-remove-an-authorization-rule"></a>Pour supprimer une règle d’autorisation
+<a id="to-remove-an-authorization-rule" class="xliff"></a>
+#### Pour supprimer une règle d’autorisation
 
 1.  Si aucune session Windows PowerShell n’est déjà ouverte, consultez l’étape 1 de la procédure [Pour ajouter une règle d’autorisation restrictive](#BKMK_arar) dans cette section.
 

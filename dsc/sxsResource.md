@@ -1,27 +1,28 @@
 ---
-title: Utilisation de ressources avec plusieurs versions
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: a3f2cf37eb185124d73443bbe42b5fcc82034f15
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+title: Utilisation de ressources avec plusieurs versions
+ms.openlocfilehash: c3397775a6767d74c182e15d07371e830f98e9a9
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="using-resources-with-multiple-versions"></a>Utilisation de ressources avec plusieurs versions
+<a id="using-resources-with-multiple-versions" class="xliff"></a>
+# Utilisation de ressources avec plusieurs versions
 
-> S’applique à : Windows PowerShell 5.0
+> S’applique à : Windows PowerShell 5.0
 
-Dans PowerShell 5.0, les ressources DSC peuvent avoir plusieurs versions et celles-ci peuvent être installées sur un ordinateur côte à côte. L’implémentation inclut plusieurs versions d’un module de ressource qui sont contenues dans le même dossier de module.
+Dans PowerShell 5.0, les ressources DSC peuvent avoir plusieurs versions et celles-ci peuvent être installées sur un ordinateur côte à côte. L’implémentation inclut plusieurs versions d’un module de ressource qui sont contenues dans le même dossier de module.
 
-## <a name="installing-multiple-resource-versions-side-by-side"></a>Installation de plusieurs versions de ressources côte à côte
+<a id="installing-multiple-resource-versions-side-by-side" class="xliff"></a>
+## Installation de plusieurs versions de ressources côte à côte
 
 Vous pouvez utiliser les paramètres **MinimumVersion**, **MaximumVersion** et **RequiredVersion** de l’applet de commande [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) pour indiquer la version d’un module à installer. L’appel de l’applet de commande **Install-Module** sans spécifier de version installe la version la plus récente.
 
-Par exemple, il existe plusieurs versions du module **xFailOverCluster**, chacun contenant une ressource **xCluster**. Le résultat de l’appel de l’applet de commande **Install-Module** sans spécifier de numéro de version est le suivant :
+Par exemple, il existe plusieurs versions du module **xFailOverCluster**, chacun contenant une ressource **xCluster**. Le résultat de l’appel de l’applet de commande **Install-Module** sans spécifier de numéro de version est le suivant :
 
 ```powershell
 C:\Program Files\WindowsPowerShell\Modules\xFailOverCluster> Install-Module xFailOverCluster
@@ -32,7 +33,7 @@ ImplementedAs   Name                      ModuleName                     Version
 PowerShell      xCluster                  xFailOverCluster               1.2.0.0    {DomainAdministratorCredential, ...
 ```
 
-Maintenant, si vous rappelez **Install-Module**, mais indiquez la valeur 1.1.0.0 pour le paramètre **RequiredVersion**, le résultat est le suivant :
+Maintenant, si vous rappelez **Install-Module**, mais indiquez la valeur 1.1.0.0 pour le paramètre **RequiredVersion**, le résultat est le suivant :
 
 ```powershell
 C:\Program Files\WindowsPowerShell\Modules\xFailOverCluster> Install-Module xFailOverCluster -RequiredVersion 1.1
@@ -44,11 +45,12 @@ PowerShell      xCluster                  xFailOverCluster               1.1    
 PowerShell      xCluster                  xFailOverCluster               1.2.0.0    {DomainAdministratorCredential, Name, ...
 ```
 
-## <a name="specifying-a-resource-version-in-a-configuration"></a>Spécification d’une version de ressource dans une configuration
+<a id="specifying-a-resource-version-in-a-configuration" class="xliff"></a>
+## Spécification d’une version de ressource dans une configuration
 
 Si plusieurs ressources sont installées sur un ordinateur, vous devez spécifier la version d’une ressource quand vous l’utilisez dans une configuration. Pour cela, vous devez spécifier le paramètre **ModuleVersion** du mot-clé **Import-DscResource**. Si vous ne parvenez pas à spécifier la version d’un module d’une ressource dont plusieurs versions sont installées, la configuration génère une erreur.
 
-La configuration suivante montre comment spécifier la version de la ressource à appeler :
+La configuration suivante montre comment spécifier la version de la ressource à appeler :
 
 ```powershell
 configuration VersionTest
@@ -67,7 +69,7 @@ configuration VersionTest
 }     
 ```
 
->Remarque : Le paramètre ModuleVersion d’Import-DscResource n’est pas disponible dans PowerShell 4.0. Dans PowerShell 4.0, vous pouvez spécifier une version du module en passant un objet de spécification de module au paramètre ModuleName d’Import-DscResource. Un objet de spécification de module est une table de hachage qui contient les clés ModuleName et RequiredVersion. Par exemple :
+>Remarque : Le paramètre ModuleVersion d’Import-DscResource n’est pas disponible dans PowerShell 4.0. Dans PowerShell 4.0, vous pouvez spécifier une version du module en passant un objet de spécification de module au paramètre ModuleName d’Import-DscResource. Un objet de spécification de module est une table de hachage qui contient les clés ModuleName et RequiredVersion. Par exemple :
 
 ```powershell
 configuration VersionTest
@@ -86,9 +88,10 @@ configuration VersionTest
 }     
 ```
 
-Cela fonctionne également dans PowerShell 5.0, mais il est recommandé d’utiliser le paramètre **ModuleVersion**.
+Cela fonctionne également dans PowerShell 5.0, mais il est recommandé d’utiliser le paramètre **ModuleVersion**.
 
-## <a name="see-also"></a>Voir aussi
+<a id="see-also" class="xliff"></a>
+## Voir aussi
 * [Configurations DSC](configurations.md)
 * [Ressources DSC](resources.md)
 

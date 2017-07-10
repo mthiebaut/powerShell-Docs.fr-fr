@@ -1,4 +1,16 @@
-# <a name="set-dsclocalconfigurationmanager-cmdlet-supports--force-parameter"></a>L’applet de commande Set-DscLocalConfigurationManager prend en charge le paramètre -force
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: wmf,powershell,setup
+ms.openlocfilehash: 0aff3ff1fe12fbc7acce20cf7c802f58ace77bb9
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
+---
+<a id="set-dsclocalconfigurationmanager-cmdlet-supports--force-parameter" class="xliff"></a>
+# L’applet de commande Set-DscLocalConfigurationManager prend en charge le paramètre -force
 
 Nous avons ajouté la prise en charge d’un nouveau paramètre à l’applet de commande Set-DscLocalConfigurationManager. Il permet à l’utilisateur de réinitialiser la métaconfiguration sur l’ordinateur de façon déterministe quand d’autres opérations (telles que la vérification de cohérence) s’exécutent en arrière-plan, car cela entraîne l’arrêt de toutes les opérations en cours d’exécution.
 
@@ -36,3 +48,4 @@ VERBOSE: \[DEV-10586-465\]: LCM: \[ End Set \] in 0.1410 seconds.
 VERBOSE: Operation 'Invoke CimMethod' complete.
 VERBOSE: Set-DscLocalConfigurationManager finished in 0.421 seconds.
 ```
+

@@ -1,23 +1,24 @@
 ---
-title: "Gestionnaire de configuration local (LCM) de DSK Windows PowerShell 4.0"
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: cec3aaf4e57d1efc3e29880e4a7f078bd1840901
-ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+title: "Gestionnaire de configuration local (LCM) de DSK Windows PowerShell 4.0"
+ms.openlocfilehash: 2e6e4731bdf6d7de6d13fc7f9b81698a192247e4
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="windows-powershell-40-desired-state-configuration-local-configuration-manager-lcm"></a>Gestionnaire de configuration local (LCM) de DSK Windows PowerShell 4.0
+<a id="windows-powershell-40-desired-state-configuration-local-configuration-manager-lcm" class="xliff"></a>
+# Gestionnaire de configuration local (LCM) de DSK Windows PowerShell 4.0
 
 >S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Le Gestionnaire de configuration local (ou « LCM ») est le moteur de la fonctionnalité DSC (Desired State Configuration) de Windows PowerShell. Exécuté sur tous les nœuds cibles, il est chargé d’appeler les ressources de configuration contenues dans un script de configuration DSC. Cette rubrique répertorie les propriétés du Gestionnaire de configuration local et explique comment modifier les paramètres du Gestionnaire de configuration local sur un nœud cible.
 
-## <a name="local-configuration-manager-properties"></a>Propriétés du Gestionnaire de configuration local
+<a id="local-configuration-manager-properties" class="xliff"></a>
+## Propriétés du Gestionnaire de configuration local
 Vous pouvez définir ou récupérer les différentes propriétés du Gestionnaire de configuration local décrites ci-dessous.
  
 * **AllowModuleOverwrite** : indique si vous autorisez le remplacement des configurations existantes sur le nœud cible par les nouvelles configurations téléchargées du serveur de configuration. Les valeurs possibles sont True et False.
@@ -35,7 +36,8 @@ Vous pouvez définir ou récupérer les différentes propriétés du Gestionnair
 * **RefreshFrequencyMins** : propriété à définir si vous avez configuré un serveur collecteur. Elle indique la fréquence (en minutes) à laquelle le Gestionnaire de configuration local interroge un serveur collecteur pour télécharger la configuration actuelle. Cette valeur peut être définie conjointement avec ConfigurationModeFrequencyMins. Quand la propriété RefreshMode est définie sur « Pull », le nœud cible interroge le serveur collecteur à la fréquence définie par RefreshFrequencyMins et télécharge la configuration actuelle. À la fréquence définie par ConfigurationModeFrequencyMins, le moteur de cohérence applique ensuite la dernière configuration téléchargée sur le nœud cible. Le système arrondit la valeur de RefreshFrequencyMins si elle n’est pas un nombre entier multiple de la valeur de ConfigurationModeFrequencyMins. La valeur par défaut est 30.
 * **RefreshMode** : les valeurs possibles sont **Push** (valeur par défaut) et **Pull**. Dans une configuration en mode « push », vous devez créer un fichier de configuration sur chaque nœud cible, avec n’importe quel ordinateur client. En mode « pull », vous devez configurer un serveur collecteur que le Gestionnaire de configuration local peut interroger pour obtenir les fichiers de configuration.
 
-### <a name="example-of-updating-local-configuration-manager-settings"></a>Exemple de mise à jour des paramètres du Gestionnaire de configuration local
+<a id="example-of-updating-local-configuration-manager-settings" class="xliff"></a>
+### Exemple de mise à jour des paramètres du Gestionnaire de configuration local
 
 Pour mettre à jour les paramètres du Gestionnaire de configuration local d’un nœud cible, ajoutez un bloc **LocalConfigurationManager** au bloc du nœud dans un script de configuration, comme indiqué dans l’exemple suivant.
 

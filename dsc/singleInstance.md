@@ -1,21 +1,21 @@
 ---
-title: "Écriture d’une ressource de DSC d’instance unique (recommandation)"
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 4b1e8a6d3fb4feca426a9d7861c40d194e612c22
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+title: "Écriture d’une ressource de DSC d’instance unique (recommandation)"
+ms.openlocfilehash: fe7c50c39ba08e290076ea7a058372ce57898325
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="writing-a-single-instance-dsc-resource-best-practice"></a>Écriture d’une ressource de DSC d’instance unique (recommandation)
+<a id="writing-a-single-instance-dsc-resource-best-practice" class="xliff"></a>
+# Écriture d’une ressource de DSC d’instance unique (recommandation)
 
 >**Remarque :** cette rubrique décrit une recommandation pour la définition d’une ressource DSC qui n’autorise qu’une seule instance dans une configuration. Actuellement, il n’existe pas de fonctionnalité DSC intégrée pour ce faire. Cela pourrait changer à l’avenir.
 
-Il existe des situations où vous ne souhaitez pas autoriser qu’une ressource soit utilisée plusieurs fois dans une configuration. Par exemple, dans une précédente implémentation de la ressource [xTimeZone](https://github.com/PowerShell/xTimeZone), une configuration pouvait appeler la ressource plusieurs fois, en définissant un fuseau horaire différent dans chaque bloc de ressources :
+Il existe des situations où vous ne souhaitez pas autoriser qu’une ressource soit utilisée plusieurs fois dans une configuration. Par exemple, dans une précédente implémentation de la ressource [xTimeZone](https://github.com/PowerShell/xTimeZone), une configuration pouvait appeler la ressource plusieurs fois, en définissant un fuseau horaire différent dans chaque bloc de ressources :
 
 ```powershell
 Configuration SetTimeZone 
@@ -50,7 +50,7 @@ Configuration SetTimeZone
 
 Cela est dû à la manière dont les clés de ressources DSC fonctionnent. Une ressource doit avoir au moins une propriété de clé. Une instance de ressource est considérée comme unique si la combinaison des valeurs de toutes ses propriétés de clé est unique. Dans l’implémentation précédente, la ressource [xTimeZone](https://github.com/PowerShell/xTimeZone) n’avait qu’une seule propriété (**fuseau horaire**), qui devait nécessairement être une clé. Pour cette raison, une configuration telle que celle ci-dessus était compilée et exécutée sans avertissement. Chacun des blocs de ressources **xTimeZone** est considéré comme unique. Cela entraînerait l’application de la configuration au nœud à plusieurs reprises, en effectuant un cycle dans le fuseau horaire dans les deux sens.
 
-Pour s’assurer qu’une configuration ne puisse définir le fuseau horaire d’un nœud cible qu’une seule fois, la ressource a été mise à jour pour ajouter une deuxième propriété, **IsSingleInstance**, qui est devenue la propriété de clé. La propriété **IsSingleInstance** a été limitée à une valeur unique, « Yes », à l’aide de **ValueMap**. L’ancien schéma MOF de la ressource était :
+Pour s’assurer qu’une configuration ne puisse définir le fuseau horaire d’un nœud cible qu’une seule fois, la ressource a été mise à jour pour ajouter une deuxième propriété, **IsSingleInstance**, qui est devenue la propriété de clé. La propriété **IsSingleInstance** a été limitée à une valeur unique, « Yes », à l’aide de **ValueMap**. L’ancien schéma MOF de la ressource était :
 
 ```powershell
 [ClassVersion("1.0.0.0"), FriendlyName("xTimeZone")]
@@ -60,7 +60,7 @@ class xTimeZone : OMI_BaseResource
 };
 ```
 
-Le schéma MOF mis à jour pour la ressource est :
+Le schéma MOF mis à jour pour la ressource est :
 
 ```powershell
 [ClassVersion("1.0.0.0"), FriendlyName("xTimeZone")]
@@ -71,7 +71,7 @@ class xTimeZone : OMI_BaseResource
 };
 ```
 
-Le script de ressources a été également mis à jour pour utiliser le nouveau paramètre. Voici l’ancien script de ressources :
+Le script de ressources a été également mis à jour pour utiliser le nouveau paramètre. Voici l’ancien script de ressources :
 
 ```powershell
 function Get-TargetResource
@@ -204,7 +204,7 @@ Function Set-TimeZone {
 Export-ModuleMember -Function *-TargetResource
 ```
 
-Notez que la propriété **TimeZone** n’est plus une clé. À présent, si une configuration tente de définir le fuseau horaire deux fois (à l’aide de deux blocs **xTimeZone** différents avec des valeurs **TimeZone** différentes), la tentative de compilation de la configuration génère une erreur :
+Notez que la propriété **TimeZone** n’est plus une clé. À présent, si une configuration tente de définir le fuseau horaire deux fois (à l’aide de deux blocs **xTimeZone** différents avec des valeurs **TimeZone** différentes), la tentative de compilation de la configuration génère une erreur :
 
 ```powershell
 Test-ConflictingResources : A conflict was detected between resources '[xTimeZone]TimeZoneExample (::15::10::xTimeZone)' and 

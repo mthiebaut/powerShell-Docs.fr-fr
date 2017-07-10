@@ -1,25 +1,27 @@
 ---
-title: Ressources GroupSet dans DSC
-ms.date: 2016-05-16
-keywords: "powershell, DSC, intégrée, ressource"
-description: "Fournit un mécanisme permettant de gérer des groupes locaux sur le nœud cible."
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 6e5ea98febfe7541f35a84c37df73df580654340
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+description: "Fournit un mécanisme permettant de gérer des groupes locaux sur le nœud cible."
+title: Ressources GroupSet dans DSC
+ms.openlocfilehash: 0907a968bfc660adc873c28e8be6572d1d5cb993
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-groupset-resource"></a>Ressources GroupSet dans DSC
+<a id="dsc-groupset-resource" class="xliff"></a>
+# Ressources GroupSet dans DSC
 
-> S’applique à : Windows PowerShell 5.0
+> S’applique à : Windows PowerShell 5.0
 
 La ressource **GroupSet** dans la configuration d’état souhaité (DSC) Windows PowerShell fournit un mécanisme permettant de gérer des groupes locaux sur un nœud cible. Cette ressource est une [ressource composite](authoringResourceComposite.md) qui appelle la ressource [Group resource](groupResource.md) pour chaque groupe spécifié dans le paramètre `GroupName`.
 
 Utilisez cette ressource quand vous souhaitez ajouter ou supprimer la même liste de membres dans plusieurs groupes, supprimer plusieurs groupes, ou ajouter plusieurs groupes avec la même liste de membres.
 
-##<a name="syntax"></a>Syntaxe##
+<a id="syntax" class="xliff"></a>
+##Syntaxe##
 ```
 Group [string] #ResourceName
 {
@@ -32,21 +34,23 @@ Group [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Propriétés
+<a id="properties" class="xliff"></a>
+## Propriétés
 
 |  Propriété  |  Description   | 
 |---|---| 
 | GroupName| Noms des groupes pour lesquels vous souhaitez garantir un état spécifique.| 
 | MembersToExclude| Utilisez cette propriété pour supprimer des membres de l’appartenance existante des groupes. La valeur de cette propriété est un tableau de chaînes au format *domaine*\\*nom d’utilisateur*. Si vous définissez cette propriété dans une configuration, n’utilisez pas la propriété **Members**. Cela générera une erreur.| 
-| Credential| Les informations d’identification devant être fournies pour accéder aux ressources distantes. **Remarque** : Ce compte doit disposer des autorisations Active Directory appropriées pour ajouter tous les comptes non locaux au groupe. Dans le cas contraire, une erreur se produit.
-| Ensure| Indique si les groupes existent. Affectez la valeur « Absent » à cette propriété pour vous assurer que les groupes n’existent pas. La valeur « Present » (valeur par défaut) permet de s’assurer que les groupes existent.| 
+| Credential| Les informations d’identification devant être fournies pour accéder aux ressources distantes. **Remarque** : Ce compte doit disposer des autorisations Active Directory appropriées pour ajouter tous les comptes non locaux au groupe. Dans le cas contraire, une erreur se produit.
+| Ensure| Indique si les groupes existent. Affectez la valeur « Absent » à cette propriété pour vous assurer que les groupes n’existent pas. La valeur « Present » (valeur par défaut) permet de s’assurer que les groupes existent.| 
 | Members| Utilisez cette propriété pour remplacer l’appartenance à un groupe actuelle avec les membres spécifiés. La valeur de cette propriété est un tableau de chaînes au format *domaine*\\*nom d’utilisateur*. Si vous définissez cette propriété dans une configuration, n’utilisez pas les propriétés **MembersToExclude** et **MembersToInclude**. Cela générera une erreur.| 
 | MembersToInclude| Utilisez cette propriété pour ajouter des membres aux appartenances existantes du groupe. La valeur de cette propriété est un tableau de chaînes au format *domaine*\\*nom d’utilisateur*. Si vous définissez cette propriété dans une configuration, n’utilisez pas la propriété **Members**. Cela générera une erreur.| 
-| DependsOn | Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’ID __ResourceName__ et le type __ResourceType__, utilisez la syntaxe suivante pour cette propriété : DependsOn = "[ResourceType]ResourceName"| 
+| DependsOn | Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’ID __ResourceName__ et le type __ResourceType__, utilisez la syntaxe suivante pour cette propriété : DependsOn = "[ResourceType]ResourceName"| 
 
-## <a name="example-1"></a>Exemple 1
+<a id="example-1" class="xliff"></a>
+## Exemple 1
 
-L’exemple suivant montre comment s’assurer que les deux groupes « myGroup » et « myOtherGroup » sont présents. 
+L’exemple suivant montre comment s’assurer que les deux groupes « myGroup » et « myOtherGroup » sont présents. 
 
 ```powershell
 configuration GroupSetTest
@@ -78,6 +82,6 @@ $cd = @{
 GroupSetTest -ConfigurationData $cd
 ```
 
->**Remarque :** Cet exemple utilise des informations d’identification en texte clair par souci de simplicité. Pour plus d’informations sur la façon de chiffrer des informations d’identification dans le fichier MOF de configuration, consultez [Sécurisation du fichier MOF](secureMOF.md).
+>**Remarque :** Cet exemple utilise des informations d’identification en texte clair par souci de simplicité. Pour plus d’informations sur la façon de chiffrer des informations d’identification dans le fichier MOF de configuration, consultez [Sécurisation du fichier MOF](secureMOF.md).
 
 

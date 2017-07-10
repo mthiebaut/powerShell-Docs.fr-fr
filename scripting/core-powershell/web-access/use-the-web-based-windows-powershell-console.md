@@ -1,18 +1,15 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
 title: utiliser la console web Windows PowerShell
-ms.technology: powershell
-ms.openlocfilehash: ea530d346ec36000da331b287f51d8f732947629
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 48ed1646c00f909c4e950f197f51a30205060ef0
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/08/2017
 ---
-#  <a name="use-the-web-based-windows-powershell-console"></a>Utiliser la console web Windows PowerShell
+<a id="use-the-web-based-windows-powershell-console" class="xliff"></a>
+#  Utiliser la console web Windows PowerShell
 
 Mise à jour : 24 juin 2013
 
@@ -90,7 +87,8 @@ Pour utiliser la console web Accès Web Windows PowerShell, les navigateurs doiv
 
 Votre administrateur Accès Web Windows PowerShell doit vous fournir une URL qui est l’adresse du site web de la passerelle Accès Web Windows PowerShell de votre organisation. Par défaut, l’adresse de ce site web est https://&lt;nom_serveur&gt;/pswa. Avant de vous connecter à Accès Web Windows PowerShell, vérifiez que vous disposez du nom ou de l’adresse IP de l’ordinateur distant que vous souhaitez gérer. Vous devez être un utilisateur autorisé sur l’ordinateur distant et celui-ci doit être configuré pour autoriser la gestion à distance. Pour plus d’informations sur la configuration de votre ordinateur pour autoriser la gestion à distance, consultez [Activer et utiliser des commandes distantes dans Windows PowerShell](https://technet.microsoft.com/magazine/ff700227.aspx). Le moyen le plus simple de configurer votre ordinateur pour autoriser la gestion à distance consiste à exécuter l’applet de commande **Enable-PSRemoting -force** sur l’ordinateur, dans une session Windows PowerShell qui a été ouverte avec des droits d’utilisateur élevés (**Exécuter en tant qu’administrateur**).
 
-### <a name="to-sign-in-to-windows-powershell-web-access"></a>Pour se connecter à Windows PowerShell Web Access
+<a id="to-sign-in-to-windows-powershell-web-access" class="xliff"></a>
+### Pour se connecter à Windows PowerShell Web Access
 
 1.  Ouvrez le site web Accès Web Windows PowerShell dans une fenêtre ou un onglet de navigateur Internet.
 

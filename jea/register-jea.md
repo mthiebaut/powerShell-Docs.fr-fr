@@ -1,25 +1,25 @@
 ---
-manager: carmonm
-ms.topic: article
+ms.date: 2017-06-12
 author: rpsqrd
-ms.author: ryanpu
-ms.prod: powershell
-keywords: powershell,applet de commande,jea
-ms.date: 2016-12-05
+ms.topic: conceptual
+keywords: jea,powershell,security
 title: Inscription de configurations JEA
-ms.technology: powershell
-ms.openlocfilehash: 2dcf541f1ed9975a680b31ca5e00e0fbbbddb22e
-ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
-translationtype: HT
+ms.openlocfilehash: 0684a1c7acffbccbedab9dba4689611a24c8ae25
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="registering-jea-configurations"></a>Inscription de configurations JEA
+<a id="registering-jea-configurations" class="xliff"></a>
+# Inscription de configurations JEA
 
 > S’applique à : Windows PowerShell 5.0
 
 La dernière étape avant de pouvoir utiliser JEA une fois les [fonctionnalités de rôles](role-capabilities.md) et le [fichier de configuration de session](session-configurations.md) créés consiste à inscrire le point de terminaison JEA.
 Ce processus applique les informations de configuration de session au système et rend le point de terminaison disponible pour une utilisation par des utilisateurs et des moteurs d’automatisation (Automation).
 
-## <a name="single-machine-configuration"></a>Configuration d’une machine unique
+<a id="single-machine-configuration" class="xliff"></a>
+## Configuration d’une machine unique
 
 Pour les environnements de petite taille, vous pouvez déployer JEA en inscrivant le fichier de configuration de session à l’aide de l’applet de commande [Register-PSSessionConfiguration](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/register-pssessionconfiguration).
 
@@ -58,7 +58,8 @@ Register-PSSessionConfiguration -Path .\MyJEAConfig.pssc -Name 'JEAMaintenance' 
 Si l’inscription a réussi, vous êtes prêt à [utiliser JEA](using-jea.md).
 Vous pouvez supprimer le fichier de configuration de session à tout moment. Il n’est pas utilisé après l’inscription.
 
-## <a name="multi-machine-configuration-with-dsc"></a>Configuration sur plusieurs machines avec DSC
+<a id="multi-machine-configuration-with-dsc" class="xliff"></a>
+## Configuration sur plusieurs machines avec DSC
 
 Si vous déployez JEA sur plusieurs machines, le modèle de déploiement le plus simple consiste à utiliser la ressource JEA [Configuration d’état souhaité](https://msdn.microsoft.com/en-us/powershell/dsc/overview) pour déployer JEA rapidement et de manière cohérente sur chaque machine.
 
@@ -118,7 +119,8 @@ Cette configuration peut ensuite être appliquée à un système en [appelant di
 La ressource DSC vous permet également de remplacer le point de terminaison de communication à distance Microsoft.PowerShell par défaut.
 Si vous procédez ainsi, la ressource inscrit automatiquement un point de terminaison de sauvegarde sans contrainte nommé « Microsoft.PowerShell.Restricted » qui a la valeur par défaut des listes de contrôle d’accès WinRM (permettant aux groupes Utilisateurs de gestion à distance et Administrateurs locaux d’y accéder).
 
-## <a name="unregistering-jea-configurations"></a>Désinscription de configurations JEA
+<a id="unregistering-jea-configurations" class="xliff"></a>
+## Désinscription de configurations JEA
 
 Pour supprimer un point de terminaison JEA sur un système, utilisez l’applet de commande [Unregister-PSSessionConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/Unregister-PSSessionConfiguration).
 La désinscription d’un point de terminaison JEA empêche les nouveaux utilisateurs de créer de nouvelles sessions JEA sur le système.
@@ -134,6 +136,8 @@ Unregister-PSSessionConfiguration -Name 'ContosoMaintenance' -Force
 > Elle interrompt la plupart des opérations de gestion à distance en cours, notamment les autres sessions PowerShell, les appels WMI et certains outils de gestion.
 > Ne désinscrivez des points de terminaison PowerShell que pendant les fenêtres de maintenance planifiée.
 
-## <a name="next-steps"></a>Étapes suivantes
+<a id="next-steps" class="xliff"></a>
+## Étapes suivantes
 
 - [Tester le point de terminaison JEA](using-jea.md)
+

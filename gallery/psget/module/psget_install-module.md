@@ -1,23 +1,22 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: powershell,applet de commande,gallery
-ms.date: 2016-10-14
+ms.date: 2017-06-12
 contributor: manikb
-title: psget_install module
-ms.technology: powershell
-ms.openlocfilehash: 82e4bb1ec76b1a51e1a99de85bc77a5429d46e26
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: reference
+keywords: gallery,powershell,cmdlet,psget
+title: Install-Module
+ms.openlocfilehash: 37e07cd32e7b2fd4a7a8e6cab179aecc3251baf3
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="install-module"></a>Install-Module
+<a id="install-module" class="xliff"></a>
+# Install-Module
 
 Installe les modules PowerShell à partir de référentiels en ligne sur l’ordinateur local.
 
-## <a name="description"></a>Description
+<a id="description" class="xliff"></a>
+## Description
 
 L’applet de commande Install-Module télécharge un ou plusieurs modules à partir d’une galerie en ligne, les valide et les installe sur l’ordinateur local selon l’étendue d’installation spécifiée.
 
@@ -27,14 +26,15 @@ Quand aucune étendue n’est définie ou que la valeur du paramètre Scope est 
 
 Vous pouvez filtrer vos résultats selon les versions minimales et exactes des modules spécifiés.
 
-- Prise en charge des versions côte à côte dans Windows PowerShell 5.0 ou version ultérieure
+- Prise en charge des versions côte à côte dans Windows PowerShell 5.0 ou version ultérieure
 - Prise en charge de l’installation de dépendances de modules
-- **Untrusted prompt :** (Invite pour les référentiels non approuvés) L’acceptation par l’utilisateur est obligatoire pour installer les modules à partir d’un référentiel non approuvé.
+- **Untrusted prompt :** (Invite pour les référentiels non approuvés) L’acceptation par l’utilisateur est obligatoire pour installer les modules à partir d’un référentiel non approuvé.
 - -Force réinstalle le module installé
-- RequiredVersion installe la version spécifiée côte à côte avec les versions existantes sur PowerShell versions 5.0 ou ultérieures.
+- RequiredVersion installe la version spécifiée côte à côte avec les versions existantes sur PowerShell versions 5.0 ou ultérieures.
 
-### <a name="scope"></a>Étendue
-Spécifie l’étendue d’installation du module. Les valeurs acceptables pour ce paramètre sont : AllUsers et CurrentUser.
+<a id="scope" class="xliff"></a>
+### Étendue
+Spécifie l’étendue d’installation du module. Les valeurs acceptables pour ce paramètre sont : AllUsers et CurrentUser.
 
 L’étendue d’installation par défaut est AllUsers.
 
@@ -42,33 +42,37 @@ L’étendue AllUsers permet d’installer les modules à un emplacement qui est
 
 L’étendue CurrentUser permet d’installer les modules uniquement dans $home\Documents\WindowsPowerShell\Modules, afin que le module ne soit disponible que pour l’utilisateur actuel.
 
-## <a name="notes"></a>Remarques
+<a id="notes" class="xliff"></a>
+## Remarques
 
-Cette applet de commande s’exécute sur Windows PowerShell 3.0 ou versions ultérieures de Windows PowerShell, sur Windows 7 ou Windows 2008 R2 et versions ultérieures de Windows.
+Cette applet de commande s’exécute sur Windows PowerShell 3.0 ou versions ultérieures de Windows PowerShell, sur Windows 7 ou Windows 2008 R2 et versions ultérieures de Windows.
 
 Si un module installé ne peut pas être importé (autrement dit, s’il ne dispose pas d’un fichier .psm1, .psd1 ou .dll du même nom dans le dossier), l’installation échoue, sauf si vous ajoutez le paramètre Force à votre commande.
 
-Si une version du module sur l’ordinateur correspond à la valeur spécifiée pour le paramètre Name et que vous n’avez pas ajouté le paramètre MinimumVersion ou RequiredVersion, Install-Module se poursuit de manière silencieuse sans installer ce module. Si les paramètres MinimumVersion ou RequiredVersion sont spécifiés et que le module existant ne correspond pas aux valeurs de ce paramètre, une erreur se produit. Pour être plus précis : si la version du module actuellement installé est inférieure à la valeur du paramètre MinimumVersion ou différente de la valeur du paramètre RequiredVersion, une erreur se produit. Si la version du module installé est supérieure à la valeur du paramètre MinimumVersion ou égale à la valeur du paramètre RequiredVersion, Install-Module se poursuit de manière silencieuse sans installer ce module.
+Si une version du module sur l’ordinateur correspond à la valeur spécifiée pour le paramètre Name et que vous n’avez pas ajouté le paramètre MinimumVersion ou RequiredVersion, Install-Module se poursuit de manière silencieuse sans installer ce module. Si les paramètres MinimumVersion ou RequiredVersion sont spécifiés et que le module existant ne correspond pas aux valeurs de ce paramètre, une erreur se produit. Pour être plus précis : si la version du module actuellement installé est inférieure à la valeur du paramètre MinimumVersion ou différente de la valeur du paramètre RequiredVersion, une erreur se produit. Si la version du module installé est supérieure à la valeur du paramètre MinimumVersion ou égale à la valeur du paramètre RequiredVersion, Install-Module se poursuit de manière silencieuse sans installer ce module.
 
 Install-Module retourne une erreur s’il n’existe aucun module dans la galerie en ligne qui correspond au nom spécifié.
 
 Pour installer plusieurs modules, spécifiez un tableau de noms de modules, séparés par des virgules. Vous ne pouvez pas ajouter MinimumVersion ou RequiredVersion si vous spécifiez plusieurs noms de modules.
 
-Par défaut, les modules sont installés dans le dossier Program Files, afin d’éviter toute confusion quand vous installez les ressources DSC (Configuration de l’état souhaité) de Windows PowerShell. Vous pouvez diriger plusieurs objets PSGetItemInfo vers Install-Module ; il s’agit d’une autre façon de spécifier plusieurs modules à installer dans une seule commande.
+Par défaut, les modules sont installés dans le dossier Program Files, afin d’éviter toute confusion quand vous installez les ressources DSC (Configuration de l’état souhaité) de Windows PowerShell. Vous pouvez diriger plusieurs objets PSGetItemInfo vers Install-Module ; il s’agit d’une autre façon de spécifier plusieurs modules à installer dans une seule commande.
 
 Pour éviter d’exécuter des modules qui contiennent du code malveillant, les modules installés ne sont pas automatiquement importés par l’installation. Comme bonne pratique de sécurité, évaluez le code du module avant d’exécuter des applets de commande ou des fonctions dans un module pour la première fois.
 
 
-## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
+<a id="cmdlet-syntax" class="xliff"></a>
+## Syntaxe de l’applet de commande
 ```powershell
 Get-Command -Name Install-Module -Module PowerShellGet -Syntax
 ```
 
-## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
+<a id="cmdlet-online-help-reference" class="xliff"></a>
+## Référence de l’aide en ligne de l’applet de commande
 
 [Install-Module](http://go.microsoft.com/fwlink/?LinkID=398573)
 
-## <a name="example-commands"></a>Exemples de commandes
+<a id="example-commands" class="xliff"></a>
+## Exemples de commandes
 
 ```powershell
 
@@ -109,7 +113,8 @@ Install-Module ContosoClient -Force
 Install-Module -Name 
 ```
 
-## <a name="install-module-cmdlet-in-pipeline-operations"></a>Applet de commande Install-Module dans les opérations de pipeline
+<a id="install-module-cmdlet-in-pipeline-operations" class="xliff"></a>
+## Applet de commande Install-Module dans les opérations de pipeline
 
 ```powershell
 
@@ -136,11 +141,13 @@ Get-InstalledModule
 
 ```
 
-## <a name="side-by-side-version-support-on-powershell-50-or-newer"></a>Prise en charge des versions côte à côte sur PowerShell 5.0 ou version ultérieure
+<a id="side-by-side-version-support-on-powershell-50-or-newer" class="xliff"></a>
+## Prise en charge des versions côte à côte sur PowerShell 5.0 ou version ultérieure
 
-PowerShellGet assure la prise en charge des versions de modules côte à côte dans les applets de commande Install-Module, Update-Module et Publish-Module qui s’exécutent dans Windows PowerShell 5.0 ou versions ultérieures.
+PowerShellGet assure la prise en charge des versions de modules côte à côte dans les applets de commande Install-Module, Update-Module et Publish-Module qui s’exécutent dans Windows PowerShell 5.0 ou versions ultérieures.
 
-### <a name="install-module-examples"></a>Exemples Install-Module
+<a id="install-module-examples" class="xliff"></a>
+### Exemples Install-Module
 
 ```powershell
 # Install a version of the module
@@ -172,7 +179,8 @@ Version    Name                                Repository           Description
 
 ```
 
-## <a name="install-module-with-its-dependencies"></a>Installer un module avec ses dépendances
+<a id="install-module-with-its-dependencies" class="xliff"></a>
+## Installer un module avec ses dépendances
 
 ```powershell
 
@@ -266,7 +274,8 @@ Version    Name                                Repository           Description
 
 ```
 
-## <a name="error-scenarios"></a>Scénarios d’erreur
+<a id="error-scenarios" class="xliff"></a>
+## Scénarios d’erreur
 
 ```powershell
 

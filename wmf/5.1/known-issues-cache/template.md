@@ -1,19 +1,27 @@
 ---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: wmf,powershell,setup
 title: "exemple de modèle d’un problème ou limitation connu"
-contributor: 
-ms.openlocfilehash: e3b98044902cb6665e06582c8259bd5defd6f2ca
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.openlocfilehash: b93393b2c84e76a301e6406d1388e82e95a2959c
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
->Remarque : fournir un titre descriptif proposé et une brève description
+>Remarque : fournir un titre descriptif proposé et une brève description
 
-## <a name="example-erroneous-executionpolicy-errors"></a>Exemples : erreurs ExecutionPolicy erronées ##
-Sous Windows 7, l’utilisation de modules PowerShell et de ressources DSC peut générer des erreurs liées à ExecutionPolicy.
+<a id="example-erroneous-executionpolicy-errors" class="xliff"></a>
+## Exemples : erreurs ExecutionPolicy erronées ##
+Sous Windows 7, l’utilisation de modules PowerShell et de ressources DSC peut générer des erreurs liées à ExecutionPolicy.
 
-### <a name="resolution"></a>Solution
+<a id="resolution" class="xliff"></a>
+### Solution
 
-Pour résoudre le problème, affectez la valeur **RemoteSigned** à **ExecutionPolicy** en exécutant la commande suivante dans une session PowerShell avec élévation de privilèges (Exécuter en tant qu’administrateur) :
+Pour résoudre le problème, affectez la valeur **RemoteSigned** à **ExecutionPolicy** en exécutant la commande suivante dans une session PowerShell avec élévation de privilèges (Exécuter en tant qu’administrateur) :
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned
 ```
+

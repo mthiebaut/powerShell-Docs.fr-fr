@@ -1,21 +1,21 @@
 ---
-title: "Ressources DSC Windows PowerShell intégrées"
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 1cbe3ac8de217d659f717cb960b4b57cb2d4fdd9
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+title: "Ressources DSC Windows PowerShell intégrées"
+ms.openlocfilehash: 181cafde60d44a1cd663472279dab01f38833522
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="built-in-windows-powershell-desired-state-configuration-resources"></a>Ressources DSC Windows PowerShell intégrées
+<a id="built-in-windows-powershell-desired-state-configuration-resources" class="xliff"></a>
+# Ressources DSC Windows PowerShell intégrées
 
-> S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
+> S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
-La configuration de l’état souhaité (DSC) de Windows PowerShell est fournie avec un ensemble de ressources de configuration intégrées. Le tableau suivant fournit la liste de ces ressources classées par ordre alphabétique, ainsi que des liens vers les rubriques qui expliquent ces ressources en détail. Pour plus d’informations sur ces ressources, consultez [Création de ressources DSC Windows PowerShell personnalisées](authoringResource.md).
+La configuration de l’état souhaité (DSC) de Windows PowerShell est fournie avec un ensemble de ressources de configuration intégrées. Le tableau suivant fournit la liste de ces ressources classées par ordre alphabétique, ainsi que des liens vers les rubriques qui expliquent ces ressources en détail. Pour plus d’informations sur ces ressources, consultez [Création de ressources DSC Windows PowerShell personnalisées](authoringResource.md).
 
 * [Ressource Archive](archiveResource.md)
 * [Ressource Environment](environmentResource.md)
