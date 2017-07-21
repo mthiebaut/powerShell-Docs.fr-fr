@@ -9,16 +9,16 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/08/2017
 ---
-# <a name="microsoftpowershellarchive-module"></a>Module Microsoft.PowerShell.Archive
-Cette section contient les rubriques d’aide pour les applets de commande installées avec le module **Microsoft.PowerShell.Archive** de Windows PowerShell. Le module Archive contient des applets de commande qui vous permettent de créer et d’extraire des fichiers d’archive ou ZIP.
+# <a name="microsoftpowershellarchive-module"></a><span data-ttu-id="79318-103">Module Microsoft.PowerShell.Archive</span><span class="sxs-lookup"><span data-stu-id="79318-103">Microsoft.PowerShell.Archive Module</span></span>
+<span data-ttu-id="79318-104">Cette section contient les rubriques d’aide pour les applets de commande installées avec le module **Microsoft.PowerShell.Archive** de Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="79318-104">This section contains the help topics for the cmdlets that are installed with the Windows PowerShell **Microsoft.PowerShell.Archive** module.</span></span> <span data-ttu-id="79318-105">Le module Archive contient des applets de commande qui vous permettent de créer et d’extraire des fichiers d’archive ou ZIP.</span><span class="sxs-lookup"><span data-stu-id="79318-105">The Archive module contains cmdlets that let you create and extract archive or ZIP files.</span></span>
 
-## <a name="microsoftpowershellarchive-cmdlets"></a>Applets de commande Microsoft.PowerShell.Archive
+## <a name="microsoftpowershellarchive-cmdlets"></a><span data-ttu-id="79318-106">Applets de commande Microsoft.PowerShell.Archive</span><span class="sxs-lookup"><span data-stu-id="79318-106">Microsoft.PowerShell.Archive cmdlets</span></span>
 
 |||
 |-|-|
-|[Compress-Archive](http://technet.microsoft.com/library/dn841358.aspx)|Compresse un ou plusieurs fichiers ou dossiers dans un fichier d’archive.|
-|[Expand-Archive](http://technet.microsoft.com/library/dn841359.aspx)|Extrait le contenu des fichiers d’archive (ou ZIP) vers une destination spécifique.|
+|[<span data-ttu-id="79318-107">Compress-Archive</span><span class="sxs-lookup"><span data-stu-id="79318-107">Compress-Archive</span></span>](http://technet.microsoft.com/library/dn841358.aspx)|<span data-ttu-id="79318-108">Compresse un ou plusieurs fichiers ou dossiers dans un fichier d’archive.</span><span class="sxs-lookup"><span data-stu-id="79318-108">Compresses one or more specified files or folders into an archive file.</span></span>|
+|[<span data-ttu-id="79318-109">Expand-Archive</span><span class="sxs-lookup"><span data-stu-id="79318-109">Expand-Archive</span></span>](http://technet.microsoft.com/library/dn841359.aspx)|<span data-ttu-id="79318-110">Extrait le contenu des fichiers d’archive (ou ZIP) vers une destination spécifique.</span><span class="sxs-lookup"><span data-stu-id="79318-110">Extracts the contents of archive (or ZIP) files to a specified destination.</span></span>|
 
-## <a name="see-also"></a>Voir aussi
-- [Modules Core dans Windows PowerShell](http://technet.microsoft.com/library/hh847741.aspx)
+## <a name="see-also"></a><span data-ttu-id="79318-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="79318-111">See Also</span></span>
+- [<span data-ttu-id="79318-112">Modules Core dans Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="79318-112">Core Modules in Windows PowerShell</span></span>](http://technet.microsoft.com/library/hh847741.aspx)
 

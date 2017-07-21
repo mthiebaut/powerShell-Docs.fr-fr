@@ -9,15 +9,14 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="detailed-information-about-lcm-state" class="xliff"></a>
-# Informations détaillées sur l’état du gestionnaire de configuration local
+# <a name="detailed-information-about-lcm-state"></a><span data-ttu-id="8d1eb-102">Informations détaillées sur l’état du gestionnaire de configuration local</span><span class="sxs-lookup"><span data-stu-id="8d1eb-102">Detailed information about LCM state</span></span>
 
-Nous avons apporté des améliorations à l’exposition des détails concernant l’état du gestionnaire de configuration local. Le LCMState retourné par Get-DscLocalConfigurationManager peut maintenant contenir les valeurs suivantes :
+<span data-ttu-id="8d1eb-103">Nous avons apporté des améliorations à l’exposition des détails concernant l’état du gestionnaire de configuration local.</span><span class="sxs-lookup"><span data-stu-id="8d1eb-103">We have made improvements in exposing details about the LCM state.</span></span> <span data-ttu-id="8d1eb-104">Le LCMState retourné par Get-DscLocalConfigurationManager peut maintenant contenir les valeurs suivantes :</span><span class="sxs-lookup"><span data-stu-id="8d1eb-104">The LCMState that is returned by Get-DscLocalConfigurationManager can now contain the following values:</span></span>
 
-* **Idle**
-* **Busy**
-* **PendingReboot**
-* **PendingConfiguration**
+* <span data-ttu-id="8d1eb-105">**Idle**</span><span class="sxs-lookup"><span data-stu-id="8d1eb-105">**Idle**</span></span>
+* <span data-ttu-id="8d1eb-106">**Busy**</span><span class="sxs-lookup"><span data-stu-id="8d1eb-106">**Busy**</span></span>
+* <span data-ttu-id="8d1eb-107">**PendingReboot**</span><span class="sxs-lookup"><span data-stu-id="8d1eb-107">**PendingReboot**</span></span>
+* <span data-ttu-id="8d1eb-108">**PendingConfiguration**</span><span class="sxs-lookup"><span data-stu-id="8d1eb-108">**PendingConfiguration**</span></span>
 
-Nous avons également ajouté une propriété LCMStateDetail qui contient davantage d’informations sur l’état.
+<span data-ttu-id="8d1eb-109">Nous avons également ajouté une propriété LCMStateDetail qui contient davantage d’informations sur l’état.</span><span class="sxs-lookup"><span data-stu-id="8d1eb-109">We have also added an LCMStateDetail property that contains more information about the state.</span></span>
 

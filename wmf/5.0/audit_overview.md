@@ -9,10 +9,9 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="audit-powershell-usage-using-transcription-and-logging" class="xliff"></a>
-# Auditer l’utilisation de PowerShell à l’aide de la transcription et de la journalisation
+# <a name="audit-powershell-usage-using-transcription-and-logging"></a><span data-ttu-id="d5e78-102">Auditer l’utilisation de PowerShell à l’aide de la transcription et de la journalisation</span><span class="sxs-lookup"><span data-stu-id="d5e78-102">Audit PowerShell Usage using Transcription and Logging</span></span>
 
-- [Options de transcription améliorées](audit_transcript.md)
-- [Traçage et journalisation de script](audit_script.md)
-- [Applets de commande CMS (Cryptographic Message Syntax)](audit_cms.md)
+- [<span data-ttu-id="d5e78-103">Options de transcription améliorées</span><span class="sxs-lookup"><span data-stu-id="d5e78-103">Enhanced Transcription Options</span></span>](audit_transcript.md)
+- [<span data-ttu-id="d5e78-104">Traçage et journalisation de script</span><span class="sxs-lookup"><span data-stu-id="d5e78-104">Script Tracing and Logging</span></span>](audit_script.md)
+- [<span data-ttu-id="d5e78-105">Applets de commande CMS (Cryptographic Message Syntax)</span><span class="sxs-lookup"><span data-stu-id="d5e78-105">Cryptographic Message Syntax (CMS) cmdlets</span></span>](audit_cms.md)
 

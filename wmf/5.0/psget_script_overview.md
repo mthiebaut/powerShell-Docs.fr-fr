@@ -9,11 +9,10 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="powershell-script-discovery-install-and-management-with-powershellget" class="xliff"></a>
-# Découverte, installation et gestion des scripts PowerShell avec PowerShellGet
+# <a name="powershell-script-discovery-install-and-management-with-powershellget"></a><span data-ttu-id="529b4-102">Découverte, installation et gestion des scripts PowerShell avec PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="529b4-102">PowerShell Script Discovery, Install and Management with PowerShellGet</span></span>
 
-La fonctionnalité de partage de script PowerShell a été ajoutée à PowerShellGet dans la version WMF 5.0 RTM.
-Les nouvelles applets de commande suivantes ont été ajoutées au module PowerShellGet pour prendre en charge les scripts PowerShell.
+<span data-ttu-id="529b4-103">La fonctionnalité de partage de script PowerShell a été ajoutée à PowerShellGet dans la version WMF 5.0 RTM.</span><span class="sxs-lookup"><span data-stu-id="529b4-103">PowerShell Script sharing feature got added to the PowerShellGet in the WMF 5.0 RTM release.</span></span>
+<span data-ttu-id="529b4-104">Les nouvelles applets de commande suivantes ont été ajoutées au module PowerShellGet pour prendre en charge les scripts PowerShell.</span><span class="sxs-lookup"><span data-stu-id="529b4-104">The following new cmdlets are added to the PowerShellGet module for supporting the PowerShell Scripts.</span></span>
 ```powershell
 PS C:\\windows\\system32&gt; Get-Command \*script\* -Module PowerShellGet | Sort-Object -Property Noun, Verb
 CommandType Name Version Source
@@ -40,7 +39,7 @@ Function Update-ScriptFileInfo 1.0.0.1 PowerShellGet
 -   **Test-ScriptFileInfo** cmdlet lets you to validate and get the script file metadata.
 ```
 
-Syntaxe des applets de commande de partage de script :
+<span data-ttu-id="529b4-105">Syntaxe des applets de commande de partage de script :</span><span class="sxs-lookup"><span data-stu-id="529b4-105">Syntax of script sharing Cmdlets:</span></span>
 ```powershell
 **New-ScriptFileInfo** \[-Path\] &lt;string&gt; -Description &lt;string&gt; \[-Version &lt;version&gt;\] \[-Author &lt;string&gt;\] \[-Guid &lt;guid&gt;\] \[-CompanyName &lt;string&gt;\] \[-Copyright &lt;string&gt;\] \[-RequiredModules &lt;Object\[\]&gt;\] \[-ExternalModuleDependencies &lt;string\[\]&gt;\] \[-RequiredScripts &lt;string\[\]&gt;\] \[-ExternalScriptDependencies &lt;string\[\]&gt;\] \[-Tags &lt;string\[\]&gt;\] \[-ProjectUri &lt;uri&gt;\] \[-LicenseUri &lt;uri&gt;\] \[-IconUri &lt;uri&gt;\] \[-ReleaseNotes &lt;string\[\]&gt;\] \[-PassThru\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[&lt;CommonParameters&gt;\]
 

@@ -10,10 +10,8 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="when-to-include-a-project-site-license-url-custom-icon" class="xliff"></a>
-## Quand inclure un site de projets, une URL de licence, une icône personnalisée ?
+## <a name="when-to-include-a-project-site-license-url-custom-icon"></a><span data-ttu-id="1dfce-103">Quand inclure un site de projets, une URL de licence, une icône personnalisée ?</span><span class="sxs-lookup"><span data-stu-id="1dfce-103">When to include a project site, license URL, custom icon?</span></span>
 
 
-<a id="what-is-minimum-powershell-version" class="xliff"></a>
-## Quelle est la version minimale de PowerShell ?
+## <a name="what-is-minimum-powershell-version"></a><span data-ttu-id="1dfce-104">Quelle est la version minimale de PowerShell ?</span><span class="sxs-lookup"><span data-stu-id="1dfce-104">What is minimum PowerShell version?</span></span>
 

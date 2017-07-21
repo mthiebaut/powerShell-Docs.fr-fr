@@ -10,12 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-configurations" class="xliff"></a>
-# Configurations DSC
+# <a name="dsc-configurations"></a><span data-ttu-id="713b1-103">Configurations DSC</span><span class="sxs-lookup"><span data-stu-id="713b1-103">DSC Configurations</span></span>
 
->S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
+><span data-ttu-id="713b1-104">S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="713b1-104">Applies To: Windows PowerShell 4.0, Windows PowerShell 5.0</span></span>
 
-Les configurations DSC sont des scripts PowerShell qui définissent un type spécial de fonction. Pour définir une configuration, utilisez le mot clé PowerShell **Configuration**.
+<span data-ttu-id="713b1-105">Les configurations DSC sont des scripts PowerShell qui définissent un type spécial de fonction.</span><span class="sxs-lookup"><span data-stu-id="713b1-105">DSC configurations are PowerShell scripts that define a special type of function.</span></span> <span data-ttu-id="713b1-106">Pour définir une configuration, utilisez le mot clé PowerShell **Configuration**.</span><span class="sxs-lookup"><span data-stu-id="713b1-106">To define a configuration, you use the PowerShell keyword **Configuration**.</span></span>
 
 ```powershell
 Configuration MyDscConfiguration {
@@ -35,18 +34,17 @@ Configuration MyDscConfiguration {
 MyDscConfiguration 
 ```
 
-Enregistrez le script comme fichier .ps1.
+<span data-ttu-id="713b1-107">Enregistrez le script comme fichier .ps1.</span><span class="sxs-lookup"><span data-stu-id="713b1-107">Save the script as a .ps1 file.</span></span>
 
-<a id="configuration-syntax" class="xliff"></a>
-## Syntaxe de configuration
+## <a name="configuration-syntax"></a><span data-ttu-id="713b1-108">Syntaxe de configuration</span><span class="sxs-lookup"><span data-stu-id="713b1-108">Configuration syntax</span></span>
 
-Un script de configuration comprend les éléments suivants :
+<span data-ttu-id="713b1-109">Un script de configuration comprend les éléments suivants :</span><span class="sxs-lookup"><span data-stu-id="713b1-109">A configuration script consists of the following parts:</span></span>
 
-- Le bloc **Configuration**. Il s’agit du bloc de script le plus externe. Pour le définir, utilisez le mot clé **Configuration**, puis attribuez-lui un nom. Ici, le nom de la configuration est « MyDscConfiguration ».
-- Un ou plusieurs blocs **Node**. Ils définissent les nœuds (ordinateurs ou machines virtuelles) que vous configurez. Dans la configuration ci-dessus, un bloc **Node** cible un ordinateur nommé « TEST-PC1 ».
-- Un ou plusieurs blocs de ressources. C’est là que la configuration définit les propriétés pour les ressources qu’elle configure. Ici, nous avons deux blocs de ressources qui appellent tous les deux la ressource « WindowsFeature ».
+- <span data-ttu-id="713b1-110">Le bloc **Configuration**.</span><span class="sxs-lookup"><span data-stu-id="713b1-110">The **Configuration** block.</span></span> <span data-ttu-id="713b1-111">Il s’agit du bloc de script le plus externe.</span><span class="sxs-lookup"><span data-stu-id="713b1-111">This is the outermost script block.</span></span> <span data-ttu-id="713b1-112">Pour le définir, utilisez le mot clé **Configuration**, puis attribuez-lui un nom.</span><span class="sxs-lookup"><span data-stu-id="713b1-112">You define it by using the **Configuration** keyword and providing a name.</span></span> <span data-ttu-id="713b1-113">Ici, le nom de la configuration est « MyDscConfiguration ».</span><span class="sxs-lookup"><span data-stu-id="713b1-113">In this case, the name of the configuration is "MyDscConfiguration".</span></span>
+- <span data-ttu-id="713b1-114">Un ou plusieurs blocs **Node**.</span><span class="sxs-lookup"><span data-stu-id="713b1-114">One or more **Node** blocks.</span></span> <span data-ttu-id="713b1-115">Ils définissent les nœuds (ordinateurs ou machines virtuelles) que vous configurez.</span><span class="sxs-lookup"><span data-stu-id="713b1-115">These define the nodes (computers or VMs) that you are configuring.</span></span> <span data-ttu-id="713b1-116">Dans la configuration ci-dessus, un bloc **Node** cible un ordinateur nommé « TEST-PC1 ».</span><span class="sxs-lookup"><span data-stu-id="713b1-116">In the above configuration, there is one **Node** block that targets a computer named "TEST-PC1".</span></span>
+- <span data-ttu-id="713b1-117">Un ou plusieurs blocs de ressources.</span><span class="sxs-lookup"><span data-stu-id="713b1-117">One or more resource blocks.</span></span> <span data-ttu-id="713b1-118">C’est là que la configuration définit les propriétés pour les ressources qu’elle configure.</span><span class="sxs-lookup"><span data-stu-id="713b1-118">This is where the configuration sets the properties for the resources that it is configuring.</span></span> <span data-ttu-id="713b1-119">Ici, nous avons deux blocs de ressources qui appellent tous les deux la ressource « WindowsFeature ».</span><span class="sxs-lookup"><span data-stu-id="713b1-119">In this case, there are two resource blocks, each of which call the "WindowsFeature" resource.</span></span>
 
-Dans un bloc **Configuration**, vous pouvez faire tout ce qu’il est possible de faire dans une fonction PowerShell. Par exemple, dans l’exemple précédent, si vous ne vouliez pas coder en dur le nom de l’ordinateur cible dans la configuration, vous auriez pu ajouter un paramètre pour le nom du nœud :
+<span data-ttu-id="713b1-120">Dans un bloc **Configuration**, vous pouvez faire tout ce qu’il est possible de faire dans une fonction PowerShell.</span><span class="sxs-lookup"><span data-stu-id="713b1-120">Within a **Configuration** block, you can do anything that you normally could in a PowerShell function.</span></span> <span data-ttu-id="713b1-121">Par exemple, dans l’exemple précédent, si vous ne vouliez pas coder en dur le nom de l’ordinateur cible dans la configuration, vous auriez pu ajouter un paramètre pour le nom du nœud :</span><span class="sxs-lookup"><span data-stu-id="713b1-121">For example, in the previous example, if you didn't want to hard code the name of the target computer in the configuration, you could add a parameter for the node name:</span></span>
 
 ```powershell
 Configuration MyDscConfiguration {
@@ -69,29 +67,28 @@ Configuration MyDscConfiguration {
 MyDscConfiguration 
 ```
 
-Dans cet exemple, vous spécifiez le nom du nœud en le passant comme paramètre **ComputerName** quand vous compilez la configuration. Par défaut, le nom est « localhost ».
+<span data-ttu-id="713b1-122">Dans cet exemple, vous spécifiez le nom du nœud en le passant comme paramètre **ComputerName** quand vous compilez la configuration.</span><span class="sxs-lookup"><span data-stu-id="713b1-122">In this example, you specify the name of the node by passing it as the **ComputerName** parameter when you compile the configuraton.</span></span> <span data-ttu-id="713b1-123">Par défaut, le nom est « localhost ».</span><span class="sxs-lookup"><span data-stu-id="713b1-123">The name defaults to "localhost".</span></span>
 
-<a id="compiling-the-configuration" class="xliff"></a>
-## Compilation de la configuration.
+## <a name="compiling-the-configuration"></a><span data-ttu-id="713b1-124">Compilation de la configuration.</span><span class="sxs-lookup"><span data-stu-id="713b1-124">Compiling the configuration</span></span>
 
-Avant de pouvoir promulguer une configuration, vous devez la compiler dans un document MOF. Pour cela, appelez la configuration comme pour une fonction PowerShell.  
-La dernière ligne de l’exemple, qui contient uniquement le nom de la configuration, appelle la configuration.
+<span data-ttu-id="713b1-125">Avant de pouvoir promulguer une configuration, vous devez la compiler dans un document MOF.</span><span class="sxs-lookup"><span data-stu-id="713b1-125">Before you can enact a configuration, you have to compile it into a MOF document.</span></span> <span data-ttu-id="713b1-126">Pour cela, appelez la configuration comme pour une fonction PowerShell.</span><span class="sxs-lookup"><span data-stu-id="713b1-126">You do this by calling the configuration like you would a PowerShell function.</span></span>  
+<span data-ttu-id="713b1-127">La dernière ligne de l’exemple, qui contient uniquement le nom de la configuration, appelle la configuration.</span><span class="sxs-lookup"><span data-stu-id="713b1-127">The last line of the example containing only the name of the configuration, calls the configuration.</span></span>
 
->**Remarque** : Pour appeler une configuration, la fonction doit se trouver dans la portée globale (comme pour toutes les fonctions PowerShell). 
->Vous avez le choix entre « dot sourcer » le script, exécuter le script de configuration avec la touche F5 ou cliquer sur le bouton **Exécuter le script** dans l’environnement ISE. 
->Pour « dot sourcer » le script, exécutez la commande `. .\myConfig.ps1`, où `myConfig.ps1` correspond au nom du fichier de script qui contient votre configuration.
+><span data-ttu-id="713b1-128">**Remarque** : Pour appeler une configuration, la fonction doit se trouver dans la portée globale (comme pour toutes les fonctions PowerShell).</span><span class="sxs-lookup"><span data-stu-id="713b1-128">**Note:** To call a configuration, the function must be in global scope (as with any other PowerShell function).</span></span> 
+><span data-ttu-id="713b1-129">Vous avez le choix entre « dot sourcer » le script, exécuter le script de configuration avec la touche F5 ou cliquer sur le bouton **Exécuter le script** dans l’environnement ISE.</span><span class="sxs-lookup"><span data-stu-id="713b1-129">You can make this happen either by "dot-sourcing" the script, or by running the configuration script by using F5 or clicking on the **Run Script** button in the ISE.</span></span> 
+><span data-ttu-id="713b1-130">Pour « dot sourcer » le script, exécutez la commande `. .\myConfig.ps1`, où `myConfig.ps1` correspond au nom du fichier de script qui contient votre configuration.</span><span class="sxs-lookup"><span data-stu-id="713b1-130">To dot-source the script, run the command `. .\myConfig.ps1` where `myConfig.ps1` is the name of the script file that contains your configuration.</span></span>
 
-Quand vous appelez la configuration, elle :
+<span data-ttu-id="713b1-131">Quand vous appelez la configuration, elle :</span><span class="sxs-lookup"><span data-stu-id="713b1-131">When you call the configuration, it:</span></span>
 
-- Résout toutes les variables. 
-- Crée un dossier dans le répertoire actif portant le même nom que la configuration.
-- Crée un fichier nommé _nom_nœud_.mof dans le nouveau répertoire, où _nom_nœud_ correspond au nom du nœud cible de la configuration. 
-    S’il existe plusieurs nœuds, un fichier MOF est créé pour chaque nœud.
+- <span data-ttu-id="713b1-132">Résout toutes les variables.</span><span class="sxs-lookup"><span data-stu-id="713b1-132">Resolves all variables</span></span> 
+- <span data-ttu-id="713b1-133">Crée un dossier dans le répertoire actif portant le même nom que la configuration.</span><span class="sxs-lookup"><span data-stu-id="713b1-133">Creates a folder in the current directory with the same name as the configuration.</span></span>
+- <span data-ttu-id="713b1-134">Crée un fichier nommé _nom_nœud_.mof dans le nouveau répertoire, où _nom_nœud_ correspond au nom du nœud cible de la configuration.</span><span class="sxs-lookup"><span data-stu-id="713b1-134">Creates a file named _NodeName_.mof in the new directory, where _NodeName_ is the name of the target node of the configuration.</span></span> 
+    <span data-ttu-id="713b1-135">S’il existe plusieurs nœuds, un fichier MOF est créé pour chaque nœud.</span><span class="sxs-lookup"><span data-stu-id="713b1-135">If there are more than one nodes, a MOF file will be created for each node.</span></span>
 
->**Remarque** : Le fichier MOF contient toutes les informations de configuration du nœud cible. Il est donc important de le sécuriser. 
->Pour plus d’informations, consultez [Sécurisation du fichier MOF](secureMOF.md).
+><span data-ttu-id="713b1-136">**Remarque** : Le fichier MOF contient toutes les informations de configuration du nœud cible.</span><span class="sxs-lookup"><span data-stu-id="713b1-136">**Note**: The MOF file contains all of the configuration information for the target node.</span></span> <span data-ttu-id="713b1-137">Il est donc important de le sécuriser.</span><span class="sxs-lookup"><span data-stu-id="713b1-137">Because of this, it’s important to keep it secure.</span></span> 
+><span data-ttu-id="713b1-138">Pour plus d’informations, consultez [Sécurisation du fichier MOF](secureMOF.md).</span><span class="sxs-lookup"><span data-stu-id="713b1-138">For more information, see [Securing the MOF file](secureMOF.md).</span></span>
 
-Après la compilation de la première configuration, vous obtenez la structure de dossiers suivante :
+<span data-ttu-id="713b1-139">Après la compilation de la première configuration, vous obtenez la structure de dossiers suivante :</span><span class="sxs-lookup"><span data-stu-id="713b1-139">Compiling the first configuration above results in the following folder structure:</span></span>
 
 ```powershell
 . .\MyDscConfiguration.ps1
@@ -105,7 +102,7 @@ Mode                LastWriteTime         Length Name
 -a----       10/23/2015   4:32 PM           2842 TEST-PC1.mof
 ```  
 
-Si la configuration prend un paramètre, comme dans le deuxième exemple, le paramètre doit être fourni au moment de la compilation. Voici à quoi cela ressemble :
+<span data-ttu-id="713b1-140">Si la configuration prend un paramètre, comme dans le deuxième exemple, le paramètre doit être fourni au moment de la compilation.</span><span class="sxs-lookup"><span data-stu-id="713b1-140">If the configuration takes a parameter, as in the second example, that has to be provided at compile time.</span></span> <span data-ttu-id="713b1-141">Voici à quoi cela ressemble :</span><span class="sxs-lookup"><span data-stu-id="713b1-141">Here's how that would look:</span></span>
 
 ```powershell
 . .\MyDscConfiguration.ps1
@@ -119,10 +116,9 @@ Mode                LastWriteTime         Length Name
 -a----       10/23/2015   4:32 PM           2842 MyTestNode.mof
 ```      
 
-<a id="using-dependson" class="xliff"></a>
-## Utilisation de DependsOn
+## <a name="using-dependson"></a><span data-ttu-id="713b1-142">Utilisation de DependsOn</span><span class="sxs-lookup"><span data-stu-id="713b1-142">Using DependsOn</span></span>
 
-**DependsOn** est un mot clé DSC très utile. En général (même si ce n’est pas toujours le cas), DSC applique les ressources dans l’ordre dans lequel elles figurent dans la configuration. Toutefois, **DependsOn** spécifie les ressources qui dépendent d’autres ressources, et le gestionnaire de configuration local permet de s’assurer qu’elles sont appliquées dans le bon ordre, quel que soit l’ordre dans lequel les instances de ressources sont définies. Par exemple, une configuration peut spécifier qu’une instance de la ressource **User** dépend de l’existence d’une instance **Group** :
+<span data-ttu-id="713b1-143">**DependsOn** est un mot clé DSC très utile.</span><span class="sxs-lookup"><span data-stu-id="713b1-143">A useful DSC keyword is **DependsOn**.</span></span> <span data-ttu-id="713b1-144">En général (même si ce n’est pas toujours le cas), DSC applique les ressources dans l’ordre dans lequel elles figurent dans la configuration.</span><span class="sxs-lookup"><span data-stu-id="713b1-144">Typically (though not necessarily always), DSC applies the resources in the order that they appear within the configuration.</span></span> <span data-ttu-id="713b1-145">Toutefois, **DependsOn** spécifie les ressources qui dépendent d’autres ressources, et le gestionnaire de configuration local permet de s’assurer qu’elles sont appliquées dans le bon ordre, quel que soit l’ordre dans lequel les instances de ressources sont définies.</span><span class="sxs-lookup"><span data-stu-id="713b1-145">However, **DependsOn** specifies which resources depend on other resources, and the LCM ensures that they are applied in the correct order, regardless of the order in which resource instances are defined.</span></span> <span data-ttu-id="713b1-146">Par exemple, une configuration peut spécifier qu’une instance de la ressource **User** dépend de l’existence d’une instance **Group** :</span><span class="sxs-lookup"><span data-stu-id="713b1-146">For example, a configuration might specify that an instance of the **User** resource depends on the existence of a **Group** instance:</span></span>
 
 ```powershell
 Configuration DependsOnExample {
@@ -144,19 +140,17 @@ Configuration DependsOnExample {
 DependsOnExample
 ```
 
-<a id="using-new-resources-in-your-configuration" class="xliff"></a>
-## Utilisation de nouvelles ressources dans la configuration
+## <a name="using-new-resources-in-your-configuration"></a><span data-ttu-id="713b1-147">Utilisation de nouvelles ressources dans la configuration</span><span class="sxs-lookup"><span data-stu-id="713b1-147">Using new resources in Your configuration</span></span>
 
-Si vous avez exécuté les exemples précédents, vous avez peut-être remarqué un avertissement disant que vous utilisez une ressource sans l’avoir importée explicitement.
-Actuellement, DSC est fourni avec 12 ressources contenues dans le module PSDesiredStateConfiguration. Les autres ressources des modules externes doivent être placées dans `$env:PSModulePath` pour être reconnues par le gestionnaire de configuration local. Une nouvelle applet de commande, [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), peut être utilisée pour déterminer quelles ressources sont installées sur le système et lesquelles peuvent être utilisées par le gestionnaire de configuration local. Une fois ces modules placés dans `$env:PSModulePath` et correctement reconnus par [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), ils doivent encore être chargés dans votre configuration. 
-**Import-DscResource** est un mot clé dynamique qui peut être reconnu uniquement au sein d’un bloc **Configuration** (ce n’est donc pas une applet de commande). 
-**Import-DscResource** accepte deux paramètres :
-- **ModuleName** est recommandé pour l’utilisation d’**Import-DscResource**. Il accepte le nom du module qui contient les ressources à importer (ainsi qu’un tableau de chaînes comprenant des noms de modules). 
-- **Name** correspond au nom de la ressource à importer. Il ne s’agit pas du nom convivial retourné comme « Name » par [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), mais du nom de classe utilisé lors de la définition du schéma de la ressource (retourné comme **ResourceType** par [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx)). 
+<span data-ttu-id="713b1-148">Si vous avez exécuté les exemples précédents, vous avez peut-être remarqué un avertissement disant que vous utilisez une ressource sans l’avoir importée explicitement.</span><span class="sxs-lookup"><span data-stu-id="713b1-148">If you ran the previous examples, you might have noticed that you were warned that you were using a resource without explicitly importing it.</span></span>
+<span data-ttu-id="713b1-149">Actuellement, DSC est fourni avec 12 ressources contenues dans le module PSDesiredStateConfiguration.</span><span class="sxs-lookup"><span data-stu-id="713b1-149">Today, DSC ships with 12 resources as part of the PSDesiredStateConfiguration module.</span></span> <span data-ttu-id="713b1-150">Les autres ressources des modules externes doivent être placées dans `$env:PSModulePath` pour être reconnues par le gestionnaire de configuration local.</span><span class="sxs-lookup"><span data-stu-id="713b1-150">Other resources in external modules must be placed in `$env:PSModulePath` in order to be recognized by the LCM.</span></span> <span data-ttu-id="713b1-151">Une nouvelle applet de commande, [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), peut être utilisée pour déterminer quelles ressources sont installées sur le système et lesquelles peuvent être utilisées par le gestionnaire de configuration local.</span><span class="sxs-lookup"><span data-stu-id="713b1-151">A new cmdlet, [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), can be used to determine what resources are installed on the system and available for use by the LCM.</span></span> <span data-ttu-id="713b1-152">Une fois ces modules placés dans `$env:PSModulePath` et correctement reconnus par [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), ils doivent encore être chargés dans votre configuration.</span><span class="sxs-lookup"><span data-stu-id="713b1-152">Once these modules have been placed in `$env:PSModulePath` and are properly recognized by [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), they still need to be loaded within your configuration.</span></span> 
+<span data-ttu-id="713b1-153">**Import-DscResource** est un mot clé dynamique qui peut être reconnu uniquement au sein d’un bloc **Configuration** (ce n’est donc pas une applet de commande).</span><span class="sxs-lookup"><span data-stu-id="713b1-153">**Import-DscResource** is a dynamic keyword that can only be recognized within a **Configuration** block (i.e. it is not a cmdlet).</span></span> 
+<span data-ttu-id="713b1-154">**Import-DscResource** accepte deux paramètres :</span><span class="sxs-lookup"><span data-stu-id="713b1-154">**Import-DscResource** supports two parameters:</span></span>
+- <span data-ttu-id="713b1-155">**ModuleName** est recommandé pour l’utilisation d’**Import-DscResource**.</span><span class="sxs-lookup"><span data-stu-id="713b1-155">**ModuleName** is the recommended way of using **Import-DscResource**.</span></span> <span data-ttu-id="713b1-156">Il accepte le nom du module qui contient les ressources à importer (ainsi qu’un tableau de chaînes comprenant des noms de modules).</span><span class="sxs-lookup"><span data-stu-id="713b1-156">It accepts the name of the module that contains the resources to be imported (as well as a string array of module names).</span></span> 
+- <span data-ttu-id="713b1-157">**Name** correspond au nom de la ressource à importer.</span><span class="sxs-lookup"><span data-stu-id="713b1-157">**Name** is the name of the resource to import.</span></span> <span data-ttu-id="713b1-158">Il ne s’agit pas du nom convivial retourné comme « Name » par [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), mais du nom de classe utilisé lors de la définition du schéma de la ressource (retourné comme **ResourceType** par [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx)).</span><span class="sxs-lookup"><span data-stu-id="713b1-158">This is not the friendly name returned as "Name" by [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), but the class name used when defining the resource schema (returned as **ResourceType** by [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx)).</span></span> 
 
-<a id="see-also" class="xliff"></a>
-## Voir aussi
-* [Présentation de la configuration de l’état souhaité de Windows PowerShell](overview.md)
-* [Ressources DSC](resources.md)
-* [Configuration du Gestionnaire de configuration local](metaConfig.md)
+## <a name="see-also"></a><span data-ttu-id="713b1-159">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="713b1-159">See Also</span></span>
+* [<span data-ttu-id="713b1-160">Présentation de la configuration de l’état souhaité de Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="713b1-160">Windows PowerShell Desired State Configuration Overview</span></span>](overview.md)
+* [<span data-ttu-id="713b1-161">Ressources DSC</span><span class="sxs-lookup"><span data-stu-id="713b1-161">DSC Resources</span></span>](resources.md)
+* [<span data-ttu-id="713b1-162">Configuration du Gestionnaire de configuration local</span><span class="sxs-lookup"><span data-stu-id="713b1-162">Configuring The Local Configuration Manager</span></span>](metaConfig.md)
 

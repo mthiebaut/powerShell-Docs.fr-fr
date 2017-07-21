@@ -10,49 +10,42 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="disabledebugconfiguration-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Méthode DisableDebugConfiguration de la classe MSFT_DSCLocalConfigurationManager
+# <a name="disabledebugconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a><span data-ttu-id="1926d-103">Méthode DisableDebugConfiguration de la classe MSFT_DSCLocalConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="1926d-103">DisableDebugConfiguration method of the MSFT_DSCLocalConfigurationManager class</span></span>
 
-Désactive le débogage des ressources DSC.
+<span data-ttu-id="1926d-104">Désactive le débogage des ressources DSC.</span><span class="sxs-lookup"><span data-stu-id="1926d-104">Disables DSC resource debugging.</span></span>
 
-<a id="syntax" class="xliff"></a>
-Syntaxe
+<a name="syntax"></a><span data-ttu-id="1926d-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="1926d-105">Syntax</span></span>
 ------
 
 ```mof
 uint32 DisableDebugConfiguration();
 ```
 
-<a id="parameters" class="xliff"></a>
-Paramètres
+<a name="parameters"></a><span data-ttu-id="1926d-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="1926d-106">Parameters</span></span>
 ----------
 
-Cette méthode n’a aucun paramètre.
+<span data-ttu-id="1926d-107">Cette méthode n’a aucun paramètre.</span><span class="sxs-lookup"><span data-stu-id="1926d-107">This method has no parameters.</span></span>
 
-<a id="return-value" class="xliff"></a>
-## Valeur renvoyée
+## <a name="return-value"></a><span data-ttu-id="1926d-108">Valeur renvoyée</span><span class="sxs-lookup"><span data-stu-id="1926d-108">Return value</span></span>
 ------------
 
-Retourne zéro en cas de réussite ; sinon, retourne un code d’erreur.
+<span data-ttu-id="1926d-109">Retourne zéro en cas de réussite ; sinon, retourne un code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="1926d-109">Returns zero on success; otherwise returns an error code.</span></span>
 
-<a id="remarks" class="xliff"></a>
-## Remarques
+## <a name="remarks"></a><span data-ttu-id="1926d-110">Remarques</span><span class="sxs-lookup"><span data-stu-id="1926d-110">Remarks</span></span>
 
-Il s’agit d’une méthode statique.
+<span data-ttu-id="1926d-111">Il s’agit d’une méthode statique.</span><span class="sxs-lookup"><span data-stu-id="1926d-111">This is a static method.</span></span>
 
-<a id="requirements" class="xliff"></a>
-## Spécifications
+## <a name="requirements"></a><span data-ttu-id="1926d-112">Spécifications</span><span class="sxs-lookup"><span data-stu-id="1926d-112">Requirements</span></span>
 ------------
->**MOF :** DscCore.mof
+><span data-ttu-id="1926d-113">**MOF :** DscCore.mof</span><span class="sxs-lookup"><span data-stu-id="1926d-113">**MOF:** DscCore.mof</span></span>
 
->**Espace de noms** : Root\Microsoft\Windows\DesiredStateConfiguration
-
-
-<a id="see-also" class="xliff"></a>
-## Voir aussi
+><span data-ttu-id="1926d-114">**Espace de noms** : Root\Microsoft\Windows\DesiredStateConfiguration</span><span class="sxs-lookup"><span data-stu-id="1926d-114">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span></span>
 
 
-[**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
+## <a name="see-also"></a><span data-ttu-id="1926d-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1926d-115">See also</span></span>
+
+
+[<span data-ttu-id="1926d-116">**MSFT_DSCLocalConfigurationManager**</span><span class="sxs-lookup"><span data-stu-id="1926d-116">**MSFT_DSCLocalConfigurationManager**</span></span>](msft-dsclocalconfigurationmanager.md)
 
  
 

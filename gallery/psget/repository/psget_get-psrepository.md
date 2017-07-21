@@ -10,31 +10,26 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="get-psrepository" class="xliff"></a>
-# Get-PSRepository
+# <a name="get-psrepository"></a><span data-ttu-id="73ab8-103">Get-PSRepository</span><span class="sxs-lookup"><span data-stu-id="73ab8-103">Get-PSRepository</span></span>
 
-Obtient les référentiels enregistrés sur un ordinateur.
+<span data-ttu-id="73ab8-104">Obtient les référentiels enregistrés sur un ordinateur.</span><span class="sxs-lookup"><span data-stu-id="73ab8-104">Gets the registered repositories on a computer.</span></span>
 
-<a id="description" class="xliff"></a>
-## Description
+## <a name="description"></a><span data-ttu-id="73ab8-105">Description</span><span class="sxs-lookup"><span data-stu-id="73ab8-105">Description</span></span>
 
-L’applet de commande Get-PSRepository obtient les référentiels de modules PowerShell qui sont enregistrés pour l’utilisateur actuel sur un ordinateur.
+<span data-ttu-id="73ab8-106">L’applet de commande Get-PSRepository obtient les référentiels de modules PowerShell qui sont enregistrés pour l’utilisateur actuel sur un ordinateur.</span><span class="sxs-lookup"><span data-stu-id="73ab8-106">The Get-PSRepository cmdlet gets PowerShell module repositories that are registered for the current user on a computer.</span></span>
 
-Pour chaque référentiel enregistré, Get-PSRepository retourne un objet PSRepository qui peut éventuellement être transmis à Unregister-PSRepository pour annuler l’enregistrement d’un référentiel enregistré.
+<span data-ttu-id="73ab8-107">Pour chaque référentiel enregistré, Get-PSRepository retourne un objet PSRepository qui peut éventuellement être transmis à Unregister-PSRepository pour annuler l’enregistrement d’un référentiel enregistré.</span><span class="sxs-lookup"><span data-stu-id="73ab8-107">For each registered repository, Get-PSRepository returns a PSRepository object which can optionally be piped to Unregister-PSRepository for unregistering a registered repository.</span></span>
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a><span data-ttu-id="73ab8-108">Syntaxe de l’applet de commande</span><span class="sxs-lookup"><span data-stu-id="73ab8-108">Cmdlet syntax</span></span>
 ```powershell
 Get-Command -Name Get-PSRepository -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a><span data-ttu-id="73ab8-109">Référence de l’aide en ligne de l’applet de commande</span><span class="sxs-lookup"><span data-stu-id="73ab8-109">Cmdlet online help reference</span></span>
 
-[Get-PSRepository](http://go.microsoft.com/fwlink/?LinkID=517127)
+[<span data-ttu-id="73ab8-110">Get-PSRepository</span><span class="sxs-lookup"><span data-stu-id="73ab8-110">Get-PSRepository</span></span>](http://go.microsoft.com/fwlink/?LinkID=517127)
 
-<a id="example-commands" class="xliff"></a>
-## Exemples de commandes
+## <a name="example-commands"></a><span data-ttu-id="73ab8-111">Exemples de commandes</span><span class="sxs-lookup"><span data-stu-id="73ab8-111">Example commands</span></span>
 
 ```powershell
 

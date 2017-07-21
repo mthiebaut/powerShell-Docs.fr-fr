@@ -10,41 +10,34 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="new-scriptfileinfo" class="xliff"></a>
-# New-ScriptFileInfo
+# <a name="new-scriptfileinfo"></a><span data-ttu-id="d60ab-103">New-ScriptFileInfo</span><span class="sxs-lookup"><span data-stu-id="d60ab-103">New-ScriptFileInfo</span></span>
 
-Crée un fichier de script avec des métadonnées.
+<span data-ttu-id="d60ab-104">Crée un fichier de script avec des métadonnées.</span><span class="sxs-lookup"><span data-stu-id="d60ab-104">Creates a script file with metadata.</span></span>
 
-<a id="description" class="xliff"></a>
-## Description
+## <a name="description"></a><span data-ttu-id="d60ab-105">Description</span><span class="sxs-lookup"><span data-stu-id="d60ab-105">Description</span></span>
 
-L’applet de commande New-ScriptFileInfo crée un fichier de script PowerShell, dont des métadonnées sur le script.
+<span data-ttu-id="d60ab-106">L’applet de commande New-ScriptFileInfo crée un fichier de script PowerShell, dont des métadonnées sur le script.</span><span class="sxs-lookup"><span data-stu-id="d60ab-106">The New-ScriptFileInfo cmdlet creates a PowerShell script file, including metadata about the script.</span></span>
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a><span data-ttu-id="d60ab-107">Syntaxe de l’applet de commande</span><span class="sxs-lookup"><span data-stu-id="d60ab-107">Cmdlet syntax</span></span>
 
 ```powershell
 Get-Command -Name New-ScriptFileInfo -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a><span data-ttu-id="d60ab-108">Référence de l’aide en ligne de l’applet de commande</span><span class="sxs-lookup"><span data-stu-id="d60ab-108">Cmdlet online help reference</span></span>
 
-[New-ScriptFileInfo](http://go.microsoft.com/fwlink/?LinkId=619792)
+[<span data-ttu-id="d60ab-109">New-ScriptFileInfo</span><span class="sxs-lookup"><span data-stu-id="d60ab-109">New-ScriptFileInfo</span></span>](http://go.microsoft.com/fwlink/?LinkId=619792)
 
-<a id="example-commands" class="xliff"></a>
-## Exemples de commandes
+## <a name="example-commands"></a><span data-ttu-id="d60ab-110">Exemples de commandes</span><span class="sxs-lookup"><span data-stu-id="d60ab-110">Example commands</span></span>
 
-<a id="passthru-parameter" class="xliff"></a>
-### Paramètre PassThru
+### <a name="passthru-parameter"></a><span data-ttu-id="d60ab-111">Paramètre PassThru</span><span class="sxs-lookup"><span data-stu-id="d60ab-111">PassThru parameter</span></span>
 
 ```powershell
 New-ScriptFileInfo -Description "Script file description." -PassThru
 ```
 
-<a id="new-scriptfileinfo-cmdlet" class="xliff"></a>
-### Applet de commande New-ScriptFileInfo
-L’applet de commande New-ScriptFileInfo permet de créer un fichier de script avec des métadonnées telles que version, GUID, auteur, description, et ainsi de suite. 
+### <a name="new-scriptfileinfo-cmdlet"></a><span data-ttu-id="d60ab-112">Applet de commande New-ScriptFileInfo</span><span class="sxs-lookup"><span data-stu-id="d60ab-112">New-ScriptFileInfo cmdlet</span></span>
+<span data-ttu-id="d60ab-113">L’applet de commande New-ScriptFileInfo permet de créer un fichier de script avec des métadonnées telles que version, GUID, auteur, description, et ainsi de suite.</span><span class="sxs-lookup"><span data-stu-id="d60ab-113">New-ScriptFileInfo cmdlet lets you to create a new script file with metadata like Version, Guid, Author, and Description, etc.</span></span> 
 
 ```powershell
 # Create a new script file with minimum required metadata values

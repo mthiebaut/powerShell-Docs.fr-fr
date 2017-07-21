@@ -10,29 +10,24 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="uninstall-script" class="xliff"></a>
-# Uninstall-Script
+# <a name="uninstall-script"></a><span data-ttu-id="a3686-103">Uninstall-Script</span><span class="sxs-lookup"><span data-stu-id="a3686-103">Uninstall-Script</span></span>
 
-Désinstalle un fichier de script qui a été installé à l’aide de PowerShellGet.
+<span data-ttu-id="a3686-104">Désinstalle un fichier de script qui a été installé à l’aide de PowerShellGet.</span><span class="sxs-lookup"><span data-stu-id="a3686-104">Uninstalls a script file which was installed using PowerShellGet.</span></span>
 
-<a id="description" class="xliff"></a>
-## Description
+## <a name="description"></a><span data-ttu-id="a3686-105">Description</span><span class="sxs-lookup"><span data-stu-id="a3686-105">Description</span></span>
 
-L’applet de commande Uninstall-Script désinstalle les fichiers de script spécifiés qui ont été installés à partir du référentiel en ligne.
+<span data-ttu-id="a3686-106">L’applet de commande Uninstall-Script désinstalle les fichiers de script spécifiés qui ont été installés à partir du référentiel en ligne.</span><span class="sxs-lookup"><span data-stu-id="a3686-106">The Uninstall-Script cmdlet uninstalls the specified script files which were installed from the online repository.</span></span>
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a><span data-ttu-id="a3686-107">Syntaxe de l’applet de commande</span><span class="sxs-lookup"><span data-stu-id="a3686-107">Cmdlet syntax</span></span>
 
 ```powershell
 Get-Command -Name Uninstall-Script -Module PowerShellGet -Syntax
 ```
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a><span data-ttu-id="a3686-108">Référence de l’aide en ligne de l’applet de commande</span><span class="sxs-lookup"><span data-stu-id="a3686-108">Cmdlet online help reference</span></span>
 
-[Uninstall-Script](http://go.microsoft.com/fwlink/?LinkId=619789)
+[<span data-ttu-id="a3686-109">Uninstall-Script</span><span class="sxs-lookup"><span data-stu-id="a3686-109">Uninstall-Script</span></span>](http://go.microsoft.com/fwlink/?LinkId=619789)
 
-<a id="example-commands" class="xliff"></a>
-## Exemples de commandes
+## <a name="example-commands"></a><span data-ttu-id="a3686-110">Exemples de commandes</span><span class="sxs-lookup"><span data-stu-id="a3686-110">Example commands</span></span>
 
 ```powershell
 Get-InstalledScript | Uninstall-Script -WhatIf

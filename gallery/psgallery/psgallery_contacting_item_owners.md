@@ -10,11 +10,10 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="contacting-item-owners" class="xliff"></a>
-# Établissement d’un contact avec les propriétaires d’éléments
+# <a name="contacting-item-owners"></a><span data-ttu-id="a22d5-103">Établissement d’un contact avec les propriétaires d’éléments</span><span class="sxs-lookup"><span data-stu-id="a22d5-103">Contacting Item Owners</span></span>
 
-Pour contacter le propriétaire d’un élément particulier, accédez à la page de détail de l’élément.
-Il existe un lien de contact des propriétaires dans la barre de menus de gauche.
-Cliquez sur ce lien pour accéder à une nouvelle page.
-Vous pouvez envoyer un message à partir de cette page.
+<span data-ttu-id="a22d5-104">Pour contacter le propriétaire d’un élément particulier, accédez à la page de détail de l’élément.</span><span class="sxs-lookup"><span data-stu-id="a22d5-104">To contact owner of a particular item, navigate to the item detail page.</span></span>
+<span data-ttu-id="a22d5-105">Il existe un lien de contact des propriétaires dans la barre de menus de gauche.</span><span class="sxs-lookup"><span data-stu-id="a22d5-105">There is a contact Owners link in the left menu bar.</span></span>
+<span data-ttu-id="a22d5-106">Cliquez sur ce lien pour accéder à une nouvelle page.</span><span class="sxs-lookup"><span data-stu-id="a22d5-106">Clicking on the link will take you to a new page.</span></span>
+<span data-ttu-id="a22d5-107">Vous pouvez envoyer un message à partir de cette page.</span><span class="sxs-lookup"><span data-stu-id="a22d5-107">You can send a message from here.</span></span>
 

@@ -10,33 +10,28 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="update-scriptfileinfo" class="xliff"></a>
-# Update-ScriptFileInfo
+# <a name="update-scriptfileinfo"></a><span data-ttu-id="b42f6-103">Update-ScriptFileInfo</span><span class="sxs-lookup"><span data-stu-id="b42f6-103">Update-ScriptFileInfo</span></span>
 
-L’applet de commande Update-ScriptFileInfo permet de mettre à jour les métadonnées existantes du fichier de script.
+<span data-ttu-id="b42f6-104">L’applet de commande Update-ScriptFileInfo permet de mettre à jour les métadonnées existantes du fichier de script.</span><span class="sxs-lookup"><span data-stu-id="b42f6-104">Update-ScriptFileInfo cmdlet lets you to update the existing script file metadata.</span></span>
 
-<a id="description" class="xliff"></a>
-## Description
+## <a name="description"></a><span data-ttu-id="b42f6-105">Description</span><span class="sxs-lookup"><span data-stu-id="b42f6-105">Description</span></span>
 
-L’applet de commande Update-ScriptFileInfo met à jour les informations pour un script.
-- L’applet de commande Update-ScriptFileInfo ne met à jour les métadonnées d’un fichier de script que s’il a été créé à l’aide de l’applet de commande New-ScriptFileInfo ou avec un commentaire PSScriptInfo valide.
-- Vous pouvez aussi ajouter les informations de fichier de script aux fichiers de script existants qui n’ont pas été créés à l’aide de l’applet de commande New-ScriptFileInfo.
-- Si –Force est spécifié, essayez d’ajouter les métadonnées au fichier de script existant qui n’a pas été créé à l’aide de l’applet de commande New-ScriptFileInfo.
-- En cas d’échec de Test-ScriptFileInfo avec les erreurs d’analyse, après avoir ajouté les métadonnées de script au fichier existant, une erreur est générée avec un message de type « Impossible d’ajouter les métadonnées au fichier existant ; vous pouvez utiliser l’applet de commande new-scriptfileinfo pour ajouter les métadonnées au fichier de script existant qui n’a pas été créé à l’aide de l’applet de commande New-ScriptFileInfo. ».
+<span data-ttu-id="b42f6-106">L’applet de commande Update-ScriptFileInfo met à jour les informations pour un script.</span><span class="sxs-lookup"><span data-stu-id="b42f6-106">The Update-ScriptFileInfo cmdlet updates information for a script.</span></span>
+- <span data-ttu-id="b42f6-107">L’applet de commande Update-ScriptFileInfo ne met à jour les métadonnées d’un fichier de script que s’il a été créé à l’aide de l’applet de commande New-ScriptFileInfo ou avec un commentaire PSScriptInfo valide.</span><span class="sxs-lookup"><span data-stu-id="b42f6-107">Update-ScriptFileInfo cmdlet updates the metadata of a script file only if it was created using New-ScriptFileInfo cmdlet or with valid PSScriptInfo comment.</span></span>
+- <span data-ttu-id="b42f6-108">Vous pouvez aussi ajouter les informations de fichier de script aux fichiers de script existants qui n’ont pas été créés à l’aide de l’applet de commande New-ScriptFileInfo.</span><span class="sxs-lookup"><span data-stu-id="b42f6-108">Also allows you to add the script file information to the existing script files which were not created using New-ScriptFileInfo cmdlet.</span></span>
+- <span data-ttu-id="b42f6-109">Si –Force est spécifié, essayez d’ajouter les métadonnées au fichier de script existant qui n’a pas été créé à l’aide de l’applet de commande New-ScriptFileInfo.</span><span class="sxs-lookup"><span data-stu-id="b42f6-109">If –Force is specified, try to add the metadata to the existing script file which was not created using New-ScriptFileInfo cmdlet.</span></span>
+- <span data-ttu-id="b42f6-110">En cas d’échec de Test-ScriptFileInfo avec les erreurs d’analyse, après avoir ajouté les métadonnées de script au fichier existant, une erreur est générée avec un message de type « Impossible d’ajouter les métadonnées au fichier existant ; vous pouvez utiliser l’applet de commande new-scriptfileinfo pour ajouter les métadonnées au fichier de script existant qui n’a pas été créé à l’aide de l’applet de commande New-ScriptFileInfo. ».</span><span class="sxs-lookup"><span data-stu-id="b42f6-110">If Test-ScriptFileInfo fails with the parsing errors, after prepending the script metadata to the existing file, an error will be thrown saying something like "unable to add the metadata to the existing file, you can use the new-scriptfileinfo cmdlet to add the metadata to the existing script file which was not created using New-ScriptFileInfo cmdlet."</span></span>
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a><span data-ttu-id="b42f6-111">Syntaxe de l’applet de commande</span><span class="sxs-lookup"><span data-stu-id="b42f6-111">Cmdlet syntax</span></span>
 
 ```powershell
 Get-Command -Name Update-ScriptFileInfo -Module PowerShellGet -Syntax
 ```
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a><span data-ttu-id="b42f6-112">Référence de l’aide en ligne de l’applet de commande</span><span class="sxs-lookup"><span data-stu-id="b42f6-112">Cmdlet online help reference</span></span>
 
-[Update-Script](http://go.microsoft.com/fwlink/?LinkId=619793)
+[<span data-ttu-id="b42f6-113">Update-Script</span><span class="sxs-lookup"><span data-stu-id="b42f6-113">Update-Script</span></span>](http://go.microsoft.com/fwlink/?LinkId=619793)
 
-<a id="example-commands" class="xliff"></a>
-## Exemples de commandes
+## <a name="example-commands"></a><span data-ttu-id="b42f6-114">Exemples de commandes</span><span class="sxs-lookup"><span data-stu-id="b42f6-114">Example commands</span></span>
 
 ```powershell
 # Use Update-ScriptFileInfo cmdlet to update the script metadata
@@ -50,8 +45,7 @@ Version Name Author Description
 ```
 
 
-<a id="adding-the-script-metadata-to-the-existing-script-file" class="xliff"></a>
-### Ajout des métadonnées de script au fichier de script existant
+### <a name="adding-the-script-metadata-to-the-existing-script-file"></a><span data-ttu-id="b42f6-115">Ajout des métadonnées de script au fichier de script existant</span><span class="sxs-lookup"><span data-stu-id="b42f6-115">Adding the script metadata to the existing script file</span></span>
 
 ```powershell
 PS C:\WINDOWS\system32> New-ScriptFileInfo -Description "Script file description." -PassThru

@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-for-linux-nxgroup-resource" class="xliff"></a>
-# Ressource nxGroup dans DSC pour Linux
+# <a name="dsc-for-linux-nxgroup-resource"></a><span data-ttu-id="84ccc-103">Ressource nxGroup dans DSC pour Linux</span><span class="sxs-lookup"><span data-stu-id="84ccc-103">DSC for Linux nxGroup Resource</span></span>
 
-La ressource **nxGroup** dans DSC (Desired State Configuration) PowerShell fournit un mécanisme permettant de gérer des groupes locaux sur un nœud Linux.
+<span data-ttu-id="84ccc-104">La ressource **nxGroup** dans DSC (Desired State Configuration) PowerShell fournit un mécanisme permettant de gérer des groupes locaux sur un nœud Linux.</span><span class="sxs-lookup"><span data-stu-id="84ccc-104">The **nxGroup** resource in PowerShell Desired State Configuration (DSC) provides a mechanism to manage local groups on a Linux node.</span></span>
 
-<a id="syntax" class="xliff"></a>
-## Syntaxe
+## <a name="syntax"></a><span data-ttu-id="84ccc-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="84ccc-105">Syntax</span></span>
 
 ```powershell
 nxGroup <string> #ResourceName
@@ -31,23 +29,21 @@ nxGroup <string> #ResourceName
 
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriétés
+## <a name="properties"></a><span data-ttu-id="84ccc-106">Propriétés</span><span class="sxs-lookup"><span data-stu-id="84ccc-106">Properties</span></span>
 
-|  Propriété |  Description | 
+|  <span data-ttu-id="84ccc-107">Propriété</span><span class="sxs-lookup"><span data-stu-id="84ccc-107">Property</span></span> |  <span data-ttu-id="84ccc-108">Description</span><span class="sxs-lookup"><span data-stu-id="84ccc-108">Description</span></span> | 
 |---|---|
-| GroupName| Spécifie le nom du groupe pour lequel vous souhaitez garantir un état spécifique.| 
-| Ensure| Détermine si l’existence du groupe doit être vérifiée. Définissez cette propriété sur « Present » pour vous assurer que le groupe existe. Définissez la propriété sur « Absent » pour vous assurer que le groupe n’existe pas. La valeur par défaut est « Present ».| 
-| Members| Spécifie les membres qui constituent le groupe.| 
-| MembersToInclude| Spécifie les utilisateurs qui doivent faire partie du groupe.| 
-| MembersToExclude| Spécifie les utilisateurs qui ne doivent pas faire partie du groupe.| 
-| PreferredGroupID| Définit l’ID de groupe à la valeur fournie, si possible. Si l’ID de groupe est déjà utilisé, l’ID de groupe disponible suivant est utilisé.| 
-| DependsOn | Indique que la configuration d’une autre ressource doit être effectuée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’**ID** **ResourceName** et le type **ResourceType**, utilisez la syntaxe suivante pour cette propriété : `DependsOn = "[ResourceType]ResourceName"`.| 
+| <span data-ttu-id="84ccc-109">GroupName</span><span class="sxs-lookup"><span data-stu-id="84ccc-109">GroupName</span></span>| <span data-ttu-id="84ccc-110">Spécifie le nom du groupe pour lequel vous souhaitez garantir un état spécifique.</span><span class="sxs-lookup"><span data-stu-id="84ccc-110">Specifies the name of the group for which you want to ensure a specific state.</span></span>| 
+| <span data-ttu-id="84ccc-111">Ensure</span><span class="sxs-lookup"><span data-stu-id="84ccc-111">Ensure</span></span>| <span data-ttu-id="84ccc-112">Détermine si l’existence du groupe doit être vérifiée.</span><span class="sxs-lookup"><span data-stu-id="84ccc-112">Determines whether to check if the group exists.</span></span> <span data-ttu-id="84ccc-113">Définissez cette propriété sur « Present » pour vous assurer que le groupe existe.</span><span class="sxs-lookup"><span data-stu-id="84ccc-113">Set this property to "Present" to ensure the group exists.</span></span> <span data-ttu-id="84ccc-114">Définissez la propriété sur « Absent » pour vous assurer que le groupe n’existe pas.</span><span class="sxs-lookup"><span data-stu-id="84ccc-114">Set it to "Absent" to ensure the group does not exist.</span></span> <span data-ttu-id="84ccc-115">La valeur par défaut est « Present ».</span><span class="sxs-lookup"><span data-stu-id="84ccc-115">The default value is "Present".</span></span>| 
+| <span data-ttu-id="84ccc-116">Members</span><span class="sxs-lookup"><span data-stu-id="84ccc-116">Members</span></span>| <span data-ttu-id="84ccc-117">Spécifie les membres qui constituent le groupe.</span><span class="sxs-lookup"><span data-stu-id="84ccc-117">Specifies the members that form the group.</span></span>| 
+| <span data-ttu-id="84ccc-118">MembersToInclude</span><span class="sxs-lookup"><span data-stu-id="84ccc-118">MembersToInclude</span></span>| <span data-ttu-id="84ccc-119">Spécifie les utilisateurs qui doivent faire partie du groupe.</span><span class="sxs-lookup"><span data-stu-id="84ccc-119">Specifies the users who you want to ensure are members of the group.</span></span>| 
+| <span data-ttu-id="84ccc-120">MembersToExclude</span><span class="sxs-lookup"><span data-stu-id="84ccc-120">MembersToExclude</span></span>| <span data-ttu-id="84ccc-121">Spécifie les utilisateurs qui ne doivent pas faire partie du groupe.</span><span class="sxs-lookup"><span data-stu-id="84ccc-121">Specifies the users who you want to ensure are not members of the group.</span></span>| 
+| <span data-ttu-id="84ccc-122">PreferredGroupID</span><span class="sxs-lookup"><span data-stu-id="84ccc-122">PreferredGroupID</span></span>| <span data-ttu-id="84ccc-123">Définit l’ID de groupe à la valeur fournie, si possible.</span><span class="sxs-lookup"><span data-stu-id="84ccc-123">Sets the group id to the provided value if possible.</span></span> <span data-ttu-id="84ccc-124">Si l’ID de groupe est déjà utilisé, l’ID de groupe disponible suivant est utilisé.</span><span class="sxs-lookup"><span data-stu-id="84ccc-124">If the group id is currently in use, the next available group id is used.</span></span>| 
+| <span data-ttu-id="84ccc-125">DependsOn</span><span class="sxs-lookup"><span data-stu-id="84ccc-125">DependsOn</span></span> | <span data-ttu-id="84ccc-126">Indique que la configuration d’une autre ressource doit être effectuée avant celle de cette ressource.</span><span class="sxs-lookup"><span data-stu-id="84ccc-126">Indicates that the configuration of another resource must run before this resource is configured.</span></span> <span data-ttu-id="84ccc-127">Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’**ID** **ResourceName** et le type **ResourceType**, utilisez la syntaxe suivante pour cette propriété : `DependsOn = "[ResourceType]ResourceName"`.</span><span class="sxs-lookup"><span data-stu-id="84ccc-127">For example, if the **ID** of the resource configuration script block that you want to run first is **ResourceName** and its type is **ResourceType**, the syntax for using this property is `DependsOn = "[ResourceType]ResourceName"`.</span></span>| 
 
-<a id="example" class="xliff"></a>
-## Exemple
+## <a name="example"></a><span data-ttu-id="84ccc-128">Exemple</span><span class="sxs-lookup"><span data-stu-id="84ccc-128">Example</span></span>
 
-L’exemple suivant vérifie que l’utilisateur « monuser » existe et qu’il est membre du groupe « DBusers ».
+<span data-ttu-id="84ccc-129">L’exemple suivant vérifie que l’utilisateur « monuser » existe et qu’il est membre du groupe « DBusers ».</span><span class="sxs-lookup"><span data-stu-id="84ccc-129">The following example ensures that the user “monuser” exists and is a member of the group "DBusers".</span></span>
 
 ```
 Import-DSCResource -Module nx 

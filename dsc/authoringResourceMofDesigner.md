@@ -10,28 +10,26 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/29/2017
 ---
-<a id="using-the-resource-designer-tool" class="xliff"></a>
-# Utilisation du Concepteur de ressources
+# <a name="using-the-resource-designer-tool"></a><span data-ttu-id="9db20-103">Utilisation du Concepteur de ressources</span><span class="sxs-lookup"><span data-stu-id="9db20-103">Using the Resource Designer tool</span></span>
 
-> S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
+> <span data-ttu-id="9db20-104">S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="9db20-104">Applies To: Windows PowerShell 4.0, Windows PowerShell 5.0</span></span>
 
-L’outil Concepteur de ressources est un ensemble d’applets de commande exposées par le module **xDscResourceDesigner** qui facilite la création de ressources DSC Windows PowerShell. Les applets de commande de cette ressource vous aident à créer le schéma MOF, le module de script et la structure de répertoires de votre nouvelle ressource. Pour plus d’informations sur les ressources DSC, consultez [Création de ressources DSC Windows PowerShell personnalisées](authoringResource.md).
-Dans cette rubrique, nous allons créer une ressource DSC qui gère les utilisateurs Active Directory.
-Utilisez l’applet de commande [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) pour installer le module **xDscResourceDesigner**.
+<span data-ttu-id="9db20-105">L’outil Concepteur de ressources est un ensemble d’applets de commande exposées par le module **xDscResourceDesigner** qui facilite la création de ressources DSC Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="9db20-105">The Resource Designer tool is a set of cmdlets exposed by the **xDscResourceDesigner** module that make creating Windows PowerShell Desired State Configuration (DSC) resources easier.</span></span> <span data-ttu-id="9db20-106">Les applets de commande de cette ressource vous aident à créer le schéma MOF, le module de script et la structure de répertoires de votre nouvelle ressource.</span><span class="sxs-lookup"><span data-stu-id="9db20-106">The cmdlets in this resource help create the MOF schema, the script module, and the directory structure for your new resource.</span></span> <span data-ttu-id="9db20-107">Pour plus d’informations sur les ressources DSC, consultez [Création de ressources DSC Windows PowerShell personnalisées](authoringResource.md).</span><span class="sxs-lookup"><span data-stu-id="9db20-107">For more information about DSC resources, see [Build Custom Windows PowerShell Desired State Configuration Resources](authoringResource.md).</span></span>
+<span data-ttu-id="9db20-108">Dans cette rubrique, nous allons créer une ressource DSC qui gère les utilisateurs Active Directory.</span><span class="sxs-lookup"><span data-stu-id="9db20-108">In this topic, we will create a DSC resource that manages Active Directory users.</span></span>
+<span data-ttu-id="9db20-109">Utilisez l’applet de commande [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) pour installer le module **xDscResourceDesigner**.</span><span class="sxs-lookup"><span data-stu-id="9db20-109">Use the [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) cmdlet to install the **xDscResourceDesigner** module.</span></span>
 
->**Remarque** : **Install-Module** est inclus dans le module **PowerShellGet** de PowerShell 5.0. Vous pouvez télécharger le module **PowerShellGet** pour PowerShell 3.0 et 4.0 ici : [PackageManagement PowerShell Modules Preview](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
+><span data-ttu-id="9db20-110">**Remarque** : **Install-Module** est inclus dans le module **PowerShellGet** de PowerShell 5.0.</span><span class="sxs-lookup"><span data-stu-id="9db20-110">**Note**: **Install-Module** is included in the **PowerShellGet** module, which is included in PowerShell 5.0.</span></span> <span data-ttu-id="9db20-111">Vous pouvez télécharger le module **PowerShellGet** pour PowerShell 3.0 et 4.0 ici : [PackageManagement PowerShell Modules Preview](https://www.microsoft.com/en-us/download/details.aspx?id=49186).</span><span class="sxs-lookup"><span data-stu-id="9db20-111">You can download the **PowerShellGet** module for PowerShell 3.0 and 4.0 at [PackageManagement PowerShell Modules Preview](https://www.microsoft.com/en-us/download/details.aspx?id=49186).</span></span>
 
-<a id="creating-resource-properties" class="xliff"></a>
-## Création de propriétés de ressource
-La première chose à faire est de décider des propriétés que doit exposer la ressource. Pour cet exemple, nous allons définir un utilisateur Active Directory avec les propriétés suivantes.
+## <a name="creating-resource-properties"></a><span data-ttu-id="9db20-112">Création de propriétés de ressource</span><span class="sxs-lookup"><span data-stu-id="9db20-112">Creating resource properties</span></span>
+<span data-ttu-id="9db20-113">La première chose à faire est de décider des propriétés que doit exposer la ressource.</span><span class="sxs-lookup"><span data-stu-id="9db20-113">The first thing we need to do is decide on properties that the resource will expose.</span></span> <span data-ttu-id="9db20-114">Pour cet exemple, nous allons définir un utilisateur Active Directory avec les propriétés suivantes.</span><span class="sxs-lookup"><span data-stu-id="9db20-114">For this example, we will define an Active Directory user with the following properties.</span></span>
  
-Nom du paramètre  Description
-* **UserName** : propriété de clé qui identifie de façon unique un utilisateur.
-* **Ensure** : spécifie si le compte d’utilisateur doit être Present ou Absent. Ce paramètre a seulement deux valeurs possibles.
-* **DomainCredential** : mot de passe de l’utilisateur.
-* **Password** : mot de passe souhaité pour que l’utilisateur autorise une configuration à modifier le mot de passe si nécessaire.
+<span data-ttu-id="9db20-115">Nom du paramètre  Description</span><span class="sxs-lookup"><span data-stu-id="9db20-115">Parameter name  Description</span></span>
+* <span data-ttu-id="9db20-116">**UserName** : propriété de clé qui identifie de façon unique un utilisateur.</span><span class="sxs-lookup"><span data-stu-id="9db20-116">**UserName**: Key property that uniquely identifies a user.</span></span>
+* <span data-ttu-id="9db20-117">**Ensure** : spécifie si le compte d’utilisateur doit être Present ou Absent.</span><span class="sxs-lookup"><span data-stu-id="9db20-117">**Ensure**: Specifies whether the user account should be Present or Absent.</span></span> <span data-ttu-id="9db20-118">Ce paramètre a seulement deux valeurs possibles.</span><span class="sxs-lookup"><span data-stu-id="9db20-118">This parameter will have only two possible values.</span></span>
+* <span data-ttu-id="9db20-119">**DomainCredential** : mot de passe de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="9db20-119">**DomainCredential**: The domain password for the user.</span></span>
+* <span data-ttu-id="9db20-120">**Password** : mot de passe souhaité pour que l’utilisateur autorise une configuration à modifier le mot de passe si nécessaire.</span><span class="sxs-lookup"><span data-stu-id="9db20-120">**Password**: The desired password for the user to allow a configuration to change the user password if necessary.</span></span>
 
-Pour créer les propriétés, nous utilisons l’applet de commande **New-xDscResourceProperty**. Les commandes PowerShell suivantes créent les propriétés décrites ci-dessus.
+<span data-ttu-id="9db20-121">Pour créer les propriétés, nous utilisons l’applet de commande **New-xDscResourceProperty**.</span><span class="sxs-lookup"><span data-stu-id="9db20-121">To create the properties, we use the **New-xDscResourceProperty** cmdlet.</span></span> <span data-ttu-id="9db20-122">Les commandes PowerShell suivantes créent les propriétés décrites ci-dessus.</span><span class="sxs-lookup"><span data-stu-id="9db20-122">The following PowerShell commands create the properties described above.</span></span>
 
 ```powershell
 $UserName = New-xDscResourceProperty –Name UserName -Type String -Attribute Key
@@ -40,18 +38,17 @@ $DomainCredential = New-xDscResourceProperty –Name DomainCredential-Type PSCre
 $Password = New-xDscResourceProperty –Name Password -Type PSCredential -Attribute Write
 ```
 
-<a id="create-the-resource" class="xliff"></a>
-## Créer la ressource
+## <a name="create-the-resource"></a><span data-ttu-id="9db20-123">Créer la ressource</span><span class="sxs-lookup"><span data-stu-id="9db20-123">Create the resource</span></span>
 
-Maintenant que les propriétés de la ressource ont été créées, nous pouvons appeler l’applet de commande **New-xDscResource** pour créer la ressource. L’applet de commande **New-xDscResource** prend la liste des propriétés comme paramètres. Elle prend également le chemin de l’emplacement auquel le module doit être créé, le nom de la nouvelle ressource et le nom du module dans lequel elle est contenue. La commande PowerShell suivante crée la ressource.
+<span data-ttu-id="9db20-124">Maintenant que les propriétés de la ressource ont été créées, nous pouvons appeler l’applet de commande **New-xDscResource** pour créer la ressource.</span><span class="sxs-lookup"><span data-stu-id="9db20-124">Now that the resource properties have been created, we can call the **New-xDscResource** cmdlet to create the resource.</span></span> <span data-ttu-id="9db20-125">L’applet de commande **New-xDscResource** prend la liste des propriétés comme paramètres.</span><span class="sxs-lookup"><span data-stu-id="9db20-125">The **New-xDscResource** cmdlet takes the list of properties as parameters.</span></span> <span data-ttu-id="9db20-126">Elle prend également le chemin de l’emplacement auquel le module doit être créé, le nom de la nouvelle ressource et le nom du module dans lequel elle est contenue.</span><span class="sxs-lookup"><span data-stu-id="9db20-126">It also takes the path where the module should be created, the name of the new resource, and the name of the module in which it is contained.</span></span> <span data-ttu-id="9db20-127">La commande PowerShell suivante crée la ressource.</span><span class="sxs-lookup"><span data-stu-id="9db20-127">The following PowerShell command creates the resource.</span></span>
 
 ```powershell
 New-xDscResource –Name Demo_ADUser –Property $UserName, $Ensure, $DomainCredential, $Password –Path ‘C:\Program Files\WindowsPowerShell\Modules’ –ModuleName Demo_DSCModule
 ```
 
-L’applet de commande **New-xDscResource** crée le schéma MOF, un script de ressource squelette, la structure de répertoires nécessaire pour votre nouvelle ressource et un manifeste pour le module qui expose la nouvelle ressource.
+<span data-ttu-id="9db20-128">L’applet de commande **New-xDscResource** crée le schéma MOF, un script de ressource squelette, la structure de répertoires nécessaire pour votre nouvelle ressource et un manifeste pour le module qui expose la nouvelle ressource.</span><span class="sxs-lookup"><span data-stu-id="9db20-128">The **New-xDscResource** cmdlet creates the MOF schema, a skeleton resource script, the required directory structure for your new resource, and a manifest for the module that exposes the new resource.</span></span>
 
-Le fichier de schéma MOF se trouve à l’emplacement **C:\Program Files\WindowsPowerShell\Modules\Demo_DSCModule\DSCResources\Demo_ADUser\Demo_ADUser.schema.mof**, et son contenu est le suivant.
+<span data-ttu-id="9db20-129">Le fichier de schéma MOF se trouve à l’emplacement **C:\Program Files\WindowsPowerShell\Modules\Demo_DSCModule\DSCResources\Demo_ADUser\Demo_ADUser.schema.mof**, et son contenu est le suivant.</span><span class="sxs-lookup"><span data-stu-id="9db20-129">The MOF schema file is at **C:\Program Files\WindowsPowerShell\Modules\Demo_DSCModule\DSCResources\Demo_ADUser\Demo_ADUser.schema.mof**, and its contents are as follows.</span></span>
 
 ```
 [ClassVersion("1.0.0.0"), FriendlyName("Demo_ADUser")]
@@ -64,7 +61,7 @@ class Demo_ADUser : OMI_BaseResource
 };
 ```
 
-Le script de la ressource se trouve à l’emplacement **C:\Program Files\WindowsPowerShell\Modules\Demo_DSCModule\DSCResources\Demo_ADUser\Demo_ADUser.psm1**. Il ne comprend pas la logique permettant d’implémenter la ressource. Vous devrez l’ajouter vous-même. Voici le contenu du script squelette.
+<span data-ttu-id="9db20-130">Le script de la ressource se trouve à l’emplacement **C:\Program Files\WindowsPowerShell\Modules\Demo_DSCModule\DSCResources\Demo_ADUser\Demo_ADUser.psm1**.</span><span class="sxs-lookup"><span data-stu-id="9db20-130">The resource script is at **C:\Program Files\WindowsPowerShell\Modules\Demo_DSCModule\DSCResources\Demo_ADUser\Demo_ADUser.psm1**.</span></span> <span data-ttu-id="9db20-131">Il ne comprend pas la logique permettant d’implémenter la ressource. Vous devrez l’ajouter vous-même.</span><span class="sxs-lookup"><span data-stu-id="9db20-131">It does not include the actual logic to implement the resource, which you must add yourself.</span></span> <span data-ttu-id="9db20-132">Voici le contenu du script squelette.</span><span class="sxs-lookup"><span data-stu-id="9db20-132">The contents of the skeleton script are as follows.</span></span>
 
 ```powershell
 function Get-TargetResource
@@ -164,30 +161,25 @@ function Test-TargetResource
 Export-ModuleMember -Function *-TargetResource
 ```
 
-<a id="updating-the-resource" class="xliff"></a>
-## Mise à jour de la ressource
+## <a name="updating-the-resource"></a><span data-ttu-id="9db20-133">Mise à jour de la ressource</span><span class="sxs-lookup"><span data-stu-id="9db20-133">Updating the resource</span></span>
 
-Si vous avez besoin d’ajouter ou de modifier la liste des paramètres de la ressource, vous pouvez appeler l’applet de commande **Update-xDscResource**. L’applet de commande met à jour la ressource avec une nouvelle liste de paramètres. Si vous avez déjà ajouté une logique au script de votre ressource, celle-ci reste inchangée.
+<span data-ttu-id="9db20-134">Si vous avez besoin d’ajouter ou de modifier la liste des paramètres de la ressource, vous pouvez appeler l’applet de commande **Update-xDscResource**.</span><span class="sxs-lookup"><span data-stu-id="9db20-134">If you need to add or modify the parameter list of the resource, you can call the **Update-xDscResource** cmdlet.</span></span> <span data-ttu-id="9db20-135">L’applet de commande met à jour la ressource avec une nouvelle liste de paramètres.</span><span class="sxs-lookup"><span data-stu-id="9db20-135">The cmdlet updates the resource with a new parameter list.</span></span> <span data-ttu-id="9db20-136">Si vous avez déjà ajouté une logique au script de votre ressource, celle-ci reste inchangée.</span><span class="sxs-lookup"><span data-stu-id="9db20-136">If you have already added logic in your resource script, it is left intact.</span></span>
 
-Supposons, par exemple, que vous vouliez inclure le dernier journal en date dans votre ressource pour l’utilisateur. Plutôt que de réécrire complètement la ressource, vous pouvez appeler **New-xDscResourceProperty** pour créer la nouvelle propriété, puis appeler **Update-xDscResource** et ajouter votre nouvelle propriété à la liste des propriétés.
+<span data-ttu-id="9db20-137">Supposons, par exemple, que vous vouliez inclure le dernier journal en date dans votre ressource pour l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="9db20-137">For example, suppose you want to include the last log in time for the user in our resource.</span></span> <span data-ttu-id="9db20-138">Plutôt que de réécrire complètement la ressource, vous pouvez appeler **New-xDscResourceProperty** pour créer la nouvelle propriété, puis appeler **Update-xDscResource** et ajouter votre nouvelle propriété à la liste des propriétés.</span><span class="sxs-lookup"><span data-stu-id="9db20-138">Rather than writing the resource again completely, you can call the **New-xDscResourceProperty** to create the new property, and then call **Update-xDscResource** and add your new property to the properties list.</span></span>
 
 ```powershell
 $lastLogon = New-xDscResourceProperty –Name LastLogon –Type Hashtable –Attribute Write –Description “For mapping users to their last log on time”
 Update-xDscResource –Name ‘Demo_ADUser’ –Property $UserName, $Ensure, $DomainCredential, $Password, $lastLogon -Force
 ```
 
-<a id="testing-a-resource-schema" class="xliff"></a>
-## Test d’un schéma de ressource
+## <a name="testing-a-resource-schema"></a><span data-ttu-id="9db20-139">Test d’un schéma de ressource</span><span class="sxs-lookup"><span data-stu-id="9db20-139">Testing a resource schema</span></span>
 
-L’outil Concepteur de ressources expose une applet de commande supplémentaire qui peut être utilisée pour tester la validité d’un schéma MOF que vous avez écrit manuellement. Appelez l’applet de commande **Test-xDscSchema** en passant le chemin d’un schéma de ressource MOF comme paramètre. C’est dans ce schéma que l’applet de commande affiche les éventuelles erreurs.
+<span data-ttu-id="9db20-140">L’outil Concepteur de ressources expose une applet de commande supplémentaire qui peut être utilisée pour tester la validité d’un schéma MOF que vous avez écrit manuellement.</span><span class="sxs-lookup"><span data-stu-id="9db20-140">The Resource Designer tool exposes one more cmdlet that can be used to test the validity of a MOF schema that you have written manually.</span></span> <span data-ttu-id="9db20-141">Appelez l’applet de commande **Test-xDscSchema** en passant le chemin d’un schéma de ressource MOF comme paramètre.</span><span class="sxs-lookup"><span data-stu-id="9db20-141">Call the **Test-xDscSchema** cmdlet, passing the path of a MOF resource schema as a parameter.</span></span> <span data-ttu-id="9db20-142">C’est dans ce schéma que l’applet de commande affiche les éventuelles erreurs.</span><span class="sxs-lookup"><span data-stu-id="9db20-142">The cmdlet will output any errors in the schema.</span></span>
 
-<a id="see-also" class="xliff"></a>
-### Voir aussi
+### <a name="see-also"></a><span data-ttu-id="9db20-143">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="9db20-143">See Also</span></span>
 
-<a id="concepts" class="xliff"></a>
-#### Concepts
-[Création de ressources personnalisées de configuration d’état souhaité Windows PowerShell](authoringResource.md)
+#### <a name="concepts"></a><span data-ttu-id="9db20-144">Concepts</span><span class="sxs-lookup"><span data-stu-id="9db20-144">Concepts</span></span>
+[<span data-ttu-id="9db20-145">Création de ressources personnalisées de configuration d’état souhaité Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="9db20-145">Build Custom Windows PowerShell Desired State Configuration Resources</span></span>](authoringResource.md)
 
-<a id="other-resources" class="xliff"></a>
-#### Autres ressources
-[Module xDscResourceDesigner](https://powershellgallery.com/packages/xDscResourceDesigner)
+#### <a name="other-resources"></a><span data-ttu-id="9db20-146">Autres ressources</span><span class="sxs-lookup"><span data-stu-id="9db20-146">Other Resources</span></span>
+[<span data-ttu-id="9db20-147">Module xDscResourceDesigner</span><span class="sxs-lookup"><span data-stu-id="9db20-147">xDscResourceDesigner Module</span></span>](https://powershellgallery.com/packages/xDscResourceDesigner)

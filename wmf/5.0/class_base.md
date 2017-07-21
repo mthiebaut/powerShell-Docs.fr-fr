@@ -9,9 +9,8 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="declare-base-class" class="xliff"></a>
-# Déclarer une classe de base
-Vous pouvez déclarer une classe Windows PowerShell comme type de base pour une autre classe Windows PowerShell.
+# <a name="declare-base-class"></a><span data-ttu-id="01370-102">Déclarer une classe de base</span><span class="sxs-lookup"><span data-stu-id="01370-102">Declare Base Class</span></span>
+<span data-ttu-id="01370-103">Vous pouvez déclarer une classe Windows PowerShell comme type de base pour une autre classe Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="01370-103">You can declare a Windows PowerShell class as a base type for another Windows PowerShell class.</span></span>
 
 ```PowerShell
 class bar
@@ -27,7 +26,7 @@ class baz : bar {}
 [baz]::new().foo() # return 100500
 ```
 
-Vous pouvez également utiliser des types .NET Framework existants comme classes de base :
+<span data-ttu-id="01370-104">Vous pouvez également utiliser des types .NET Framework existants comme classes de base :</span><span class="sxs-lookup"><span data-stu-id="01370-104">You can also use existing .NET Framework types as base classes:</span></span>
 
 ```PowerShell
 class MyIntList : system.collections.generic.list[int]

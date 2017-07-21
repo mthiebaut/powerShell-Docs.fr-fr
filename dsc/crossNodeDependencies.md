@@ -10,23 +10,21 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="specifying-cross-node-dependencies" class="xliff"></a>
-# Spécification de dépendances entre nœuds
+# <a name="specifying-cross-node-dependencies"></a><span data-ttu-id="f16c1-103">Spécification de dépendances entre nœuds</span><span class="sxs-lookup"><span data-stu-id="f16c1-103">Specifying cross-node dependencies</span></span>
 
-> S’applique à : Windows PowerShell 5.0
+> <span data-ttu-id="f16c1-104">S’applique à : Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="f16c1-104">Applies To: Windows PowerShell 5.0</span></span>
 
-DSC fournit des ressources spéciales, **WaitForAll**, **WaitForAny** et **WaitForSome**, qui peuvent être utilisées dans les configurations pour spécifier les dépendances sur les configurations sur d’autres nœuds. Le comportement de ces ressources est le suivant :
+<span data-ttu-id="f16c1-105">DSC fournit des ressources spéciales, **WaitForAll**, **WaitForAny** et **WaitForSome**, qui peuvent être utilisées dans les configurations pour spécifier les dépendances sur les configurations sur d’autres nœuds.</span><span class="sxs-lookup"><span data-stu-id="f16c1-105">DSC provides special resources, **WaitForAll**, **WaitForAny**, and **WaitForSome** that can be used in configurations to specify dependencies on configurations on other nodes.</span></span> <span data-ttu-id="f16c1-106">Le comportement de ces ressources est le suivant :</span><span class="sxs-lookup"><span data-stu-id="f16c1-106">The behavior of these resources is as follows:</span></span>
 
-* **WaitForAll** : réussit si la ressource spécifiée est dans l’état souhaité sur tous les nœuds cibles définis dans la propriété **NodeName**.
-* **WaitForAny** : réussit si la ressource spécifiée est dans l’état souhaité sur au moins l’un des nœuds cibles définis dans la propriété **NodeName**.
-* **WaitForSome** : spécifie une propriété **NodeCount** en plus d’une propriété **NodeName**. La ressource réussit si elle est dans l’état souhaité sur un nombre minimal de nœuds (spécifié par **NodeCount**) défini par la propriété **NodeName**. 
+* <span data-ttu-id="f16c1-107">**WaitForAll** : réussit si la ressource spécifiée est dans l’état souhaité sur tous les nœuds cibles définis dans la propriété **NodeName**.</span><span class="sxs-lookup"><span data-stu-id="f16c1-107">**WaitForAll**: Succeeds if the specified resource is in the desired state on all target nodes defined in the **NodeName** property.</span></span>
+* <span data-ttu-id="f16c1-108">**WaitForAny** : réussit si la ressource spécifiée est dans l’état souhaité sur au moins l’un des nœuds cibles définis dans la propriété **NodeName**.</span><span class="sxs-lookup"><span data-stu-id="f16c1-108">**WaitForAny**: Succeeds if the specified resource is in the desired state on at least one of the target nodes defined in the **NodeName** property.</span></span>
+* <span data-ttu-id="f16c1-109">**WaitForSome** : spécifie une propriété **NodeCount** en plus d’une propriété **NodeName**.</span><span class="sxs-lookup"><span data-stu-id="f16c1-109">**WaitForSome**: Specifies a **NodeCount** property in addition to a **NodeName** property.</span></span> <span data-ttu-id="f16c1-110">La ressource réussit si elle est dans l’état souhaité sur un nombre minimal de nœuds (spécifié par **NodeCount**) défini par la propriété **NodeName**.</span><span class="sxs-lookup"><span data-stu-id="f16c1-110">The resource succeeds if the resource is in the desired state on a minimum number of nodes (specified by **NodeCount**) defined by the **NodeName** property.</span></span> 
 
-<a id="using-waitforxxxx-resources" class="xliff"></a>
-## Utilisation de ressources WaitForXXXX
+## <a name="using-waitforxxxx-resources"></a><span data-ttu-id="f16c1-111">Utilisation de ressources WaitForXXXX</span><span class="sxs-lookup"><span data-stu-id="f16c1-111">Using WaitForXXXX resources</span></span>
 
-Pour utiliser les ressources **WaitForXXXX**, vous créez un bloc de ressources du type de ressource qui spécifie la ressource DSC et les nœuds à attendre. Vous utilisez ensuite la propriété **DependsOn** dans tous les autres blocs de ressources dans votre configuration pour attendre que les conditions spécifiées dans le nœud **WaitForXXXX** réussissent.
+<span data-ttu-id="f16c1-112">Pour utiliser les ressources **WaitForXXXX**, vous créez un bloc de ressources du type de ressource qui spécifie la ressource DSC et les nœuds à attendre.</span><span class="sxs-lookup"><span data-stu-id="f16c1-112">To use the **WaitForXXXX** resources, you create a resource block of that resource type that specifies the DSC resource and node(s) to wait for.</span></span> <span data-ttu-id="f16c1-113">Vous utilisez ensuite la propriété **DependsOn** dans tous les autres blocs de ressources dans votre configuration pour attendre que les conditions spécifiées dans le nœud **WaitForXXXX** réussissent.</span><span class="sxs-lookup"><span data-stu-id="f16c1-113">You then use the **DependsOn** property in any other resource blocks in your configuration to wait for the conditions specified in the **WaitForXXXX** node to succeed.</span></span>
 
-Par exemple, dans la configuration suivante, le nœud cible attend que la ressource **xADDomain** se termine sur le nœud **MyDC** avec un nombre maximal de 30 tentatives, à des intervalles de 15 secondes, avant que le nœud cible ne puisse joindre le domaine.
+<span data-ttu-id="f16c1-114">Par exemple, dans la configuration suivante, le nœud cible attend que la ressource **xADDomain** se termine sur le nœud **MyDC** avec un nombre maximal de 30 tentatives, à des intervalles de 15 secondes, avant que le nœud cible ne puisse joindre le domaine.</span><span class="sxs-lookup"><span data-stu-id="f16c1-114">For example, in the following configuration, the target node is waiting for the **xADDomain** resource to finish on the **MyDC** node with maximum number of 30 retries, at 15-second intervals, before the target node can join the domain.</span></span>
 
 ```powershell
 Configuration JoinDomain
@@ -76,11 +74,10 @@ Configuration JoinDomain
 }
 ```
 
->**Remarque** : Par défaut les ressources WaitForXXX effectuent une tentative, puis échouent. Même si ce n’est pas obligatoire, vous indiquez généralement un intervalle avant nouvelle tentative et un nombre.
+><span data-ttu-id="f16c1-115">**Remarque** : Par défaut les ressources WaitForXXX effectuent une tentative, puis échouent.</span><span class="sxs-lookup"><span data-stu-id="f16c1-115">**Note:** By default the WaitForXXX resources try one time and then fail.</span></span> <span data-ttu-id="f16c1-116">Même si ce n’est pas obligatoire, vous indiquez généralement un intervalle avant nouvelle tentative et un nombre.</span><span class="sxs-lookup"><span data-stu-id="f16c1-116">Although it is not required, you will typically want to specify a retry interval and count.</span></span>
 
-<a id="see-also" class="xliff"></a>
-## Voir aussi
-* [Configurations DSC](configurations.md)
-* [Ressources DSC](resources.md)
-* [Configuration du Gestionnaire de configuration local](metaConfig.md)
+## <a name="see-also"></a><span data-ttu-id="f16c1-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f16c1-117">See Also</span></span>
+* [<span data-ttu-id="f16c1-118">Configurations DSC</span><span class="sxs-lookup"><span data-stu-id="f16c1-118">DSC Configurations</span></span>](configurations.md)
+* [<span data-ttu-id="f16c1-119">Ressources DSC</span><span class="sxs-lookup"><span data-stu-id="f16c1-119">DSC Resources</span></span>](resources.md)
+* [<span data-ttu-id="f16c1-120">Configuration du Gestionnaire de configuration local</span><span class="sxs-lookup"><span data-stu-id="f16c1-120">Configuring The Local Configuration Manager</span></span>](metaConfig.md)
 

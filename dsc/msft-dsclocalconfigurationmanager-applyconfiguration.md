@@ -10,16 +10,14 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="applyconfiguration-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Méthode ApplyConfiguration de la classe MSFT_DSCLocalConfigurationManager
+# <a name="applyconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a><span data-ttu-id="91047-103">Méthode ApplyConfiguration de la classe MSFT_DSCLocalConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="91047-103">ApplyConfiguration method of the MSFT_DSCLocalConfigurationManager class</span></span>
 
-Utilise l’agent de configuration pour appliquer la configuration en attente. 
+<span data-ttu-id="91047-104">Utilise l’agent de configuration pour appliquer la configuration en attente.</span><span class="sxs-lookup"><span data-stu-id="91047-104">Uses the Configuration Agent to apply the configuration that is pending.</span></span> 
 
-S’il n’existe aucune configuration en attente, cette méthode applique de nouveau la configuration actuelle.
+<span data-ttu-id="91047-105">S’il n’existe aucune configuration en attente, cette méthode applique de nouveau la configuration actuelle.</span><span class="sxs-lookup"><span data-stu-id="91047-105">If there is no configuration pending, this method reapplies the current configuration.</span></span>
 
 
-<a id="syntax" class="xliff"></a>
-## Syntaxe
+## <a name="syntax"></a><span data-ttu-id="91047-106">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="91047-106">Syntax</span></span>
 ------
 
 ```mof
@@ -28,37 +26,32 @@ uint32 ApplyConfiguration(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-## Paramètres
+## <a name="parameters"></a><span data-ttu-id="91047-107">Paramètres</span><span class="sxs-lookup"><span data-stu-id="91047-107">Parameters</span></span>
 ----------
 
-*force* \[in\]  
-Si la valeur est **true**, la configuration actuelle est de nouveau appliquée, même s’il existe une configuration en attente.
+<span data-ttu-id="91047-108">*force* \[in\]</span><span class="sxs-lookup"><span data-stu-id="91047-108">*force* \[in\]</span></span>  
+<span data-ttu-id="91047-109">Si la valeur est **true**, la configuration actuelle est de nouveau appliquée, même s’il existe une configuration en attente.</span><span class="sxs-lookup"><span data-stu-id="91047-109">If this is **true**, the current configuration is reapplied, even if there is a configuration pending.</span></span>
 
-<a id="return-value" class="xliff"></a>
-## Valeur renvoyée
+## <a name="return-value"></a><span data-ttu-id="91047-110">Valeur renvoyée</span><span class="sxs-lookup"><span data-stu-id="91047-110">Return value</span></span>
 ------------
 
-Retourne zéro en cas de réussite ; sinon, retourne un code d’erreur.
+<span data-ttu-id="91047-111">Retourne zéro en cas de réussite ; sinon, retourne un code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="91047-111">Returns zero on success; otherwise returns an error code.</span></span>
 
-<a id="remarks" class="xliff"></a>
-## Remarques
+## <a name="remarks"></a><span data-ttu-id="91047-112">Remarques</span><span class="sxs-lookup"><span data-stu-id="91047-112">Remarks</span></span>
 
-Il s’agit d’une méthode statique.
+<span data-ttu-id="91047-113">Il s’agit d’une méthode statique.</span><span class="sxs-lookup"><span data-stu-id="91047-113">This is a static method.</span></span>
 
-<a id="requirements" class="xliff"></a>
-## Spécifications
+## <a name="requirements"></a><span data-ttu-id="91047-114">Spécifications</span><span class="sxs-lookup"><span data-stu-id="91047-114">Requirements</span></span>
 ------------
->**MOF :** DscCore.mof
+><span data-ttu-id="91047-115">**MOF :** DscCore.mof</span><span class="sxs-lookup"><span data-stu-id="91047-115">**MOF:** DscCore.mof</span></span>
 
->**Espace de noms** : Root\Microsoft\Windows\DesiredStateConfiguration
-
-
-<a id="see-also" class="xliff"></a>
-## Voir aussi
+><span data-ttu-id="91047-116">**Espace de noms** : Root\Microsoft\Windows\DesiredStateConfiguration</span><span class="sxs-lookup"><span data-stu-id="91047-116">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span></span>
 
 
-[**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
+## <a name="see-also"></a><span data-ttu-id="91047-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="91047-117">See also</span></span>
+
+
+[<span data-ttu-id="91047-118">**MSFT_DSCLocalConfigurationManager**</span><span class="sxs-lookup"><span data-stu-id="91047-118">**MSFT_DSCLocalConfigurationManager**</span></span>](msft-dsclocalconfigurationmanager.md)
 
  
 

@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="details-about-configuration-status" class="xliff"></a>
-# Détails sur l’état de configuration
+# <a name="details-about-configuration-status"></a><span data-ttu-id="9c671-102">Détails sur l’état de configuration</span><span class="sxs-lookup"><span data-stu-id="9c671-102">Details about Configuration Status</span></span>
 
-L’applet de commande, [Get-DscConfigurationStatus](https://technet.microsoft.com/library/mt517868.aspx) obtient des informations sur l’état de configuration à partir d’un nœud cible. Pour plus d’informations, consultez [Résolution des problèmes liés à DSC](https://msdn.microsoft.com/powershell/dsc/troubleshooting).
+<span data-ttu-id="9c671-103">L’applet de commande, [Get-DscConfigurationStatus](https://technet.microsoft.com/library/mt517868.aspx) obtient des informations sur l’état de configuration à partir d’un nœud cible.</span><span class="sxs-lookup"><span data-stu-id="9c671-103">The [Get-DscConfigurationStatus](https://technet.microsoft.com/library/mt517868.aspx) cmdlet gets information about configuration status from a target node.</span></span> <span data-ttu-id="9c671-104">Pour plus d’informations, consultez [Résolution des problèmes liés à DSC](https://msdn.microsoft.com/powershell/dsc/troubleshooting).</span><span class="sxs-lookup"><span data-stu-id="9c671-104">For more information, see [Troubleshooting DSC](https://msdn.microsoft.com/powershell/dsc/troubleshooting).</span></span>
 

@@ -10,17 +10,16 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="how-to-resolve-warning-package-your-package-name-failed-to-download-issue" class="xliff"></a>
-## Comment résoudre le problème « Avertissement : Échec du téléchargement du package 'nom_de_votre_package' » ?
+## <a name="how-to-resolve-warning-package-your-package-name-failed-to-download-issue"></a><span data-ttu-id="6bf03-103">Comment résoudre le problème « Avertissement : Échec du téléchargement du package 'nom_de_votre_package' » ?</span><span class="sxs-lookup"><span data-stu-id="6bf03-103">How to resolve "WARNING: Package 'your package name' failed to download" issue?</span></span>
 
 
 
 
-L’échec d’Install-Module ou d’Update-Module sur certains ordinateurs est parfois signalé.
-Selon nos recherches, cela est en rapport avec la connexion réseau.
-Nous avons récemment mis à jour le fournisseur NuGet afin qu’il puisse télécharger des packages de façon fiable.
-Vous pouvez suivre les instructions ci-dessous pour installer la build la plus récente du fournisseur NuGet, puis installer ou mettre à jour votre module.
-Utilisons le module « Azure » à titre d’exemple ci-dessous.
+<span data-ttu-id="6bf03-104">L’échec d’Install-Module ou d’Update-Module sur certains ordinateurs est parfois signalé.</span><span class="sxs-lookup"><span data-stu-id="6bf03-104">It is reported that Install-Module or Update-Module sometimes fails on some machines.</span></span>
+<span data-ttu-id="6bf03-105">Selon nos recherches, cela est en rapport avec la connexion réseau.</span><span class="sxs-lookup"><span data-stu-id="6bf03-105">Based on our investigation, it is something to do with the networking connection.</span></span>
+<span data-ttu-id="6bf03-106">Nous avons récemment mis à jour le fournisseur NuGet afin qu’il puisse télécharger des packages de façon fiable.</span><span class="sxs-lookup"><span data-stu-id="6bf03-106">Recently we updated NuGet provider so that it can reliably download packages.</span></span>
+<span data-ttu-id="6bf03-107">Vous pouvez suivre les instructions ci-dessous pour installer la build la plus récente du fournisseur NuGet, puis installer ou mettre à jour votre module.</span><span class="sxs-lookup"><span data-stu-id="6bf03-107">You can follow the instructions below to install the latest build of NuGet provider and then install or update your module.</span></span>
+<span data-ttu-id="6bf03-108">Utilisons le module « Azure » à titre d’exemple ci-dessous.</span><span class="sxs-lookup"><span data-stu-id="6bf03-108">Let's use 'Azure' module as an example below.</span></span>
 
 ```powershell
 Install-PackageProvider NuGet -MinimumVersion 2.8.5.206 -Force

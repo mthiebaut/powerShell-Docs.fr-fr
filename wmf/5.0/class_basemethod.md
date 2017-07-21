@@ -9,10 +9,9 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="call-base-class-method" class="xliff"></a>
-# Appeler une méthode de classe de base
+# <a name="call-base-class-method"></a><span data-ttu-id="f77a0-102">Appeler une méthode de classe de base</span><span class="sxs-lookup"><span data-stu-id="f77a0-102">Call Base Class Method</span></span>
 
-Vous pouvez substituer des méthodes existantes dans les sous-classes. Pour cela, déclarez les méthodes à l’aide des mêmes nom et signature :
+<span data-ttu-id="f77a0-103">Vous pouvez substituer des méthodes existantes dans les sous-classes.</span><span class="sxs-lookup"><span data-stu-id="f77a0-103">You can override existing methods in subclasses.</span></span> <span data-ttu-id="f77a0-104">Pour cela, déclarez les méthodes à l’aide des mêmes nom et signature :</span><span class="sxs-lookup"><span data-stu-id="f77a0-104">To do this, declare methods by using the same name and signature:</span></span>
 
 ```PowerShell
 class baseClass
@@ -28,7 +27,7 @@ class childClass1 : baseClass
 [childClass1]::new().foo() # return 200600
 ```
 
-Pour appeler des méthodes de classe de base à partir des implémentations substituées, effectuez un transtypage vers la classe de base ([baseClass]$this) lors de l’appel :
+<span data-ttu-id="f77a0-105">Pour appeler des méthodes de classe de base à partir des implémentations substituées, effectuez un transtypage vers la classe de base ([baseClass]$this) lors de l’appel :</span><span class="sxs-lookup"><span data-stu-id="f77a0-105">To call base class methods from overridden implementations, cast to the base class ([baseClass]$this) on invocation:</span></span>
 
 ```PowerShell
 class childClass2 : baseClass
@@ -42,7 +41,7 @@ class childClass2 : baseClass
 [childClass2]::new().foo() # return 301500
 ```
 
-Toutes les méthodes PowerShell sont virtuelles. Vous pouvez masquer les méthodes .NET non virtuelles dans une sous-classe en utilisant la même syntaxe que pour une substitution : il vous suffit de déclarer des méthodes avec les mêmes nom et signature.
+<span data-ttu-id="f77a0-106">Toutes les méthodes PowerShell sont virtuelles.</span><span class="sxs-lookup"><span data-stu-id="f77a0-106">All PowerShell methods are virtual.</span></span> <span data-ttu-id="f77a0-107">Vous pouvez masquer les méthodes .NET non virtuelles dans une sous-classe en utilisant la même syntaxe que pour une substitution : il vous suffit de déclarer des méthodes avec les mêmes nom et signature.</span><span class="sxs-lookup"><span data-stu-id="f77a0-107">You can hide non-virtual .NET methods in a subclass by using the same syntax as you do for an override: just declare methods with same name and signature.</span></span>
 
 ```PowerShell
 class MyIntList : system.collections.generic.list[int]

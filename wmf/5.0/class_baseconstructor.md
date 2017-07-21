@@ -9,10 +9,9 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="call-base-class-constructor" class="xliff"></a>
-# Appeler un constructeur de classe de base
+# <a name="call-base-class-constructor"></a><span data-ttu-id="fb05b-102">Appeler un constructeur de classe de base</span><span class="sxs-lookup"><span data-stu-id="fb05b-102">Call Base Class Constructor</span></span>
 
-Pour appeler un constructeur de classe de base à partir d’une sous-classe, utilisez le mot clé **base** :
+<span data-ttu-id="fb05b-103">Pour appeler un constructeur de classe de base à partir d’une sous-classe, utilisez le mot clé **base** :</span><span class="sxs-lookup"><span data-stu-id="fb05b-103">To call a base class constructor from a subclass, use the keyword **base**:</span></span>
 
 ```PowerShell
 class A 
@@ -33,7 +32,7 @@ class B : A
 [B]::new().a # return 103
 ```
 
-Si une classe de base a un constructeur par défaut (sans paramètre), vous pouvez omettre un appel de constructeur explicite :
+<span data-ttu-id="fb05b-104">Si une classe de base a un constructeur par défaut (sans paramètre), vous pouvez omettre un appel de constructeur explicite :</span><span class="sxs-lookup"><span data-stu-id="fb05b-104">If a base class has a default (no parameter) constructor, you can omit an explicit constructor call:</span></span>
 
 ```PowerShell
 class C : B

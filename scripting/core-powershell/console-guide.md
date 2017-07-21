@@ -8,9 +8,9 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/08/2017
 ---
-#  <a name="powershell-console-window-guide"></a>Guide de la fenêtre de console PowerShell
+#  <a name="powershell-console-window-guide"></a><span data-ttu-id="01ea6-103">Guide de la fenêtre de console PowerShell</span><span class="sxs-lookup"><span data-stu-id="01ea6-103">PowerShell Console Window Guide</span></span>
 
-Contenu de ce guide :
--  [Aide sur la ligne de commande PowerShell.exe](console/PowerShell.exe-Command-Line-Help.md)
--  [Utilisation du développement par tabulation](console/Using-Tab-Expansion.md)
+<span data-ttu-id="01ea6-104">Contenu de ce guide :</span><span class="sxs-lookup"><span data-stu-id="01ea6-104">Find in this guide:</span></span>
+-  [<span data-ttu-id="01ea6-105">Aide sur la ligne de commande PowerShell.exe</span><span class="sxs-lookup"><span data-stu-id="01ea6-105">PowerShell.exe Command Line Help</span></span>](console/PowerShell.exe-Command-Line-Help.md)
+-  [<span data-ttu-id="01ea6-106">Utilisation du développement par tabulation</span><span class="sxs-lookup"><span data-stu-id="01ea6-106">Using Tab Expansion</span></span>](console/Using-Tab-Expansion.md)
 

@@ -9,14 +9,14 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/08/2017
 ---
-# <a name="microsoftpowershellutility-module"></a>Module Microsoft.PowerShell.Utility
-Cette section contient les rubriques d’aide pour le module **Microsoft.PowerShell.Utility**. Le module **Microsoft.PowerShell.Utility** est installé avec Windows PowerShell.
+# <a name="microsoftpowershellutility-module"></a><span data-ttu-id="3a1d1-103">Module Microsoft.PowerShell.Utility</span><span class="sxs-lookup"><span data-stu-id="3a1d1-103">Microsoft.PowerShell.Utility Module</span></span>
+<span data-ttu-id="3a1d1-104">Cette section contient les rubriques d’aide pour le module **Microsoft.PowerShell.Utility**.</span><span class="sxs-lookup"><span data-stu-id="3a1d1-104">This section contains the help topics for the **Microsoft.PowerShell.Utility** module.</span></span> <span data-ttu-id="3a1d1-105">Le module **Microsoft.PowerShell.Utility** est installé avec Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="3a1d1-105">The **Microsoft.PowerShell.Utility** module is installed with Windows PowerShell.</span></span>
 
-## <a name="help-topics"></a>Rubriques d'aide
-[Applets de commande Windows PowerShell Utility](http://go.microsoft.com/fwlink/?LinkID=245861)
+## <a name="help-topics"></a><span data-ttu-id="3a1d1-106">Rubriques d'aide</span><span class="sxs-lookup"><span data-stu-id="3a1d1-106">Help Topics</span></span>
+[<span data-ttu-id="3a1d1-107">Applets de commande Windows PowerShell Utility</span><span class="sxs-lookup"><span data-stu-id="3a1d1-107">Windows PowerShell Utility Cmdlets</span></span>](http://go.microsoft.com/fwlink/?LinkID=245861)
 
-## <a name="see-also"></a>Voir aussi
-- [Windows PowerShell 5.0](Windows-PowerShell-5.0.md)
-- [Windows PowerShell Core](https://technet.microsoft.com/en-us/library/4b75f1e4-f327-48f3-92ab-bf5435094d41)
-- [Écriture de scripts avec Windows PowerShell](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
+## <a name="see-also"></a><span data-ttu-id="3a1d1-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="3a1d1-108">See Also</span></span>
+- [<span data-ttu-id="3a1d1-109">Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="3a1d1-109">Windows PowerShell 5.0</span></span>](Windows-PowerShell-5.0.md)
+- [<span data-ttu-id="3a1d1-110">Windows PowerShell Core</span><span class="sxs-lookup"><span data-stu-id="3a1d1-110">Windows PowerShell Core</span></span>](https://technet.microsoft.com/en-us/library/4b75f1e4-f327-48f3-92ab-bf5435094d41)
+- [<span data-ttu-id="3a1d1-111">Écriture de scripts avec Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="3a1d1-111">Scripting with Windows PowerShell</span></span>](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
 

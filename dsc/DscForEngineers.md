@@ -1,46 +1,58 @@
-# <a name="desired-state-configuration-overview-for-engineers"></a>Présentation de la configuration de l’état souhaité pour les ingénieurs #
+---
+ms.date: 2017-06-12
+author: eslesar
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+title: "Présentation de la configuration de l’état souhaité pour les décideurs"
+ms.openlocfilehash: 50aaa407e02b8466a7df909711454e88b07c5c1f
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
+---
+# <a name="desired-state-configuration-overview-for-engineers"></a><span data-ttu-id="a7bc7-103">Présentation de la configuration de l’état souhaité pour les ingénieurs</span><span class="sxs-lookup"><span data-stu-id="a7bc7-103">Desired State Configuration Overview for Engineers</span></span> #
 
-Ce document est destiné à faire découvrir aux développeurs et équipes opérationnelles les avantages de la configuration d’état souhaité (DSC) PowerShell.
-Pour une vision plus globale des avantages offerts par DSC, consultez la section [Présentation de la configuration de l’état souhaité pour les décideurs](decisionMaker.md)
+<span data-ttu-id="a7bc7-104">Ce document est destiné à faire découvrir aux développeurs et équipes opérationnelles les avantages de la configuration d’état souhaité (DSC) PowerShell.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-104">This document is intended for developer and operations teams to understand the benefits of PowerShell Desired State Configuration (DSC).</span></span>
+<span data-ttu-id="a7bc7-105">Pour une vision plus globale des avantages offerts par DSC, consultez la section [Présentation de la configuration de l’état souhaité pour les décideurs](decisionMaker.md)</span><span class="sxs-lookup"><span data-stu-id="a7bc7-105">For a higher level view of the value DSC provides, please see [Desired State Configuration Overview for Decision Makers](decisionMaker.md)</span></span>
 
-## <a name="benefits-of-desired-state-configuration"></a>Avantages de la configuration de l’état souhaité
+## <a name="benefits-of-desired-state-configuration"></a><span data-ttu-id="a7bc7-106">Avantages de la configuration de l’état souhaité</span><span class="sxs-lookup"><span data-stu-id="a7bc7-106">Benefits of Desired State Configuration</span></span>
 
-Objectifs de DSC :
-- Réduire la complexité des scripts dans Windows
-- Accélérer la vitesse d’itération
+<span data-ttu-id="a7bc7-107">Objectifs de DSC :</span><span class="sxs-lookup"><span data-stu-id="a7bc7-107">DSC exists to:</span></span>
+- <span data-ttu-id="a7bc7-108">Réduire la complexité des scripts dans Windows</span><span class="sxs-lookup"><span data-stu-id="a7bc7-108">Decrease the complexity of scripting in Windows</span></span>
+- <span data-ttu-id="a7bc7-109">Accélérer la vitesse d’itération</span><span class="sxs-lookup"><span data-stu-id="a7bc7-109">Increase the speed of iteration</span></span>
 
-Le concept de « déploiement continu » gagne en importance. Grâce au déploiement continu, il est possible de procéder à des déploiements fréquents, potentiellement plusieurs fois par jour.
-L’objectif de ces déploiements n’est pas de réparer quoi que ce soit, mais de permettre des publications plus rapides.
-En développant de nouvelles fonctionnalités et en les rendant opérationnelles aussi rapidement et efficacement que possible, vous accélérez le retour sur investissement de cette nouvelle logique métier.
+<span data-ttu-id="a7bc7-110">Le concept de « déploiement continu » gagne en importance.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-110">The concept of "continuous deployment" is becoming more important.</span></span> <span data-ttu-id="a7bc7-111">Grâce au déploiement continu, il est possible de procéder à des déploiements fréquents, potentiellement plusieurs fois par jour.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-111">Continuous deployment means the ability to deploy frequently, potentially many times per day.</span></span>
+<span data-ttu-id="a7bc7-112">L’objectif de ces déploiements n’est pas de réparer quoi que ce soit, mais de permettre des publications plus rapides.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-112">The purpose of these deployments are not to fix something but to get something published quickly.</span></span>
+<span data-ttu-id="a7bc7-113">En développant de nouvelles fonctionnalités et en les rendant opérationnelles aussi rapidement et efficacement que possible, vous accélérez le retour sur investissement de cette nouvelle logique métier.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-113">By getting new features through development into operation as smoothly and reliably as possible, you reduce time-to-value of new business logic.</span></span>
 
-Deux tendances exacerbent ce besoin de transformation rapide. L’adoption du cloud computing implique une transformation rapide, à grande échelle, avec un risque d’échec constant.
-Pour suivre le rythme, l’automatisation se fait de plus en plus présente.
-L’avènement de la mentalité « DevOps » vient répondre à ces problématiques. 
-
-
-DSC est une plateforme assurant des opérations de déploiement, de configuration et de conformité déclaratives, autonomes et idempotentes (reproductibles).
-La plateforme DSC permet de garantir que les composants de votre centre de données sont configurés correctement, ce qui évite des erreurs et de coûteux échecs de déploiement.
-En traitant les configurations DSC dans le cadre du code de l’application, DSC permet un déploiement continu.
-La configuration DSC doit être mise à jour directement dans l’application, en veillant à ce que les données nécessaires au déploiement de l’application soient toujours à jour et prêtes à être utilisées.
+<span data-ttu-id="a7bc7-114">Deux tendances exacerbent ce besoin de transformation rapide.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-114">There are two trends at play which exacerbate this need to move quickly.</span></span> <span data-ttu-id="a7bc7-115">L’adoption du cloud computing implique une transformation rapide, à grande échelle, avec un risque d’échec constant.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-115">The move towards cloud computing implies rapid change, at scale, with a constant threat of failure.</span></span>
+<span data-ttu-id="a7bc7-116">Pour suivre le rythme, l’automatisation se fait de plus en plus présente.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-116">These implications force automation in order to keep up.</span></span>
+<span data-ttu-id="a7bc7-117">L’avènement de la mentalité « DevOps » vient répondre à ces problématiques.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-117">The creation of the "DevOps" mentality is a response to these changes.</span></span> 
 
 
-## <a name="i-have-powershell-why-do-i-need-desired-state-configuration"></a>« Je dispose de PowerShell, pourquoi ai-je besoin de la configuration de l’état souhaité ? »
+<span data-ttu-id="a7bc7-118">DSC est une plateforme assurant des opérations de déploiement, de configuration et de conformité déclaratives, autonomes et idempotentes (reproductibles).</span><span class="sxs-lookup"><span data-stu-id="a7bc7-118">DSC is a platform that provides declarative, autonomous and idempotent (repeatable) deployment, configuration and conformance.</span></span>
+<span data-ttu-id="a7bc7-119">La plateforme DSC permet de garantir que les composants de votre centre de données sont configurés correctement, ce qui évite des erreurs et de coûteux échecs de déploiement.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-119">The DSC platform enables you to ensure that the components of your data center have the correct configuration, which avoids errors and prevents costly deployment failures.</span></span>
+<span data-ttu-id="a7bc7-120">En traitant les configurations DSC dans le cadre du code de l’application, DSC permet un déploiement continu.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-120">By treating DSC configurations as part of application code, DSC enables continuous deployment.</span></span>
+<span data-ttu-id="a7bc7-121">La configuration DSC doit être mise à jour directement dans l’application, en veillant à ce que les données nécessaires au déploiement de l’application soient toujours à jour et prêtes à être utilisées.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-121">The DSC configuration should be updated as a part of the application, ensuring that the knowledge needed to deploy the application is always up-to-date and ready to be used.</span></span>
 
-Les configurations DSC font la distinction entre l’intention (« Ce que je veux effectuer » et l’exécution (« Comment je veux l’effectuer »).
-Cela signifie que la logique d’exécution est contenue dans les ressources.
-Les utilisateurs n’ont pas besoin de savoir implémenter ou déployer une fonctionnalité lorsqu’une ressource DSC pour cette fonctionnalité est disponible.
-Cela permet à l’utilisateur de se concentrer sur la structure de son déploiement.
 
-Par exemple, les scripts PowerShell doivent ressembler à ceci :
+## <a name="i-have-powershell-why-do-i-need-desired-state-configuration"></a><span data-ttu-id="a7bc7-122">« Je dispose de PowerShell, pourquoi ai-je besoin de la configuration de l’état souhaité ? »</span><span class="sxs-lookup"><span data-stu-id="a7bc7-122">"I have PowerShell, why do I need Desired State Configuration?"</span></span>
+
+<span data-ttu-id="a7bc7-123">Les configurations DSC font la distinction entre l’intention (« Ce que je veux effectuer » et l’exécution (« Comment je veux l’effectuer »).</span><span class="sxs-lookup"><span data-stu-id="a7bc7-123">DSC configurations separate intent, or "what I want to do", from execution, or "how I want to do it."</span></span>
+<span data-ttu-id="a7bc7-124">Cela signifie que la logique d’exécution est contenue dans les ressources.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-124">This means the logic of execution is contained within the resources.</span></span>
+<span data-ttu-id="a7bc7-125">Les utilisateurs n’ont pas besoin de savoir implémenter ou déployer une fonctionnalité lorsqu’une ressource DSC pour cette fonctionnalité est disponible.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-125">Users do not have to know how to implement or deploy a feature when a DSC resource for that feature is available.</span></span>
+<span data-ttu-id="a7bc7-126">Cela permet à l’utilisateur de se concentrer sur la structure de son déploiement.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-126">This allows the user to focus on the structure of their deployment.</span></span>
+
+<span data-ttu-id="a7bc7-127">Par exemple, les scripts PowerShell doivent ressembler à ceci :</span><span class="sxs-lookup"><span data-stu-id="a7bc7-127">As an example, PowerShell scripts should look like this:</span></span>
 ```powershell
 # Create a share in Windows Server 8
 New-SmbShare -Name MyShare -Path C:\Demo\Temp -FullAccess Alice -ReadAccess Bob
 ```
-Ce script est simple, aisément compréhensible et direct. Toutefois, si vous tentez de mettre ce script en production, vous rencontrerez plusieurs problèmes.
-Que se passe-t-il si ce script est exécuté deux fois de suite ?
-Que se passe-t-il si Bob avait précédemment un accès complet au partage ? 
+<span data-ttu-id="a7bc7-128">Ce script est simple, aisément compréhensible et direct.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-128">This script is simple, comprehensible, and straightforward.</span></span> <span data-ttu-id="a7bc7-129">Toutefois, si vous tentez de mettre ce script en production, vous rencontrerez plusieurs problèmes.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-129">However, if you try putting that script into production, you will run into several issues.</span></span>
+<span data-ttu-id="a7bc7-130">Que se passe-t-il si ce script est exécuté deux fois de suite ?</span><span class="sxs-lookup"><span data-stu-id="a7bc7-130">What happens if that script is run twice in a row?</span></span>
+<span data-ttu-id="a7bc7-131">Que se passe-t-il si Bob avait précédemment un accès complet au partage ?</span><span class="sxs-lookup"><span data-stu-id="a7bc7-131">What happens if Bob previously had Full Access to the share?</span></span> 
 
-Pour compenser ces problèmes, une version « réelle » du script ressemblera davantage à ceci :
+<span data-ttu-id="a7bc7-132">Pour compenser ces problèmes, une version « réelle » du script ressemblera davantage à ceci :</span><span class="sxs-lookup"><span data-stu-id="a7bc7-132">To compensate for these issues, a "real" version of the script will look closer to something like:</span></span>
 ```powershell
 # But actually creating a share in an idempotent way would be
 
@@ -67,10 +79,10 @@ else
 }
 ```
 
-Ce script est plus complexe, avec une grande quantité de logiques et d’erreurs à gérer.
-Le script est plus complexe, car vous n’indiquez plus ce que vous voulez effectuer, mais *comment l’effectuer*.
+<span data-ttu-id="a7bc7-133">Ce script est plus complexe, avec une grande quantité de logiques et d’erreurs à gérer.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-133">This script is more complex, with plenty of logic and error handling.</span></span>
+<span data-ttu-id="a7bc7-134">Le script est plus complexe, car vous n’indiquez plus ce que vous voulez effectuer, mais *comment l’effectuer*.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-134">The script is more complex because you are no longer stating what you want done, but *how to do it*.</span></span>
 
-DSC vous permet de dire ce que vous voulez effectuer, et il est fait abstraction de la logique sous-jacente.
+<span data-ttu-id="a7bc7-135">DSC vous permet de dire ce que vous voulez effectuer, et il est fait abstraction de la logique sous-jacente.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-135">DSC allows you to say what you want done, and the underlying logic is abstracted away.</span></span>
 
 ```powershell
 # A configuration is a special kind of PowerShell function
@@ -101,27 +113,28 @@ Sample_Share
 Start-DscConfiguration Sample_Share
 ```
 
-Ce script est mis en forme proprement et facile à lire.
-Les chemins d’accès logiques et la gestion des erreurs sont toujours présents dans l’implémentation des [ressources](resources.md), mais invisibles pour le créateur du script. 
+<span data-ttu-id="a7bc7-136">Ce script est mis en forme proprement et facile à lire.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-136">This script is cleanly formatted and straightforward to read.</span></span>
+<span data-ttu-id="a7bc7-137">Les chemins d’accès logiques et la gestion des erreurs sont toujours présents dans l’implémentation des [ressources](resources.md), mais invisibles pour le créateur du script.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-137">The logic paths and error handling are still present in the [resource](resources.md) implementation, but invisible to the script author.</span></span> 
 
 
 
-## <a name="separating-environment-from-structure"></a>Distinction entre environnement et structure
+## <a name="separating-environment-from-structure"></a><span data-ttu-id="a7bc7-138">Distinction entre environnement et structure</span><span class="sxs-lookup"><span data-stu-id="a7bc7-138">Separating Environment from Structure</span></span>
 
-Dans DevOps, un schéma fréquent consiste à disposer de plusieurs environnements pour le déploiement. Par exemple, un environnement de développement peut être utilisé pour créer rapidement le prototype d’un nouveau code.
-Le code de l’environnement de développement se retrouve dans un environnement de test, où d’autres personnes vérifient les nouvelles fonctionnalités.
-Enfin, le code passe en production, autrement dit dans l’environnement de production du site en ligne.
+<span data-ttu-id="a7bc7-139">Dans DevOps, un schéma fréquent consiste à disposer de plusieurs environnements pour le déploiement.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-139">A common pattern in DevOps is to have multiple environments for deployment.</span></span> <span data-ttu-id="a7bc7-140">Par exemple, un environnement de développement peut être utilisé pour créer rapidement le prototype d’un nouveau code.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-140">For example, there might be a "dev" environment used to quickly prototype new code.</span></span>
+<span data-ttu-id="a7bc7-141">Le code de l’environnement de développement se retrouve dans un environnement de test, où d’autres personnes vérifient les nouvelles fonctionnalités.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-141">The code from the "dev" environment goes into a "test" environment, where other people verify the new functionality.</span></span>
+<span data-ttu-id="a7bc7-142">Enfin, le code passe en production, autrement dit dans l’environnement de production du site en ligne.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-142">Finally, the code goes into "prod", or the live site production environment.</span></span>
 
-Les configurations DSC s’adaptent à ce système développement-test-production par l’utilisation des [données de configuration](configData.md).
-Cela précise encore davantage la distinction entre la structure de la configuration et les nœuds gérés.
-Par exemple, vous pouvez définir une configuration qui nécessite un serveur SQL, un serveur IIS et un serveur de couche intermédiaire. Quels que soient les nœuds qui reçoivent les différents éléments de cette configuration, ces trois éléments seront toujours présents.
-Vous pouvez utiliser des données de configuration pour pointer les trois éléments vers le même ordinateur d’un environnement de développement, séparer ces trois éléments sur trois ordinateurs différents d’un environnement de test et enfin transférer l’ensemble de vos serveurs de production pour l’environnement de production.
-Pour effectuer un déploiement sur les différents environnements, vous pouvez appeler `Start-DscConfiguration` avec les données de configuration appropriées pour l’environnement que vous souhaitez cibler. 
+<span data-ttu-id="a7bc7-143">Les configurations DSC s’adaptent à ce système développement-test-production par l’utilisation des [données de configuration](configData.md).</span><span class="sxs-lookup"><span data-stu-id="a7bc7-143">DSC configurations accomodate this dev-test-prod pipeline through the use of [configuration data](configData.md).</span></span>
+<span data-ttu-id="a7bc7-144">Cela précise encore davantage la distinction entre la structure de la configuration et les nœuds gérés.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-144">This further abstracts the difference between the structure of the configuration from the nodes that are managed.</span></span>
+<span data-ttu-id="a7bc7-145">Par exemple, vous pouvez définir une configuration qui nécessite un serveur SQL, un serveur IIS et un serveur de couche intermédiaire.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-145">For example, you can define a configuration that requires a SQL server, an IIS server, and a middle-tier server.</span></span> <span data-ttu-id="a7bc7-146">Quels que soient les nœuds qui reçoivent les différents éléments de cette configuration, ces trois éléments seront toujours présents.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-146">Regardless of what nodes receive the different pieces of this configuration, those three elements will always be present.</span></span>
+<span data-ttu-id="a7bc7-147">Vous pouvez utiliser des données de configuration pour pointer les trois éléments vers le même ordinateur d’un environnement de développement, séparer ces trois éléments sur trois ordinateurs différents d’un environnement de test et enfin transférer l’ensemble de vos serveurs de production pour l’environnement de production.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-147">You can use configuration data to point all three elements towards the same machine for a dev environment, separate out the three elements to three different machines for a test environment, and finally towards all your production servers for the prod environment.</span></span>
+<span data-ttu-id="a7bc7-148">Pour effectuer un déploiement sur les différents environnements, vous pouvez appeler `Start-DscConfiguration` avec les données de configuration appropriées pour l’environnement que vous souhaitez cibler.</span><span class="sxs-lookup"><span data-stu-id="a7bc7-148">To deploy to the different environments, you can invoke `Start-DscConfiguration` with the correct configuration data for the environment you want to target.</span></span> 
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a><span data-ttu-id="a7bc7-149">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a7bc7-149">See Also</span></span>
 
-[Configurations](configurations.md)
+[<span data-ttu-id="a7bc7-150">Configurations</span><span class="sxs-lookup"><span data-stu-id="a7bc7-150">Configurations</span></span>](configurations.md)
 
-[Données de configuration](configData.md)
+[<span data-ttu-id="a7bc7-151">Données de configuration</span><span class="sxs-lookup"><span data-stu-id="a7bc7-151">Configuration Data</span></span>](configData.md)
 
-[Ressources](resources.md)
+[<span data-ttu-id="a7bc7-152">Ressources</span><span class="sxs-lookup"><span data-stu-id="a7bc7-152">Resources</span></span>](resources.md)
+

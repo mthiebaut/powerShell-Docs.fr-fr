@@ -9,9 +9,8 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="updates-to-fileinfo-object" class="xliff"></a>
-# Mises à jour de l’objet FileInfo
-Les informations de version peuvent prêter à confusion, notamment dans les cas où le fichier a été corrigé. Cette version de WMF 5.0 ajoute de nouvelles propriétés de script **FileVersionRaw** et **ProductVersionRaw** aux objets FileInfo. Voici les propriétés telles qu’elles sont affichées pour powershell.exe (en supposant que $pid est l’ID du processus PowerShell) :
+# <a name="updates-to-fileinfo-object"></a><span data-ttu-id="92f41-102">Mises à jour de l’objet FileInfo</span><span class="sxs-lookup"><span data-stu-id="92f41-102">Updates to FileInfo object</span></span>
+<span data-ttu-id="92f41-103">Les informations de version peuvent prêter à confusion, notamment dans les cas où le fichier a été corrigé.</span><span class="sxs-lookup"><span data-stu-id="92f41-103">File version information can be misleading, particularly in cases where the file was patched.</span></span> <span data-ttu-id="92f41-104">Cette version de WMF 5.0 ajoute de nouvelles propriétés de script **FileVersionRaw** et **ProductVersionRaw** aux objets FileInfo.</span><span class="sxs-lookup"><span data-stu-id="92f41-104">This release of WMF 5.0 adds new **FileVersionRaw** and **ProductVersionRaw** script properties to FileInfo objects.</span></span> <span data-ttu-id="92f41-105">Voici les propriétés telles qu’elles sont affichées pour powershell.exe (en supposant que $pid est l’ID du processus PowerShell) :</span><span class="sxs-lookup"><span data-stu-id="92f41-105">Here are the properties as displayed for powershell.exe (assuming $pid is the ID of the PowerShell process):</span></span>
 
 ```powershell
 PS C:\> Get-Process -Id $pid -FileVersionInfo | fl *version* -Force

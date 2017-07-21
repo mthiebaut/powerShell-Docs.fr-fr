@@ -9,11 +9,10 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="direct-access-to-dsc-resource-methods" class="xliff"></a>
-# Accès direct aux méthodes de ressources DSC
+# <a name="direct-access-to-dsc-resource-methods"></a><span data-ttu-id="6ba71-102">Accès direct aux méthodes de ressources DSC</span><span class="sxs-lookup"><span data-stu-id="6ba71-102">Direct access to DSC resource methods</span></span>
 
 
-L’applet de commande [Invoke-DscResource](https://technet.microsoft.com/en-us/library/mt517869.aspx) a été ajoutée pour permettre d’accéder directement aux ressources DSC et à leurs méthodes (Get, Set ou Test). Elle peut être utilisée par des tiers qui souhaitent tirer parti des ressources DSC.
+<span data-ttu-id="6ba71-103">L’applet de commande [Invoke-DscResource](https://technet.microsoft.com/en-us/library/mt517869.aspx) a été ajoutée pour permettre d’accéder directement aux ressources DSC et à leurs méthodes (Get, Set ou Test).</span><span class="sxs-lookup"><span data-stu-id="6ba71-103">The [Invoke-DscResource](https://technet.microsoft.com/en-us/library/mt517869.aspx) cmdlet has been added to allow direct access to DSC resources and their methods (Get, Set or Test).</span></span> <span data-ttu-id="6ba71-104">Elle peut être utilisée par des tiers qui souhaitent tirer parti des ressources DSC.</span><span class="sxs-lookup"><span data-stu-id="6ba71-104">It can be used by third-parties that want to take advantage of DSC resources.</span></span>
 
-Pour plus d’informations, consultez [Appel direct de méthodes de ressources DSC](https://msdn.microsoft.com/powershell/dsc/directcallresource).
+<span data-ttu-id="6ba71-105">Pour plus d’informations, consultez [Appel direct de méthodes de ressources DSC](https://msdn.microsoft.com/powershell/dsc/directcallresource).</span><span class="sxs-lookup"><span data-stu-id="6ba71-105">For more information, see [Calling DSC resource methods directly](https://msdn.microsoft.com/powershell/dsc/directcallresource).</span></span>
 

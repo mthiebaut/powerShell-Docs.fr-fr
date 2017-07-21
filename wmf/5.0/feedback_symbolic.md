@@ -9,18 +9,15 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="interact-with-symbolic-links-using-improved-item-cmdlets" class="xliff"></a>
-# Interagir avec des liens symboliques à l’aide des applets de commande Item améliorées
+# <a name="interact-with-symbolic-links-using-improved-item-cmdlets"></a><span data-ttu-id="867fb-102">Interagir avec des liens symboliques à l’aide des applets de commande Item améliorées</span><span class="sxs-lookup"><span data-stu-id="867fb-102">Interact with Symbolic links using improved Item cmdlets</span></span>
 
-Pour prendre en charge les liens symboliques, **\*Item** et quelques applets de commande associées ont été étendues. Vous pouvez désormais créer des liens symboliques sur une ligne unique et simple avec **New-Item**. Vous remarquerez que les applets de commande en rapport avec Item (**Remove-Item, Get-ChildItem**) se comportent en grande partie comme auparavant.
+<span data-ttu-id="867fb-103">Pour prendre en charge les liens symboliques, **\*Item** et quelques applets de commande associées ont été étendues.</span><span class="sxs-lookup"><span data-stu-id="867fb-103">To support symbolic links, **\*-Item** and a few related cmdlets have been extended.</span></span> <span data-ttu-id="867fb-104">Vous pouvez désormais créer des liens symboliques sur une ligne unique et simple avec **New-Item**.</span><span class="sxs-lookup"><span data-stu-id="867fb-104">Now you can create symbolic links in a single, simple line with **New-Item**.</span></span> <span data-ttu-id="867fb-105">Vous remarquerez que les applets de commande en rapport avec Item (**Remove-Item, Get-ChildItem**) se comportent en grande partie comme auparavant.</span><span class="sxs-lookup"><span data-stu-id="867fb-105">You’ll notice that the Item-related cmdlets (**Remove-Item, Get-ChildItem**) behave very similarly to before.</span></span>
 
-Voici quelques cas d’usage des nouvelles fonctionnalités :
+<span data-ttu-id="867fb-106">Voici quelques cas d’usage des nouvelles fonctionnalités :</span><span class="sxs-lookup"><span data-stu-id="867fb-106">The following shows some use cases of the new capabilities:</span></span>
 
-<a id="new-item" class="xliff"></a>
-## NEW-ITEM
+## <a name="new-item"></a><span data-ttu-id="867fb-107">NEW-ITEM</span><span class="sxs-lookup"><span data-stu-id="867fb-107">NEW-ITEM</span></span>
 
-<a id="symbolic-link-files" class="xliff"></a>
-### FICHIERS DE LIENS SYMBOLIQUES
+### <a name="symbolic-link-files"></a><span data-ttu-id="867fb-108">FICHIERS DE LIENS SYMBOLIQUES</span><span class="sxs-lookup"><span data-stu-id="867fb-108">SYMBOLIC LINK FILES</span></span>
 
 ```powershell
 # Create a new symbolic link file named MySymLinkFile.txt in C:\Temp which links to $pshome\profile.ps1
@@ -34,8 +31,7 @@ New-Item -ItemType SymbolicLink -Path C:\Temp\MySymLinkFile.txt -Value $pshome\p
 New-Item -ItemType SymbolicLink -Name C:\Temp\MySymLinkFile.txt -Value $pshome\profile.ps1
 ```
 
-<a id="symbolic-link-directories" class="xliff"></a>
-### RÉPERTOIRES DE LIENS SYMBOLIQUES
+### <a name="symbolic-link-directories"></a><span data-ttu-id="867fb-109">RÉPERTOIRES DE LIENS SYMBOLIQUES</span><span class="sxs-lookup"><span data-stu-id="867fb-109">SYMBOLIC LINK DIRECTORIES</span></span>
 
 ```powershell
 # Create a new symbolic link directory named MySymLinkDir in C:\Temp which links to the $pshome folder
@@ -50,24 +46,21 @@ New-Item -ItemType SymbolicLink -Path C:\Temp\MySymLinkDir -Value $pshome
 New-Item -ItemType SymbolicLink -Name C:\Temp\MySymLinkDir -Value $pshome
 ```
 
-<a id="hard-links" class="xliff"></a>
-### LIENS PHYSIQUES
+### <a name="hard-links"></a><span data-ttu-id="867fb-110">LIENS PHYSIQUES</span><span class="sxs-lookup"><span data-stu-id="867fb-110">HARD LINKS</span></span>
 
 ```powershell
 New-Item -ItemType HardLink -Path C:\Temp -Name MyHardLinkFile.txt -Value $pshome\profile.ps1
 # Same combinations of Path and Name allowed as described above
 ```
 
-<a id="directory-junctions" class="xliff"></a>
-### JONCTIONS DE RÉPERTOIRES
+### <a name="directory-junctions"></a><span data-ttu-id="867fb-111">JONCTIONS DE RÉPERTOIRES</span><span class="sxs-lookup"><span data-stu-id="867fb-111">DIRECTORY JUNCTIONS</span></span>
 
 ```powershell
 New-Item -ItemType Junction -Path C:\Temp\MyJunctionDir -Value $pshome
 # Same combinations of Path and Name allowed as described above
 ```
 
-<a id="get-childitem" class="xliff"></a>
-## GET-CHILDITEM
+## <a name="get-childitem"></a><span data-ttu-id="867fb-112">GET-CHILDITEM</span><span class="sxs-lookup"><span data-stu-id="867fb-112">GET-CHILDITEM</span></span>
 
 ```powershell
 # Append link type column to Mode property and display with Get-ChildItem
@@ -118,8 +111,7 @@ SpecialBuild: False
 Language:
 ```
 
-<a id="remove-item" class="xliff"></a>
-## REMOVE-ITEM
+## <a name="remove-item"></a><span data-ttu-id="867fb-113">REMOVE-ITEM</span><span class="sxs-lookup"><span data-stu-id="867fb-113">REMOVE-ITEM</span></span>
 
 ```powershell
 # Works like any other item type

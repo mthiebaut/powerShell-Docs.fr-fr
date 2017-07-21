@@ -10,29 +10,24 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="update-script" class="xliff"></a>
-# Update-Script
+# <a name="update-script"></a><span data-ttu-id="d88ed-103">Update-Script</span><span class="sxs-lookup"><span data-stu-id="d88ed-103">Update-Script</span></span>
 
-L’applet de commande Update-Script permet d’effectuer une mise à jour sur place des fichiers de script qui ont été installés à l’aide de l’applet de commande Install-Script.
+<span data-ttu-id="d88ed-104">L’applet de commande Update-Script permet d’effectuer une mise à jour sur place des fichiers de script qui ont été installés à l’aide de l’applet de commande Install-Script.</span><span class="sxs-lookup"><span data-stu-id="d88ed-104">Update-Script cmdlet lets you to do in-place update of the script files which were installed using Install-Script cmdlet.</span></span>
 
-<a id="description" class="xliff"></a>
-## Description
+## <a name="description"></a><span data-ttu-id="d88ed-105">Description</span><span class="sxs-lookup"><span data-stu-id="d88ed-105">Description</span></span>
 
-L’applet de commande Update-Script met à jour le script spécifié à partir du référentiel à partir duquel il a été précédemment installé.
+<span data-ttu-id="d88ed-106">L’applet de commande Update-Script met à jour le script spécifié à partir du référentiel à partir duquel il a été précédemment installé.</span><span class="sxs-lookup"><span data-stu-id="d88ed-106">The Update-Script cmdlet updates the specified script from the repository from which it was previously installed.</span></span>
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a><span data-ttu-id="d88ed-107">Syntaxe de l’applet de commande</span><span class="sxs-lookup"><span data-stu-id="d88ed-107">Cmdlet syntax</span></span>
 
 ```powershell
 Get-Command -Name Update-Script -Module PowerShellGet -Syntax
 ```
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a><span data-ttu-id="d88ed-108">Référence de l’aide en ligne de l’applet de commande</span><span class="sxs-lookup"><span data-stu-id="d88ed-108">Cmdlet online help reference</span></span>
 
-[Update-Script](http://go.microsoft.com/fwlink/?LinkId=619787)
+[<span data-ttu-id="d88ed-109">Update-Script</span><span class="sxs-lookup"><span data-stu-id="d88ed-109">Update-Script</span></span>](http://go.microsoft.com/fwlink/?LinkId=619787)
 
-<a id="example-commands" class="xliff"></a>
-## Exemples de commandes
+## <a name="example-commands"></a><span data-ttu-id="d88ed-110">Exemples de commandes</span><span class="sxs-lookup"><span data-stu-id="d88ed-110">Example commands</span></span>
 ```powershell
 Install-Script -Name Fabrikam-Script -RequiredVersion 1.0 -Repository GalleryINT -Scope
 Get-InstalledScript -Name Fabrikam-Script

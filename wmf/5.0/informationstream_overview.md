@@ -9,10 +9,9 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="information-stream" class="xliff"></a>
-# Flux d’informations
+# <a name="information-stream"></a><span data-ttu-id="15a3f-102">Flux d’informations</span><span class="sxs-lookup"><span data-stu-id="15a3f-102">Information Stream</span></span>
 
-Vous pouvez désormais utiliser un nouveau flux d’informations structuré pour transmettre des données structurées entre un script et son hôte. **Write-Host** a également été mise à jour pour envoyer sa sortie vers le flux d’informations, où vous pouvez maintenant la capturer ou la passer sous silence. La nouvelle applet de commande **Write-Information** (ainsi qu’une API WriteInformation correspondante) utilisée avec les paramètres communs **-InformationVariable** et **-InformationAction** offre davantage de souplesse et une capacité accrue.
+<span data-ttu-id="15a3f-103">Vous pouvez désormais utiliser un nouveau flux d’informations structuré pour transmettre des données structurées entre un script et son hôte.</span><span class="sxs-lookup"><span data-stu-id="15a3f-103">A new structured Information stream can now be used to transmit structured data between a script and its host.</span></span> <span data-ttu-id="15a3f-104">**Write-Host** a également été mise à jour pour envoyer sa sortie vers le flux d’informations, où vous pouvez maintenant la capturer ou la passer sous silence.</span><span class="sxs-lookup"><span data-stu-id="15a3f-104">**Write-Host** has also been updated to emit its output to the Information stream where you can now capture or silence it.</span></span> <span data-ttu-id="15a3f-105">La nouvelle applet de commande **Write-Information** (ainsi qu’une API WriteInformation correspondante) utilisée avec les paramètres communs **-InformationVariable** et **-InformationAction** offre davantage de souplesse et une capacité accrue.</span><span class="sxs-lookup"><span data-stu-id="15a3f-105">The new **Write-Information** cmdlet (along with a corresponding WriteInformation API) used with **-InformationVariable** and **-InformationAction** common parameters enables more flexibility and capability.</span></span>
 
 ```powershell
 PS C:\Users\demo> ## Here's a typical PowerShell script
