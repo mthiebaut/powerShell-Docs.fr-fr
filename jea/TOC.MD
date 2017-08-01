@@ -1,11 +1,15 @@
-
-# [Vue d’ensemble](overview.md)
-
-# Déployer JEA
-## [Conditions préalables](prerequisites.md)
-## [Fonctionnalités de rôle](role-capabilities.md)
-## [Configuration de session](session-configurations.md)
-## [Enregistrement de JEA](register-jea.md)
-## [Utilisation de JEA](using-jea.md)
-## [Considérations de sécurité](security-considerations.md)
-## [Audit et rapport sur JEA](audit-and-report.md)
+# [Just Enough Administration (JEA)](README.md)
+##  [Introduction](introduction.md)
+##  [Conditions préalables](prerequisites.md)
+##  [Utilisation de JEA](using-jea.md)
+##  [Refaire la démo](remake-the-demo-endpoint.md)
+##  [Fonctionnalités de rôle](role-capabilities.md)
+##  [De bout en bout - Active Directory](end-to-end---active-directory.md)
+##  [Déploiement et maintenance de plusieurs ordinateurs](multi-machine-deployment-and-maintenance.md)
+##  [Création de rapports sur JEA](reporting-on-jea.md)
+##  Annexes
+###  [Concepts clés utilisés dans ce guide](key-concepts-used-throughout-this-guide.md)  
+###  [Création d’un contrôleur de domaine](creating-a-domain-controller.md)  
+###  [À propos de l’inscription sur liste rouge](on-blacklisting.md)  
+###  [Éléments à prendre en considération lors de la limitation des commandes](considerations-when-limiting-commands.md)  
+###  [Pièges liés aux fonctionnalités de rôle](common-role-capability-pitfalls.md)
