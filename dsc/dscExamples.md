@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-examples" class="xliff"></a>
-# Exemples DSC
+# <a name="dsc-examples"></a>Exemples DSC
 
 Cette section contient des exemples de DSC :
 

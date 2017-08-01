@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="creating-a-powershell-gallery-account" class="xliff"></a>
-## Création d’un compte PowerShell Gallery
+## <a name="creating-a-powershell-gallery-account"></a>Création d’un compte PowerShell Gallery
 
 Un compte PowerShell Gallery doit être créé avant de publier quoi que ce soit dessus. Les comptes PowerShell Gallery doivent être liés à un compte de messagerie compatible Azure Active Directory ou un compte de messagerie Microsoft (avec un domaine outlook.com, hotmail.com, etc.)
 
@@ -26,8 +25,7 @@ Une fois que vous êtes connecté, il vous est demandé de créer un nom d’uti
 Remarque : Ce nom de compte ne peut pas être modifié une fois qu’il est créé.  
 Consultez [Gestion des propriétaires d’éléments](https://msdn.microsoft.com/en-us/powershell/gallery/psgallery/managing-item-owners) pour plus d’informations à ce sujet.
 
-<a id="recommended-practices-for-powershell-gallery-accounts" class="xliff"></a>
-## Pratiques recommandées pour les comptes PowerShell Gallery
+## <a name="recommended-practices-for-powershell-gallery-accounts"></a>Pratiques recommandées pour les comptes PowerShell Gallery
 
 Il est important que le compte de messagerie utilisé avec votre compte PowerShell Gallery soit surveillé activement.
 Toutes les communications avec les propriétaires des éléments PowerShell Gallery passent par l’adresse de messagerie associée à votre compte PowerShell Gallery.
