@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,applet de commande
 title: Module PowerShellGet
 ms.assetid: e4d6867f-a32a-4564-9e43-409babee97a7
 ms.openlocfilehash: 24b392cf71a1644b995ff3ebdb8361f394d21ccc
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="powershellget-module"></a>Module PowerShellGet
 Cette section contient les rubriques d’aide pour le module **PowerShellGet**. Le module **PowerShellGet** est installé avec Windows PowerShell 5.0 et les versions ultérieures de Windows PowerShell.

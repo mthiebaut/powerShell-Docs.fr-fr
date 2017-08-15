@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,applet de commande
 title: "Présentation des concepts importants de Windows PowerShell"
 ms.assetid: 3e601e38-4520-4578-a48d-b6779f1d35ee
 ms.openlocfilehash: 1ffcfefcc7ffc7c98ba4d1e3ccc9a59cd9b0baac
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="understanding-important-windows-powershell-concepts"></a>Présentation des concepts importants de Windows PowerShell
 La conception de Windows PowerShell intègre des concepts de différents environnements. Plusieurs d’entre eux sont déjà familiers aux utilisateurs ayant une expérience d’interpréteurs de commandes ou d’environnements de programmation spécifiques, mais très peu de gens les connaissent tous. L’examen de certains de ces concepts permet d’avoir une vue d’ensemble utile de l’interpréteur de commandes.

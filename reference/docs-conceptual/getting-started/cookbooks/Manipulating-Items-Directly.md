@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,applet de commande
-title: "Manipulation d&quot;éléments de manière directe"
+title: "Manipulation d'éléments de manière directe"
 ms.assetid: 8cbd4867-917d-41ea-9ff0-b8e765509735
 ms.openlocfilehash: d9aa95dcb0da2e8203cbe32d64b95bf33d914166
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="manipulating-items-directly"></a>Manipulation d'éléments de manière directe
 Dans Windows PowerShell, le terme *éléments* est utilisé pour désigner ce que vous voyez dans les lecteurs Windows PowerShell, comme les fichiers et les dossiers dans les lecteurs du système de fichiers, ainsi que les clés de Registre dans les lecteurs de Registre Windows PowerShell. Les applets de commande associées à l’utilisation de ces éléments comportent le mot **Item** dans leur intitulé.

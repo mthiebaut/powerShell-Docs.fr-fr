@@ -1,17 +1,16 @@
 ---
-ms.date: 2017-06-12
+ms.date: 2017-06-12T00:00:00.000Z
 contributor: manikb
 ms.topic: reference
 keywords: gallery,powershell,cmdlet,psget
 title: "Démarrage du fournisseur NuGet et de l’EXE"
-ms.openlocfilehash: e1a24c99910467b00b1c22d50125c81c63b077ed
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 0036972eb9a0c20469da1aadafe223e6ec80f16a
+ms.sourcegitcommit: a5c0795ca6ec9332967bff9c151a8572feb1a53a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/27/2017
 ---
-<a id="bootstrap-both-nuget-provider-and-nugetexe-or-bootstrap-only-nuget-provider" class="xliff"></a>
-# Démarrer le fournisseur NuGet et NuGet.exe ou démarrer uniquement le fournisseur NuGet
+# <a name="bootstrap-both-nuget-provider-and-nugetexe-or-bootstrap-only-nuget-provider"></a>Démarrer le fournisseur NuGet et NuGet.exe ou démarrer uniquement le fournisseur NuGet
 
 NuGet.exe n’est pas inclus dans le dernier fournisseur NuGet.
 Pour les opérations de publication d’un module ou d’un script, PowerShellGet nécessite la version binaire exécutable, NuGet.exe.
@@ -22,10 +21,9 @@ Si l’ordinateur n’est pas connecté à Internet, l’utilisateur ou administ
 
 >**Remarque** : à compter de la version 6, le fournisseur NuGet est inclus dans l’installation de PowerShell. [http://github.com/powershell/powershell](http://github.com/powershell/powershell)
 
-<a id="resolving-error-when-the-nuget-provider-has-not-been-installed-on-a-machine-that-is-internet-connected" class="xliff"></a>
-## Résolution des erreurs lorsque le fournisseur NuGet n’a pas été installé sur un ordinateur qui est connecté à Internet
+## <a name="resolving-error-when-the-nuget-provider-has-not-been-installed-on-a-machine-that-is-internet-connected"></a>Résolution des erreurs lorsque le fournisseur NuGet n’a pas été installé sur un ordinateur qui est connecté à Internet
 
-```PowerShell
+```powershell
 PS C:\> Find-Module -Repository PSGallery -Verbose -Name Contoso
 
 NuGet provider is required to continue
@@ -53,10 +51,9 @@ Version    Name                                Type       Repository           D
 -------    ----                                ----       ----------           -----------
 2.5        Contoso                             Module     PSGallery        Contoso module
 ```
-<a id="resolving-error-when-the-nuget-provider-is-available-and-nugetexe-is-not-available-during-the-publish-operation-on-a-machine-that-is-internet-connected" class="xliff"></a>
-## Résolution des erreurs lorsque le fournisseur NuGet est disponible et que NuGet.exe n’est pas disponible lors de l’opération de publication sur une machine connectée à Internet
+## <a name="resolving-error-when-the-nuget-provider-is-available-and-nugetexe-is-not-available-during-the-publish-operation-on-a-machine-that-is-internet-connected"></a>Résolution des erreurs lorsque le fournisseur NuGet est disponible et que NuGet.exe n’est pas disponible lors de l’opération de publication sur une machine connectée à Internet
 
-```PowerShell
+```powershell
 PS C:\> Publish-Module -Name Contoso -Repository PSGallery -Verbose
 
 NuGet.exe is required to continue
@@ -78,10 +75,9 @@ VERBOSE: Installing NuGet.exe.
 VERBOSE: Successfully published module 'Contoso' to the module publish location 'https://www.powershellgallery.com/api/v2/'. Please allow few minutes for 'Contoso' to show up in the search results.
 ```
 
-<a id="resolving-error-when-both-nuget-provider-and-nugetexe-are-not-available-during-the-publish-operation-on-a-machine-that-is-internet-connected" class="xliff"></a>
-## Résolution des erreurs lorsque ni le fournisseur NuGet ni NuGet.exe ne sont disponibles lors de l’opération de publication sur une machine connectée à Internet
+## <a name="resolving-error-when-both-nuget-provider-and-nugetexe-are-not-available-during-the-publish-operation-on-a-machine-that-is-internet-connected"></a>Résolution des erreurs lorsque ni le fournisseur NuGet ni NuGet.exe ne sont disponibles lors de l’opération de publication sur une machine connectée à Internet
 
-```PowerShell
+```powershell
 PS C:\> Publish-Module -Name Contoso -Repository PSGallery -Verbose
 
 NuGet.exe and NuGet provider are required to continue
@@ -105,8 +101,7 @@ VERBOSE: Installing NuGet.exe.
 VERBOSE: Successfully published module 'Contoso' to the module publish location 'https://www.powershellgallery.com/api/v2/'. Please allow few minutes for 'Contoso' to show up in the search results.
 ```
 
-<a id="manually-bootstrapping-the-nuget-provider-on-a-machine-that-is-not-connected-to-the-internet" class="xliff"></a>
-## Démarrage manuel du fournisseur NuGet sur un ordinateur qui n’est pas connecté à Internet
+## <a name="manually-bootstrapping-the-nuget-provider-on-a-machine-that-is-not-connected-to-the-internet"></a>Démarrage manuel du fournisseur NuGet sur un ordinateur qui n’est pas connecté à Internet
 
 Les processus détaillés ci-dessus supposent que l’ordinateur est connecté à Internet et peut télécharger des fichiers à partir d’un emplacement public.
 Si cela n’est pas possible, la seule option est de démarrer une machine en utilisant les processus ci-dessus et de copier manuellement le fournisseur sur le nœud isolé via un processus approuvé en mode hors connexion.
@@ -125,8 +120,7 @@ NuGet<br>
 
 Copiez ces dossiers et fichiers avec un processus approuvé sur les machines en mode hors connexion.
 
-<a id="manually-bootstrapping-nugetexe-to-support-publish-operations-on-a-machine-that-is-not-connected-to-the-internet" class="xliff"></a>
-## Démarrage manuel de NuGet.exe pour prendre en charge les opérations de publication sur un ordinateur qui n’est pas connecté à Internet
+## <a name="manually-bootstrapping-nugetexe-to-support-publish-operations-on-a-machine-that-is-not-connected-to-the-internet"></a>Démarrage manuel de NuGet.exe pour prendre en charge les opérations de publication sur un ordinateur qui n’est pas connecté à Internet
 
 Outre le processus de démarrage manuel du fournisseur NuGet, si la machine être utilisée pour publier des modules ou des scripts dans une galerie privée à l’aide des applets de commande *Publish-Module* ou *Publish-Script*, le fichier exécutable binaire NuGet.exe sera nécessaire.
 Le cas d’utilisation le plus courant pour ce scénario est lorsqu’une galerie privée est disponible pour prendre en charge un environnement isolé.

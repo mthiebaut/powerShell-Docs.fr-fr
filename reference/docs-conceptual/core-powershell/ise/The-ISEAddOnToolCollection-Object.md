@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,applet de commande
 title: Objet ISEAddOnToolCollection
 ms.assetid: 634eab89-0845-4016-974b-361b09bb8f7b
-ms.openlocfilehash: 09088c9e7307a26b86e82f2dc10d2648213c6bd2
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.openlocfilehash: ba8b4e0e3952226407f00dea8b32785633256089
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="the-iseaddontoolcollection-object"></a>Objet ISEAddOnToolCollection
   L’objet **ISEAddOnToolCollection** est une collection d’objets **ISEAddOnTool**. L’objet **$psISE.CurrentPowerShellTab.VerticalAddOnTools** en est un exemple.
@@ -25,7 +25,7 @@ ms.lasthandoff: 06/08/2017
 
  **\[IsVisible\]** : valeur booléenne facultative. Si la valeur définie est **$true**, l’outil complémentaire est immédiatement visible dans le volet d’outils associé.
 
-```PowerShell
+```powershell
 # Load a DLL with an add-on and then add it to the ISE
 [reflection.assembly]::LoadFile("c:\test\ISESimpleSolution\ISESimpleSolution.dll")
 $psISE.CurrentPowerShellTab.VerticalAddOnTools.Add("Solutions", [ISESimpleSolution.Solution], $true)
@@ -38,7 +38,7 @@ $psISE.CurrentPowerShellTab.VerticalAddOnTools.Add("Solutions", [ISESimpleSoluti
 
  **Item** : Microsoft.PowerShell.Host.ISE.ISEAddOnTool. Spécifie l’objet à supprimer de Windows PowerShell ISE.
 
-```PowerShell
+```powershell
 # Load a DLL with an add-on and then add it to the ISE
 [reflection.assembly]::LoadFile("c:\test\ISESimpleSolution\ISESimpleSolution.dll")
 $psISE.CurrentPowerShellTab.VerticalAddOnTools.Add("Solutions", [ISESimpleSolution.Solution], $true)
@@ -51,7 +51,7 @@ $psISE.CurrentPowerShellTab.VerticalAddOnTools.Add("Solutions", [ISESimpleSoluti
 
  **psTab** : Microsoft.PowerShell.Host.ISE.PowerShellTab. Onglet PowerShell à sélectionner.
 
-```PowerShell
+```powershell
       $newTab = $psISE.PowerShellTabs.Add()
 # Change the DisplayName of the new PowerShell tab. 
 $newTab.DisplayName="Brand New Tab"
@@ -64,7 +64,7 @@ $newTab.DisplayName="Brand New Tab"
 
  **psTab** : Microsoft.PowerShell.Host.ISE.PowerShellTab. Onglet PowerShell à supprimer.
 
-```PowerShell
+```powershell
 $newTab = $psISE.PowerShellTabs.Add()
 Change the DisplayName of the new PowerShell tab. 
 $newTab.DisplayName="This tab will go away in 5 seconds" 

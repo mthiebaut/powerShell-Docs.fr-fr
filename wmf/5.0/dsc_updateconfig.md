@@ -1,16 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 2017-06-12T00:00:00.000Z
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,configuration
-ms.openlocfilehash: 410fa4b6c6d3e2708da78414cbb9b80dd3ca1387
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: f2ddde78f436e6f03f521a9a8246dbda93e7a57a
+ms.sourcegitcommit: a5c0795ca6ec9332967bff9c151a8572feb1a53a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/27/2017
 ---
-<a id="on-demand-pull-of-dsc-configurations" class="xliff"></a>
-# Extraction à la demande des configurations DSC
+# <a name="on-demand-pull-of-dsc-configurations"></a>Extraction à la demande des configurations DSC
 
 La nouvelle applet de commande Update-DscConfiguration déclenche une extraction à partir des serveurs collecteurs définis dans la métaconfiguration. Ce comportement est souvent appelé « Extraire maintenant ». 
 
@@ -23,7 +22,7 @@ Une fois déclenchée, l’extraction se comporte exactement comme si elle avait
 
 **Remarque :** Si RefreshMode = ’Push’ pour la métaconfiguration, une erreur est retournée par cette applet de commande. Celle-ci ne fait donc jamais rien quand un nœud cible est en mode Push (par envoi).
 
-```PowerShell
+```powershell
 Update-DscConfiguration     [[-ComputerName] <string[]>] 
                             [-Wait]
                             [-Force] 

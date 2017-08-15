@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,applet de commande
 title: "Suppression d’objets du pipeline Where Object"
 ms.assetid: 01df8b22-2d22-4e2c-a18d-c004cd3cc284
 ms.openlocfilehash: 4140c4c3ebb26223d03ca139992fedf6e184a38b
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="removing-objects-from-the-pipeline-where-object"></a>Suppression d’objets du pipeline (Where-Object)
 Dans Windows PowerShell, vous générez et transmettez souvent à un pipeline plus d’objets que souhaité. Vous pouvez spécifier les propriétés d’objets particuliers à afficher à l’aide des applets de commande **Format**, mais cela ne résout pas le problème de la suppression d’objets entiers de l’affichage. Il se peut que vous souhaitiez filtrer des objets avant la fin d’un pipeline afin de pouvoir effectuer des actions uniquement sur un sous-ensemble des objets générés initialement.

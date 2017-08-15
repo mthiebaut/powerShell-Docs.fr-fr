@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,applet de commande
-title: Gestion de l&quot;emplacement actuel
+title: Gestion de l'emplacement actuel
 ms.assetid: a9f9e7a7-3ea8-47d3-bbb4-6e437f6d4a4a
 ms.openlocfilehash: 20b3828d12587e675ed51863e5d96c37839b62d6
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="managing-current-location"></a>Gestion de l'emplacement actuel
 Quand vous parcourez des systèmes de dossiers dans l'Explorateur de fichiers, vous disposez généralement d'un emplacement de travail spécifique, à savoir le dossier actuellement ouvert. Pour manipuler les éléments contenus dans le dossier actif, il vous suffit de cliquer dessus. Dans les interfaces de ligne de commande telles que Cmd.exe, quand vous vous trouvez dans le même dossier qu'un fichier particulier, vous pouvez accéder à ce fichier en spécifiant un nom relativement court, ce qui vous évite de préciser le chemin d'accès complet au fichier. Le répertoire actif est désigné sous le nom de « répertoire de travail ».

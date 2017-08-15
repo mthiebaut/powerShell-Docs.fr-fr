@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,applet de commande
 title: "Exécution de tâches de mise en réseau"
 ms.assetid: a43cc55f-70c1-45c8-9467-eaad0d57e3b5
 ms.openlocfilehash: 4d7a91595b9d9d637ce915be2c2be9c20879dd8b
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="performing-networking-tasks"></a>Exécution de tâches de mise en réseau
 TCP/IP étant le protocole réseau le plus utilisé, la plupart des tâches d’administration de protocole réseau de bas niveau impliquent TCP/IP. Dans cette section, nous utilisons Windows PowerShell et WMI pour effectuer ces tâches.

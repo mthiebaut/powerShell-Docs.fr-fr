@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,applet de commande
 title: "Collecte d’informations sur les ordinateurs"
 ms.assetid: 9e7b6a2d-34f7-4731-a92c-8b3382eb51bb
 ms.openlocfilehash: c0b7ec9ed7d2b07c66d2b1cf3342f971d71da481
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="collecting-information-about-computers"></a>Collecte d’informations sur les ordinateurs
 L’applet de commande **Get-WmiObject** est la plus importante pour les tâches générales de gestion du système. Tous les paramètres critiques du sous-système sont exposés via WMI. En outre, WMI traite les données en tant qu’objets figurant dans des collections d’un ou plusieurs éléments. Étant donné que Windows PowerShell fonctionne également avec des objets et dispose d’un pipeline permettant de traiter un ou plusieurs objets de la même façon, l’accès générique à WMI permet d’effectuer des tâches avancées sans grand effort.

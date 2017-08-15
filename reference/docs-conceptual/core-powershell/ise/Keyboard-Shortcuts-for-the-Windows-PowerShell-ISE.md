@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,applet de commande
 title: Raccourcis clavier pour Windows PowerShell ISE
 ms.assetid: 8328b946-0f02-4ef4-ac28-2743a1b4043b
 ms.openlocfilehash: 21c4b43b1ab94e2b533413362319ec42ac8a15aa
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Raccourcis clavier pour Windows PowerShell ISE
 Pour effectuer des actions dans l’environnement d’écriture de scripts intégré de Windows PowerShell®, utilisez les raccourcis clavier suivants. Windows PowerShell ISE est intégré aux systèmes d’exploitation Windows Server et Windows Client, mais peut également être installé sur certains systèmes d’exploitation Windows plus anciens comme composant du [package de téléchargement de Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881).

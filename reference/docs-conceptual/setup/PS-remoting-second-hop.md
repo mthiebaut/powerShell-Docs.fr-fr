@@ -1,12 +1,12 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,applet de commande
 title: "Effectuer le deuxième saut dans la communication à distance PowerShell"
 ms.openlocfilehash: 620d78987fea86ac38d2b376926d0a5cefe59721
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="making-the-second-hop-in-powershell-remoting"></a>Effectuer le deuxième saut dans la communication à distance PowerShell
 

@@ -1,22 +1,20 @@
 ---
-ms.date: 2017-06-12
+ms.date: 2017-06-12T00:00:00.000Z
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,configuration
 title: "Nouveaux scénarios et fonctionnalités dans WMF 5.1"
-ms.openlocfilehash: 02c27711c886916da56bb382b1bc0187f1e30805
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 7340fb38a2f6992bb922a81ee2227754252899d7
+ms.sourcegitcommit: a5c0795ca6ec9332967bff9c151a8572feb1a53a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/27/2017
 ---
-<a id="new-scenarios-and-features-in-wmf-51" class="xliff"></a>
-# Nouveaux scénarios et fonctionnalités dans WMF 5.1 #
+# <a name="new-scenarios-and-features-in-wmf-51"></a>Nouveaux scénarios et fonctionnalités dans WMF 5.1 #
 
 > Remarque : Ces informations sont préliminaires et susceptibles d’être modifiées.
 
-<a id="powershell-editions" class="xliff"></a>
-## Éditions de PowerShell ##
+## <a name="powershell-editions"></a>Éditions de PowerShell ##
 À compter de la version 5.1, PowerShell est disponible dans différentes éditions qui indiquent la compatibilité de la plateforme et les différents ensembles de fonctionnalités.
 
 - **Desktop Edition :** basée sur le .NET Framework, elle fournit la compatibilité avec les scripts et les modules qui ciblent des versions de PowerShell exécutées sur des éditions complètes de Windows telles que Server Core et Windows Desktop.
@@ -28,18 +26,16 @@ ms.lasthandoff: 06/12/2017
 - [Filtrer les résultats de Get-Module par CompatiblePSEditions]()
 - [Empêcher l’exécution des scripts, sauf en cas d’exécution sur une édition compatible de PowerShell]()
 
-<a id="catalog-cmdlets" class="xliff"></a>
-## Applets de commande de catalogue  
+## <a name="catalog-cmdlets"></a>Applets de commande de catalogue  
 
 Deux nouvelles applets de commande ont été ajoutées au module [Microsoft.PowerShell.Security](https://technet.microsoft.com/en-us/library/hh847877.aspx) pour générer et valider des fichiers catalogue Windows.  
 
-<a id="new-filecatalog" class="xliff"></a>
-###New-FileCatalog 
+###<a name="new-filecatalog"></a>New-FileCatalog 
 --------------------------------
 
 New-FileCatalog crée un fichier catalogue Windows pour un ensemble de dossiers et de fichiers. Ce fichier catalogue contient des hachages pour tous les fichiers dans les chemins spécifiés. Les utilisateurs peuvent distribuer l’ensemble des dossiers ainsi que le fichier catalogue correspondant représentant ces dossiers. Ces informations sont utiles pour vérifier si des modifications ont été apportées aux dossiers depuis l’heure de création du catalogue.    
 
-```PowerShell
+```powershell
 New-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-CatalogVersion <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 Les versions de catalogues 1 et 2 sont prises en charge. La version 1 utilise l’algorithme de hachage SHA1 pour créer des fichiers à hacher et la version 2 utilise SHA256. La version de catalogue 2 n’est pas prise en charge sur *Windows Server 2008 R2* ni *Windows 7*. Vous devez utiliser la version de catalogue 2 sur *Windows 8*, *Windows Server 2012* et les systèmes d’exploitation ultérieurs.  
@@ -55,13 +51,12 @@ Le fichier catalogue est ainsi créé.
 Pour vérifier l’intégrité du fichier catalogue (Pester.cat dans l’exemple ci-dessus), signez-le à l’aide de l’applet de commande [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx).   
 
 
-<a id="test-filecatalog" class="xliff"></a>
-###Test-FileCatalog 
+###<a name="test-filecatalog"></a>Test-FileCatalog 
 --------------------------------
 
 Test-FileCatalog valide le catalogue qui représente un ensemble de dossiers. 
 
-```PowerShell
+```powershell
 Test-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-Detailed] [-FilesToSkip <string[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -70,8 +65,7 @@ Test-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-Detailed] [-
 Cette applet de commande compare tous les fichiers à hacher et leurs chemins relatifs qui figurent dans le *catalogue* à ceux sur le *disque*. Si elle détecte une incompatibilité entre les fichiers à hacher et les chemins, elle retourne le statut *ValidationFailed*. Les utilisateurs peuvent récupérer toutes ces informations à l’aide du paramètre *-Detailed*. Elle affiche également le statut de signature du catalogue dans la propriété *Signature*, ce qui revient à appeler l’applet de commande [Get-AuthenticodeSignature](https://technet.microsoft.com/en-us/library/hh849805.aspx) sur le fichier catalogue. Les utilisateurs peuvent également ignorer des fichiers lors de la validation à l’aide du paramètre *-FilesToSkip*. 
 
 
-<a id="module-analysis-cache" class="xliff"></a>
-## Cache d’analyse de module ##
+## <a name="module-analysis-cache"></a>Cache d’analyse de module ##
 À compter de la version 5.1, PowerShell fournit le contrôle suivant sur le fichier utilisé pour mettre en cache les données relatives à un module, comme les commandes qu’il exporte.
 
 Par défaut, ce cache est stocké dans le fichier `${env:LOCALAPPDATA}\Microsoft\Windows\PowerShell\ModuleAnalysisCache`.
@@ -79,27 +73,26 @@ Le cache est normalement lu au démarrage lors de la recherche d’une commande,
 
 Pour modifier l’emplacement par défaut du cache, définissez la variable d’environnement `$env:PSModuleAnalysisCachePath` avant de démarrer PowerShell. Les modifications apportées à cette variable d’environnement affectent uniquement les processus enfants. La valeur doit nommer un chemin complet (y compris le nom de fichier) où PowerShell est autorisé à créer et à écrire des fichiers. Pour désactiver le cache de fichiers, vous pouvez affecter à cette valeur un emplacement non valide, par exemple :
 
-```PowerShell
+```powershell
 $env:PSModuleAnalysisCachePath = 'nul'
 ```
 
 Cela définit un appareil non valide comme chemin. Si PowerShell ne peut pas écrire dans le chemin, aucune erreur n’est retournée, mais vous pouvez observer la présence d’une erreur signalée à l’aide d’un suivi :
 
-```PowerShell
+```powershell
 Trace-Command -PSHost -Name Modules -Expression { Import-Module Microsoft.PowerShell.Management -Force }
 ```
 
 Lors de l’écriture du cache, PowerShell recherche les modules qui n’existent plus pour éviter que le cache ne devienne volumineux inutilement.
 Parfois, ces contrôles ne sont pas souhaitables, auquel cas vous pouvez les désactiver en définissant ce qui suit :
 
-```PowerShell
+```powershell
 $env:PSDisableModuleAnalysisCacheCleanup = 1
 ```
 
 Cette variable d’environnement prend effet immédiatement dans le processus actif.
 
-<a id="specifying-module-version" class="xliff"></a>
-##Spécification de la version de module
+##<a name="specifying-module-version"></a>Spécification de la version de module
 
 Dans WMF 5.1, `using module` se comporte de la même façon que les autres constructions liées aux modules dans PowerShell. Auparavant, vous n’aviez aucun moyen de spécifier une version de module particulière. Si plusieurs versions étaient présentes, une erreur se produisait.
 
@@ -113,8 +106,7 @@ Dans WMF 5.1 :
 * S’il existe plusieurs versions du module, PowerShell utilise la **même logique de résolution** que `Import-Module` et ne retourne pas d’erreur (même comportement que `Import-Module` et `Import-DscResource`).
 
 
-<a id="improvements-to-pester" class="xliff"></a>
-##Améliorations apportées à Pester
+##<a name="improvements-to-pester"></a>Améliorations apportées à Pester
 Dans WMF 5.1, la version de Pester qui est fournie avec PowerShell a été mise à jour de la version 3.3.5 vers 3.4.0, avec l’ajout de la validation https://github.com/pester/Pester/pull/484/commits/3854ae8a1f215b39697ac6c2607baf42257b102e, ce qui permet à Pester de mieux se comporter sur Nano Server. 
 
 Vous pouvez passer en revue les modifications dans les versions 3.3.5 à 3.4.0 en examinant le fichier ChangeLog.md situé sur https://github.com/pester/Pester/blob/master/CHANGELOG.md

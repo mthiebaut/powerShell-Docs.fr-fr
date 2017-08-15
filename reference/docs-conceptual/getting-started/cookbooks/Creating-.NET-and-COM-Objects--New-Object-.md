@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,applet de commande
 title: "Création d’objets .NET et COM New Object"
 ms.assetid: 2057b113-efeb-465e-8b44-da2f20dbf603
 ms.openlocfilehash: 534e1a9a759d67cfc62ce658a7abddf02f767212
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="creating-net-and-com-objects-new-object"></a>Création d’objets .NET et COM (New-Object)
 Il existe des composants logiciels avec des interfaces COM et .NET Framework, qui vous permettent d’effectuer de nombreuses tâches d’administration système. Windows PowerShell permet d’utiliser ces composants. Vous n’êtes donc pas limité aux tâches exécutables à l’aide d’applets de commande. La plupart des applets de commande dans la version initiale de Windows PowerShell ne fonctionnent pas sur des ordinateurs distants. Nous allons expliquer comment contourner cette limitation lors de la gestion des journaux des événements à l’aide de la classe .NET Framework **System.Diagnostics.EventLog** directement à partir de Windows PowerShell.

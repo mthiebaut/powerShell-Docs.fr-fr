@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,applet de commande
 title: Comment utiliser des profils dans Windows PowerShell ISE
 ms.assetid: 0219626a-6da5-4acc-b630-d058e8b29cc6
-ms.openlocfilehash: 45d0187504ff2dc8f45824bf50aad39e55f7a224
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.openlocfilehash: 97fe9d241fa8a33e0c9b798a7408f06e3381530d
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="how-to-use-profiles-in-windows-powershell-ise"></a>Comment utiliser des profils dans Windows PowerShell ISE
 Cette rubrique explique comment utiliser des profils dans l’environnement d’écriture de scripts intégré de Windows PowerShell®. Avant d’effectuer les tâches décrites dans cette section, nous vous recommandons de consulter [about_Profiles [v4]](https://technet.microsoft.com/library/e1d9e30a-70cc-4f36-949f-fc7cd96b4054(v=wps.630)) ou, dans le volet Console, tapez `Get-Help about_Profiles` et appuyez sur **Entrée**.
@@ -38,28 +38,28 @@ Les éléments suivants sont des profils qui peuvent être créés et utilisés 
 ## <a name="to-create-a-new-profile"></a>Pour créer un profil
 Pour créer un profil « Utilisateur actuel, Windows PowerShell ISE », exécutez la commande suivante :
 
-```PowerShell
+```powershell
 if (!(Test-Path -Path $PROFILE )) 
 { New-Item -Type File -Path $PROFILE -Force }
 ```
 
 Pour créer un profil « Tous les utilisateurs, Windows PowerShell ISE », exécutez la commande suivante :
 
-```PowerShell
+```powershell
 if (!(Test-Path -Path $PROFILE.AllUsersCurrentHost)) 
 { New-Item -Type File -Path $PROFILE.AllUsersCurrentHost -Force }
 ```
 
 Pour créer un profil « Utilisateur actuel, Tous les ordinateurs hôtes », exécutez la commande suivante :
 
-```PowerShell
+```powershell
 if (!(Test-Path -Path $PROFILE.CurrentUserAllHosts)) 
 { New-Item -Type File -Path $PROFILE.CurrentUserAllHosts -Force }
 ```
 
 Pour créer un profil « Tous les utilisateurs, Tous les ordinateurs hôtes », tapez :
 
-```PowerShell
+```powershell
 if (!(Test-Path -Path $PROFILE.AllUsersAllHosts)) 
 { New-Item -Type File -Path $PROFILE.AllUsersAllHosts -Force }
 ```

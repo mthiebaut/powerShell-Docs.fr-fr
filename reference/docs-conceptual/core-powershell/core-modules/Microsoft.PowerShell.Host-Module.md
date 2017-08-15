@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,applet de commande
 title: Module Microsoft.PowerShell.Host
 ms.assetid: 580a896f-b1dc-46f9-af1d-ab1a93c1fbf4
 ms.openlocfilehash: 18229db227d0cbcc2172b5b70d616659f5fc05b6
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="microsoftpowershellhost-module"></a>Module Microsoft.PowerShell.Host
 Cette section contient les rubriques d’aide pour le module **Microsoft.PowerShell.Host**. Le module **Microsoft.PowerShell.Host** contient des applets de commande permettant de gérer les fonctionnalités de programmes qui hébergent Windows PowerShell. Il est installé avec Windows PowerShell.

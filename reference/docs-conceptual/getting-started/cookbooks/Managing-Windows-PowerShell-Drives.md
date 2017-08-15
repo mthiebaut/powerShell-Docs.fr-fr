@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,applet de commande
 title: Gestion des lecteurs Windows PowerShell
 ms.assetid: bd809e38-8de9-437a-a250-f30a667d11b4
 ms.openlocfilehash: 92fa70785bcaeac2bd75a5ada91f3adff4fa10eb
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="managing-windows-powershell-drives"></a>Gestion des lecteurs Windows PowerShell
 Un *lecteur Windows PowerShell* est un emplacement de magasin de données auquel vous pouvez accéder, au même titre qu’un lecteur du système de fichiers dans Windows PowerShell. Les fournisseurs Windows PowerShell créent pour vous certains lecteurs, comme les lecteurs du système de fichiers (y compris C: et D:), les lecteurs de Registre (HKCU: et HKLM:) et le lecteur de certificat (Cert:). Vous pouvez également créer vos propres lecteurs Windows PowerShell. Ces lecteurs sont très utiles, mais ils ne sont disponibles que dans Windows PowerShell. Vous ne pouvez pas y accéder à l'aide d'autres outils Windows, tels que l'Explorateur de fichiers ou Cmd.exe.

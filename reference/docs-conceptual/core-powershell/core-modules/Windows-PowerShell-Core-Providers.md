@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,applet de commande
 title: Fournisseurs Windows PowerShell Core
 ms.assetid: 6e24bf6d-4c70-4edf-956a-1e8e4779ba10
 ms.openlocfilehash: fdfdfee86884d3ac18a33ac424828faa96ecd8bd
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="windows-powershell-core-providers"></a>Fournisseurs Windows PowerShell Core
 Cette section contient des rubriques d’aide qui décrivent les fournisseurs Windows PowerShell dans le module **Microsoft.PowerShell.Core**.

@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,applet de commande
 title: Utilisation de noms de commande familiers
 ms.assetid: 021e2424-c64e-4fa5-aa98-aa6405758d5d
 ms.openlocfilehash: 5e72e721bdb9d48684092344a0169907e7e25d40
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="using-familiar-command-names"></a>Utilisation de noms de commande familiers
 Grâce à ce qu’on appelle des *alias*, Windows PowerShell permet aux utilisateurs de faire référence aux commandes par d’autres noms. Les alias permettent aux utilisateurs ayant l’expérience d’autres interpréteurs de commande (shells) de réutiliser des noms de commandes communes qu’ils connaissent déjà pour effectuer des opérations similaires dans Windows PowerShell. Bien que nous ne décrivions pas ici les alias Windows PowerShell en détail, vous pouvez toujours vous en servir lorsque vous commencez à utiliser Windows PowerShell.

@@ -1,17 +1,16 @@
 ---
-ms.date: 2017-06-12
+ms.date: 2017-06-12T00:00:00.000Z
 author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: "Spécification de dépendances entre nœuds"
-ms.openlocfilehash: dcdf9f8ef4b74d23bd083767db2cc4aafc0ee83b
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 885c130fb050629aac4c072e18a147d77b9deb8f
+ms.sourcegitcommit: a5c0795ca6ec9332967bff9c151a8572feb1a53a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/27/2017
 ---
-<a id="specifying-cross-node-dependencies" class="xliff"></a>
-# Spécification de dépendances entre nœuds
+# <a name="specifying-cross-node-dependencies"></a>Spécification de dépendances entre nœuds
 
 > S’applique à : Windows PowerShell 5.0
 
@@ -21,8 +20,7 @@ DSC fournit des ressources spéciales, **WaitForAll**, **WaitForAny** et **WaitF
 * **WaitForAny** : réussit si la ressource spécifiée est dans l’état souhaité sur au moins l’un des nœuds cibles définis dans la propriété **NodeName**.
 * **WaitForSome** : spécifie une propriété **NodeCount** en plus d’une propriété **NodeName**. La ressource réussit si elle est dans l’état souhaité sur un nombre minimal de nœuds (spécifié par **NodeCount**) défini par la propriété **NodeName**. 
 
-<a id="using-waitforxxxx-resources" class="xliff"></a>
-## Utilisation de ressources WaitForXXXX
+## <a name="using-waitforxxxx-resources"></a>Utilisation de ressources WaitForXXXX
 
 Pour utiliser les ressources **WaitForXXXX**, vous créez un bloc de ressources du type de ressource qui spécifie la ressource DSC et les nœuds à attendre. Vous utilisez ensuite la propriété **DependsOn** dans tous les autres blocs de ressources dans votre configuration pour attendre que les conditions spécifiées dans le nœud **WaitForXXXX** réussissent.
 
@@ -34,7 +32,7 @@ Configuration JoinDomain
 {
     Import-DscResource -Module xComputerManagement, xActiveDirectory
 
-    Node myPC
+    Node myDC
     {
         WindowsFeature InstallAD
         {
@@ -78,8 +76,7 @@ Configuration JoinDomain
 
 >**Remarque** : Par défaut les ressources WaitForXXX effectuent une tentative, puis échouent. Même si ce n’est pas obligatoire, vous indiquez généralement un intervalle avant nouvelle tentative et un nombre.
 
-<a id="see-also" class="xliff"></a>
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 * [Configurations DSC](configurations.md)
 * [Ressources DSC](resources.md)
 * [Configuration du Gestionnaire de configuration local](metaConfig.md)

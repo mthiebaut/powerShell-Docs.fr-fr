@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,applet de commande
 title: Module PSWorkflowUtility
 ms.assetid: c62a363a-caa2-4b6e-a079-d6e8543bc4c6
 ms.openlocfilehash: 2b3fd8227cc5ef3bde5c9b1c253cf0b27602139b
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="psworkflowutility-module"></a>Module PSWorkflowUtility
 Cette section contient les rubriques d’aide pour le module **PSWorkflowUtility**. Celui-ci comprend des commandes qui permettent de gérer la fonctionnalité de workflow Windows PowerShell. Le module **PSWorkflowUtility** est installé avec Windows PowerShell.

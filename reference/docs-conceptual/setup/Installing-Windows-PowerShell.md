@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,applet de commande
 title: Installation de Windows PowerShell
 ms.assetid: 6fbb0409-5a54-48ec-95e6-7f8b7d8c4969
 ms.openlocfilehash: 2b4cdec52dfc98649a81ab2265a204fcdb0bd8d7
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="installing-windows-powershell"></a>Installation de Windows PowerShell
 Windows® 8 et Windows Server® 2012 incluent Windows PowerShell 3.0 et tous ses composants requis. Le système inclut également le moteur Windows PowerShell 2.0 pour offrir la compatibilité descendante avec les programmes hôtes qui ne peuvent pas utiliser Windows PowerShell 3.0.

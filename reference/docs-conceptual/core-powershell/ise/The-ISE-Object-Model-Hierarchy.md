@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,applet de commande
 title: "Hiérarchie du modèle objet ISE"
 ms.assetid: bc3300e4-9c17-4f00-a621-c8867126e3b3
 ms.openlocfilehash: 0d0370ed9f64464038e643ae2cd241891fa74f33
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="the-ise-object-model-hierarchy"></a>Hiérarchie du modèle objet ISE
   Cette rubrique présente la hiérarchie des objets qui font partie de l’environnement d’écriture de scripts intégré de Windows PowerShell (ISE). Windows PowerShell ISE est inclus dans Windows PowerShell 3.0 et Windows PowerShell 4.0. Cliquez sur un objet pour accéder à la documentation de référence de la classe qui définit l’objet.

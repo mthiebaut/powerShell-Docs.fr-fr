@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,applet de commande
 title: "Utilisation de Windows PowerShell pour l’administration"
 ms.assetid: db6334ec-ace6-436d-ab88-77aefc817511
 ms.openlocfilehash: fa87745b9be04d14de37a308d870b73c5a98cf83
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="using-windows-powershell-for-administration"></a>Utilisation de Windows PowerShell pour l’administration
 L’objectif fondamental de Windows PowerShell est d’améliorer et de faciliter le contrôle administratif des systèmes, soit de façon interactive, ou à l’aide de scripts. Ce chapitre décrit des solutions à de nombreux problèmes spécifiques liés à l’administration de systèmes Windows avec Windows PowerShell. Bien que nous n’ayons pas évoqué les scripts ou fonctions dans le Guide de l’utilisateur de Windows PowerShell, les solutions peuvent être utilisées à partir de scripts ou en tant que fonctions ultérieurement. Nous allons montrer des exemples incluant des fonctions dans le cadre de solutions visant à résoudre des problèmes.

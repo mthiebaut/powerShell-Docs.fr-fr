@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,applet de commande
 title: Utilisation de fichiers et dossiers
 ms.assetid: c0ceb96b-e708-45f3-803b-d1f61a48f4c1
 ms.openlocfilehash: 73773df9f018c396c9c4237a40f2e9d2c841464e
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="working-with-files-and-folders"></a>Utilisation de fichiers et dossiers
 La navigation dans des lecteurs Windows PowerShell et la manipulation des éléments qu’ils contiennent sont similaires à la manipulation de fichiers et dossiers sur des lecteurs de disques physiques Windows. Cette section explique comment effectuer certaines tâches de manipulation de fichiers et dossiers.

@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,applet de commande
 title: Utilisation des installations de logiciels
 ms.assetid: 51a12fe9-95f6-4ffc-81a5-4fa72a5bada9
 ms.openlocfilehash: 2078376a8be19c9ff8ecc44183eb89f14bc388ed
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="working-with-software-installations"></a>Utilisation des installations de logiciels
 Les applications conçues pour utiliser Windows Installer sont accessibles via la classe WMI **Win32_Product**. Toutefois, certaines applications ne font pas appel à Windows Installer. Étant donné que Windows Installer offre la plus vaste palette de techniques standard associées aux applications installables, nous allons examiner principalement ces applications. En général, les applications qui utilisent d'autres routines d'installation ne sont pas gérées par Windows Installer. Les techniques spécifiques à employer avec ces applications dépendent du programme d'installation et des décisions prises par le développeur de l'application.

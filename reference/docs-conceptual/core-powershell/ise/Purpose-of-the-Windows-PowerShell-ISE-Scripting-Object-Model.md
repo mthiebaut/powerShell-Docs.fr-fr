@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,applet de commande
 title: "Objectif du modèle objet de script Windows PowerShell ISE"
 ms.assetid: d176a131-ab0c-43ee-80c1-f824ab8e4a05
 ms.openlocfilehash: 65535948d681ec63c6cc36583c6d145cfa19b937
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="purpose-of-the-windows-powershell-ise-scripting-object-model"></a>Objectif du modèle objet de script Windows PowerShell ISE
   Les objets sont associés aux forme et fonction de Windows PowerShell Integrated Scripting Environment (ISE). La référence du modèle objet fournit des détails sur les propriétés et méthodes membres exposées par ces objets. Des exemples sont fournis pour montrer comment vous pouvez utiliser des scripts pour accéder directement à ces méthodes et propriétés. Le modèle objet de script facilite l’éventail des tâches suivantes.
