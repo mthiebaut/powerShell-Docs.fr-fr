@@ -3,13 +3,12 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "résolution des problèmes d’accès dans Accès Web Windows PowerShell"
 ms.openlocfilehash: c10e19b177110ff62d44f28b6a523380b55b79e0
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
-<a id="troubleshooting-access-problems-in-windows-powershell-web-access" class="xliff"></a>
-#  Résolution des problèmes d’accès dans Accès Web Windows PowerShell
+#  <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Résolution des problèmes d’accès dans Accès Web Windows PowerShell
 
 Mise à jour : 24 juin 2013
 
@@ -68,7 +67,7 @@ Le tableau suivant identifie certains problèmes courants que les utilisateurs p
 <td><p>Si l’ordinateur de destination est membre d’un groupe de travail, utilisez la syntaxe suivante pour fournir votre nom d’utilisateur et vous connecter à l’ordinateur : &lt;<em>nom_groupe_de_travail</em>&gt;\&lt;<em>nom_utilisateur</em>&gt;</p></td>
 </tr>
 <tr class="even">
-<td><p>Impossible de trouver les outils de gestion de serveur Web (IIS) bien que le rôle ait été installé</p></td>
+<td><p>Impossible de trouver les outils de gestion de serveur web (IIS) bien que le rôle ait été installé</p></td>
 <td><p>Si vous avez installé Accès Web Windows PowerShell à l’aide de l’applet de commande <span class="code">Install-WindowsFeature</span>, les outils de gestion ne sont pas installés, sauf si le paramètre <span class="code">IncludeManagementTools</span> est ajouté à l’applet de commande. Pour obtenir un exemple, consultez « Pour installer Accès Web Windows PowerShell à l’aide des applets de commande Windows PowerShell » dans <a href="https://technet.microsoft.com/en-us/library/hh831611(v=ws.11).aspx">Installer et utiliser Accès Web Windows PowerShell</a>. Vous pouvez ajouter la console du Gestionnaire des services Internet et d’autres outils de gestion IIS dont vous avez besoin en sélectionnant les outils dans une session de l’Assistant Ajout de rôles et de fonctionnalités qui cible le serveur de passerelle. Vous pouvez ouvrir l’Assistant Ajout de rôles et de fonctionnalités à partir du Gestionnaire de serveur.</p></td>
 </tr>
 <tr class="odd">
@@ -132,8 +131,9 @@ Le tableau suivant identifie certains problèmes courants que les utilisateurs p
 </tbody>
 </table>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Voir aussi</span></a>
-<a href="/en-us/library/dn282395(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="
+Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Voir aussi</span></a>
+<a href="/en-us/library/dn282395(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Cliquez avec le bouton droit pour copier et partager le lien de cette section"></a>
 
 ------------------------------------------------------------------------
 

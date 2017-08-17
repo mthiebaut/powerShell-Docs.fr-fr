@@ -3,13 +3,12 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell"
 ms.openlocfilehash: 706830f618173879185f5b84570fdc7782434d59
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
-<a id="authorization-rules-and-security-features-of-windows-powershell-web-access" class="xliff"></a>
-# Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell
+# <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell
 
 Mise à jour : 24 juin 2013
 
@@ -36,7 +35,7 @@ Les règles d’authentification Accès Web Windows PowerShell sont des règles 
 </colgroup>
 <thead>
 <tr class="header">
-<th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC17938.jpeg" title="System_CAPS_security" alt="System_CAPS_security" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-security" /></span><span class="alertTitle"> Remarque sur la sécurité </span></th>
+<th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC17938.jpeg" title="System_CAPS_security" alt="System_CAPS_security" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-security" /></span><span class="alertTitle"> Note de sécurité </span></th>
 </tr>
 </thead>
 <tbody>
@@ -112,7 +111,7 @@ Pour plus d’informations sur la configuration de règles d’autorisation, con
 <a href="" id="BKMK_sec"></a>
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Sécurité</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Sécurité</span></a>
 
 ------------------------------------------------------------------------
 
@@ -136,10 +135,10 @@ Le tableau suivant décrit les quatre couches de sécurité entre les utilisateu
 <tbody>
 <tr class="odd">
 <td><p>1</p></td>
-<td><p>Fonctionnalités de sécurité du serveur Web (IIS), telles que l’authentification des certificats clients</p></td>
-<td><p>Les utilisateurs d’Accès Web Windows PowerShell doivent toujours fournir un nom d’utilisateur et un mot de passe pour authentifier leurs comptes sur la passerelle. Toutefois, les administrateurs d’Accès Web Windows PowerShell peuvent également activer ou désactiver une authentification de certificat client facultatif (voir l’étape 10 de la procédure « Pour configurer la passerelle dans un site web existant à l’aide du Gestionnaire des services Internet » dans <a href="https://technet.microsoft.com/en-us/library/hh831611(v=ws.11).aspx">Installer et utiliser Accès Web Windows PowerShell</a>). Pour la fonctionnalité de certificat client facultatif, les utilisateurs doivent posséder un certificat client valide en plus de leur nom d’utilisateur/mot de passe. Cette fonctionnalité fait partie de la configuration du serveur Web (IIS). Quand la couche du certificat client est activée, la page de connexion à Accès Web Windows PowerShell invite les utilisateurs à fournir des certificats valides avant d’évaluer leurs informations d’identification de connexion. L’authentification de certificat client vérifie automatiquement la présence du certificat client.</p>
+<td><p>Fonctionnalités de sécurité du serveur web (IIS), telles que l’authentification des certificats clients</p></td>
+<td><p>Les utilisateurs d’Accès Web Windows PowerShell doivent toujours fournir un nom d’utilisateur et un mot de passe pour authentifier leurs comptes sur la passerelle. Toutefois, les administrateurs d’Accès Web Windows PowerShell peuvent également activer ou désactiver une authentification de certificat client facultatif (voir l’étape 10 de la procédure « Pour configurer la passerelle dans un site web existant à l’aide du Gestionnaire des services Internet » dans <a href="https://technet.microsoft.com/en-us/library/hh831611(v=ws.11).aspx">Installer et utiliser Accès Web Windows PowerShell</a>). Pour la fonctionnalité de certificat client facultatif, les utilisateurs doivent posséder un certificat client valide en plus de leur nom d’utilisateur/mot de passe. Cette fonctionnalité fait partie de la configuration du serveur web (IIS). Quand la couche du certificat client est activée, la page de connexion à Accès Web Windows PowerShell invite les utilisateurs à fournir des certificats valides avant d’évaluer leurs informations d’identification de connexion. L’authentification de certificat client vérifie automatiquement la présence du certificat client.</p>
 <p>Si aucun certificat valide n’est trouvé, Accès Web Windows PowerShell en informe les utilisateurs, pour qu’ils puissent fournir ce certificat. Si un certificat client valide est trouvé, Accès Web Windows PowerShell ouvre la page de connexion pour que les utilisateurs indiquent leur nom d’utilisateur et leur mot de passe.</p>
-<p>Il s’agit d’un exemple de paramètres de sécurité supplémentaires offerts par le serveur Web (IIS). Pour plus d’informations sur d’autres fonctionnalités de sécurité IIS, consultez <a href="https://technet.microsoft.com/library/cc731278(ws.10).aspx">Configurer la sécurité du serveur Web (IIS 7)</a>.</p></td>
+<p>Il s’agit d’un exemple de paramètres de sécurité supplémentaires offerts par le serveur web (IIS). Pour plus d’informations sur d’autres fonctionnalités de sécurité IIS, consultez <a href="https://technet.microsoft.com/library/cc731278(ws.10).aspx">Configurer la sécurité du serveur web (IIS 7)</a>.</p></td>
 </tr>
 <tr class="even">
 <td><p>2</p></td>
@@ -165,10 +164,13 @@ Le tableau suivant décrit les quatre couches de sécurité entre les utilisateu
 </tbody>
 </table>
 
-<a href="" id="BKMK_configrules"></a>
+<a href="" id="BKMK_configrules">
+
+</a>
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Configuration des règles d’autorisation</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="
+Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Configuration des règles d’autorisations</span></a>
 
 ------------------------------------------------------------------------
 
@@ -194,8 +196,7 @@ Les applets de commande d’Accès Web Windows PowerShell prennent en charge un 
 </tbody>
 </table>
 
-<a id="to-add-a-restrictive-authorization-rule" class="xliff"></a>
-#### Pour ajouter une règle d’autorisation restrictive
+#### <a name="to-add-a-restrictive-authorization-rule"></a>Pour ajouter une règle d’autorisation restrictive
 
 1.  Effectuez une des opérations suivantes pour ouvrir une session Windows PowerShell avec des droits utilisateur élevés.
 
@@ -219,8 +220,7 @@ Les applets de commande d’Accès Web Windows PowerShell prennent en charge un 
 
 4.  Vérifiez que la règle a été créée en exécutant l’applet de commande **Get-PswaAuthorizationRule** ou **Test-PswaAuthorizationRule -UserName &lt;domain\\user | computer\\user&gt; -ComputerName** &lt;nom_ordinateur&gt;. Par exemple, **Test-PswaAuthorizationRule -UserName Contoso\\JSmith -ComputerName Contoso_214**.
 
-<a id="to-remove-an-authorization-rule" class="xliff"></a>
-#### Pour supprimer une règle d’autorisation
+#### <a name="to-remove-an-authorization-rule"></a>Pour supprimer une règle d’autorisation
 
 1.  Si aucune session Windows PowerShell n’est déjà ouverte, consultez l’étape 1 de la procédure [Pour ajouter une règle d’autorisation restrictive](#BKMK_arar) dans cette section.
 
@@ -248,10 +248,12 @@ Les applets de commande d’Accès Web Windows PowerShell prennent en charge un 
     </tbody>
     </table>
 
-<a href="" id="BKMK_others"></a>
+<a href="" id="BKMK_others">
+</a>
 ####
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Autres exemples de scénarios de règles d’autorisation</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="
+Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Autres exemples de scénarios de règles d’autorisation</span></a>
 
 ------------------------------------------------------------------------
 
@@ -271,7 +273,7 @@ Chaque session Windows PowerShell utilise une configuration de session ; si auc
     </colgroup>
     <thead>
     <tr class="header">
-    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC17938.jpeg" title="System_CAPS_security" alt="System_CAPS_security" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-security" /></span><span class="alertTitle"> Remarque sur la sécurité </span></th>
+    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC17938.jpeg" title="System_CAPS_security" alt="System_CAPS_security" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-security" /></span><span class="alertTitle"> Note de sécurité </span></th>
     </tr>
     </thead>
     <tbody>
@@ -313,7 +315,7 @@ Chaque session Windows PowerShell utilise une configuration de session ; si auc
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Utilisation d’un seul jeu de règles d’autorisation pour plusieurs sites</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Utilisation d’un seul jeu de règles d’autorisation pour plusieurs sites</span></a>
 
 ------------------------------------------------------------------------
 
@@ -323,18 +325,18 @@ Le chemin du fichier XML des règles d’autorisation est stocké dans le fichie
 
 <a href="" id="BKMK_sesmgmt"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Gestion des sessions</span></a>
-<a href="/en-us/library/dn282394(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Gestion des sessions</span></a>
+<a href="/en-us/library/dn282394(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Cliquez avec le bouton droit pour copier et partager le lien de cette section"></a>
 
 ------------------------------------------------------------------------
 
 Par défaut, Accès Web Windows PowerShell limite un utilisateur à trois sessions simultanées. Vous pouvez modifier le fichier **web.config** de l’application web dans le Gestionnaire des services Internet afin de prendre en charge un nombre différent de sessions par utilisateur. Le chemin du fichier **web.config** est $Env:Windir\\Web\\PowerShellWebAccess\\wwwroot\\Web.config.
 
-Par défaut, le serveur Web (IIS) est configuré pour redémarrer le pool d’applications si des paramètres sont modifiés. Par exemple, le pool d’applications est redémarré si des modifications sont apportées au fichier **web.config**. Étant donné qu’Accès Web Windows PowerShell utilise les états de session en mémoire, les utilisateurs connectés à des sessions Accès Web Windows PowerShell perdent leurs sessions quand le pool d’applications est redémarré.
+Par défaut, le serveur web (IIS) est configuré pour redémarrer le pool d’applications si des paramètres sont modifiés. Par exemple, le pool d’applications est redémarré si des modifications sont apportées au fichier **web.config**. Étant donné qu’Accès Web Windows PowerShell utilise les états de session en mémoire, les utilisateurs connectés à des sessions Accès Web Windows PowerShell perdent leurs sessions quand le pool d’applications est redémarré.
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Définition de paramètres par défaut sur la page de connexion</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Définition des paramètres par défaut sur la page de connexion</span></a>
 
 ------------------------------------------------------------------------
 
@@ -355,18 +357,18 @@ Si votre passerelle Accès Web Windows PowerShell s’exécute sur Windows Serve
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Expirations de délais et déconnexions non planifiées</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Expirations de délais et déconnexions non planifiées</span></a>
 
 ------------------------------------------------------------------------
 
-Les sessions Accès Web Windows PowerShell expirent. Dans Accès Web Windows PowerShell sur Windows Server 2012, un message d’expiration de délai est affiché après 15 minutes d’inactivité de session. Si l’utilisateur ne répond pas dans les cinq minutes qui suivent l’affichage du message, la session est interrompue et l’utilisateur est déconnecté. Vous pouvez modifier les délais d’expiration des sessions dans les paramètres de site Web, dans le Gestionnaire des services Internet.
+Les sessions Accès Web Windows PowerShell expirent. Dans Accès Web Windows PowerShell sur Windows Server 2012, un message d’expiration de délai est affiché après 15 minutes d’inactivité de session. Si l’utilisateur ne répond pas dans les cinq minutes qui suivent l’affichage du message, la session est interrompue et l’utilisateur est déconnecté. Vous pouvez modifier les délais d’expiration des sessions dans les paramètres de site web, dans le Gestionnaire des services Internet.
 
 Dans Accès Web Windows PowerShell sur Windows Server 2012 R2, les sessions expirent par défaut après 20 minutes d’inactivité. Si les utilisateurs sont déconnectés de sessions de la console web en raison d’erreurs réseau ou d’autres défaillances ou arrêts non planifiés, et non parce qu’ils ont eux-mêmes fermé les sessions, les sessions Accès Web Windows PowerShell continuent de s’exécuter, connectées aux ordinateurs cibles, jusqu’à ce que le délai d’expiration côté client soit écoulé. La session est déconnectée après les 20 minutes définies par défaut, ou au terme du délai spécifié par l’administrateur de la passerelle, le délai le plus court étant appliqué.
 
 Si le serveur de passerelle exécute Windows Server 2012 R2, Accès Web Windows PowerShell permet aux utilisateurs de se reconnecter ultérieurement aux sessions enregistrées. Toutefois, quand des erreurs de réseau, des arrêts non planifiés ou d’autres défaillances provoquent la déconnexion des sessions, les utilisateurs ne peuvent pas accéder aux sessions enregistrées ou s’y reconnecter, tant que le délai d’expiration spécifié par l’administrateur de la passerelle n’est pas écoulé.
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Voir aussi</span></a>
-<a href="/en-us/library/dn282394(v=ws.11).aspx#Anchor_2" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Voir aussi</span></a>
+<a href="/en-us/library/dn282394(v=ws.11).aspx#Anchor_2" class="LW_CollapsibleArea_Anchor_Img" title="Cliquez avec le bouton droit pour copier et partager le lien de cette section"></a>
 
 ------------------------------------------------------------------------
 

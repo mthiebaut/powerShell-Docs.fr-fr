@@ -4,10 +4,10 @@ keywords: powershell,applet de commande
 title: Objet PowerShellTab
 ms.assetid: a9b58556-951b-4f48-b3ae-b351b7564360
 ms.openlocfilehash: d4e9374202d352a30b3eb46bcf1e4e40dea49822
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="the-powershelltab-object"></a>Objet PowerShellTab
   L’objet **PowerShellTab** représente un environnement d’exécution Windows PowerShell.
@@ -40,8 +40,7 @@ $psise.PowerShellTabs[1].Invoke({dir})
 
  **Script** \- System.Management.Automation.ScriptBlock ou chaîne. Bloc de script à utiliser.
 
- **\[useNewScope\]** : valeur booléenne facultative qui a la valeur **$true**
- par défaut Si la valeur est **$true**, une nouvelle étendue est créée pour y exécuter la commande. Cela ne modifie pas l’environnement d’exécution de l’onglet PowerShell qui est spécifié par la commande.
+ **\[useNewScope\]** : valeur booléenne facultative qui a la valeur **$true** par défaut. Si la valeur est **$true**, une nouvelle étendue est créée pour y exécuter la commande. Cela ne modifie pas l’environnement d’exécution de l’onglet PowerShell qui est spécifié par la commande.
 
  **\[millisecondsTimeout\]** - Entier facultatif qui a la valeur **500** par défaut.
 Si la commande ne se termine pas dans le délai spécifié, la commande génère une exception **TimeoutException** avec le message « Le délai de l’opération a expiré. »

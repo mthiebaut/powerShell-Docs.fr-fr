@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: Glossaire Windows PowerShell
 ms.assetid: b0f88cbe-cb83-4912-a301-184534cb35c7
-ms.openlocfilehash: 9b8ff47a568b8a71cc51f50b3f3ba5ad3dab1ad1
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.openlocfilehash: 48e5d832ead720c8bc7753c94f757ddb21846fc9
+ms.sourcegitcommit: ced46469e064736eeb1f5608abbc792ec69bdc92
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="windows-powershell-glossary"></a>Glossaire Windows PowerShell
 
@@ -15,7 +15,7 @@ ms.lasthandoff: 06/08/2017
 |Terme|Définition|
 |--------|--------------|
 |module binaire|Module Windows PowerShell dont module racine est un fichier de module binaire (.dll). Un module binaire peut ou non inclure un manifeste de module.|
-|paramètre commun|Paramètre qui est ajouté à toutes les applets de commande et fonctions avancées par le moteur Windows PowerShell.|
+|paramètre commun|Paramètre qui est ajouté à l’ensemble des applets de commande, fonctions avancées et flux de travail par le moteur Windows PowerShell.|
 |source de point|Dans Windows PowerShell, permet de lancer une commande en tapant un point et une espace devant la commande. Les commandes sans source de point s’exécutent dans l’étendue actuelle plutôt que dans une nouvelle étendue. Les variables, alias, fonctions ou lecteurs que la commande crée sont créés dans l’étendue en cours, et sont disponibles pour les utilisateurs une fois l’exécution de la commande terminée.|
 |module dynamique|Module qui existe uniquement en mémoire. Les applets de commande New-Module et Import-PSSession créent des modules dynamiques.|
 |paramètre dynamique|Paramètre qui est ajouté à une applet de commande, une fonction ou un script Windows PowerShell sous certaines conditions. Des applets de commande, des fonctions, des fournisseurs et des scripts peuvent ajouter des paramètres dynamiques.|

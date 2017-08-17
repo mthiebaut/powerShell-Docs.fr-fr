@@ -4,21 +4,19 @@ author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: Application des configurations
-ms.openlocfilehash: db82788650186eb82f67b30b24cd45b719bbe314
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: db3a999f3e413ebb88e79f5ec04a7449db543030
+ms.sourcegitcommit: 46feddbc753523f464f139b5d272794620072fc8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 08/02/2017
 ---
-<a id="enacting-configurations" class="xliff"></a>
-# Application des configurations
+# <a name="enacting-configurations"></a>Application des configurations
 
 >S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Il existe deux façons de promulguer des configurations DSC PowerShell : le mode par envoi et le mode par extraction.
 
-<a id="push-mode" class="xliff"></a>
-## Mode par envoi
+## <a name="push-mode"></a>Mode par envoi
 
 ![Mode par envoi](images/Push.png "Fonctionnement du mode par envoi")
 
@@ -29,8 +27,7 @@ Après la création et la compilation d’une configuration, vous pouvez la prom
 > __Remarque__ : Par défaut, DSC exécute une configuration comme tâche en arrière-plan. Pour exécuter la configuration de manière interactive, appelez [Start-DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx) avec le paramètre __-Wait__.
 
 
-<a id="pull-mode" class="xliff"></a>
-## Mode par extraction
+## <a name="pull-mode"></a>Mode par extraction
 
 ![Mode par extraction](images/Pull.png "Fonctionnement du mode par extraction")
 

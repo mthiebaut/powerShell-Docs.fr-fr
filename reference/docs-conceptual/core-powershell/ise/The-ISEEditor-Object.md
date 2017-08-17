@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: Objet ISEEditor
 ms.assetid: 0101daf8-4e31-4e4c-ab89-01d95dcb8f46
-ms.openlocfilehash: 41f2a6f7684275ad9d6d967ea67b64ca02c1c100
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.openlocfilehash: c4effde470a7a76a21f983b172f0af651dfc5d11
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="the-iseeditor-object"></a>Objet ISEEditor
   Un objet **ISEEditor** est une instance de la classe Microsoft.PowerShell.Host.ISE.ISEEditor. Le volet de la console est un objet **ISEEditor**. Chaque objet [ISEFile](The-ISEFile-Object.md) est associé à un objet **ISEEditor**. Les sections suivantes répertorient les méthodes et propriétés d’un objet **ISEEditor**.
@@ -19,7 +19,7 @@ ms.lasthandoff: 06/08/2017
 
  Efface le texte affiché dans l’éditeur.
 
-```PowerShell
+```powershell
 # Clears the text in the Console pane.
 $psISE.CurrentPowerShellTab.ConsolePane.Clear()
 ```
@@ -29,10 +29,9 @@ $psISE.CurrentPowerShellTab.ConsolePane.Clear()
 
  Fait défiler l’éditeur pour afficher la ligne qui correspond à la valeur du paramètre **lineNumber** spécifiée. Elle lève une exception si le numéro de ligne spécifié est en dehors de la plage 1-dernier numéro de ligne, qui définit les numéros de ligne valides.
 
- **lineNumber**
- Numéro de la ligne à afficher.
+ **lineNumber** Numéro de la ligne à afficher.
 
-```PowerShell
+```powershell
 # Scrolls the text in the Script pane so that the fifth line is in view. 
 $psISE.CurrentFile.Editor.EnsureVisible(5)
 ```
@@ -42,7 +41,7 @@ $psISE.CurrentFile.Editor.EnsureVisible(5)
 
  Définit le focus sur l’éditeur.
 
-```PowerShell
+```powershell
 # Sets focus to the Console pane. 
 $psISE.CurrentPowerShellTab.ConsolePane.Focus()
 ```
@@ -52,13 +51,11 @@ $psISE.CurrentPowerShellTab.ConsolePane.Focus()
 
  Obtient la longueur, sous forme d’entier, de la ligne spécifiée par le numéro de ligne.
 
- **lineNumber**
- Numéro de la ligne dont la longueur doit être obtenue.
+ **lineNumber** Numéro de la ligne dont la longueur doit être obtenue.
 
- **Returns**
- Longueur de la ligne correspondant au numéro de ligne spécifié.
+ **Returns** Longueur de la ligne correspondant au numéro de ligne spécifié.
 
-```PowerShell
+```powershell
 # Gets the length of the first line in the text of the Command pane. 
 $psISE.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 ```
@@ -68,7 +65,7 @@ $psISE.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
  Déplace le point d’insertion vers le caractère correspondant si la propriété **CanGoToMatch** de l’objet editor a la valeur **$true**. Ceci se produit quand le point d’insertion se situe juste avant une parenthèse ouvrante, un crochet ouvrant ou une accolade ouvrante \( \[,{ - ou juste après une parenthèse fermante, un crochet fermant ou une accolade fermante -\),\],}.  Le point d’insertion se trouve avant un caractère ouvrant ou après un caractère fermant. Si la propriété **CanGoToMatch** a la valeur **$false**, cette méthode n’a aucun effet. Consultez [CanGoToMatch](#cangotomatch).
 
-```PowerShell
+```powershell
 # Test to see if the caret is next to a parenthesis, bracket, or brace.
 ```
 
@@ -101,7 +98,7 @@ $psISE.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
  Sélectionne la ligne entière de texte où se trouve actuellement le point d’insertion.
 
-```PowerShell
+```powershell
 # First, set the caret position on line 5.
 $psISE.CurrentFile.Editor.SetCaretPosition(5,1) 
 # Now select that entire line of text
@@ -117,7 +114,7 @@ $psISE.CurrentFile.Editor.SelectCaretLine()
 
  **columnNumber** : entier Numéro de colonne du point d’insertion.
 
-```PowerShell
+```powershell
 # Set the CaretPosition.
 $psISE.CurrentFile.Editor.SetCaretPosition(5,1)
 ```
@@ -127,7 +124,7 @@ $psISE.CurrentFile.Editor.SetCaretPosition(5,1)
 
  Développe ou réduit toutes les sections de plan.
 
-```PowerShell
+```powershell
 # Toggle the outlining expansion
 $psISE.CurrentFile.Editor.ToggleOutliningExpansion()
 ```
@@ -139,7 +136,7 @@ $psISE.CurrentFile.Editor.ToggleOutliningExpansion()
 
  Propriété booléenne en lecture seule qui indique si le point d’insertion se trouve à côté d’une parenthèse, d’un crochet ou d’une accolade - \(\), \[\], {}. Si le point d’insertion est situé juste avant le caractère ouvrant ou juste après le caractère fermant d’une paire, cette propriété a la valeur **$true**. Sinon, elle a la valeur **$false**.
 
-```PowerShell
+```powershell
 # Test to see if the caret is next to a parenthesis, bracket, or brace
 $psISE.CurrentFile.Editor.CanGoToMatch
 ```
@@ -149,7 +146,7 @@ $psISE.CurrentFile.Editor.CanGoToMatch
 
  Propriété en lecture seule qui obtient le numéro de colonne correspondant à la position du point d’insertion.
 
-```PowerShell
+```powershell
 # Get the CaretColumn.
 $psISE.CurrentFile.Editor.CaretColumn
 ```
@@ -159,7 +156,7 @@ $psISE.CurrentFile.Editor.CaretColumn
 
  Propriété en lecture seule qui obtient le numéro de la ligne où se trouve le point d’insertion.
 
-```PowerShell
+```powershell
 # Get the CaretLine.
 $psISE.CurrentFile.Editor.CaretLine
 ```
@@ -169,7 +166,7 @@ $psISE.CurrentFile.Editor.CaretLine
 
  Propriété en lecture seule qui obtient la ligne entière de texte où se trouve le point d’insertion.
 
-```PowerShell
+```powershell
 # Get all of the text on the line that contains the caret.
 $psISE.CurrentFile.Editor.CaretLineText
 ```
@@ -179,7 +176,7 @@ $psISE.CurrentFile.Editor.CaretLineText
 
  Propriété en lecture seule qui obtient le nombre de lignes affichées dans l’éditeur.
 
-```PowerShell
+```powershell
 # Get the LineCount.
 $psISE.CurrentFile.Editor.LineCount
 ```
@@ -200,7 +197,7 @@ $psISE.CurrentFile.Editor.LineCount
 
 ##  <a name="example"></a> Exemple de script
 
-```PowerShell
+```powershell
 # This illustrates how you can use the length of a line to
 # select the entire line and shows how you can make it lowercase. 
 # You must run this in the Console pane. It will not run in the Script pane.

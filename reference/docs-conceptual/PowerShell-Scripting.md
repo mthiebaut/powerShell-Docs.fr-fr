@@ -2,15 +2,15 @@
 ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: Scripts PowerShell
-ms.openlocfilehash: 4e27f81bd06f0994a86ffa3bd23e8fa6f4fe344d
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.openlocfilehash: 98b95339fb30ee95a006d10d68e266ed8243cd68
+ms.sourcegitcommit: 289fe8fbf8ff48ca8999aca10aebd3af44bf9b23
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/07/2017
 ---
 #  <a name="powershell"></a>PowerShell
 
-Windows PowerShell est un interpréteur de commandes en ligne de commande basé sur des tâches et qui utilise un langage de script, et qui repose sur le .NET Framework ; il est spécifiquement conçu pour les administrateurs système et utilisateurs avec pouvoir, afin d’automatiser rapidement l’administration de plusieurs systèmes d’exploitation (Linux, OSX, Unix et Windows) et des processus liés aux applications qui s’exécutent sur ces systèmes d’exploitation.
+Windows PowerShell est un interpréteur de commandes en ligne de commande basé sur des tâches et qui utilise un langage de script, et qui repose sur le .NET Framework ; il est spécifiquement conçu pour les administrateurs système et utilisateurs avec pouvoir, afin d’automatiser rapidement l’administration de plusieurs systèmes d’exploitation (Linux, macOS, Unix et Windows) et des processus liés aux applications qui s’exécutent sur ces systèmes d’exploitation.
 
 ###  <a name="powershell-is-now-open-source"></a>PowerShell est désormais open source
 

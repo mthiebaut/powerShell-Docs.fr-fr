@@ -4,10 +4,10 @@ keywords: powershell,applet de commande
 title: Objet PowerShellTabCollection
 ms.assetid: 81f4bf4a-83bf-415e-8378-1703792fbb58
 ms.openlocfilehash: dcdc16ae126453b6ade64917ac4950cc05e5f8ad
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="the-powershelltabcollection-object"></a>Objet PowerShellTabCollection
   L’objet collection **PowerShellTab** est une collection d’objets **PowerShellTab**. Chaque objet **PowerShellTab** fonctionne comme un environnement d’exécution distinct. Il s’agit d’une instance de la classe Microsoft.PowerShell.Host.ISE.PowerShellTabs. L’objet **$psISE.PowerShellTabs** en est un exemple.
@@ -29,8 +29,7 @@ $newTab.DisplayName="Brand New Tab"
 
  Supprime l’onglet spécifié par le paramètre **psTab**.
 
- **psTab**
- Onglet PowerShell à supprimer.
+ **psTab** Onglet PowerShell à supprimer.
 
 ```
 
@@ -46,8 +45,7 @@ $psISE.PowerShellTabs.Remove($newTab)
 
  Sélectionne l’onglet PowerShell qui est spécifié par le paramètre **psTab** pour le définir comme onglet PowerShell actuellement actif.
 
- **psTab**
- Onglet PowerShell à sélectionner.
+ **psTab** Onglet PowerShell à sélectionner.
 
 ```
 # Save the current tab in a variable and rename it

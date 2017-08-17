@@ -3,13 +3,12 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "installer et utiliser Accès Web Windows PowerShell"
 ms.openlocfilehash: a860f7c22829da46f0458ea729fa0afd1fe4fb6f
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
-<a id="install-and-use-windows-powershell-web-access" class="xliff"></a>
-#  Installer et utiliser Accès Web Windows PowerShell
+#  <a name="install-and-use-windows-powershell-web-access"></a>Installer et utiliser Accès Web Windows PowerShell
 
 Mise à jour : 5 novembre 2013
 
@@ -35,7 +34,7 @@ La présente rubrique ne fournit pas d’instructions approfondies sur les opér
 
 Le diagramme suivant illustre le fonctionnement d’Accès Web Windows PowerShell.
 
-<span><img src="https://i-technet.sec.s-msft.com/dynimg/IC564303.jpeg" title="Windows PowerShell Web Access diagram" alt="Windows PowerShell Web Access diagram" id="ee15fa8f-ce13-49e5-933d-514f6d60a2b1" /></span>
+<span><img src="https://i-technet.sec.s-msft.com/dynimg/IC564303.jpeg" title="Diagramme d’Accès Web Windows PowerShell" alt="Windows PowerShell Web Access diagram" id="ee15fa8f-ce13-49e5-933d-514f6d60a2b1" /></span>
 
 Dans cette rubrique :
 
@@ -51,8 +50,8 @@ Dans cette rubrique :
 
 <a href="" id="BKMK_reqs"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Configuration requise pour exécuter Accès Web Windows PowerShell</span></a>
-<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_0" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Configuration requise pour exécuter Accès Web Windows PowerShell</span></a>
+<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_0" class="LW_CollapsibleArea_Anchor_Img" title="Cliquez avec le bouton droit pour copier et partager le lien de cette section"></a>
 
 ------------------------------------------------------------------------
 
@@ -62,16 +61,16 @@ Accès Web Windows PowerShell permet aux utilisateurs distants d’accéder aux 
 
 <a href="" id="BKMK_browser"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Prise en charge de navigateurs et de périphériques clients</span></a>
-<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Prise en charge des navigateurs et des appareils clients</span></a>
+<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Cliquez avec le bouton droit pour copier et partager le lien de cette section"></a>
 
 ------------------------------------------------------------------------
 
-Accès Web Windows PowerShell prend en charge les navigateurs suivants. Bien que les navigateurs mobiles ne soient pas officiellement pris en charge, nombre d’entre eux sont susceptibles de pouvoir exécuter la console web Windows PowerShell. D’autres navigateurs acceptant les cookies, exécutant JavaScript et exécutant des sites Web HTTPS sont censés fonctionner, mais n’ont pas été testés officiellement.
+Accès Web Windows PowerShell prend en charge les navigateurs suivants. Bien que les navigateurs mobiles ne soient pas officiellement pris en charge, nombre d’entre eux sont susceptibles de pouvoir exécuter la console web Windows PowerShell. D’autres navigateurs acceptant les cookies, exécutant JavaScript et exécutant des sites web HTTPS sont censés fonctionner, mais n’ont pas été testés officiellement.
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Navigateurs d’ordinateur de bureau pris en charge</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Navigateurs d’ordinateur de bureau pris en charge</span></a>
 
 ------------------------------------------------------------------------
 
@@ -87,7 +86,7 @@ Accès Web Windows PowerShell prend en charge les navigateurs suivants. Bien que
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Navigateurs ou appareils mobiles testés de façon minimale</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Navigateurs ou appareils mobiles testés de façon minimale</span></a>
 
 ------------------------------------------------------------------------
 
@@ -101,7 +100,7 @@ Accès Web Windows PowerShell prend en charge les navigateurs suivants. Bien que
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Configuration requise des navigateurs</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Configuration requise des navigateurs</span></a>
 
 ------------------------------------------------------------------------
 
@@ -111,12 +110,12 @@ Pour utiliser la console web Accès Web Windows PowerShell, les navigateurs doiv
 
 -   être en mesure d’ouvrir et de lire des pages HTTPS ;
 
--   ouvrir et exécuter des sites Web qui utilisent JavaScript.
+-   ouvrir et exécuter des sites web qui utilisent JavaScript.
 
 <a href="" id="BKMK_recm"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Déploiement (rapide) recommandé</span></a>
-<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_2" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Déploiement (rapide) recommandé</span></a>
+<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_2" class="LW_CollapsibleArea_Anchor_Img" title="Cliquez avec le bouton droit pour copier et partager le lien de cette section"></a>
 
 ------------------------------------------------------------------------
 
@@ -131,12 +130,11 @@ Vous pouvez installer la passerelle Accès Web Windows PowerShell sur un serveur
 <a href="" id="BKMK_step1"></a>
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Étape 1 : installer Accès Web Windows PowerShell</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Étape 1 : installer Accès Web Windows PowerShell</span></a>
 
 ------------------------------------------------------------------------
 
-<a id="to-install-windows-powershell-web-access-by-using-windows-powershell-cmdlets" class="xliff"></a>
-#### Pour installer Accès Web Windows PowerShell à l’aide des applets de commande Windows PowerShell
+#### <a name="to-install-windows-powershell-web-access-by-using-windows-powershell-cmdlets"></a>Pour installer Accès Web Windows PowerShell à l’aide des applets de commande Windows PowerShell
 
 1.  Effectuez une des opérations suivantes pour ouvrir une session Windows PowerShell avec des droits utilisateur élevés.
 
@@ -195,13 +193,13 @@ Vous pouvez installer la passerelle Accès Web Windows PowerShell sur un serveur
 <a href="" id="BKMK_step2"></a>
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Étape 2 : configurer la passerelle</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Étape 2 : configurer la passerelle</span></a>
 
 ------------------------------------------------------------------------
 
 L’applet de commande **Install-PswaWebApplication** constitue un moyen rapide de configurer l’Accès Web Windows PowerShell. Bien que vous puissiez ajouter le paramètre <span class="code">UseTestCertificate</span> à l’applet de commande <span class="code">Install-PswaWebApplication</span> pour installer un certificat SSL auto-signé à des fins de test, cette pratique n’est pas sécurisée ; pour un environnement de production sécurisé, utilisez toujours un certificat SSL valide qui a été signé par une autorité de certification. Les administrateurs peuvent remplacer le certificat de test par le certificat signé de leur choix à l’aide de la console du Gestionnaire des services Internet.
 
-Vous pouvez terminer la configuration de l’application web d’Accès Web Windows PowerShell en exécutant l’applet de commande <span class="code">Install-PswaWebApplication</span> ou les étapes de configuration basées sur l’interface graphique utilisateur dans le Gestionnaire des services Internet. Par défaut, l’applet de commande installe l’application web, **pswa** (et son pool d’applications, **pswa_pool**), dans le conteneur **Site Web par défaut**, comme indiqué dans le Gestionnaire des services Internet ; si vous le voulez, vous pouvez obliger l’applet de commande à modifier le conteneur de site par défaut de l’application web. Le Gestionnaire des services Internet propose des options de configuration pour les applications Web, telles que la modification du numéro de port ou du certificat SSL (Secure Sockets Layer).
+Vous pouvez terminer la configuration de l’application web d’Accès Web Windows PowerShell en exécutant l’applet de commande <span class="code">Install-PswaWebApplication</span> ou les étapes de configuration basées sur l’interface graphique utilisateur dans le Gestionnaire des services Internet. Par défaut, l’applet de commande installe l’application web, **pswa** (et son pool d’applications, **pswa_pool**), dans le conteneur **Site Web par défaut**, comme indiqué dans le Gestionnaire des services Internet ; si vous le voulez, vous pouvez obliger l’applet de commande à modifier le conteneur de site par défaut de l’application web. Le Gestionnaire des services Internet propose des options de configuration pour les applications web, telles que la modification du numéro de port ou du certificat SSL (Secure Sockets Layer).
 
 <table>
 <colgroup>
@@ -209,7 +207,7 @@ Vous pouvez terminer la configuration de l’application web d’Accès Web Wind
 </colgroup>
 <thead>
 <tr class="header">
-<th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC17938.jpeg" title="System_CAPS_security" alt="System_CAPS_security" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-security" /></span><span class="alertTitle"> Remarque sur la sécurité </span></th>
+<th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC17938.jpeg" title="System_CAPS_security" alt="System_CAPS_security" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-security" /></span><span class="alertTitle"> Note de sécurité </span></th>
 </tr>
 </thead>
 <tbody>
@@ -223,8 +221,7 @@ Vous pouvez terminer la configuration de l’application web d’Accès Web Wind
 
 -   [Pour configurer la passerelle Windows PowerShell Web Access avec un certificat authentique à l’aide de Install-PswaWebApplication et IIS Manager](#BKMK_gencert)
 
-<a id="to-configure-the-windows-powershell-web-access-gateway-with-a-test-certificate-by-using-install-pswawebapplication" class="xliff"></a>
-#### Pour configurer la passerelle Accès Web Windows PowerShell avec un certificat de test à l’aide de Install-PswaWebApplication
+#### <a name="to-configure-the-windows-powershell-web-access-gateway-with-a-test-certificate-by-using-install-pswawebapplication"></a>Pour configurer la passerelle Accès Web Windows PowerShell avec un certificat de test à l’aide de Install-PswaWebApplication
 
 1.  Effectuez une des opérations suivantes pour ouvrir une session Windows PowerShell.
 
@@ -242,7 +239,7 @@ Vous pouvez terminer la configuration de l’application web d’Accès Web Wind
     </colgroup>
     <thead>
     <tr class="header">
-    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC17938.jpeg" title="System_CAPS_security" alt="System_CAPS_security" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-security" /></span><span class="alertTitle"> Remarque sur la sécurité </span></th>
+    <th><span><img src="https://i-technet.sec.s-msft.com/dynimg/IC17938.jpeg" title="System_CAPS_security" alt="System_CAPS_security" id="s-e6f6a65cf14f462597b64ac058dbe1d0-system-media-system-caps-security" /></span><span class="alertTitle"> Note de sécurité </span></th>
     </tr>
     </thead>
     <tbody>
@@ -279,13 +276,12 @@ Vous pouvez terminer la configuration de l’application web d’Accès Web Wind
     </thead>
     <tbody>
     <tr class="odd">
-    <td><p>Vous ne pouvez pas vous connecter tant que les utilisateurs ne se voient pas accorder l’accès au site Web en ajoutant des règles d’autorisation. Pour plus d’informations, consultez <a href="#BKMK_step3">Étape 3 : Configurer une règle d’autorisation restrictive</a> et <a href="https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx">Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell</a>.</p></td>
+    <td><p>Vous ne pouvez pas vous connecter tant que les utilisateurs ne se voient pas accorder l’accès au site web en ajoutant des règles d’autorisation. Pour plus d’informations, consultez <a href="#BKMK_step3">Étape 3 : Configurer une règle d’autorisation restrictive</a> et <a href="https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx">Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell</a>.</p></td>
     </tr>
     </tbody>
     </table>
 
-<a id="to-configure-the-windows-powershell-web-access-gateway-with-a-genuine-certificate-by-using-install-pswawebapplication-and-iis-manager" class="xliff"></a>
-#### Pour configurer la passerelle Windows PowerShell Web Access avec un certificat authentique à l’aide de Install-PswaWebApplication et IIS Manager
+#### <a name="to-configure-the-windows-powershell-web-access-gateway-with-a-genuine-certificate-by-using-install-pswawebapplication-and-iis-manager"></a>Pour configurer la passerelle Windows PowerShell Web Access avec un certificat authentique à l’aide de Install-PswaWebApplication et IIS Manager
 
 1.  Effectuez une des opérations suivantes pour ouvrir une session Windows PowerShell.
 
@@ -336,15 +332,17 @@ Vous pouvez terminer la configuration de l’application web d’Accès Web Wind
     </thead>
     <tbody>
     <tr class="odd">
-    <td><p>Vous ne pouvez pas vous connecter tant que les utilisateurs ne se voient pas accorder l’accès au site Web en ajoutant des règles d’autorisation. Pour plus d’informations, consultez <a href="#BKMK_step3">Étape 3 : Configurer une règle d’autorisation restrictive</a> et <a href="https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx">Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell</a>.</p></td>
+    <td><p>Vous ne pouvez pas vous connecter tant que les utilisateurs ne se voient pas accorder l’accès au site web en ajoutant des règles d’autorisation. Pour plus d’informations, consultez <a href="#BKMK_step3">Étape 3 : Configurer une règle d’autorisation restrictive</a> et <a href="https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx">Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell</a>.</p></td>
     </tr>
     </tbody>
     </table>
 
-<a href="" id="BKMK_step3"></a>
+<a href="" id="BKMK_step3">
+</a>
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Étape 3 : configurer une règle d’autorisation restrictive</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="
+Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Étape 3 : configurer une règle d’autorisation restrictive</span></a>
 
 ------------------------------------------------------------------------
 
@@ -352,8 +350,7 @@ Une fois Accès Web Windows PowerShell installé et la passerelle configurée, l
 
 Pour plus de détails sur les règles d’autorisation et la sécurité d’Accès Web Windows PowerShell, consultez [Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx).
 
-<a id="to-add-a-restrictive-authorization-rule" class="xliff"></a>
-#### Pour ajouter une règle d’autorisation restrictive
+#### <a name="to-add-a-restrictive-authorization-rule"></a>Pour ajouter une règle d’autorisation restrictive
 
 1.  Effectuez une des opérations suivantes pour ouvrir une session Windows PowerShell avec des droits utilisateur élevés.
 
@@ -381,8 +378,8 @@ Après avoir configuré une règle d’autorisation, les utilisateurs autorisés
 
 <a href="" id="BKMK_custom"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Déploiement personnalisé</span></a>
-<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_3" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Déploiement personnalisé</span></a>
+<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_3" class="LW_CollapsibleArea_Anchor_Img" title="Cliquez avec le bouton droit pour copier et partager le lien de cette section"></a>
 
 ------------------------------------------------------------------------
 
@@ -391,12 +388,11 @@ Vous pouvez installer la passerelle Accès Web Windows PowerShell sur un serveur
 <a href="" id="BKMK_custom1"></a>
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Étape 1 : installer Accès Web Windows PowerShell</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Étape 1 : installer Accès Web Windows PowerShell</span></a>
 
 ------------------------------------------------------------------------
 
-<a id="to-install-windows-powershell-web-access-by-using-the-add-roles-and-features-wizard" class="xliff"></a>
-#### Pour installer Accès Web Windows PowerShell à l’aide de l’Assistant Ajout de rôles et de fonctionnalités
+#### <a name="to-install-windows-powershell-web-access-by-using-the-add-roles-and-features-wizard"></a>Pour installer Accès Web Windows PowerShell à l’aide de l’Assistant Ajout de rôles et de fonctionnalités
 
 1.  Si le Gestionnaire de serveur est déjà ouvert, passez à l’étape suivante. S’il n’est pas déjà ouvert, ouvrez-le en effectuant l’une des opérations suivantes.
 
@@ -412,7 +408,7 @@ Vous pouvez installer la passerelle Accès Web Windows PowerShell sur un serveur
 
 5.  Dans la page **Sélectionner des fonctionnalités** de l’Assistant, développez **Windows PowerShell**, puis sélectionnez **Accès Web Windows PowerShell**.
 
-6.  Notez que vous êtes invité à ajouter les fonctionnalités requises, telles que le .NET Framework 4.5 et les services de rôle du serveur Web (IIS). Ajoutez les fonctionnalités requises et continuez.
+6.  Notez que vous êtes invité à ajouter les fonctionnalités requises, telles que le .NET Framework 4.5 et les services de rôle du serveur web (IIS). Ajoutez les fonctionnalités requises et continuez.
 
     <table>
     <colgroup>
@@ -436,20 +432,19 @@ Vous pouvez installer la passerelle Accès Web Windows PowerShell sur un serveur
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Étape 2 : configurer la passerelle</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Étape 2 : configurer la passerelle</span></a>
 
 ------------------------------------------------------------------------
 
 Les instructions données dans cette section concernent l’installation de l’application web d’Accès Web Windows PowerShell dans un sous-répertoire, et non dans le répertoire racine, de votre site web. Cette procédure est l’équivalent basé sur l’interface graphique utilisateur des actions effectuées par l’applet de commande <span class="code">Install-PswaWebApplication</span>. Cette section inclut également des instructions sur la manière d’utiliser le Gestionnaire des services Internet pour configurer la passerelle Accès Web Windows PowerShell en tant que site web racine.
 
--   [Pour configurer la passerelle dans un site Web existant à l’aide du Gestionnaire des services Internet](#BKMK_configman)
+-   [Pour configurer la passerelle dans un site web existant à l’aide du Gestionnaire des services Internet](#BKMK_configman)
 
 -   [Pour configurer la passerelle comme site web racine avec un certificat de test à l’aide du Gestionnaire des services Internet](#BKMK_configroot)
 
 -   
 
-<a id="to-use-iis-manager-to-configure-the-gateway-in-an-existing-website" class="xliff"></a>
-#### Pour configurer la passerelle dans un site Web existant à l’aide du Gestionnaire des services Internet
+#### <a name="to-use-iis-manager-to-configure-the-gateway-in-an-existing-website"></a>Pour configurer la passerelle dans un site web existant à l’aide du Gestionnaire des services Internet
 
 1.  Ouvrez la console du Gestionnaire des services Internet en procédant de l’une des manières suivantes.
 
@@ -492,7 +487,7 @@ Les instructions données dans cette section concernent l’installation de l’
     </thead>
     <tbody>
     <tr class="odd">
-    <td><p>Vous ne pouvez pas vous connecter tant que les utilisateurs ne se voient pas accorder l’accès au site Web en ajoutant des règles d’autorisation.</p></td>
+    <td><p>Vous ne pouvez pas vous connecter tant que les utilisateurs ne se voient pas accorder l’accès au site web en ajoutant des règles d’autorisation.</p></td>
     </tr>
     </tbody>
     </table>
@@ -511,8 +506,7 @@ Les instructions données dans cette section concernent l’installation de l’
 
         c:\windows\system32\icacls.exe $authorizationFile
 
-<a id="to-use-iis-manager-to-configure-the-gateway-as-a-root-website-with-a-test-certificate" class="xliff"></a>
-#### Pour configurer la passerelle comme site web racine avec un certificat de test à l’aide du Gestionnaire des services Internet
+#### <a name="to-use-iis-manager-to-configure-the-gateway-as-a-root-website-with-a-test-certificate"></a>Pour configurer la passerelle comme site web racine avec un certificat de test à l’aide du Gestionnaire des services Internet
 
 1.  Ouvrez la console du Gestionnaire des services Internet en procédant de l’une des manières suivantes.
 
@@ -526,15 +520,15 @@ Les instructions données dans cette section concernent l’installation de l’
 
 4.  Tapez le nom du site web, comme **Accès Web Windows PowerShell**.
 
-5.  Un pool d’applications est créé automatiquement pour le nouveau site Web. Pour utiliser un autre pool d’applications, cliquez sur **Sélectionner** pour sélectionner un pool d’applications à associer au nouveau site web. Sélectionnez l’autre pool d’applications dans la boîte de dialogue **Sélectionner un pool d’applications**, puis cliquez sur **OK**.
+5.  Un pool d’applications est créé automatiquement pour le nouveau site web. Pour utiliser un autre pool d’applications, cliquez sur **Sélectionner** pour sélectionner un pool d’applications à associer au nouveau site web. Sélectionnez l’autre pool d’applications dans la boîte de dialogue **Sélectionner un pool d’applications**, puis cliquez sur **OK**.
 
 6.  Dans la zone de texte **Chemin d’accès physique**, accédez à %*windir*%/Web/PowerShellWebAccess/wwwroot.
 
 7.  Dans le champ **Type** de la zone **Liaison**, sélectionnez **https**.
 
-8.  Assignez au site Web un numéro de port qui n’est pas déjà utilisé par un autre site ou une autre application. Pour localiser les ports ouverts, vous pouvez exécuter la commande **netstat** dans une fenêtre d’invite de commandes. Le numéro de port par défaut est 443.
+8.  Assignez au site web un numéro de port qui n’est pas déjà utilisé par un autre site ou une autre application. Pour localiser les ports ouverts, vous pouvez exécuter la commande **netstat** dans une fenêtre d’invite de commandes. Le numéro de port par défaut est 443.
 
-    Modifiez le port par défaut si un autre site Web utilise déjà le port 443 ou si vous avez d’autres raisons d’ordre sécuritaire. Si un autre site web qui s’exécute sur votre serveur de passerelle utilise votre port sélectionné, un avertissement s’affiche quand vous cliquez sur **OK** dans la boîte de dialogue **Ajouter un site Web**. Vous devez utiliser un port inutilisé pour exécuter Accès Web Windows PowerShell.
+    Modifiez le port par défaut si un autre site web utilise déjà le port 443 ou si vous avez d’autres raisons d’ordre sécuritaire. Si un autre site web qui s’exécute sur votre serveur de passerelle utilise votre port sélectionné, un avertissement s’affiche quand vous cliquez sur **OK** dans la boîte de dialogue **Ajouter un site Web**. Vous devez utiliser un port inutilisé pour exécuter Accès Web Windows PowerShell.
 
 9.  Selon les besoins de votre organisation, spécifiez éventuellement un nom d’hôte qui a du sens pour votre organisation et ses utilisateurs, comme **www.contoso.com**. Cliquez sur **OK**.
 
@@ -575,14 +569,14 @@ Les instructions données dans cette section concernent l’installation de l’
     </thead>
     <tbody>
     <tr class="odd">
-    <td><p>Vous ne pouvez pas vous connecter tant que les utilisateurs ne se voient pas accorder l’accès au site Web en ajoutant des règles d’autorisation.</p></td>
+    <td><p>Vous ne pouvez pas vous connecter tant que les utilisateurs ne se voient pas accorder l’accès au site web en ajoutant des règles d’autorisation.</p></td>
     </tr>
     </tbody>
     </table>
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Étape 3 : configurer une règle d’autorisation restrictive</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Étape 3 : configurer une règle d’autorisation restrictive</span></a>
 
 ------------------------------------------------------------------------
 
@@ -590,8 +584,7 @@ Une fois Accès Web Windows PowerShell installé et la passerelle configurée, l
 
 Pour plus de détails sur les règles d’autorisation et la sécurité d’Accès Web Windows PowerShell, consultez [Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx).
 
-<a id="to-add-a-restrictive-authorization-rule" class="xliff"></a>
-#### Pour ajouter une règle d’autorisation restrictive
+#### <a name="to-add-a-restrictive-authorization-rule"></a>Pour ajouter une règle d’autorisation restrictive
 
 1.  Effectuez une des opérations suivantes pour ouvrir une session Windows PowerShell avec des droits utilisateur élevés.
 
@@ -619,15 +612,14 @@ Après avoir configuré une règle d’autorisation, les utilisateurs autorisés
 
 <a href="" id="BKMK_configcert"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Configurer un certificat authentique</span></a>
-<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_4" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Configurer un certificat authentique</span></a>
+<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_4" class="LW_CollapsibleArea_Anchor_Img" title="Cliquez avec le bouton droit pour copier et partager le lien de cette section"></a>
 
 ------------------------------------------------------------------------
 
 Pour un environnement de production sécurisé, utilisez toujours un certificat SSL valide signé par une autorité de certification. La procédure décrite dans cette section détaille comment obtenir et appliquer un certificat SSL valide à partir d’une autorité de certification.
 
-<a id="to-configure-an-ssl-certificate-in-iis-manager" class="xliff"></a>
-### Pour configurer un certificat SSL dans le Gestionnaire des services Internet
+### <a name="to-configure-an-ssl-certificate-in-iis-manager"></a>Pour configurer un certificat SSL dans le Gestionnaire des services Internet
 
 1.  Dans le volet de l’arborescence du Gestionnaire des services Internet, sélectionnez le serveur sur lequel Accès Web Windows PowerShell est installé.
 
@@ -649,15 +641,15 @@ Pour un environnement de production sécurisé, utilisez toujours un certificat 
 
 <a href="" id="BKMK_using"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Utilisation de la console Web Windows PowerShell</span></a>
-<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_5" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Utilisation de la console web Windows PowerShell</span></a>
+<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_5" class="LW_CollapsibleArea_Anchor_Img" title="Cliquez avec le bouton droit pour copier et partager le lien de cette section"></a>
 
 ------------------------------------------------------------------------
 
 Une fois qu’Accès Web Windows PowerShell est installé et la configuration de la passerelle terminée comme décrit dans cette rubrique, la console web Windows PowerShell est prête à être utilisée. Pour plus d’informations sur la prise en main de la console web, consultez [Utiliser la console web Windows PowerShell](https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx).
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Voir aussi</span></a>
-<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_6" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Voir aussi</span></a>
+<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_6" class="LW_CollapsibleArea_Anchor_Img" title="Cliquez avec le bouton droit pour copier et partager le lien de cette section"></a>
 
 ------------------------------------------------------------------------
 

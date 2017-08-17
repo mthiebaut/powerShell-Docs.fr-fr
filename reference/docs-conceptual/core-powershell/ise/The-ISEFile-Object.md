@@ -4,10 +4,10 @@ keywords: powershell,applet de commande
 title: Objet ISEFile
 ms.assetid: 1c6d91f3-c556-42a2-a017-79b6b7b4b7db
 ms.openlocfilehash: 0e1c09c4a92868448d76cc7b4954d250773ce2f2
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="the-isefile-object"></a>Objet ISEFile
   Un objet **ISEFile** représente un fichier dans l’environnement d’écriture de scripts intégré (ISE) de Windows PowerShell®. Il s’agit d’une instance de la classe Microsoft.PowerShell.Host.ISE.ISEFile. Cette rubrique répertorie les méthodes et propriétés membres de cet objet. **$psISE.CurrentFile** et les fichiers de la collection Files dans un onglet PowerShell sont tous des instances de la classe Microsoft.PowerShell.Host.ISE.ISEFile.
@@ -19,8 +19,7 @@ ms.lasthandoff: 06/08/2017
 
  Enregistre le fichier sur le disque.
 
- **\[saveEncoding\]** (facultatif) [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx)
- Paramètre facultatif d’encodage de caractères à utiliser pour le fichier enregistré. La valeur par défaut est **UTF8**.
+ **\[saveEncoding\]** (facultatif) [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx) Paramètre facultatif d’encodage de caractères à utiliser pour le fichier enregistré. La valeur par défaut est **UTF8**.
 
  **Exceptions**
  -   **System.IO.IOException** : le fichier n’a pas pu être enregistré.
@@ -45,8 +44,7 @@ $myfile.Encoding
 
  **filename** : chaîne Nom à utiliser pour enregistrer le fichier.
 
- **\[saveEncoding\]** (facultatif) [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx)
- Paramètre facultatif d’encodage de caractères à utiliser pour le fichier enregistré. La valeur par défaut est **UTF8**.
+ **\[saveEncoding\]** (facultatif) [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx) Paramètre facultatif d’encodage de caractères à utiliser pour le fichier enregistré. La valeur par défaut est **UTF8**.
 
  **Exceptions**
  -   **System.ArgumentNullException** : le paramètre **filename** est Null.

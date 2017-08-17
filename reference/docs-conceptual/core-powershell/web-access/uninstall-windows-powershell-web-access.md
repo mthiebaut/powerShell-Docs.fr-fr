@@ -3,10 +3,10 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Désinstaller Accès Web Windows PowerShell"
 ms.openlocfilehash: 7231d5eadceda8e3b28d9a81c2b5dcbe43680ff2
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 #  <a name="uninstall-windows-powershell-web-access"></a>désinstaller Accès Web Windows PowerShell
 
@@ -14,7 +14,7 @@ Mise à jour : 24 juin 2013
 
 S’applique à : Windows Server 2012 R2, Windows Server 2012
 
-Suivez les étapes de cette rubrique pour supprimer le site web et l’application Accès Web Windows PowerShell du serveur de passerelle qui exécute Windows Server 2012 R2 ou Windows Server 2012. Avant de commencer, informez les utilisateurs de la console Web de la suppression du site Web.
+Suivez les étapes de cette rubrique pour supprimer le site web et l’application Accès Web Windows PowerShell du serveur de passerelle qui exécute Windows Server 2012 R2 ou Windows Server 2012. Avant de commencer, informez les utilisateurs de la console Web de la suppression du site web.
 
 <a href="" id="BKMK_uninstall"></a>
 
@@ -24,8 +24,8 @@ Avant de désinstaller Accès Web Windows PowerShell du serveur de passerelle, e
 
 La désinstallation d’Accès Web Windows PowerShell ne désinstalle pas IIS ni d’autres fonctionnalités automatiquement installées, car Accès Web Windows PowerShell en a besoin pour s’exécuter. Le processus de désinstallation laisse les fonctionnalités installées dont dépendait Accès Web Windows PowerShell ; vous pouvez désinstaller ces fonctionnalités séparément si besoin.
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Désinstallation (rapide) recommandée</span></a>
-<a href="/en-us/library/dn282396(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Désinstallation (rapide) recommandée</span></a>
+<a href="/en-us/library/dn282396(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Cliquez avec le bouton droit pour copier et partager le lien de cette section"></a>
 
 ------------------------------------------------------------------------
 
@@ -33,13 +33,13 @@ Les procédures de cette section vous permettent de désinstaller l’applicatio
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Étape 1 : supprimer l’application web</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Étape 1 : supprimer l’application web</span></a>
 
 ------------------------------------------------------------------------
 
 Si vous avez défini un nom de site web personnalisé, ajoutez le paramètre <span class="code">WebsiteName</span> à votre commande et spécifiez le nom du site web. Si vous avez utilisé une application web personnalisée (et non l’application par défaut **pswa**), ajoutez le paramètre <span class="code">WebApplicationName</span> à votre commande et spécifiez le nom de l’application web.
 
-#### <a name="to-delete-the-website-and-web-applications-by-using-the-uninstall-pswawebapplication-cmdlet"></a>Pour supprimer le site Web et les applications Web à l’aide de l’applet de commande Uninstall-PswaWebApplication
+#### <a name="to-delete-the-website-and-web-applications-by-using-the-uninstall-pswawebapplication-cmdlet"></a>Pour supprimer le site web et les applications web à l’aide de l’applet de commande Uninstall-PswaWebApplication
 
 1.  Effectuez une des opérations suivantes pour ouvrir une session Windows PowerShell.
 
@@ -57,7 +57,7 @@ Si vous avez défini un nom de site web personnalisé, ajoutez le paramètre <sp
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Étape 2 : désinstaller Accès Web Windows PowerShell</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Étape 2 : désinstaller Accès Web Windows PowerShell</span></a>
 
 ------------------------------------------------------------------------
 
@@ -83,8 +83,8 @@ Si vous avez défini un nom de site web personnalisé, ajoutez le paramètre <sp
 
 3.  Une fois l’installation terminée, vérifiez que vous avez bien supprimé Accès Web Windows PowerShell. Pour cela, ouvrez la page **Tous les serveurs** dans le Gestionnaire de serveur, sélectionnez un serveur sur lequel vous avez installé la fonctionnalité, puis examinez la vignette **Rôles et fonctionnalités** dans la page du serveur sélectionné. Vous pouvez également exécuter l’applet de commande <span class="code">Get-WindowsFeature</span> qui cible le serveur sélectionné (Get-WindowsFeature -ComputerName &lt;*nom_ordinateur*&gt;) pour afficher la liste des rôles et fonctionnalités installés sur le serveur.
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Désinstallation personnalisée</span></a>
-<a href="/en-us/library/dn282396(v=ws.11).aspx#Anchor_2" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Désinstallation personnalisée</span></a>
+<a href="/en-us/library/dn282396(v=ws.11).aspx#Anchor_2" class="LW_CollapsibleArea_Anchor_Img" title="Cliquez avec le bouton droit pour copier et partager le lien de cette section"></a>
 
 ------------------------------------------------------------------------
 
@@ -92,11 +92,11 @@ Les procédures de cette section vous permettent de désinstaller l’applicatio
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Étape 1 : supprimer l’application web</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Étape 1 : supprimer l’application web</span></a>
 
 ------------------------------------------------------------------------
 
-#### <a name="to-delete-the-windows-powershell-web-access-website-and-web-applications-by-using-iis-manager"></a>Pour supprimer le site Web et les applications Web Accès Web Windows PowerShell à l’aide du Gestionnaire de services Internet
+#### <a name="to-delete-the-windows-powershell-web-access-website-and-web-applications-by-using-iis-manager"></a>Pour supprimer le site web et les applications web Accès Web Windows PowerShell à l’aide du Gestionnaire de services Internet
 
 1.  Ouvrez la console du Gestionnaire des services Internet en procédant de l’une des manières suivantes. Si elle est déjà ouverte, passez à l’étape suivante.
 
@@ -132,7 +132,7 @@ Les procédures de cette section vous permettent de désinstaller l’applicatio
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Étape 2 : désinstaller Accès Web Windows PowerShell</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Étape 2 : désinstaller Accès Web Windows PowerShell</span></a>
 
 ------------------------------------------------------------------------
 
@@ -154,8 +154,8 @@ Les procédures de cette section vous permettent de désinstaller l’applicatio
 
 6.  Dans la page **Confirmer les sélections pour la suppression**, cliquez sur **Supprimer**.
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Voir aussi</span></a>
-<a href="/en-us/library/dn282396(v=ws.11).aspx#Anchor_3" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Réduire"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Voir aussi</span></a>
+<a href="/en-us/library/dn282396(v=ws.11).aspx#Anchor_3" class="LW_CollapsibleArea_Anchor_Img" title="Cliquez avec le bouton droit pour copier et partager le lien de cette section"></a>
 
 ------------------------------------------------------------------------
 
