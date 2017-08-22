@@ -4,14 +4,13 @@ contributor: JKeithB
 ms.topic: conceptual
 keywords: gallery,powershell,cmdlet,psgallery
 title: "Création et publication d’un élément"
-ms.openlocfilehash: e71381d1a3efda73832fab6189bda26cee411d9e
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: b6bcd3e923b77ad7d19a1d92aeb78222bff7ea7e
+ms.sourcegitcommit: e08f036021e9f115dbb52c697941706cc4ee51dd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 08/15/2017
 ---
-<a id="creating-and-publishing-an-item" class="xliff"></a>
-# Création et publication d’un élément 
+# <a name="creating-and-publishing-an-item"></a>Création et publication d’un élément 
 PowerShell Gallery est l’emplacement auquel publier et partager des modules PowerShell stables, des scripts et des ressources DSC avec l’ensemble de la communauté des utilisateurs PowerShell.    
 
 Cet article décrit les mécanismes et les principales étapes de la préparation d’un script ou d’un module, et sa publication dans PowerShell Gallery.
@@ -27,8 +26,7 @@ Voici les conditions minimales requises pour publier un élément sur PowerShell
  
 PowerShell Gallery accepte les modules PowerShell et les scripts PowerShell. Lorsque nous faisons référence à des scripts, nous entendons un script PowerShell qui est un fichier unique et ne fait pas partie d’un module plus vaste. 
 
-<a id="powershell-gallery-account-and-api-key" class="xliff"></a>
-## Compte et clé d’API pour PowerShell Gallery
+## <a name="powershell-gallery-account-and-api-key"></a>Compte et clé d’API pour PowerShell Gallery
 Consultez [Création d’un compte PowerShell Gallery](https://msdn.microsoft.com/en-us/powershell/gallery/psgallery/psgallery_creating_an_account) pour savoir comment configurer votre compte de PowerShell Gallery. 
 
 Une fois que vous avez créé un compte, vous pouvez obtenir la clé d’API nécessaire pour publier un élément.
@@ -36,8 +34,7 @@ Une fois que vous vous connectez avec le compte, votre nom d’utilisateur s’a
 
 Remarque : La clé d’API doit être traitée avec autant de soins de sécurité que votre identifiant et votre mot de passe. Avec cette clé, vous,ou toute autre personne pouvez mettre à jour n’importe quel élément que vous possédez dans PowerShell Gallery. Nous vous recommandons de mettre à jour la clé régulièrement, ce que vous pouvez faire à l’aide de la fonction Réinitialiser la clé sur la page Mon compte.
 
-<a id="required-metadata-for-items-published-to-the-powershell-gallery" class="xliff"></a>
-## Métadonnées requises pour les articles publiés sur PowerShell Gallery
+## <a name="required-metadata-for-items-published-to-the-powershell-gallery"></a>Métadonnées requises pour les articles publiés sur PowerShell Gallery
 
 PowerShell Gallery fournit des informations aux utilisateurs de la galerie tirées des champs de métadonnées qui sont inclus dans le manifeste de module ou du script.
 Créer ou modifier des éléments pour la publication dans PowerShell Gallery a un petit ensemble de d’exigences pour les informations fournies dans le manifeste de l’élément. Nous vous encourageons vivement de consulter la section de métadonnées d’élément des [instructions de publication](https://msdn.microsoft.com/en-us/powershell/gallery/psgallery/psgallery-PublishingGuidelines) pour apprendre à fournir les meilleures informations aux utilisateurs avec vos éléments. 
@@ -62,8 +59,7 @@ Les propriétaires d’élément sont des utilisateurs avec des comptes PowerShe
 * Avoir un auteur avec un nom d’équipe connu (par exemple, Équipe du kit de développement logiciel Azure), ou Microsoft Corporation.
 
 
-<a id="pre-validate-your-item" class="xliff"></a>
-## Prévalider votre élément
+## <a name="pre-validate-your-item"></a>Prévalider votre élément
 
 Il existe certains outils que vous devez exécuter sur votre code avant de publier votre élément dans PowerShell Gallery :
 
@@ -80,8 +76,7 @@ Si les informations de manifeste dans votre élément ne peuvent pas être lues 
 De même, [Test-ScriptFileInfo](https://msdn.microsoft.com/en-us/powershell/gallery/psget/script/psget_test-scriptfileinfo) valide les métadonnées dans un script et doit être exécuté sur chaque script (publié séparément à partir d’un module) avant sa publication dans PowerShell Gallery. 
 
 
-<a id="publishing-items" class="xliff"></a>
-## Publication d’éléments
+## <a name="publishing-items"></a>Publication d’éléments
 
 Vous devez utiliser [Publish-Script](https://msdn.microsoft.com/en-us/powershell/gallery/psget/script/psget_publish-script) ou [Publish-Module](https://msdn.microsoft.com/en-us/powershell/gallery/psget/module/psget_publish-module) pour publier des éléments dans la PowerShell Gallery.
 Ces commandes requièrent 
