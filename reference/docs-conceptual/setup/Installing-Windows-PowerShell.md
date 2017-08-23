@@ -1,102 +1,99 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
-keywords: powershell,applet de commande
+ms.date: 2017-08-09
+keywords: "powershell, applet de commande, télécharger, installer, installation, programme d’installation, windows 10, windows 8.1, windows 8.0, windows 7"
 title: Installation de Windows PowerShell
-ms.assetid: 6fbb0409-5a54-48ec-95e6-7f8b7d8c4969
-ms.openlocfilehash: 2b4cdec52dfc98649a81ab2265a204fcdb0bd8d7
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 7a1a4bff461e3012a06a82faf4015a05b8560895
+ms.sourcegitcommit: a6ee6e64d369ecf82c730411bed9750278fdb5c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/18/2017
 ---
 # <a name="installing-windows-powershell"></a>Installation de Windows PowerShell
-Windows® 8 et Windows Server® 2012 incluent Windows PowerShell 3.0 et tous ses composants requis. Le système inclut également le moteur Windows PowerShell 2.0 pour offrir la compatibilité descendante avec les programmes hôtes qui ne peuvent pas utiliser Windows PowerShell 3.0.
 
-Cette rubrique explique comment installer Windows PowerShell 3.0 sur des systèmes antérieurs, puis comment installer et activer les fonctionnalités requises.
+PowerShell est installé par défaut avec chaque copie de Windows, à compter de Windows 7 SP1 et de Windows Server 2008 R2 SP1.
 
-Cette rubrique contient les sections suivantes :
+Les utilisateurs Linux, macOS et Windows qui souhaitent installer **PowerShell 6** (bêta) sur leurs ordinateurs doivent :
 
--   [Installation de Windows PowerShell sur Windows 8 et Windows Server 2012](Installing-Windows-PowerShell.md#BKMK_InstallingOnWindows8andWindowsServer2012)
+1.  Obtenir PowerShell pour leur système d’exploitation et leur version à partir de [GitHub](https://github.com/powershell/powershell#get-powershell)
+1.  Suivre les instructions d'installation
+  - [Linux](https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md)
+  - [macOS](https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md#macos-1012)
+  - [Windows](https://github.com/PowerShell/PowerShell/blob/master/docs/installation/windows.md#msi)
 
--   [Installation de Windows PowerShell sur Windows 7 et Windows Server 2008 R2](Installing-Windows-PowerShell.md#BKMK_InstallingOnWindows7andWindowsServer2008R2)
+PowerShell 6 est également disponible pour Docker. Consultez les instructions sur l’[installation de Docker](https://github.com/PowerShell/PowerShell/tree/master/docker).
 
--   [Installation de Windows PowerShell sur Windows Server 2008](Installing-Windows-PowerShell.md#BKMK_InstallingOnWindowsServer2008LH)
+## <a name="finding-powershell-in-windows-10-81-80-and-7"></a>Recherche de PowerShell dans Windows 10, 8.1, 8.0 et 7
 
--   [Installation de Windows PowerShell sur Server Core](Installing-Windows-PowerShell.md#BKMK_InstallingOnServerCore)
+Il est parfois difficile de localiser la console ou l’environnement d'écriture de scripts intégré (ISE) de PowerShell dans Windows, car ils ne se trouvent pas au même emplacement d’une version de Windows à l’autre.
 
--   [Déploiement de l’accès Web Windows PowerShell](https://technet.microsoft.com/en-us/library/639d0eff-98a3-4124-b52c-26921ebd98b0)
+Les tableaux suivants devraient vous aider à trouver PowerShell dans votre version de Windows.
+Toutes les versions listées ici sont les versions d’origine telles qu’elles ont été publiées, sans aucune mise à jour.
 
--   [Installation du moteur Windows PowerShell 2.0](Installing-the-Windows-PowerShell-2.0-Engine.md)
+### <a name="for-console"></a>Pour la console
 
-## <a name="BKMK_InstallingOnWindows8andWindowsServer2012"></a>Installation de Windows PowerShell sur Windows 8 et Windows Server 2012
-Windows PowerShell 3.0 arrive installé, configuré et prêt à l’emploi. Windows PowerShell Integrated Scripting Environment (ISE) est installé et activé. Pour plus d’informations sur le démarrage de Windows PowerShell, voir [Démarrage de Windows PowerShell sur Windows 8](https://technet.microsoft.com/en-us/library/d7be1668-8617-4890-ad90-dd9765fbd2c3) et [Démarrage de Windows PowerShell sur Windows Server 2012](https://technet.microsoft.com/library/hh831491.aspx#BKMK_powershell).
+Version | Emplacement
+-- | --
+Windows 10 | Cliquez sur l’icône Windows en bas à gauche et commencez à taper PowerShell
+Windows 8.1, 8.0 | Sur l’écran d’accueil, commencez à taper PowerShell.<br/>Sur un poste de travail, cliquez sur l’icône Windows en bas à gauche et commencez à taper PowerShell
+Windows 7 SP1 | Cliquez sur l’icône Windows en bas à gauche et commencez à taper PowerShell dans la zone de recherche
 
-## <a name="BKMK_InstallingOnWindows7andWindowsServer2008R2"></a>Installation de Windows PowerShell sur Windows 7 et Windows Server 2008 R2
-Ces instructions expliquent comment installer Windows PowerShell 3.0 sur des ordinateurs exécutant Windows 7 avec Service Pack 1 et Windows Server 2008 R2 avec Service Pack 1. Des instructions d’installation distinctes figurent ci-dessous pour les ordinateurs s’exécutant avec l’option d’installation Server Core de Windows Server 2008 R2.
+### <a name="for-ise"></a>Pour l’ISE
 
-#### <a name="getting-ready-to-install"></a>Préparation à l’installation
+Version | Emplacement
+-- | --
+Windows 10 | Cliquez sur l’icône Windows en bas à gauche et commencez à taper ISE
+Windows 8.1, 8.0 | Sur l’écran d’accueil, tapez **PowerShell ISE**.<br/>Sur un poste de travail, cliquez sur l’icône Windows en bas à gauche et tapez **PowerShell ISE**
+Windows 7 SP1 | Cliquez sur l’icône Windows en bas à gauche et commencez à taper PowerShell dans la zone de recherche
 
--   Avant d’installer Windows Management Framework 3.0, désinstallez toute version antérieure de ce produit.
+## <a name="finding-powershell-in-windows-server-versions"></a>Recherche de PowerShell dans les versions de Windows Server
 
-#### <a name="to-install-windows-powershell-30"></a>Pour installer Windows PowerShell 3.0
+À compter de Windows Server 2008 R2, le système d’exploitation Windows peut être installé sans l’interface graphique utilisateur (GUI).
+Les éditions de Windows Server sans GUI sont appelées **Core**, tandis que les éditions avec GUI sont appelées **Desktop**.
 
-1.  Effectuez l’installation complète de Microsoft .NET Framework 4 (dotNetFx40_Full_setup.exe) à partir du Centre de téléchargement Microsoft à l’adresse [http://go.microsoft.com/fwlink/?LinkID=212547](http://go.microsoft.com/fwlink/?LinkID=212547).
+### <a name="windows-server-core-editions"></a>Éditions Windows Server Core
 
-    Ou bien, installez Microsoft .NET Framework 4.5 (dotNetFx45_Full_setup.exe) à partir du Centre de téléchargement Microsoft à l’adresse [http://go.microsoft.com/fwlink/?LinkID=242919](http://go.microsoft.com/fwlink/?LinkID=242919).
+Dans toutes les éditions Core, quand vous vous connectez au serveur, vous obtenez une fenêtre d’invite de commandes Windows.
 
-2.  Installez Windows Management Framework 3.0 à partir du Centre de téléchargement Microsoft à l’adresse [http://go.microsoft.com/fwlink/?LinkID=240290](http://go.microsoft.com/fwlink/?LinkID=240290).
+Tapez `powerhell` et appuyez sur **Entrée** pour démarrer PowerShell dans la session d’invite de commandes. Tapez `exit` pour mettre fin à la session PowerShell et revenir à l’invite de commandes.
 
-Pour plus d’informations sur le démarrage de Windows PowerShell 3.0, consultez [Démarrage de Windows PowerShell sur des versions antérieures de Windows](Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.md).
+### <a name="windows-server-desktop-editions"></a>Éditions Windows Server Desktop
 
-## <a name="BKMK_InstallingOnServerCore"></a>Installation de Windows PowerShell sur Server Core
-Ces instructions expliquent comment installer Windows PowerShell 3.0 sur des ordinateurs exécutant l’option d’installation Server Core de Windows Server 2008 R2 avec Service Pack 1.
+Dans toutes les éditions Desktop, cliquez sur l’icône Windows en bas à gauche et commencez à taper PowerShell.
+Vous obtenez à la fois les options de la console et de l’ISE.
 
-Les premières étapes de la procédure utilisent des commandes de Gestion et maintenance des images de déploiement (DISM) pour installer Microsoft .NET Framework 2.0 pour Server Core et Windows PowerShell 2.0. Ces programmes sont des composants requis pour Windows Management Framework 3.0, qui est installé à une étape ultérieure.
+La seule exception à cette règle est l’ISE dans Windows Server 2008 R2 SP1 ; dans cette édition, cliquez sur l’icône Windows en bas à gauche et tapez PowerShell ISE.
 
-#### <a name="getting-ready-to-install"></a>Préparation à l’installation
+## <a name="how-to-check-the-version-of-powershell"></a>Comment vérifier la version de PowerShell
 
--   Avant d’installer Windows Management Framework 3.0, désinstallez toute version antérieure de ce produit.
+Pour trouver la version de PowerShell que vous avez installée, démarrez une console PowerShell (ou l’ISE), puis tapez `$PSVersionTable` et appuyez sur **Entrée**.
 
-#### <a name="to-install-windows-powershell-30"></a>Pour installer Windows PowerShell 3.0
+## <a name="upgrading-existing-windows-powershell"></a>Mise à niveau des instances Windows PowerShell existantes
 
-1.  Démarrez Cmd.exe.
+Le package d’installation de PowerShell se trouve dans un programme d’installation WMF.
+La version du programme d’installation WMF correspond à la version de PowerShell ; il n’existe aucun programme d’installation autonome de Windows PowerShell.
 
-2.  Exécutez l’une des commandes DISM suivantes. Ces commandes installent .NET Framework 2.0 et Windows PowerShell 2.0.
+Si vous devez mettre à jour votre version existante de PowerShell dans Windows, utilisez le tableau suivant pour trouver le programme d’installation de la version de PowerShell que vous souhaitez mettre à jour.
 
-    ```
-    dism /online /enable-feature:NetFx2-ServerCore
-    dism /online /enable-feature:MicrosoftWindowsPowerShell
-    dism /online /enable-feature:NetFx2-ServerCore-WOW64
-    ```
+Windows | PS 3.0 | PS 4.0 | PS 5.0 | PS 5.1 |
+--|--|--|--|--|
+Windows 10 (voir Note1)<br/>Windows Server 2016 | - | - | - | installé
+Windows 8.1<br/>Windows Server 2012 R2 | - | installé | [WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) | [WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616)
+Windows 8<br/>Windows Server 2012 | installé | [WMF 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) | [WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) | [WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616)
+Windows 7 SP1<br/>Windows Server 2008 R2 SP1 | [WMF 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) | [WMF 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) | [WMF 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) | [WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616)
 
-3.  Effectuez l’installation complète de Microsoft .NET Framework 4.0 pour Server Core à partir du Centre de téléchargement Microsoft à l’adresse [http://go.microsoft.com/fwlink/?LinkID=248450](http://go.microsoft.com/fwlink/?LinkID=248450).
+> **Note 1** :
+  >>
+  >> Dans la version initiale de Windows 10, avec les mises à jour automatiques activées, PowerShell est mis à jour de la version 5.0 à la version 5.1.
+  >>
+  >> Si la version originale de Windows 10 n’est pas mise à jour par le biais de Windows Updates, la version de PowerShell est 5.0.
 
-4.  Installez Windows Management Framework 3.0 à partir du Centre de téléchargement Microsoft à l’adresse [http://go.microsoft.com/fwlink/?LinkID=240290](http://go.microsoft.com/fwlink/?LinkID=240290).
+## <a name="need-azure-powershell"></a>Pour Azure PowerShell
 
-## <a name="BKMK_InstallingOnWindowsServer2008LH"></a>Installation de Windows PowerShell sur Windows Server 2008
-Ces instructions expliquent comment installer Windows PowerShell 3.0 sur des ordinateurs exécutant Windows Server 2008 avec Service Pack 2.
+Si vous recherchez **Azure PowerShell**, vous pouvez commencer par [Vue d’ensemble d’Azure PowerShell](https://docs.microsoft.com/en-us/powershell/azure).
 
-Sur les systèmes Windows Server 2008, Windows Management Framework (Windows PowerShell 2.0, article 968930 de la Base de connaissances) est un composant requis pour Windows Management Framework 3.0. La fonctionnalité « Protection étendue pour l’authentification » protège l’ordinateur contre les attaques de transfert d’authentification, et permet d’utiliser le paramètre **UseSSL** lors de la création de sessions à distance. Pour installer Windows PowerShell 3.0 et le moteur Windows PowerShell 2.0, utilisez la procédure suivante.
-
-#### <a name="getting-ready-to-install"></a>Préparation à l’installation
-
--   Avant d’installer Windows Management Framework 3.0, désinstallez toute version antérieure de ce produit.
-
-#### <a name="to-install-windows-powershell-30"></a>Pour installer Windows PowerShell 3.0
-
-1.  Installez Microsoft .NET Framework 3.5 Service Pack 1 à partir du Centre de téléchargement Microsoft à l’adresse [http://go.microsoft.com/fwlink/?LinkID=242910](http://go.microsoft.com/fwlink/?LinkID=242910).
-
-2.  Installez Windows Management Framework (Windows PowerShell 2.0, article 968930 de la Base de connaissances) à partir du Centre de téléchargement Microsoft à l’adresse [http://go.microsoft.com/fwlink/?LinkId=243035](http://go.microsoft.com/fwlink/?LinkId=243035).
-
-3.  Effectuez l’installation complète de Microsoft .NET Framework 4 (dotNetFx40_Full_setup.exe) à partir du Centre de téléchargement Microsoft à l’adresse [http://go.microsoft.com/fwlink/?LinkID=212547](http://go.microsoft.com/fwlink/?LinkID=212547).
-
-    Ou bien, installez Microsoft .NET Framework 4.5 (dotNetFx45_Full_setup.exe) à partir du Centre de téléchargement Microsoft à l’adresse [http://go.microsoft.com/fwlink/?LinkID=242919](http://go.microsoft.com/fwlink/?LinkID=242919).
-
-4.  Installez « Protection étendue pour l’authentification » (KB 968389) à partir de l’adresse [http://go.microsoft.com/fwlink/?LinkID=186398](http://go.microsoft.com/fwlink/?LinkID=186398).
-
-5.  Installez Windows Management Framework 3.0 à partir du Centre de téléchargement Microsoft à l’adresse [http://go.microsoft.com/fwlink/?LinkID=240290](http://go.microsoft.com/fwlink/?LinkID=240290).
+Sinon, vous voudrez peut-être [Installer et configurer Azure PowerShell](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps)
 
 ## <a name="see-also"></a>Voir aussi
-- [Configuration nécessaire pour Windows PowerShell](Windows-PowerShell-System-Requirements.md)
-- [Démarrage de Windows PowerShell](https://technet.microsoft.com/en-us/library/8ec8c2d7-8e7c-4722-a3d2-498fe5739a8e)
 
+- [Configuration nécessaire pour Windows PowerShell](Windows-PowerShell-System-Requirements.md)
+- [Démarrage de Windows PowerShell](Starting-Windows-PowerShell.md)
