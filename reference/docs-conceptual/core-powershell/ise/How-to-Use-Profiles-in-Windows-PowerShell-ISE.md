@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: Comment utiliser des profils dans Windows PowerShell ISE
 ms.assetid: 0219626a-6da5-4acc-b630-d058e8b29cc6
-ms.openlocfilehash: 97fe9d241fa8a33e0c9b798a7408f06e3381530d
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 6b16291b7025928a307380cbae75fcdbdb51a73d
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="how-to-use-profiles-in-windows-powershell-ise"></a>Comment utiliser des profils dans Windows PowerShell ISE
 Cette rubrique explique comment utiliser des profils dans l’environnement d’écriture de scripts intégré de Windows PowerShell®. Avant d’effectuer les tâches décrites dans cette section, nous vous recommandons de consulter [about_Profiles [v4]](https://technet.microsoft.com/library/e1d9e30a-70cc-4f36-949f-fc7cd96b4054(v=wps.630)) ou, dans le volet Console, tapez `Get-Help about_Profiles` et appuyez sur **Entrée**.
@@ -70,7 +70,7 @@ if (!(Test-Path -Path $PROFILE.AllUsersAllHosts))
 
 2.  Ajoutez des éléments à votre profil. Voici quelques exemples pour vous aider à démarrer :
 
-    -   Pour modifier la couleur d’arrière-plan par défaut du volet Console en bleu, dans le type de fichier de profil : `$psISE.Options.OutputPaneBackground = 'blue'`. Pour plus d’informations sur la variable $psISE, voir [Référence de modèle objet Windows PowerShell ISE](#windows-powershell-ise-object-model-reference).
+    -   Pour modifier la couleur d’arrière-plan par défaut du volet Console en bleu, dans le type de fichier de profil : `$psISE.Options.OutputPaneBackground = 'blue'`. Pour plus d’informations sur la variable $psISE, voir [Référence de modèle objet Windows PowerShell ISE]().
 
     -   Pour modifier la taille de police en 20, dans le type de fichier de profil : `$psISE.Options.FontSize =20`
 

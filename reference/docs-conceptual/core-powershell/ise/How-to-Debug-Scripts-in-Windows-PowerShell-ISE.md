@@ -1,21 +1,21 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Comment déboguer des scripts dans Windows PowerShell ISE"
 ms.assetid: 6dc6d8f9-8978-46e9-a92f-169af37e2817
-ms.openlocfilehash: db8847e2cc9abeec729ed8d939fc170529a93846
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 2b8313c3f2ae1a8fb670099baa8950db49722330
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="how-to-debug-scripts-in-windows-powershell-ise"></a>Comment déboguer des scripts dans Windows PowerShell ISE
 Cette rubrique décrit comment déboguer des scripts sur un ordinateur local à l’aide des fonctionnalités de débogage visuel de l’environnement d’écriture de scripts intégré de Windows PowerShell® ( Windows PowerShell ISE).
 
-[Comment gérer les points d’arrêt](#bkmk_1)
-[Comment gérer une session de débogage](#bkmk_2)
-[Comment effectuer une opération de pas à pas principal, de pas à pas détaillé et de pas à pas sortant lors d’un débogage](#bkmk_3)
-[Comment afficher les valeurs de variables lors d’un débogage](#bkmk_4)
+[Comment gérer les points d’arrêt]()
+[Comment gérer une session de débogage]()
+[Comment effectuer une opération de pas à pas principal, de pas à pas détaillé et de pas à pas sortant lors d’un débogage]()
+[Comment afficher les valeurs de variables lors d’un débogage]()
 
 ## <a name="bkmk_1"></a>Comment gérer les points d’arrêt
 Un point d’arrêt est un endroit désigné dans un script, où vous souhaitez que l’opération s’interrompe afin que de pouvoir examiner l’état actuel des variables et de l’environnement dans lequel votre script s’exécute. Une fois votre script interrompu par un point d’arrêt, vous pouvez exécuter des commandes dans le volet Console pour examiner l’état de votre script.  Vous pouvez extraire des variables ou exécuter d’autres commandes. Vous pouvez même modifier la valeur de toutes les variables visibles dans le contexte du script en cours d’exécution. Après avoir examiné ce que vous voulez voir, vous pouvez reprendre l’exécution du script.
@@ -51,7 +51,7 @@ Get-PSBreakpoint
 ```
 
 ### <a name="remove-a-breakpoint"></a>Supprimer un point d’arrêt
-La suppression d’un point d’arrêt revient à effacer celui-ci.  Si vous pensez que vous pourriez être amené à le réutiliser ultérieurement, envisagez plutôt de le [désactiver](#bkmk_disable).  Cliquez avec le bouton droit sur la ligne dans laquelle vous souhaitez supprimer un point d’arrêt, puis cliquez sur **Basculer le point d’arrêt**. Vous pouvez également cliquer sur la ligne dans laquelle vous souhaitez supprimer un point d’arrêt, puis, dans le menu **Déboguer**, cliquer sur **Basculer le point d’arrêt**. Le script suivant montre comment supprimer un point d’arrêt avec un ID spécifié à partir du volet Console en utilisant l’applet de commande [Remove-PSBreakpoint](https://technet.microsoft.com/library/4c877a80-0ea0-4790-9281-88c08ef0ddd6).
+La suppression d’un point d’arrêt revient à effacer celui-ci.  Si vous pensez que vous pourriez être amené à le réutiliser ultérieurement, envisagez plutôt de le [désactiver]().  Cliquez avec le bouton droit sur la ligne dans laquelle vous souhaitez supprimer un point d’arrêt, puis cliquez sur **Basculer le point d’arrêt**. Vous pouvez également cliquer sur la ligne dans laquelle vous souhaitez supprimer un point d’arrêt, puis, dans le menu **Déboguer**, cliquer sur **Basculer le point d’arrêt**. Le script suivant montre comment supprimer un point d’arrêt avec un ID spécifié à partir du volet Console en utilisant l’applet de commande [Remove-PSBreakpoint](https://technet.microsoft.com/library/4c877a80-0ea0-4790-9281-88c08ef0ddd6).
 
 ``` PowerShell
 # This command deletes the breakpoint with breakpoint ID 2.
@@ -103,7 +103,7 @@ Get-PSBreakpoint | Enable-PSBreakpoint
 ```
 
 ## <a name="bkmk_2"></a>Comment gérer une session de débogage
-Avant de commencer le débogage, vous devez définir un ou plusieurs points d’arrêt. Vous ne pouvez définir un point d’arrêt que si le script que vous souhaitez déboguer est enregistré. Pour des instructions sur la définition d’un point d’arrêt, voir [Comment gérer les points d’arrêt](#bkmk_1) ou [Set-PSBreakpoint](https://technet.microsoft.com/library/6afd5d2c-a285-4796-8607-3cbf49471420). Une fois le débogage démarré, vous ne pouvez modifier un script qu’après avoir arrêté le débogage. Un script dans lequel un ou plusieurs points d’arrêt sont définis est automatiquement enregistré avant son exécution.
+Avant de commencer le débogage, vous devez définir un ou plusieurs points d’arrêt. Vous ne pouvez définir un point d’arrêt que si le script que vous souhaitez déboguer est enregistré. Pour des instructions sur la définition d’un point d’arrêt, voir [Comment gérer les points d’arrêt]() ou [Set-PSBreakpoint](https://technet.microsoft.com/library/6afd5d2c-a285-4796-8607-3cbf49471420). Une fois le débogage démarré, vous ne pouvez modifier un script qu’après avoir arrêté le débogage. Un script dans lequel un ou plusieurs points d’arrêt sont définis est automatiquement enregistré avant son exécution.
 
 ### <a name="to-start-debugging"></a>Pour commencer le débogage
 Appuyez sur **F5** ou, dans la barre d’outils, cliquez sur l’icône **Exécuter le script**. Ou encore, dans le menu **Déboguer**, cliquez sur **Exécuter/Continuer**. Le script s’exécute jusqu’à ce qu’il rencontre le premier point d’arrêt. Il suspend alors l’opération et met en surbrillance la ligne sur laquelle il s’est arrêté.

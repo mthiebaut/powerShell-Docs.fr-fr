@@ -1,22 +1,22 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Comment écrire et exécuter des scripts dans Windows PowerShell ISE"
 ms.assetid: 62f916d9-b3a1-484a-bdfb-41f57112c22b
-ms.openlocfilehash: 871a4b6f4575af4f823a6957dc971335497320a4
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 577ecf96027618a0a8f98d5bcefe7ec949f337cc
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="how-to-write-and-run-scripts-in-the-windows-powershell-ise"></a>Comment écrire et exécuter des scripts dans Windows PowerShell ISE
 Cette rubrique décrit comment créer, modifier, exécuter et enregistrer des scripts dans le volet Script.
 
--   [Comment créer et exécuter des scripts](#bkmk_1)
+-   [Comment créer et exécuter des scripts]()
 
--   [Comment écrire et modifier du texte dans le volet Script](#bkmk_2)
+-   [Comment écrire et modifier du texte dans le volet Script]()
 
--   [Comment enregistrer un script](#bkmk_3)
+-   [Comment enregistrer un script]()
 
 ## <a name="bkmk_1"></a>Comment créer et exécuter des scripts
 Vous pouvez ouvrir et modifier des fichiers Windows PowerShell® dans le volet Script. Les types de fichiers spécifiques particulièrement intéressants dans Windows PowerShell® sont les fichiers de script (.ps1), les fichiers de données de script (.psd1) et les fichiers de module de script (.psm1). Ces types de fichiers font l’objet d’une coloration de la syntaxe dans l’éditeur du volet Script. D’autres types de fichiers courants que vous pouvez ouvrir dans le volet Script sont les fichiers de configuration (.ps1xml), les fichiers XML et les fichiers texte.

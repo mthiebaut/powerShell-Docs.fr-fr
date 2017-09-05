@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Comment créer un onglet PowerShell dans Windows PowerShell ISE"
 ms.assetid: c10c18c7-9ece-4fd0-83dc-a19c53d4fd83
-ms.openlocfilehash: 7dc92275c30ad783ad71b2a4825e9cc0d26d1691
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: b8648b3c23e5a7edaa195f2aa4bfad2757e39e75
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="how-to-create-a-powershell-tab-in-windows-powershell-ise"></a>Comment créer un onglet PowerShell dans Windows PowerShell ISE
 Les onglets de l’environnement d’écriture de scripts intégré de Windows PowerShell® permettent de créer et d’utiliser simultanément plusieurs environnements d’exécution au sein de la même application. Chaque onglet PowerShell correspond à un environnement d’exécution ou à une session distincts.
@@ -15,7 +15,7 @@ Les onglets de l’environnement d’écriture de scripts intégré de Windows P
 > [!NOTE]
 > Les variables, fonctions et alias que vous créez sous un onglet ne s’appliquent pas à un autre. Il s’agit de sessions Windows PowerShell différentes.
 
-Pour ouvrir ou fermer un onglet dans Windows PowerShell, procédez comme suit. Pour renommer un onglet, définissez la propriété [DisplayName](The-PowerShellTab-Object.md#Displayname) sur l’objet de script Onglet Windows PowerShell.
+Pour ouvrir ou fermer un onglet dans Windows PowerShell, procédez comme suit. Pour renommer un onglet, définissez la propriété [DisplayName]() sur l’objet de script Onglet Windows PowerShell.
 
 ## <a name="to-create-and-use-a-new-powershell-tab"></a>Pour créer et utiliser un onglet PowerShell
 Dans le menu **Fichier**, cliquez sur **Nouvel onglet PowerShell**. Le nouvel onglet PowerShell s’ouvre toujours comme la fenêtre active. Les onglets PowerShell sont numérotés de façon incrémentielle dans l’ordre de leur ouverture. Chaque onglet est associé à sa propre fenêtre de console Windows PowerShell. Vous pouvez avoir jusqu’à 32 onglets PowerShell avec leur propre session ouverte simultanément (ce nombre est limité à 8 sur Windows PowerShell ISE 2.0.)

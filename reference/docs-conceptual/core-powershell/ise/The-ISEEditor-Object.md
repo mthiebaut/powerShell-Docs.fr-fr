@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: Objet ISEEditor
 ms.assetid: 0101daf8-4e31-4e4c-ab89-01d95dcb8f46
-ms.openlocfilehash: c4effde470a7a76a21f983b172f0af651dfc5d11
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: e2ddb0de1089c832f130e1f5c7c8dcb199aca2fa
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="the-iseeditor-object"></a>Objet ISEEditor
   Un objet **ISEEditor** est une instance de la classe Microsoft.PowerShell.Host.ISE.ISEEditor. Le volet de la console est un objet **ISEEditor**. Chaque objet [ISEFile](The-ISEFile-Object.md) est associé à un objet **ISEEditor**. Les sections suivantes répertorient les méthodes et propriétés d’un objet **ISEEditor**.
@@ -63,7 +63,7 @@ $psISE.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 ### <a name="gotomatch"></a>GoToMatch\(\)
   Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures. 
 
- Déplace le point d’insertion vers le caractère correspondant si la propriété **CanGoToMatch** de l’objet editor a la valeur **$true**. Ceci se produit quand le point d’insertion se situe juste avant une parenthèse ouvrante, un crochet ouvrant ou une accolade ouvrante \( \[,{ - ou juste après une parenthèse fermante, un crochet fermant ou une accolade fermante -\),\],}.  Le point d’insertion se trouve avant un caractère ouvrant ou après un caractère fermant. Si la propriété **CanGoToMatch** a la valeur **$false**, cette méthode n’a aucun effet. Consultez [CanGoToMatch](#cangotomatch).
+ Déplace le point d’insertion vers le caractère correspondant si la propriété **CanGoToMatch** de l’objet editor a la valeur **$true**. Ceci se produit quand le point d’insertion se situe juste avant une parenthèse ouvrante, un crochet ouvrant ou une accolade ouvrante \( \[,{ - ou juste après une parenthèse fermante, un crochet fermant ou une accolade fermante -\),\],}.  Le point d’insertion se trouve avant un caractère ouvrant ou après un caractère fermant. Si la propriété **CanGoToMatch** a la valeur **$false**, cette méthode n’a aucun effet. Consultez [CanGoToMatch]().
 
 ```powershell
 # Test to see if the caret is next to a parenthesis, bracket, or brace.
@@ -76,7 +76,7 @@ $psISE.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
  **text** : chaîne Texte à insérer.
 
- Consultez l’[exemple de script](#example) plus loin dans cette rubrique.
+ Consultez l’[exemple de script]() plus loin dans cette rubrique.
 
 ### <a name="select-startline-startcolumn-endline-endcolumn-"></a>Select\( startLine, startColumn, endLine, endColumn \)
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
@@ -91,7 +91,7 @@ $psISE.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
  **endColumn** : entier Colonne dans la ligne de fin où se termine la sélection.
 
- Consultez l’[exemple de script](#example) plus loin dans cette rubrique.
+ Consultez l’[exemple de script]() plus loin dans cette rubrique.
 
 ### <a name="selectcaretline"></a>SelectCaretLine\(\)
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
@@ -186,14 +186,14 @@ $psISE.CurrentFile.Editor.LineCount
 
  Propriété en lecture seule qui obtient le texte sélectionné dans l’éditeur.
 
- Consultez l’[exemple de script](#example) plus loin dans cette rubrique.
+ Consultez l’[exemple de script]() plus loin dans cette rubrique.
 
 ###  <a name="Text"></a> Text
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture\/écriture qui obtient ou définit le texte dans l’éditeur.
 
- Consultez l’[exemple de script](#example) plus loin dans cette rubrique.
+ Consultez l’[exemple de script]() plus loin dans cette rubrique.
 
 ##  <a name="example"></a> Exemple de script
 
