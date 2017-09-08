@@ -5,11 +5,11 @@ ms.topic: conceptual
 keywords: gallery,powershell,applet de commande,psgallery
 description: "Recommandations pour les éditeurs"
 title: Instructions et bonnes pratiques de publication PowerShell Gallery
-ms.openlocfilehash: 394e69e189761f3c5a4bb54dfa8df15c4ab240d6
-ms.sourcegitcommit: e63f09c005b6bbf39c3c001944f307c2b155765b
+ms.openlocfilehash: 85486c409382472420a67fc124bd07a30486cb62
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Instructions et bonnes pratiques de publication PowerShell Gallery
 
@@ -69,9 +69,9 @@ La documentation est l’élément le plus utile à inclure dans les éléments 
 Les utilisateurs ignorent généralement les éléments sans documentation car ils préfèrent lire le code pour comprendre ce que l’élément représente et comment l’utiliser.
 Il existe plusieurs articles dans MSDN sur la façon de fournir de la documentation avec des éléments PowerShell, par exemple :
 
-* La rubrique [Comment rédiger l’aide sur une applet de commande](https://msdn.microsoft.com/en-us/library/aa965353(VS.85).aspx)
+* La rubrique [Comment rédiger l’aide sur une applet de commande](https://go.microsoft.com/fwlink/?LinkID=123415)
 * La création de l’aide sur une applet de commande est la meilleure approche, qu’il s’agisse d’un script, d’une fonction ou d’une applet de commande PowerShell.
-  Pour plus d’informations sur la création de l’aide d’une applet de commande, commencez par la rubrique [Comment rédiger l’aide sur une applet de commande](http://go.microsoft.com/fwlink/?LinkID=123415) dans la bibliothèque MSDN (Microsoft Developer Network).
+  Pour plus d’informations sur la création de l’aide d’une applet de commande, commencez par [How to Write Cmdlet Help](https://go.microsoft.com/fwlink/?LinkID=123415) dans MSDN Library.
   Pour ajouter une aide dans un script, consultez [À propos de l’aide d’un commentaire](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/about/about_comment_based_help).
 * De nombreux modules incluent également une documentation au format texte, par exemple les fichiers MarkDown.
   Cela peut s’avérer particulièrement utile lorsque Github contient un projet dans lequel le format Markdown est très utilisé.

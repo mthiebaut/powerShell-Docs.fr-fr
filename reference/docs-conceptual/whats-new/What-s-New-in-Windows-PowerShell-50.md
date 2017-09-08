@@ -1,16 +1,16 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Nouveautés dans Windows PowerShell 5.0"
 ms.assetid: 1476722e-947e-425d-a86c-50037488dc6e
-ms.openlocfilehash: c172ac076d2cd69e8f1876ad47a51c233d8a4afb
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 24860f34f6e2ef655befd9916a651dd0274b2620
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="what39s-new-in-windows-powershell"></a>Nouveautés dans Windows PowerShell
-Windows PowerShell® 5.0 intègre plusieurs nouvelles fonctionnalités importantes qui, en plus d’étendre et de simplifier son utilisation, vous permettent de contrôler et de gérer des environnements Windows plus aisément et de façon plus poussée.
+Windows PowerShell® 5.0 inclut plusieurs nouvelles fonctionnalités importantes qui, en plus d’étendre et de simplifier son utilisation, vous permettent de contrôler et de gérer des environnements Windows plus aisément et de façon plus complète.
 
 Windows PowerShell 5.0 offre une compatibilité descendante. Les applets de commande, fournisseurs, modules, composants logiciels enfichables, scripts, fonctions et profils conçus pour Windows PowerShell 4.0, Windows PowerShell 3.0 et Windows PowerShell 2.0 fonctionnent généralement dans Windows PowerShell 5.0 sans aucune modification.
 
@@ -21,13 +21,13 @@ Pour installer Windows PowerShell 5.0 sur Windows Server 2012 R2, Windows 8.
 
 ## <a name="in-this-topic"></a>Dans cette rubrique
 
--   [Mises à jour de la DSC de Windows PowerShell 4.0 dans KB 3000850](#BKMK_3000850)
+-   [Mises à jour de la DSC de Windows PowerShell 4.0 dans KB 3000850]()
 
--   [Nouvelles fonctionnalités de Windows PowerShell 5.0](#BKMK_new50)
+-   [Nouvelles fonctionnalités de Windows PowerShell 5.0]()
 
--   [Nouvelles fonctionnalités de Windows PowerShell 4.0](#BKMK_wps4)
+-   [Nouvelles fonctionnalités de Windows PowerShell 4.0]()
 
--   [Nouvelles fonctionnalités de Windows PowerShell 3.0](#BKMK_wps3)
+-   [Nouvelles fonctionnalités de Windows PowerShell 3.0]()
 
 ## <a name="BKMK_3000850"></a>Mises à jour de Windows PowerShell 4.0 dans le correctif cumulatif de novembre 2014 (3000850 Ko)
 Plusieurs mises à jour et améliorations de la configuration d’état souhaité Windows PowerShell dans Windows PowerShell 4.0 sont disponibles dans le [correctif cumulatif de novembre 2014 pour Windows RT 8.1, Windows 8.1 et Windows Server 2012 R2](https://support.microsoft.com/kb/3000850/) (KB 3000850). Pour déterminer si KB 3000850 est installé sur votre système, exécutez `Get-Hotfix -Id KB3000850` dans Windows PowerShell.
@@ -128,15 +128,15 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
 ## <a name="BKMK_new50"></a>Nouvelles fonctionnalités dans Windows PowerShell 5.0
 
--   [Nouvelles fonctionnalités de Windows PowerShell](#BKMK_newcore)
+-   [Nouvelles fonctionnalités de Windows PowerShell]()
 
--   [Nouvelles fonctionnalités de la DSC (Configuration de l’état souhaité) de Windows PowerShell](#BKMK_newDSC)
+-   [Nouvelles fonctionnalités de la DSC (Configuration de l’état souhaité) de Windows PowerShell]()
 
--   [Nouvelles fonctionnalités dans Windows PowerShell ISE](#BKMK_newISE)
+-   [Nouvelles fonctionnalités dans Windows PowerShell ISE]()
 
--   [Nouvelles fonctionnalités des services web Windows PowerShell](#BKMK_newOData)
+-   [Nouvelles fonctionnalités des services web Windows PowerShell]()
 
--   [Correctifs de bogues importants dans Windows PowerShell 5.0](#BKMK_5bugfix)
+-   [Correctifs de bogues importants dans Windows PowerShell 5.0]()
 
 ### <a name="BKMK_newcore"></a>Nouvelles fonctionnalités dans Windows PowerShell
 
@@ -170,7 +170,7 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
 -   L’applet de commande Get-ChildItem dispose également d’un nouveau paramètre, -Depth, que vous pouvez utiliser avec le paramètre -Recurse pour limiter la récursivité. Par exemple, la commande Get-ChildItem -Recurse -Depth 2 retourne des résultats à partir du dossier actif, de tous les dossiers enfants de ce dossier et de tous les sous-dossiers des dossiers enfants.
 
--   L’applet de commande Copy-Item permet maintenant de copier des fichiers ou dossiers d’une session Windows PowerShell vers une autre. Vous pouvez ainsi copier des fichiers vers des sessions connectées à des ordinateurs distants (notamment les ordinateurs exécutant [Windows Nano Server](http://blogs.technet.com/b/windowsserver/archive/2015/04/08/microsoft-announces-nano-server-for-modern-apps-and-cloud.aspx), qui n’ont donc pas d’autre interface). Pour copier des fichiers, spécifiez des ID PSSession comme valeurs pour les nouveaux paramètres -FromSession et -ToSession, en ajoutant -Path et -Destination pour spécifier respectivement le chemin d’origine et la destination. Par exemple, Copy-Item -Path c:\\myFile.txt -ToSession $s -Destination d:\\destinationFolder.
+-   L’applet de commande Copy-Item permet désormais de copier des fichiers ou des dossiers d’une session Windows PowerShell vers une autre. Vous pouvez ainsi copier des fichiers vers des sessions connectées à des ordinateurs distants (notamment les ordinateurs exécutant [Windows Nano Server](http://blogs.technet.com/b/windowsserver/archive/2015/04/08/microsoft-announces-nano-server-for-modern-apps-and-cloud.aspx), qui n’ont donc pas d’autre interface). Pour copier des fichiers, spécifiez des ID PSSession comme valeurs pour les nouveaux paramètres -FromSession et -ToSession, en ajoutant -Path et -Destination pour spécifier respectivement le chemin d’origine et la destination. Par exemple, Copy-Item -Path c:\\myFile.txt -ToSession $s -Destination d:\\destinationFolder.
 
 -   La transcription Windows PowerShell a été améliorée pour s’appliquer non seulement à l’hôte de la console (**powershell.exe**), mais aussi à toutes les applications d’hébergement telles que Windows PowerShell ISE. Vous pouvez configurer des options de transcription (notamment la transcription à l’échelle du système) en activant le paramètre de stratégie de groupe **Activer la transcription PowerShell** accessible dans Modèles d’administration/Composants Windows/Windows PowerShell.
 
@@ -178,7 +178,7 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
 -   À partir de Windows PowerShell 5.0, de nouvelles applets de commande CMS (Cryptographic Message Syntax) prennent en charge le chiffrement et le déchiffrement de contenu à l’aide du format IETF standard pour protéger par chiffrement des messages, comme décrit dans le document [RFC (Request For Comments) 5652](http://tools.ietf.org/html/rfc5652). Les applets de commande Get-CmsMessage, Protect-CmsMessage et Unprotect-CmsMessage ont été ajoutées au module [Microsoft.PowerShell.Security](http://technet.microsoft.com/library/hh849807.aspx).
 
--   Les nouvelles applets de commande du module [Microsoft.PowerShell.Utility](http://technet.microsoft.com/library/hh849958.aspx) (Get-Runspace, Debug-Runspace, Get-RunspaceDebug, Enable-RunspaceDebug et Disable-RunspaceDebug) vous permettent de définir des options de débogage ainsi que de démarrer et d’arrêter le débogage sur une instance d’exécution. Pour le débogage d’instances d’exécution arbitraires (c’est-à-dire, autres que l’instance d’exécution par défaut pour une console Windows PowerShell ou une session Windows PowerShell ISE), Windows PowerShell permet de définir des points d’arrêt dans un script, qui interrompent l’exécution de celui-ci jusqu’à ce que vous puissiez attacher un débogueur pour déboguer le script de l’instance d’exécution. Une prise en charge du débogage imbriqué pour les instances d’exécution arbitraires a été ajoutée au débogueur de script Windows PowerShell pour les instances d’exécution.
+-   Les nouvelles applets de commande du module [Microsoft.PowerShell.Utility](http://technet.microsoft.com/library/hh849958.aspx) (Get-Runspace, Debug-Runspace, Get-RunspaceDebug, Enable-RunspaceDebug et Disable-RunspaceDebug) vous permettent de définir des options de débogage ainsi que de démarrer et d’arrêter le débogage sur une instance d’exécution. Pour le débogage d’instances d’exécution arbitraires (c’est-à-dire autres que l’instance d’exécution par défaut pour une console Windows PowerShell ou une session Windows PowerShell ISE), Windows PowerShell permet de définir des points d’arrêt dans un script, qui interrompent l’exécution de celui-ci jusqu’à ce que vous puissiez attacher un débogueur pour déboguer le script de l’instance d’exécution. Une prise en charge du débogage imbriqué pour les instances d’exécution arbitraires a été ajoutée au débogueur de script Windows PowerShell pour les instances d’exécution.
 
 -   Une nouvelle applet de commande, Format-Hex, a été ajoutée au module [Microsoft.PowerShell.Utility](http://technet.microsoft.com/library/hh849958.aspx). Format-Hex permet d’afficher du texte ou des données binaires au format hexadécimal.
 
@@ -226,7 +226,7 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
 ### <a name="BKMK_newDSC"></a>Nouvelles fonctionnalités dans la configuration d’état souhaité de Windows PowerShell
 
--   Le rehaussement du langage Windows PowerShell permet de définir des ressources de configuration d’état souhaité (DSC) Windows PowerShell à l’aide de classes. Import-DscResource est maintenant un vrai mot clé dynamique. Windows PowerShell analyse le module racine du module spécifié, en recherchant des classes contenant l’attribut DscResource. Vous pouvez maintenant utiliser des classes pour définir des ressources DSC, dans lesquelles un fichier MOF ou un sous-dossier DSCResource dans le dossier du module ne sont pas requis. Un fichier de module Windows PowerShell peut contenir plusieurs classes de ressources DSC.
+-   Le rehaussement du langage Windows PowerShell permet de définir des ressources de configuration d’état souhaité (DSC) Windows PowerShell à l’aide de classes. Import-DscResource est maintenant un vrai mot clé dynamique. Windows PowerShell analyse le module racine du module spécifié, en recherchant des classes qui contiennent l’attribut DscResource. Vous pouvez maintenant utiliser des classes pour définir des ressources DSC, dans lesquelles un fichier MOF ou un sous-dossier DSCResource dans le dossier du module ne sont pas requis. Un fichier de module Windows PowerShell peut contenir plusieurs classes de ressources DSC.
 
 -   Un nouveau paramètre, ThrottleLimit, a été ajouté aux applets de commande suivantes dans le module PSDesiredStateConfiguration. Ajoutez le paramètre ThrottleLimit pour spécifier le nombre d’ordinateurs cibles ou d’appareils sur lesquels vous souhaitez que la commande opère simultanément.
 
@@ -270,7 +270,7 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
 -   Un nouvel attribut, **DscLocalConfigurationManager**, désigne un bloc de configuration en tant que métaconfiguration, qui sert à configurer le gestionnaire de configuration local DSC. Avec cet attribut, une configuration peut contenir uniquement des éléments qui configurent le gestionnaire de configuration local DSC. Pendant le traitement, cette configuration génère un fichier \*.meta.mof qui est ensuite envoyé aux nœuds cibles appropriés en exécutant l’applet de commande Set-DscLocalConfigurationManager.
 
--   Les configurations partielles sont maintenant autorisées dans Windows PowerShell 5.0. Vous pouvez distribuer des documents de configuration à un nœud en plusieurs fragments. Pour qu’un nœud reçoive plusieurs fragments d’un document de configuration, il faut que son gestionnaire de configuration local soit configuré pour spécifier les fragments attendus.
+-   Les configurations partielles sont maintenant autorisées dans Windows PowerShell 5.0. Vous pouvez distribuer des documents de configuration à un nœud en plusieurs fragments. Pour qu’un nœud reçoive plusieurs fragments d’un document de configuration, il faut que son gestionnaire de configuration local soit d’abord configuré pour spécifier les fragments attendus.
 
 -   La synchronisation entre ordinateurs est une nouveauté de DSC dans Windows PowerShell 5.0. Avec les ressources WaitFor\* intégrées (**WaitForAll**, **WaitForAny** et **WaitForSome**), vous pouvez maintenant spécifier des dépendances entre ordinateurs lors d’exécutions de configuration, sans orchestration externe. Ces ressources fournissent une synchronisation de nœud à nœud à l’aide de connexions CIM sur le protocole WS-Man. Une configuration peut attendre que l’état d’une ressource spécifique d’un autre ordinateur change.
 
@@ -290,7 +290,7 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 
 ### <a name="BKMK_newISE"></a>Nouvelles fonctionnalités dans Windows PowerShell ISE
 
--   Vous pouvez maintenant modifier des scripts et fichiers Windows PowerShell distants dans une copie locale de Windows PowerShell ISE, en exécutant Enter-PSSession pour démarrer une session à distance sur l’ordinateur qui stocke les fichiers à modifier, puis en exécutant **PSEdit <path and file name on the remote computer>**. Cette fonctionnalité facilite la modification de fichiers Windows PowerShell stockés sur l’option d’installation minimale de Windows Server, où Windows PowerShell ISE ne peut pas s’exécuter.
+-   Vous pouvez maintenant modifier des scripts et des fichiers Windows PowerShell distants dans une copie locale de Windows PowerShell ISE, en exécutant Enter-PSSession pour démarrer une session à distance sur l’ordinateur qui stocke les fichiers à modifier, puis en exécutant **PSEdit <path and file name on the remote computer>**. Cette fonctionnalité facilite la modification de fichiers Windows PowerShell stockés sur l’option d’installation minimale de Windows Server, où Windows PowerShell ISE ne peut pas s’exécuter.
 
 -   L’applet de commande Start-Transcript est maintenant prise en charge dans Windows PowerShell ISE.
 
@@ -311,19 +311,19 @@ Plusieurs mises à jour et améliorations de la configuration d’état souhait�
 ## <a name="BKMK_wps4"></a>Nouvelles fonctionnalités dans Windows PowerShell 4.0
 Windows PowerShell 4.0 offre une compatibilité descendante. Les applets de commande, fournisseurs, modules, composants logiciels enfichables, scripts, fonctions et profils conçus pour Windows PowerShell 3.0 et Windows PowerShell 2.0 fonctionnent dans Windows PowerShell 4.0 sans aucune modification.
 
-Windows PowerShell 4.0 est installé par défaut sur Windows® 8.1 et Windows Server 2012 R2. Pour installer Windows PowerShell 4.0 sur Windows 7 avec SP1, ou Windows Server 2008 R2, téléchargez et installez [Windows Management Framework 4.0](http://www.microsoft.com/download/details.aspx?id=40855). Avant d'installer Windows Management Framework 4.0, veillez à prendre connaissance des détails du téléchargement et à vérifier la configuration système requise.
+Windows PowerShell 4.0 est installé par défaut sur Windows® 8.1 et Windows Server 2012 R2. Pour installer Windows PowerShell 4.0 sur Windows 7 avec SP1 ou Windows Server 2008 R2, téléchargez et installez [Windows Management Framework 4.0](http://www.microsoft.com/download/details.aspx?id=40855). Avant d'installer Windows Management Framework 4.0, veillez à prendre connaissance des détails du téléchargement et à vérifier la configuration système requise.
 
--   [Nouvelles fonctionnalités de Windows PowerShell](#BKMK_core)
+-   [Nouvelles fonctionnalités de Windows PowerShell]()
 
--   [Nouvelles fonctionnalités de l’environnement d’écriture de scripts intégré (ISE) de Windows PowerShell](#BKMK_ise)
+-   [Nouvelles fonctionnalités de l’environnement d’écriture de scripts intégré (ISE) de Windows PowerShell]()
 
--   [Nouvelles fonctionnalités de Windows PowerShell Workflow](#BKMK_workflow)
+-   [Nouvelles fonctionnalités de Windows PowerShell Workflow]()
 
--   [Nouvelles fonctionnalités des services web Windows PowerShell](#BKMK_psws)
+-   [Nouvelles fonctionnalités des services web Windows PowerShell]()
 
--   [Nouvelles fonctionnalités d’Accès web Windows PowerShell](#BKMK_powwa)
+-   [Nouvelles fonctionnalités d’Accès web Windows PowerShell]()
 
--   [Correctifs de bogues importants dans Windows PowerShell 4.0](#BKMK_bugs)
+-   [Correctifs de bogues importants dans Windows PowerShell 4.0]()
 
 Windows PowerShell 4.0 intègre les nouvelles fonctionnalités suivantes.
 
@@ -379,7 +379,7 @@ Windows PowerShell 4.0 intègre les nouvelles fonctionnalités suivantes.
 
 -   La liaison de paramètre a été considérablement améliorée pour fonctionner en dehors des scénarios de saisie semi-automatique par tabulation, comme avec les commandes qui n'existent pas dans l'instance d'exécution actuelle.
 
--   Les activités de conteneur personnalisées sont maintenant prises en charge dans Windows PowerShell Workflow. Si un paramètre d’activité est de type **Activity** ou **Activity\[]** ou bien une collection générique d’activités, et que l’utilisateur a fourni un bloc de script en tant qu’argument, Windows PowerShell Workflow convertit le bloc de script au format XAML, comme lors d’une compilation de script à workflow Windows PowerShell normale.
+-   Les activités de conteneur personnalisées sont maintenant prises en charge dans Windows PowerShell Workflow. Si un paramètre d’activité est de type **Activity** ou **Activity\[]**, ou bien une collection générique d’activités, et que l’utilisateur a fourni un bloc de script comme argument, Windows PowerShell Workflow convertit le bloc de script au format XAML, comme lors d’une compilation de script à workflow Windows PowerShell normale.
 
 -   Après un incident, Windows PowerShell Workflow se reconnecte automatiquement aux nœuds gérés.
 
@@ -456,62 +456,62 @@ Windows PowerShell 4.0 intègre les nouvelles fonctionnalités suivantes.
 ## <a name="BKMK_wps3"></a>Nouvelles fonctionnalités dans Windows PowerShell 3.0
 Windows PowerShell 3.0 intègre les nouvelles fonctionnalités suivantes.
 
--   [Windows PowerShell Workflow](#BKMK_Workflow)
+-   [Windows PowerShell Workflow]()
 
--   [Accès Web Windows PowerShell](#BKMK_WebAccess)
+-   [Accès Web Windows PowerShell]()
 
--   [Nouvelles fonctionnalités de Windows PowerShell ISE](#BKMK_ISE)
+-   [Nouvelles fonctionnalités de Windows PowerShell ISE]()
 
--   [Prise en charge du Microsoft .NET Framework 4.0](#BKMK_NET4)
+-   [Prise en charge du Microsoft .NET Framework 4.0]()
 
--   [Prise en charge de l’environnement de préinstallation Windows (WinPE)](#BKMK_WinPE)
+-   [Prise en charge de l’environnement de préinstallation Windows (WinPE)]()
 
--   [Sessions déconnectées](#BKMK_Disconnected)
+-   [Sessions déconnectées]()
 
--   [Connectivité robuste des sessions](#BKMK_Robust)
+-   [Connectivité robuste des sessions]()
 
--   [Système d’aide actualisable](#BKMK_UpHelp)
+-   [Système d’aide actualisable]()
 
--   [Aide en ligne améliorée](#BKMK_Online)
+-   [Aide en ligne améliorée]()
 
--   [Intégration de CIM](#BKMK_CIM)
+-   [Intégration de CIM]()
 
--   [Fichiers de configuration de session](#BKMK_ConfigFile)
+-   [Fichiers de configuration de session]()
 
--   [Travaux planifiés et intégration du Planificateur de tâches](#BKMK_ScheduledJob)
+-   [Travaux planifiés et intégration du Planificateur de tâches]()
 
--   [Améliorations apportées au langage Windows PowerShell](#BKMK_Lang)
+-   [Améliorations apportées au langage Windows PowerShell]()
 
--   [Nouvelles applets de commande principales](#BKMK_Core)
+-   [Nouvelles applets de commande principales]()
 
--   [Améliorations apportées aux applets de commande principales et aux fournisseurs existants](#BKMK_Prov)
+-   [Améliorations apportées aux applets de commande principales et aux fournisseurs existants]()
 
--   [Importation et découverte des modules à distance](#BKMK_REM)
+-   [Importation et découverte des modules à distance]()
 
--   [Amélioration de la saisie semi-automatique via la touche Tab](#BKMK_TAB)
+-   [Amélioration de la saisie semi-automatique via la touche Tab]()
 
--   [Chargement automatique des modules](#BKMK_AutoLoad)
+-   [Chargement automatique des modules]()
 
--   [Améliorations de l’expérience des modules](#BKMK_MOD)
+-   [Améliorations de l’expérience des modules]()
 
--   [Découverte des commandes simplifiée](#BKMK_SIMPLE)
+-   [Découverte des commandes simplifiée]()
 
--   [Prise en charge améliorée de la journalisation, du diagnostic et de la stratégie de groupe](#BKMK_LOG)
+-   [Prise en charge améliorée de la journalisation, du diagnostic et de la stratégie de groupe]()
 
--   [Améliorations apportées à la mise en forme et aux sorties](#BKMK_OUT)
+-   [Améliorations apportées à la mise en forme et aux sorties]()
 
--   [Amélioration de l’expérience de l’hôte de la console](#BKMK_HOST)
+-   [Amélioration de l’expérience de l’hôte de la console]()
 
--   [Nouvelles API d’applet de commande et d’hébergement](#BKMK_API)
+-   [Nouvelles API d’applet de commande et d’hébergement]()
 
--   [Améliorations des performances](#BKMK_PERF)
+-   [Améliorations des performances]()
 
--   [Prise en charge de RunAs et des hôtes partagés](#BKMK_RUNAS)
+-   [Prise en charge de RunAs et des hôtes partagés]()
 
--   [Améliorations de la gestion des caractères spéciaux](#BKMK_CHAR)
+-   [Améliorations de la gestion des caractères spéciaux]()
 
 ### <a name="BKMK_Workflow"></a>Flux de travail Windows PowerShell
-Grâce au workflow Windows PowerShell®, vous bénéficiez de toute la puissance de Windows Workflow Foundation dans Windows PowerShell. Vous pouvez écrire des workflows en XAML ou dans le langage Windows PowerShell, et les exécuter de la même façon qu’une applet de commande. L’applet de commande [Get-Command](https://technet.microsoft.com/en-us/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) obtient les commandes de workflow et l’applet de commande [Get-Help](https://technet.microsoft.com/en-us/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) obtient de l’aide sur les workflows.
+Grâce à Windows PowerShell® Workflow, vous bénéficiez de toute la puissance de Windows Workflow Foundation dans Windows PowerShell. Vous pouvez écrire des workflows en XAML ou dans le langage Windows PowerShell, et les exécuter de la même façon qu’une applet de commande. L’applet de commande [Get-Command](https://technet.microsoft.com/en-us/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) obtient les commandes de workflow et l’applet de commande [Get-Help](https://technet.microsoft.com/en-us/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) obtient de l’aide sur les workflows.
 
 Les workflows sont des séquences d'activités de gestion de plusieurs ordinateurs. Ces séquences sont longues, reproductibles, fréquentes, parallèles et redémarrables ; elles peuvent aussi être interrompues et suspendues. Il est possible de reprendre des workflows suite à une interruption accidentelle ou intentionnelle, une indisponibilité du réseau, un redémarrage de Windows ou une panne de courant.
 
@@ -538,7 +538,7 @@ Les avantages de Windows PowerShell Workflow sont les suivants :
 -   **Limitation des workflows et des connexions.** Vous pouvez limiter l'exécution des workflows et les connexions aux nœuds, ce qui permet de prendre en charge des scénarios évolutifs et à haute disponibilité.
 
 ### <a name="BKMK_WebAccess"></a>Accès Web Windows PowerShell
-Accès Web Windows PowerShell® est une fonctionnalité Windows Server 2012 qui permet aux utilisateurs d’exécuter des commandes et des scripts Windows PowerShell dans une console web. Les appareils qui utilisent la console web ne nécessitent ni Windows PowerShell, ni un logiciel de gestion à distance, ni l’installation d’un plug-in de navigateur. Il suffit de disposer d’une passerelle Accès Web Windows PowerShell correctement configurée et d’un navigateur d’appareil client prenant en charge JavaScript® et acceptant les cookies.
+Accès Web Windows PowerShell est une fonctionnalité Windows Server 2012 qui permet aux utilisateurs d’exécuter des commandes et des scripts Windows PowerShell dans une console web. Les appareils qui utilisent la console web ne nécessitent ni Windows PowerShell, ni un logiciel de gestion à distance, ni l’installation d’un plug-in de navigateur. Il suffit de disposer d’une passerelle Accès Web Windows PowerShell correctement configurée et du navigateur d’un appareil client prenant en charge JavaScript® et acceptant les cookies.
 
 Pour plus d’informations, voir [Déployer un Accès Windows PowerShell Web](http://go.microsoft.com/fwlink/p/?LinkID=221050).
 
@@ -549,7 +549,7 @@ Pour Windows PowerShell 3.0, l’environnement d’écriture de scripts intégr
 Windows PowerShell repose sur le Common Language Runtime 4.0. Les auteurs d’applets de commande, de scripts et de flux de travail peuvent utiliser les nouvelles classes Microsoft .NET Framework 4 de Windows PowerShell. Ils peuvent ainsi bénéficier de fonctionnalités comme la compatibilité et le déploiement d’applications, Managed Extensibility Framework, l’informatique parallèle, la mise en réseau, Windows Communication Foundation et Windows Workflow Foundation.
 
 ### <a name="BKMK_WinPE"></a>Prise en charge de l’environnement de préinstallation Windows
-Windows PowerShell 3.0 est un composant facultatif de l'environnement de préinstallation Windows (WinPE) 4.0 pour Windows 8. Windows PE est un système d’exploitation minimal qui permet de démarrer un ordinateur sans système d’exploitation, et qui le prépare en vue de l’installation de Windows. Windows PE permet de partitionner et formater des disques durs, de copier des images de disque sur un ordinateur et d’initier l’installation de Windows à partir d’un partage réseau. Windows PowerShell 3.0 peut être utilisé sur Windows PE pour gérer des scénarios de déploiement, de diagnostic et de récupération.
+Windows PowerShell 3.0 est un composant facultatif de l'environnement de préinstallation Windows (WinPE) 4.0 pour Windows 8. Windows PE est un système d’exploitation minimal qui permet de démarrer un ordinateur qui n’a pas de système d’exploitation, et qui le prépare pour l’installation de Windows. Windows PE permet de partitionner et de formater des disques durs, de copier des images de disque sur un ordinateur et de lancer l’installation de Windows à partir d’un partage réseau. Windows PowerShell 3.0 peut être utilisé sur Windows PE pour gérer des scénarios de déploiement, de diagnostic et de récupération.
 
 ### <a name="BKMK_Disconnected"></a>Sessions déconnectées
 À compter de Windows PowerShell 3.0, les sessions persistantes gérées par l'utilisateur (« PSSessions ») que vous créez à l'aide de l'applet de commande New-PSSession sont enregistrées sur l'ordinateur distant. Elles ne dépendent donc plus de la session dans laquelle elles ont été créées.

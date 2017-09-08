@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Affichage de structure d’objet Get Member"
 ms.assetid: a1819ed2-2ef3-453a-b2b0-f3589c550481
-ms.openlocfilehash: eaa6cc44ecab04c76b90418115f388f6ff30e437
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 618f34bca7bfb76ce5d48ada642a687e279c8aad
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="viewing-object-structure-get-member"></a>Affichage de structure d’objet (Get-Member)
 Étant donné que les objets jouent un rôle central dans Windows PowerShell, il existe plusieurs commandes natives conçues pour fonctionner avec des types d’objets arbitraires. La plus importante est l’applet de commande **Get-Member**.
@@ -37,7 +37,7 @@ add_Disposed                   Method         System.Void add_Disposed(Event...
 ...
 ```
 
-Vous pouvez rendre cette longue liste d’informations plus utilisable en filtrant les éléments que vous souhaitez voir. La commande **Get-Member** permet de répertorier uniquement les membres qui sont des propriétés. Il existe plusieurs formes de propriétés. Si vous définissez le paramètre **Get-MemberMemberType** sur la valeur **Properties**, l’applet de commande affiche les propriétés de tout type. La liste obtenue reste très longue, mais est un peu plus gérable :
+Vous pouvez rendre cette longue liste d’informations plus utilisable en filtrant les éléments que vous souhaitez voir. La commande **Get-Member** permet de répertorier uniquement les membres qui sont des propriétés. Il existe plusieurs formes de propriétés. Si vous définissez le paramètre **Get-MemberMemberType** sur la valeur **Properties**, l’applet de commande affiche tous les types de propriétés. La liste obtenue reste très longue, mais est un peu plus gérable :
 
 ```
 PS> Get-Process | Get-Member -MemberType Properties
@@ -65,7 +65,7 @@ Path                       ScriptProperty System.Object Path {get=$this.Main...
 Plus de 60 propriétés sont applicables à un processus. La raison pour laquelle Windows PowerShell n’affiche souvent que quelques propriétés pour un objet bien connu est que les afficher toutes produirait une quantité ingérable d’informations.
 
 > [!NOTE]
-> Windows PowerShell détermine le mode d’affichage d’un type d’objet à l’aide des informations stockées dans des fichiers XML dont le nom se termine par .format.ps1xml. La mise en forme des données pour des objets de processus qui sont des objets .NET System.Diagnostics.Process, est stockée dans PowerShellCore.format.ps1xml.
+> Windows PowerShell détermine le mode d’affichage d’un type d’objet à l’aide des informations stockées dans des fichiers XML dont le nom se termine par .format.ps1xml. La mise en forme des données pour des objets de processus, qui sont des objets .NET System.Diagnostics.Process, est stockée dans DotNetTypes.format.ps1xml.
 
 Si vous avez besoin d’examiner les propriétés autres que celles que Windows PowerShell affiche par défaut, vous devez mettre en forme vous-même les données de sortie. Cela est possible à l’aide des applets de commande Format.
 

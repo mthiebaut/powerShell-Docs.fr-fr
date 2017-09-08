@@ -3,18 +3,18 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: Objet PowerShellTab
 ms.assetid: a9b58556-951b-4f48-b3ae-b351b7564360
-ms.openlocfilehash: d4e9374202d352a30b3eb46bcf1e4e40dea49822
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 482984272b2f1be027cf2be49bdfa2c6e2c52070
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="the-powershelltab-object"></a>Objet PowerShellTab
   L’objet **PowerShellTab** représente un environnement d’exécution Windows PowerShell.
 
 ## <a name="methods"></a>Méthodes
 
-###  <a name="invoke"></a> Invoke\( Script \)
+### <a name="invoke-script-"></a>Invoke\( Script \)
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Exécute le script spécifié dans l’onglet PowerShell.
@@ -52,7 +52,7 @@ $psISE.PowerShellTabs.SetSelectedPowerShellTab($psISE.PowerShellTabs[0])
 
 # Invoke a simple command on the other tab, in its own scope
 $psISE.PowerShellTabs[1].InvokeSynchronous('$x=1',$false)
-# You can switch to the other tab and type “$x” to see that the value is saved there.
+# You can switch to the other tab and type â€œ$xâ€ to see that the value is saved there.
 
 # This example sets a value in the other tab (in a different scope) 
 # and returns it through the pipeline to this tab to store in $a
@@ -67,7 +67,7 @@ measure-command {$psISE.PowerShellTabs[1].InvokeSynchronous("sleep 10",$false,50
 
 ## <a name="properties"></a>Propriétés
 
-###  <a name="AddOnsMenu"></a> AddOnsMenu
+### <a name="addonsmenu"></a>AddOnsMenu
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui obtient le menu complémentaire de l’onglet PowerShell.
@@ -85,10 +85,10 @@ $parentAdded.SubMenus.Add("_Dir",{dir},"Alt+D")
 $psISE.CurrentPowerShellTab.AddOnsMenu
 ```
 
-###  <a name="CanExecute"></a> CanInvoke
+### <a name="caninvoke"></a>CanInvoke
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
- Propriété booléenne en lecture seule qui renvoie la valeur **$true** si un script peut être appelé avec la méthode [Invoke( Script )](#invoke).
+ Propriété booléenne en lecture seule qui renvoie la valeur **$true** si un script peut être appelé avec la méthode [Invoke( Script )]().
 
 ```
 # CanInvoke will be false if the PowerShell
@@ -104,7 +104,7 @@ $secondTab.CanInvoke
 
 ```
 
-###  <a name="Commandpane"></a> Consolepane
+### <a name="consolepane"></a>Consolepane
   Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures.  Dans Windows PowerShell ISE 2.0, cette propriété s’appelait **CommandPane**.
 
  Propriété en lecture seule qui obtient l’objet [editor](../ise/The-ISEEditor-Object.md) du volet de la console.
@@ -115,7 +115,7 @@ $psISE.CurrentPowerShellTab.ConsolePane
 
 ```
 
-###  <a name="Displayname"></a> DisplayName
+### <a name="displayname"></a>DisplayName
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui obtient ou définit le texte affiché dans l’onglet PowerShell. Par défaut, les onglets sont nommés « PowerShell # », où # est un nombre.
@@ -126,7 +126,7 @@ $newTab = $psise.PowerShellTabs.Add()
 $newTab.DisplayName="Brand New Tab"
 ```
 
-###  <a name="ExpandedScript"></a> ExpandedScript
+### <a name="expandedscript"></a>ExpandedScript
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété booléenne en lecture\-écriture qui détermine si le volet de script est développé ou masqué.
@@ -137,7 +137,7 @@ $PSise.CurrentPowerShellTab.ExpandedScript=!$PSise.CurrentPowerShellTab.Expanded
 
 ```
 
-###  <a name="Files"></a> Files
+### <a name="files"></a>Fichiers
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui obtient la [collection des fichiers de script](../ise/The-ISEFileCollection-Object.md) qui sont ouverts dans l’onglet PowerShell.
@@ -149,7 +149,7 @@ $newFile.Editor.Text = "a`r`nb"
 $newFile.Editor.LineCount
 ```
 
-###  <a name="Output"></a> Output
+### <a name="output"></a>Sortie
   Cette fonctionnalité est présente dans Windows PowerShell ISE 2.0, mais a été supprimée ou renommée dans les versions ultérieures de l'environnement ISE.  Dans les versions ultérieures de Windows PowerShell ISE, vous pouvez utiliser l’objet **ConsolePane** à la place.
 
  Propriété en lecture seule qui obtient le volet de sortie de l’objet [editor](../ise/The-ISEEditor-Object.md) actuel.
@@ -159,17 +159,17 @@ $newFile.Editor.LineCount
 $psise.CurrentPowerShellTab.output.clear()
 ```
 
-###  <a name="Prompt"></a> Prompt
+### <a name="prompt"></a>Prompt
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
- Propriété en lecture seule qui obtient le texte d’invite actuel. Remarque : la fonction **Prompt** peut être remplacée par le profil utilisateur. Si le résultat n’est pas une chaîne simple, cette propriété ne renvoie rien.
+ Propriété en lecture seule qui obtient le texte d’invite actuel. Remarque : La fonction **Prompt** peut être remplacée par le profil de l’utilisateur. Si le résultat n’est pas une chaîne simple, cette propriété ne renvoie rien.
 
 ```
 # Gets the current prompt text.
 $psISE.CurrentPowerShellTab.Prompt
 ```
 
-###  <a name="ShowCommands"></a> ShowCommands
+### <a name="showcommands"></a>ShowCommands
   Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures. 
 
  Propriété en lecture\-écriture qui indique si le volet de commandes est actuellement affiché.
@@ -181,7 +181,7 @@ $a = $psISE.CurrentPowerShellTab.ShowCommands
 if (!$a) {$psISE.CurrentPowerShellTab.ShowCommands=$True}
 ```
 
-###  <a name="StatusText"></a> StatusText
+### <a name="statustext"></a>StatusText
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
  Propriété en lecture seule qui obtient le texte d’état **PowerShellTab**.
@@ -191,7 +191,7 @@ if (!$a) {$psISE.CurrentPowerShellTab.ShowCommands=$True}
 $psISE.CurrentPowerShellTab.StatusText
 ```
 
-###  <a name="HorizontalAddOnToolsPaneOpened"></a> HorizontalAddOnToolsPaneOpened
+### <a name="horizontaladdontoolspaneopened"></a>HorizontalAddOnToolsPaneOpened
   Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures. 
 
  Propriété en lecture seule qui indique si le volet des outils complémentaires horizontal est actuellement ouvert.
@@ -201,7 +201,7 @@ $psISE.CurrentPowerShellTab.StatusText
 $psISE.CurrentPowerShellTab.HorizontalAddOnToolsPaneOpened
 ```
 
-###  <a name="VerticalAddOnToolsPaneOpened"></a> **VerticalAddOnToolsPaneOpened**
+### <a name="verticaladdontoolspaneopened"></a>VerticalAddOnToolsPaneOpened
   Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures. 
 
  Propriété en lecture seule qui indique si le volet des outils complémentaires vertical est actuellement ouvert.

@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Nouveautés de PowerShell 5.0 ISE"
 ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
-ms.openlocfilehash: e772c31ae407e73a96364ffedf98057760037836
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: d816d717752579c79477daa35e7c0b15e944a6b7
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="what39s-new-in-the-windows-powershell-ise"></a>Nouveauté dans Windows PowerShell ISE
 Cette rubrique décrit les fonctionnalités nouvelles et mises à jour qui ont été introduites dans les versions de l’environnement d’écriture de scripts intégré (ISE) de Windows PowerShell®.
@@ -22,16 +22,16 @@ Le tableau suivant répertorie les fonctionnalités nouvelles et modifiées pour
 
 |Fonctionnalité/fonction|Windows PowerShell ISE 4.0|Windows PowerShell ISE 3.0|Windows PowerShell ISE 2.0|
 |--------------------------|-----------------------------------------------|-----------------------------------------------|-----------------------------------------------|
-|**[IntelliSense](#BKMK_Intellisense)**|X|X||
-|**[Extraits de code](#bkmk_snippets)**|X|X||
-|**[Outils complémentaires](#BKMK_AddOnTools)**|X|X||
-|**[Gestionnaire de démarrage et enregistrement automatique](#BKMK_RestartMgr)**|X|X||
-|**[Volet de la console](#BKMK_ConsolePane)**|X|X||
-|**[Liste Utilisé(s) récemment](#BKMK_MRU)**|X|X||
-|**[Commutateurs de ligne de commande](#BKMK_CommandLine)**|X|X||
-|**[Nouvelles fonctionnalités de l’éditeur](#BKMK_NewEditorFeatures)**|X|X||
-|**[Nouvelle fenêtre de visionneuse d’aide](#BKMK_NewHelpViewer)**|X|X||
-|**[Applet de commande Show-Command](#BKMK_ShowCommand)**|X|X||
+|**[IntelliSense]()**|X|X||
+|**[Extraits de code]()**|X|X||
+|**[Outils complémentaires]()**|X|X||
+|**[Gestionnaire de démarrage et enregistrement automatique]()**|X|X||
+|**[Volet de la console]()**|X|X||
+|**[Liste Utilisé(s) récemment]()**|X|X||
+|**[Commutateurs de ligne de commande]()**|X|X||
+|**[Nouvelles fonctionnalités de l’éditeur]()**|X|X||
+|**[Nouvelle fenêtre de visionneuse d’aide]()**|X|X||
+|**[Applet de commande Show-Command]()**|X|X||
 
 ### <a name="BKMK_Intellisense"></a>IntelliSense
 **Ajoutés dans ISE 3.0**
@@ -175,7 +175,7 @@ Les autres fonctionnalités d’édition de Windows PowerShell ISE sont les suiv
 
 -   **Affichage des erreurs d’analyse** Les erreurs d’analyse sont indiquées par des soulignements rouges. Lorsque vous pointez sur une erreur indiquée, le texte d’info-bulle affiche le problème détecté dans le code.
 
--   **Zoom** Le pourcentage de zoom du contenu de la console peut être défini à l’aide du curseur de zoom (dans le coin inférieur droit de la fenêtre de Windows PowerShell ISE) ou en tapant la commande **$psise.options.Zoom** dans le volet de la console.
+-   **Zoom** Le pourcentage de zoom du contenu de la console peut être défini à l’aide du curseur de zoom (dans le coin inférieur droit de la fenêtre de Windows PowerShell ISE) ou en entrant la commande **$psise.options.Zoom** dans le volet Console.
 
 -   **Copie et collage de texte enrichi** La copie dans le Presse-papiers dans Windows PowerShell ISE préserve les informations de police, de taille et de couleur de la sélection d’origine.
 

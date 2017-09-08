@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Obtention d’informations d’aide détaillées"
 ms.assetid: 6fb4daf7-8607-4a3e-b692-f77631adc1b9
-ms.openlocfilehash: 3260b5ec0a91749d3b7b126412137aa9d603ef0e
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: c786ce089073abccdf186dc1d9e8ee383f83655d
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="getting-detailed-help-information"></a>Obtention d’informations d’aide détaillées
 Windows PowerShell inclut des rubriques d’aide détaillées qui expliquent les concepts de Windows PowerShell et le langage Windows PowerShell. Il existe également des rubriques d’aide pour chaque applet de commande et fournisseur, et des rubriques d’aide pour un grand nombre de fonctions et de scripts.
@@ -75,7 +75,7 @@ Pour afficher uniquement les exemples d’une rubrique d’aide, utilisez le par
 get-help get-childitem -examples
 ```
 
-Pour plus d’informations sur la manière de rédiger des rubriques d’aide sur les applets de commande que vous écrivez, voir la rubrique « Comment rédiger l’aide sur une applet de commande » dans MSDN.
+Pour plus d’informations sur la manière de rédiger des rubriques d’aide sur les applets de commande que vous écrivez, consultez [How to Write Cmdlet Help](https://go.microsoft.com/fwlink/?LinkID=123415) dans MSDN Library.
 
 ## <a name="getting-conceptual-help"></a>Obtention d’aide conceptuelle
 L’applet de commande Get-Help affiche également des informations sur des rubriques conceptuelles de Windows PowerShell, dont des rubriques sur le langage Windows PowerShell. Les rubriques d’aide conceptuelle commencent par le préfixe « about_ », par exemple, « about_line_editing ». (Le nom de la rubrique conceptuelle doit être saisi en anglais, même dans les versions non anglaises de Windows PowerShell.)
@@ -165,7 +165,7 @@ La première ligne de la section Liens connexes de la rubrique est présentée c
 Online version: http://go.microsoft.com/fwlink/?LinkID=135194
 ```
 
-Pour plus d’informations sur la manière de fournir un support en ligne pour vos rubriques d’aide, voir [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf) et « Comment rédiger l’aide sur une applet de commande » ([http://go.microsoft.com/fwlink/?LinkID=123415](http://go.microsoft.com/fwlink/?LinkID=123415)) dans la bibliothèque MSDN (Microsoft Developer Network).
+Pour plus d’informations sur la manière de fournir un support en ligne pour vos rubriques d’aide, consultez [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf) et [How to Write Cmdlet Help](https://go.microsoft.com/fwlink/?LinkID=123415) dans MSDN Library.
 
 ## <a name="see-also"></a>Voir aussi
 - [about_Functions [m2]](https://technet.microsoft.com/en-us/library/61d40692-5300-4de9-a9b5-bae31815e105)
