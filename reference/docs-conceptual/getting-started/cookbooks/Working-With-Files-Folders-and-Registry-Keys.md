@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Utilisation des fichiers, dossiers et clés de Registre"
 ms.assetid: e6cf87aa-b5f8-48d5-a75a-7cb7ecb482dc
-ms.openlocfilehash: 2bae8d6931c84bee4aa30a43742acd052b82d079
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 22a2390686659033bfd8b02a151b3397cfd46a22
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="working-with-files-folders-and-registry-keys"></a>Utilisation des fichiers, dossiers et clés de Registre
 Windows PowerShell utilise le substantif **Item** pour faire référence aux éléments figurant sur un lecteur Windows PowerShell. En relation avec le fournisseur FileSystem de Windows PowerShell, le terme **Item** peut désigner un fichier, un dossier ou le lecteur Windows PowerShell. Nous allons examiner en détail comment répertorier et utiliser ces éléments, ces tâches étant essentielles dans la plupart des environnements d'administration.
@@ -77,11 +77,11 @@ La commande **Get-ChildItem** accepte les caractères génériques dans le chemi
 
 La mise en correspondance des caractères génériques étant gérée par le moteur Windows PowerShell, toutes les applets de commande qui acceptent des caractères génériques utilisent la même notation et suivent le même comportement de mise en correspondance. Parmi les caractères génériques disponibles dans la notation Windows PowerShell, citons les suivants :
 
--   L’astérisque (\*) correspond à zéro ou plusieurs occurrences d’un caractère quelconque.
+- L’astérisque (\*) correspond à zéro ou plusieurs occurrences d’un caractère quelconque.
 
--   Le point d'interrogation (?) correspond à exactement un caractère.
+- Le point d'interrogation (?) correspond à exactement un caractère.
 
--   Le crochet gauche (\[) et le crochet droit (]) entourent un ensemble de caractères à mettre en correspondance.
+- Le crochet gauche (\[) et le crochet droit (]) entourent un ensemble de caractères à mettre en correspondance.
 
 Voici quelques exemples qui illustrent l'utilisation des caractères génériques.
 

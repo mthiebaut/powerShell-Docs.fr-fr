@@ -1,13 +1,12 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Présentation de Windows PowerShell ISE"
-ms.assetid: a0de70ca-909a-4807-94d1-6da86e5b52a0
-ms.openlocfilehash: 61d31fc2555d91bc7872d7b90cfb1f2a9832ff9c
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 75242c20548e2e83397867214417a48806c897ec
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="introducing-the-windows-powershell-ise"></a>Présentation de Windows PowerShell ISE
 Windows PowerShell Integrated Scripting Environment (ISE) est une application hôte pour Windows PowerShell. Dans Windows PowerShell ISE, vous pouvez exécuter des commandes et écrire, tester et déboguer des scripts dans une seule et même interface utilisateur graphique Windows. Celle-ci prend en charge des fonctions d’édition multiligne, la saisie semi-automatique par tabulation, la coloration de la syntaxe, l’exécution sélective, l’aide contextuelle et les langues s’écrivant de droite à gauche.
@@ -15,17 +14,17 @@ Des éléments de menu et des raccourcis clavier vous permettent d’effectuer u
 
 Essayez ces fonctionnalités dans Windows PowerShell ISE.
 
--   Édition multiligne : pour insérer une ligne vide sous la ligne actuelle dans le volet Commande, appuyez sur Maj+Entrée.
+- Édition multiligne : pour insérer une ligne vide sous la ligne actuelle dans le volet Commande, appuyez sur Maj+Entrée.
 
--   Exécution sélective : pour exécuter une partie d’un script, sélectionnez le texte à exécuter, puis cliquez sur le bouton **Exécuter le script**. Ou bien, appuyez sur F5.
+- Exécution sélective : pour exécuter une partie d’un script, sélectionnez le texte à exécuter, puis cliquez sur le bouton **Exécuter le script**. Ou bien, appuyez sur F5.
 
--   Aide contextuelle : tapez **Invoke-Item**, puis appuyez sur F1. Le fichier d’aide s’ouvre à la rubrique d’aide de l’applet de commande **Invoke-Item**.
+- Aide contextuelle : tapez **Invoke-Item**, puis appuyez sur F1. Le fichier d’aide s’ouvre à la rubrique d’aide de l’applet de commande **Invoke-Item**.
 
 Windows PowerShell ISE permet de personnaliser certains aspects de son apparence. Il possède également son propre profil Windows PowerShell dans lequel vous pouvez stocker les fonctions, alias, variables et commandes que vous utilisez dans Windows PowerShell ISE.
 
 ### <a name="to-start-the-windows-powershell-ise"></a>Pour démarrer Windows PowerShell ISE
 
-1.  Effectuez l'une des opérations suivantes :
+1. Effectuez l'une des opérations suivantes :
 
     -   Cliquez sur **Démarrer**, pointez sur **Tous les programmes**, sur **Windows PowerShell V2**, puis cliquez sur **Windows PowerShell ISE**.
 
@@ -33,5 +32,5 @@ Windows PowerShell ISE permet de personnaliser certains aspects de son apparence
 
 ### <a name="to-get-help-in-the-windows-powershell-ise"></a>Pour obtenir de l'aide dans Windows PowerShell ISE
 
--   Dans le menu **Aide**, cliquez sur **Aide Windows PowerShell**. Ou bien, appuyez sur F1. Le fichier qui s'ouvre décrit Windows PowerShell ISE et Windows PowerShell. Il comprend aussi l'intégralité de l'aide disponible à partir de l'applet de commande Get-Help.
+- Dans le menu **Aide**, cliquez sur **Aide Windows PowerShell**. Ou bien, appuyez sur F1. Le fichier qui s'ouvre décrit Windows PowerShell ISE et Windows PowerShell. Il comprend aussi l'intégralité de l'aide disponible à partir de l'applet de commande Get-Help.
 

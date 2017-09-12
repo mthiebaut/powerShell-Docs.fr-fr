@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: Gestion des lecteurs Windows PowerShell
 ms.assetid: bd809e38-8de9-437a-a250-f30a667d11b4
-ms.openlocfilehash: 92fa70785bcaeac2bd75a5ada91f3adff4fa10eb
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: e2908246bb584291f04b67dc8635caec93d3b72e
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="managing-windows-powershell-drives"></a>Gestion des lecteurs Windows PowerShell
 Un *lecteur Windows PowerShell* est un emplacement de magasin de données auquel vous pouvez accéder, au même titre qu’un lecteur du système de fichiers dans Windows PowerShell. Les fournisseurs Windows PowerShell créent pour vous certains lecteurs, comme les lecteurs du système de fichiers (y compris C: et D:), les lecteurs de Registre (HKCU: et HKLM:) et le lecteur de certificat (Cert:). Vous pouvez également créer vos propres lecteurs Windows PowerShell. Ces lecteurs sont très utiles, mais ils ne sont disponibles que dans Windows PowerShell. Vous ne pouvez pas y accéder à l'aide d'autres outils Windows, tels que l'Explorateur de fichiers ou Cmd.exe.
@@ -86,11 +86,11 @@ ring>] [-OutBuffer <Int32>] [-WhatIf] [-Confirm]
 
 Pour créer un lecteur Windows PowerShell, vous devez spécifier trois paramètres :
 
--   le nom du lecteur (vous pouvez utiliser n'importe quel nom Windows PowerShell valide) ;
+- le nom du lecteur (vous pouvez utiliser n'importe quel nom Windows PowerShell valide) ;
 
--   le fournisseur PSProvider (utilisez « FileSystem » pour les emplacements du système de fichiers et « Registry » pour les emplacements du Registre) ;
+- le fournisseur PSProvider (utilisez « FileSystem » pour les emplacements du système de fichiers et « Registry » pour les emplacements du Registre) ;
 
--   la racine, c'est-à-dire le chemin d'accès à la racine du nouveau lecteur.
+- la racine, c'est-à-dire le chemin d'accès à la racine du nouveau lecteur.
 
 Par exemple, vous pouvez créer un lecteur nommé « Office » qui est mappé au dossier contenant les applications Microsoft Office sur votre ordinateur, par exemple **C:\\Program Files\\Microsoft Office\\OFFICE11**. Pour créer le lecteur, tapez la commande suivante :
 

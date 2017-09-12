@@ -2,13 +2,13 @@
 ms.date: 2017-08-23
 keywords: powershell,applet de commande
 title: "Désinstaller Accès Web Windows PowerShell"
-ms.openlocfilehash: 6b75eadb7264d7478fb3c9bc2b2ff355772ef4c2
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: 7c71a245be244c1883598cdcddbf35e43c0fc7b0
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 09/08/2017
 ---
-#  <a name="uninstall-windows-powershell-web-access"></a>désinstaller Accès Web Windows PowerShell
+# <a name="uninstall-windows-powershell-web-access"></a>désinstaller Accès Web Windows PowerShell
 
 Mise à jour : 24 juin 2013
 
@@ -55,7 +55,7 @@ Les procédures de cette section vous permettent de désinstaller :
 
 ### <a name="step-2-uninstall-windows-powershell-web-access-using-cmdlets"></a>Étape 2 : Désinstaller Accès Web Windows PowerShell à l’aide d’applets de commande
 
-1.  Effectuez une des opérations suivantes pour ouvrir une session Windows PowerShell avec des droits utilisateur élevés. Si une session est déjà ouverte, passez à l’étape suivante.
+1. Effectuez une des opérations suivantes pour ouvrir une session Windows PowerShell avec des droits utilisateur élevés. Si une session est déjà ouverte, passez à l’étape suivante.
 
     -   Sur le Bureau Windows, cliquez avec le bouton droit dans la barre des tâches sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**.
 

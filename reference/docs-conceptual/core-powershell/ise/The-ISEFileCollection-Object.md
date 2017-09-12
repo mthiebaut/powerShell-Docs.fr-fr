@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: Objet ISEFileCollection
 ms.assetid: 0f86a427-ea38-4bce-85f8-06c98d30d508
-ms.openlocfilehash: 284891c9812a22bb1759678074dc7f967f324c0b
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 60bf4dae33f3a71c31e7fdbed0f4fd6ab27a8bd1
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="the-isefilecollection-object"></a>Objet ISEFileCollection
   L’objet **ISEFileCollection** est une collection d’objets **ISEFile**. La collection $psISE.CurrentPowerShellTab.Files en est un exemple.
@@ -70,5 +70,3 @@ $psISE.CurrentPowerShellTab.Files.SetSelectedFile($firstfile)
 - [Modèle objet de script Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
 - [Informations de référence sur le modèle objet Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md) 
 - [Hiérarchie du modèle objet ISE](The-ISE-Object-Model-Hierarchy.md)
-
-  

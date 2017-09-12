@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Écriture de scripts avec Windows PowerShell"
 ms.assetid: c425d27a-bb41-4947-8d73-ba5480bc8ee0
-ms.openlocfilehash: ac276938c71fa1627a2c9d3346269b89950184d9
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 693d1bb9329dbb280453fc16738eda63c466e156
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="scripting-with-windows-powershell"></a>Écriture de scripts avec Windows PowerShell
 
@@ -17,10 +17,10 @@ Les commandes Windows PowerShell, appelées *applets de commande*, vous permette
 
 Windows PowerShell intègre les fonctionnalités suivantes :
 
--   Des applets de commande permettant d'effectuer des tâches d'administration système courantes (comme la gestion du Registre, des services, des processus et des journaux des événements) et d'utiliser WMI (Windows Management Instrumentation).
--   Un langage de script basé sur les tâches, ainsi que la prise en charge des scripts existants et des outils de ligne de commande.
--   Une conception cohérente. Étant donné que les applets de commande et les magasins de données système utilisent une syntaxe et des conventions d'affectation de noms communes, les données peuvent être partagées aisément et la sortie d'une applet de commande peut être utilisée comme entrée d'une autre applet de commande sans mise en forme ni manipulation.
--   Une navigation simplifiée et basée sur les commandes du système d'exploitation, ce qui permet aux utilisateurs de parcourir le Registre et d'autres magasins de données en employant les mêmes techniques que celles utilisées pour parcourir le système de fichiers.
--   Des fonctionnalités puissantes de manipulation d'objets. Les objets peuvent être directement manipulés ou envoyés à d'autres outils ou bases de données.
--   Une interface extensible. Les éditeurs de logiciels indépendants et les développeurs d'entreprise peuvent créer des outils personnalisés et des utilitaires pour administrer leurs logiciels.
+- Des applets de commande permettant d'effectuer des tâches d'administration système courantes (comme la gestion du Registre, des services, des processus et des journaux des événements) et d'utiliser WMI (Windows Management Instrumentation).
+- Un langage de script basé sur les tâches, ainsi que la prise en charge des scripts existants et des outils de ligne de commande.
+- Une conception cohérente. Étant donné que les applets de commande et les magasins de données système utilisent une syntaxe et des conventions d'affectation de noms communes, les données peuvent être partagées aisément et la sortie d'une applet de commande peut être utilisée comme entrée d'une autre applet de commande sans mise en forme ni manipulation.
+- Une navigation simplifiée et basée sur les commandes du système d'exploitation, ce qui permet aux utilisateurs de parcourir le Registre et d'autres magasins de données en employant les mêmes techniques que celles utilisées pour parcourir le système de fichiers.
+- Des fonctionnalités puissantes de manipulation d'objets. Les objets peuvent être directement manipulés ou envoyés à d'autres outils ou bases de données.
+- Une interface extensible. Les éditeurs de logiciels indépendants et les développeurs d'entreprise peuvent créer des outils personnalisés et des utilitaires pour administrer leurs logiciels.
 

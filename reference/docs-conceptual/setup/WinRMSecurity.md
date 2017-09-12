@@ -1,12 +1,12 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: WinRMSecurity
-ms.openlocfilehash: a6adf61517708661e31a7387df5141f3c4f2c020
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 65cf12466c9dc8fc8b77d79b0d63a6ae61e64d60
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="powershell-remoting-security-considerations"></a>Éléments à prendre en compte en matière de sécurité de la communication à distance PowerShell
 
@@ -18,7 +18,7 @@ La communication à distance Powershell utilise la [Gestion à distance de Windo
 
 La communication à distance PowerShell n’est pas identique à l’utilisation du paramètre **ComputerName** d’une applet de commande pour l’exécuter sur un ordinateur distant, qui utilise l’appel de procédure distante (RPC) en tant que protocole sous-jacent.
 
-##  <a name="powershell-remoting-default-settings"></a>Paramètres par défaut de la communication à distance PowerShell
+## <a name="powershell-remoting-default-settings"></a>Paramètres par défaut de la communication à distance PowerShell
 
 La communication à distance PowerShell et WinRM écoutent sur les ports suivants :
 

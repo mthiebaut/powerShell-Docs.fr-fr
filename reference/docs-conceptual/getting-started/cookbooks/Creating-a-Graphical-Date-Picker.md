@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Création d'un sélecteur de dates graphique"
 ms.assetid: c1cb722c-41e9-4baa-be83-59b4653222e9
-ms.openlocfilehash: 5cb952264092d345945318968cf0b3028b11f3e9
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 7be72be7e9732737f00b15b6b2b83adcca4393ae
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="creating-a-graphical-date-picker"></a>Création d'un sélecteur de dates graphique
 Dans Windows PowerShell 3.0 et versions ultérieures, vous pouvez créer un formulaire avec un contrôle graphique de type calendrier qui permet aux utilisateurs de sélectionner un jour du mois.
@@ -65,11 +65,11 @@ $form = New-Object Windows.Forms.Form
 
 Après avoir créé une instance de la classe Form, affectez des valeurs à trois propriétés de cette classe.
 
--   **Text.** Il s'agit du titre de la fenêtre.
+- **Text.** Il s'agit du titre de la fenêtre.
 
--   **Size.** Il s'agit de la taille du formulaire en pixels. Le script précédent crée un formulaire de 243 pixels de largeur par 230 pixels de hauteur.
+- **Size.** Il s'agit de la taille du formulaire en pixels. Le script précédent crée un formulaire de 243 pixels de largeur par 230 pixels de hauteur.
 
--   **StartingPosition.** Cette propriété facultative a la valeur **CenterScreen** dans le script précédent. Si vous n'ajoutez pas cette propriété, Windows sélectionne un emplacement quand le formulaire est ouvert. Si vous affectez à **StartingPosition** la valeur **CenterScreen**, le formulaire s’affiche automatiquement au milieu de l’écran à chaque chargement.
+- **StartingPosition.** Cette propriété facultative a la valeur **CenterScreen** dans le script précédent. Si vous n'ajoutez pas cette propriété, Windows sélectionne un emplacement quand le formulaire est ouvert. Si vous affectez à **StartingPosition** la valeur **CenterScreen**, le formulaire s’affiche automatiquement au milieu de l’écran à chaque chargement.
 
 ```
 $form.Text = "Select a Date" 

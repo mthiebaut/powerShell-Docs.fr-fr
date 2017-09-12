@@ -3,18 +3,18 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: Aide sur la ligne de commande PowerShell.exe
 ms.assetid: 1ab7b93b-6785-42c6-a1c9-35ff686a958f
-ms.openlocfilehash: 4a14223dd024d967810a90dec10e416e4e35d6a2
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: b2236decb3295ee5b543f72f083e516c91fa4b5f
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="powershellexe-command-line-help"></a>Aide sur la ligne de commande PowerShell.exe
 Démarre une session Windows PowerShell. Vous pouvez utiliser PowerShell.exe pour démarrer une session Windows PowerShell à partir de la ligne de commande d’un autre outil, tel que Cmd.exe, ou l’utiliser dans la ligne de commande Windows PowerShell pour démarrer une nouvelle session. Utilisez les paramètres pour personnaliser la session.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```syntax
 PowerShell[.exe]
        [-EncodedCommand <Base64EncodedCommand>]
        [-ExecutionPolicy <ExecutionPolicy>]

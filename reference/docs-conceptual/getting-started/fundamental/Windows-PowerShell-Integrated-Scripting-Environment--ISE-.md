@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Environnement d’écriture de scripts intégré de Windows PowerShell ISE"
 ms.assetid: f156b92d-0203-46d2-89c7-b4989d32e3d2
-ms.openlocfilehash: 93b3322ae5634d3611f3c2743e7460e266dc7ab8
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: e5c4e6ef002d6d6ede014a3147d1fed15f6d76d8
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="windows-powershell-integrated-scripting-environment-ise"></a>Environnement d'écriture de scripts intégré de Windows PowerShell
 L’environnement d’écriture de scripts intégré de Windows PowerShell (ISE) est l’un des deux ordinateurs hôtes pour le moteur et le langage Windows PowerShell. Il permet d’écrire, d’exécuter et de tester des scripts d’une manière que la console Windows PowerShell ne permet pas. L’environnement ISE ajoute la coloration de la syntaxe, la saisie semi-automatique via la touche Tab, IntelliSense, le débogage visuel et l’aide contextuelle.
@@ -34,21 +34,21 @@ La **liste Utilisé(s) récemment** fait désormais partie du menu Ouvrir le fic
 
 Les **nouvelles fonctionnalités de l’éditeur** facilitent la création et la lecture de votre code :
 
--   **Coloration de la syntaxe XML**. L’éditeur ISE colore désormais la syntaxe XML de la même façon que la syntaxe du code Windows PowerShell.
+- **Coloration de la syntaxe XML**. L’éditeur ISE colore désormais la syntaxe XML de la même façon que la syntaxe du code Windows PowerShell.
 
--   **Correspondance d’accolade**. Windows PowerShell ISE met en surbrillance les accolades correspondantes afin que vous puissiez vous assurer que le nombre d’accolades fermantes est égal au nombre d’accolades ouvrantes. Pour localiser l’accolade fermante correspondant à l’accolade ouvrante sur laquelle le curseur est positionné, utilisez CTRL-\[.
+- **Correspondance d’accolade**. Windows PowerShell ISE met en surbrillance les accolades correspondantes afin que vous puissiez vous assurer que le nombre d’accolades fermantes est égal au nombre d’accolades ouvrantes. Pour localiser l’accolade fermante correspondant à l’accolade ouvrante sur laquelle le curseur est positionné, utilisez CTRL-\[.
 
--   **Mode Plan**. Vous pouvez réduire ou développer des sections de votre code en cliquant sur les signes plus et moins dans la marge de gauche. Cela facilite la recherche du code souhaité dans un script long.
+- **Mode Plan**. Vous pouvez réduire ou développer des sections de votre code en cliquant sur les signes plus et moins dans la marge de gauche. Cela facilite la recherche du code souhaité dans un script long.
 
--   **Édition du texte par glisser-déplacer**. Vous pouvez sélectionner un bloc de texte et le faire glisser vers un autre emplacement pour le déplacer. En maintenant la touche Ctrl enfoncée pendant que vous faites glisser le texte sélectionné, vous copiez celui-ci au lieu de le déplacer.
+- **Édition du texte par glisser-déplacer**. Vous pouvez sélectionner un bloc de texte et le faire glisser vers un autre emplacement pour le déplacer. En maintenant la touche Ctrl enfoncée pendant que vous faites glisser le texte sélectionné, vous copiez celui-ci au lieu de le déplacer.
 
--   **Affichage des erreurs d’analyse**. Windows PowerShell examine votre script en cours de frappe. S’il détecte une erreur, il affiche une ligne ondulée rouge sous le code douteux. Lorsque vous pointez sur l’erreur indiquée, une info-bulle affiche le problème détecté.
+- **Affichage des erreurs d’analyse**. Windows PowerShell examine votre script en cours de frappe. S’il détecte une erreur, il affiche une ligne ondulée rouge sous le code douteux. Lorsque vous pointez sur l’erreur indiquée, une info-bulle affiche le problème détecté.
 
--   **Zoom**. Vous pouvez effectuer un zoom avant sur votre texte pour en faciliter la lecture, ou effectuer un zoom arrière pour afficher une vue plus large à l’aide du curseur figurant dans l’angle inférieur droit de la fenêtre ISE.
+- **Zoom**. Vous pouvez effectuer un zoom avant sur votre texte pour en faciliter la lecture, ou effectuer un zoom arrière pour afficher une vue plus large à l’aide du curseur figurant dans l’angle inférieur droit de la fenêtre ISE.
 
--   **Copier-coller de texte enrichi**. Lorsque vous copiez à partir de l’environnement ISE vers le Presse-papiers, la police, la taille et les informations de couleur du texte sélectionné sont conservées.
+- **Copier-coller de texte enrichi**. Lorsque vous copiez à partir de l’environnement ISE vers le Presse-papiers, la police, la taille et les informations de couleur du texte sélectionné sont conservées.
 
--   **Sélection de bloc**. Vous pouvez sélectionner un bloc de texte en maintenant la touche Alt enfoncée pendant que vous sélectionnez le texte dans le volet Script à l’aide de la souris, ou en appuyant sur **Alt+Maj+Flèche**.
+- **Sélection de bloc**. Vous pouvez sélectionner un bloc de texte en maintenant la touche Alt enfoncée pendant que vous sélectionnez le texte dans le volet Script à l’aide de la souris, ou en appuyant sur **Alt+Maj+Flèche**.
 
 ### <a name="added-in-powershell-20-windows-server-2008-r2-windows-7"></a>Ajouté dans PowerShell 2.0 (Windows Server 2008 R2, Windows 7)
 L’environnement ISE a été introduit avec PowerShell v2.0.

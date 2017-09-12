@@ -2,11 +2,11 @@
 ms.date: 2017-08-09
 keywords: "powershell, applet de commande, télécharger, installer, installation, programme d’installation, windows 10, windows 8.1, windows 8.0, windows 7"
 title: Installation de Windows PowerShell
-ms.openlocfilehash: 7a1a4bff461e3012a06a82faf4015a05b8560895
-ms.sourcegitcommit: a6ee6e64d369ecf82c730411bed9750278fdb5c1
+ms.openlocfilehash: 7ccbee66d01dd8e0e6e6ab09c6c8a399bee59ce8
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="installing-windows-powershell"></a>Installation de Windows PowerShell
 
@@ -14,8 +14,8 @@ PowerShell est installé par défaut avec chaque copie de Windows, à compter de
 
 Les utilisateurs Linux, macOS et Windows qui souhaitent installer **PowerShell 6** (bêta) sur leurs ordinateurs doivent :
 
-1.  Obtenir PowerShell pour leur système d’exploitation et leur version à partir de [GitHub](https://github.com/powershell/powershell#get-powershell)
-1.  Suivre les instructions d'installation
+1. Obtenir PowerShell pour leur système d’exploitation et leur version à partir de [GitHub](https://github.com/powershell/powershell#get-powershell)
+1. Suivre les instructions d'installation
   - [Linux](https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md)
   - [macOS](https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md#macos-1012)
   - [Windows](https://github.com/PowerShell/PowerShell/blob/master/docs/installation/windows.md#msi)

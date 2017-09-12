@@ -1,34 +1,34 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Annexe 2 : création d’un raccourci PowerShell personnalisé"
 ms.assetid: 5d4fd421-5d43-4ec7-86fd-acfe887b066e
-ms.openlocfilehash: 31fdc388ae8859191f75c3c4120667cdbeff1669
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: d5e554f6f062fc5bf1beddd2aca1acf0b93d2133
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="appendix-2---creating-a-custom-powershell-shortcut"></a>Annexe 2 : création d’un raccourci PowerShell personnalisé
 La procédure suivante décrit comment créer un raccourci vers Windows PowerShell offrant plusieurs options pratiques personnalisées.
 
-1.  Créez un raccourci qui pointe vers Powershell.exe.
+1. Créez un raccourci qui pointe vers Powershell.exe.
 
-2.  Cliquez avec le bouton droit sur le raccourci, puis cliquez sur **Propriétés**.
+2. Cliquez avec le bouton droit sur le raccourci, puis cliquez sur **Propriétés**.
 
-3.  Cliquez sur l’onglet **Options**.
+3. Cliquez sur l’onglet **Options**.
 
-4.  Dans la section **Modifier les options**, activez la case à cocher **QuickEdit**.
+4. Dans la section **Modifier les options**, activez la case à cocher **QuickEdit**.
 
     Ce paramètre permet de sélectionner du texte dans la fenêtre de console Windows PowerShell en faisant glisser tout en appuyant sur le bouton gauche de la souris, et permet de copier du texte dans le Presse-papiers en appuyant sur Entrée ou en cliquant avec le bouton droit.
 
-5.  Dans la section **Modifier les options**, activez la case à cocher **Mode insertion**. Ce paramètre permet de cliquer avec le bouton droit dans la fenêtre de console pour coller automatiquement du texte à partir du Presse-papiers.
+5. Dans la section **Modifier les options**, activez la case à cocher **Mode insertion**. Ce paramètre permet de cliquer avec le bouton droit dans la fenêtre de console pour coller automatiquement du texte à partir du Presse-papiers.
 
-6.  Dans la section **Historique des commandes**, dans le champ **Taille de la mémoire tampon**, tapez ou sélectionnez un nombre compris entre 1 et 999. Cela a pour effet de définir le nombre de commandes saisies qui sont conservées dans la mémoire tampon de la console.
+6. Dans la section **Historique des commandes**, dans le champ **Taille de la mémoire tampon**, tapez ou sélectionnez un nombre compris entre 1 et 999. Cela a pour effet de définir le nombre de commandes saisies qui sont conservées dans la mémoire tampon de la console.
 
-7.  Dans la section **Historique des commandes**, activez la case à cocher **Supprimer les doublons** pour éliminer les commandes répétées de la mémoire tampon de la console.
+7. Dans la section **Historique des commandes**, activez la case à cocher **Supprimer les doublons** pour éliminer les commandes répétées de la mémoire tampon de la console.
 
-8.  Cliquez sur l’onglet **Disposition**.
+8. Cliquez sur l’onglet **Disposition**.
 
 9. Dans la section **Mémoire tampon d’écran**, dans le champ **Hauteur**, tapez un nombre compris entre 1 et 9999. La hauteur représente le nombre de lignes de sortie qui sont mises en mémoire tampon. Il s’agit du nombre maximal de lignes conservées pour affichage lorsque vous faites défiler la fenêtre de console. Si ce nombre est inférieur à la hauteur affichée dans la section **Taille de la fenêtre**, la hauteur de la fenêtre est automatiquement réduite la même valeur.
 

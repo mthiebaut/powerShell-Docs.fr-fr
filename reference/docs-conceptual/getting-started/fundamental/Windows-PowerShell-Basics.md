@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: Concepts de base de Windows PowerShell
 ms.assetid: 6b3cbbc8-060c-4877-b00b-7300dbbe4e28
-ms.openlocfilehash: f8a520f1fbe97737c7d0c2acab0129f88b5ed425
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 7b5cdfce876aa7d5559fe772379829011b275a02
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="windows-powershell-basics"></a>Concepts de base de Windows PowerShell
 Les interfaces graphiques utilisateur utilisent des concepts de base bien connus de la plupart des utilisateurs d’ordinateur. Les utilisateurs s’appuient sur leur connaissance de ces interfaces pour accomplir des tâches. Les systèmes d’exploitation présentent aux utilisateurs une représentation graphique des éléments qui peuvent être parcourus, généralement avec des menus déroulants pour accéder à des fonctionnalités spécifiques, et des menus contextuels pour accéder à des fonctionnalités spécifique du contexte.
@@ -18,13 +18,13 @@ La plupart des CLI n’ont pas de modèles pouvant aider l’utilisateur à appr
 
 Windows PowerShell a été conçu pour tirer parti des connaissances historiques de l’utilisateur en matière de CLI. Ce chapitre présente des outils et concepts de base qui peuvent vous aider à apprendre rapidement à utiliser Windows PowerShell. Ils comprennent :
 
--   Utilisation de Get-Command
+- Utilisation de Get-Command
 
--   Utilisation de commandes Cmd.exe et UNIX
+- Utilisation de commandes Cmd.exe et UNIX
 
--   Utilisation de commandes externes
+- Utilisation de commandes externes
 
--   Utilisation de la saisie semi-automatique vie la touche Tab
+- Utilisation de la saisie semi-automatique vie la touche Tab
 
--   Utilisation de Get-Help
+- Utilisation de Get-Help
 
