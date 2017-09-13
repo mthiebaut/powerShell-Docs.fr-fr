@@ -2,31 +2,25 @@
 ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Comment déboguer des scripts dans Windows PowerShell ISE"
-ms.assetid: 6dc6d8f9-8978-46e9-a92f-169af37e2817
-ms.openlocfilehash: 2b8313c3f2ae1a8fb670099baa8950db49722330
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: d1019801833e840f3a231f371da1b8d0e5a387b0
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="how-to-debug-scripts-in-windows-powershell-ise"></a>Comment déboguer des scripts dans Windows PowerShell ISE
-Cette rubrique décrit comment déboguer des scripts sur un ordinateur local à l’aide des fonctionnalités de débogage visuel de l’environnement d’écriture de scripts intégré de Windows PowerShell® ( Windows PowerShell ISE).
+Cette rubrique décrit comment déboguer des scripts sur un ordinateur local à l’aide des fonctionnalités de débogage visuel de l’environnement d’écriture de scripts intégré de Windows PowerShell ( Windows PowerShell ISE).
 
-[Comment gérer les points d’arrêt]()
-[Comment gérer une session de débogage]()
-[Comment effectuer une opération de pas à pas principal, de pas à pas détaillé et de pas à pas sortant lors d’un débogage]()
-[Comment afficher les valeurs de variables lors d’un débogage]()
-
-## <a name="bkmk_1"></a>Comment gérer les points d’arrêt
+## <a name="how-to-manage-breakpoints"></a>Comment gérer les points d’arrêt
 Un point d’arrêt est un endroit désigné dans un script, où vous souhaitez que l’opération s’interrompe afin que de pouvoir examiner l’état actuel des variables et de l’environnement dans lequel votre script s’exécute. Une fois votre script interrompu par un point d’arrêt, vous pouvez exécuter des commandes dans le volet Console pour examiner l’état de votre script.  Vous pouvez extraire des variables ou exécuter d’autres commandes. Vous pouvez même modifier la valeur de toutes les variables visibles dans le contexte du script en cours d’exécution. Après avoir examiné ce que vous voulez voir, vous pouvez reprendre l’exécution du script.
 
 Dans l’environnement de débogage de Windows PowerShell, vous pouvez définir trois types de points d’arrêt :
 
-1.  **Point d’arrêt de ligne**. L’exécution du script s’interrompt quand la ligne désignée est atteinte.
+1. **Point d’arrêt de ligne**. L’exécution du script s’interrompt quand la ligne désignée est atteinte.
 
-2.  **Point d’arrêt de variable.** L’exécution du script s’interrompt chaque fois que la valeur de la variable désignée change.
+2. **Point d’arrêt de variable.** L’exécution du script s’interrompt chaque fois que la valeur de la variable désignée change.
 
-3.  **Point d’arrêt de commande.** L’exécution du script s’interrompt chaque fois que la commande désignée est sur le point d’être exécutée. Il est possible d’inclure des paramètres pour filtrer davantage le point d’arrêt uniquement pour l’opération souhaitée. La commande peut également être une fonction que vous créez.
+3. **Point d’arrêt de commande.** L’exécution du script s’interrompt chaque fois que la commande désignée est sur le point d’être exécutée. Il est possible d’inclure des paramètres pour filtrer davantage le point d’arrêt uniquement pour l’opération souhaitée. La commande peut également être une fonction que vous créez.
 
 Dans l’environnement de débogage de Windows PowerShell ISE, seuls des points d’arrêt de ligne peuvent être définis à l’aide du menu ou des raccourcis clavier. Les deux autres types de points d’arrêt doivent être définis à partir du volet Console à l’aide de l’applet de commande [Set-PSBreakpoint](https://technet.microsoft.com/library/88d2d9ad-17dc-44ae-99aa-f841125b9dc8). Cette section décrit comment effectuer des tâches de débogage dans Windows PowerShell ISE en utilisant les menus disponibles, et exécuter un éventail plus large de commandes à partir du volet Console à l’aide de scripts.
 
@@ -41,7 +35,7 @@ Set-PSBreakpoint -Script sample.ps1 -Variable Server
 ```
 
 ### <a name="list-all-breakpoints"></a>Liste de tous les points d’arrêt
-Affiche tous les points d’arrêt dans la session Windows PowerShell® actuelle.
+Affiche tous les points d’arrêt dans la session Windows PowerShell actuelle.
 
 Dans le menu **Déboguer**, cliquez sur **Lister les points d’arrêt**. Le script suivant montre comment répertorier tous les points d’arrêt à partir du volet Console en utilisant l’applet de commande [Get-PSBreakpoint](https://technet.microsoft.com/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6).
 
@@ -51,7 +45,13 @@ Get-PSBreakpoint
 ```
 
 ### <a name="remove-a-breakpoint"></a>Supprimer un point d’arrêt
-La suppression d’un point d’arrêt revient à effacer celui-ci.  Si vous pensez que vous pourriez être amené à le réutiliser ultérieurement, envisagez plutôt de le [désactiver]().  Cliquez avec le bouton droit sur la ligne dans laquelle vous souhaitez supprimer un point d’arrêt, puis cliquez sur **Basculer le point d’arrêt**. Vous pouvez également cliquer sur la ligne dans laquelle vous souhaitez supprimer un point d’arrêt, puis, dans le menu **Déboguer**, cliquer sur **Basculer le point d’arrêt**. Le script suivant montre comment supprimer un point d’arrêt avec un ID spécifié à partir du volet Console en utilisant l’applet de commande [Remove-PSBreakpoint](https://technet.microsoft.com/library/4c877a80-0ea0-4790-9281-88c08ef0ddd6).
+
+La suppression d’un point d’arrêt revient à effacer celui-ci.
+
+Si vous pensez que vous pouvez être amené à le réutiliser ultérieurement, envisagez plutôt de [désactiver un point d’arrêt](#disable-a-breakpoint).
+Cliquez avec le bouton droit sur la ligne dans laquelle vous souhaitez supprimer un point d’arrêt, puis cliquez sur **Basculer le point d’arrêt**.
+Vous pouvez également cliquer sur la ligne dans laquelle vous souhaitez supprimer un point d’arrêt, puis, dans le menu **Déboguer**, cliquer sur **Basculer le point d’arrêt**.
+Le script suivant montre comment supprimer un point d’arrêt avec un ID spécifié à partir du volet Console en utilisant l’applet de commande [Remove-PSBreakpoint](https://technet.microsoft.com/library/4c877a80-0ea0-4790-9281-88c08ef0ddd6).
 
 ``` PowerShell
 # This command deletes the breakpoint with breakpoint ID 2.
@@ -68,7 +68,7 @@ Le script suivant montre comment supprimer tous les points d’arrêt à partir 
 Get-PSBreakpoint | Remove-PSBreakpoint
 ```
 
-### <a name="bkmk_disable"></a>Désactiver un point d’arrêt
+### <a name="disable-a-breakpoint"></a>Désactiver un point d’arrêt
 La désactivation d’un point d’arrêt n’a pas pour effet de supprimer celui-ci, mais uniquement de le mettre hors service jusqu’à sa réactivation éventuelle.  Pour désactiver un point d’arrêt de ligne spécifique, cliquez avec le bouton droit sur la ligne dans laquelle vous souhaitez désactiver ce point d’arrêt, puis cliquez sur **Désactiver le point d’arrêt**. Vous pouvez également cliquer sur la ligne dans laquelle vous souhaitez désactiver un point d’arrêt, puis appuyer sur **F9** ou, dans le menu **Déboguer**, cliquer sur **Désactiver le point d’arrêt**. Le script suivant montre comment supprimer un point d’arrêt avec un ID spécifié à partir du volet Console en utilisant l’applet de commande [Disable-PSBreakpoint](https://technet.microsoft.com/library/d4974e9b-0aaa-4e20-b87f-f599a413e4e8).
 
 ``` PowerShell
@@ -102,8 +102,8 @@ Pour activer tous les points d’arrêt définis dans la session active, dans le
 Get-PSBreakpoint | Enable-PSBreakpoint
 ```
 
-## <a name="bkmk_2"></a>Comment gérer une session de débogage
-Avant de commencer le débogage, vous devez définir un ou plusieurs points d’arrêt. Vous ne pouvez définir un point d’arrêt que si le script que vous souhaitez déboguer est enregistré. Pour des instructions sur la définition d’un point d’arrêt, voir [Comment gérer les points d’arrêt]() ou [Set-PSBreakpoint](https://technet.microsoft.com/library/6afd5d2c-a285-4796-8607-3cbf49471420). Une fois le débogage démarré, vous ne pouvez modifier un script qu’après avoir arrêté le débogage. Un script dans lequel un ou plusieurs points d’arrêt sont définis est automatiquement enregistré avant son exécution.
+## <a name="how-to-manage-a-debugging-session"></a>Comment gérer une session de débogage
+Avant de commencer le débogage, vous devez définir un ou plusieurs points d’arrêt. Vous ne pouvez définir un point d’arrêt que si le script que vous souhaitez déboguer est enregistré. Pour des instructions sur la définition d’un point d’arrêt, voir [Comment gérer les points d’arrêt](#how-to-manage-breakpoints) ou [Set-PSBreakpoint](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/set-psbreakpoint). Une fois le débogage démarré, vous ne pouvez modifier un script qu’après avoir arrêté le débogage. Un script dans lequel un ou plusieurs points d’arrêt sont définis est automatiquement enregistré avant son exécution.
 
 ### <a name="to-start-debugging"></a>Pour commencer le débogage
 Appuyez sur **F5** ou, dans la barre d’outils, cliquez sur l’icône **Exécuter le script**. Ou encore, dans le menu **Déboguer**, cliquez sur **Exécuter/Continuer**. Le script s’exécute jusqu’à ce qu’il rencontre le premier point d’arrêt. Il suspend alors l’opération et met en surbrillance la ligne sur laquelle il s’est arrêté.
@@ -119,7 +119,7 @@ Pendant la suspension, pour afficher la pile des appels active, appuyez sur **Ct
 ### <a name="to-stop-debugging"></a>Pour arrêter le débogage
 Appuyez sur **Maj-F5** ou, dans le menu **Déboguer**, cliquez sur **Arrêter le débogueur**. Ou encore, dans le volet Console, tapez **Q**, puis appuyez sur **Entrée**.
 
-## <a name="bkmk_3"></a>Comment effectuer une opération de pas à pas principal, de pas à pas détaillé et de pas à pas sortant lors d’un débogage
+## <a name="how-to-step-over-step-into-and-step-out-while-debugging"></a>Comment effectuer une opération de pas à pas principal, de pas à pas détaillé et de pas à pas sortant lors d’un débogage
 Un pas à pas est le processus consistant à exécuter une instruction à la fois. Vous pouvez arrêter l’exécution sur une ligne de code, puis examiner les valeurs des variables et l’état du système. Le tableau suivant décrit des tâches de débogage courantes, telles que l’exécution d’une opération de pas à pas principal, de pas à pas détaillé et de pas à pas sortant.
 
 | Tâche de débogage | Description | Comment l’accomplir dans PowerShell ISE |
@@ -129,36 +129,36 @@ Un pas à pas est le processus consistant à exécuter une instruction à la foi
 | **Pas à pas sortant** | Sort de la fonction en cours et passe au niveau supérieur si la fonction est imbriquée. Dans le corps principal, le script est exécuté jusqu’à la fin ou jusqu’au point d’arrêt suivant. Les instructions ignorées sont exécutées, mais sans pas à pas. | Appuyez sur **Maj+F11** ou, dans le menu **Déboguer**, cliquez sur **Pas à pas sortant**. Ou encore, dans le volet Console, tapez **O**, puis appuyez sur **Entrée**. |
 | **Continuer** | Continue l’exécution jusqu’à la fin ou jusqu’au point d’arrêt suivant. Les fonctions et appels ignorés sont exécutés, mais sans pas à pas. | Appuyez sur **F5** ou, dans le menu **Déboguer**, cliquez sur **Exécuter/Continuer**. Ou encore, dans le volet Console, tapez **C**, puis appuyez sur **Entrée**. |
 
-## <a name="bkmk_4"></a>Comment afficher les valeurs de variables lors d’un débogage
+## <a name="how-to-display-the-values-of-variables-while-debugging"></a>Comment afficher les valeurs de variables lors d’un débogage
 À mesure que vous exécutez le code pas à pas, vous pouvez afficher les valeurs actuelles des variables dans le script.
 
 ### <a name="to-display-the-values-of-standard-variables"></a>Pour afficher les valeurs des variables standards
 Appliquez l'une des méthodes suivantes :
 
--   Dans le volet Script, placez le curseur sur la variable pour afficher sa valeur dans une info-bulle.
+- Dans le volet Script, placez le curseur sur la variable pour afficher sa valeur dans une info-bulle.
 
--   Dans le volet Console, tapez le nom de la variable, puis appuyez sur **Entrée**.
+- Dans le volet Console, tapez le nom de la variable, puis appuyez sur **Entrée**.
 
 Dans ISE, tous les volets sont toujours dans la même étendue. Par conséquent, lorsque vous déboguez un script, les commandes que vous tapez dans le volet Console s’exécutent dans l’étendue du script. Cela permet d’utiliser le volet Console pour rechercher les valeurs des variables et d’appeler des fonctions qui sont définies uniquement dans le script.
 
 ### <a name="to-display-the-values-of-automatic-variables"></a>Pour afficher les valeurs de variables automatiques
 Vous pouvez utiliser la méthode précédente pour afficher la valeur de presque toutes les variables pendant que vous déboguez un script. En revanche, ces méthodes ne fonctionnent pas pour les variables automatiques suivantes.
 
--   $_
+- $_
 
--   $Input
+- $Input
 
--   $MyInvocation
+- $MyInvocation
 
--   $PSBoundParameters
+- $PSBoundParameters
 
--   $Args
+- $Args
 
 Si vous essayez d’afficher la valeur d’une de ces variables, vous l’obtenez pour un pipeline interne que le débogueur utilise, pas la valeur de la variable dans le script. Vous pouvez contourner ce comportement pour quelques variables ($_, $Input, $MyInvocation, $PSBoundParameters et $Args) en utilisant la méthode suivante :
 
-1.  Dans le script, affectez la valeur de la variable automatique à une nouvelle variable.
+1. Dans le script, affectez la valeur de la variable automatique à une nouvelle variable.
 
-2.  Affichez la valeur de la nouvelle variable, soit en pointant sur celle-ci dans le volet Script, ou en la tapant dans le volet Console.
+2. Affichez la valeur de la nouvelle variable, soit en pointant sur celle-ci dans le volet Script, ou en la tapant dans le volet Console.
 
 Par exemple, pour afficher la valeur de la variable $MyInvocation, dans le script, affectez la valeur à une nouvelle variable, par exemple $scriptname, puis pointez sur la variable $scriptname ou tapez-la pour afficher sa valeur.
 

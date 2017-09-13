@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Obtention d’objets WMI Get WmiObject"
 ms.assetid: f0ddfc7d-6b5e-4832-82de-2283597ea70d
-ms.openlocfilehash: e7b10648e91d1c0dc1424944e55177dc7407fe36
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: fbaac2797dd62eb03a2be581b3b5f8be6dafc0ad
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="getting-wmi-objects-get-wmiobject"></a>Obtention d’objets WMI (Get-WmiObject)
 
@@ -110,14 +110,13 @@ Si vous souhaitez des informations contenues dans la classe **Win32_OperatingSys
 ```
 PS> Get-WmiObject -Class Win32_OperatingSystem -Namespace root/cimv2 -ComputerName . | Format-Table -Property TotalVirtualMemorySize,TotalVisibleMemorySize,FreePhysicalMemory,FreeVirtualMemory,FreeSpaceInPagingFiles
 
-TotalVirtualMemorySize TotalVisibleMem FreePhysicalMem FreeVirtualMemo FreeSpaceInPagi
-                              ory              ry         ngFiles
---------------- --------------- --------------- --------------- ---------------
-        2097024          785904          305808         2056724         1558232
+TotalVirtualMemorySize TotalVisibleMemory FreePhysicalMemory FreeVirtualMemory FreeSpaceInPagingFiles
+---------------------- ---------------    ------------------ -==--------------------- ---------------
+               2097024          785904                305808           2056724                1558232
 ```
 
 > [!NOTE]
-> Les caractères génériques fonctionnant avec les noms de propriété dans l’applet de commande **Format-Table**, l’élément final du pipeline peut être réduit à **Format-Table -Property TotalV\&#42;,Free\&#42;**
+> Les caractères génériques fonctionnant avec les noms de propriété dans **Format-Table**, l’élément final du pipeline peut être réduit à **Format-Table -Property Total*,Free*
 
 Les données de la mémoire peuvent être plus lisibles si vous les affichez sous forme de liste en tapant ce qui suit :
 

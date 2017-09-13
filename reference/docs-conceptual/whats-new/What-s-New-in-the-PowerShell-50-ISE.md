@@ -3,21 +3,21 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Nouveautés de PowerShell 5.0 ISE"
 ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
-ms.openlocfilehash: d816d717752579c79477daa35e7c0b15e944a6b7
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: 1e315351d0e5dde146881b0e6527c38e59777a1e
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="what39s-new-in-the-windows-powershell-ise"></a>Nouveauté dans Windows PowerShell ISE
-Cette rubrique décrit les fonctionnalités nouvelles et mises à jour qui ont été introduites dans les versions de l’environnement d’écriture de scripts intégré (ISE) de Windows PowerShell®.
+Cette rubrique décrit les fonctionnalités nouvelles et mises à jour qui ont été introduites dans les versions de l’environnement d’écriture de scripts intégré (ISE) de Windows PowerShell.
 
-## <a name="overview"></a>Description de la fonctionnalité
+## <a name="feature-description"></a>Description de la fonctionnalité
 Windows PowerShell ISE est une application hôte qui permet d’écrire, d’exécuter et de tester des scripts et des modules dans un environnement graphique et intuitif. Ses fonctionnalités clés, telles que la coloration de syntaxe, la saisie automatique par tabulation, le débogage visuel, la compatibilité avec Unicode et l’aide contextuelle, fournissent une riche expérience d’écriture de scripts.
 
 Pour obtenir une vue d’ensemble de Windows PowerShell ISE, consultez [Vue d’ensemble de l’environnement d’écriture de scripts intégré de Windows PowerShell](https://technet.microsoft.com/en-us/library/3c1892c2-bf84-4cb6-af26-1f453be9e671).
 
-## <a name="versions"></a>Fonctionnalités nouvelles et modifiées dans Windows PowerShell ISE
+## <a name="new-and-changed-functionality-in-windows-powershell-ise"></a>Fonctionnalités nouvelles et modifiées dans Windows PowerShell ISE
 Le tableau suivant répertorie les fonctionnalités nouvelles et modifiées pour cette version de Windows PowerShell ISE dans Windows PowerShell.
 
 |Fonctionnalité/fonction|Windows PowerShell ISE 4.0|Windows PowerShell ISE 3.0|Windows PowerShell ISE 2.0|
@@ -33,7 +33,7 @@ Le tableau suivant répertorie les fonctionnalités nouvelles et modifiées pour
 |**[Nouvelle fenêtre de visionneuse d’aide]()**|X|X||
 |**[Applet de commande Show-Command]()**|X|X||
 
-### <a name="BKMK_Intellisense"></a>IntelliSense
+### <a name="intellisense"></a>Intellisense
 **Ajoutés dans ISE 3.0**
 
 IntelliSense est une fonctionnalité d’assistance de saisie semi-automatique qui fait partie de Windows PowerShell ISE. Au fur et à mesure de la saisie, IntelliSense affiche des menus interactifs suggérant des applets de commande, des paramètres, des valeurs de paramètre, des fichiers ou des dossiers potentiellement appropriés.
@@ -46,7 +46,7 @@ L’ajout d’IntelliSense facilite la découverte d’applets de commande et de
 
 Quand vous tapez des applets de commande dans Windows PowerShell ISE 3.0 ou version ultérieure, un menu déroulant interactif s’affiche, dans lequel vous pouvez parcourir et sélectionner les commandes appropriées.
 
-### <a name="BKMK_Snippets"></a>Extraits de code
+### <a name="snippets"></a>Extraits de code
 **Ajoutés dans ISE 3.0**
 
 Les *extraits de code* sont de courtes sections de code Windows PowerShell que vous pouvez insérer dans les scripts que vous créez dans Windows PowerShell ISE. Windows PowerShell ISE est fourni avec un ensemble par défaut d’extraits de code. Vous pouvez ajouter des extraits de code en utilisant l’applet de commande **New-Snippet** tout en travaillant dans Windows PowerShell ISE.
@@ -59,7 +59,7 @@ Les extraits de code vous permettent d’assembler et de créer rapidement des s
 
 Pour utiliser des extraits de code dans Windows PowerShell 3.0 ou version ultérieure, dans le menu **Modifier**, cliquez sur **Démarrer les extraits** ou appuyez sur **Ctrl-J**.
 
-### <a name="BKMK_AddOnTools"></a>Outils complémentaires
+### <a name="add-on-tools"></a>Outils complémentaires
 **Ajout dans PowerShell 3.0**
 
 Windows PowerShell ISE prend désormais en charge des outils complémentaires qui sont des contrôles Windows Presentation Foundation (WPF) ajoutés à l’aide du modèle d’objet. Les outils complémentaires peuvent être affichés dans un volet vertical ou horizontal dans la console. Plusieurs outils complémentaires dans un volet sont affichés sous la forme d’un contrôle à onglets. Vous pouvez également ajouter ou supprimer des outils complémentaires produits par des éditeurs non-Microsoft. Pour plus d’informations sur la manière d’importer ou de supprimer des outils complémentaires, voir [Opérations Windows PowerShell ISE](http://technet.microsoft.com/library/cc732148.aspx).
@@ -74,7 +74,7 @@ Windows PowerShell ISE 3.0 et versions ultérieures sont fournis avec le module
 
 D’autres modules complémentaires sont accessibles via la commande **Ouvrir le site web des outils additionnels** du menu **Modules complémentaires**.
 
-### <a name="BKMK_RestartMgr"></a>Gestionnaire de démarrage et enregistrement automatique
+### <a name="restart-manager-and-auto-save"></a>Gestionnaire de démarrage et enregistrement automatique
 **Ajout dans PowerShell 3.0**
 
 Désormais, Windows PowerShell ISE enregistre automatiquement vos scripts ouverts toutes les deux minutes dans un emplacement distinct.  Si Windows PowerShell ISE cesse de fonctionner ou si le système d’exploitation est redémarré, après redémarrage, Windows PowerShell ISE récupère les scripts qui étaient ouverts dans la dernière session, même si ceux-ci n’ont pas été enregistrés.
@@ -89,7 +89,7 @@ Vous pouvez désormais travailler dans Windows PowerShell ISE, en sachant que vo
 
 Windows PowerShell ISE 2.0 n’enregistre pas les scripts automatiquement en cas de redémarrage.
 
-### <a name="BKMK_MRU"></a>Liste Utilisé(s) récemment
+### <a name="most-recently-used-list"></a>Liste Utilisé(s) récemment
 **Ajout dans PowerShell 3.0**
 
 Windows PowerShell ISE offre désormais une liste des derniers fichiers utilisés. Quand vous ouvrez un fichier dans Windows PowerShell ISE, celui-ci est ajouté à cette liste dans le menu **Fichier**.
@@ -104,34 +104,34 @@ Vous pouvez désormais utiliser la liste des derniers fichiers utilisés pour ac
 
 Windows PowerShell ISE 2.0 n’offre pas de liste des derniers fichiers utilisés.
 
-### <a name="BKMK_ConsolePane"></a>Volet de la console
+### <a name="console-pane"></a>Volet de la console
 **Ajout dans PowerShell 3.0**
 
 Les volets de commande et de sortie distincts qui étaient disponibles dans la première version de Windows PowerShell ISE ont été combinés en un volet de console unique. Le volet de la console est similaire, par sa fonction et son aspect, à une console Windows PowerShell classique, mais il inclut les améliorations suivantes, dont la plupart sont décrites dans cette rubrique.
 
--   Coloration de la syntaxe pour le texte d’entrée (pas le texte de sortie), incluant la syntaxe XML
+- Coloration de la syntaxe pour le texte d’entrée (pas le texte de sortie), incluant la syntaxe XML
 
--   Intellisense
+- Intellisense
 
--   Accolades correspondantes
+- Accolades correspondantes
 
--   Indication des erreurs
+- Indication des erreurs
 
--   Prise en charge complète d’Unicode
+- Prise en charge complète d’Unicode
 
--   Aide contextuelle accessible via la touche **F1**
+- Aide contextuelle accessible via la touche **F1**
 
--   Fonctionnalité Show-Command contextuelle accessible via **Ctrl+F1**
+- Fonctionnalité Show-Command contextuelle accessible via **Ctrl+F1**
 
--   Scripts complexes et prise en charge de la saisie de droite à gauche
+- Scripts complexes et prise en charge de la saisie de droite à gauche
 
--   Prise en charge des polices
+- Prise en charge des polices
 
--   Zoom
+- Zoom
 
--   Modes de sélection de ligne et de sélection de bloc
+- Modes de sélection de ligne et de sélection de bloc
 
--   Préservation du contenu saisi dans la ligne de commande lorsque vous appuyez sur la touche **Haut** pour afficher l’historique dans la console
+- Préservation du contenu saisi dans la ligne de commande lorsque vous appuyez sur la touche **Haut** pour afficher l’historique dans la console
 
 **Quels avantages cette modification procure-t-elle ?**
 
@@ -141,16 +141,16 @@ L’apport de ces modifications au volet de la console offre une expérience de 
 
 Windows PowerShell ISE 2.0 offre des volets de commande et de sortie distincts.
 
-### <a name="BKMK_CommandLine"></a>Commutateurs de ligne de commande
+### <a name="command-line-switches"></a>Commutateurs de ligne de commande
 **Ajout dans PowerShell 3.0**
 
 Si vous démarrez Windows PowerShell ISE à partir de la ligne de commande (en tapant **Powershell_ise.exe**), vous pouvez ajouter les nouveaux commutateurs de ligne de commande suivants.
 
--   *-NoProfile* : démarre Windows PowerShell ISE sans exécuter **$profile**
+- *-NoProfile* : démarre Windows PowerShell ISE sans exécuter **$profile**
 
--   *-Help* : affiche une fenêtre d’aide
+- *-Help* : affiche une fenêtre d’aide
 
--   *-mta* : démarre Windows PowerShell ISE en mode multithread cloisonné. Le mode d’opération par défaut pour Windows PowerShell ISE est un mode à thread unique cloisonné, ou *-sta*.
+- *-mta* : démarre Windows PowerShell ISE en mode multithread cloisonné. Le mode d’opération par défaut pour Windows PowerShell ISE est un mode à thread unique cloisonné, ou *-sta*.
 
 **Quels avantages cette modification procure-t-elle ?**
 
@@ -160,26 +160,26 @@ L’ajout de ces commutateurs de ligne de commande permet de contrôler l’envi
 
 Windows PowerShell ISE 2.0 ne reconnaît pas ces commutateurs de ligne de commande.
 
-### <a name="BKMK_NewEditorFeatures"></a>Nouvelles fonctionnalités de l’éditeur
+### <a name="new-editor-features"></a>Nouvelles fonctionnalités de l’éditeur
 **Ajout dans PowerShell 3.0**
 
 Les autres fonctionnalités d’édition de Windows PowerShell ISE sont les suivantes :
 
--   **Coloration de la syntaxe XML**Windows PowerShell ISE colore désormais la syntaxe XML de la même façon que la syntaxe Windows PowerShell.
+- **Coloration de la syntaxe XML**Windows PowerShell ISE colore désormais la syntaxe XML de la même façon que la syntaxe Windows PowerShell.
 
--   **Correspondance d’accolade** Windows PowerShell ISE inclut des fonctions de correspondance et de mise en surbrillance des accolades, utilisables comme suit : par exemple, la commande **Accéder à Match** ou la combinaison de touches **Ctrl+]** permettent de localiser l’accolade fermante, si une accolade ouvrante est sélectionnée.
+- **Correspondance d’accolade** Windows PowerShell ISE inclut des fonctions de correspondance et de mise en surbrillance des accolades, utilisables comme suit : par exemple, la commande **Accéder à Match** ou la combinaison de touches **Ctrl+]** permettent de localiser l’accolade fermante, si une accolade ouvrante est sélectionnée.
 
--   **Mode Plan** Le volet Script prend en charge le mode Plan qui permet de réduire ou de développer des sections de code en cliquant sur les signes plus ou moins dans la marge gauche. Vous pouvez utiliser des accolades ou les balises **#region** et **#endregion** pour marquer le début ou la fin d’une section réductible. Pour développer ou réduire toutes les régions, appuyez sur **Ctrl+M**.
+- **Mode Plan** Le volet Script prend en charge le mode Plan qui permet de réduire ou de développer des sections de code en cliquant sur les signes plus ou moins dans la marge gauche. Vous pouvez utiliser des accolades ou les balises **#region** et **#endregion** pour marquer le début ou la fin d’une section réductible. Pour développer ou réduire toutes les régions, appuyez sur **Ctrl+M**.
 
--   **Édition du texte par glisser-déplacer**Désormais, Windows PowerShell ISE prend en charge l’édition de texte par glisser-déplacer. Vous pouvez sélectionner un bloc de texte et faire glisser ce texte vers un autre emplacement dans l’éditeur ou la console afin de le déplacer. Si vous maintenez la touche Ctrl enfoncée pendant que vous faites glisser le texte sélectionné, lorsque vous relâchez le bouton de la souris, le texte est copié dans le nouvel emplacement. Dans cette version de Windows PowerShell ISE, ainsi que dans la version précédente de Windows PowerShell ISE, quand vous glissez-déplacez un fichier vers Windows PowerShell ISE, ce dernier ouvre le fichier.
+- **Édition du texte par glisser-déplacer**Désormais, Windows PowerShell ISE prend en charge l’édition de texte par glisser-déplacer. Vous pouvez sélectionner un bloc de texte et faire glisser ce texte vers un autre emplacement dans l’éditeur ou la console afin de le déplacer. Si vous maintenez la touche Ctrl enfoncée pendant que vous faites glisser le texte sélectionné, lorsque vous relâchez le bouton de la souris, le texte est copié dans le nouvel emplacement. Dans cette version de Windows PowerShell ISE, ainsi que dans la version précédente de Windows PowerShell ISE, quand vous glissez-déplacez un fichier vers Windows PowerShell ISE, ce dernier ouvre le fichier.
 
--   **Affichage des erreurs d’analyse** Les erreurs d’analyse sont indiquées par des soulignements rouges. Lorsque vous pointez sur une erreur indiquée, le texte d’info-bulle affiche le problème détecté dans le code.
+- **Affichage des erreurs d’analyse** Les erreurs d’analyse sont indiquées par des soulignements rouges. Lorsque vous pointez sur une erreur indiquée, le texte d’info-bulle affiche le problème détecté dans le code.
 
--   **Zoom** Le pourcentage de zoom du contenu de la console peut être défini à l’aide du curseur de zoom (dans le coin inférieur droit de la fenêtre de Windows PowerShell ISE) ou en entrant la commande **$psise.options.Zoom** dans le volet Console.
+- **Zoom** Le pourcentage de zoom du contenu de la console peut être défini à l’aide du curseur de zoom (dans le coin inférieur droit de la fenêtre de Windows PowerShell ISE) ou en tapant la commande **$psise.options.Zoom** dans le volet de la console.
 
--   **Copie et collage de texte enrichi** La copie dans le Presse-papiers dans Windows PowerShell ISE préserve les informations de police, de taille et de couleur de la sélection d’origine.
+- **Copie et collage de texte enrichi** La copie dans le Presse-papiers dans Windows PowerShell ISE préserve les informations de police, de taille et de couleur de la sélection d’origine.
 
--   **Sélection de bloc** Vous pouvez sélectionner un bloc de texte en maintenant la touche Alt enfoncée tout en sélectionnant du texte dans le volet Script à l’aide de la souris, ou en appuyant sur **Alt+Maj+Flèche**.
+- **Sélection de bloc** Vous pouvez sélectionner un bloc de texte en maintenant la touche Alt enfoncée tout en sélectionnant du texte dans le volet Script à l’aide de la souris, ou en appuyant sur **Alt+Maj+Flèche**.
 
 **Quels avantages cette modification procure-t-elle ?**
 
@@ -189,7 +189,7 @@ Les fonctionnalités d’édition supplémentaires renforcent la cohérence et l
 
 Ces améliorations des fonctionnalités d’édition ne figuraient pas dans Windows PowerShell ISE 2.0.
 
-### <a name="BKMK_NewHelpViewer"></a>Nouvelle fenêtre de visionneuse d’aide
+### <a name="new-help-viewer-window"></a>Nouvelle fenêtre de visionneuse d’aide
 **Ajout dans PowerShell 3.0**
 
 Si vous appuyez sur **F1** quand le curseur est dans une applet de commande ou si une partie d’une applet de commande est en surbrillance, la nouvelle visionneuse d’aide ouvre une aide contextuelle sur l’applet de commande en surbrillance. Pour afficher les rubriques d’aide conceptuelle de Windows PowerShell, tapez les **opérateurs** dans le volet de la console, puis appuyez sur **F1**.
@@ -206,7 +206,7 @@ L’aide contextuelle accessible sans quitter votre applet de commande ou script
 
 Dans les versions précédentes de Windows PowerShell ISE, l’appui sur la touche F1 ouvrait le fichier d’aide sur l’ordinateur local. Dans Windows PowerShell ISE 3.0 et versions ultérieures, une fenêtre s’ouvre, affichant l’aide sur l’applet de commande, qui est consultable et configurable. Cette expérience d’aide est une nouveauté pour Windows PowerShell ISE 3.0, et l’aide actualisable est une nouveauté pour Windows PowerShell 3.0.
 
-### <a name="BKMK_ShowCommand"></a>Applet de commande Show-Command
+### <a name="show-command-cmdlet"></a>Applet de commande Show-Command
 **Ajout dans PowerShell 3.0**
 
 L’applet de commande **Show-Command** permet de composer ou d’exécuter une applet de commande ou une fonction en remplissant un formulaire graphique. Le formulaire permet aux utilisateurs d’utiliser Windows PowerShell dans un environnement graphique. L’applet de commande **Show-Command** permet également aux créateurs de scripts chevronnés de créer une interface utilisateur graphique rapide basée sur Windows PowerShell.
@@ -219,7 +219,7 @@ En utilisant l’applet de commande **Show-Command** dans vos scripts Windows Po
 
 L’applet de commande Show-Command est une nouveauté dans Windows PowerShell ISE 3.0.
 
-## <a name="BKMK_LINKS"></a>Voir aussi
+## <a name="see-also"></a>Voir aussi
 Pour plus d’informations sur l’utilisation de Windows PowerShell ISE dans Windows PowerShell, consultez les liens suivants.
 
 - [Utilisation de l’environnement d’écriture de scripts intégré de Windows PowerShell](../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)

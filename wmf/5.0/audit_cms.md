@@ -3,16 +3,15 @@ ms.date: 2017-06-12
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,configuration
-ms.openlocfilehash: 9556f0d9a12807cbfe38aaade6798088f051596d
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 60055b6755a31397c49686ea9ee1a69ada3516de
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 09/08/2017
 ---
-<a id="cryptographic-message-syntax-cms-cmdlets" class="xliff"></a>
-# Applets de commande CMS (Cryptographic Message Syntax)
+# <a name="cryptographic-message-syntax-cms-cmdlets"></a>Applets de commande CMS (Cryptographic Message Syntax)
 
-Les applets de commande Cryptographic Message Syntax prennent en charge le chiffrement et le déchiffrement de contenu au format IETF pour la protection par chiffrement des messages comme documenté dans la [RFC5652](http://tools.ietf.org/html/rfc5652).
+Les applets de commande Cryptographic Message Syntax prennent en charge le chiffrement et le déchiffrement de contenu au format IETF pour la protection par chiffrement des messages comme documenté dans la [RFC5652](https://tools.ietf.org/html/rfc5652).
 
 ```powershell
 Get-CmsMessage [-Content] <string>
@@ -29,7 +28,7 @@ Unprotect-CmsMessage [-LiteralPath] <string> [[-To] <CmsMessageRecipient[]>] [-I
 
 La norme de chiffrement CMS implémente le chiffrement à clé publique, où les clés utilisées pour chiffrer le contenu (la *clé publique*) et les clés utilisées pour déchiffrer le contenu (la *clé privée*) sont distinctes.
 
-Votre clé publique peut être partagée à grande échelle et ne constitue pas des données sensibles. Si du contenu est chiffré avec cette clé publique, seule votre clé privée peut le déchiffrer. Pour plus d’informations sur le chiffrement à clé publique, consultez : <http://en.wikipedia.org/wiki/Public-key_cryptography>.
+Votre clé publique peut être partagée à grande échelle et ne constitue pas des données sensibles. Si du contenu est chiffré avec cette clé publique, seule votre clé privée peut le déchiffrer. Pour plus d’informations, consultez [Cryptographie asymétrique](https://en.wikipedia.org/wiki/Public-key_cryptography).
 
 Pour être reconnus dans PowerShell, les certificats de chiffrement nécessitent un identificateur EKU (Unique Key Usage) pour être identifiés comme certificats de chiffrement de données (comme les identificateurs de « signature du code » ou de « courrier chiffré »).
 

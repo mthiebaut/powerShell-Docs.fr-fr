@@ -2,11 +2,11 @@
 ms.date: 2017-06-27
 keywords: powershell,applet de commande
 title: "Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell"
-ms.openlocfilehash: 4b076ca1ecdab293f3acadc466d39ba3e7a6444f
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: 6b50fdc0f2854d8af6147432fed1a155d26f57e7
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell
 
@@ -14,7 +14,7 @@ Mise à jour : 24 juin 2013
 
 S’applique à : Windows Server 2012 R2, Windows Server 2012
 
-La fonctionnalité Accès Web Windows PowerShell® dans Windows Server® 2012 R2 et Windows Server® 2012 a un modèle de sécurité restrictif.
+La fonctionnalité Accès Web Windows PowerShell dans Windows Server 2012 R2 et Windows Server 2012 a un modèle de sécurité restrictif.
 Les utilisateurs doivent recevoir explicitement une autorisation d’accès avant de pouvoir se connecter à la passerelle Accès Web Windows PowerShell et utiliser la console web Windows PowerShell.
 
 ## <a name="configuring-authorization-rules-and-site-security"></a>Configuration des règles d’autorisation et de la sécurité du site
@@ -45,10 +45,10 @@ Les applets de commande référencées dans [Applets de commande d’Accès Web 
 Ces règles diffèrent des listes de contrôle d’accès sur l’ordinateur de destination et constituent une couche de sécurité supplémentaire pour l’accès par le Web.
 La section suivante fournit davantage de détails sur la sécurité.
 
-Si des utilisateurs ne parviennent pas passer une des couches de sécurité précédentes, ils reçoivent un message générique « Accès refusé » dans les fenêtres de leur navigateur.
+Si des utilisateurs ne parviennent pas à traverser l’une des couches de sécurité précédentes, ils reçoivent un message générique « Accès refusé » dans leur fenêtre de navigateur.
 Bien que les détails sur la sécurité soient consignés sur le serveur passerelle, aucune information n’est fournie aux utilisateurs finals quant au nombre de couches de sécurité qu’ils ont traversées ou quant à la couche au niveau de laquelle l’échec d’authentification ou de connexion a échoué.
 
-Pour plus d’informations sur la configuration de règles d’autorisation, consultez [Configuration des règles d’autorisation]() dans cette rubrique.
+Pour plus d’informations sur la configuration de règles d’autorisation, consultez [Configuration des règles d’autorisation](#configuring-authorization-rules-and-site-security) dans cette rubrique.
 
 ### <a name="security"></a>Sécurité
 
@@ -62,17 +62,17 @@ Le tableau suivant décrit les quatre couches de sécurité entre les utilisateu
 
 |Niveau|Couche|
 |-|-|
-|1|[fonctionnalités de sécurité du serveur web IIS]()|
-|2|[authentification de la passerelle basée sur les formulaires Accès Web Windows PowerShell]()|
-|3|[règles d’autorisation d’Accès Web Windows PowerShell]()|
-|4|[règles d’autorisation et d’authentification cibles]()|
+|1|[fonctionnalités de sécurité du serveur web IIS](#iis-web-server-security-features)|
+|2|[authentification de la passerelle basée sur les formulaires Accès Web Windows PowerShell](#windows-powershell-web-access-forms-based-gateway-authentication)|
+|3|[règles d’autorisation d’Accès Web Windows PowerShell](#windows-powershell-web-access-authorization-rules)|
+|4|[règles d’autorisation et d’authentification cibles](#target-authentication-and-authorization-rules)|
 
 Vous pouvez trouver des informations détaillées sur chaque couche sous les titres suivants :
 
 #### <a name="iis-web-server-security-features"></a>Fonctionnalités de sécurité du serveur web IIS
 
 Les utilisateurs d’Accès Web Windows PowerShell doivent toujours fournir un nom d’utilisateur et un mot de passe pour authentifier leurs comptes sur la passerelle.
-Cependant, les administrateurs d’Accès Web Windows PowerShell peuvent également activer ou désactiver l’authentification facultative des certificats clients (consultez [installer et utiliser Accès Web Windows PowerShell]() pour activer un certificat de test puis pour configurer un certificat authentique).
+Cependant, les administrateurs d’Accès Web Windows PowerShell peuvent également activer ou désactiver l’authentification facultative des certificats clients (consultez [installer et utiliser Accès Web Windows PowerShell](install-and-use-windows-powershell-web-access.md) pour activer un certificat de test puis pour configurer un certificat authentique).
 
 Pour la fonctionnalité de certificat client facultatif, les utilisateurs doivent posséder un certificat client valide en plus de leur nom d’utilisateur/mot de passe. Cette fonctionnalité fait partie de la configuration du serveur web (IIS).
 Quand la couche du certificat client est activée, la page de connexion à Accès Web Windows PowerShell invite les utilisateurs à fournir des certificats valides avant d’évaluer leurs informations d’identification de connexion.
@@ -89,7 +89,7 @@ La page de connexion d’Accès Web Windows PowerShell requiert un ensemble d’
 Si l’utilisateur ne fournit pas d’autres informations d’identification, le nom d’utilisateur et le mot de passe principaux utilisés pour se connecter à la passerelle sont également utilisés pour se connecter à l’ordinateur cible.
 
 Les informations d’identification requises sont authentifiées sur la passerelle Accès Web Windows PowerShell.
-Ces informations d’identification doivent être des comptes d’utilisateurs valides sur le serveur de passerelle Accès Web Windows PowerShell local ou dans Active Directory®.
+Ces informations d’identification doivent être des comptes d’utilisateurs valides sur le serveur de passerelle Accès Web Windows PowerShell local ou dans Active Directory.
 
 #### <a name="windows-powershell-web-access-authorization-rules"></a>Règles d’autorisation d’Accès Web Windows PowerShell
 
@@ -100,7 +100,7 @@ Ces règles sont évaluées uniquement après qu’un utilisateur a été authen
 
 #### <a name="target-authentication-and-authorization-rules"></a>Règles d’autorisation et d’authentification cibles
 
-La couche finale de sécurité pour Accès Web Windows PowerShell est la configuration de sécurité spécifique de l’ordinateur cible.
+La couche finale de sécurité pour Accès Web Windows PowerShell est la configuration de sécurité elle-même de l’ordinateur cible.
 Les utilisateurs doivent avoir les droits d’accès appropriés configurés sur l’ordinateur cible, ainsi que dans les règles d’autorisation d’Accès Web Windows PowerShell, pour exécuter une console web Windows PowerShell qui affecte un ordinateur cible par le biais d’Accès Web Windows PowerShell.
 
 Cette couche offre les mêmes mécanismes de sécurité que ceux qui évalueraient les tentatives de connexion si les utilisateurs créaient une session Windows PowerShell à distance sur un ordinateur cible depuis Windows PowerShell en exécutant les applets de commande [Enter-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/Enter-PSSession) ou [New-PSSession](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/new-pssession).
@@ -129,7 +129,7 @@ Les caractères génériques dans les chaînes ne sont pas pris en charge. Utili
 
 > **Remarque**
 >
-> Pour d’autres façons d’utiliser des règles d’autorisation pour accorder un accès aux utilisateurs et mieux sécuriser l’environnement d’Accès Web Windows PowerShell, consultez [Autres exemples de scénarios de règles d’autorisation]() dans cette rubrique.
+> Pour d’autres façons d’utiliser des règles d’autorisation pour accorder un accès aux utilisateurs et mieux sécuriser l’environnement d’Accès Web Windows PowerShell, consultez [Autres exemples de scénarios de règles d’autorisation](#other-authorization-rule-scenario-examples) dans cette rubrique.
 
 #### <a name="to-add-a-restrictive-authorization-rule"></a>Pour ajouter une règle d’autorisation restrictive
 
@@ -144,7 +144,7 @@ Les caractères génériques dans les chaînes ne sont pas pris en charge. Utili
     Vérifiez que les configurations de session que vous voulez utiliser dans vos règles existent déjà.
 Si elles n’ont pas encore été créées, utilisez les instructions relatives à la création de configurations de session dans [About Session Configuration Files](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configuration_files).
 
-3. Cette règle d’autorisation accorde à un utilisateur spécifique l’accès à un ordinateur sur le réseau auquel il a généralement accès, avec l’accès à une configuration de session spécifique limitée aux besoins habituels de l’utilisateur en matière de script et d’applet de commande. Tapez ce qui suit, puis appuyez sur **Entrée**.
+3. Cette règle d’autorisation accorde à un utilisateur spécifique l’accès à un ordinateur sur le réseau auquel il a généralement accès, avec un accès à une configuration de session spécifique limitée aux besoins habituels de l’utilisateur en matière de script et d’applet de commande. Tapez ce qui suit, puis appuyez sur **Entrée**.
 
 ```powershell
 Add-PswaAuthorizationRule -UserName <domain\user | computer\user> -ComputerName <computer_name> -ConfigurationName <session_configuration_name>
@@ -160,7 +160,7 @@ Add-PswaAuthorizationRule -UserName 'Contoso\JSmith' -ComputerName Contoso_214 -
 
 #### <a name="to-remove-an-authorization-rule"></a>Pour supprimer une règle d’autorisation
 
-1. Si aucune session Windows PowerShell n’est déjà ouverte, consultez l’étape 1 de la procédure [pour ajouter une règle d’autorisation restrictive]() dans cette section.
+1. Si aucune session Windows PowerShell n’est déjà ouverte, consultez l’étape 1 de la procédure [pour ajouter une règle d’autorisation restrictive](#to-add-a-restrictive-authorization-rule) dans cette section.
 
 2. Tapez la commande suivante, puis appuyez sur **Entrée**, où *rule ID* représente l’ID unique de la règle à supprimer.
 
@@ -181,9 +181,9 @@ Voici quelques exemples de ce scénario.
 
 - Un administrateur crée un point de terminaison, appelé **PswaEndpoint**, avec une instance d’exécution restreinte. Ensuite, il crée une règle, **\*,\*,PswaEndpoint**, puis distribue le point de terminaison à d’autres ordinateurs. La règle permet à tous les utilisateurs d’accéder à tous les ordinateurs avec le point de terminaison **PswaEndpoint**. Si aucune autre règle d’autorisation n’est définie dans le jeu de règles, les ordinateurs n’ayant pas ce point de terminaison seront inaccessibles.
 
--   L’administrateur a créé un point de terminaison avec une instance d’exécution restreinte appelée **PswaEndpoint**, puis souhaite en restreindre l’accès à des utilisateurs spécifiques. L’administrateur crée un groupe d’utilisateurs appelé **Level1Support**, puis définit la règle suivante : **Level1Support,\*,PswaEndpoint**. La règle accorde à tous les utilisateurs inclus dans le groupe **Level1Support** un accès à tous les ordinateurs dotés de la configuration **PswaEndpoint**. De même, l’accès peut être limité à un ensemble d’ordinateurs spécifique.
+- L’administrateur a créé un point de terminaison avec une instance d’exécution restreinte appelée **PswaEndpoint**, puis souhaite en restreindre l’accès à des utilisateurs spécifiques. L’administrateur crée un groupe d’utilisateurs appelé **Level1Support**, puis définit la règle suivante : **Level1Support,\*,PswaEndpoint**. La règle accorde à tous les utilisateurs inclus dans le groupe **Level1Support** un accès à tous les ordinateurs dotés de la configuration **PswaEndpoint**. De même, l’accès peut être limité à un ensemble d’ordinateurs spécifique.
 
--   Certains administrateurs accordent à certains utilisateurs un accès privilégié. Par exemple, un administrateur crée deux groupes d’utilisateurs, **Admins** et **BasicSupport**. Il crée également un point de terminaison avec une instance d’exécution restreinte appelée **PswaEndpoint**, puis définit les deux règles suivantes : **Admins,\*,\*** et **BasicSupport,\*,PswaEndpoint**. La première règle octroie à tous les utilisateurs du groupe **Admin** un accès à tous les ordinateurs, et la seconde règle octroie à tous les utilisateurs du groupe **BasicSupport** un accès aux seuls ordinateurs dotés de **PswaEndpoint**.
+- Certains administrateurs accordent à certains utilisateurs un accès privilégié. Par exemple, un administrateur crée deux groupes d’utilisateurs, **Admins** et **BasicSupport**. Il crée également un point de terminaison avec une instance d’exécution restreinte appelée **PswaEndpoint**, puis définit les deux règles suivantes : **Admins,\*,\*** et **BasicSupport,\*,PswaEndpoint**. La première règle octroie à tous les utilisateurs du groupe **Admin** un accès à tous les ordinateurs, et la seconde règle octroie à tous les utilisateurs du groupe **BasicSupport** un accès aux seuls ordinateurs dotés de **PswaEndpoint**.
 
 - Un administrateur a configuré un environnement de test privé et souhaite autoriser tous les utilisateurs réseau approuvés à accéder à tous les ordinateurs du réseau auxquels ils ont normalement accès, avec un accès à toutes les configurations de sessions auxquelles ils ont normalement accès. S’agissant d’un environnement de test privé, l’administrateur crée une règle d’autorisation non sécurisée.
   - L’administrateur exécute l’applet de commande `Add-PswaAuthorizationRule * * *`, qui utilise le caractère générique **\*** pour représenter tous les utilisateurs, tous les ordinateurs et toutes les configurations.
@@ -209,7 +209,7 @@ Dans le scénario précédent, Accès Web Windows PowerShell établit une connex
 
   >**Remarque** :
   >
-  >Si la passerelle et les ordinateurs cibles se trouvent dans des groupes de travail ou domaines différents, une relation d’approbation doit être établie entre les deux ordinateurs du groupe de travail, les deux domaines ou entre le groupe de travail et le domaine. Il n’est pas possible de configurer cette relation à l’aide des applets de commande des règles d’autorisation d’Accès Web Windows PowerShell. Les règles d’autorisation ne définissent pas une relation d’approbation entre des ordinateurs ; elles peuvent uniquement autoriser les utilisateurs à se connecter à des ordinateurs cibles et configurations de sessions spécifiques. Pour plus d’informations sur la manière de configurer une relation d’approbation entre différents domaines, consultez [Création d’approbations de domaine et de forêt](https://technet.microsoft.com/library/cc794775.aspx"). Pour plus d’informations sur la façon d’ajouter les ordinateurs d’un groupe de travail à une liste d’hôtes approuvés, consultez [Administration à distance à l’aide du Gestionnaire de serveur](href="https://technet.microsoft.com/library/dd759202.aspx).
+  >Si la passerelle et les ordinateurs cibles se trouvent dans des groupes de travail ou domaines différents, une relation d’approbation doit être établie entre les deux ordinateurs du groupe de travail, les deux domaines ou entre le groupe de travail et le domaine. Il n’est pas possible de configurer cette relation à l’aide des applets de commande des règles d’autorisation d’Accès Web Windows PowerShell. Les règles d’autorisation ne définissent pas une relation d’approbation entre des ordinateurs ; elles peuvent uniquement autoriser les utilisateurs à se connecter à des ordinateurs cibles et configurations de sessions spécifiques. Pour plus d’informations sur la manière de configurer une relation d’approbation entre différents domaines, consultez [Création d’approbations de domaine et de forêt](https://technet.microsoft.com/library/cc794775.aspx"). Pour plus d’informations sur la façon d’ajouter les ordinateurs d’un groupe de travail à une liste d’hôtes approuvés, consultez [Administration à distance à l’aide du Gestionnaire de serveur](https://technet.microsoft.com/library/dd759202.aspx).
 
 ### <a name="using-a-single-set-of-authorization-rules-for-multiple-sites"></a>Utilisation d’un seul jeu de règles d’autorisation pour plusieurs sites
 

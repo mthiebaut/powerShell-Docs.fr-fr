@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: Objet PowerShellTab
 ms.assetid: a9b58556-951b-4f48-b3ae-b351b7564360
-ms.openlocfilehash: 482984272b2f1be027cf2be49bdfa2c6e2c52070
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: 15d9a7474e4c2cf2a9ff8edb88802106489cdba1
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="the-powershelltab-object"></a>Objet PowerShellTab
   L’objet **PowerShellTab** représente un environnement d’exécution Windows PowerShell.
@@ -20,7 +20,7 @@ ms.lasthandoff: 08/31/2017
  Exécute le script spécifié dans l’onglet PowerShell.
 
 > [!NOTE]
->  Cette méthode effectue cette action uniquement dans les onglets PowerShell autres que l’onglet PowerShell à partir duquel elle est exécutée. Elle ne renvoie pas d’objet ou de valeur. Si le code modifie une variable, ces modifications s’appliquent à l’onglet pour lequel la commande a été appelée.
+> Cette méthode effectue cette action uniquement dans les onglets PowerShell autres que l’onglet PowerShell à partir duquel elle est exécutée. Elle ne renvoie pas d’objet ou de valeur. Si le code modifie une variable, ces modifications s’appliquent à l’onglet pour lequel la commande a été appelée.
 
  **Script** \- System.Management.Automation.ScriptBlock ou chaîne. Bloc de script à utiliser.
 
@@ -36,7 +36,7 @@ $psise.PowerShellTabs[1].Invoke({dir})
  Exécute le script spécifié dans l’onglet PowerShell.
 
 > [!NOTE]
->  Cette méthode effectue cette action uniquement dans les onglets PowerShell autres que l’onglet PowerShell à partir duquel elle est exécutée. Le bloc de script est exécuté. Les valeurs renvoyées par le script sont renvoyées à l’environnement d’exécution à partir duquel vous avez appelé la commande. Si la durée d’exécution de la commande dépasse la valeur **millesecondsTimeout** spécifiée, la commande échoue avec une exception : « Le délai de l’opération a expiré. »
+> Cette méthode effectue cette action uniquement dans les onglets PowerShell autres que l’onglet PowerShell à partir duquel elle est exécutée. Le bloc de script est exécuté. Les valeurs renvoyées par le script sont renvoyées à l’environnement d’exécution à partir duquel vous avez appelé la commande. Si la durée d’exécution de la commande dépasse la valeur **millesecondsTimeout** spécifiée, la commande échoue avec une exception : « Le délai de l’opération a expiré. »
 
  **Script** \- System.Management.Automation.ScriptBlock ou chaîne. Bloc de script à utiliser.
 
@@ -52,7 +52,7 @@ $psISE.PowerShellTabs.SetSelectedPowerShellTab($psISE.PowerShellTabs[0])
 
 # Invoke a simple command on the other tab, in its own scope
 $psISE.PowerShellTabs[1].InvokeSynchronous('$x=1',$false)
-# You can switch to the other tab and type â€œ$xâ€ to see that the value is saved there.
+# You can switch to the other tab and type 'œ$x' to see that the value is saved there.
 
 # This example sets a value in the other tab (in a different scope) 
 # and returns it through the pipeline to this tab to store in $a
@@ -88,7 +88,7 @@ $psISE.CurrentPowerShellTab.AddOnsMenu
 ### <a name="caninvoke"></a>CanInvoke
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
- Propriété booléenne en lecture seule qui renvoie la valeur **$true** si un script peut être appelé avec la méthode [Invoke( Script )]().
+ Propriété booléenne en lecture seule qui renvoie la valeur **$true** si un script peut être appelé avec la méthode [Invoke( Script )](#invoke-script-).
 
 ```
 # CanInvoke will be false if the PowerShell
@@ -162,7 +162,7 @@ $psise.CurrentPowerShellTab.output.clear()
 ### <a name="prompt"></a>Prompt
   Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
 
- Propriété en lecture seule qui obtient le texte d’invite actuel. Remarque : La fonction **Prompt** peut être remplacée par le profil de l’utilisateur. Si le résultat n’est pas une chaîne simple, cette propriété ne renvoie rien.
+ Propriété en lecture seule qui obtient le texte d’invite actuel. Remarque : La fonction **Prompt** peut être remplacée par le profil utilisateur. Si le résultat n’est pas une chaîne simple, cette propriété ne renvoie rien.
 
 ```
 # Gets the current prompt text.
