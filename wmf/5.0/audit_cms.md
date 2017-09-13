@@ -3,15 +3,15 @@ ms.date: 2017-06-12
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,configuration
-ms.openlocfilehash: 9556f0d9a12807cbfe38aaade6798088f051596d
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 60055b6755a31397c49686ea9ee1a69ada3516de
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 09/08/2017
 ---
-# <a name="cryptographic-message-syntax-cms-cmdlets"></a><span data-ttu-id="f081f-102">Applets de commande CMS (Cryptographic Message Syntax)</span><span class="sxs-lookup"><span data-stu-id="f081f-102">Cryptographic Message Syntax (CMS) cmdlets</span></span>
+# <a name="cryptographic-message-syntax-cms-cmdlets"></a><span data-ttu-id="14e86-102">Applets de commande CMS (Cryptographic Message Syntax)</span><span class="sxs-lookup"><span data-stu-id="14e86-102">Cryptographic Message Syntax (CMS) cmdlets</span></span>
 
-<span data-ttu-id="f081f-103">Les applets de commande Cryptographic Message Syntax prennent en charge le chiffrement et le déchiffrement de contenu au format IETF pour la protection par chiffrement des messages comme documenté dans la [RFC5652](http://tools.ietf.org/html/rfc5652).</span><span class="sxs-lookup"><span data-stu-id="f081f-103">The Cryptographic Message Syntax cmdlets support encryption and decryption of content using the IETF standard format for cryptographically protecting messages as documented by [RFC5652](http://tools.ietf.org/html/rfc5652).</span></span>
+<span data-ttu-id="14e86-103">Les applets de commande Cryptographic Message Syntax prennent en charge le chiffrement et le déchiffrement de contenu au format IETF pour la protection par chiffrement des messages comme documenté dans la [RFC5652](https://tools.ietf.org/html/rfc5652).</span><span class="sxs-lookup"><span data-stu-id="14e86-103">The Cryptographic Message Syntax cmdlets support encryption and decryption of content using the IETF standard format for cryptographically protecting messages as documented by [RFC5652](https://tools.ietf.org/html/rfc5652).</span></span>
 
 ```powershell
 Get-CmsMessage [-Content] <string>
@@ -26,13 +26,13 @@ Unprotect-CmsMessage [-Path] <string> [[-To] <CmsMessageRecipient[]>] [-IncludeC
 Unprotect-CmsMessage [-LiteralPath] <string> [[-To] <CmsMessageRecipient[]>] [-IncludeContext]
 ```
 
-<span data-ttu-id="f081f-104">La norme de chiffrement CMS implémente le chiffrement à clé publique, où les clés utilisées pour chiffrer le contenu (la *clé publique*) et les clés utilisées pour déchiffrer le contenu (la *clé privée*) sont distinctes.</span><span class="sxs-lookup"><span data-stu-id="f081f-104">The CMS encryption standard implements public key cryptography, where the keys used to encrypt content (the *public key*) and the keys used to decrypt content (the *private key*) are separate.</span></span>
+<span data-ttu-id="14e86-104">La norme de chiffrement CMS implémente le chiffrement à clé publique, où les clés utilisées pour chiffrer le contenu (la *clé publique*) et les clés utilisées pour déchiffrer le contenu (la *clé privée*) sont distinctes.</span><span class="sxs-lookup"><span data-stu-id="14e86-104">The CMS encryption standard implements public key cryptography, where the keys used to encrypt content (the *public key*) and the keys used to decrypt content (the *private key*) are separate.</span></span>
 
-<span data-ttu-id="f081f-105">Votre clé publique peut être partagée à grande échelle et ne constitue pas des données sensibles.</span><span class="sxs-lookup"><span data-stu-id="f081f-105">Your public key can be shared widely, and is not sensitive data.</span></span> <span data-ttu-id="f081f-106">Si du contenu est chiffré avec cette clé publique, seule votre clé privée peut le déchiffrer.</span><span class="sxs-lookup"><span data-stu-id="f081f-106">If any content is encrypted with this public key, only your private key can decrypt it.</span></span> <span data-ttu-id="f081f-107">Pour plus d’informations sur le chiffrement à clé publique, consultez : <http://en.wikipedia.org/wiki/Public-key_cryptography>.</span><span class="sxs-lookup"><span data-stu-id="f081f-107">For more information about Public Key Cryptography, see: <http://en.wikipedia.org/wiki/Public-key_cryptography>.</span></span>
+<span data-ttu-id="14e86-105">Votre clé publique peut être partagée à grande échelle et ne constitue pas des données sensibles.</span><span class="sxs-lookup"><span data-stu-id="14e86-105">Your public key can be shared widely, and is not sensitive data.</span></span> <span data-ttu-id="14e86-106">Si du contenu est chiffré avec cette clé publique, seule votre clé privée peut le déchiffrer.</span><span class="sxs-lookup"><span data-stu-id="14e86-106">If any content is encrypted with this public key, only your private key can decrypt it.</span></span> <span data-ttu-id="14e86-107">Pour plus d’informations, consultez [Cryptographie asymétrique](https://en.wikipedia.org/wiki/Public-key_cryptography).</span><span class="sxs-lookup"><span data-stu-id="14e86-107">For more information, see [Public-key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography).</span></span>
 
-<span data-ttu-id="f081f-108">Pour être reconnus dans PowerShell, les certificats de chiffrement nécessitent un identificateur EKU (Unique Key Usage) pour être identifiés comme certificats de chiffrement de données (comme les identificateurs de « signature du code » ou de « courrier chiffré »).</span><span class="sxs-lookup"><span data-stu-id="f081f-108">To be recognized in PowerShell, encryption certificates require a unique key usage identifier (EKU) to identify them as data encryption certificates (like the identifiers for 'Code Signing', 'Encrypted Mail').</span></span>
+<span data-ttu-id="14e86-108">Pour être reconnus dans PowerShell, les certificats de chiffrement nécessitent un identificateur EKU (Unique Key Usage) pour être identifiés comme certificats de chiffrement de données (comme les identificateurs de « signature du code » ou de « courrier chiffré »).</span><span class="sxs-lookup"><span data-stu-id="14e86-108">To be recognized in PowerShell, encryption certificates require a unique key usage identifier (EKU) to identify them as data encryption certificates (like the identifiers for 'Code Signing', 'Encrypted Mail').</span></span>
 
-<span data-ttu-id="f081f-109">Voici un exemple de création de certificat adapté au chiffrement de document :</span><span class="sxs-lookup"><span data-stu-id="f081f-109">Here is an example of creating a certificate that is good for Document Encryption:</span></span>
+<span data-ttu-id="14e86-109">Voici un exemple de création de certificat adapté au chiffrement de document :</span><span class="sxs-lookup"><span data-stu-id="14e86-109">Here is an example of creating a certificate that is good for Document Encryption:</span></span>
 
 ```powershell
 (Change the text in **Subject** to your name, email, or other identifier), and put in a file (i.e.: DocumentEncryption.inf):
@@ -56,12 +56,12 @@ ValidityPeriodUnits = "1000"
 %szOID\_ENHANCED\_KEY\_USAGE% = "{text}%szOID\_DOCUMENT\_ENCRYPTION%"
 ```
 
-<span data-ttu-id="f081f-110">Ensuite, exécutez :</span><span class="sxs-lookup"><span data-stu-id="f081f-110">Then run:</span></span>
+<span data-ttu-id="14e86-110">Ensuite, exécutez :</span><span class="sxs-lookup"><span data-stu-id="14e86-110">Then run:</span></span>
 ```powershell
 certreq -new DocumentEncryption.inf DocumentEncryption.cer
 ```
 
-<span data-ttu-id="f081f-111">Et vous pouvez maintenant chiffrer et déchiffrer le contenu :</span><span class="sxs-lookup"><span data-stu-id="f081f-111">And you can now encrypt and decrypt content:</span></span>
+<span data-ttu-id="14e86-111">Et vous pouvez maintenant chiffrer et déchiffrer le contenu :</span><span class="sxs-lookup"><span data-stu-id="14e86-111">And you can now encrypt and decrypt content:</span></span>
 
 ```powershell
 $protected = "Hello World" | Protect-CmsMessage -To "\*me@somewhere.com\*[](mailto:*leeholm@microsoft.com*)"
@@ -81,14 +81,14 @@ $protected | Unprotect-CmsMessage
 Hello World
 ```
 
-<span data-ttu-id="f081f-112">Tout paramètre de type **CMSMessageRecipient** prend en charge les identificateurs aux formats suivants :</span><span class="sxs-lookup"><span data-stu-id="f081f-112">Any parameter of type **CMSMessageRecipient** supports identifiers in the following formats:</span></span>
-- <span data-ttu-id="f081f-113">Un certificat réel (tel que récupéré auprès du fournisseur)</span><span class="sxs-lookup"><span data-stu-id="f081f-113">An actual certificate (as retrieved from the certificate provider)</span></span>
-- <span data-ttu-id="f081f-114">Chemin d’un fichier contenant le certificat</span><span class="sxs-lookup"><span data-stu-id="f081f-114">Path to the a file containing the certificate</span></span>
-- <span data-ttu-id="f081f-115">Chemin d’un répertoire contenant le certificat</span><span class="sxs-lookup"><span data-stu-id="f081f-115">Path to a directory containing the certificate</span></span>
-- <span data-ttu-id="f081f-116">Empreinte numérique du certificat (utilisé pour rechercher dans le magasin de certificats)</span><span class="sxs-lookup"><span data-stu-id="f081f-116">Thumbprint of the certificate (used to look in the certificate store)</span></span>
-- <span data-ttu-id="f081f-117">Nom du sujet du certificat (utilisé pour rechercher dans le magasin de certificats)</span><span class="sxs-lookup"><span data-stu-id="f081f-117">Subject name of the certificate (used to look in the certificate store)</span></span>
+<span data-ttu-id="14e86-112">Tout paramètre de type **CMSMessageRecipient** prend en charge les identificateurs aux formats suivants :</span><span class="sxs-lookup"><span data-stu-id="14e86-112">Any parameter of type **CMSMessageRecipient** supports identifiers in the following formats:</span></span>
+- <span data-ttu-id="14e86-113">Un certificat réel (tel que récupéré auprès du fournisseur)</span><span class="sxs-lookup"><span data-stu-id="14e86-113">An actual certificate (as retrieved from the certificate provider)</span></span>
+- <span data-ttu-id="14e86-114">Chemin d’un fichier contenant le certificat</span><span class="sxs-lookup"><span data-stu-id="14e86-114">Path to the a file containing the certificate</span></span>
+- <span data-ttu-id="14e86-115">Chemin d’un répertoire contenant le certificat</span><span class="sxs-lookup"><span data-stu-id="14e86-115">Path to a directory containing the certificate</span></span>
+- <span data-ttu-id="14e86-116">Empreinte numérique du certificat (utilisé pour rechercher dans le magasin de certificats)</span><span class="sxs-lookup"><span data-stu-id="14e86-116">Thumbprint of the certificate (used to look in the certificate store)</span></span>
+- <span data-ttu-id="14e86-117">Nom du sujet du certificat (utilisé pour rechercher dans le magasin de certificats)</span><span class="sxs-lookup"><span data-stu-id="14e86-117">Subject name of the certificate (used to look in the certificate store)</span></span>
 
-<span data-ttu-id="f081f-118">Pour afficher des certificats de chiffrement de document dans le fournisseur de certificats, vous pouvez utiliser le paramètre dynamique **-DocumentEncryptionCert** :</span><span class="sxs-lookup"><span data-stu-id="f081f-118">To view document encryption certificates in the certificate provider, you can use the **-DocumentEncryptionCert** dynamic parameter:</span></span>
+<span data-ttu-id="14e86-118">Pour afficher des certificats de chiffrement de document dans le fournisseur de certificats, vous pouvez utiliser le paramètre dynamique **-DocumentEncryptionCert** :</span><span class="sxs-lookup"><span data-stu-id="14e86-118">To view document encryption certificates in the certificate provider, you can use the **-DocumentEncryptionCert** dynamic parameter:</span></span>
 
 ```powershell
 dir -DocumentEncryptionCert
