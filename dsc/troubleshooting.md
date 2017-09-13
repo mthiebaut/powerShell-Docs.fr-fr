@@ -623,5 +623,5 @@ onlyProperty                            PSComputerName
 * [<span data-ttu-id="35202-236">Création de ressources personnalisées de configuration d’état souhaité Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="35202-236">Build Custom Windows PowerShell Desired State Configuration Resources</span></span>](authoringResource.md)
 
 ### <a name="other-resources"></a><span data-ttu-id="35202-237">Autres ressources</span><span class="sxs-lookup"><span data-stu-id="35202-237">Other Resources</span></span>
-* [<span data-ttu-id="35202-238">Windows PowerShell Desired State Configuration Cmdlets</span><span class="sxs-lookup"><span data-stu-id="35202-238">Windows PowerShell Desired State Configuration Cmdlets</span></span>](https://technet.microsoft.com/en-us/library/dn521624(v=wps.630).aspx)
+* <span data-ttu-id="35202-238">[Windows PowerShell Desired State Configuration Cmdlets](https://technet.microsoft.com/en-us/library/dn521624(v=wps.630).aspx)</span><span class="sxs-lookup"><span data-stu-id="35202-238">[Windows PowerShell Desired State Configuration Cmdlets](https://technet.microsoft.com/en-us/library/dn521624(v=wps.630).aspx)</span></span>
 
