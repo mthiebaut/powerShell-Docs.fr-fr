@@ -2,11 +2,11 @@
 ms.date: 2017-08-23
 keywords: powershell,applet de commande
 title: "Désinstaller Accès Web Windows PowerShell"
-ms.openlocfilehash: 7c71a245be244c1883598cdcddbf35e43c0fc7b0
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: b6e6a2374e6b4b2be8742019c5f1e4d5b5d1abe3
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="uninstall-windows-powershell-web-access"></a>désinstaller Accès Web Windows PowerShell
 
@@ -20,10 +20,8 @@ Les étapes décrites dans cette rubrique suppriment le site web Accès Web Wind
 
 Avant de commencer, informez les utilisateurs de la console Web de la suppression du site web.
 
-
-Avant de désinstaller Accès Web Windows PowerShell du serveur de passerelle, exécutez l’applet de commande `Uninstall-PswaWebApplication` pour supprimer le site web et les applications Accès Web Windows PowerShell, ou utilisez la procédure du Gestionnaire des services Internet, [Pour supprimer le site web et les applications web Accès Web Windows PowerShell à l’aide du Gestionnaire de services Internet]().
-
-La désinstallation d’Accès Web Windows PowerShell ne désinstalle pas IIS ni d’autres fonctionnalités automatiquement installées, car Accès Web Windows PowerShell en a besoin pour s’exécuter. Le processus de désinstallation laisse les fonctionnalités installées dont dépendait Accès Web Windows PowerShell ; vous pouvez désinstaller ces fonctionnalités séparément si besoin.
+La désinstallation d’Accès Web Windows PowerShell ne désinstalle pas IIS ni d’autres fonctionnalités automatiquement installées, car Accès Web Windows PowerShell en a besoin pour s’exécuter.
+Le processus de désinstallation laisse les fonctionnalités installées dont dépendait Accès Web Windows PowerShell ; vous pouvez désinstaller ces fonctionnalités séparément si besoin.
 
 ## <a name="recommended-quick-uninstallation"></a>Désinstallation (rapide) recommandée
 

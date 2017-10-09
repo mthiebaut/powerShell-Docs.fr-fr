@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Nouveautés de PowerShell 5.0 ISE"
 ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
-ms.openlocfilehash: 1e315351d0e5dde146881b0e6527c38e59777a1e
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 89dcc905ce200d06029e148c9675269e6f518fa3
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="what39s-new-in-the-windows-powershell-ise"></a>Nouveauté dans Windows PowerShell ISE
 Cette rubrique décrit les fonctionnalités nouvelles et mises à jour qui ont été introduites dans les versions de l’environnement d’écriture de scripts intégré (ISE) de Windows PowerShell.
@@ -22,16 +22,16 @@ Le tableau suivant répertorie les fonctionnalités nouvelles et modifiées pour
 
 |Fonctionnalité/fonction|Windows PowerShell ISE 4.0|Windows PowerShell ISE 3.0|Windows PowerShell ISE 2.0|
 |--------------------------|-----------------------------------------------|-----------------------------------------------|-----------------------------------------------|
-|**[IntelliSense]()**|X|X||
-|**[Extraits de code]()**|X|X||
-|**[Outils complémentaires]()**|X|X||
-|**[Gestionnaire de démarrage et enregistrement automatique]()**|X|X||
-|**[Volet de la console]()**|X|X||
-|**[Liste Utilisé(s) récemment]()**|X|X||
-|**[Commutateurs de ligne de commande]()**|X|X||
-|**[Nouvelles fonctionnalités de l’éditeur]()**|X|X||
-|**[Nouvelle fenêtre de visionneuse d’aide]()**|X|X||
-|**[Applet de commande Show-Command]()**|X|X||
+|**[IntelliSense](#intellisense)**|X|X||
+|**[Extraits de code](#snippets)**|X|X||
+|**[Outils complémentaires](#add-on-tools)**|X|X||
+|**[Gestionnaire de démarrage et enregistrement automatique](#restart-manager-and-auto-save)**|X|X||
+|**[Liste Utilisé(s) récemment](#most-recently-used-list)**|X|X||
+|**[Volet de la console](#console-pane)**|X|X||
+|**[Commutateurs de ligne de commande](#command-line-switches)**|X|X||
+|**[Nouvelles fonctionnalités de l’éditeur](#new-editor-features)**|X|X||
+|**[Nouvelle fenêtre de visionneuse d’aide](#new-help-viewer-window)**|X|X||
+|**[Applet de commande Show-Command](#show-command-cmdlet)**|X|X||
 
 ### <a name="intellisense"></a>Intellisense
 **Ajoutés dans ISE 3.0**

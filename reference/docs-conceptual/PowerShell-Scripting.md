@@ -2,11 +2,11 @@
 ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: Scripts PowerShell
-ms.openlocfilehash: 33e5ff3c84b6b34a3072a32165187a8bb811605c
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 8d2386dc49c59a106ecdddf0feabe3344834a86d
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="powershell"></a>PowerShell
 
@@ -46,7 +46,6 @@ Dans cette section :
 ## <a name="common-powershellcore-powershellcore-powershellmd"></a>[Commandes PowerShell courantes](core-powershell/core-powershell.md)
 Cette section contient tous les documents de référence sur PowerShell.  
 Contenu de cette section :
-- [Modules courants PowerShell](core-powershell/core-modules.md)
 - [Environnement d’écriture de scripts intégré \(ISE\) de PowerShell](core-powershell/ise-guide.md)
 - [Fenêtre de console PowerShell](core-powershell/console-guide.md)
 - [Gestion à distance de PowerShell](core-powershell/Running-Remote-Commands.md)

@@ -2,11 +2,11 @@
 ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Références de fiches pratiques"
-ms.openlocfilehash: a745048eb47a983fa90616ccbd58184080706096
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: d6f0bf97c9491f1a4c9ba13aae837c17860aa6c7
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="basic-cookbooks-reference"></a>Fiches pratiques
 
@@ -26,7 +26,6 @@ ms.lasthandoff: 09/08/2017
 - [Zones de liste à sélection multiple](Multiple-selection-List-Boxes.md)
 - [Autres objets de script utiles](Other-Useful-Scripting-Objects.md)
 - [Exécution de tâches de mise en réseau](Performing-Networking-Tasks.md)
-- [Module PowerShellGet](PowerShellGet-Module.md)
 - [Redirection de données à l’aide d’applets de commande Out](Redirecting-Data-with-Out---Cmdlets.md)
 - [Suppression d’objets du pipeline (Where Object)](Removing-Objects-from-the-Pipeline--Where-Object-.md)
 - [Répétition d’une tâche pour plusieurs objets (ForEach Object)](Repeating-a-Task-for-Multiple-Objects--ForEach-Object-.md)

@@ -4,46 +4,40 @@ contributor: manikb
 ms.topic: reference
 keywords: gallery,powershell,cmdlet,psget
 title: Register-PSRepository
-ms.openlocfilehash: 598bfa52fe3508359bbeb4489cc054bc9314b572
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: badac5dc1157bbfa79058630c5c2f260d2151bd8
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 09/29/2017
 ---
-<a id="register-psrepository" class="xliff"></a>
-# Register-PSRepository
+# <a name="register-psrepository"></a>Register-PSRepository
 
 Obtient les référentiels enregistrés sur un ordinateur.
 
-<a id="description" class="xliff"></a>
-## Description
+## <a name="description"></a>Description
 
 L’applet de commande Register-PSRepository enregistre le référentiel en ligne pour les modules PowerShell. Après avoir enregistré un référentiel, vous pouvez le référencer à partir des applets de commande Find-Module, Install-Module et Publish-Module. Le référentiel enregistré devient le référentiel par défaut dans Find-Module et Install-Module. 
 
 Les référentiels enregistrés sont spécifiques à l’utilisateur. Ils ne sont pas enregistrés dans un contexte à l’échelle du système.
 
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 
 ```powershell
 Get-Command -Name Register-PSRepository -Module PowerShellGet -Syntax
 ```
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [Register-PSRepository](http://go.microsoft.com/fwlink/?LinkID=517129)
 
-<a id="example-commands" class="xliff"></a>
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 
-<a id="register-a-powershell-repository" class="xliff"></a>
-### Inscrire un dépôt PowerShell
+### <a name="register-a-powershell-repository"></a>Inscrire un dépôt PowerShell
 Vous pouvez configurer PowerShellGet pour qu’il fonctionne sur des référentiels internes. Après avoir inscrit un dépôt, vous pouvez utiliser Find-Module et Install-Module pour l’utiliser.
 
 ```powershell
 # Register a default repository
-Register-PSRepository –Name DemoRepo –SourceLocation "https://www.myget.org/F/powershellgetdemo/api/v2" –InstallationPolicy –Trusted
+Register-PSRepository –Name DemoRepo –SourceLocation "https://www.myget.org/F/powershellgetdemo/api/v2" –InstallationPolicy Trusted
 
 # Get all of the registered repositories
 Name                      InstallationPolicy   SourceLocation
@@ -68,8 +62,7 @@ Unregister-PSRepository DemoRepo
 ```
 
 
-<a id="register-psrepository-and-set-psrepository-cmdlets-with-script-sharing-support" class="xliff"></a>
-### Applets de commande Register-PSRepository et Set-PSRepository avec prise en charge du partage de script
+### <a name="register-psrepository-and-set-psrepository-cmdlets-with-script-sharing-support"></a>Applets de commande Register-PSRepository et Set-PSRepository avec prise en charge du partage de script
 
 L’applet de commande Register-PSRepository permet d’ajouter **ScriptSourceLocation** et **ScriptPublishLocation** à PSRepository.
 

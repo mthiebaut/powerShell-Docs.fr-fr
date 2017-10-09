@@ -2,11 +2,11 @@
 ms.date: 2017-08-09
 keywords: "powershell, applet de commande, télécharger, installer, installation, programme d’installation, windows 10, windows 8.1, windows 8.0, windows 7"
 title: Installation de Windows PowerShell
-ms.openlocfilehash: 7ccbee66d01dd8e0e6e6ab09c6c8a399bee59ce8
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 781bf50b6ac649e72bcdbb708555275fb7422d94
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="installing-windows-powershell"></a>Installation de Windows PowerShell
 
@@ -54,7 +54,7 @@ Les éditions de Windows Server sans GUI sont appelées **Core**, tandis que les
 
 Dans toutes les éditions Core, quand vous vous connectez au serveur, vous obtenez une fenêtre d’invite de commandes Windows.
 
-Tapez `powerhell` et appuyez sur **Entrée** pour démarrer PowerShell dans la session d’invite de commandes. Tapez `exit` pour mettre fin à la session PowerShell et revenir à l’invite de commandes.
+Tapez `powershell` et appuyez sur **Entrée** pour démarrer PowerShell dans la session d’invite de commandes. Tapez `exit` pour mettre fin à la session PowerShell et revenir à l’invite de commandes.
 
 ### <a name="windows-server-desktop-editions"></a>Éditions Windows Server Desktop
 
