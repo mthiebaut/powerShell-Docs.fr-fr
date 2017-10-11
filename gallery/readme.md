@@ -4,61 +4,56 @@ contributor: JKeithB
 ms.topic: conceptual
 keywords: gallery, powershell, applet de commande, psgallery, psget
 title: PowerShell Gallery
-ms.openlocfilehash: 3e324f15b251822163c3ea9b6655767419a5ac4e
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 83a1f4e20b985a502637aee9d50ecc1d3f9a4616
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 09/29/2017
 ---
-<a id="the-powershell-gallery" class="xliff"></a>
-# PowerShell Gallery
+# <a name="the-powershell-gallery"></a><span data-ttu-id="da2a9-103">PowerShell Gallery</span><span class="sxs-lookup"><span data-stu-id="da2a9-103">The PowerShell Gallery</span></span>
 
-PowerShell Gallery est le référentiel central pour le contenu PowerShell. Les nouvelles commandes PowerShell ou les ressources DSC (configuration de l’état souhaité) sont disponibles dans la galerie.
+<span data-ttu-id="da2a9-104">PowerShell Gallery est le référentiel central pour le contenu PowerShell.</span><span class="sxs-lookup"><span data-stu-id="da2a9-104">The PowerShell Gallery is the central repository for PowerShell content.</span></span> <span data-ttu-id="da2a9-105">Les nouvelles commandes PowerShell ou les ressources DSC (configuration de l’état souhaité) sont disponibles dans la galerie.</span><span class="sxs-lookup"><span data-stu-id="da2a9-105">You can find new PowerShell commands or Desired State Configuration (DSC) resources in the Gallery.</span></span>
 
-<a id="powershellget-overview" class="xliff"></a>
-## Vue d’ensemble de PowerShellGet
+## <a name="powershellget-overview"></a><span data-ttu-id="da2a9-106">Vue d’ensemble de PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="da2a9-106">PowerShellGet Overview</span></span>
 
-Le module PowerShellGet contient des applets de commande permettant de détecter, d’installer, de mettre à jour et de publier les artefacts PowerShell, tels que les modules, les ressources DSC, les fonctionnalités de rôle et les scripts à partir du référentiel https://www.PowerShellGallery.com et d’autres référentiels privés.
+<span data-ttu-id="da2a9-107">Le module PowerShellGet contient des applets de commande permettant de détecter, d’installer, de mettre à jour et de publier les artefacts PowerShell, tels que les modules, les ressources DSC, les fonctionnalités de rôle et les scripts à partir du référentiel https://www.PowerShellGallery.com et d’autres référentiels privés.</span><span class="sxs-lookup"><span data-stu-id="da2a9-107">PowerShellGet module contains cmdlets for discovering, installing, updating and publishing the PowerShell artifacts like Modules, DSC Resources, Role Capabilities and Scripts from the https://www.PowerShellGallery.com and other private repositories.</span></span>
 
-<a id="getting-started-with-the-gallery" class="xliff"></a>
-## Prise en main de la galerie
+## <a name="getting-started-with-the-gallery"></a><span data-ttu-id="da2a9-108">Prise en main de la galerie</span><span class="sxs-lookup"><span data-stu-id="da2a9-108">Getting Started with the Gallery</span></span>
 
-L’installation d’éléments à partir de la galerie nécessite la dernière version du module PowerShellGet, qui est disponible dans Windows 10, dans Windows Management Framework (WMF) 5.0 ou dans le programme d’installation basé sur MSI (pour PowerShell 3 et 4).
+<span data-ttu-id="da2a9-109">L’installation d’éléments à partir de la galerie nécessite la dernière version du module PowerShellGet, qui est disponible dans Windows 10, dans Windows Management Framework (WMF) 5.0 ou dans le programme d’installation basé sur MSI (pour PowerShell 3 et 4).</span><span class="sxs-lookup"><span data-stu-id="da2a9-109">Installing items from the Gallery requires the latest version of the PowerShellGet module, which is available in Windows 10, in Windows Management Framework (WMF) 5.0, or in the MSI-based installer (for PowerShell 3 and 4).</span></span>
 
-- [**Obtenir Windows 10**](http://go.microsoft.com/fwlink/?LinkID=624830&clcid=0x409)
-- [**Obtenir WMF 5.0**](http://go.microsoft.com/fwlink/?LinkId=398175) ou
-- [**Obtenir le programme d’installation de MSI**](http://go.microsoft.com/fwlink/?LinkID=746217&clcid=0x409)
+- <span data-ttu-id="da2a9-110">[**Obtenir Windows 10**](http://go.microsoft.com/fwlink/?LinkID=624830&clcid=0x409)</span><span class="sxs-lookup"><span data-stu-id="da2a9-110">[**Get Windows 10**](http://go.microsoft.com/fwlink/?LinkID=624830&clcid=0x409),</span></span>
+- <span data-ttu-id="da2a9-111">[**Obtenir WMF 5.0**](http://go.microsoft.com/fwlink/?LinkId=398175) ou</span><span class="sxs-lookup"><span data-stu-id="da2a9-111">[**Get WMF 5.0**](http://go.microsoft.com/fwlink/?LinkId=398175), or</span></span>
+- [<span data-ttu-id="da2a9-112">**Obtenir le programme d’installation de MSI**</span><span class="sxs-lookup"><span data-stu-id="da2a9-112">**Get MSI Installer**</span></span>](http://go.microsoft.com/fwlink/?LinkID=746217&clcid=0x409)
 
-Avec le module [PowerShellGet](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) le plus récent, vous pouvez effectuer les opérations suivantes :
+<span data-ttu-id="da2a9-113">Avec le module [PowerShellGet](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) le plus récent, vous pouvez effectuer les opérations suivantes :</span><span class="sxs-lookup"><span data-stu-id="da2a9-113">With the latest [PowerShellGet](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) module, you can:</span></span>
 
--   Parcourir les éléments de la galerie avec [**Find-Module**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) et [**Find-Script**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409)
--   Enregistrer des éléments dans votre système à partir de la galerie avec [**Save-Module**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) et [**Save-Script**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409)
--   Installer des éléments à partir de la galerie avec [**Install-Module**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) et [**Install-Script**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409)
--   Charger des éléments dans la galerie avec [**Publish-Module**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) et [**Publish-Script**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409)
--   Ajouter votre propre référentiel personnalisé avec [**Register-PSRepository**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409)
+-   <span data-ttu-id="da2a9-114">Parcourir les éléments de la galerie avec [Find-Module](https://go.microsoft.com/fwlink/?LinkId=821658) et [Find-Script](https://go.microsoft.com/fwlink/?LinkId=822322)</span><span class="sxs-lookup"><span data-stu-id="da2a9-114">Search through items in the Gallery with [Find-Module](https://go.microsoft.com/fwlink/?LinkId=821658) and [Find-Script](https://go.microsoft.com/fwlink/?LinkId=822322)</span></span>
+-   <span data-ttu-id="da2a9-115">Enregistrer des éléments dans votre système à partir de la galerie avec [Save-Module](https://go.microsoft.com/fwlink/?LinkId=821669) et [Save-Script](https://go.microsoft.com/fwlink/?LinkId=822334)</span><span class="sxs-lookup"><span data-stu-id="da2a9-115">Save items to your system from the Gallery with [Save-Module](https://go.microsoft.com/fwlink/?LinkId=821669) and [Save-Script](https://go.microsoft.com/fwlink/?LinkId=822334)</span></span>
+-   <span data-ttu-id="da2a9-116">Installer des éléments à partir de la galerie avec [Install-Module](https://go.microsoft.com/fwlink/?LinkId=821663) et [Install-Script](https://go.microsoft.com/fwlink/?LinkId=822327)</span><span class="sxs-lookup"><span data-stu-id="da2a9-116">Install items from the Gallery with [Install-Module](https://go.microsoft.com/fwlink/?LinkId=821663) and [Install-Script](https://go.microsoft.com/fwlink/?LinkId=822327)</span></span>
+-   <span data-ttu-id="da2a9-117">Charger des éléments dans la galerie avec [Publish-Module](https://go.microsoft.com/fwlink/?LinkId=821666) et [Publish-Script](https://go.microsoft.com/fwlink/?LinkId=822331)</span><span class="sxs-lookup"><span data-stu-id="da2a9-117">Upload items to the Gallery with [Publish-Module](https://go.microsoft.com/fwlink/?LinkId=821666) and [Publish-Script](https://go.microsoft.com/fwlink/?LinkId=822331)</span></span>
+-   <span data-ttu-id="da2a9-118">Ajouter votre propre référentiel personnalisé avec [Register-PSRepository](https://go.microsoft.com/fwlink/?LinkId=821668)</span><span class="sxs-lookup"><span data-stu-id="da2a9-118">Add your own custom repository with [Register-PSRepository](https://go.microsoft.com/fwlink/?LinkId=821668)</span></span>
 
-Pour plus d’informations sur l’utilisation des commandes PowerShellGet avec la galerie, consultez la page [Getting Started](psgallery/psgallery_gettingstarted.md). Vous pouvez également exécuter *Update-Help-Module PowerShellGet* pour installer l’aide locale sur ces commandes.
+<span data-ttu-id="da2a9-119">Pour plus d’informations sur l’utilisation des commandes PowerShellGet avec la galerie, consultez la page [Getting Started](psgallery/psgallery_gettingstarted.md).</span><span class="sxs-lookup"><span data-stu-id="da2a9-119">Check out the [Getting Started](psgallery/psgallery_gettingstarted.md) page for more information on how to use PowerShellGet commands with the Gallery.</span></span> <span data-ttu-id="da2a9-120">Vous pouvez également exécuter *Update-Help-Module PowerShellGet* pour installer l’aide locale sur ces commandes.</span><span class="sxs-lookup"><span data-stu-id="da2a9-120">You can also run *Update-Help -Module PowerShellGet* to install local help for these commands.</span></span>
 
-<a id="supported-operating-systems" class="xliff"></a>
-## Systèmes d’exploitation pris en charge
+## <a name="supported-operating-systems"></a><span data-ttu-id="da2a9-121">Systèmes d’exploitation pris en charge</span><span class="sxs-lookup"><span data-stu-id="da2a9-121">Supported Operating Systems</span></span>
 
-Le module **PowerShellGet** nécessite **PowerShell 3.0 ou ultérieur**.
+<span data-ttu-id="da2a9-122">Le module **PowerShellGet** nécessite **PowerShell 3.0 ou ultérieur**.</span><span class="sxs-lookup"><span data-stu-id="da2a9-122">The **PowerShellGet** module requires **PowerShell 3.0 or newer**.</span></span>
 
-Par conséquent, **PowerShellGet** nécessite l’un des systèmes d’exploitation suivants :
+<span data-ttu-id="da2a9-123">Par conséquent, **PowerShellGet** nécessite l’un des systèmes d’exploitation suivants :</span><span class="sxs-lookup"><span data-stu-id="da2a9-123">Therefore, **PowerShellGet** requires one of the following operating systems:</span></span>
 
-- Windows 10
-- Windows 8.1 Professionnel
-- Windows 8.1 Enterprise
-- Windows 7 SP1
-- Windows Server 2016 TP5
-- Windows Server 2012 R2
-- Windows Server 2008 R2 SP1
+- <span data-ttu-id="da2a9-124">Windows 10</span><span class="sxs-lookup"><span data-stu-id="da2a9-124">Windows 10</span></span>
+- <span data-ttu-id="da2a9-125">Windows 8.1 Professionnel</span><span class="sxs-lookup"><span data-stu-id="da2a9-125">Windows 8.1 Pro</span></span>
+- <span data-ttu-id="da2a9-126">Windows 8.1 Enterprise</span><span class="sxs-lookup"><span data-stu-id="da2a9-126">Windows 8.1 Enterprise</span></span>
+- <span data-ttu-id="da2a9-127">Windows 7 SP1</span><span class="sxs-lookup"><span data-stu-id="da2a9-127">Windows 7 SP1</span></span>
+- <span data-ttu-id="da2a9-128">Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="da2a9-128">Windows Server 2016</span></span>
+- <span data-ttu-id="da2a9-129">Windows Server 2012 R2</span><span class="sxs-lookup"><span data-stu-id="da2a9-129">Windows Server 2012 R2</span></span>
+- <span data-ttu-id="da2a9-130">Windows Server 2008 R2 SP1</span><span class="sxs-lookup"><span data-stu-id="da2a9-130">Windows Server 2008 R2 SP1</span></span>
 
-**PowerShellGet** nécessite également .NET Framework 4.5 ou ultérieur. Vous pouvez installer .NET Framework 4.5 ou ultérieur à partir [d’ici](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx).
+<span data-ttu-id="da2a9-131">**PowerShellGet** nécessite également .NET Framework 4.5 ou ultérieur.</span><span class="sxs-lookup"><span data-stu-id="da2a9-131">**PowerShellGet** also  requires .NET Framework 4.5 or above.</span></span> <span data-ttu-id="da2a9-132">Vous pouvez installer .NET Framework 4.5 ou ultérieur à partir [d’ici](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx).</span><span class="sxs-lookup"><span data-stu-id="da2a9-132">You can install .NET Framework 4.5 or above from [here](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx).</span></span>
 
 
-<a id="got-a-question-have-feedback" class="xliff"></a>
-## Vous avez une question ? Vous avez des commentaires ?
+## <a name="got-a-question-have-feedback"></a><span data-ttu-id="da2a9-133">Vous avez une question ?</span><span class="sxs-lookup"><span data-stu-id="da2a9-133">Got a question?</span></span> <span data-ttu-id="da2a9-134">Vous avez des commentaires ?</span><span class="sxs-lookup"><span data-stu-id="da2a9-134">Have feedback?</span></span>
 
-Des informations supplémentaires relatives à PowerShell Gallery et PowerShellGet sont disponibles dans la page [Getting Started](psgallery/psgallery_gettingstarted.md). Envoyez vos commentaires et signalez les problèmes à l’aide de [UserVoice](http://windowsserver.uservoice.com/forums/301869-powershell).
+<span data-ttu-id="da2a9-135">Des informations supplémentaires relatives à PowerShell Gallery et PowerShellGet sont disponibles dans la page [Getting Started](psgallery/psgallery_gettingstarted.md).</span><span class="sxs-lookup"><span data-stu-id="da2a9-135">More information about the PowerShell Gallery and PowerShellGet can be found in the [Getting Started](psgallery/psgallery_gettingstarted.md) page.</span></span> <span data-ttu-id="da2a9-136">Envoyez vos commentaires et signalez les problèmes à l’aide de [UserVoice](http://windowsserver.uservoice.com/forums/301869-powershell).</span><span class="sxs-lookup"><span data-stu-id="da2a9-136">Please provide feedback and report issues using [UserVoice](http://windowsserver.uservoice.com/forums/301869-powershell).</span></span>
 
