@@ -2,13 +2,14 @@
 ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Comment déboguer des scripts dans Windows PowerShell ISE"
-ms.openlocfilehash: d1019801833e840f3a231f371da1b8d0e5a387b0
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 0ec520dfcba5e4562258256570f140e618e77cdb
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="how-to-debug-scripts-in-windows-powershell-ise"></a>Comment déboguer des scripts dans Windows PowerShell ISE
+
 Cette rubrique décrit comment déboguer des scripts sur un ordinateur local à l’aide des fonctionnalités de débogage visuel de l’environnement d’écriture de scripts intégré de Windows PowerShell ( Windows PowerShell ISE).
 
 ## <a name="how-to-manage-breakpoints"></a>Comment gérer les points d’arrêt
@@ -35,6 +36,7 @@ Set-PSBreakpoint -Script sample.ps1 -Variable Server
 ```
 
 ### <a name="list-all-breakpoints"></a>Liste de tous les points d’arrêt
+
 Affiche tous les points d’arrêt dans la session Windows PowerShell actuelle.
 
 Dans le menu **Déboguer**, cliquez sur **Lister les points d’arrêt**. Le script suivant montre comment répertorier tous les points d’arrêt à partir du volet Console en utilisant l’applet de commande [Get-PSBreakpoint](https://technet.microsoft.com/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6).

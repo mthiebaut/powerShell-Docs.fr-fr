@@ -4,11 +4,11 @@ author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: "Prendre en main la fonctionnalité DSC (Desired State Configuration) pour Linux"
-ms.openlocfilehash: 9dbc4c22cff9df4028c5655cdfba3bb1aac1bb90
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: bf87125309a3f6b556fd7546057cb9491fb34229
+ms.sourcegitcommit: 4ab9a86e47b6effe8fe22ebeb81e8fadff41d31c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Prendre en main la fonctionnalité DSC (Desired State Configuration) pour Linux
 
@@ -37,11 +37,11 @@ Le tableau suivant décrit les dépendances de package nécessaires pour utilise
 
 ## <a name="installing-dsc-for-linux"></a>Installation de DSC pour Linux
 
-Vous devez installer [Open Management Infrastructure (OMI)](https://collaboration.opengroup.org/omi/) avant d’installer DSC pour Linux.
+Vous devez installer [Open Management Infrastructure (OMI)](https://github.com/Microsoft/omi) avant d’installer DSC pour Linux.
 
 ### <a name="installing-omi"></a>Installation d’OMI
 
-DSC pour Linux nécessite le serveur CIM d’Open Management Infrastructure (OMI), version 1.0.8.1. Vous pouvez télécharger OMI à partir de The Open Group : [Open Management Infrastructure (OMI)](https://collaboration.opengroup.org/omi/).
+DSC pour Linux nécessite le serveur CIM d’Open Management Infrastructure (OMI), version 1.0.8.1 ou ultérieure. Vous pouvez télécharger OMI à partir de The Open Group : [Open Management Infrastructure (OMI)](https://github.com/Microsoft/omi).
 
 Pour installer OMI, installez le package approprié pour le système Linux (.rpm ou .deb), la version d’OpenSSL (ssl_098 ou ssl_100) et l’architecture (x64/x86) que vous utilisez. Les packages RPM sont conçus pour les systèmes CentOS, Red Hat Enterprise Linux, SUSE Linux Enterprise Server et Oracle Linux. Les packages DEB sont conçus pour les systèmes Debian GNU/Linux et Ubuntu Server. Les packages ssl_098 et les packages ssl_100 sont conçus pour les ordinateurs avec OpenSSL 0.9.8 et les ordinateurs avec OpenSSL 1.0, respectivement.
 

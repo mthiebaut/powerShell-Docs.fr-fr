@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Environnement d’écriture de scripts intégré de Windows PowerShell ISE"
 ms.assetid: f156b92d-0203-46d2-89c7-b4989d32e3d2
-ms.openlocfilehash: e5c4e6ef002d6d6ede014a3147d1fed15f6d76d8
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 6bddb953a7f17e220f92d357eb59dfedc5496272
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="windows-powershell-integrated-scripting-environment-ise"></a>Environnement d'écriture de scripts intégré de Windows PowerShell
 L’environnement d’écriture de scripts intégré de Windows PowerShell (ISE) est l’un des deux ordinateurs hôtes pour le moteur et le langage Windows PowerShell. Il permet d’écrire, d’exécuter et de tester des scripts d’une manière que la console Windows PowerShell ne permet pas. L’environnement ISE ajoute la coloration de la syntaxe, la saisie semi-automatique via la touche Tab, IntelliSense, le débogage visuel et l’aide contextuelle.
@@ -22,7 +22,7 @@ Voici quelques-unes des fonctionnalités qui ont été ajoutées à l’environn
 
 Les **extraits de code** sont de courtes sections de code que vous pouvez aisément insérer dans les scripts que vous écrivez. Une collection d’extraits de code utiles est incluse dans la zone et vous pouvez faire davantage à l’aide de l’applet de commande **New-Snippet**.
 
-Vous pouvez créer des **outils complémentaires** qui ajoutent des fonctionnalités à l’environnement ISE en écrivant du code qui interagit avec le [Modèle objet de script Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/dd819478.aspx). Ces outils peuvent afficher des contrôles dans un volet à onglets ou fonctionner de manière invisible en arrière-plan. Le composant additionnel **Commands** en est un bon exemple. Il est inclus dans les versions 3.0 et ultérieure qui affichent la liste des commandes disponibles et leur aide.
+Vous pouvez créer des **outils complémentaires** qui ajoutent des fonctionnalités à l’environnement ISE en écrivant du code qui interagit avec le [Modèle objet de script Windows PowerShell ISE](../../core-powershell/ise/The-Windows-PowerShell-ISE-Scripting-Object-Model.md). Ces outils peuvent afficher des contrôles dans un volet à onglets ou fonctionner de manière invisible en arrière-plan. Le composant additionnel **Commands** en est un bon exemple. Il est inclus dans les versions 3.0 et ultérieure qui affichent la liste des commandes disponibles et leur aide.
 
 Le **Gestionnaire de démarrage et enregistrement automatique** enregistre automatiquement vos scripts toutes les deux minutes pour vous éviter de perdre votre travail en cas de panne ou de redémarrage inattendu.
 
@@ -54,11 +54,14 @@ Les **nouvelles fonctionnalités de l’éditeur** facilitent la création et la
 L’environnement ISE a été introduit avec PowerShell v2.0.
 
 ## <a name="requirements-for-running-the-windows-powershell-ise"></a>Configuration requise pour l’exécution de Windows PowerShell ISE
-L’environnement ISE est disponible sur tout ordinateur pouvant exécuter Windows PowerShell v2.0 ou version ultérieure. Chaque version de Windows et de Windows Server inclut une version de Windows PowerShell ISE, mais vous pouvez procéder à une mise à niveau vers la version la plus récente disponible en installant Windows Management Framework. Pour trouver la dernière version disponible, exécutez la recherche suivante : [Téléchargements](http://www.microsoft.com/en-us/search/DownloadResults.aspx?q=%22windows%20management%20framework%22%20PowerShell&sortby=Relevancy~Descending). Notez que toutes les entrées étiquetées « Version préliminaire » comprennent du code inachevé et ne sont totalement fonctionnelles.
+L’environnement ISE est disponible sur tout ordinateur Windows pouvant exécuter Windows PowerShell v2.0 ou version ultérieure.
+Chaque version de Windows et de Windows Server inclut une version de Windows PowerShell ISE, mais vous pouvez procéder à une mise à niveau vers la version la plus récente disponible en installant Windows Management Framework.
+Pour trouver la dernière version disponible, exécutez la recherche suivante : [Téléchargements](http://www.microsoft.com/en-us/search/DownloadResults.aspx?q=%22windows%20management%20framework%22%20PowerShell&sortby=Relevancy~Descending).
+Notez que toutes les entrées étiquetées « Version préliminaire » comprennent du code inachevé et ne sont totalement fonctionnelles.
 
 > [!NOTE]
 > Étant donné que Windows PowerShell ISE nécessite une interface graphique utilisateur, vous ne pouvez pas l’exécuter sur l’option d’installation minimale de Windows Server.
 
 ## <a name="see-also"></a>Voir aussi
-- [Utilisation de l’environnement d’écriture de scripts intégré de Windows PowerShell](http://technet.microsoft.com/library/cc732148.aspx)
+- [Utilisation de l’environnement d’écriture de scripts intégré de Windows PowerShell](Using-the-Windows-PowerShell-ISE.md)
 

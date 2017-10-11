@@ -3,15 +3,14 @@ ms.date: 2017-06-12
 author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
-title: "Création d’une ressource DSC en C`"
-ms.openlocfilehash: 502a4f42f685642d0966a8ee1ee745902005d61c
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+title: "Création d’une ressource DSC en C#"
+ms.openlocfilehash: c1dc97d4e05499d03450d6172d9674b06a674393
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 09/29/2017
 ---
-<a id="authoring-a-dsc-resource-in-c" class="xliff"></a>
-# Création d’une ressource DSC en C`#`
+# <a name="authoring-a-dsc-resource-in-c"></a>Création d’une ressource DSC en C#
 
 > S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -19,12 +18,10 @@ En règle générale, une ressource DSC Windows PowerShell personnalisée est i
 
 À part l’implémentation de la ressource en tant qu’applets de commande en langage C#, les processus de création du schéma MOF, de création de la structure de dossiers, et de l’importation et de l’utilisation de votre ressource DSC personnalisée, sont les mêmes que ceux décrits dans [Écriture d’une ressource DSC personnalisée avec MOF](authoringResourceMOF.md).
 
-<a id="writing-a-cmdlet-based-resource" class="xliff"></a>
-## Écriture d’une ressource basée sur une applet de commande
+## <a name="writing-a-cmdlet-based-resource"></a>Écriture d’une ressource basée sur une applet de commande
 Pour cet exemple, nous implémenterons une ressource simple qui gère un fichier texte et son contenu.
 
-<a id="writing-the-mof-schema" class="xliff"></a>
-### Écriture du schéma MOF
+### <a name="writing-the-mof-schema"></a>Écriture du schéma MOF
 
 Voici la définition de la ressource MOF.
 
@@ -38,10 +35,8 @@ class MSFT_XDemoFile : OMI_BaseResource
 };
 ```
 
-<a id="setting-up-the-visual-studio-project" class="xliff"></a>
-### Configuration du projet Visual Studio
-<a id="setting-up-a-cmdlet-project" class="xliff"></a>
-#### Configuration d’un projet d’applet de commande
+### <a name="setting-up-the-visual-studio-project"></a>Configuration du projet Visual Studio
+#### <a name="setting-up-a-cmdlet-project"></a>Configuration d’un projet d’applet de commande
 
 1. Ouvrez Visual Studio.
 1. Créez un projet C# et donnez-lui un nom.
@@ -50,8 +45,7 @@ class MSFT_XDemoFile : OMI_BaseResource
 1. Ajoutez une référence d’assembly à System.Automation.Management.dll dans votre projet.
 1. Modifiez le nom d’assembly pour qu’il corresponde au nom de la ressource. Dans ce cas, l’assembly doit se nommer **MSFT_XDemoFile**.
 
-<a id="writing-the-cmdlet-code" class="xliff"></a>
-### Écriture du code de l’applet de commande
+### <a name="writing-the-cmdlet-code"></a>Écriture du code de l’applet de commande
 
 Le code C# suivant implémente les applets de commande **Get-TargetResource**, **Set-TargetResource** et **Test-TargetResource**.
 
@@ -269,8 +263,7 @@ namespace cSharpDSCResourceExample
 }
 ```
 
-<a id="deploying-the-resource" class="xliff"></a>
-### Déploiement de la ressource
+### <a name="deploying-the-resource"></a>Déploiement de la ressource
 
 Le fichier .dll compilé doit être enregistré dans une structure de fichiers similaire à une ressource de script. Voici la structure de dossiers de cette ressource.
 
@@ -285,12 +278,9 @@ $env: psmodulepath (folder)
                 |- MSFT_XDemoFile.schema.mof (file, required)
 ```
 
-<a id="see-also" class="xliff"></a>
-### Voir aussi
-<a id="concepts" class="xliff"></a>
-#### Concepts
+### <a name="see-also"></a>Voir aussi
+#### <a name="concepts"></a>Concepts
 [Écriture d’une ressource DSC personnalisée avec MOF](authoringResourceMOF.md)
-<a id="other-resources" class="xliff"></a>
-#### Autres ressources
+#### <a name="other-resources"></a>Autres ressources
 [Écriture d’une applet de commande Windows PowerShell](https://msdn.microsoft.com/en-us/library/dd878294.aspx)
 
