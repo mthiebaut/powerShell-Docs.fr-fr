@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: Aide sur la ligne de commande PowerShell.exe
 ms.assetid: 1ab7b93b-6785-42c6-a1c9-35ff686a958f
-ms.openlocfilehash: b2236decb3295ee5b543f72f083e516c91fa4b5f
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: c2583dac14f32db414f0a4377b1694ab7fa7523b
+ms.sourcegitcommit: cd66d4f49ea762a31887af2c72d087b219ddbe10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/11/2017
 ---
 # <a name="powershellexe-command-line-help"></a>Aide sur la ligne de commande PowerShell.exe
 Démarre une session Windows PowerShell. Vous pouvez utiliser PowerShell.exe pour démarrer une session Windows PowerShell à partir de la ligne de commande d’un autre outil, tel que Cmd.exe, ou l’utiliser dans la ligne de commande Windows PowerShell pour démarrer une nouvelle session. Utilisez les paramètres pour personnaliser la session.
@@ -16,8 +16,11 @@ Démarre une session Windows PowerShell. Vous pouvez utiliser PowerShell.exe pou
 
 ```syntax
 PowerShell[.exe]
+       [-Command { - | <script-block> [-args <arg-array>]
+                     | <string> [<CommandParameters>] } ]
        [-EncodedCommand <Base64EncodedCommand>]
        [-ExecutionPolicy <ExecutionPolicy>]
+       [-File <FilePath> [<Args>]]
        [-InputFormat {Text | XML}] 
        [-Mta]
        [-NoExit]
@@ -28,9 +31,7 @@ PowerShell[.exe]
        [-PSConsoleFile <FilePath> | -Version <Windows PowerShell version>]
        [-Sta]
        [-WindowStyle <style>]
-       [-File <FilePath> [<Args>]]
-       [-Command { - | <script-block> [-args <arg-array>]
-                     | <string> [<CommandParameters>] } ]
+        
 
 PowerShell[.exe] -Help | -? | /?
 ```
@@ -115,15 +116,19 @@ Affiche ce message. Si vous tapez une commande PowerShell.exe dans Windows Power
 ## <a name="examples"></a>EXEMPLES
 
 ```
+# Create a new PowerShell session and load a saved console file
 PowerShell -PSConsoleFile sqlsnapin.psc1
 
+# Create a new PowerShell V2 session with text input, XML output, and no logo
 PowerShell -Version 2.0 -NoLogo -InputFormat text -OutputFormat XML
 
+# Execute a Powerhell Command in a session
 PowerShell -Command "Get-EventLog -LogName security"
 
-# in an existing PowerShell session that understands the curly braces mean a script block
+# Run a script block in a session
 PowerShell -Command {Get-EventLog -LogName security}
 
+# An alternate wayh to run a command in a new session
 PowerShell -Command "& {Get-EventLog -LogName security}"
 
 # To use the -EncodedCommand parameter:

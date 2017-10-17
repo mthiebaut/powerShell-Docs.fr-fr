@@ -5,11 +5,11 @@ ms.topic: conceptual
 keywords: gallery,powershell,applet de commande,psgallery
 description: "Recommandations pour les éditeurs"
 title: Instructions et bonnes pratiques de publication PowerShell Gallery
-ms.openlocfilehash: 72b6ca4cb4815900a3fa48f965e581a6f6130123
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: 882a33c00cc024ad2bbb05a3283e058a61035e3a
+ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 10/13/2017
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Instructions et bonnes pratiques de publication PowerShell Gallery
 
@@ -32,12 +32,11 @@ Les éléments qui suivent ces recommandations sont plus susceptibles d’être 
 * Inclure une documentation et des exemples
 * Répondre aux commentaires
 * Fournir des modules plutôt que des scripts
-* Suivre les instructions [SemVer](http://semver.org/) pour la gestion de versions
 * Fournir des liens vers un site de projet
 * Inclure des tests incluant vos modules
 * Inclure et/ou lier les termes du contrat de licence
 * Signer votre code
-* Suivre les instructions SemVer pour la gestion de versions
+* Suivre les instructions [SemVer](http://semver.org/) pour la gestion de versions
 * Utiliser des balises courantes, comme expliqué dans les balises courantes de PowerShell Gallery
 * Tester la publication à l’aide d’un dépôt local
 
