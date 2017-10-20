@@ -1,4 +1,16 @@
-# <a name="desired-state-configuration-overview-for-engineers"></a>Présentation de la configuration de l’état souhaité pour les ingénieurs #
+---
+ms.date: 2017-10-13
+author: eslesar;mgreenegit
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+title: "Présentation de la configuration de l’état souhaité pour les décideurs"
+ms.openlocfilehash: 66822d9a60f98aab3d4f27d14b27ebc6ec90b2c9
+ms.sourcegitcommit: 9a5da3f739b1eebb81ede58bd4fc8037bad87224
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/16/2017
+---
+# <a name="desired-state-configuration-overview-for-engineers"></a>Présentation de la configuration de l’état souhaité pour les ingénieurs
 
 Ce document est destiné à faire découvrir aux développeurs et équipes opérationnelles les avantages de la configuration d’état souhaité (DSC) PowerShell.
 Pour une vision plus globale des avantages offerts par DSC, consultez la section [Présentation de la configuration de l’état souhaité pour les décideurs](decisionMaker.md)
@@ -6,23 +18,23 @@ Pour une vision plus globale des avantages offerts par DSC, consultez la section
 ## <a name="benefits-of-desired-state-configuration"></a>Avantages de la configuration de l’état souhaité
 
 Objectifs de DSC :
+
 - Réduire la complexité des scripts dans Windows
 - Accélérer la vitesse d’itération
 
-Le concept de « déploiement continu » gagne en importance. Grâce au déploiement continu, il est possible de procéder à des déploiements fréquents, potentiellement plusieurs fois par jour.
+Le concept de « déploiement continu » gagne en importance.
+Grâce au déploiement continu, il est possible de procéder à des déploiements fréquents, potentiellement plusieurs fois par jour.
 L’objectif de ces déploiements n’est pas de réparer quoi que ce soit, mais de permettre des publications plus rapides.
 En développant de nouvelles fonctionnalités et en les rendant opérationnelles aussi rapidement et efficacement que possible, vous accélérez le retour sur investissement de cette nouvelle logique métier.
 
-Deux tendances exacerbent ce besoin de transformation rapide. L’adoption du cloud computing implique une transformation rapide, à grande échelle, avec un risque d’échec constant.
-Pour suivre le rythme, l’automatisation se fait de plus en plus présente.
-L’avènement de la mentalité « DevOps » vient répondre à ces problématiques. 
+Le passage au cloud computing implique une solution de déploiement qui utilise un modèle « déclaratif », où un environnement final est déclaré en tant que texte et publié sur un moteur de déploiement.
+Cette technique de déploiement permet des modifications rapides à grande échelle, avec une résilience contre les menaces de défaillance, puisque le déploiement peut être répété à tout moment de manière cohérente pour garantir un état final.
+La création d’outils et de services prenant en charge ce type d’opérations par le biais de l’automatisation est une réponse à ces modifications.
 
-
-DSC est une plateforme assurant des opérations de déploiement, de configuration et de conformité déclaratives, autonomes et idempotentes (reproductibles).
+DSC est une plateforme assurant des opérations de déploiement, de configuration et de conformité déclaratives et idempotentes (reproductibles).
 La plateforme DSC permet de garantir que les composants de votre centre de données sont configurés correctement, ce qui évite des erreurs et de coûteux échecs de déploiement.
 En traitant les configurations DSC dans le cadre du code de l’application, DSC permet un déploiement continu.
 La configuration DSC doit être mise à jour directement dans l’application, en veillant à ce que les données nécessaires au déploiement de l’application soient toujours à jour et prêtes à être utilisées.
-
 
 ## <a name="i-have-powershell-why-do-i-need-desired-state-configuration"></a>« Je dispose de PowerShell, pourquoi ai-je besoin de la configuration de l’état souhaité ? »
 
@@ -36,9 +48,10 @@ Par exemple, les scripts PowerShell doivent ressembler à ceci :
 # Create a share in Windows Server 8
 New-SmbShare -Name MyShare -Path C:\Demo\Temp -FullAccess Alice -ReadAccess Bob
 ```
-Ce script est simple, aisément compréhensible et direct. Toutefois, si vous tentez de mettre ce script en production, vous rencontrerez plusieurs problèmes.
+Ce script est simple, aisément compréhensible et direct.
+Toutefois, si vous tentez de mettre ce script en production, vous rencontrerez plusieurs problèmes.
 Que se passe-t-il si ce script est exécuté deux fois de suite ?
-Que se passe-t-il si Bob avait précédemment un accès complet au partage ? 
+Que se passe-t-il si Bob avait précédemment un accès complet au partage ?
 
 Pour compenser ces problèmes, une version « réelle » du script ressemblera davantage à ceci :
 ```powershell
@@ -102,21 +115,21 @@ Start-DscConfiguration Sample_Share
 ```
 
 Ce script est mis en forme proprement et facile à lire.
-Les chemins d’accès logiques et la gestion des erreurs sont toujours présents dans l’implémentation des [ressources](resources.md), mais invisibles pour le créateur du script. 
-
-
+Les chemins d’accès logiques et la gestion des erreurs sont toujours présents dans l’implémentation des [ressources](resources.md), mais invisibles pour le créateur du script.
 
 ## <a name="separating-environment-from-structure"></a>Distinction entre environnement et structure
 
-Dans DevOps, un schéma fréquent consiste à disposer de plusieurs environnements pour le déploiement. Par exemple, un environnement de développement peut être utilisé pour créer rapidement le prototype d’un nouveau code.
+Dans DevOps, un schéma fréquent consiste à disposer de plusieurs environnements pour le déploiement.
+Par exemple, un environnement de développement peut être utilisé pour créer rapidement le prototype d’un nouveau code.
 Le code de l’environnement de développement se retrouve dans un environnement de test, où d’autres personnes vérifient les nouvelles fonctionnalités.
 Enfin, le code passe en production, autrement dit dans l’environnement de production du site en ligne.
 
 Les configurations DSC s’adaptent à ce système développement-test-production par l’utilisation des [données de configuration](configData.md).
 Cela précise encore davantage la distinction entre la structure de la configuration et les nœuds gérés.
-Par exemple, vous pouvez définir une configuration qui nécessite un serveur SQL, un serveur IIS et un serveur de couche intermédiaire. Quels que soient les nœuds qui reçoivent les différents éléments de cette configuration, ces trois éléments seront toujours présents.
+Par exemple, vous pouvez définir une configuration qui nécessite un serveur SQL, un serveur IIS et un serveur de couche intermédiaire.
+Quels que soient les nœuds qui reçoivent les différents éléments de cette configuration, ces trois éléments seront toujours présents.
 Vous pouvez utiliser des données de configuration pour pointer les trois éléments vers le même ordinateur d’un environnement de développement, séparer ces trois éléments sur trois ordinateurs différents d’un environnement de test et enfin transférer l’ensemble de vos serveurs de production pour l’environnement de production.
-Pour effectuer un déploiement sur les différents environnements, vous pouvez appeler `Start-DscConfiguration` avec les données de configuration appropriées pour l’environnement que vous souhaitez cibler. 
+Pour effectuer un déploiement sur les différents environnements, vous pouvez appeler **Start-DscConfiguration** avec les données de configuration appropriées à l’environnement que vous souhaitez cibler.
 
 ## <a name="see-also"></a>Voir aussi
 

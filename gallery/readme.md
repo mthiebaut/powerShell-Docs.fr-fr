@@ -4,11 +4,11 @@ contributor: JKeithB
 ms.topic: conceptual
 keywords: gallery, powershell, applet de commande, psgallery, psget
 title: PowerShell Gallery
-ms.openlocfilehash: 83a1f4e20b985a502637aee9d50ecc1d3f9a4616
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: 9fe341e4b297764321f3b3f07caca8ef4b8b40e0
+ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 10/13/2017
 ---
 # <a name="the-powershell-gallery"></a>PowerShell Gallery
 
@@ -16,7 +16,7 @@ PowerShell Gallery est le référentiel central pour le contenu PowerShell. Les 
 
 ## <a name="powershellget-overview"></a>Vue d’ensemble de PowerShellGet
 
-Le module PowerShellGet contient des applets de commande permettant de détecter, d’installer, de mettre à jour et de publier les artefacts PowerShell, tels que les modules, les ressources DSC, les fonctionnalités de rôle et les scripts à partir du référentiel https://www.PowerShellGallery.com et d’autres référentiels privés.
+Le module PowerShellGet contient des applets de commande permettant de détecter, d’installer, de mettre à jour et de publier les artefacts PowerShell tels que les modules, les ressources DSC, les fonctionnalités de rôle et les scripts à partir du référentiel [PowerShell Gallery](https://www.PowerShellGallery.com) et d’autres référentiels privés.
 
 ## <a name="getting-started-with-the-gallery"></a>Prise en main de la galerie
 

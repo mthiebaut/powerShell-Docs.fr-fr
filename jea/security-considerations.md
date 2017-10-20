@@ -4,14 +4,13 @@ author: rpsqrd
 ms.topic: conceptual
 keywords: jea,powershell,security
 title: "Considérations de sécurité JEA"
-ms.openlocfilehash: f85b342625d4dba0890619ef9680eaccbbde5224
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 2dcce34113998a1c31709b6afe6d0a21c991e79d
+ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 10/13/2017
 ---
-<a id="jea-security-considerations" class="xliff"></a>
-# Considérations de sécurité JEA
+# <a name="jea-security-considerations"></a>Considérations de sécurité JEA
 
 > S’applique à : Windows PowerShell 5.0
 
@@ -22,8 +21,7 @@ JEA les autorisant à exécuter des commandes d’administration sans disposer d
 
 Cette rubrique décrit le modèle de sécurité JEA et les bonnes pratiques en détail.
 
-<a id="run-as-account" class="xliff"></a>
-## compte d'identification
+## <a name="run-as-account"></a>compte d'identification
 
 Chaque point de terminaison JEA possède un compte d’identification désigné, qui est le compte sous lequel sont effectuées les actions de l’utilisateur qui se connecte.
 Ce compte est configurable dans le [fichier de configuration de session](session-configurations.md), et le compte que vous choisissez a une incidence considérable sur la sécurité de votre point de terminaison.
@@ -70,7 +68,7 @@ Les autorisations effectives du gMSA sont définies par les groupes de sécurit�
 Lorsqu’un point de terminaison JEA est configuré pour utiliser un compte gMSA, les actions de tous les utilisateurs JEA semblent provenir du même compte de service administré de groupe.
 La seule manière de tracer des actions jusqu’à un utilisateur spécifique consiste à identifier le jeu de commandes exécuté dans une transcription de session PowerShell.
 
-Les **informations d’identification de relais** sont utilisées si vous ne spécifiez pas une exécution en tant que compte et si vous voulez que PowerShell utilise les informations d’identification de l’utilisateur qui se connecte pour exécuter des commandes sur le serveur distant.
+Les **informations d’identification de relais** sont utilisées lorsque vous ne spécifiez pas une exécution en tant que compte et que vous voulez que PowerShell utilise les informations d’identification de connexion de l’utilisateur pour exécuter des commandes sur le serveur distant.
 Cette configuration n’est *pas* recommandée pour JEA, car elle vous oblige à accorder un accès direct à l’utilisateur qui se connecte à des groupes d’administration privilégiés.
 Si l’utilisateur connecté possède déjà des privilèges d’administrateur, il peut éviter JEA et gérer le système par d’autres moyens sans contrainte.
 Consultez la section ci-dessous pour en savoir plus et découvrir comment [JEA ne protège pas contre les administrateurs](#jea-does-not-protect-against-admins).
@@ -81,8 +79,7 @@ Cela signifie que les définitions de rôles ne fonctionnent plus comme prévu, 
 
 Vous ne devez pas utiliser un RunAsCredential sur un point de terminaison JEA en raison de la difficulté de suivi des actions à des utilisateurs spécifiques et l’absence de prise en charge pour le mappage des utilisateurs aux rôles.
 
-<a id="winrm-endpoint-acl" class="xliff"></a>
-## Liste de contrôle d’accès de point de terminaison WinRM
+## <a name="winrm-endpoint-acl"></a>Liste de contrôle d’accès de point de terminaison WinRM
 
 Comme avec des points de terminaison PowerShell à distance standard, chaque point de terminaison JEA a une liste de contrôle d’accès (ACL) distincte définie dans la configuration de WinRM qui contrôle les utilisateurs pouvant s’authentifier auprès du point de terminaison JEA.
 S’il est mal configuré, les utilisateurs approuvés ne peuvent pas accéder au point de terminaison JEA et/ou des utilisateurs non approuvés peuvent y accéder.
@@ -116,8 +113,7 @@ Si des utilisateurs ont accès au point de terminaison JEA mais n’appartiennen
 Vous pouvez auditer les autorisations utilisateur dans un point de terminaison JEA en exécutant `Get-PSSessionCapability`.
 Lisez l’article [Audit et rapports dans JEA](audit-and-report.md) pour plus d’informations sur l’audit des commandes auxquelles un utilisateur a accès dans un point de terminaison JEA.
 
-<a id="least-privilege-roles" class="xliff"></a>
-## Rôles avec des privilèges minimum
+## <a name="least-privilege-roles"></a>Rôles avec des privilèges minimum
 
 Lorsque vous concevez des rôles JEA, il est important de se rappeler que le compte virtuel ou le compte de service administré de groupe exécuté en arrière-plan a souvent un accès illimité pour gérer la machine locale.
 Les fonctionnalités de rôles JEA permettent de restreindre les possibilités d’utilisation de ce compte en limitant les commandes et les applications qui peuvent être exécutées à l’aide de ce contexte privilégié.
@@ -146,8 +142,7 @@ Une version plus sécurisée de cette même fonctionnalité de rôle ressemblera
 
 Évitez d’utiliser des caractères génériques dans les fonctionnalités de rôle et veillez à [auditer les autorisations d’utilisateur effectives](audit-and-report.md#check-effective-rights-for-a-specific-user) régulièrement afin de comprendre les commandes auxquelles un utilisateur a accès.
 
-<a id="jea-does-not-protect-against-admins" class="xliff"></a>
-## JEA ne protège pas contre les administrateurs
+## <a name="jea-does-not-protect-against-admins"></a>JEA ne protège pas contre les administrateurs
 
 L’un des principes fondamentaux de JEA est de permettre à des utilisateurs non administrateurs d’effectuer *certaines* tâches d’administration.
 JEA ne protège pas contre les utilisateurs qui ont déjà des privilèges d’administrateur.

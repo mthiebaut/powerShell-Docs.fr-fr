@@ -4,11 +4,11 @@ author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: "Prendre en main la fonctionnalité DSC (Desired State Configuration) pour Linux"
-ms.openlocfilehash: bf87125309a3f6b556fd7546057cb9491fb34229
-ms.sourcegitcommit: 4ab9a86e47b6effe8fe22ebeb81e8fadff41d31c
+ms.openlocfilehash: f88167cd039077574c3a84aa07ba78186adfa181
+ms.sourcegitcommit: 9a5da3f739b1eebb81ede58bd4fc8037bad87224
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/16/2017
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Prendre en main la fonctionnalité DSC (Desired State Configuration) pour Linux
 
@@ -106,7 +106,7 @@ ExampleConfiguration -OutputPath:"C:\temp"
 
 ### <a name="push-the-configuration-to-the-linux-computer"></a>Transmission de la configuration en mode Push à l’ordinateur Linux.
 
-Vous pouvez effectuer une transmission Push des documents de configuration (fichiers MOF) vers l’ordinateur Linux à l’aide de l’applet de commande [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Pour utiliser cette applet de commande, avec [Get-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407379).aspx, ou les applets de commande [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx) à distance sur un ordinateur Linux, vous devez utiliser une session CIMSession. L’applet de commande [New-CimSession](http://go.microsoft.com/fwlink/?LinkId=227967) permet de créer une session CIMSession sur l’ordinateur Linux.
+Vous pouvez effectuer une transmission Push des documents de configuration (fichiers MOF) vers l’ordinateur Linux à l’aide de l’applet de commande [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Pour utiliser cette applet de commande avec les applets de commande [Get-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407379.aspx) ou [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx) à distance sur un ordinateur Linux, vous devez utiliser une session CIMSession. L’applet de commande [New-CimSession](http://go.microsoft.com/fwlink/?LinkId=227967) permet de créer une session CIMSession sur l’ordinateur Linux.
 
 Le code suivant crée une session CIMSession pour DSC pour Linux.
 
