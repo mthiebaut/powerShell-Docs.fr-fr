@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Exécution de commandes à distance"
 ms.assetid: d6938b56-7dc8-44ba-b4d4-cd7b169fd74d
-ms.openlocfilehash: c3bf002e7a3daa5afc8219dd846145808eef3c9b
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 5cf9690b8fe4549a99186f172cb6f0de156a4dea
+ms.sourcegitcommit: c5251755c4442487f99ff74fadf7e37bbf039089
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="running-remote-commands"></a>Exécution de commandes à distance
 Vous pouvez exécuter des commandes sur un ordinateur ou plusieurs centaines au moyen d'une seule commande Windows PowerShell. Pour communiquer à distance, Windows PowerShell fait appel à différentes technologies, notamment WMI, RPC et WS-Management.
@@ -16,26 +16,16 @@ Vous pouvez exécuter des commandes sur un ordinateur ou plusieurs centaines au 
 De nombreuses applets de commande Windows PowerShell possèdent le paramètre ComputerName, qui vous permet de collecter des données et de modifier les paramètres sur un ou plusieurs ordinateurs distants. Elles utilisent diverses technologies de communication et bon nombre d'entre elles fonctionnent sur tous les systèmes d'exploitation Windows pris en charge par Windows PowerShell, et ce sans configuration particulière.
 
 Ces applets de commande sont les suivantes :
-
-- [Restart-Computer](https://technet.microsoft.com/en-us/library/dd315301.aspx)
-
-- [Test-Connection](https://technet.microsoft.com/en-us/library/dd315259.aspx)
-
-- [Clear-EventLog](https://technet.microsoft.com/en-us/library/dd347552.aspx)
-
-- [Get-EventLog](https://technet.microsoft.com/en-us/library/dd315250.aspx)
-
-- [Get-HotFix](https://technet.microsoft.com/en-us/library/e1ef636f-5170-4675-b564-199d9ef6f101)
-
- -   [Get-Process](https://technet.microsoft.com/en-us/library/dd347630.aspx)
-
-- [Get-Service](https://technet.microsoft.com/en-us/library/dd347591.aspx)
-
-- [Set-Service](https://technet.microsoft.com/en-us/library/dd315324.aspx)
-
-- [Get-WinEvent](https://technet.microsoft.com/en-us/library/dd315358.aspx)
-
-- [Get-WmiObject](https://technet.microsoft.com/en-us/library/dd315295.aspx)
+* [Restart-Computer](https://go.microsoft.com/fwlink/?LinkId=821625)
+* [Test-Connection](https://go.microsoft.com/fwlink/?LinkId=821646)
+* [Clear-EventLog](https://go.microsoft.com/fwlink/?LinkId=821568)
+* [Get-EventLog](https://go.microsoft.com/fwlink/?LinkId=821585)
+* [Get-HotFix](https://go.microsoft.com/fwlink/?LinkId=821586)
+  - [Get-Process](https://go.microsoft.com/fwlink/?linkid=821590)
+* [Get-Service](https://go.microsoft.com/fwlink/?LinkId=821593)
+* [Set-Service](https://go.microsoft.com/fwlink/?LinkId=821633)
+* [Get-WinEvent](https://go.microsoft.com/fwlink/?linkid=821529)
+* [Get-WmiObject](https://go.microsoft.com/fwlink/?LinkId=821595)
 
 En général, les applets de commande qui prennent en charge la communication à distance sans configuration particulière possèdent le paramètre ComputerName. En revanche, elles ne possèdent pas le paramètre Session. Pour trouver ces applets de commande dans votre session, tapez :
 
@@ -51,7 +41,8 @@ Pour utiliser la communication à distance Windows PowerShell, l'ordinateur dist
 Après avoir configuré la communication à distance Windows PowerShell, vous avez le choix entre plusieurs stratégies de communication à distance. Le reste de ce document répertorie quelques-unes d'entre elles. Pour plus d’informations, voir [À propos de la connexion à distance](https://technet.microsoft.com/en-us/library/dd347744.aspx) et [FAQ de la connexion à distance](https://technet.microsoft.com/en-us/library/dd347744.aspx).
 
 ### <a name="start-an-interactive-session"></a>Démarrer une session interactive
-Pour démarrer une session interactive avec un seul ordinateur distant, utilisez l’applet de commande [Enter-PSSession](https://technet.microsoft.com/en-us/library/dd315384.aspx). Par exemple, pour démarrer une session interactive avec l'ordinateur distant Server01, tapez :
+Pour démarrer une session interactive avec un seul ordinateur distant, utilisez l’applet de commande [Enter-PSSession](https://go.microsoft.com/fwlink/?LinkId=821477).
+Par exemple, pour démarrer une session interactive avec l'ordinateur distant Server01, tapez :
 
 ```
 Enter-PSSession Server01
@@ -65,11 +56,11 @@ Pour terminer la session interactive, tapez :
 Exit-PSSession
 ```
 
-Pour plus d’informations sur les applets de commande Enter-PSSession et Exit-PSSession, voir [Enter-PSSession](https://technet.microsoft.com/en-us/library/dd315384.aspx) et [Exit-PSSession](https://technet.microsoft.com/en-us/library/dd315322.aspx).
+Pour plus d’informations sur les applets de commande Enter-PSSession et Exit-PSSession, voir [Enter-PSSession](https://go.microsoft.com/fwlink/?LinkId=821477) et [Exit-PSSession](https://go.microsoft.com/fwlink/?LinkID=821478).
 
 ### <a name="run-a-remote-command"></a>Exécuter une commande à distance
-Pour exécuter une commande sur un ou plusieurs ordinateurs distants, utilisez l’applet de commande [Invoke-Command](https://technet.microsoft.com/en-us/library/dd347578.aspx).
-Par exemple, pour exécuter une commande [Get-UICulture](https://technet.microsoft.com/en-us/library/dd347742.aspx) sur les ordinateurs distants Serveur01 et Serveur02, tapez :
+Pour exécuter une commande sur un ou plusieurs ordinateurs distants, utilisez l’applet de commande [Invoke-Command](https://go.microsoft.com/fwlink/?LinkId=821493).
+Par exemple, pour exécuter une commande [Get-UICulture](https://go.microsoft.com/fwlink/?LinkId=821806) sur les ordinateurs distants Serveur01 et Serveur02, tapez :
 
 ```
 Invoke-Command -ComputerName Server01, Server02 -ScriptBlock {Get-UICulture}
@@ -83,7 +74,7 @@ LCID    Name     DisplayName               PSComputerName
 1033    en-US    English (United States)   server01.corp.fabrikam.com
 1033    en-US    English (United States)   server02.corp.fabrikam.com
 ```
-Pour plus d’informations sur l’applet de commande Invoke-Command, voir [Invoke-Command](https://technet.microsoft.com/en-us/library/22fd98ba-1874-492e-95a5-c069467b8462).
+Pour plus d’informations sur l’applet de commande Invoke-Command, voir [Invoke-Command](https://go.microsoft.com/fwlink/?LinkId=821493).
 
 ### <a name="run-a-script"></a>Exécuter un script
 Pour exécuter un script sur un ou plusieurs ordinateurs distants, utilisez le paramètre FilePath de l'applet de commande Invoke-Command. Le script doit être accessible à votre ordinateur local ou se trouver sur celui-ci. Les résultats sont retournés à votre ordinateur local.
@@ -94,7 +85,7 @@ Par exemple, la commande suivante exécute le script DiskCollect.ps1 sur les ord
 Invoke-Command -ComputerName Server01, Server02 -FilePath c:\Scripts\DiskCollect.ps1
 ```
 
-Pour plus d’informations sur l’applet de commande Invoke-Command, voir [Invoke-Command](https://technet.microsoft.com/en-us/library/dd347578.aspx).
+Pour plus d’informations sur l’applet de commande Invoke-Command, voir [Invoke-Command](https://go.microsoft.com/fwlink/?LinkId=821493).
 
 ### <a name="establish-a-persistent-connection"></a>Établir une connexion persistante
 Pour exécuter une série de commandes associées qui partagent des données, créez une session sur l'ordinateur distant, puis utilisez l'applet de commande Invoke-Command pour exécuter des commandes dans la session créée. Pour créer une session à distance, utilisez l'applet de commande New-PSSession.
@@ -127,8 +118,8 @@ Pour plus d’informations sur le fournisseur WSMan, voir [Fournisseur WSMan](ht
 
 Pour plus d’informations, voir :
 - [About_Remote_FAQ](https://technet.microsoft.com/en-us/library/dd315359.aspx)
-- [Register-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/dd819496.aspx)
-- [Import-PSSession](https://technet.microsoft.com/en-us/library/dd347575.aspx). 
+- [Register-PSSessionConfiguration](https://go.microsoft.com/fwlink/?LinkId=821508)
+- [Import-PSSession](https://go.microsoft.com/fwlink/?LinkId=821821)
 
 Pour obtenir de l’aide sur les erreurs de communication à distance, voir [about_Remote_Troubleshooting](https://technet.microsoft.com/en-us/library/dd347642.aspx).
 
@@ -139,9 +130,8 @@ Pour obtenir de l’aide sur les erreurs de communication à distance, voir [abo
 - [about_Remote_Troubleshooting](https://technet.microsoft.com/en-us/library/2f890148-8578-49ed-85ea-79a489dd6317)
 - [about_PSSessions](https://technet.microsoft.com/en-us/library/7a9b4e0e-fa1b-47b0-92f6-6e2995d70acb)
 - [about_WS-Management_Cmdlets](https://technet.microsoft.com/en-us/library/6ed3370a-ea10-45a5-9493-696aeace27ed)
-- [Invoke-Command](https://technet.microsoft.com/en-us/library/22fd98ba-1874-492e-95a5-c069467b8462)
-- [Import-PSSession](https://technet.microsoft.com/en-us/library/048c115e-a6fb-4e0d-8cea-c5ca24630c9d)
-- [New-PSSession](https://technet.microsoft.com/en-us/library/59452f12-a11d-4558-99ea-e6ca6ad5ffd3)
-- [Register-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/af68867a-d201-4b19-a1de-594015ed8a25)
+- [Invoke-Command](https://go.microsoft.com/fwlink/?LinkId=821493)
+- [Import-PSSession](https://go.microsoft.com/fwlink/?LinkId=821821)
+- [New-PSSession](https://go.microsoft.com/fwlink/?LinkId=821498)
+- [Register-PSSessionConfiguration](https://go.microsoft.com/fwlink/?LinkId=821508)
 - [Fournisseur WSMan](https://technet.microsoft.com/en-us/library/66fe1241-e08f-49ca-832f-a84c33ca8735)
-
