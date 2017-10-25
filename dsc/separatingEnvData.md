@@ -1,15 +1,14 @@
 ---
-title: "Séparation des données de configuration et d’environnement"
-ms.date: 2016-03-31
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: carmonm
-ms.prod: powershell
-ms.openlocfilehash: b20aa1f15253ba948c3aa7cf46686c8d206a3a6f
-ms.sourcegitcommit: 65250232157bb1c742d7d385933b8abc24a570fb
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+title: "Séparation des données de configuration et d’environnement"
+ms.openlocfilehash: df3cfea08419c37716b408fdbd6b43e78be2331c
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
 # <a name="separating-configuration-and-environment-data"></a>Séparation des données de configuration et d’environnement
 
@@ -83,7 +82,7 @@ Mode                LastWriteTime         Length Name
 -a----        3/31/2017   5:09 PM           1970 VM-2.mof  
 ```
  
-`$MyData` spécifie deux nœuds différents, chacun avec son propre `NodeName` et `Role`. La configuration crée les blocs **Nœud** de façon dynamique en prenant la collection de nœuds qu’elle obtient à partir de `$MyData` (en particulier, `$AllNodes`) et filtre cette collection sur la propriété `Role`.
+`$MyData` spécifie deux nœuds différents, chacun avec son propre `NodeName` et `Role`. La configuration crée dynamiquement les blocs **Node** en prenant la collection de nœuds qu’elle obtient à partir de `$MyData` (en particulier, `$AllNodes`) et filtre cette collection sur la propriété `Role`.
 
 ## <a name="using-configuration-data-to-define-development-and-production-environments"></a>Utilisation des données de configuration pour définir les environnements de développement et de production
 
@@ -314,3 +313,4 @@ configuration WebsiteConfig
 - [Utilisation des données de configuration](configData.md)
 - [Options relatives aux informations d’identification dans les données de configuration](configDataCredentials.md)
 - [Configurations DSC](configurations.md)
+

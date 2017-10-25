@@ -1,18 +1,14 @@
 ---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: wmf,powershell,configuration
 title: "Améliorations de DSC dans WMF 5.1"
-ms.date: 2016-07-13
-keywords: PowerShell, DSC, WMF
-description: 
-ms.topic: article
-author: keithb
-manager: dongill
-ms.prod: powershell
-ms.technology: WMF
-ms.openlocfilehash: 4c5dfaaf368097c18a2788a9df15632ce116dbbb
-ms.sourcegitcommit: ee407927101c3b166cc200a39a6ea786a1c21f95
+ms.openlocfilehash: ce897dab2344455453e9bf2d0b5a897f9abb4392
+ms.sourcegitcommit: a5c0795ca6ec9332967bff9c151a8572feb1a53a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Améliorations de la configuration de l’état souhaité (DSC) dans WMF 5.1
 
@@ -53,13 +49,13 @@ Dans la version précédente, la convention de nommage pour une configuration pa
 
 Consultez les captures instantanées ci-dessous :
 
-•    Paramètres de configuration locale qui définissent une configuration partielle qu’un nœud est autorisé à recevoir.
+•   Paramètres de configuration locale qui définissent une configuration partielle qu’un nœud est autorisé à recevoir.
 
 ![Exemple de métaconfiguration](../images/MetaConfigPartialOne.png)
 
-•    Exemple de définition de configuration partielle 
+•   Exemple de définition de configuration partielle 
 
-```PowerShell
+```powershell
 Configuration PartialOne
 {
     Node('localhost')
@@ -74,11 +70,11 @@ Configuration PartialOne
 PartialOne
 ```
 
-•    « ConfigurationName » incorporé dans le fichier MOF généré.
+•   « ConfigurationName » incorporé dans le fichier MOF généré.
 
 ![Exemple de fichier mof généré](../images/PartialGeneratedMof.png)
 
-•    FileName dans le dépôt de configuration de collecte 
+•   FileName dans le dépôt de configuration de collecte 
 
 ![FileName dans le dépôt de configuration](../images/PartialInConfigRepository.png)
 
@@ -86,7 +82,7 @@ Le nom de service Azure Automation a généré des fichiers MOF sous la forme `<
 
 Il est ainsi impossible de collecter l’une de vos configurations partielles à partir du service Azure Automation.
 
-```PowerShell
+```powershell
 Configuration PartialOne
 {
     Node('localhost')
@@ -105,7 +101,7 @@ Dans WMF 5.1, une configuration partielle dans le service/serveur collecteur pe
 
 La métaconfiguration ci-dessous définit un nœud à gérer à la fois localement et par le service Azure Automation.
 
-```PowerShell
+```powershell
   [DscLocalConfigurationManager()]
    Configuration RegistrationMetaConfig
    {
@@ -209,7 +205,7 @@ Par convention, le fichier catalogue de module doit être placé sous le dossier
 ####<a name="pull"></a>Extraction
 Le gestionnaire de configuration local d’un nœud effectue une validation des signatures des modules et des configurations en fonction de ses paramètres actifs. Par défaut, la validation des signatures est désactivée. La validation des signatures peut être activée en ajoutant le bloc « SignatureValidation » à la définition de métaconfiguration du nœud, comme indiqué ci-dessous :
 
-```PowerShell
+```powershell
 [DSCLocalConfigurationManager()]
 Configuration EnableSignatureValidation
 {
@@ -263,7 +259,7 @@ Voici un exemple complet de validation des signatures pour l’envoi.
 
 * Activez la validation des signatures sur le nœud.
 
-```PowerShell
+```powershell
 [DSCLocalConfigurationManager()]
 Configuration EnableSignatureValidation
 {
@@ -282,7 +278,7 @@ Set-DscLocalConfigurationManager -Path .\EnableSignatureValidation -Verbose
 ``` 
 * Créez un exemple de fichier de configuration.
 
-```PowerShell
+```powershell
 # Sample configuration
 Configuration Test
 {
@@ -298,7 +294,7 @@ Test
 
 * Essayez d’envoyer le fichier de configuration non signé au nœud. 
 
-```PowerShell
+```powershell
 Start-DscConfiguration -Path .\Test -Wait -Verbose -Force
 ``` 
 ![ErrorUnsignedMofPushed](../images/PushUnsignedMof.png)

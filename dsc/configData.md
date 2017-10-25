@@ -1,72 +1,30 @@
 ---
-title: "Séparation des données de configuration et d’environnement"
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 27d9a259d119099c45d7ecd3a15cd26654071d42
-ms.sourcegitcommit: 26f4e52f3dd008b51b7eae7b634f0216eec6200e
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+title: "Utilisation des données de configuration"
+ms.openlocfilehash: a70cd8f0f6c24eb02743b02d198cebcc3d775756
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="separating-configuration-and-environment-data"></a>Séparation des données de configuration et d’environnement
+# <a name="using-configuration-data-in-dsc"></a>Utilisation des données de configuration dans DSC
 
 >S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
 À l’aide du paramètre DSC intégré **ConfigurationData**, vous pouvez définir les données qui peuvent être utilisées dans une configuration. Cela vous permet de créer une configuration unique utilisée pour plusieurs nœuds ou différents environnements. Par exemple, si vous développez une application, vous pouvez utiliser une seule configuration pour les environnements de développement et de production et utiliser les données de configuration pour spécifier les données de chaque environnement.
 
-Examinons un exemple très simple pour voir comment cela fonctionne. Nous allons créer une configuration unique qui garantit la présence d’**IIS** sur certains nœuds et la présence d’**Hyper-V** sur d’autres : 
+Cette rubrique décrit la structure de la table de hachage **ConfigurationData**. Pour des exemples d’utilisation des données de configuration, consultez [Séparation des données de configuration et d’environnement](separatingEnvData.md).
 
-```powershell
-Configuration MyDscConfiguration {
-    
-    Node $AllNodes.Where{$_.Role -eq "WebServer"}.NodeName
-    {
-        WindowsFeature IISInstall {
-            Ensure = 'Present'
-            Name   = 'Web-Server'
-        }
-        
-    }
-    Node $AllNodes.Where($_.Role -eq "VMHost").NodeName
-    {
-        WindowsFeature HyperVInstall {
-            Ensure = 'Present'
-            Name   = 'Hyper-V'
-        }
-    }
-}
+## <a name="the-configurationdata-common-parameter"></a>Le paramètre commun ConfigurationData
 
-$MyData = 
-@{
-    AllNodes =
-    @(
-        @{
-            NodeName    = 'VM-1'
-            Role = 'WebServer'
-        },
+Une configuration DSC prend un paramètre commun, **ConfigurationData**, que vous spécifiez lorsque vous compilez la configuration. Pour plus d’informations sur la compilation de configurations, voir [Configurations DSC](configurations.md).
 
-        @{
-            NodeName    = 'VM-2'
-            Role = 'VMHost'
-        }
-    )
-}
+Le paramètre **ConfigurationData** est une table de hachage qui doit contenir au moins une clé nommée **AllNodes**. Il peut également avoir une ou plusieurs autres clés.
 
-MyDscConfiguration -ConfigurationData $MyData
-```
-
-La dernière ligne de ce script compile la configuration dans des documents MOF, en passant `$MyData` comme valeur du paramètre **ConfigurationData**. `$MyData` spécifie deux nœuds différents, chacun avec son propre `NodeName` et `Role`. La configuration crée les blocs **Nœud** de façon dynamique en prenant la collection de nœuds qu’elle obtient à partir de `$MyData` (en particulier, `$AllNodes`) et filtre cette collection sur la propriété `Role`.
-
-Voyons maintenant en détail comment cela fonctionne.
-
-## <a name="the-configurationdata-parameter"></a>Le paramètre ConfigurationData
-
-Une configuration DSC prend un paramètre nommé **ConfigurationData**, que vous spécifiez lorsque vous compilez la configuration. Pour plus d’informations sur la compilation de configurations, voir [Configurations DSC](configurations.md).
-
-Le paramètre **ConfigurationData** est une table de hachage qui doit contenir au moins une clé nommée **AllNodes**. Il peut également avoir d’autres clés :
+>**Remarque :** les exemples de cette rubrique utilisent une seule clé supplémentaire (autres que la clé nommée **AllNodes**), `NonNodeData`, mais vous pouvez inclure n’importe quel nombre de clés supplémentaires et les nommer comme vous le souhaitez.
 
 ```powershell
 $MyData = 
@@ -172,7 +130,7 @@ Ceci équivaut à ajouter une propriété portant le nom `LogPath` avec la valeu
 
 ## <a name="defining-the-configurationdata-hashtable"></a>Définition de la table de hachage ConfigurationData
 
-Vous pouvez définir **ConfigurationData** soit comme variable dans le même fichier de script qu’une configuration (comme dans nos exemples précédents), soit dans un fichier .psd1 distinct. Pour définir **ConfigurationData** dans un fichier .psd1, créez un fichier contenant uniquement la table de hachage qui représente les données de configuration.
+Vous pouvez définir **ConfigurationData** soit comme variable dans le même fichier de script qu’une configuration (comme dans nos exemples précédents), soit dans un fichier `.psd1` distinct. Pour définir **ConfigurationData** dans un fichier `.psd1`, créez un fichier contenant uniquement la table de hachage qui représente les données de configuration.
 
 Par exemple, vous pouvez créer un fichier nommé `MyData.psd1` avec le contenu suivant :
 
@@ -193,6 +151,25 @@ Par exemple, vous pouvez créer un fichier nommé `MyData.psd1` avec le contenu 
 }
 ```
 
+## <a name="compiling-a-configuration-with-configuration-data"></a>Compilation d’une configuration avec des données de configuration
+
+Pour compiler une configuration pour laquelle vous avez défini des données de configuration, vous passez les données de configuration en tant que valeur du paramètre **ConfigurationData**.
+
+Cela crée un fichier MOF pour chaque entrée dans le tableau **AllNodes**.
+Chaque fichier MOF est nommé avec la propriété `NodeName` de l’entrée correspondante du tableau.
+
+Par exemple, si vous définissez des données de configuration comme dans le fichier `MyData.psd1` ci-dessus, la compilation d’une configuration créerait à la fois des fichiers `VM-1.mof` et `VM-2.mof`.
+
+### <a name="compiling-a-configuration-with-configuration-data-using-a-variable"></a>Compilation d’une configuration avec des données de configuration à l’aide d’une variable
+
+Pour utiliser les données de configuration qui sont définies comme une variable dans le même fichier `.ps1` que la configuration, vous passez le nom de la variable comme valeur du paramètre **ConfigurationData** lors de la compilation de la configuration :
+
+```powershell
+MyDscConfiguration -ConfigurationData $MyData
+```
+
+### <a name="compiling-a-configuration-with-configuration-data-using-a-data-file"></a>Compilation d’une configuration avec des données de configuration à l’aide d’un fichier de données
+
 Pour utiliser les données de configuration qui sont définies dans un fichier .psd1, vous passez le chemin et le nom de ce fichier comme valeur du paramètre **ConfigurationData** lors de la compilation de la configuration :
 
 ```powershell
@@ -207,149 +184,14 @@ DSC fournit trois variables spéciales qui peuvent être utilisées dans un scri
 - **Node** fait référence à une entrée particulière dans la collection **AllNodes** une fois qu’elle a été filtrée à l’aide de **.Where()** ou **.ForEach()**.
 - **ConfigurationData** fait référence à la table de hachage entière qui est passée comme paramètre lors de la compilation d’une configuration.
 
-## <a name="devops-example"></a>Exemple DevOps
+## <a name="using-non-node-data"></a>Utilisation des données n’appartenant pas à un nœud
 
-Examinons un exemple complet qui utilise une configuration unique pour configurer les environnements de développement et de production d’un site web. Dans l’environnement de développement, IIS et SQL Server sont installés sur un même nœud. Dans l’environnement de production, IIS et SQL Server sont installés sur des nœuds séparés. Nous allons utiliser un fichier de données de configuration .psd1 pour spécifier les données des deux environnements.
+Comme nous l’avons vu dans les exemples précédents, la table de hachage **ConfigurationData** peut avoir une ou plusieurs clés en plus de la clé **AllNodes** requise.
+Dans les exemples de cette rubrique, nous avons utilisé un seul nœud supplémentaire et l’avons nommé `NonNodeData`. Toutefois, vous pouvez définir n’importe quel nombre de clés supplémentaires et les nommer comme vous le souhaitez.
 
- ### <a name="configuration-data-file"></a>Fichier de données de configuration
-
-Nous allons définir les données de l’environnement de développement et de production dans un fichier nommé `DevProdEnvData.psd1` comme suit :
-
-```powershell
-@{
-
-    AllNodes = @(
-
-        @{
-            NodeName        = "*"
-            SQLServerName   = "MySQLServer"
-            SqlSource       = "C:\Software\Sql"
-            DotNetSrc       = "C:\Software\sxs"
-        },
-
-        @{
-            NodeName        = "Prod-SQL"
-            Role            = "MSSQL"
-        },
-
-        @{
-            NodeName        = "Prod-IIS"
-            Role            = "Web"
-            SiteContents    = "C:\Website\Prod\SiteContents\"
-            SitePath        = "\\Prod-IIS\Website\"
-        },
-
-        @{
-            NodeName         = "Dev"
-            Role             = "MSSQL", "Web"
-            SiteContents     = "C:\Website\Dev\SiteContents\"
-            SitePath         = "\\Dev\Website\"
-
-        }
-
-    )
-
-}
-```
-
-### <a name="configuration-script-file"></a>Fichier de script de configuration
-
-À présent, dans la configuration définie dans un fichier .ps1, nous allons filtrer les nœuds que nous avons définis dans `DevProdEnvData.psd1` selon leur rôle (`MSSQL`, `Dev` ou les deux) et les configurer en conséquence. Dans l’environnement de développement, SQL Server et IIS se trouvent sur le même nœud, tandis que dans l’environnement de production, ils se trouvent sur deux nœuds différents. Le contenu du site est également différent, comme spécifié par les propriétés `SiteContents`.
-
-À la fin du script de configuration, nous appelons la configuration (nous la compilons dans un document MOF), en passant `DevProdEnvData.psd1` comme paramètre `$ConfigurationData`.
-
->**Remarque :** Cette configuration exige l’installation des modules `xSqlPs` et `xWebAdministration` sur le nœud cible.
-
-```powershell
-Configuration MyWebApp
-{
-    Import-DscResource -Module PSDesiredStateConfiguration
-    Import-DscResource -Module xSqlPs
-    Import-DscResource -Module xWebAdministration
-
-    Node $AllNodes.Where{$_.Role -contains "MSSQL"}.Nodename
-   {
-        # Install prerequisites
-        WindowsFeature installdotNet35
-        {            
-            Ensure      = "Present"
-            Name        = "Net-Framework-Core"
-            Source      = "c:\software\sxs"
-        }
-
-        # Install SQL Server
-        xSqlServerInstall InstallSqlServer
-        {
-            InstanceName = $Node.SQLServerName
-            SourcePath   = $Node.SqlSource
-            Features     = "SQLEngine,SSMS"
-            DependsOn    = "[WindowsFeature]installdotNet35"
-
-        }
-   }
-
-   Node $AllNodes.Where($_.Role -contains "Web").NodeName
-   {
-        # Install the IIS role
-        WindowsFeature IIS
-        {
-            Ensure       = 'Present'
-            Name         = 'Web-Server'
-        }
-
-        # Install the ASP .NET 4.5 role
-        WindowsFeature AspNet45
-        {
-            Ensure       = 'Present'
-            Name         = 'Web-Asp-Net45'
-
-        }
-
-        # Stop the default website
-        xWebsite DefaultSite 
-        {
-            Ensure       = 'Present'
-            Name         = 'Default Web Site'
-            State        = 'Stopped'
-            PhysicalPath = 'C:\inetpub\wwwroot'
-            DependsOn    = '[WindowsFeature]IIS'
-
-        }
-
-        # Copy the website content
-        File WebContent
-
-        {
-            Ensure          = 'Present'
-            SourcePath      = $Node.SiteContents
-            DestinationPath = $Node.SitePath
-            Recurse         = $true
-            Type            = 'Directory'
-            DependsOn       = '[WindowsFeature]AspNet45'
-
-        }       
-
-
-        # Create the new Website
-
-        xWebsite NewWebsite
-
-        {
-
-            Ensure          = 'Present'
-            Name            = $WebSiteName
-            State           = 'Started'
-            PhysicalPath    = $Node.SitePath
-            DependsOn       = '[File]WebContent'
-        }
-
-    }
-
-}
-
-MyWebApp -ConfigurationData DevProdEnvData.psd1
-```
+Pour obtenir un exemple d’utilisation des données n’appartenant pas à un nœud, consultez [Séparation des données de configuration et d’environnement](separatingEnvData.md).
 
 ## <a name="see-also"></a>Voir aussi
 - [Options relatives aux informations d’identification dans les données de configuration](configDataCredentials.md)
 - [Configurations DSC](configurations.md)
+

@@ -1,21 +1,21 @@
 ---
-title: "Exécution de DSC avec les informations d’identification de l’utilisateur"
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 5436b047052f522e930e60925aef1de2f5e81fcb
-ms.sourcegitcommit: a3966253a165d193a42b43b9430a4dc76988f82f
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configuration,setup
+title: "Exécution de DSC avec les informations d’identification de l’utilisateur"
+ms.openlocfilehash: f15b2e4bfb888e2f3646a33cc0191e33a7ebb8ab
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/12/2017
 ---
 # <a name="running-dsc-with-user-credentials"></a>Exécution de DSC avec les informations d’identification de l’utilisateur 
 
 > S’applique à : Windows PowerShell 5.0, Windows PowerShell 5.1
 
-Vous pouvez exécuter une ressource DSC sous un jeu d’informations d’identification spécifié à l’aide de la propriété automatique **PsDscRunAsCredential** dans la configuration. Par défaut, DSC exécute chaque ressource comme compte système. Voici les heures où l’exécution en tant qu’utilisateur est nécessaire, par exemple, l’installation de packages MSI dans un contexte d’utilisateur spécifique, la définition de clés de Registre d’un utilisateur, l’accès à un annuaire local spécifique d’un utilisateur ou l’accès à un partage réseau.
+Vous pouvez exécuter une ressource DSC sous un jeu d’informations d’identification spécifié à l’aide de la propriété automatique **PsDscRunAsCredential** dans la configuration. Par défaut, DSC exécute chaque ressource comme compte système.
+Voici les heures où l’exécution en tant qu’utilisateur est nécessaire, par exemple, l’installation de packages MSI dans un contexte d’utilisateur spécifique, la définition de clés de Registre d’un utilisateur, l’accès à un annuaire local spécifique d’un utilisateur ou l’accès à un partage réseau.
 
 Toutes les ressources DSC ont une propriété **PsDscRunAsCredential** qui peut être définie sur n’importe quelles informations d’identification de l’utilisateur (un objet [PSCredential](https://msdn.microsoft.com/en-us/library/ms572524(v=VS.85).aspx)).
 Les informations d’identification peuvent être codées en dur comme valeur de la propriété dans la configuration, ou vous pouvez définir la valeur sur [Get-Credential](https://technet.microsoft.com/en-us/library/hh849815.aspx), ce qui invite l’utilisateur à entrer des informations d’identification lors de la compilation de la configuration (pour plus d’informations sur la compilation des configurations, consultez [Configurations](configurations.md)).
@@ -28,7 +28,7 @@ Les informations d’identification peuvent être codées en dur comme valeur de
 Dans l’exemple suivant, **Get-Credential** est utilisé pour demander les informations d’identification de l’utilisateur. La ressource [Registry](registryResource.md) permet de modifier la clé de Registre qui spécifie la couleur d’arrière-plan de la fenêtre d’invite de commandes Windows.
 
 ```powershell
-Configuration ChangeCmdBackGroundColor    
+Configuration ChangeCmdBackGroundColor
 {
     Import-DscResource -ModuleName PSDesiredStateConfiguration
 
@@ -45,7 +45,7 @@ Configuration ChangeCmdBackGroundColor
             Hex                  = $true
             PsDscRunAsCredential = Get-Credential
         }
-    }                   
+    }
 }
 
 $configData = @{
