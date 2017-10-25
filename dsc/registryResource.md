@@ -10,15 +10,13 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/26/2017
 ---
-<a id="dsc-registry-resource" class="xliff"></a>
-# Ressource Registry dans DSC
+# <a name="dsc-registry-resource"></a>Ressource Registry dans DSC
 
 > S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
 La ressource **Registry** dans la configuration d’état souhaité (DSC) Windows PowerShell fournit un mécanisme pour gérer les clés et les valeurs de Registre sur un nœud cible.
 
-<a id="syntax" class="xliff"></a>
-## Syntaxe
+## <a name="syntax"></a>Syntaxe
 
 ```
 Registry [string] #ResourceName
@@ -34,8 +32,7 @@ Registry [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriétés
+## <a name="properties"></a>Propriétés
 |  Propriété  |  Description   | 
 |---|---| 
 | Clé| Indique le chemin de la clé de Registre pour laquelle vous voulez garantir un état spécifique. Ce chemin doit inclure la ruche.| 
@@ -63,8 +60,7 @@ Registry [string] #ResourceName
 
 <li>Chaîne extensible (REG_EXPAND_SZ)</li></ul>
 
-<a id="example" class="xliff"></a>
-## Exemple
+## <a name="example"></a>Exemple
 Cet exemple permet de s’assurer qu’une clé nommée « ExampleKey » est présente dans la ruche **HKEY\_LOCAL\_MACHINE**.
 ```powershell
 Configuration RegistryTest

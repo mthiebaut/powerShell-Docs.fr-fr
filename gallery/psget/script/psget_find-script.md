@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="find-script" class="xliff"></a>
-# Find-Script
+# <a name="find-script"></a>Find-Script
 
 Recherche les fichiers de script PowerShell à partir d’une galerie en ligne qui correspondent aux critères spécifiés.
 
-<a id="description" class="xliff"></a>
-## Description
+## <a name="description"></a>Description
 
 Find-Script détecte les fichiers de script à partir des référentiels enregistrés qui correspondent aux critères spécifiés.
 Pour chaque script trouvé, Find-Script retourne un objet PSRepositoryItemInfo qui peut éventuellement être transmis à Install-Script pour installer les scripts.
@@ -34,20 +32,17 @@ L’applet de commande Find-Script permet de découvrir les fichiers de script a
 
 **REMARQUE :** Un référentiel PSRepository enregistré doit avoir une valeur ScriptSourceLocation valide. Vous pouvez utiliser l’applet de commande Set-PSRepository pour définir la valeur ScriptSourceLocation.
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 
 ```powershell
 Get-Command -Name Find-Script -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [Find-Script](http://go.microsoft.com/fwlink/?LinkId=619785)
 
-<a id="example-commands" class="xliff"></a>
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 
 ```powershell
 # Find a script from the registered repository with ScriptSourceLocation

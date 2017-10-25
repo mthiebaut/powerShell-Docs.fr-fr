@@ -10,15 +10,13 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/26/2017
 ---
-<a id="dsc-windowsoptionalfeature-resource" class="xliff"></a>
-# Ressource WindowsOptionalFeature dans DSC
+# <a name="dsc-windowsoptionalfeature-resource"></a>Ressource WindowsOptionalFeature dans DSC
 
 > S’applique à : Windows PowerShell 5.0
 
 La ressource **WindowsOptionalFeature** dans la configuration d’état souhaité (DSC) Windows PowerShell fournit un mécanisme pour garantir que des fonctionnalités facultatives sont activées sur un nœud cible.
 
-<a id="syntax" class="xliff"></a>
-## Syntaxe
+## <a name="syntax"></a>Syntaxe
 
 ```
 WindowsOptionalFeature [string] #ResourceName
@@ -35,8 +33,7 @@ WindowsOptionalFeature [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriétés
+## <a name="properties"></a>Propriétés
 
 |  Propriété  |  Description   | 
 |---|---| 

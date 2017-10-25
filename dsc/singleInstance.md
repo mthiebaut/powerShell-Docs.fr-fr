@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="writing-a-single-instance-dsc-resource-best-practice" class="xliff"></a>
-# Écriture d’une ressource de DSC d’instance unique (recommandation)
+# <a name="writing-a-single-instance-dsc-resource-best-practice"></a>Écriture d’une ressource de DSC d’instance unique (recommandation)
 
 >**Remarque :** cette rubrique décrit une recommandation pour la définition d’une ressource DSC qui n’autorise qu’une seule instance dans une configuration. Actuellement, il n’existe pas de fonctionnalité DSC intégrée pour ce faire. Cela pourrait changer à l’avenir.
 

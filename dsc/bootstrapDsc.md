@@ -15,11 +15,9 @@ ms.lasthandoff: 06/12/2017
 >**Remarque :** La clé de Registre **DSCAutomationHostEnabled** décrite dans cette rubrique n’est pas disponible dans PowerShell 4.0.
 Pour plus d’informations sur la configuration de nouvelles machines virtuelles au démarrage initial dans PowerShell 4.0, consultez [Want to Automatically Configure Your Machines Using DSC at Initial Boot-up](https://blogs.msdn.microsoft.com/powershell/2014/02/28/want-to-automatically-configure-your-machines-using-dsc-at-initial-boot-up/)
 
-<a id="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc" class="xliff"></a>
-# Configurer une machine virtuelle au démarrage initial à l’aide de DSC
+# <a name="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc"></a>Configurer une machine virtuelle au démarrage initial à l’aide de DSC
 
-<a id="requirements" class="xliff"></a>
-## Spécifications
+## <a name="requirements"></a>Spécifications
 
 Pour exécuter ces exemples, vous avez besoin des éléments suivants :
 
@@ -40,8 +38,7 @@ Si vous ne voulez pas que DSC s’exécute au démarrage, définissez la valeur 
 >**Remarque :** Vous pouvez injecter à la fois `Pending.mof` et `MetaConfig.mof` dans un ordinateur en même temps.
 Si les deux fichiers sont présents, les paramètres spécifiés dans `MetaConfig.mof` sont prioritaires.
 
-<a id="inject-a-configuration-mof-document-into-a-vhd" class="xliff"></a>
-## Injecter un document MOF de configuration dans un disque dur virtuel
+## <a name="inject-a-configuration-mof-document-into-a-vhd"></a>Injecter un document MOF de configuration dans un disque dur virtuel
 
 Pour promulguer une configuration au démarrage initial, vous pouvez injecter un document MOF de configuration compilé dans le disque dur virtuel sous la forme de son fichier `Pending.mof`.
 Si la clé de Registre **DSCAutomationHostEnabled** est définie sur 2 (la valeur par défaut), DSC applique la configuration définie par `Pending.mof` quand l’ordinateur démarre pour la première fois.
@@ -64,8 +61,7 @@ Configuration SampleIISInstall
 }
 ```
 
-<a id="to-inject-the-configuration-mof-document-on-the-vhd" class="xliff"></a>
-### Pour injecter le document MOF de configuration sur le disque dur virtuel
+### <a name="to-inject-the-configuration-mof-document-on-the-vhd"></a>Pour injecter le document MOF de configuration sur le disque dur virtuel
 
 1. Montez le disque dur virtuel dans lequel vous voulez injecter la configuration en appelant l’applet de commande [Mount-VHD](https://technet.microsoft.com/library/hh848551.aspx). Par exemple :
 
@@ -98,8 +94,7 @@ Renommez le fichier en `Pending.mof` et déplacez-le à l’emplacement appropri
 7. Créez une machine virtuelle en utilisant le disque dur virtuel où vous avez installé le document MOF DSC. Après le démarrage initial et l’installation du système d’exploitation, IIS est installé.
 Vous pouvez le vérifier en appelant l’applet de commande [Get-WindowsFeature](https://technet.microsoft.com/library/jj205469.aspx).
 
-<a id="inject-a-dsc-metaconfiguration-into-a-vhd" class="xliff"></a>
-## Injecter une métaconfiguration DSC dans un disque dur virtuel
+## <a name="inject-a-dsc-metaconfiguration-into-a-vhd"></a>Injecter une métaconfiguration DSC dans un disque dur virtuel
 
 Vous pouvez également configurer un ordinateur pour extraire une configuration au démarrage initial en injectant une métaconfiguration (consultez [Configuration du gestionnaire de configuration local](metaConfig.md)) dans le disque dur virtuel sous la forme de son fichier `MetaConfig.mof`.
 Si la clé de Registre **DSCAutomationHostEnabled** est définie sur 2 (la valeur par défaut), DSC applique la métaconfiguration définie par `MetaConfig.mof` au gestionnaire de configuration local quand l’ordinateur démarre pour la première fois.
@@ -130,8 +125,7 @@ configuration PullClientBootstrap
 }
 ```
 
-<a id="to-inject-the-metaconfiguration-mof-document-on-the-vhd" class="xliff"></a>
-### Pour injecter le document MOF de métaconfiguration sur le disque dur virtuel
+### <a name="to-inject-the-metaconfiguration-mof-document-on-the-vhd"></a>Pour injecter le document MOF de métaconfiguration sur le disque dur virtuel
 
 1. Montez le disque dur virtuel dans lequel vous voulez injecter la métaconfiguration en appelant l’applet de commande [Mount-VHD](https://technet.microsoft.com/library/hh848551.aspx). Par exemple :
 
@@ -169,8 +163,7 @@ Renommez le fichier en `MetaConfig.mof` et déplacez-le à l’emplacement appro
 Après le démarrage initial et l’installation du système d’exploitation, DSC extrait la configuration auprès du serveur collecteur et IIS est installé.
 Vous pouvez le vérifier en appelant l’applet de commande [Get-WindowsFeature](https://technet.microsoft.com/library/jj205469.aspx).
 
-<a id="disable-dsc-at-boot-time" class="xliff"></a>
-## Désactiver DSC au démarrage
+## <a name="disable-dsc-at-boot-time"></a>Désactiver DSC au démarrage
 
 Par défaut, la valeur de la clé **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DSCAutomationHostEnabled** est définie sur 2, ce qui permet l’exécution d’une configuration DSC si l’ordinateur est dans un état en attente ou en cours. Si vous ne voulez pas qu’une configuration s’exécute au démarrage initial, vous devez définir la valeur de cette clé sur 0 :
 
@@ -205,8 +198,7 @@ Par défaut, la valeur de la clé **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Window
     reg unload HKLM\Vhd
     ```
 
-<a id="see-also" class="xliff"></a>
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [Configurations DSC](configurations.md)
 - [Clé de Registre DSCAutomationHostEnabled](DSCAutomationHostEnabled.md)

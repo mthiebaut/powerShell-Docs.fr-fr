@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/22/2017
 ---
-<a id="jea-session-configurations" class="xliff"></a>
-# Configuration de session JEA
+# <a name="jea-session-configurations"></a>Configuration de session JEA
 
 > S’applique à : Windows PowerShell 5.0
 
@@ -21,8 +20,7 @@ Elles définissent également les paramètres globaux qui s’appliquent aux uti
 
 Cette rubrique décrit comment créer un fichier de configuration de session PowerShell et enregistrer un point de terminaison JEA.
 
-<a id="create-a-session-configuration-file" class="xliff"></a>
-## Créer un fichier de configuration de session
+## <a name="create-a-session-configuration-file"></a>Créer un fichier de configuration de session
 
 Pour enregistrer un point de terminaison JEA, vous devez spécifier la façon dont ce point de terminaison doit être configuré.
 De nombreuses options sont à prendre en compte ici, voici les plus importantes : qui doit avoir accès au point de terminaison JEA, quels rôles leur seront affectés, quelles identités JEA utilisera en coulisses et quel sera le nom du point de terminaison JEA.
@@ -56,14 +54,12 @@ Aucun fournisseur PowerShell n’est disponible, ni aucun programme externe (ex�
 Il vous faudra configurer d’autres champs pour la session JEA.
 Ils sont décrits dans les sections suivantes.
 
-<a id="choose-the-jea-identity" class="xliff"></a>
-### Choisir l’identité JEA
+### <a name="choose-the-jea-identity"></a>Choisir l’identité JEA
 
 En coulisses, JEA a besoin d’une identité (compte) pour exécuter les commandes d’un utilisateur connecté.
 Vous choisissez quelle identité JEA utilisera dans le fichier de configuration de session.
 
-<a id="local-virtual-account" class="xliff"></a>
-#### Compte virtuel local
+#### <a name="local-virtual-account"></a>Compte virtuel local
 
 Si les rôles pris en charge par ce point de terminaison JEA sont tous utilisés pour gérer l’ordinateur local, et qu’un compte Administrateur local est suffisant pour exécuter les commandes, vous devez configurer JEA afin d’utiliser un compte virtuel local.
 Les comptes virtuels sont des comptes temporaires propres à un utilisateur spécifique, qui ne durent que le temps de sa session PowerShell.
@@ -86,8 +82,7 @@ RunAsVirtualAccount = $true
 RunAsVirtualAccountGroups = 'NetworkOperator', 'NetworkAuditor'
 ```
 
-<a id="group-managed-service-account" class="xliff"></a>
-#### Compte de service administré de groupe
+#### <a name="group-managed-service-account"></a>Compte de service administré de groupe
 
 
 Pour les scénarios exigeant que l’utilisateur JEA accède à des ressources réseau telles que d’autres ordinateurs ou services web, un compte de service géré par un groupe (gMSA) est une identité plus appropriée.
@@ -110,13 +105,11 @@ Les comptes gMSA ne doivent être utilisés que lorsque l’accès aux ressource
 > Les comptes de service gérés par un groupe sont disponibles uniquement dans Windows PowerShell 5.1 et les versions plus récentes, et sur les ordinateurs joints à un domaine.
 
 
-<a id="more-information-about-run-as-users" class="xliff"></a>
-#### Informations complémentaires sur les utilisateurs « Exécuter en tant que »
+#### <a name="more-information-about-run-as-users"></a>Informations complémentaires sur les utilisateurs « Exécuter en tant que »
 
 Vous trouverez plus d’informations sur les identités « Exécuter en tant que » et sur leur rôle dans la sécurité d’une session JEA dans l’article [considérations en matière de sécurité](security-considerations.md).
 
-<a id="session-transcripts" class="xliff"></a>
-### Transcription de sessions
+### <a name="session-transcripts"></a>Transcription de sessions
 
 Il est recommandé de configurer un fichier de configuration de session JEA de manière à enregistrer automatiquement les transcriptions des sessions des utilisateurs.
 Les transcriptions de sessions PowerShell contiennent des informations sur l’utilisateur connecté, l’identité « Exécuter en tant que » affectée et les commandes exécutées par l’utilisateur.
@@ -132,8 +125,7 @@ Le dossier spécifié doit être configuré de façon à empêcher les utilisate
 Les transcriptions sont écrites dans le dossier par le compte système local, qui a besoin d’un accès en lecture et en écriture au répertoire.
 Les utilisateurs standard ne doivent avoir aucun accès au dossier, et un ensemble limité d’administrateurs de sécurité doit y avoir accès pour vérifier les transcriptions.
 
-<a id="user-drive" class="xliff"></a>
-### Lecteur utilisateur
+### <a name="user-drive"></a>Lecteur utilisateur
 
 Si vos utilisateurs connectés ont besoin de copier des fichiers vers/à partir du point de terminaison JEA afin d’exécuter une commande, vous pouvez activer le lecteur utilisateur dans le fichier de configuration de session.
 Le lecteur utilisateur est un [PSDrive](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/cookbooks/managing-windows-powershell-drives) mappé à un dossier unique pour chaque utilisateur connecté.
@@ -158,8 +150,7 @@ Si vous ne souhaitez pas que les données du lecteur utilisateur soient persista
 > [!NOTE]
 > Le lecteur utilisateur est disponible uniquement dans Windows PowerShell 5.1 et les versions ultérieures.
 
-<a id="role-definitions" class="xliff"></a>
-### Définitions de rôles
+### <a name="role-definitions"></a>Définitions de rôles
 
 Les définitions de rôles d’un fichier de configuration de session définissent le mappage des *utilisateurs* aux *rôles*.
 Chaque utilisateur ou groupe de ce champ reçoit automatiquement l’autorisation d’accès au point de terminaison JEA lors de son enregistrement.
@@ -186,8 +177,7 @@ RoleDefinitions = @{
 }
 ```
 
-<a id="role-capability-search-order" class="xliff"></a>
-### Ordre de recherche des capacités de rôle
+### <a name="role-capability-search-order"></a>Ordre de recherche des capacités de rôle
 Comme l’indique l’exemple ci-dessus, les capacités de rôle sont référencées par le nom plat (nom du fichier sans l’extension) du fichier de capacités de rôle.
 Si plusieurs capacités de rôle sont disponibles sur le système avec le même nom plat, PowerShell utilise son ordre de recherche implicite pour sélectionner le fichier effectif de capacités de rôle.
 Il ne donnera **pas** accès à tous les fichiers de capacités de rôle portant le même nom.
@@ -200,8 +190,7 @@ Le premier fichier de capacités de rôle trouvé qui correspond au nom requis s
 
 Étant donné que l’ordre de recherche des capacités de rôle n’est pas déterministe lorsque deux ou plusieurs capacités de rôle partagent le même nom, il est **fortement recommandé** de vous assurer que les capacités de rôle ont des noms uniques sur votre ordinateur.
 
-<a id="conditional-access-rules" class="xliff"></a>
-### Règles d’accès conditionnel
+### <a name="conditional-access-rules"></a>Règles d’accès conditionnel
 
 Tous les utilisateurs et groupes inclus dans le champ RoleDefinitions reçoivent automatiquement l’accès aux points de terminaison JEA.
 Les règles d’accès conditionnel permettent d’affiner cet accès et exigent que les utilisateurs appartiennent à d’autres groupes de sécurité qui n’affectent pas les rôles qui leur sont affectés.
@@ -226,21 +215,18 @@ RequiredGroups = @{ And = 'elevated-jea', @{ Or = '2FA-logon', 'smartcard-logon'
 > [!NOTE]
 > Les règles d’accès conditionnel sont disponibles uniquement dans Windows PowerShell 5.1 et les versions ultérieures.
 
-<a id="other-properties" class="xliff"></a>
-### Autres propriétés
+### <a name="other-properties"></a>Autres propriétés
 Les fichiers de configuration de session peuvent également faire les mêmes choses qu’un fichier de capacités de rôle, sauf donner accès aux utilisateurs connectés à des commandes différentes.
 Si vous souhaitez autoriser tous les utilisateurs à accéder à des applets de commande, fonctions ou fournisseurs spécifiques, vous pouvez le faire directement dans le fichier de configuration de session.
 Pour obtenir la liste complète des propriétés prises en charge dans le fichier de configuration de session, exécutez `Get-Help New-PSSessionConfigurationFile -Full`.
 
-<a id="testing-a-session-configuration-file" class="xliff"></a>
-## Tester un fichier de configuration de session
+## <a name="testing-a-session-configuration-file"></a>Tester un fichier de configuration de session
 
 Vous pouvez tester une configuration de session avec l’applet de commande [Test-PSSessionConfigurationFile](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/test-pssessionconfigurationfile).
 Il est fortement recommandé de tester votre fichier de configuration de session, si vous avez modifié le fichier pssc manuellement à l’aide d’un éditeur de texte, pour vérifier que la syntaxe est correcte.
 Si le fichier de configuration de session ne passe pas ce test, son enregistrement sur le système ne réussira pas.
 
-<a id="sample-session-configuration-file" class="xliff"></a>
-## Exemple de fichier de configuration de session
+## <a name="sample-session-configuration-file"></a>Exemple de fichier de configuration de session
 
 Voici un exemple complet montrant comment créer et valider une configuration de session pour JEA.
 Notez que les définitions de rôles sont créées et stockées dans la variable `$roles` par souci de commodité et de lisibilité.
@@ -257,14 +243,12 @@ New-PSSessionConfigurationFile -SessionType RestrictedRemoteServer -Path .\JEACo
 Test-PSSessionConfigurationFile -Path .\JEAConfig.pssc # should yield True
 ```
 
-<a id="updating-session-configuration-files" class="xliff"></a>
-## Mettre à jour les fichiers de configuration de session
+## <a name="updating-session-configuration-files"></a>Mettre à jour les fichiers de configuration de session
 
 Si vous avez besoin de modifier les propriétés d’une configuration de session JEA, y compris le mappage des utilisateurs aux rôles, vous devez [annuler](register-jea.md#unregistering-jea-configurations) et [renouveler l’enregistrement](register-jea.md) de la configuration de session JEA.
 Lorsque vous enregistrez de nouveau la configuration de session JEA, utilisez un fichier de configuration de session PowerShell mis à jour qui inclut les modifications désirées.
 
-<a id="next-steps" class="xliff"></a>
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 - [Enregistrer une configuration JEA](register-jea.md)
 - [Créer des rôles JEA](role-capabilities.md)

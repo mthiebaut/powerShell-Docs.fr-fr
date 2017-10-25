@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="find-dscresource" class="xliff"></a>
-# Find-DscResource
+# <a name="find-dscresource"></a>Find-DscResource
 
 Recherche des ressources DSC dans des modules.
 
-<a id="description" class="xliff"></a>
-## Description
+## <a name="description"></a>Description
 
 L’applet de commande Find-DscResource recherche des ressources [DSC (Configuration de l’état souhaité)](https://msdn.microsoft.com/en-us/PowerShell/dsc/overview) contenues dans les modules qui correspondent aux critères spécifiés à partir des référentiels enregistrés.
 Pour chaque module qu’elle détecte, Find-DscResource retourne un objet PSGetDscResourceInfo que vous pouvez rediriger vers Install-Module pour installer les modules contenant les ressources retournées par cette applet de commande.
@@ -36,19 +34,16 @@ Une ressource peut modéliser un élément générique comme un fichier ou spéc
 - Find-DscResource peut filtrer le langage de recherche propre au référentiel avec le paramètre -Filter.
 - Find-DscResource peut filtrer les modules à partir de l’ensemble ou de certains des référentiels enregistrés.
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 ```powershell
 Get-Command -Name Find-DscResource -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [Find-DscResource](http://go.microsoft.com/fwlink/?LinkId=517196)
 
-<a id="example-commands" class="xliff"></a>
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 ```powershell
 
 # Find a specific DSC Resource

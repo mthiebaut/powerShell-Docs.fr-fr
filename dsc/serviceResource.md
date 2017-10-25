@@ -10,16 +10,14 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-service-resource" class="xliff"></a>
-# Ressource Service dans DSC
+# <a name="dsc-service-resource"></a>Ressource Service dans DSC
 
 > S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
 
 La ressource **Service** dans la configuration d’état souhaité (DSC) Windows PowerShell fournit un mécanisme pour gérer des services sur un nœud cible.
 
-<a id="syntax" class="xliff"></a>
-## Syntaxe
+## <a name="syntax"></a>Syntaxe
 
 ```
 Service [string] #ResourceName
@@ -37,8 +35,7 @@ Service [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriétés
+## <a name="properties"></a>Propriétés
 
 |  Propriété  |  Description   | 
 |---|---| 
@@ -53,8 +50,7 @@ Service [string] #ResourceName
 | Ensure | Indique si le service cible existe sur le système. Affectez la valeur **Absent** à cette propriété pour vous assurer que le service cible n’existe pas. La valeur **Present** (valeur par défaut) permet de s’assurer que le service cible existe.|
 | Path | Indique le chemin du fichier binaire d’un nouveau service.| 
 
-<a id="example" class="xliff"></a>
-## Exemple
+## <a name="example"></a>Exemple
 
 ```powershell
 configuration ServiceTest

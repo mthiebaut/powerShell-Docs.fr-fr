@@ -10,11 +10,9 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="powershellget-overview" class="xliff"></a>
-# Vue d’ensemble de PowerShellGet
+# <a name="powershellget-overview"></a>Vue d’ensemble de PowerShellGet
 
 Le module PowerShellGet contient des applets de commande permettant de détecter, d’installer, de mettre à jour et de publier les artefacts PowerShell, tels que les modules, les ressources DSC, les fonctionnalités de rôle et les scripts à partir du référentiel https://www.PowerShellGallery.com et d’autres référentiels privés.
 
-<a id="powershellget-cmdlet-referencepsgetcmdletsreferencemd" class="xliff"></a>
-## [Référence d’applet de commande PowerShellGet](./psget_cmdlets_reference.md)
+## <a name="powershellget-cmdlet-referencepsgetcmdletsreferencemd"></a>[Référence d’applet de commande PowerShellGet](./psget_cmdlets_reference.md)
 

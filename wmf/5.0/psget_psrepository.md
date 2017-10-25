@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="register-a-powershell-repository" class="xliff"></a>
-# Inscrire un dépôt PowerShell
+# <a name="register-a-powershell-repository"></a>Inscrire un dépôt PowerShell
 Vous pouvez configurer PowerShellGet pour qu’il opère sur des dépôts internes. Vous devez pour cela utiliser les ajouts suivants :
 - Register-PSRepository : inscrit un dépôt pour l’utilisateur actuel.
 - Unregister-PSRepository : supprime un dépôt inscrit pour l’utilisateur actuel.

@@ -10,15 +10,13 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-windowsprocess-resource" class="xliff"></a>
-# Ressource WindowsProcess dans DSC
+# <a name="dsc-windowsprocess-resource"></a>Ressource WindowsProcess dans DSC
 
 > S’applique à : Windows PowerShell 5.0
 
 La ressource **ProcessSet** dans la configuration d’état souhaité (DSC) Windows PowerShell fournit un mécanisme pour configurer des processus sur un nœud cible. Cette ressource est une [ressource composite](authoringResourceComposite.md) qui appelle la ressource [WindowsProcess](windowsProcessResource.md) pour chaque groupe spécifié dans le paramètre `GroupName`.
 
-<a id="syntax" class="xliff"></a>
-## Syntaxe
+## <a name="syntax"></a>Syntaxe
 
 ```
 WindowsProcess [string] #ResourceName
@@ -35,8 +33,7 @@ WindowsProcess [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriétés
+## <a name="properties"></a>Propriétés
 |  Propriété  |  Description   | 
 |---|---| 
 | Arguments| Chaîne qui contient les arguments à passer au processus en l’état. Si vous devez passer plusieurs arguments, placez-les dans cette chaîne.| 

@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="setting-up-a-dsc-pull-client" class="xliff"></a>
-# Configuration d’un client collecteur DSC
+# <a name="setting-up-a-dsc-pull-client"></a>Configuration d’un client collecteur DSC
 
 > S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 

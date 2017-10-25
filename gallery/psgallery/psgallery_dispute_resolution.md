@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dispute-resolution" class="xliff"></a>
-# Règlement des litiges
+# <a name="dispute-resolution"></a>Règlement des litiges
 
 Ce document est une procédure recommandée de résolution des litiges qui aide les membres de la Communauté à résoudre les litiges avec d’autres éditeurs PowerShell Gallery.
 
-<a id="process" class="xliff"></a>
-## Procédure
+## <a name="process"></a>Procédure
 
 1. Contactez les propriétaires de l’élément pour lequel vous avez un litige en utilisant le lien **Contacter les propriétaires** situé sur la page des détails de l’élément.
 Décrivez votre problème de façon simple et directe.
@@ -25,8 +23,7 @@ Décrivez votre problème de façon simple et directe.
 L’équipe de support technique PowerShellGallery.com tentera de résoudre le litige.
 
 
-<a id="prohibited-use" class="xliff"></a>
-## Utilisation interdite
+## <a name="prohibited-use"></a>Utilisation interdite
 
 Les éléments suivants ne sont pas autorisés dans la galerie PowerShell Gallery publique et seront immédiatement supprimés sans discussion.  Les propriétaires de l’élément seront avertis si leur élément est supprimé.
 

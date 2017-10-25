@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="allowing-for-identical-duplicate-resources-in-a-configuration" class="xliff"></a>
-# Autorisation des ressources en double identiques dans une configuration
+# <a name="allowing-for-identical-duplicate-resources-in-a-configuration"></a>Autorisation des ressources en double identiques dans une configuration
 
 DSC n’autorise pas et ne gère pas les définitions de ressources conflictuelles dans une configuration. Au lieu d’essayer de résoudre le conflit, il échoue tout simplement. Avec l’augmentation de la réutilisation des configurations due, entre autres, aux ressources composites, des conflits se produiront plus souvent. Quand des définitions de ressources conflictuelles sont identiques, DSC doit agir intelligemment et les autoriser. Dans cette version, l’existence de plusieurs instances de ressources ayant des définitions identiques est prise en charge :
 

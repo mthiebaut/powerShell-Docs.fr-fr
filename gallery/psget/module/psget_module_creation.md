@@ -10,10 +10,8 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="when-to-include-a-project-site-license-url-custom-icon" class="xliff"></a>
-## Quand inclure un site de projets, une URL de licence, une icône personnalisée ?
+## <a name="when-to-include-a-project-site-license-url-custom-icon"></a>Quand inclure un site de projets, une URL de licence, une icône personnalisée ?
 
 
-<a id="what-is-minimum-powershell-version" class="xliff"></a>
-## Quelle est la version minimale de PowerShell ?
+## <a name="what-is-minimum-powershell-version"></a>Quelle est la version minimale de PowerShell ?
 

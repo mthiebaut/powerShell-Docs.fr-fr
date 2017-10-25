@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="specifying-cross-node-dependencies" class="xliff"></a>
-# Spécification de dépendances entre nœuds
+# <a name="specifying-cross-node-dependencies"></a>Spécification de dépendances entre nœuds
 
 Avec les ressources WaitFor\* intégrées (`WaitForAll`, `WaitForAny` et `WaitForSome`), vous pouvez maintenant spécifier des dépendances entre ordinateurs lors des exécutions de configuration, sans orchestration externe. 
 

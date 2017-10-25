@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="set-dsclocalconfigurationmanager-cmdlet-supports--force-parameter" class="xliff"></a>
-# L’applet de commande Set-DscLocalConfigurationManager prend en charge le paramètre -force
+# <a name="set-dsclocalconfigurationmanager-cmdlet-supports--force-parameter"></a>L’applet de commande Set-DscLocalConfigurationManager prend en charge le paramètre -force
 
 Nous avons ajouté la prise en charge d’un nouveau paramètre à l’applet de commande Set-DscLocalConfigurationManager. Il permet à l’utilisateur de réinitialiser la métaconfiguration sur l’ordinateur de façon déterministe quand d’autres opérations (telles que la vérification de cohérence) s’exécutent en arrière-plan, car cela entraîne l’arrêt de toutes les opérations en cours d’exécution.
 

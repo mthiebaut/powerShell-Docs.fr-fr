@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-user-resource" class="xliff"></a>
-#Ressource User dans DSC#
+#<a name="dsc-user-resource"></a>Ressource User dans DSC#
 
  
 >S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -20,8 +19,7 @@ ms.lasthandoff: 06/12/2017
 La ressource __User__ dans la configuration d’état souhaité (DSC) Windows PowerShell fournit un mécanisme pour gérer des comptes d’utilisateur locaux sur le nœud cible.
 
 
-<a id="syntax" class="xliff"></a>
-##Syntaxe##
+##<a name="syntax"></a>Syntaxe##
 
 ```
 User [string] #ResourceName
@@ -39,8 +37,7 @@ User [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriétés
+## <a name="properties"></a>Propriétés
 |  Propriété  |  Description   | 
 |---|---| 
 | UserName| Indique le nom du compte pour lequel vous voulez garantir un état spécifique.| 
@@ -54,8 +51,7 @@ User [string] #ResourceName
 | PasswordNeverExpires| Indique si le mot de passe doit expirer. Pour vous assurer que le mot de passe pour ce compte n’expire jamais, définissez cette propriété sur __$true__, et sur __$false__ si le mot de passe doit expirer. La valeur par défaut est __$false__.| 
 | DependsOn | Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource __ResourceName__ de type __ResourceType__, la syntaxe permettant d’utiliser cette propriété est `DependsOn = "[ResourceType]ResourceName"`.| 
 
-<a id="example" class="xliff"></a>
-## Exemple
+## <a name="example"></a>Exemple
 
 ```powershell
 User UserExample

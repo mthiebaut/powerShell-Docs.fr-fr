@@ -10,15 +10,13 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-packagemanagement-resource" class="xliff"></a>
-# Ressource DSC PackageManagement
+# <a name="dsc-packagemanagement-resource"></a>Ressource DSC PackageManagement
 
 > S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
 La ressource **PackageManagement** dans la configuration d’état souhaité (DSC) Windows PowerShell fournit un mécanisme permettant d’installer ou de désinstaller des packages de gestion des packages sur un nœud cible. Cette ressource nécessite le module **PackageManagement** qui est disponible sur http://PowerShellGallery.com.
 
-<a id="syntax" class="xliff"></a>
-## Syntaxe
+## <a name="syntax"></a>Syntaxe
 
 ```
 PackageManagement [string] #ResourceName
@@ -35,8 +33,7 @@ PackageManagement [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriétés
+## <a name="properties"></a>Propriétés
 |  Propriété  |  Description   | 
 |---|---| 
 | Nom| Spécifie le nom du package à installer ou à désinstaller.| 
@@ -49,16 +46,14 @@ PackageManagement [string] #ResourceName
 | ProviderName| Spécifie un nom de fournisseur de package auquel vous souhaitez limiter votre recherche de package. Pour obtenir les noms des fournisseurs de package, exécutez l’applet de commande Get-PackageProvider.| 
 | AdditionalParameters| Paramètres spécifiques à un fournisseur passés sous forme d’une table de hachage. Par exemple, pour le fournisseur NuGet, vous pouvez passer des paramètres supplémentaires tels que DestinationPath.| 
 
-<a id="additional-parameters" class="xliff"></a>
-## Paramètres supplémentaires
+## <a name="additional-parameters"></a>Paramètres supplémentaires
 Le tableau suivant répertorie les options de la propriété AdditionalParameters.
 |  Paramètre  | Description   | 
 |---|---|
 | DestinationPath| Utilisé par les fournisseurs, notamment le fournisseur Nuget intégré. Spécifie un emplacement de fichier où vous souhaitez installer le package.|
 | InstallationPolicy| Utilisé par les fournisseurs, notamment le fournisseur Nuget intégré. Détermine si vous faites confiance à la source du package. Valeurs disponibles : « Untrusted », « Trusted ».|
 
-<a id="example" class="xliff"></a>
-## Exemple
+## <a name="example"></a>Exemple
 
 Cet exemple installe le package NuGet **JQuery** et le module PowerShell **GistProvider** à l’aide de la ressource DSC **PackageManagement**. Cet exemple vérifie d’abord que les sources de package nécessaires sont disponibles, puis définit l’état attendu des packages **JQuery** et **GistProvider** (NuGet et PowerShell, respectivement).
 

@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="get-installedmodule" class="xliff"></a>
-# Get-InstalledModule
+# <a name="get-installedmodule"></a>Get-InstalledModule
 
 Obtient les modules installés sur un ordinateur.
 
-<a id="description" class="xliff"></a>
-## Description
+## <a name="description"></a>Description
 
 L’applet de commande Get-InstalledModule obtient les modules PowerShell qui ont été installés sur un ordinateur à l’aide de l’applet de commande Install-Module.
 
@@ -29,19 +27,16 @@ Pour chaque module installé, Get-InstalledModule retourne un objet PSRepository
   - Si le paramètre RequiredVersion n’est pas spécifié, Get-InstalledModule retourne la dernière version du module installé qui est supérieure ou égale à la version minimale spécifiée ou la dernière version du module si aucune version minimale n’est spécifiée. 
   - Si le paramètre RequiredVersion est spécifié, Get-InstalledModule retourne uniquement la version du module installé qui correspond exactement à la version spécifiée.
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 ```powershell
 Get-Command -Name Get-InstalledModule -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [Get-InstalledModule](http://go.microsoft.com/fwlink/?LinkId=526863)
 
-<a id="example-commands" class="xliff"></a>
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 
 ```powershell
 
@@ -105,8 +100,7 @@ InstalledLocation          : C:\Program Files\WindowsPowerShell\Modules\DJoin\1.
 
 
 
-<a id="installeddate-and-updateddate-properties-in-psgetrepositoryiteminfo-object" class="xliff"></a>
-## Propriétés InstalledDate et UpdatedDate dans l’objet PSGetRepositoryItemInfo
+## <a name="installeddate-and-updateddate-properties-in-psgetrepositoryiteminfo-object"></a>Propriétés InstalledDate et UpdatedDate dans l’objet PSGetRepositoryItemInfo
 
     During the install operation:
         InstalledDate: current DateTime (Get-Date) value

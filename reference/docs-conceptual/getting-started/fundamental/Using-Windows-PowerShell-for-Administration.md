@@ -1,5 +1,5 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Utilisation de Windows PowerShell pour l’administration"
 ms.assetid: db6334ec-ace6-436d-ab88-77aefc817511

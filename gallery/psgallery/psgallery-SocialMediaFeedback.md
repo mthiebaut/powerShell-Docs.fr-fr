@@ -10,16 +10,14 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="providing-feedback-via-social-media-or-comments" class="xliff"></a>
-# Envoi de commentaires via des médias sociaux ou des commentaires
+# <a name="providing-feedback-via-social-media-or-comments"></a>Envoi de commentaires via des médias sociaux ou des commentaires
 
 Powershell Gallery prend en charge les deux approches pour les utilisateurs qui souhaitent fournir des commentaires publics sur un élément :
 
 * Utiliser les liens sur le côté gauche pour « partager » un élément sur les réseaux sociaux Facebook, LinkedIn et Twitter ;
 * utiliser la fonctionnalité Commenter pour publier des commentaires sur un élément et permettre aux auteurs de suivre les commentaires sur les éléments qu’ils publient.
 
-<a id="social-media-feedback" class="xliff"></a>
-## Commentaires sur les réseaux sociaux
+## <a name="social-media-feedback"></a>Commentaires sur les réseaux sociaux
 Sur le côté gauche de la page pour chaque élément dans PowerShell Gallery, vous trouverez des liens pour Facebook, LinkedIn et Twitter.   
 En cliquant sur ces liens, vous ouvrez le réseau social et pouvez rapidement partager un lien vers l’élément.
 
@@ -29,8 +27,7 @@ Les utilisateurs sont invités à procéder ainsi s’ils souhaitent recommander
 Étant donné que cela n'indique que le nombre de fois où un élément a été partagé, cela sera interprété comme si d’autres utilisateurs cliquaient sur « J’aime » pour l’élément.
 
 
-<a id="comments" class="xliff"></a>
-## Commentaires
+## <a name="comments"></a>Commentaires
 PowerShell Gallery utilise le service LiveFyre pour permettre aux utilisateurs de commenter sur les éléments.
 Les utilisateurs qui ont des recommandations ou des commentaires peuvent utiliser cette fonctionnalité pour fournir des commentaires qui sont visibles par toute personne qui consulte la page de l’élément.
 Les propriétaires d’élément peuvent suivre ces commentaires et être avertis lorsqu’un utilisateur publie un commentaire. 

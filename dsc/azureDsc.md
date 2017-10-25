@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="using-dsc-on-microsoft-azure" class="xliff"></a>
-# Utilisation de DSC sur Microsoft Azure
+# <a name="using-dsc-on-microsoft-azure"></a>Utilisation de DSC sur Microsoft Azure
 
 La configuration d’état souhaité (DSC) est prise en charge dans Microsoft Azure par le biais du [gestionnaire d’extensions de configuration d’état souhaité Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-extensions-dsc-overview) et d’[Azure Automation DSC](https://docs.microsoft.com/azure/automation/automation-dsc-overview).
 
-<a id="azure-desired-state-configuration-extension-handler" class="xliff"></a>
-## Gestionnaire d’extensions de configuration d’état souhaité Azure
+## <a name="azure-desired-state-configuration-extension-handler"></a>Gestionnaire d’extensions de configuration d’état souhaité Azure
 
 L’extension Azure DSC permet aux machines virtuelles hébergées dans Microsoft Azure d’être gérées avec DSC. Pour plus d'informations, voir les rubriques suivantes :
 
@@ -24,8 +22,7 @@ L’extension Azure DSC permet aux machines virtuelles hébergées dans Microsof
 - [VMSS Windows et configuration d’état souhaité avec des modèles Azure Resource Manager](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-extensions-dsc-template)
 - [Transfert d’informations d’identification au gestionnaire de l’extension de configuration d’état souhaité (DSC) Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-extensions-dsc-credentials)
 
-<a id="azure-automation-dsc" class="xliff"></a>
-## Azure Automation DSC
+## <a name="azure-automation-dsc"></a>Azure Automation DSC
 
 Le [service Azure Automation](https://azure.microsoft.com/services/automation/) vous permet de gérer les nœuds gérés, ressources et configurations DSC dans Azure. Pour plus d'informations, voir les rubriques suivantes :
 

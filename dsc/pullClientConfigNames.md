@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="setting-up-a-pull-client-using-configuration-names" class="xliff"></a>
-# Configuration d’un client collecteur à l’aide du nom de configuration
+# <a name="setting-up-a-pull-client-using-configuration-names"></a>Configuration d’un client collecteur à l’aide du nom de configuration
 
 > S’applique à : Windows PowerShell 5.0
 
@@ -73,8 +72,7 @@ Set-DSCLocalConfigurationManager localhost –Path .\PullClientConfigNames –Ve
 Vous devez encore utiliser **ConfigurationID** avec un serveur collecteur SMB.
 Pour plus d’informations sur la configuration d’un serveur collecteur à l’aide de **ConfigurationID**, consultez [Configuration d’un client collecteur à l’aide de l’ID de configuration](PullClientConfigNames.md)
 
-<a id="resource-and-report-servers" class="xliff"></a>
-## Serveurs de ressources et de rapports
+## <a name="resource-and-report-servers"></a>Serveurs de ressources et de rapports
 
 Si vous spécifiez uniquement un bloc **ConfigurationRepositoryWeb** ou **ConfigurationRepositoryShare** dans votre configuration du gestionnaire de configuration local (comme dans l’exemple précédent), le client collecteur extrait des ressources du serveur spécifié, mais il ne lui envoie pas de rapport.
 Vous pouvez utiliser un serveur collecteur unique pour les configurations, les ressources et les rapports, mais vous devez créer un bloc **ReportRepositoryWeb** pour configurer les rapports.
@@ -149,8 +147,7 @@ configuration PullClientConfigNames
 PullClientConfigNames
 ```
 
-<a id="see-also" class="xliff"></a>
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 * [Configuration d’un client collecteur à l’aide de l’ID de configuration](PullClientConfigNames.md)
 * [Configuration d’un serveur collecteur web DSC](pullServer.md)

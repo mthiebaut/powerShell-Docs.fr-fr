@@ -1,5 +1,5 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Redirection de données à l’aide d’applets de commande Out"
 ms.assetid: 2a4acd33-041d-43a5-a3e9-9608a4c52b0c

@@ -10,28 +10,24 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="gallery-search-syntax" class="xliff"></a>
-# Syntaxe de recherche PowerShell Gallery
+# <a name="gallery-search-syntax"></a>Syntaxe de recherche PowerShell Gallery
 
 PowerShell Gallery offre une zone de recherche de texte où vous pouvez utiliser des mots, des expressions et des mots clés pour limiter les résultats de la recherche.
 
-<a id="search-by-keywords" class="xliff"></a>
-## Recherche par mots clés
+## <a name="search-by-keywords"></a>Recherche par mots clés
 
     dsc azure sql
 
 La recherche fera de son mieux pour trouver des documents pertinents contenant les 3 mots clés et retourner les documents correspondants.
 
-<a id="search-using-phrases-and-keywords" class="xliff"></a>
-## Recherche à l’aide d’expressions et de mots clés
+## <a name="search-using-phrases-and-keywords"></a>Recherche à l’aide d’expressions et de mots clés
 
     "azure sql" deployment
 
 Si vous entrez une expression entre guillemets (« »), vous indiquez de rechercher une expression spécifique et non des mots clés distincts.
 Les documents correspondants doivent généralement contenir l’expression exacte « sql azure », y compris avec des différences de casse, par exemple « SQL Azure » et également le mot « déploiement ».
 
-<a id="filtering-on-fields" class="xliff"></a>
-## Filtrage sur les champs
+## <a name="filtering-on-fields"></a>Filtrage sur les champs
 
 Vous pouvez rechercher un ID (ou « Id » ou « id ») d’élément spécifique ou certains autres champs en ajoutant en préfixe le nom du champ au terme recherché.
 
@@ -39,8 +35,7 @@ Actuellement, les champs sur lesquels la recherche peut porter sont « Id », 
 
 [Quelle est la différence entre l’ID et le titre ? L’ID est le nom que vous utilisez dans la console. Le titre est ce qui figure en haut de la page de l’élément dans les résultats de la recherche.]
 
-<a id="examples" class="xliff"></a>
-## Exemples
+## <a name="examples"></a>Exemples
 
     ID:"PSReadline"
     id:"AzureRM.Profile"

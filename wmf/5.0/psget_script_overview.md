@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="powershell-script-discovery-install-and-management-with-powershellget" class="xliff"></a>
-# Découverte, installation et gestion des scripts PowerShell avec PowerShellGet
+# <a name="powershell-script-discovery-install-and-management-with-powershellget"></a>Découverte, installation et gestion des scripts PowerShell avec PowerShellGet
 
 La fonctionnalité de partage de script PowerShell a été ajoutée à PowerShellGet dans la version WMF 5.0 RTM.
 Les nouvelles applets de commande suivantes ont été ajoutées au module PowerShellGet pour prendre en charge les scripts PowerShell.

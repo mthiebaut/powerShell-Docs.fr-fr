@@ -10,30 +10,25 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="publish-script" class="xliff"></a>
-# Publish-Script
+# <a name="publish-script"></a>Publish-Script
 
 L’applet de commande Publish-Script publie le script spécifié sur la galerie en ligne.
 
-<a id="description" class="xliff"></a>
-## Description
+## <a name="description"></a>Description
 
 L’applet de commande Publish-Script permet de publier un fichier de script avec des métadonnées valides telles que version, GUID, auteur, description, et ainsi de suite. Le paramètre de commutateur Force de l’applet de commande Publish-Script démarre NuGet.exe sans demander confirmation.
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 
 ```powershell
 Get-Command -Name Publish-Script -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [Publish-Script](http://go.microsoft.com/fwlink/?LinkId=619788)
 
-<a id="example-commands" class="xliff"></a>
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 
 ```powershell
 # Publish the really basic script file with required metadata

@@ -10,20 +10,17 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="writing-a-custom-dsc-resource-with-mof" class="xliff"></a>
-# Écriture d’une ressource DSC personnalisée avec MOF
+# <a name="writing-a-custom-dsc-resource-with-mof"></a>Écriture d’une ressource DSC personnalisée avec MOF
 
 > S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Dans cette rubrique, nous allons définir le schéma d’une ressource DSC Windows PowerShell personnalisée dans un fichier MOF et implémenter cette ressource dans un fichier de script Windows PowerShell. Cette ressource personnalisée permet de créer et de gérer un site web.
 
-<a id="creating-the-mof-schema" class="xliff"></a>
-## Création du schéma MOF
+## <a name="creating-the-mof-schema"></a>Création du schéma MOF
 
 Le schéma définit les propriétés de votre ressource qui peuvent être configurées par un script de configuration DSC.
 
-<a id="folder-structure-for-a-mof-resource" class="xliff"></a>
-### Structure de dossiers pour une ressource MOF
+### <a name="folder-structure-for-a-mof-resource"></a>Structure de dossiers pour une ressource MOF
 
 Pour implémenter une ressource personnalisée DSC avec un schéma MOF, créez la structure de dossiers suivante. Le schéma MOF est défini dans le fichier Demo_IISWebsite.schema.mof et le script de la ressource est défini dans Demo_IISWebsite.psm1. Si vous le voulez, vous pouvez créer un fichier de manifeste de module (psd1).
 
@@ -39,8 +36,7 @@ $env:ProgramFiles\WindowsPowerShell\Modules (folder)
 
 Notez qu’il est nécessaire de créer un dossier nommé DSCResources sous le dossier de niveau supérieur, et que le dossier de chaque ressource doit porter le même nom que la ressource.
 
-<a id="the-contents-of-the-mof-file" class="xliff"></a>
-### Le contenu du fichier MOF
+### <a name="the-contents-of-the-mof-file"></a>Le contenu du fichier MOF
 
 Voici un exemple de fichier MOF qui peut être utilisé pour une ressource de site web personnalisée. Pour suivre cet exemple, enregistrez ce schéma dans un fichier et appelez le fichier *Demo_IISWebsite.schema.mof*.
 
@@ -70,8 +66,7 @@ Notez les éléments suivants concernant le code ci-dessus :
 * Il est recommandé d’utiliser une propriété appelée `Ensure` avec les valeurs `Present` et `Absent` dans votre ressource pour maintenir un style cohérent entre les ressources DSC intégrées.
 * Nommez le fichier de schéma de la ressource personnalisée comme suit : `classname.schema.mof`, où `classname` est l’identificateur qui suit le mot clé `class` dans votre définition de schéma.
 
-<a id="writing-the-resource-script" class="xliff"></a>
-### Écriture du script de la ressource
+### <a name="writing-the-resource-script"></a>Écriture du script de la ressource
 
 Le script de la ressource implémente la logique de la ressource. Dans ce module, vous devez inclure les trois fonctions **Get-TargetResource**, **Set-TargetResource** et **Test-TargetResource**. Les trois fonctions doivent accepter un jeu de paramètres identique à l’ensemble de propriétés définies dans le schéma MOF que vous avez créé pour votre ressource. Dans ce document, nous appelons cet ensemble de propriétés « propriétés de ressource ». Stockez ces trois fonctions dans un fichier appelé <ResourceName>.psm1. Dans l’exemple suivant, les fonctions sont stockées dans un fichier appelé Demo_IISWebsite.psm1.
 
@@ -224,8 +219,7 @@ $result
 >Cette applet de commande écrit du texte dans le flux de message détaillé. 
 >Par défaut, le flux de message détaillé n’est pas affiché, mais vous pouvez l’afficher en modifiant la valeur de la variable **$VerbosePreference** ou en utilisant le paramètre **Verbose** dans DSC cmdlets = new.
 
-<a id="creating-the-module-manifest" class="xliff"></a>
-### Création du manifeste de module
+### <a name="creating-the-module-manifest"></a>Création du manifeste de module
 
 Enfin, utilisez l’applet de commande **New-ModuleManifest** pour définir un fichier <ResourceName>.psd1 pour votre module de ressource personnalisé. Quand vous appelez cette applet de commande, référencez le fichier de module de script (.psm1) décrit dans la section précédente. Ajoutez **Get-TargetResource**, **Set-TargetResource** et **Test-TargetResource** à la liste des fonctions à exporter. Voici un exemple de fichier de manifeste.
 
@@ -281,8 +275,7 @@ FunctionsToExport = @("Get-TargetResource", "Set-TargetResource", "Test-TargetRe
 }
 ```
 
-<a id="supporting-psdscrunascredential" class="xliff"></a>
-## Prise en charge de PsDscRunAsCredential
+## <a name="supporting-psdscrunascredential"></a>Prise en charge de PsDscRunAsCredential
 
 >**Remarque :** **PsDscRunAsCredential** est pris en charge dans PowerShell 5.0 et versions ultérieures.
 

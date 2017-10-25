@@ -9,13 +9,11 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="creating-custom-types-using-powershell-classes" class="xliff"></a>
-# Création de types personnalisés à l’aide de classes PowerShell
+# <a name="creating-custom-types-using-powershell-classes"></a>Création de types personnalisés à l’aide de classes PowerShell
 
 Nous avons amélioré le langage PowerShell pour la définition des classes et d’autres types définis par l’utilisateur à l’aide de la syntaxe formelle et d’une sémantique similaire aux autres langages de programmation orientés objet. L’objectif est de permettre aux développeurs et aux professionnels de l’informatique d’utiliser PowerShell pour une plus grande variété de cas d’usage, de simplifier le développement des artefacts PowerShell (tels que les ressources DSC) et d’accélérer la couverture des surfaces de gestion.
 
-<a id="supported-scenarios-in-this-release" class="xliff"></a>
-## Scénarios pris en charge dans cette version
+## <a name="supported-scenarios-in-this-release"></a>Scénarios pris en charge dans cette version
 
 -   Définition de ressources DSC et de leurs types associés à l’aide du langage PowerShell
 -   Définition de types personnalisés dans PowerShell à l’aide de constructions de programmation orientées objet bien connues, telles que les classes, propriétés, méthodes, etc.

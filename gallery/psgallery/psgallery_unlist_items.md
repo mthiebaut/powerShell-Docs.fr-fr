@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="unlisting-items" class="xliff"></a>
-# Retrait d’éléments de la liste
+# <a name="unlisting-items"></a>Retrait d’éléments de la liste
 
 **Pourquoi la suppression d’un élément de PowerShell Gallery n’est-elle pas proposée en option ?**
 

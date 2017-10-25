@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-waitforany-resource" class="xliff"></a>
-# Ressource DSC WaitForAny
+# <a name="dsc-waitforany-resource"></a>Ressource DSC WaitForAny
 
 > S’applique à : Windows PowerShell 5.1 et ultérieur
 
@@ -20,8 +19,7 @@ La ressource de configuration d’état souhaité (DSC) **WaitForSome** peut êt
 La ressource réussit si la ressource spécifiée par la propriété **ResourceName** est dans l’état souhaité sur un des nœuds cible définis dans la propriété **NodeName**.
 
 
-<a id="syntax" class="xliff"></a>
-## Syntaxe
+## <a name="syntax"></a>Syntaxe
 
 ```
 WaitForAny [string] #ResourceName
@@ -35,8 +33,7 @@ WaitForAny [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriétés
+## <a name="properties"></a>Propriétés
 
 |  Propriété  |  Description   | 
 |---|---| 
@@ -48,8 +45,7 @@ WaitForAny [string] #ResourceName
 | DependsOn | Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource __ResourceName__ de type __ResourceType__, la syntaxe permettant d’utiliser cette propriété est `DependsOn = "[ResourceType]ResourceName"`.|
 
 
-<a id="example" class="xliff"></a>
-## Exemple
+## <a name="example"></a>Exemple
 
 Pour obtenir un exemple d’utilisation de cette ressource, consultez [Spécification des dépendances entre nœuds](crossNodeDependencies.md)
 

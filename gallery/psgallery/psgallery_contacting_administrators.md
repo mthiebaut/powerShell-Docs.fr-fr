@@ -10,11 +10,9 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="contact-gallery-administrators" class="xliff"></a>
-# Contacter les administrateurs de la galerie
+# <a name="contact-gallery-administrators"></a>Contacter les administrateurs de la galerie
 
-<a id="when-to-contact-gallery-administrators" class="xliff"></a>
-## Quand contacter les administrateurs de la galerie
+## <a name="when-to-contact-gallery-administrators"></a>Quand contacter les administrateurs de la galerie
 
 Vous devez contacter les administrateurs de la galerie dans les cas suivants :
 
@@ -24,8 +22,7 @@ Vous devez contacter les administrateurs de la galerie dans les cas suivants :
 4. Vous avez un litige de nom d’élément avec d’autres utilisateurs, que vous ne pouvez pas résoudre en contactant ces derniers.
 5. Vous avez été contacté par les administrateurs de la galerie concernant vos éléments de la galerie et vous voulez répondre.
 
-<a id="how-to-contact-gallery-administrators" class="xliff"></a>
-## Comment contacter les administrateurs de la galerie
+## <a name="how-to-contact-gallery-administrators"></a>Comment contacter les administrateurs de la galerie
 
 1. Envoyez-nous un courrier électronique : cgadmin@microsoft.com.
 2. Si vous signalez un abus relatif à un élément, vous trouverez le lien Signaler un abus sous les informations relatives à l’élément dans le volet gauche.

@@ -11,11 +11,9 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="improvements-to-just-enough-administration-jea" class="xliff"></a>
-# Améliorations de Just Enough Administration (JEA)
+# <a name="improvements-to-just-enough-administration-jea"></a>Améliorations de Just Enough Administration (JEA)
 
-<a id="constrained-file-copy-tofrom-jea-endpoints" class="xliff"></a>
-## Copie de fichiers contrainte vers/depuis des points de terminaison JEA
+## <a name="constrained-file-copy-tofrom-jea-endpoints"></a>Copie de fichiers contrainte vers/depuis des points de terminaison JEA
 
 Vous pouvez maintenant copier les fichiers à distance vers/depuis un point de terminaison JEA et être assuré que l’utilisateur connecté ne peut copier absolument *aucun* fichier sur votre système.
 Ceci est possible en configurant votre fichier PSSC pour monter un lecteur utilisateur pour la connexion des utilisateurs.
@@ -48,8 +46,7 @@ Copy-Item -Path User:\SampleFile.txt -Destination . -FromSession $jeasession
 
 Vous pouvez ensuite écrire des fonctions personnalisées pour traiter les données stockées dans le lecteur utilisateur et les mettre à disposition des utilisateurs dans votre fichier de fonctionnalité du rôle.
 
-<a id="support-for-group-managed-service-accounts" class="xliff"></a>
-## Prise en charge des comptes de service géré par un groupe
+## <a name="support-for-group-managed-service-accounts"></a>Prise en charge des comptes de service géré par un groupe
 
 Dans certains cas, une tâche que l’utilisateur doit effectuer dans une session JEA doit accéder à des ressources en dehors de l’ordinateur local.
 Quand une session JEA est configurée pour utiliser un compte virtuel, toute tentative pour atteindre ces ressources apparaît comme provenant de l’identité de l’ordinateur local, et non pas du compte virtuel ou de l’utilisateur connecté.
@@ -71,8 +68,7 @@ RunAsVirtualAccount = $false
 > Chaque utilisateur qui se connecte partage la même identité gMSA, qui peut avoir des autorisations pour toute votre entreprise.
 > Soyez très prudent quand vous choisissez d’utiliser un compte gMSA, et préférez toujours quand c’est possible les comptes virtuels qui sont limités à l’ordinateur local.
 
-<a id="conditional-access-policies" class="xliff"></a>
-## Stratégies d’accès conditionnel
+## <a name="conditional-access-policies"></a>Stratégies d’accès conditionnel
 
 JEA est une bonne solution pour limiter ce qu’une personne peut faire quand elle est connectée à un système pour le gérer, mais que se passe-t-il si vous voulez également limiter *les moments* où une personne peut utiliser JEA ?
 Nous avons ajouté des options de configuration dans les fichiers de configuration de session (.pssc) pour vous permettre de spécifier les groupes de sécurité auxquels l’utilisateur doit appartenir pour pouvoir établir une session JEA.
@@ -94,8 +90,7 @@ RequiredGroups = @{ Or = '2FA-logon', 'smartcard-logon' }
 RequiredGroups = @{ And = 'elevated-jea', @{ Or = '2FA-logon', 'smartcard-logon' }}
 ```
 
-<a id="fixed-virtual-accounts-are-now-supported-on-windows-server-2008-r2" class="xliff"></a>
-## Résolu : Les comptes virtuels sont maintenant pris en charge sur Windows Server 2008 R2
+## <a name="fixed-virtual-accounts-are-now-supported-on-windows-server-2008-r2"></a>Résolu : Les comptes virtuels sont maintenant pris en charge sur Windows Server 2008 R2
 Dans WMF 5.1, vous pouvez maintenant utiliser des comptes virtuels sur Windows Server 2008 R2, ce qui permet des configurations cohérentes et la parité des fonctionnalités entre Windows Server 2008 R2 et Windows Server 2016.
 Les comptes virtuels restent non pris en charge quand JEA est utilisé sur Windows 7.
 

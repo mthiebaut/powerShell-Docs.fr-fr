@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-windowspackagecab-resource" class="xliff"></a>
-# Ressource DSC WindowsPackageCab
+# <a name="dsc-windowspackagecab-resource"></a>Ressource DSC WindowsPackageCab
 
 > S’applique à : Windows PowerShell 5.1 et ultérieur
 
@@ -20,8 +19,7 @@ La ressource **WindowsPackageCab** dans la configuration d’état souhaité (DS
 Le nœud cible doit disposer du module DISM PowerShell installé. Pour plus d’informations, consultez [Utilisation de DISM Windows PowerShell](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/desktop/use-dism-in-windows-powershell-s14). 
 
 
-<a id="syntax" class="xliff"></a>
-## Syntaxe
+## <a name="syntax"></a>Syntaxe
 
 ```
 {
@@ -33,8 +31,7 @@ Le nœud cible doit disposer du module DISM PowerShell installé. Pour plus d’
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriétés
+## <a name="properties"></a>Propriétés
 
 |  Propriété  |  Description   | 
 |---|---| 
@@ -44,8 +41,7 @@ Le nœud cible doit disposer du module DISM PowerShell installé. Pour plus d’
 | LogPath| Indique le chemin complet où vous souhaitez que le fournisseur enregistre un fichier journal pour installer ou désinstaller le package.| 
 | DependsOn | Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’ID **ResourceName** et le type **ResourceType**, utilisez la syntaxe suivante pour cette propriété : DependsOn = "[ResourceType]ResourceName"| 
 
-<a id="example" class="xliff"></a>
-## Exemple
+## <a name="example"></a>Exemple
 
 L’exemple de configuration suivant accepte des paramètres d’entrée et garantit que le fichier spécifié par le paramètre `$Name` est installé.
 

@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-for-linux-nxarchive-resource" class="xliff"></a>
-# Ressource nxArchive dans DSC pour Linux
+# <a name="dsc-for-linux-nxarchive-resource"></a>Ressource nxArchive dans DSC pour Linux
 
 La ressource **nxArchive** de la configuration d’état souhaité (DSC) de Windows PowerShell fournit un mécanisme permettant de décompresser les fichiers d’archive (.zip) à un emplacement spécifique d’un nœud Linux.
 
-<a id="syntax" class="xliff"></a>
-## Syntaxe
+## <a name="syntax"></a>Syntaxe
 
 ```
 nxArchive <string> #ResourceName
@@ -30,8 +28,7 @@ nxArchive <string> #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriétés
+## <a name="properties"></a>Propriétés
 
 |  Propriété |  Description | 
 |---|---|
@@ -42,8 +39,7 @@ nxArchive <string> #ResourceName
 | DependsOn | Indique que la configuration d’une autre ressource doit être effectuée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’**ID** **ResourceName** et le type **ResourceType**, utilisez la syntaxe suivante pour cette propriété : `DependsOn = "[ResourceType]ResourceName"`.| 
 | Ensure| Détermine s’il faut vérifier que le contenu de l’archive se trouve à la **Destination** donnée. Définissez cette propriété sur Present pour vous assurer que le contenu se trouve à l’emplacement donné. Définissez la propriété sur Absent pour vous assurer que le contenu ne se trouve pas à l’emplacement donné. La valeur par défaut est « Present ».| 
 
-<a id="example" class="xliff"></a>
-## Exemple
+## <a name="example"></a>Exemple
 
 L’exemple suivant montre comment utiliser la ressource **nxArchive** pour vous assurer que le contenu d’un fichier d’archive appelé `website.tar` existe et qu’il est extrait à une destination donnée.
 

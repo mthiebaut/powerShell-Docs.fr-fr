@@ -9,13 +9,11 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="new-language-features-in-powershell-50" class="xliff"></a>
-# Nouvelles fonctionnalités de langage dans PowerShell 5.0 
+# <a name="new-language-features-in-powershell-50"></a>Nouvelles fonctionnalités de langage dans PowerShell 5.0 
 
 PowerShell 5.0 offre les nouveaux éléments de langage suivants dans Windows PowerShell :
 
-<a id="class-keyword" class="xliff"></a>
-## Mot clé classe
+## <a name="class-keyword"></a>Mot clé classe
 
 Le mot clé **class** définit une nouvelle classe. Il s’agit d’un véritable type .NET Framework. Les membres de la classe sont publics, mais uniquement dans l’étendue du module.
 Vous ne pouvez pas faire référence au nom de type sous forme de chaîne (par exemple, `New-Object` ne fonctionne pas), et dans cette version, vous ne pouvez pas utiliser de littéral de type (par exemple, `[MyClass]`) en dehors du fichier de script/module dans lequel la classe est définie.
@@ -27,8 +25,7 @@ class MyClass
 }
 ```
 
-<a id="enum-keyword-and-enumerations" class="xliff"></a>
-## Mot clé Enum et énumérations
+## <a name="enum-keyword-and-enumerations"></a>Mot clé Enum et énumérations
 
 La prise en charge du mot clé **enum** a été ajoutée. Il utilise le saut de ligne comme délimiteur.
 Limitations actuelles : vous ne pouvez pas définir un énumérateur en termes de lui-même, mais vous pouvez initialiser un enum en termes d’un autre enum, comme illustré dans l’exemple suivant.
@@ -60,14 +57,12 @@ enum SomeEnum { Max = 42 }
 enum OtherEnum { Max = [SomeEnum]::Max + 1 }
 ```
 
-<a id="import-dscresource" class="xliff"></a>
-## Import-DscResource
+## <a name="import-dscresource"></a>Import-DscResource
 
 **Import-DscResource** est désormais un mot clé véritablement dynamique.
 PowerShell analyse le module racine du module spécifié et recherche les classes qui contiennent l’attribut **DscResource**.
 
-<a id="implementingassembly" class="xliff"></a>
-## ImplementingAssembly
+## <a name="implementingassembly"></a>ImplementingAssembly
 
 Un nouveau champ, **ImplementingAssembly**, a été ajouté à ModuleInfo. Elle a comme valeur l’assembly dynamique créé pour un module de script si le script définit des classes, ou l’assembly chargé pour les modules binaires. Il n’est pas défini quand ModuleType = Manifest. 
 
@@ -93,8 +88,7 @@ $s = "hello"
 
 Tous les membres sont publics. 
 
-<a id="constructors-and-instantiation" class="xliff"></a>
-## Constructeurs et instanciation
+## <a name="constructors-and-instantiation"></a>Constructeurs et instanciation
 
 Les classes Windows PowerShell peuvent avoir des constructeurs. Ils ont le même nom que leur classe. Les constructeurs peuvent être surchargés. Les constructeurs statiques sont pris en charge. Les propriétés avec des expressions d’initialisation sont initialisées avant l’exécution du code dans un constructeur. Les propriétés statiques sont initialisées avant le corps d’un constructeur statique, et les propriétés d’instance sont initialisées avant le corps du constructeur non statique. Actuellement, il n’existe aucune syntaxe pour appeler un constructeur à partir d’un autre constructeur (comme la syntaxe C\# « : this() »). La solution de contournement consiste à définir une méthode Init commune. 
 
@@ -138,8 +132,7 @@ hashtable new(int capacity)
 hashtable new(int capacity, float loadFactor)
 ```
 
-<a id="methods" class="xliff"></a>
-## Méthodes
+## <a name="methods"></a>Méthodes
 
 Une méthode de classe Windows PowerShell est implémentée en tant que ScriptBlock ayant uniquement un bloc de fin. Toutes les méthodes sont publiques. L’exemple suivant montre comment définir une méthode nommée **DoSomething**.
 
@@ -163,15 +156,13 @@ $b.DoSomething(42)
 
 Les méthodes surchargées (c’est-à-dire celles dont le nom est identique à celui d’une méthode existante, mais qui se distinguent par leurs valeurs spécifiées) sont également prises en charge.
 
-<a id="properties" class="xliff"></a>
-## Propriétés 
+## <a name="properties"></a>Propriétés 
 
 Toutes les propriétés sont publiques. Les propriétés nécessitent un saut de ligne ou un point-virgule. Si aucun type d’objet n’est spécifié, le type de propriété est object.
 
 Les propriétés qui utilisent des attributs de validation ou de transformation d’argument (par exemple `[ValidateSet("aaa")]`) fonctionnent comme prévu.
 
-<a id="hidden" class="xliff"></a>
-## Hidden
+## <a name="hidden"></a>Hidden
 
 Un nouveau mot clé, **Hidden**, a été ajouté. Vous pouvez appliquer **Hidden** à des propriétés et des méthodes (notamment des constructeurs).
 
@@ -181,18 +172,15 @@ Les membres masqués ne sont pas inclus en cas de saisie semi-automatique via la
 
 Un nouvel attribut, **System.Management.Automation.HiddenAttribute**, a été ajouté pour que le code C# puisse avoir la même sémantique dans Windows PowerShell.
 
-<a id="return-types" class="xliff"></a>
-## Type de retour
+## <a name="return-types"></a>Type de retour
 
 Le type de retour est un contrat. La valeur de retour est convertie au type attendu. Si aucun type de retour n’est spécifié, le type de retour est void. Il n’existe aucune diffusion en continu d’objets. Les objets ne peuvent pas être écrits dans le pipeline, que ce soit intentionnellement ou par accident.
 
-<a id="attributes" class="xliff"></a>
-## Attributes
+## <a name="attributes"></a>Attributes
 
 Deux nouveaux attributs, **DscResource** et **DscProperty**, ont été ajoutés.
 
-<a id="lexical-scoping-of-variables" class="xliff"></a>
-## Étendue lexicale des variables
+## <a name="lexical-scoping-of-variables"></a>Étendue lexicale des variables
 
 Voici un exemple illustrant le fonctionnement de l’étendue lexicale dans cette version.
 
@@ -220,8 +208,7 @@ $v = bar
 $v -eq $d # true
 ```
 
-<a id="end-to-end-example" class="xliff"></a>
-## Exemple de bout en bout
+## <a name="end-to-end-example"></a>Exemple de bout en bout
 
 L’exemple suivant crée plusieurs classes personnalisées pour implémenter un langage DSL (Dynamic Style Sheet) HTML. Ensuite, l’exemple ajoute des fonctions d’assistance pour créer des types d’éléments spécifiques dans le cadre de la classe d’éléments, tels que des tables et des styles de titre, car les types ne peuvent pas être utilisés en dehors de l’étendue d’un module.
 

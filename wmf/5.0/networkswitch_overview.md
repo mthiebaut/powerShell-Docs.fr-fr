@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="network-switch-management-with-powershell" class="xliff"></a>
-# Gestion du commutateur réseau avec PowerShell
+# <a name="network-switch-management-with-powershell"></a>Gestion du commutateur réseau avec PowerShell
 
 L’applet de commande **Get-NetworkSwitchEthernetPort** retourne les informations supplémentaires suivantes avec les instances :
 
@@ -19,8 +18,7 @@ L’applet de commande **Get-NetworkSwitchEthernetPort** retourne les informatio
 - AccessVLAN : ID du réseau local virtuel associé à ce port en mode accès
 - TrunkedVLANList : liste des ID des réseaux locaux virtuels associés à ce port en mode trunk
 
-<a id="fundamental-network-switch-management-with-windows-powershell" class="xliff"></a>
-## Gestion fondamentale du commutateur réseau avec Windows PowerShell
+## <a name="fundamental-network-switch-management-with-windows-powershell"></a>Gestion fondamentale du commutateur réseau avec Windows PowerShell
 
 Les applets de commande du commutateur réseau, introduites dans WMF 5.0, permettent d’appliquer une configuration de port de commutateur réseau local virtuel (VLAN) et de commutateur réseau de base de couche 2 à des commutateurs réseau certifiés par logo Windows Server 2012 R2. Microsoft s’engage à prendre en charge la vision DAL ([Datacenter Abstraction](http://technet.microsoft.com/en-us/cloud/dal.aspx) Layer) et à démontrer la valeur à nos clients et partenaires dans cet espace. Ces applets de commande vous permettent d’effectuer les opérations suivantes :
 

@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-script-resource" class="xliff"></a>
-# Ressource Script dans DSC
+# <a name="dsc-script-resource"></a>Ressource Script dans DSC
 
  
 > S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -27,8 +26,7 @@ Le bloc de script `SetScript` doit modifier le nœud. Il est appelé par DSC si 
 Si vous devez utiliser des variables de votre script de configuration dans les blocs de script `GetScript`, `TestScript` ou `SetScript`, utilisez l’étendue `$using:` (voir ci-dessous pour obtenir un exemple).
 
 
-<a id="syntax" class="xliff"></a>
-## Syntaxe
+## <a name="syntax"></a>Syntaxe
 
 ```
 Script [string] #ResourceName
@@ -41,8 +39,7 @@ Script [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriétés
+## <a name="properties"></a>Propriétés
 
 |  Propriété  |  Description   | 
 |---|---| 
@@ -52,8 +49,7 @@ Script [string] #ResourceName
 | Credential| Indique les informations d’identification à utiliser pour exécuter ce script, si elles sont nécessaires.| 
 | DependsOn| Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource **ResourceName** de type **ResourceType**, la syntaxe pour utiliser cette propriété est `DependsOn = "[ResourceType]ResourceName"`.
 
-<a id="example-1" class="xliff"></a>
-## Exemple 1
+## <a name="example-1"></a>Exemple 1
 ```powershell
 $version = Get-Content 'version.txt'
 
@@ -75,8 +71,7 @@ Configuration ScriptTest
 }
 ```
 
-<a id="example-2" class="xliff"></a>
-## Exemple 2
+## <a name="example-2"></a>Exemple 2
 ```powershell
 $version = Get-Content 'version.txt'
 

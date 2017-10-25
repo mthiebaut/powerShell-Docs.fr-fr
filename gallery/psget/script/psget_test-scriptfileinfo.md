@@ -10,30 +10,25 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="test-scriptfileinfo" class="xliff"></a>
-# Test-ScriptFileInfo
+# <a name="test-scriptfileinfo"></a>Test-ScriptFileInfo
 
 Valide le bloc de commentaires de métadonnées d’un fichier de script.
 
-<a id="description" class="xliff"></a>
-## Description
+## <a name="description"></a>Description
 
 L’applet de commande Test-ScriptFileInfo valide le bloc de commentaires au début d’un script qui sera publié avec l’applet de commande Publish-Script.
 Si le bloc de commentaires de métadonnées comporte une erreur, cette applet de commande retourne des informations sur l’emplacement de l’erreur ou la façon de la corriger.
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 
 ```powershell
 Get-Command -Name Test-ScriptFileInfo -Module PowerShellGet -Syntax
 ```
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [Test-ScriptFileInfo](http://go.microsoft.com/fwlink/?LinkId=619791)
 
-<a id="example-commands" class="xliff"></a>
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 ```powershell
 # Create a new script file with minimum required metadata values
 New-ScriptFileInfo -Path C:\ScriptSharingDemo\Demo-Script.ps1 -Description "Script file description goes here"

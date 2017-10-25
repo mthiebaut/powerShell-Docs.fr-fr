@@ -9,11 +9,9 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="class-based-dsc-resources" class="xliff"></a>
-# Ressources DSC basées sur une classe
+# <a name="class-based-dsc-resources"></a>Ressources DSC basées sur une classe
 
-<a id="defining-dsc-resources-with-classes" class="xliff"></a>
-## Définition de ressources DSC avec des classes
+## <a name="defining-dsc-resources-with-classes"></a>Définition de ressources DSC avec des classes
 
 Suite à vos commentaires, nous avons simplifié la création et la compréhension des ressources DSC basées sur des classes. Les principales différences entre une ressource DSC basée sur une classe et un fournisseur de ressources DSC d’applet de commande sont les suivantes :
 

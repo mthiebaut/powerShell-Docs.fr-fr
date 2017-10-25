@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="wow64-support-for-configuration-keyword" class="xliff"></a>
-# Prise en charge WOW64 pour le mot clé Configuration
+# <a name="wow64-support-for-configuration-keyword"></a>Prise en charge WOW64 pour le mot clé Configuration
 
 Le mot clé Configuration est maintenant pris en charge dans WOW64 sur un ordinateur 64 bits. Cela signifie qu’une configuration DSC peut être définie et compilée dans un processus 32 bits tel que Windows PowerShell ISE (x86) exécuté sur un ordinateur 64 bits.
 

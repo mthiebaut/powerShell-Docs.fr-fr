@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="jea-role-capabilities" class="xliff"></a>
-# Capacités de rôle JEA
+# <a name="jea-role-capabilities"></a>Capacités de rôle JEA
 
 > S’applique à : Windows PowerShell 5.0
 
@@ -20,8 +19,7 @@ Une capacité de rôle est un fichier de données PowerShell avec l’extension 
 
 Cette rubrique décrit comment créer un fichier de capacités de rôle PowerShell pour vos utilisateurs JEA.
 
-<a id="determine-which-commands-to-allow" class="xliff"></a>
-## Déterminer les commandes à autoriser
+## <a name="determine-which-commands-to-allow"></a>Déterminer les commandes à autoriser
 
 La première étape de la création d’un fichier de capacités de rôle consiste à prendre en considération ce à quoi les utilisateurs de ce rôle auront besoin d’accéder.
 Ce processus de collecte des exigences peut prendre un certain temps, mais il est très important.
@@ -41,16 +39,14 @@ Une sélection rigoureuse des commandes disponibles est essentielle pour que le 
 Voici quelques exemples de commandes qui peuvent être utilisées à des fins malveillantes si elles sont autorisées sans contraintes.
 Notez que cette liste n’est pas exhaustive et ne doit être utilisée que comme point de départ pour prendre les précautions qui s’imposent.
 
-<a id="examples-of-potentially-dangerous-commands" class="xliff"></a>
-### Exemples de commandes potentiellement dangereuses
+### <a name="examples-of-potentially-dangerous-commands"></a>Exemples de commandes potentiellement dangereuses
 
 Risque | Exemple | Commandes associées
 -----|---------|-----------------
 Accorder des privilèges Administrateur à l’utilisateur connecté pour contourner JEA | `Add-LocalGroupMember -Member 'CONTOSO\jdoe' -Group 'Administrators'` | `Add-ADGroupMember`, `Add-LocalGroupMember`, `net.exe`, `dsadd.exe`
 Exécuter du code arbitraire, notamment des logiciels malveillants, du code malveillant exploitant une faille de sécurité ou des scripts personnalisés afin de contourner les protections | `Start-Process -FilePath '\\san\share\malware.exe'` | `Start-Process`, `New-Service`, `Invoke-Item`, `Invoke-WmiMethod`, `Invoke-CimMethod`, `Invoke-Expression`, `Invoke-Command`, `New-ScheduledTask`, `Register-ScheduledJob`
 
-<a id="create-a-role-capability-file" class="xliff"></a>
-## Créer un fichier de capacités de rôle
+## <a name="create-a-role-capability-file"></a>Créer un fichier de capacités de rôle
 
 Vous pouvez créer un fichier de capacités de rôle PowerShell avec l’applet de commande [New-PSRoleCapabilityFile](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/New-PSRoleCapabilityFile).
 
@@ -61,8 +57,7 @@ New-PSRoleCapabilityFile -Path .\MyFirstJEARole.psrc
 Le fichier de capacités de rôle résultant peut être ouvert dans un éditeur de texte et modifié pour autoriser les commandes souhaitées pour le rôle.
 La documentation d’aide PowerShell contient plusieurs exemples de configuration du fichier.
 
-<a id="allowing-powershell-cmdlets-and-functions" class="xliff"></a>
-### Autoriser les fonctions et les applets de commande PowerShell
+### <a name="allowing-powershell-cmdlets-and-functions"></a>Autoriser les fonctions et les applets de commande PowerShell
 
 Pour autoriser les utilisateurs à exécuter des fonctions ou des applets de commande PowerShell, ajoutez le nom de l’applet de commande ou de la fonction au champ VisbibleCmdlets ou VisibleFunctions.
 Si vous ne savez pas si une commande est une applet de commande ou une fonction, vous pouvez exécuter `Get-Command <name>` et vérifier la propriété « CommandType » dans la sortie.
@@ -118,8 +113,7 @@ Si vous le faites, le ValidatePattern remplacera le ValidateSet.
 
 Pour plus d’informations sur ValidatePattern, consultez [cet article *Hey, Scripting Guy!*](https://blogs.technet.microsoft.com/heyscriptingguy/2011/01/11/validate-powershell-parameters-before-running-the-script/) et le contenu de référence [Expressions régulières PowerShell](https://technet.microsoft.com/en-us/library/hh847880.aspx).
 
-<a id="allowing-external-commands-and-powershell-scripts" class="xliff"></a>
-### Autoriser des commandes externes et des scripts PowerShell
+### <a name="allowing-external-commands-and-powershell-scripts"></a>Autoriser des commandes externes et des scripts PowerShell
 
 Pour permettre aux utilisateurs de lancer des exécutables et des scripts PowerShell (.ps1) dans une session JEA, vous devez ajouter le chemin d’accès complet de chaque programme dans le champ VisibleExternalCommands.
 
@@ -138,8 +132,7 @@ Il est préférable d’autoriser [Get-SmbShare](https://technet.microsoft.com/e
 
 Lorsque vous mettez des commandes externes à la disposition des utilisateurs dans une session JEA, spécifiez toujours le chemin d’accès complet à l’exécutable pour éviter qu’un programme portant le même nom (et potentiellement malveillant), placé ailleurs sur le système, ne soit exécuté à la place.
 
-<a id="allowing-access-to-powershell-providers" class="xliff"></a>
-### Autoriser l’accès aux fournisseurs PowerShell
+### <a name="allowing-access-to-powershell-providers"></a>Autoriser l’accès aux fournisseurs PowerShell
 
 Par défaut, les fournisseurs PowerShell sont disponibles dans les sessions JEA.
 
@@ -156,8 +149,7 @@ Pour des tâches simples qui requièrent l’accès au système de fichiers, au 
 Les fonctions, applets de commande et programmes externes disponibles dans une session JEA ne sont pas soumis aux mêmes contraintes que JEA : ils peuvent accéder à tous les fournisseurs par défaut.
 Envisagez également d’utiliser le [lecteur utilisateur](session-configurations.md#user-drive) lorsqu’il est nécessaire de copier des fichiers vers/à partir d’un point de terminaison JEA.
 
-<a id="creating-custom-functions" class="xliff"></a>
-### Créer des fonctions personnalisées
+### <a name="creating-custom-functions"></a>Créer des fonctions personnalisées
 
 Vous pouvez créer des fonctions personnalisées dans un fichier de capacités de rôle pour simplifier les tâches complexes de vos utilisateurs finaux.
 Les fonctions personnalisées sont également utiles lorsque vous avez besoin d’une logique de validation avancée pour les valeurs de paramètres des applets de commande.
@@ -195,8 +187,7 @@ Une applet de commande contrainte dans une session JEA présente le même compor
 Si vous écrivez de nombreuses fonctions personnalisées, il peut être plus facile de les placer dans un [Module de script PowerShell](https://msdn.microsoft.com/en-us/library/dd878340(v=vs.85).aspx).
 Vous pouvez ensuite rendre ces fonctions visibles dans la session JEA à l’aide du champ VisibleFunctions, comme avec des modules intégrés et tiers.
 
-<a id="place-role-capabilities-in-a-module" class="xliff"></a>
-## Placer les capacités de rôle dans un module
+## <a name="place-role-capabilities-in-a-module"></a>Placer les capacités de rôle dans un module
 
 Pour que PowerShell trouve un fichier de capacités de rôle, celui-ci doit être stocké dans le dossier « RoleCapabilities » d’un module PowerShell.
 Le module peut être stocké dans un dossier inclus dans la variable d’environnement `$env:PSModulePath`, cependant vous ne devez pas le placer dans System32 (réservé aux modules intégrés) ou dans un dossier où des utilisateurs non fiables qui établissent la connexion pourraient modifier les fichiers.
@@ -219,8 +210,7 @@ Copy-Item -Path .\MyFirstJEARole.psrc -Destination $rcFolder
 
 Consultez la page [Comprendre un module PowerShell](https://msdn.microsoft.com/en-us/library/dd878324.aspx) pour plus d’informations sur les modules PowerShell, les manifestes de modules et la variable d’environnement PSModulePath.
 
-<a id="updating-role-capabilities" class="xliff"></a>
-## Mettre à jour les capacités de rôle
+## <a name="updating-role-capabilities"></a>Mettre à jour les capacités de rôle
 
 
 Vous pouvez mettre à jour un fichier de capacités de rôle à tout moment en enregistrant simplement les modifications dans le fichier de capacités de rôle.
@@ -233,8 +223,7 @@ Si un utilisateur non fiable peut modifier les fichiers de capacités de rôle, 
 
 Les administrateurs qui souhaitent verrouiller l’accès aux capacités de rôle doivent vérifier que le système local a un accès en lecture aux fichiers de capacités de rôle et aux modules qui les contiennent.
 
-<a id="how-role-capabilities-are-merged" class="xliff"></a>
-## Fusionner les capacités de rôle
+## <a name="how-role-capabilities-are-merged"></a>Fusionner les capacités de rôle
 
 Les utilisateurs peuvent accéder à plusieurs capacités de rôle lorsqu’ils intègrent une session JEA en fonction du mappage des rôles dans le [fichier de configuration de session](session-configurations.md).
 Dans ce cas, JEA tente de donner à l’utilisateur l’ensemble de commandes *le plus permissif* autorisé par les rôles.
@@ -288,8 +277,7 @@ Veillez à ce que l’ensemble combiné de fournisseurs d’une capacité de rô
 Par exemple, si un rôle autorise l’applet de commande `Remove-Item` et un autre le fournisseur `FileSystem`, il existe un risque qu’un utilisateur JEA supprime des fichiers arbitraires sur votre ordinateur.
 Vous trouverez des informations supplémentaires sur l’identification des autorisations effectives des utilisateurs dans la [rubrique Audit de JEA](audit-and-report.md).
 
-<a id="next-steps" class="xliff"></a>
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 - [Créer un fichier de configuration de session](session-configurations.md)
 

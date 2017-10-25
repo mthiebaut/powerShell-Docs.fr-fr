@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="contacting-item-owners" class="xliff"></a>
-# Établissement d’un contact avec les propriétaires d’éléments
+# <a name="contacting-item-owners"></a>Établissement d’un contact avec les propriétaires d’éléments
 
 Pour contacter le propriétaire d’un élément particulier, accédez à la page de détail de l’élément.
 Il existe un lien de contact des propriétaires dans la barre de menus de gauche.

@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-for-linux-nxfile-resource" class="xliff"></a>
-# Ressource nxFile dans DSC pour Linux
+# <a name="dsc-for-linux-nxfile-resource"></a>Ressource nxFile dans DSC pour Linux
 
 La ressource **nxFile** dans DSC PowerShell fournit un mécanisme permettant de gérer les fichiers et les répertoires sur un nœud Linux.
 
-<a id="syntax" class="xliff"></a>
-## Syntaxe
+## <a name="syntax"></a>Syntaxe
 
 ```
 nxFile <string> #ResourceName
@@ -38,8 +36,7 @@ nxFile <string> #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriétés
+## <a name="properties"></a>Propriétés
 
 |  Propriété |  Description | 
 |---|---|
@@ -56,8 +53,7 @@ nxFile <string> #ResourceName
 | Mode| Spécifie les autorisations souhaitées pour la ressource, en notation octale ou symbolique (par exemple, 777 ou rwxrwxrwx). Si vous utilisez la notation symbolique, n’entrez pas le premier caractère qui indique le répertoire ou le fichier.| 
 | DependsOn | Indique que la configuration d’une autre ressource doit être effectuée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’**ID** **ResourceName** et le type **ResourceType**, utilisez la syntaxe suivante pour cette propriété : `DependsOn = "[ResourceType]ResourceName"`.| 
 
-<a id="additional-information" class="xliff"></a>
-## Informations supplémentaires
+## <a name="additional-information"></a>Informations supplémentaires
 
 
 Linux et Windows utilisent des caractères de saut de ligne différents dans les fichiers texte par défaut, ce qui peut entraîner des résultats inattendus quand vous configurez des fichiers sur un ordinateur Linux avec __nxFile__. Il existe plusieurs manières de gérer le contenu d’un fichier Linux tout en évitant les problèmes provoqués par les caractères de saut de ligne inattendus :
@@ -135,8 +131,7 @@ nxFile resolvConf
 }
 ```
 
-<a id="example" class="xliff"></a>
-## Exemple
+## <a name="example"></a>Exemple
 
 L’exemple suivant vérifie que le répertoire `/opt/mydir` existe et qu’un fichier avec le contenu spécifié se trouve dans ce répertoire.
 

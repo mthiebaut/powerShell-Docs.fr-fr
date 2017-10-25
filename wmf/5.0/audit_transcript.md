@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="enhanced-transcription-options" class="xliff"></a>
-# Options de transcription améliorées
+# <a name="enhanced-transcription-options"></a>Options de transcription améliorées
 
 La transcription Windows PowerShell a été améliorée pour s’appliquer à toutes les applications d’hébergement (telles que Windows PowerShell ISE), et pas simplement à l’hôte de la console (powershell.exe).
 

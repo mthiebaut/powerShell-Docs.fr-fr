@@ -10,15 +10,13 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-packagemanagementsource-resource" class="xliff"></a>
-# Ressources DSC PackageManagementSource
+# <a name="dsc-packagemanagementsource-resource"></a>Ressources DSC PackageManagementSource
 
 > S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
 La ressource **PackageManagementSource** dans la configuration d’état souhaité (DSC) Windows PowerShell fournit un mécanisme permettant d’inscrire ou de désinscrire des sources de gestion des packages sur un nœud cible. **Les sources de gestion des packages inscrites de cette façon sont inscrites sous le contexte système et peuvent être utilisées par le compte système ou le moteur DSC.** Cette ressource nécessite le module **PackageManagement** qui est disponible sur le site http://PowerShellGallery.com.
 
-<a id="syntax" class="xliff"></a>
-## Syntaxe
+## <a name="syntax"></a>Syntaxe
 
 ```
 PSModule [string] #ResourceName
@@ -32,8 +30,7 @@ PSModule [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriétés
+## <a name="properties"></a>Propriétés
 |  Propriété  |  Description   | 
 |---|---| 
 | Nom| Spécifie le nom de la source du package à inscrire ou à désinscrire sur votre système.| 
@@ -43,8 +40,7 @@ PSModule [string] #ResourceName
 | SourceUri| Spécifie l’URI de la source du package.| 
 | SourceCredential| Informations d’identification permettant l’accès au package sur une source distante.| 
 
-<a id="example" class="xliff"></a>
-## Exemple
+## <a name="example"></a>Exemple
 
 Cet exemple inscrit la source du package http://nuget.org à l’aide de la ressource DSC **PackageManagementSource**.
 

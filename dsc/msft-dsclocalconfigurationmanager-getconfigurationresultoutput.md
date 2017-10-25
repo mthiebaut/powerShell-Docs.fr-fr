@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="getconfigurationresultoutput-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Méthode GetConfigurationResultOutput de la classe MSFT_DSCLocalConfigurationManager
+# <a name="getconfigurationresultoutput-method-of-the-msftdsclocalconfigurationmanager-class"></a>Méthode GetConfigurationResultOutput de la classe MSFT_DSCLocalConfigurationManager
 
 Obtient la sortie de l’agent de configuration associée à un travail spécifique.
 
-<a id="syntax" class="xliff"></a>
-Syntaxe
+<a name="syntax"></a>Syntaxe
 ------
 
 ```mof
@@ -27,8 +25,7 @@ uint32 GetConfigurationResultOutput(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-Paramètres
+<a name="parameters"></a>Paramètres
 ----------
 
 *jobId* \[in\]  
@@ -40,27 +37,23 @@ Spécifie que la sortie doit être une continuation à partir d’un signet pré
 *output* \[out\]  
 Sortie pour le travail spécifié.
 
-<a id="return-value" class="xliff"></a>
-## Valeur renvoyée
+## <a name="return-value"></a>Valeur renvoyée
 ------------
 
 Retourne zéro en cas de réussite ; sinon, retourne un code d’erreur.
 
-<a id="remarks" class="xliff"></a>
-## Remarques
+## <a name="remarks"></a>Remarques
 
 Il s’agit d’une méthode statique.
 
-<a id="requirements" class="xliff"></a>
-## Spécifications
+## <a name="requirements"></a>Spécifications
 ------------
 >**MOF :** DscCore.mof
 
 >**Espace de noms** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-<a id="see-also" class="xliff"></a>
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

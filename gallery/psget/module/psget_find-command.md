@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="find-command" class="xliff"></a>
-# Find-Command
+# <a name="find-command"></a>Find-Command
 
 Recherche des commandes PowerShell dans des modules.
 
-<a id="description" class="xliff"></a>
-## Description
+## <a name="description"></a>Description
 L’applet de commande Find-Command recherche des commandes PowerShell, telles que les applets de commande, alias, fonctions et workflows. Find-Command recherche des modules dans les référentiels enregistrés.
 Pour chaque commande qu’elle détecte, cette applet de commande retourne un objet PSGetCommandInfo. Vous pouvez passer un objet PSGetCommandInfo à l’applet de commande Install-Module pour installer le module qui contient la commande.
 
@@ -29,19 +27,16 @@ Pour chaque commande qu’elle détecte, cette applet de commande retourne un ob
 - Find-Command peut filtrer le langage de recherche propre au référentiel avec le paramètre -Filter.
 - Find-Command peut filtrer les modules à partir de l’ensemble ou de certains des référentiels enregistrés.
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 ```powershell
 Get-Command -Name Find-Command -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [Find-Command](http://go.microsoft.com/fwlink/?LinkId=733636)
 
-<a id="example-commands" class="xliff"></a>
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 ```powershell
 
 # Find a specific command

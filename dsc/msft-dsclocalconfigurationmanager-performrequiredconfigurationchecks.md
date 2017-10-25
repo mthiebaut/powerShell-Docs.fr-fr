@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="performrequiredconfigurationchecks-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Méthode PerformRequiredConfigurationChecks de la classe MSFT_DSCLocalConfigurationManager
+# <a name="performrequiredconfigurationchecks-method-of-the-msftdsclocalconfigurationmanager-class"></a>Méthode PerformRequiredConfigurationChecks de la classe MSFT_DSCLocalConfigurationManager
 
 Commence une vérification de cohérence à l’aide du Planificateur de tâches.
 
-<a id="syntax" class="xliff"></a>
-Syntaxe
+<a name="syntax"></a>Syntaxe
 ------
 
 ```mof
@@ -25,8 +23,7 @@ uint32 PerformRequiredConfigurationChecks(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-Paramètres
+<a name="parameters"></a>Paramètres
 ----------
 
 *Flags* \[in\]  
@@ -39,27 +36,23 @@ Masque de bits qui spécifie le type de vérification de cohérence à exécuter
 |**4** | La configuration doit être extraite du serveur collecteur spécifié dans la métaconfiguration du nœud. Cette valeur doit toujours être combinée avec **1** avec une valeur de **5**. |
 |**8** | Envoyez l’état au serveur de rapports. |
 
-<a id="return-value" class="xliff"></a>
-## Valeur renvoyée
+## <a name="return-value"></a>Valeur renvoyée
 ------------
 
 Retourne zéro en cas de réussite ; sinon, retourne un code d’erreur.
 
-<a id="remarks" class="xliff"></a>
-## Remarques
+## <a name="remarks"></a>Remarques
 
 Il s’agit d’une méthode statique.
 
-<a id="requirements" class="xliff"></a>
-## Spécifications
+## <a name="requirements"></a>Spécifications
 ------------
 >**MOF :** DscCore.mof
 
 >**Espace de noms** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-<a id="see-also" class="xliff"></a>
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

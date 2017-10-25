@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-resource-script-debugging" class="xliff"></a>
-# Débogage de script de ressources DSC
+# <a name="dsc-resource-script-debugging"></a>Débogage de script de ressources DSC
 
 WMF 5.0 inclut la prise en charge du débogage des scripts de ressources DSC pendant qu’ils s’exécutent sur des nœuds cibles.
 Pour plus d’informations, consultez [Débogage des ressources DSC](https://msdn.microsoft.com/powershell/dsc/debugresource).

@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="separation-of-configuration-resource-and-report-repositories" class="xliff"></a>
-# Séparation des dépôts de configuration, de ressources et de rapports
+# <a name="separation-of-configuration-resource-and-report-repositories"></a>Séparation des dépôts de configuration, de ressources et de rapports
 
 Dans cette version, vous avez toute la flexibilité nécessaire pour extraire et envoyer des rapports à un ou plusieurs serveurs collecteurs DSC. Vous pouvez définir chaque point de terminaison séparément, et ainsi extraire des configurations à partir d’un emplacement, extraire des ressources à partir d’un deuxième emplacement, et envoyer des rapports vers un troisième emplacement. 
 

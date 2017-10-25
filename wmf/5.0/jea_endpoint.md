@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="creating-and-connecting-to-a-jea-endpoint" class="xliff"></a>
-# Création et connexion à un point de terminaison JEA
+# <a name="creating-and-connecting-to-a-jea-endpoint"></a>Création et connexion à un point de terminaison JEA
 Pour créer un point de terminaison JEA, vous devez créer et inscrire un fichier de configuration de session PowerShell spécialement configuré, que vous pouvez générer avec l’applet de commande **New-PSSessionConfigurationFile**.
 
 ```powershell
@@ -142,8 +141,7 @@ Pour finir, une fois que vous avez terminé de personnaliser votre configuration
 Register-PSSessionConfiguration -Name Maintenance -Path "C:\ProgramData\JEAConfiguration\Demo.pssc" 
 ```
 
-<a id="connect-to-a-jea-endpoint" class="xliff"></a>
-## Se connecter à un point de terminaison JEA
+## <a name="connect-to-a-jea-endpoint"></a>Se connecter à un point de terminaison JEA
 La connexion à un point de terminaison JEA s’effectue comme pour tout autre point de terminaison PowerShell.  Il suffit de donner votre nom de point de terminaison JEA comme paramètre « ConfigurationName » pour **New-PSSession**, **Invoke-Command** ou **Enter-PSSession**.
 
 ```powershell

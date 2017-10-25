@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="script-tracing-and-logging" class="xliff"></a>
-# Traçage et journalisation de script
+# <a name="script-tracing-and-logging"></a>Traçage et journalisation de script
 
 Bien que Windows PowerShell propose déjà le paramètre de stratégie de groupe **LogPipelineExecutionDetails** pour journaliser l’appel des applets de commande, le langage de script PowerShell offre de nombreuses fonctionnalités que vous souhaiterez peut-être journaliser et/ou auditer. La nouvelle fonctionnalité de traçage de script détaillé vous permet d’activer le suivi et l’analyse détaillés de l’utilisation des scripts Windows PowerShell sur un système. Une fois que vous avez activé le traçage de script détaillé, Windows PowerShell enregistre tous les blocs de scripts dans le journal des événements ETW, **Microsoft-Windows-PowerShell/Operational**. Si un bloc de script crée un autre bloc de script (par exemple, un script qui appelle l’applet de commande Invoke-Expression sur une chaîne), ce bloc de script résultant est également enregistré.
 

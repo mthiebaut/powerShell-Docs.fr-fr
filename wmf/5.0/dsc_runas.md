@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="automatic-runas-support-for-dsc-resources" class="xliff"></a>
-# Prise en charge automatique de RunAs pour les ressources DSC
+# <a name="automatic-runas-support-for-dsc-resources"></a>Prise en charge automatique de RunAs pour les ressources DSC
 
 WMF 5.0 inclut la prise en charge de l’exécution de **n’importe quelle** ressource DSC sous un jeu d’informations d’identification spécifié à l’aide de la propriété `PsDscRunAsCredential`. 
 

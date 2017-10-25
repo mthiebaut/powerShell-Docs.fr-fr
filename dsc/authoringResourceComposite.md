@@ -10,15 +10,13 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="composite-resources-using-a-dsc-configuration-as-a-resource" class="xliff"></a>
-# Ressources composites : utilisation d’une configuration DSC comme ressource
+# <a name="composite-resources-using-a-dsc-configuration-as-a-resource"></a>Ressources composites : utilisation d’une configuration DSC comme ressource
 
 > S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Les configurations peuvent parfois s’avérer longues et complexes, faire appel à de nombreuses ressources différentes et définir un grand nombre de propriétés. Pour vous faciliter la vie, vous pouvez utiliser une configuration DSC Windows PowerShell comme ressource pour d’autres configurations. Nous l’appelons « ressource composite ». Une ressource composite est une configuration DSC qui accepte des paramètres. Les paramètres de la configuration font office de propriétés de la ressource. La configuration est enregistrée dans un fichier avec une extension **.schema.psm1**. Elle remplace à la fois le schéma MOF et le script de ressource dans une ressource DSC classique. Pour plus d’informations sur les ressources DSC, consultez [DSC Resources](resources.md).
 
-<a id="creating-the-composite-resource" class="xliff"></a>
-## Création de la ressource composite
+## <a name="creating-the-composite-resource"></a>Création de la ressource composite
 
 Dans notre exemple, nous créons une configuration qui appelle plusieurs ressources existantes pour configurer des machines virtuelles. Au lieu de spécifier les valeurs à définir dans des blocs de configuration, la configuration choisit plusieurs paramètres qui sont ensuite utilisés dans les blocs de configuration.
 
@@ -134,8 +132,7 @@ Configuration xVirtualMachine
 }
 ```
 
-<a id="saving-the-configuration-as-a-composite-resource" class="xliff"></a>
-### Enregistrement de la configuration comme ressource composite
+### <a name="saving-the-configuration-as-a-composite-resource"></a>Enregistrement de la configuration comme ressource composite
 
 Pour utiliser la configuration paramétrable comme ressource DSC, enregistrez-la dans une structure de répertoires similaire à celle d’une ressource MOF, puis attribuez-lui un nom et une extension **.schema.psm1**. Pour cet exemple, nous allons nommer le fichier **xVirtualMachine.schema.psm1**. Vous devez également créer un manifeste nommé **xVirtualMachine.psd1** contenant la ligne suivante. Notez que cela vient s’ajouter à **MyDscResources.psd1**, manifeste de module de toutes les ressources situé dans le dossier **MyDscResources**.
 
@@ -157,8 +154,7 @@ $env: psmodulepath
 
 La ressource est désormais détectable à l’aide de l’applet de commande Get-DscResource. Ses propriétés sont détectables par cette applet de commande ou par la saisie semi-automatique **Ctrl+Espace** dans Windows PowerShell ISE.
 
-<a id="using-the-composite-resource" class="xliff"></a>
-## Utilisation de la ressource composite
+## <a name="using-the-composite-resource"></a>Utilisation de la ressource composite
 
 Vous créez ensuite une configuration qui appelle la ressource composite. Cette configuration appelle la ressource composite xVirtualMachine pour créer une machine virtuelle, puis appelle la ressource **xComputer** pour la renommer.
 
@@ -193,8 +189,7 @@ configuration RenameVM
 }
 ```
 
-<a id="supporting-psdscrunascredential" class="xliff"></a>
-## Prise en charge de PsDscRunAsCredential
+## <a name="supporting-psdscrunascredential"></a>Prise en charge de PsDscRunAsCredential
 
 >**Remarque :** **PsDscRunAsCredential** est pris en charge dans PowerShell 5.0 et versions ultérieures.
 
@@ -211,10 +206,8 @@ if (PsDscContext.RunAsUser) {
 }
 ```
 
-<a id="see-also" class="xliff"></a>
-## Voir aussi
-<a id="concepts" class="xliff"></a>
-### Concepts
+## <a name="see-also"></a>Voir aussi
+### <a name="concepts"></a>Concepts
 * [Écriture d’une ressource DSC personnalisée avec MOF](authoringResourceMOF.md)
 * [Get Started with Windows PowerShell Desired State Configuration](overview.md)
 

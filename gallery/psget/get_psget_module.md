@@ -10,23 +10,19 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="get-powershellget-module" class="xliff"></a>
-Obtenir le module PowerShellGet
+<a name="get-powershellget-module"></a>Obtenir le module PowerShellGet
 ========================
 
-<a id="powershellget-is-an-in-box-module-in-the-following-releases" class="xliff"></a>
-### PowerShellGet est un module inclus par défaut dans les versions suivantes
+### <a name="powershellget-is-an-in-box-module-in-the-following-releases"></a>PowerShellGet est un module inclus par défaut dans les versions suivantes
 - [Windows 10](https://www.microsoft.com/en-us/windows/get-windows-10) ou version ultérieure
 - [Windows Server 2016](https://technet.microsoft.com/en-us/windows-server-docs/get-started/windows-server-2016) ou version ultérieure
 - [Windows Management Framework (WMF) 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) ou version ultérieure
 - [PowerShell 6](https://github.com/PowerShell/PowerShell/releases)
 
-<a id="get-powershellget-module-for-powershell-versions-30-and-40" class="xliff"></a>
-### Obtenir le module PowerShellGet pour les versions PowerShell 3.0 et 4.0
+### <a name="get-powershellget-module-for-powershell-versions-30-and-40"></a>Obtenir le module PowerShellGet pour les versions PowerShell 3.0 et 4.0
 - [PackageManagement MSI](http://go.microsoft.com/fwlink/?LinkID=746217&clcid=0x409) 
 
-<a id="get-the-latest-version-from-powershell-gallery" class="xliff"></a>
-### Obtenir la dernière version de PowerShell Gallery
+### <a name="get-the-latest-version-from-powershell-gallery"></a>Obtenir la dernière version de PowerShell Gallery
 
 - Avant d’effectuer la mise à jour de PowerShellGet, vous devez toujours installer le dernier fournisseur Nuget. Pour ce faire, exécutez la commande suivante dans une session PowerShell avec élévation de privilèges.
 ```powershell
@@ -34,8 +30,7 @@ Install-PackageProvider Nuget –Force
 Exit
 ```
 
-<a id="for-systems-with-powershell-50-or-newer-you-can-install-the-latest-powershellget" class="xliff"></a>
-#### Pour les systèmes avec PowerShell 5.0 (ou version ultérieure), vous pouvez installer la dernière version de PowerShellGet 
+#### <a name="for-systems-with-powershell-50-or-newer-you-can-install-the-latest-powershellget"></a>Pour les systèmes avec PowerShell 5.0 (ou version ultérieure), vous pouvez installer la dernière version de PowerShellGet 
 - Pour effectuer cette opération sous Windows 10, Windows Server 2016, tout système équipé de WMF 5.0 ou 5.1, ou tout système équipé de PowerShell 6, exécutez les commandes suivantes à partir d’une session PowerShell avec élévation de privilèges.
 ```powershell
 Install-Module –Name PowerShellGet –Force
@@ -48,8 +43,7 @@ Update-Module -Name PowerShellGet
 Exit
 ```
 
-<a id="for-systems-running-powershell-3-or-powershell-4-that-have-installed-the-packagemanagement-msihttpgomicrosoftcomfwlinklinkid746217clcid0x409" class="xliff"></a>
-#### Pour les systèmes exécutant PowerShell 3 ou PowerShell 4 et qui ont installé [PackageManagement MSI](http://go.microsoft.com/fwlink/?LinkID=746217&clcid=0x409)
+#### <a name="for-systems-running-powershell-3-or-powershell-4-that-have-installed-the-packagemanagement-msihttpgomicrosoftcomfwlinklinkid746217clcid0x409"></a>Pour les systèmes exécutant PowerShell 3 ou PowerShell 4 et qui ont installé [PackageManagement MSI](http://go.microsoft.com/fwlink/?LinkID=746217&clcid=0x409)
 
 - Utilisez l’applet de commande PowerShellGet ci-dessous à partir d’une session PowerShell avec élévation de privilèges pour enregistrer les modules dans un répertoire local
 

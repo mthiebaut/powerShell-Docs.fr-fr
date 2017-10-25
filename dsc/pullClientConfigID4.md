@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="setting-up-a-pull-client-using-configuration-id-in-powershell-40" class="xliff"></a>
-# Configuration d’un client collecteur à l’aide de l’ID de configuration dans PowerShell 4.0
+# <a name="setting-up-a-pull-client-using-configuration-id-in-powershell-40"></a>Configuration d’un client collecteur à l’aide de l’ID de configuration dans PowerShell 4.0
 
 >S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -46,12 +45,10 @@ Pour appliquer la configuration, utilisez **Set-DscLocalConfigurationManager** a
 Set-DSCLocalConfigurationManager –ComputerName localhost –Path . –Verbose.
 ```
 
-<a id="configuration-id" class="xliff"></a>
-## ID de configuration
+## <a name="configuration-id"></a>ID de configuration
 Le script définit la propriété **ConfigurationID** du gestionnaire de configuration local sur un GUID précédemment créé à cet effet (vous pouvez créer un GUID à l’aide de l’applet de commande **New-Guid**). Le paramètre **ConfigurationID** est utilisé par le gestionnaire de configuration local pour rechercher la configuration appropriée sur le serveur collecteur. Le fichier MOF de configuration sur le serveur collecteur doit être nommé `ConfigurationID.mof`, où *ConfigurationID* est la valeur de la propriété **ConfigurationID** du gestionnaire de configuration local du nœud cible.
 
-<a id="pulling-from-an-smb-server" class="xliff"></a>
-## Extraction à partir d’un serveur SMB
+## <a name="pulling-from-an-smb-server"></a>Extraction à partir d’un serveur SMB
 
 Si le serveur collecteur est configuré comme un partage de fichiers SMB au lieu d’un service web, vous spécifiez **DscFileDownloadManager** au lieu de **WebDownLoadManager**.
 **DscFileDownloadManager** prend une propriété **SourcePath** au lieu de **ServerUrl**. Le script suivant configure le gestionnaire de configuration local de façon à extraire d’un partage SMB nommé « SmbDscShare » sur un serveur nommé « CONTOSO-SERVER » :
@@ -74,8 +71,7 @@ Configuration SimpleMetaConfigurationForPull
 SimpleMetaConfigurationForPull -Output "."
 ```
 
-<a id="see-also" class="xliff"></a>
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [Configuration d’un serveur collecteur web DSC](pullServer.md)
 - [Configuration d’un serveur collecteur SMB DSC](pullServerSMB.md)

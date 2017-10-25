@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="mof-documents-are-encrypted-by-default" class="xliff"></a>
-# Les documents MOF sont chiffrés par défaut
+# <a name="mof-documents-are-encrypted-by-default"></a>Les documents MOF sont chiffrés par défaut
 
 Les documents de configuration contiennent des informations sensibles. Dans les versions précédentes de DSC, vous deviez distribuer et gérer des certificats pour sécuriser les informations d’identification dans une configuration. Pour de nombreux utilisateurs il s’agissait d’une charge de travail élevée, et même avec tout le travail effectué, certaines informations de configuration n’était pas et ne pouvaient pas être sécurisées. 
 

@@ -10,21 +10,18 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="managing-item-owners" class="xliff"></a>
-# Gestion des propriétaires d’éléments
+# <a name="managing-item-owners"></a>Gestion des propriétaires d’éléments
 
 La propriété d’un élément dans PowerShell Gallery est définie par la personne qui a publié l’élément dans la galerie.
 Ces métadonnées doivent parfois être gérées au-delà de la publication initiale de l’élément, ce qui signifie que les métadonnées du propriétaire doivent être mutables alors que l’élément lui-même ne l’est pas.
 
 Tous les propriétaires d’éléments sont des homologues. Cela signifie que tout propriétaire d’élément peut publier une nouvelle version d’un élément. Cela signifie également que tout propriétaire d’élément peut supprimer n’importe quel autre propriétaire d’élément. Aucun propriétaire n’a plus d’autorité qu’un autre.  
 
-<a id="setting-an-items-initial-owner" class="xliff"></a>
-## Définition du propriétaire initial d’un élément 
+## <a name="setting-an-items-initial-owner"></a>Définition du propriétaire initial d’un élément 
 
 Quand un nouvel élément est publié dans PowerShell Gallery, le propriétaire initial est défini par l’utilisateur qui a publié l’élément. Cela est déterminé par l’utilisateur dont la clé API a été utilisée dans l’applet de commande Publish-Module.
 
-<a id="adding-owners" class="xliff"></a>
-## Ajout de propriétaires
+## <a name="adding-owners"></a>Ajout de propriétaires
 
 Une fois qu’un élément a été publié dans PowerShell Gallery, il est facile d’inviter d’autres utilisateurs à devenir propriétaires d’un élément.
 
@@ -43,8 +40,7 @@ Ce système d’invitation empêche les utilisateurs d’ajouter de façon facti
 Notez que les métadonnées des « Auteurs » sont purement du texte libre. Seuls les « Propriétaires » sont contrôlés.
 
 
-<a id="removing-owners" class="xliff"></a>
-## Suppression de propriétaires
+## <a name="removing-owners"></a>Suppression de propriétaires
 Quand un élément a plusieurs propriétaires et que l’un d’eux doit être supprimé, le processus est simple :
 
 1. [Connectez-vous](https://powershellgallery.com/users/account/LogOn) à PowerShell Gallery avec le compte qui est le propriétaire actuel d’un élément.
@@ -54,8 +50,7 @@ Quand un élément a plusieurs propriétaires et que l’un d’eux doit être s
 
 
 
-<a id="transferring-item-ownership" class="xliff"></a>
-## Transfert de la propriété d’un élément
+## <a name="transferring-item-ownership"></a>Transfert de la propriété d’un élément
 Nous recevons parfois des demandes de support pour transférer la propriété d’un élément d’un utilisateur à un autre, mais vous pouvez presque toujours le faire vous-même.
 Le transfert de la propriété d’un utilisateur à un autre est juste une combinaison des deux fonctionnalités ci-dessus.
 
@@ -68,8 +63,7 @@ Cette demande se présente sous deux formes, mais le processus fonctionne de la 
 * L’élément a été publié accidentellement à l’aide du mauvais compte
 
 
-<a id="orphaned-items" class="xliff"></a>
-## Éléments orphelins
+## <a name="orphaned-items"></a>Éléments orphelins
 Un dernier scénario, toutefois peu fréquent, se produit.
 Des éléments sont devenus orphelins et le compte des propriétaires d’éléments ne peut pas être utilisé pour ajouter de nouveaux propriétaires.
 Voici quelques exemples de ce scénario :

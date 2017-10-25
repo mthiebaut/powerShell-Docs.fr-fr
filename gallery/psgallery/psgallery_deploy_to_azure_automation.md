@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="deploy-to-azure-automation" class="xliff"></a>
-Déployer sur Azure Automation
+<a name="deploy-to-azure-automation"></a>Déployer sur Azure Automation
 ===========================
 
 Le bouton Déployer sur Azure Automation dans la page de détails de l’élément déploie l’élément de PowerShell Gallery sur Azure Automation.

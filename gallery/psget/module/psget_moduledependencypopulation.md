@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="logic-for-preparing-the-module-dependencies-during-publish-operation" class="xliff"></a>
-# Logique pour la préparation des dépendances de module au cours de l’opération de publication
+# <a name="logic-for-preparing-the-module-dependencies-during-publish-operation"></a>Logique pour la préparation des dépendances de module au cours de l’opération de publication
 1.  Les modules répertoriés dans le cadre de RequiredModules sont considérés comme des dépendances.
 2.  Les modules répertoriés dans le cadre de NestedModules, dont la base de modules n’est pas sous la base de modules spécifiée, sont considérés comme des dépendances.
 

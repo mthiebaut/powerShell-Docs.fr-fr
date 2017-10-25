@@ -10,14 +10,12 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="install-script" class="xliff"></a>
-# Install-Script
+# <a name="install-script"></a>Install-Script
 
 Installe les fichiers de script PowerShell à partir de référentiels en ligne sur l’ordinateur local.
 
 
-<a id="description" class="xliff"></a>
-## Description
+## <a name="description"></a>Description
 
 L’applet de commande Install-Script acquiert une charge utile de script à partir d’un référentiel, vérifie que la charge utile est un script PowerShell valide et copie le fichier de script à un emplacement d’installation spécifié.
 
@@ -40,8 +38,7 @@ Vous pouvez filtrer vos résultats selon les versions minimales et exactes des m
 
 Les caractères génériques ne sont pas pris en charge dans -Name sur les applets de commande Install-Module, Save-Module, Uninstall-Module, Install-Script, Save-Script et Uninstall-Script.
 
-<a id="scope" class="xliff"></a>
-### Étendue
+### <a name="scope"></a>Étendue
 Spécifie l’étendue d’installation du module. Les valeurs acceptables pour ce paramètre sont : AllUsers et CurrentUser.
 
 L’étendue d’installation par défaut est AllUsers.
@@ -56,8 +53,7 @@ Spécifie l’étendue d’installation du script. Les valeurs valides sont : A
 L’étendue AllUsers indique d’installer un script dans %systemdrive%:\ProgramFiles\WindowsPowerShell\Scripts afin que le script soit disponible pour tous les utilisateurs. L’étendue CurrentUser indique d’installer le script dans $home\Documents\WindowsPowerShell\Scripts afin que le script ne soit disponible que pour l’utilisateur actuel.
 
 
-<a id="nopathupdate" class="xliff"></a>
-## NoPathUpdate
+## <a name="nopathupdate"></a>NoPathUpdate
 
 - Le paramètre de commutateur NoPathUpdate sur l’applet de commande Install-Script contourne l’invite d’ajout de l’emplacement d’installation de script à la variable d’environnement PATH.
 - Toute utilisation de la commande WITH –NoPathUpdate spécifiée entraîne l’absence d’invite et la mise à jour de PATH NOT (le paramètre force peut être ignoré ici).
@@ -66,8 +62,7 @@ L’étendue AllUsers indique d’installer un script dans %systemdrive%:\Progra
 - Tout cela s’applique uniquement lors de la première utilisation d’Install-Script dans une étendue donnée.
 
 
-<a id="notes" class="xliff"></a>
-## Remarques
+## <a name="notes"></a>Remarques
 
 Cette applet de commande s’exécute sur Windows PowerShell 3.0 ou versions ultérieures de Windows PowerShell, sur Windows 7 ou Windows 2008 R2 et versions ultérieures de Windows.
 
@@ -84,20 +79,17 @@ Par défaut, les modules sont installés dans le dossier Program Files, afin d�
 Pour éviter d’exécuter des modules qui contiennent du code malveillant, les modules installés ne sont pas automatiquement importés par l’installation. Comme bonne pratique de sécurité, évaluez le code du module avant d’exécuter des applets de commande ou des fonctions dans un module pour la première fois.
 
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 
 ```powershell
 Get-Command -Name Install-Script -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [Install-Script](http://go.microsoft.com/fwlink/?LinkId=619784)
 
-<a id="example-commands" class="xliff"></a>
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 
 ```powershell
 
@@ -479,8 +471,7 @@ The scripts install location 'C:\Program Files\WindowsPowerShell\Scripts' is req
 
 ```
 
-<a id="install-script-cmdlet-in-pipeline-operations" class="xliff"></a>
-## Applet de commande Install-Script dans les opérations de pipeline
+## <a name="install-script-cmdlet-in-pipeline-operations"></a>Applet de commande Install-Script dans les opérations de pipeline
 
 ```powershell
 
@@ -507,13 +498,11 @@ Get-InstalledModule
 
 ```
 
-<a id="side-by-side-version-support-on-powershell-50-or-newer" class="xliff"></a>
-## Prise en charge des versions côte à côte sur PowerShell 5.0 ou version ultérieure
+## <a name="side-by-side-version-support-on-powershell-50-or-newer"></a>Prise en charge des versions côte à côte sur PowerShell 5.0 ou version ultérieure
 
 PowerShellGet assure la prise en charge des versions de modules côte à côte dans les applets de commande Install-Script, Update-Script et Publish-Script qui s’exécutent dans Windows PowerShell 5.0 ou versions ultérieures.
 
-<a id="install-script-examples" class="xliff"></a>
-### Exemples Install-Script
+### <a name="install-script-examples"></a>Exemples Install-Script
 
 ```powershell
 # Install a version of the module
@@ -545,8 +534,7 @@ Version    Name                                Repository           Description
 
 ```
 
-<a id="install-module-with-its-dependencies" class="xliff"></a>
-## Installer un module avec ses dépendances
+## <a name="install-module-with-its-dependencies"></a>Installer un module avec ses dépendances
 
 ```powershell
 
@@ -640,8 +628,7 @@ Version    Name                                Repository           Description
 
 ```
 
-<a id="error-scenarios" class="xliff"></a>
-## Scénarios d’erreur
+## <a name="error-scenarios"></a>Scénarios d’erreur
 
 ```powershell
 
@@ -659,8 +646,7 @@ Install-Script ContosoClient,ContosoServer -MinimumVersion 2.0
 
 ```
 
-<a id="installing-a-script-with-dependent-scripts-and-modules" class="xliff"></a>
-## Installation d’un script avec des modules et scripts dépendants
+## <a name="installing-a-script-with-dependent-scripts-and-modules"></a>Installation d’un script avec des modules et scripts dépendants
 
 ```powershell
 # Installing a script with dependent scripts and modules
@@ -733,8 +719,7 @@ Function Test-FunctionFromScript\_Script-WithDependencies2 { Get-Date }
 Workflow Test-WorkflowFromScript\_Script-WithDependencies2 { Get-Date }
 ```
 
-<a id="install-script-and-get-installedscript-cmdlets" class="xliff"></a>
-## Applets de commande Install-Script et Get-InstalledScript
+## <a name="install-script-and-get-installedscript-cmdlets"></a>Applets de commande Install-Script et Get-InstalledScript
 L’applet de commande Install-Script permet d’installer un fichier de script spécifique et ses dépendances à l’étendue spécifiée. Par défaut, les scripts sont installés dans l’étendue AllUsers. L’applet de commande Get-InstalledScript permet d’obtenir la liste des fichiers de script qui ont été installés à l’aide de l’applet de commande Install-Script.
 
 Note d’utilisation : Pour permettre la gestion et la localisation des scripts une fois qu’ils sont installés, Install-script crée un dossier par défaut pour le stockage des scripts dans $home\Documents\WindowsPowerShell\Scripts et ajoute ce dossier à votre environnement PATH. Si la modification du chemin constitue un problème, utilisez Save-Script au lieu d’Install-Script. Get-InstalledScripts et Uninstall-Script ne fonctionnent qu’avec les scripts placés sur le système à l’aide d’Install-Script.

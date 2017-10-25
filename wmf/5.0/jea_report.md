@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="reporting-on-jea" class="xliff"></a>
-# Création de rapports sur JEA
+# <a name="reporting-on-jea"></a>Création de rapports sur JEA
 Pour signaler l’état de votre configuration JEA, vous pouvez utiliser :
 1.  **Get-PSSessionConfiguration** pour retourner une liste de tous les points de terminaison inscrits sur un ordinateur donné.
 2.  **Get-PSSessionCapability** pour créer un rapport sur les capacités dont dispose tout utilisateur donné sur un point de terminaison spécifique.

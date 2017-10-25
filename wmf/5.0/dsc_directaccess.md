@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="direct-access-to-dsc-resource-methods" class="xliff"></a>
-# Accès direct aux méthodes de ressources DSC
+# <a name="direct-access-to-dsc-resource-methods"></a>Accès direct aux méthodes de ressources DSC
 
 
 L’applet de commande [Invoke-DscResource](https://technet.microsoft.com/en-us/library/mt517869.aspx) a été ajoutée pour permettre d’accéder directement aux ressources DSC et à leurs méthodes (Get, Set ou Test). Elle peut être utilisée par des tiers qui souhaitent tirer parti des ressources DSC.

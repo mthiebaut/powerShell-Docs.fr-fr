@@ -9,11 +9,9 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="known-issues-and-limitations" class="xliff"></a>
-# Limitations et problèmes connus
+# <a name="known-issues-and-limitations"></a>Limitations et problèmes connus
 
-<a id="powershell-shortcuts-are-broken-when-used-for-the-first-time" class="xliff"></a>
-Les raccourcis PowerShell sont rompus lors de la première utilisation
+<a name="powershell-shortcuts-are-broken-when-used-for-the-first-time"></a>Les raccourcis PowerShell sont rompus lors de la première utilisation
 ------------------------------------------------------------
 
 **Résolution :** Effectuez l’une des opérations suivantes :
@@ -24,8 +22,7 @@ Les raccourcis PowerShell sont rompus lors de la première utilisation
 Les raccourcis PowerShell fonctionneront une fois que vous aurez effectué l’une des actions ci-dessus. Vous ne devez effectuer ces actions qu’une seule fois.
 
 
-<a id="powershell-modules-and-dsc-resources-report-errors-about-executionpolicy-on-windows-7" class="xliff"></a>
-Les modules PowerShell et les ressources DSC signalent des erreurs concernant ExecutionPolicy sur Windows 7
+<a name="powershell-modules-and-dsc-resources-report-errors-about-executionpolicy-on-windows-7"></a>Les modules PowerShell et les ressources DSC signalent des erreurs concernant ExecutionPolicy sur Windows 7
 -------------------------------------------------------------------------------------
 Sous Windows 7, l’utilisation de modules PowerShell et de ressources DSC peut générer des erreurs liées à ExecutionPolicy.
 
@@ -35,8 +32,7 @@ Sous Windows 7, l’utilisation de modules PowerShell et de ressources DSC peut
 Set-ExecutionPolicy RemoteSigned
 ```
 
-<a id="connecting-to-an-old-remote-exchange-endpoint-causes-a-crash" class="xliff"></a>
-La connexion à un ancien point de terminaison Exchange distant provoque un blocage
+<a name="connecting-to-an-old-remote-exchange-endpoint-causes-a-crash"></a>La connexion à un ancien point de terminaison Exchange distant provoque un blocage
 ------------------------------------------------------------
 
 L’ancien point de terminaison Exchange redirige vers un nouveau point de terminaison. Un bogue dans la logique de redirection provoque un blocage.
@@ -44,16 +40,14 @@ L’ancien point de terminaison Exchange redirige vers un nouveau point de termi
 **Résolution :** Connectez-vous directement au nouveau point de terminaison.
 
 
-<a id="software-inventory-logging-feature-is-erroneously-stopped-after-wmf-50-installation-on-windows-server-2012-r2" class="xliff"></a>
-La fonctionnalité de journalisation de l’inventaire logiciel est arrêtée de manière erronée après l’installation de WMF 5.0 sur Windows Server 2012 R2
+<a name="software-inventory-logging-feature-is-erroneously-stopped-after-wmf-50-installation-on-windows-server-2012-r2"></a>La fonctionnalité de journalisation de l’inventaire logiciel est arrêtée de manière erronée après l’installation de WMF 5.0 sur Windows Server 2012 R2
 -------------------------------------------------------------------------------------------------------------
 
 Quand vous installez WMF 5.0 sur un ordinateur Windows Server 2012 R2 qui exécute déjà SIL, la fonctionnalité de journalisation de l’inventaire logiciel est arrêtée de manière erronée après l’installation.
 
 **Résolution :** Exécutez l’applet de commande Start-SilLogging une fois après l’installation de WMF, car le processus d’installation arrête la fonctionnalité de journalisation de l’inventaire logiciel de façon non contrôlée.
 
-<a id="get-childitem-does-not-work-if--literalpath-and--recurse-are-used-together" class="xliff"></a>
-Get-ChildItem ne fonctionne pas si -LiteralPath et -Recurse sont utilisés ensemble
+<a name="get-childitem-does-not-work-if--literalpath-and--recurse-are-used-together"></a>Get-ChildItem ne fonctionne pas si -LiteralPath et -Recurse sont utilisés ensemble
 --------------------------------------------------------------------------
 
 Si un nom de répertoire contient un caractère non valide, Get-ChildItem ne génère pas les résultats attendus quand -LiteralPath et -Recurse sont utilisés ensemble.
@@ -61,8 +55,7 @@ Si un nom de répertoire contient un caractère non valide, Get-ChildItem ne gé
 **Résolution :** La solution de contournement actuelle, qui n’est pas idéale, consiste à implémenter la récursivité dans le script plutôt que de se fier à l’applet de commande.
 
 
-<a id="sysprep-fails-after-wmf-50-installation" class="xliff"></a>
-Sysprep échoue après l’installation de WMF 5.0
+<a name="sysprep-fails-after-wmf-50-installation"></a>Sysprep échoue après l’installation de WMF 5.0
 ----------------------------------------
 
 Il existe deux solutions de contournement pour résoudre ce problème, selon la version de Windows Server que vous exécutez.

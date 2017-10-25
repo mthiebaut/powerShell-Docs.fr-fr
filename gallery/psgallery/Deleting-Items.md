@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="deleting-items" class="xliff"></a>
-# Suppression d’éléments
+# <a name="deleting-items"></a>Suppression d’éléments
 
 PowerShell Gallery ne prend pas en charge la suppression définitive d’éléments, car cela empêcherait toute personne qui en dépend de rester disponible.
 

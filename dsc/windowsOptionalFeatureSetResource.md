@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/26/2017
 ---
-<a id="dsc-windowsoptionalfeatureset-resource" class="xliff"></a>
-# Ressource WindowsOptionalFeatureSet dans DSC
+# <a name="dsc-windowsoptionalfeatureset-resource"></a>Ressource WindowsOptionalFeatureSet dans DSC
 
 > S’applique à : Windows PowerShell 5.0
 
@@ -19,8 +18,7 @@ La ressource **WindowsOptionalFeatureSet** dans la configuration d’état souha
 
 Utilisez cette ressource quand vous voulez configurer certaines fonctionnalités facultatives de Windows au même état.
 
-<a id="syntax" class="xliff"></a>
-## Syntaxe
+## <a name="syntax"></a>Syntaxe
 
 ```
 WindowsOptionalFeature [string] #ResourceName
@@ -37,8 +35,7 @@ WindowsOptionalFeature [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriétés
+## <a name="properties"></a>Propriétés
 
 |  Propriété  |  Description   | 
 |---|---| 

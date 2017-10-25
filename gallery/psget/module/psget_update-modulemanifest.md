@@ -10,32 +10,26 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="update-modulemanifest" class="xliff"></a>
-# Update-ModuleManifest
+# <a name="update-modulemanifest"></a>Update-ModuleManifest
 Met à jour un fichier manifeste de module.
 
-<a id="description" class="xliff"></a>
-## Description
+## <a name="description"></a>Description
 
 L’applet de commande Update-ModuleManifest met à jour un fichier manifeste de module (.psd1).
 
-<a id="notes" class="xliff"></a>
-### Remarques
+### <a name="notes"></a>Remarques
     - DscResourcesToExport est pris en charge uniquement dans la dernière version de PowerShell (version 5.0). Nous ne pourrons pas mettre à jour le champ si vous exécutez une version précédente de PowerShell.
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 ```powershell
 Get-Command -Name Update-ModuleManifest -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [Update-ModuleManifest](http://go.microsoft.com/fwlink/?LinkId=619311)
 
-<a id="example-commands" class="xliff"></a>
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 
 Cette nouvelle applet de commande aide à mettre à jour le fichier manifeste avec des valeurs de propriétés d’entrée. Elle accepte les mêmes paramètres que New-ModuleManifest.
 

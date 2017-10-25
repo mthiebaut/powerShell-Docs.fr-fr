@@ -1,5 +1,5 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Utilisation du développement par tabulation"
 ms.assetid: c8730471-bf6a-43b8-ab1d-f9ef5a74f04e

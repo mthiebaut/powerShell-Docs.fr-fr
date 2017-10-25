@@ -10,16 +10,14 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="prerequisites" class="xliff"></a>
-# Conditions préalables
+# <a name="prerequisites"></a>Conditions préalables
 
 > S’applique à : Windows PowerShell 5.0
 
 Just Enough Administration est une fonctionnalité incluse dans Windows PowerShell 5.0 et versions ultérieures.
 Cette rubrique décrit les conditions préalables à satisfaire pour pouvoir commencer à utiliser JEA.
 
-<a id="install-jea" class="xliff"></a>
-## Installer JEA
+## <a name="install-jea"></a>Installer JEA
 
 JEA est disponible avec Windows PowerShell 5.0 et versions ultérieures. Mais, pour les fonctionnalités complètes, il est recommandé d’installer la dernière version de PowerShell disponible pour votre système.
 Le tableau suivant décrit la disponibilité de JEA sur Windows Server :
@@ -47,8 +45,7 @@ Les comptes virtuels et les autres fonctionnalités JEA *sont* pris en charge.
 <sup>2</sup> Les versions Windows 10 1511 et 1603 ne prennent pas en charge les fonctionnalités JEA suivantes : exécution en tant que compte de service administré de groupe, les règles d’accès conditionnel dans des configurations de session, le lecteur utilisateur et l’octroi de l’accès à des comptes d’utilisateurs locaux.
 Pour obtenir un support pour ces fonctionnalités, vous devez mettre à jour Windows à la version 1607 (Mise à jour anniversaire) ou à une version ultérieure.
 
-<a id="check-which-version-of-powershell-is-installed" class="xliff"></a>
-### Vérifier la version de PowerShell installée.
+### <a name="check-which-version-of-powershell-is-installed"></a>Vérifier la version de PowerShell installée.
 
 Pour vérifier la version de PowerShell installée sur votre système, consultez la variable `$PSVersionTable` dans une invite de Windows PowerShell.
 
@@ -63,8 +60,7 @@ Major  Minor  Build  Revision
 Vous êtes prêt à utiliser JEA si la version *principale* est supérieure ou égale à **5**.
 Pour optimiser l’expérience et accéder à toutes les fonctionnalités les plus récentes, il est recommandé de mettre à niveau vers la version de PowerShell **5.1** lorsque cela est possible.
 
-<a id="install-windows-management-framework" class="xliff"></a>
-### Installer Windows Management Framework
+### <a name="install-windows-management-framework"></a>Installer Windows Management Framework
 
 Si vous exécutez une version antérieure de PowerShell, vous devez mettre à jour votre système avec la dernière mise à jour de Windows Management Framework (WMF).
 Les packages de mise à jour et un lien vers les dernières notes de publication de WMF sont disponibles dans le [Centre de téléchargement](https://aka.ms/WMF5).
@@ -73,8 +69,7 @@ Il est fortement recommandé de tester la compatibilité de votre charge de trav
 
 Les utilisateurs Windows 10 doivent installer les dernières mises à jour de la fonctionnalité pour obtenir la version actuelle de Windows PowerShell.
 
-<a id="enable-powershell-remoting" class="xliff"></a>
-## Activer la communication à distance de PowerShell
+## <a name="enable-powershell-remoting"></a>Activer la communication à distance de PowerShell
 
 La communication à distance PowerShell est la base de JEA.
 Il est donc important d’assurer que la communication à distance PowerShell est activée et [correctement sécurisée](https://msdn.microsoft.com/en-us/powershell/scripting/setup/winrmsecurity) sur votre système avant de pouvoir utiliser JEA.
@@ -86,8 +81,7 @@ Vous pouvez activer la communication à distance PowerShell en exécutant la com
 Enable-PSRemoting
 ```
 
-<a id="enable-powershell-module-and-script-block-logging-optional" class="xliff"></a>
-## Activer la journalisation des modules PowerShell et des blocs de script (facultatif)
+## <a name="enable-powershell-module-and-script-block-logging-optional"></a>Activer la journalisation des modules PowerShell et des blocs de script (facultatif)
 
 Les étapes suivantes activent la journalisation de toutes les actions PowerShell sur votre système.
 La journalisation des modules PowerShell n’est pas obligatoire pour JEA. Cependant, il est fortement recommandé de l’activer afin de vous assurer que les commandes utilisées par les utilisateurs sont journalisées dans un emplacement central.
@@ -108,14 +102,12 @@ Vous pouvez configurer la stratégie de journalisation des modules PowerShell à
 
 Vous pouvez également activer la transcription PowerShell à l’échelle du système par le biais de la stratégie de groupe.
 
-<a id="next-steps" class="xliff"></a>
-## Étapes suivantes
+## <a name="next-steps"></a>Étapes suivantes
 
 - [Créer un fichier de fonctionnalité de rôle](role-capabilities.md)
 - [Créer un fichier de configuration de session](session-configurations.md)
 
-<a id="see-also" class="xliff"></a>
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [Informations supplémentaires sur la sécurité de la communication à distance PowerShell et WinRM](https://msdn.microsoft.com/en-us/powershell/scripting/setup/winrmsecurity)
 - [*PowerShell ♥ the Blue Team*, billet de blog sur la sécurité](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/)

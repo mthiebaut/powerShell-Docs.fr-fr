@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-configurations" class="xliff"></a>
-# Configurations DSC
+# <a name="dsc-configurations"></a>Configurations DSC
 
 >S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -37,8 +36,7 @@ MyDscConfiguration
 
 Enregistrez le script comme fichier .ps1.
 
-<a id="configuration-syntax" class="xliff"></a>
-## Syntaxe de configuration
+## <a name="configuration-syntax"></a>Syntaxe de configuration
 
 Un script de configuration comprend les éléments suivants :
 
@@ -71,8 +69,7 @@ MyDscConfiguration
 
 Dans cet exemple, vous spécifiez le nom du nœud en le passant comme paramètre **ComputerName** quand vous compilez la configuration. Par défaut, le nom est « localhost ».
 
-<a id="compiling-the-configuration" class="xliff"></a>
-## Compilation de la configuration.
+## <a name="compiling-the-configuration"></a>Compilation de la configuration.
 
 Avant de pouvoir promulguer une configuration, vous devez la compiler dans un document MOF. Pour cela, appelez la configuration comme pour une fonction PowerShell.  
 La dernière ligne de l’exemple, qui contient uniquement le nom de la configuration, appelle la configuration.
@@ -119,8 +116,7 @@ Mode                LastWriteTime         Length Name
 -a----       10/23/2015   4:32 PM           2842 MyTestNode.mof
 ```      
 
-<a id="using-dependson" class="xliff"></a>
-## Utilisation de DependsOn
+## <a name="using-dependson"></a>Utilisation de DependsOn
 
 **DependsOn** est un mot clé DSC très utile. En général (même si ce n’est pas toujours le cas), DSC applique les ressources dans l’ordre dans lequel elles figurent dans la configuration. Toutefois, **DependsOn** spécifie les ressources qui dépendent d’autres ressources, et le gestionnaire de configuration local permet de s’assurer qu’elles sont appliquées dans le bon ordre, quel que soit l’ordre dans lequel les instances de ressources sont définies. Par exemple, une configuration peut spécifier qu’une instance de la ressource **User** dépend de l’existence d’une instance **Group** :
 
@@ -144,8 +140,7 @@ Configuration DependsOnExample {
 DependsOnExample
 ```
 
-<a id="using-new-resources-in-your-configuration" class="xliff"></a>
-## Utilisation de nouvelles ressources dans la configuration
+## <a name="using-new-resources-in-your-configuration"></a>Utilisation de nouvelles ressources dans la configuration
 
 Si vous avez exécuté les exemples précédents, vous avez peut-être remarqué un avertissement disant que vous utilisez une ressource sans l’avoir importée explicitement.
 Actuellement, DSC est fourni avec 12 ressources contenues dans le module PSDesiredStateConfiguration. Les autres ressources des modules externes doivent être placées dans `$env:PSModulePath` pour être reconnues par le gestionnaire de configuration local. Une nouvelle applet de commande, [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), peut être utilisée pour déterminer quelles ressources sont installées sur le système et lesquelles peuvent être utilisées par le gestionnaire de configuration local. Une fois ces modules placés dans `$env:PSModulePath` et correctement reconnus par [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), ils doivent encore être chargés dans votre configuration. 
@@ -154,8 +149,7 @@ Actuellement, DSC est fourni avec 12 ressources contenues dans le module PSDesi
 - **ModuleName** est recommandé pour l’utilisation d’**Import-DscResource**. Il accepte le nom du module qui contient les ressources à importer (ainsi qu’un tableau de chaînes comprenant des noms de modules). 
 - **Name** correspond au nom de la ressource à importer. Il ne s’agit pas du nom convivial retourné comme « Name » par [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), mais du nom de classe utilisé lors de la définition du schéma de la ressource (retourné comme **ResourceType** par [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx)). 
 
-<a id="see-also" class="xliff"></a>
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 * [Présentation de la configuration de l’état souhaité de Windows PowerShell](overview.md)
 * [Ressources DSC](resources.md)
 * [Configuration du Gestionnaire de configuration local](metaConfig.md)

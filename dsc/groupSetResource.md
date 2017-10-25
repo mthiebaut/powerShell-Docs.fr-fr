@@ -11,8 +11,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-groupset-resource" class="xliff"></a>
-# Ressources GroupSet dans DSC
+# <a name="dsc-groupset-resource"></a>Ressources GroupSet dans DSC
 
 > S’applique à : Windows PowerShell 5.0
 
@@ -20,8 +19,7 @@ La ressource **GroupSet** dans la configuration d’état souhaité (DSC) Window
 
 Utilisez cette ressource quand vous souhaitez ajouter ou supprimer la même liste de membres dans plusieurs groupes, supprimer plusieurs groupes, ou ajouter plusieurs groupes avec la même liste de membres.
 
-<a id="syntax" class="xliff"></a>
-##Syntaxe##
+##<a name="syntax"></a>Syntaxe##
 ```
 Group [string] #ResourceName
 {
@@ -34,8 +32,7 @@ Group [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriétés
+## <a name="properties"></a>Propriétés
 
 |  Propriété  |  Description   | 
 |---|---| 
@@ -47,8 +44,7 @@ Group [string] #ResourceName
 | MembersToInclude| Utilisez cette propriété pour ajouter des membres aux appartenances existantes du groupe. La valeur de cette propriété est un tableau de chaînes au format *domaine*\\*nom d’utilisateur*. Si vous définissez cette propriété dans une configuration, n’utilisez pas la propriété **Members**. Cela générera une erreur.| 
 | DependsOn | Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’ID __ResourceName__ et le type __ResourceType__, utilisez la syntaxe suivante pour cette propriété : DependsOn = "[ResourceType]ResourceName"| 
 
-<a id="example-1" class="xliff"></a>
-## Exemple 1
+## <a name="example-1"></a>Exemple 1
 
 L’exemple suivant montre comment s’assurer que les deux groupes « myGroup » et « myOtherGroup » sont présents. 
 

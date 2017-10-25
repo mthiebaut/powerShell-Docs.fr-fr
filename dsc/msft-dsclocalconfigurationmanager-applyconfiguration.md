@@ -10,16 +10,14 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="applyconfiguration-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Méthode ApplyConfiguration de la classe MSFT_DSCLocalConfigurationManager
+# <a name="applyconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Méthode ApplyConfiguration de la classe MSFT_DSCLocalConfigurationManager
 
 Utilise l’agent de configuration pour appliquer la configuration en attente. 
 
 S’il n’existe aucune configuration en attente, cette méthode applique de nouveau la configuration actuelle.
 
 
-<a id="syntax" class="xliff"></a>
-## Syntaxe
+## <a name="syntax"></a>Syntaxe
 ------
 
 ```mof
@@ -28,34 +26,29 @@ uint32 ApplyConfiguration(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-## Paramètres
+## <a name="parameters"></a>Paramètres
 ----------
 
 *force* \[in\]  
 Si la valeur est **true**, la configuration actuelle est de nouveau appliquée, même s’il existe une configuration en attente.
 
-<a id="return-value" class="xliff"></a>
-## Valeur renvoyée
+## <a name="return-value"></a>Valeur renvoyée
 ------------
 
 Retourne zéro en cas de réussite ; sinon, retourne un code d’erreur.
 
-<a id="remarks" class="xliff"></a>
-## Remarques
+## <a name="remarks"></a>Remarques
 
 Il s’agit d’une méthode statique.
 
-<a id="requirements" class="xliff"></a>
-## Spécifications
+## <a name="requirements"></a>Spécifications
 ------------
 >**MOF :** DscCore.mof
 
 >**Espace de noms** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-<a id="see-also" class="xliff"></a>
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

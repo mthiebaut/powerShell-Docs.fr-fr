@@ -9,11 +9,9 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="uninstallation-instructions" class="xliff"></a>
-# Instructions de désinstallation
+# <a name="uninstallation-instructions"></a>Instructions de désinstallation
 
-<a id="using-command-prompt" class="xliff"></a>
-## Utilisation de l’invite de commandes
+## <a name="using-command-prompt"></a>Utilisation de l’invite de commandes
 1.  Ouvrez une **invite de commandes.**
 2.  Exécutez le [Lanceur autonome Windows Update](https://support.microsoft.com/en-us/kb/934307) comme indiqué ci-dessous :
 
@@ -30,8 +28,7 @@ Sur Windows Server 2008 R2 SP1 et Windows 7 SP1 :
 wusa /uninstall /kb:3134760
 ```
 
-<a id="using-control-panel" class="xliff"></a>
-## Utilisation du Panneau de configuration
+## <a name="using-control-panel"></a>Utilisation du Panneau de configuration
 1.  Ouvrez le **Panneau de configuration.**
 2.  Ouvrez **Programmes**, puis **Désinstaller un programme.**
 3.  Cliquez sur **Afficher les mises à jour installées.**

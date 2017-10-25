@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="resourcetest-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Méthode ResourceTest de la classe MSFT_DSCLocalConfigurationManager
+# <a name="resourcetest-method-of-the-msftdsclocalconfigurationmanager-class"></a>Méthode ResourceTest de la classe MSFT_DSCLocalConfigurationManager
 
 Appelle directement la méthode **Test** d’une ressource DSC.
 
-<a id="syntax" class="xliff"></a>
-Syntaxe
+<a name="syntax"></a>Syntaxe
 ------
 
 ```mof
@@ -28,8 +26,7 @@ uint32 ResourceTest(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-Paramètres
+<a name="parameters"></a>Paramètres
 ----------
 
 *ResourceType* \[in\]  
@@ -44,27 +41,23 @@ Spécifie le nom de propriété de ressource et sa valeur dans une table de hach
 *InDesiredState* \[out\]  
 En retour, cette propriété est définie avec la valeur **true** si le nœud cible est dans l’état souhaité.
 
-<a id="return-value" class="xliff"></a>
-## Valeur renvoyée
+## <a name="return-value"></a>Valeur renvoyée
 ------------
 
 Retourne zéro en cas de réussite ; sinon, retourne un code d’erreur.
 
-<a id="remarks" class="xliff"></a>
-## Remarques
+## <a name="remarks"></a>Remarques
 
 Il s’agit d’une méthode statique.
 
-<a id="requirements" class="xliff"></a>
-## Spécifications
+## <a name="requirements"></a>Spécifications
 ------------
 >**MOF :** DscCore.mof
 
 >**Espace de noms** : Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-<a id="see-also" class="xliff"></a>
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

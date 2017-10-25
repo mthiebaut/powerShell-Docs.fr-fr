@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="find-rolecapability" class="xliff"></a>
-# Find-RoleCapability
+# <a name="find-rolecapability"></a>Find-RoleCapability
 
 Recherche les capacités de rôle dans des modules.
 
-<a id="description" class="xliff"></a>
-## Description
+## <a name="description"></a>Description
 L’applet de commande Find-RoleCapability recherche les capacités de rôle PowerShell dans des modules. Find-RoleCapability recherche des modules dans les référentiels enregistrés. Pour chaque capacité de rôle qu’elle détecte, cette applet de commande retourne un objet PSGetRoleCapabilityInfo. Vous pouvez passer un objet PSGetRoleCapabilityInfo à l’applet de commande Install-Module pour installer le module qui contient la capacité de rôle.
 Les capacités de rôle PowerShell définissent, entre autres, les commandes et applications à la disposition d’un utilisateur au niveau d’un point de terminaison d’administration suffisante. Les capacités de rôle sont définies par des fichiers portant une extension .psrc.
 
@@ -29,19 +27,16 @@ Les capacités de rôle PowerShell définissent, entre autres, les commandes et 
 - Find-RoleCapability peut filtrer le langage de recherche propre au référentiel avec le paramètre -Filter.
 - Find-RoleCapability peut filtrer les modules à partir de l’ensemble ou de certains des référentiels enregistrés.
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 ```powershell
 Get-Command -Name Find-RoleCapability -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [Find-RoleCapability](http://go.microsoft.com/fwlink/?LinkId=718029)
 
-<a id="example-commands" class="xliff"></a>
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 ```powershell
 
 # Find a specific role capability

@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-file-resource" class="xliff"></a>
-# Ressource File DSC
+# <a name="dsc-file-resource"></a>Ressource File DSC
 
 > S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -20,8 +19,7 @@ La ressource File dans DSC Windows PowerShell fournit un mécanisme permettant d
 >**Remarque :** Si la propriété **MatchSource** a la valeur **$false** (qui est la valeur par défaut), le contenu à copier est mis en cache la première fois que la configuration est appliquée. 
 >Les applications suivantes de la configuration ne recherchent pas les fichiers et/ou dossiers mis à jour dans le chemin spécifié par **SourcePath**. Si vous voulez rechercher les mises à jour des fichiers et/ou dossiers dans **SourcePath** chaque fois que la configuration est appliquée, affectez à **MatchSource** la valeur **$true**. 
 
-<a id="syntax" class="xliff"></a>
-## Syntaxe
+## <a name="syntax"></a>Syntaxe
 ```
 File [string] #ResourceName
 {
@@ -40,8 +38,7 @@ File [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriétés
+## <a name="properties"></a>Propriétés
 
 |  Propriété  |  Description   | 
 |---|---| 
@@ -58,8 +55,7 @@ File [string] #ResourceName
 | Type| Indique si la ressource actuellement configurée est un répertoire ou un fichier. Définissez cette propriété sur Directory pour indiquer que la ressource est un répertoire. Affectez-lui la valeur File pour indiquer que la ressource est un fichier. La valeur par défaut est File.| 
 | MatchSource| Si la valeur par défaut __$false__ est définie, tous les fichiers de la source (par exemple, les fichiers A, B et C) sont ajoutés à la destination quand la configuration est appliquée pour la première fois. Si un nouveau fichier (D) est ajouté à la source, il n’est pas ajouté à la destination, même si la configuration est de nouveau appliquée plus tard. Si la valeur est __$true__, chaque fois que la configuration est appliquée, les nouveaux fichiers détectés par la suite sur la source (comme le fichier D de cet exemple) seront ajoutés à la destination. La valeur par défaut est **$false**.| 
 
-<a id="example" class="xliff"></a>
-## Exemple
+## <a name="example"></a>Exemple
 
 L’exemple suivant montre comment utiliser la ressource File pour vérifier qu’un répertoire à l’emplacement `C:\Users\Public\Documents\DSCDemo\DemoSource` sur un ordinateur source (tel que le serveur collecteur) est également présent (ainsi que tous ses sous-répertoires) sur le nœud cible. Il écrit également un message de confirmation dans le journal une fois terminé, et ajoute une instruction pour garantir que l’opération de vérification des fichiers sera exécutée avant l’opération de journalisation.
 

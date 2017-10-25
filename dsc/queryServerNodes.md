@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-function-to-query-node-information-from-pull-server" class="xliff"></a>
-# Fonction DSC pour demander des informations sur le nœud au serveur collecteur.
+# <a name="dsc-function-to-query-node-information-from-pull-server"></a>Fonction DSC pour demander des informations sur le nœud au serveur collecteur.
 
 ```powershell
 function QueryNodeInformation

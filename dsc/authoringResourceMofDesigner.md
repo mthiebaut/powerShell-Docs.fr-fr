@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/29/2017
 ---
-<a id="using-the-resource-designer-tool" class="xliff"></a>
-# Utilisation du Concepteur de ressources
+# <a name="using-the-resource-designer-tool"></a>Utilisation du Concepteur de ressources
 
 > S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -21,8 +20,7 @@ Utilisez l’applet de commande [Install-Module](https://technet.microsoft.com/e
 
 >**Remarque** : **Install-Module** est inclus dans le module **PowerShellGet** de PowerShell 5.0. Vous pouvez télécharger le module **PowerShellGet** pour PowerShell 3.0 et 4.0 ici : [PackageManagement PowerShell Modules Preview](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
 
-<a id="creating-resource-properties" class="xliff"></a>
-## Création de propriétés de ressource
+## <a name="creating-resource-properties"></a>Création de propriétés de ressource
 La première chose à faire est de décider des propriétés que doit exposer la ressource. Pour cet exemple, nous allons définir un utilisateur Active Directory avec les propriétés suivantes.
  
 Nom du paramètre  Description
@@ -40,8 +38,7 @@ $DomainCredential = New-xDscResourceProperty –Name DomainCredential-Type PSCre
 $Password = New-xDscResourceProperty –Name Password -Type PSCredential -Attribute Write
 ```
 
-<a id="create-the-resource" class="xliff"></a>
-## Créer la ressource
+## <a name="create-the-resource"></a>Créer la ressource
 
 Maintenant que les propriétés de la ressource ont été créées, nous pouvons appeler l’applet de commande **New-xDscResource** pour créer la ressource. L’applet de commande **New-xDscResource** prend la liste des propriétés comme paramètres. Elle prend également le chemin de l’emplacement auquel le module doit être créé, le nom de la nouvelle ressource et le nom du module dans lequel elle est contenue. La commande PowerShell suivante crée la ressource.
 
@@ -164,8 +161,7 @@ function Test-TargetResource
 Export-ModuleMember -Function *-TargetResource
 ```
 
-<a id="updating-the-resource" class="xliff"></a>
-## Mise à jour de la ressource
+## <a name="updating-the-resource"></a>Mise à jour de la ressource
 
 Si vous avez besoin d’ajouter ou de modifier la liste des paramètres de la ressource, vous pouvez appeler l’applet de commande **Update-xDscResource**. L’applet de commande met à jour la ressource avec une nouvelle liste de paramètres. Si vous avez déjà ajouté une logique au script de votre ressource, celle-ci reste inchangée.
 
@@ -176,18 +172,14 @@ $lastLogon = New-xDscResourceProperty –Name LastLogon –Type Hashtable –Att
 Update-xDscResource –Name ‘Demo_ADUser’ –Property $UserName, $Ensure, $DomainCredential, $Password, $lastLogon -Force
 ```
 
-<a id="testing-a-resource-schema" class="xliff"></a>
-## Test d’un schéma de ressource
+## <a name="testing-a-resource-schema"></a>Test d’un schéma de ressource
 
 L’outil Concepteur de ressources expose une applet de commande supplémentaire qui peut être utilisée pour tester la validité d’un schéma MOF que vous avez écrit manuellement. Appelez l’applet de commande **Test-xDscSchema** en passant le chemin d’un schéma de ressource MOF comme paramètre. C’est dans ce schéma que l’applet de commande affiche les éventuelles erreurs.
 
-<a id="see-also" class="xliff"></a>
-### Voir aussi
+### <a name="see-also"></a>Voir aussi
 
-<a id="concepts" class="xliff"></a>
-#### Concepts
+#### <a name="concepts"></a>Concepts
 [Création de ressources personnalisées de configuration d’état souhaité Windows PowerShell](authoringResource.md)
 
-<a id="other-resources" class="xliff"></a>
-#### Autres ressources
+#### <a name="other-resources"></a>Autres ressources
 [Module xDscResourceDesigner](https://powershellgallery.com/packages/xDscResourceDesigner)

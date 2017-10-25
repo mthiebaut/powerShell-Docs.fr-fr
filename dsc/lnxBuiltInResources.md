@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="built-in-desired-state-configuration-resources-for-linux" class="xliff"></a>
-# Ressources DSC intégrées pour Linux
+# <a name="built-in-desired-state-configuration-resources-for-linux"></a>Ressources DSC intégrées pour Linux
 
 Les ressources sont des blocs de construction que vous pouvez utiliser pour écrire un script DSC PowerShell. DSC pour Linux est fourni avec un ensemble de fonctionnalités intégrées pour la configuration des ressources, telles que des fichiers et des dossiers, des packages, des variables d’environnement, des services et des processus.
 
-<a id="built-in-resources" class="xliff"></a>
-## Ressources intégrées 
+## <a name="built-in-resources"></a>Ressources intégrées 
 
 Le tableau suivant fournit la liste de ces ressources, ainsi que des liens vers les rubriques qui expliquent ces ressources en détail.
 

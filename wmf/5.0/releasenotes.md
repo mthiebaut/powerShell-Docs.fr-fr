@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="windows-management-framework-wmf-50-rtm-release-notes-overview" class="xliff"></a>
-# Présentation des Notes de publication de Windows Management Framework (WMF) 5.0 RTM
+# <a name="windows-management-framework-wmf-50-rtm-release-notes-overview"></a>Présentation des Notes de publication de Windows Management Framework (WMF) 5.0 RTM
 
 Windows Management Framework (WMF) 5.0 RTM offre une fonctionnalité qui a été mise à jour par rapport à WMF 4.0. WMF 5.0 RTM peut être installé uniquement sur **Windows Server 2012 R2**, **Windows Server 2012**, **Windows Server 2008 R2**, **Windows 8.1** et **Windows 7 SP1**. Il contient les fonctionnalités nouvelles ou mises à jour suivantes :
 

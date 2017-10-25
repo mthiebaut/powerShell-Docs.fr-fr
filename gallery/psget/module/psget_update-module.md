@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="update-module" class="xliff"></a>
-# Update-Module
+# <a name="update-module"></a>Update-Module
 
 Télécharge et installe la version la plus récente des modules spécifiés à partir d’une galerie en ligne sur l’ordinateur local.
 
-<a id="description" class="xliff"></a>
-## Description
+## <a name="description"></a>Description
 
 L’applet de commande Update-Module installe une version plus récente d’un module Windows PowerShell qui a été installé à partir de la galerie en ligne en exécutant Install-Module sur l’ordinateur local.
 
@@ -24,8 +22,7 @@ Par défaut, la version la plus récente du module spécifié disponible dans la
 
 L’exécution d’Update-Module sans le paramètre Name met à jour tous les modules qui peuvent être mis à jour sur l’ordinateur local.
 
-<a id="notes" class="xliff"></a>
-### Remarques
+### <a name="notes"></a>Remarques
 
 - Cette applet de commande s’exécute sur Windows PowerShell 3.0 ou versions ultérieures de Windows PowerShell, sur Windows 7 ou Windows 2008 R2 et versions ultérieures de Windows.
 - Si le module que vous spécifiez avec le paramètre Name n’a pas été installé à l’aide d’Install-Module, une erreur se produit. Vous pouvez uniquement exécuter Update-Module sur les modules que vous avez installés à partir de la galerie en ligne en exécutant Install-Module.
@@ -33,20 +30,17 @@ L’exécution d’Update-Module sans le paramètre Name met à jour tous les mo
 - Dans PowerShell 5.0 ou versions plus récentes, quand Update-Module met à jour un module, il ajoute la version la plus récente (ou spécifiée) du module afin que les versions plus anciennes et plus récentes figurent côte à côte dans le même répertoire. Il serait utile de le dire et d’afficher un exemple de la sortie de ces commandes.
 
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 ```powershell
 Get-Command -Name Update-Module -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [Update-Module](http://go.microsoft.com/fwlink/?LinkID=398576)
 
 
-<a id="example-commands" class="xliff"></a>
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 
 ```powershell
 PS C:\\windows\\system32> Update-Module -Name ContosoServer -RequiredVersion 1.5
@@ -90,8 +84,7 @@ Version Name Repository Description
 ```
 
 
-<a id="update-the-testdepwithnestedrequiredmodules1-module-with-dependencies" class="xliff"></a>
-###  Mettez à jour le module TestDepWithNestedRequiredModules1 avec des dépendances.
+###  <a name="update-the-testdepwithnestedrequiredmodules1-module-with-dependencies"></a>Mettez à jour le module TestDepWithNestedRequiredModules1 avec des dépendances.
 ```powershell
 Find-Module -Name TestDepWithNestedRequiredModules1 -Repository LocalRepo -AllVersions
 

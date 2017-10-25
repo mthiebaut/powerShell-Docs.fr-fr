@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-for-linux-nxscript-resource" class="xliff"></a>
-# Ressource nxScript dans DSC pour Linux
+# <a name="dsc-for-linux-nxscript-resource"></a>Ressource nxScript dans DSC pour Linux
 
 La ressource **nxScript** dans DSC (Desired State Configuration) PowerShell fournit un mécanisme permettant d’exécuter des scripts Linux sur un nœud Linux.
 
-<a id="syntax" class="xliff"></a>
-## Syntaxe
+## <a name="syntax"></a>Syntaxe
 
 ```
 nxScript <string> #ResourceName
@@ -31,8 +29,7 @@ nxScript <string> #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Propriétés
+## <a name="properties"></a>Propriétés
 
 |  Propriété |  Description | 
 |---|---|
@@ -43,8 +40,7 @@ nxScript <string> #ResourceName
 | Group| Nom de groupe utilisé pour exécuter le script.| 
 | DependsOn | Indique que la configuration d’une autre ressource doit être effectuée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’**ID** **ResourceName** et le type **ResourceType**, utilisez la syntaxe suivante pour cette propriété : `DependsOn = "[ResourceType]ResourceName"`.| 
 
-<a id="example" class="xliff"></a>
-## Exemple
+## <a name="example"></a>Exemple
 
 L’exemple suivant utilise la ressource **nxScript** pour gérer une configuration supplémentaire.
 

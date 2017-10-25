@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="calling-dsc-resource-methods-directly" class="xliff"></a>
-# Appel direct de méthodes de ressources DSC
+# <a name="calling-dsc-resource-methods-directly"></a>Appel direct de méthodes de ressources DSC
 
 >S’applique à : Windows PowerShell 5.0
 
@@ -23,8 +22,7 @@ Lors de l’appel de l’applet de commande **Invoke-DscResource**, vous spécif
 
 Voici quelques exemples d’appels directs de méthodes de ressources :
 
-<a id="ensure-a-file-is-present" class="xliff"></a>
-## S’assurer de la présence d’un fichier
+## <a name="ensure-a-file-is-present"></a>S’assurer de la présence d’un fichier
 
 ```powershell
 $result = Invoke-DscResource -Name File -Method Set -Property @{
@@ -33,8 +31,7 @@ $result = Invoke-DscResource -Name File -Method Set -Property @{
 $result | fl
 ```
 
-<a id="test-that-a-file-is-present" class="xliff"></a>
-## Tester la présence d’un fichier
+## <a name="test-that-a-file-is-present"></a>Tester la présence d’un fichier
 
 ```powershell
 $result = Invoke-DscResource -Name File -Method Test -Property @{
@@ -43,8 +40,7 @@ $result = Invoke-DscResource -Name File -Method Test -Property @{
 $result | fl
 ```
 
-<a id="get-the-contents-of-file" class="xliff"></a>
-## Obtenir le contenu du fichier
+## <a name="get-the-contents-of-file"></a>Obtenir le contenu du fichier
 
 ```powershell
 $result = Invoke-DscResource -Name File -Method Get -Property @{
@@ -55,8 +51,7 @@ $result.ItemValue | fl
 
 >**Remarque :** l’appel direct de méthodes de ressources composites n’est pas pris en charge. Appelez plutôt les ressources sous-jacentes qui forment la ressource composite.
 
-<a id="see-also" class="xliff"></a>
-## Voir aussi
+## <a name="see-also"></a>Voir aussi
 - [Écriture d’une ressource DSC personnalisée avec MOF](authoringResourceMOF.md) 
 - [Écriture d’une ressource DSC personnalisée avec les classes PowerShell](authoringResourceClass.md)
 - [Débogage des ressources DSC](debugResource.md)

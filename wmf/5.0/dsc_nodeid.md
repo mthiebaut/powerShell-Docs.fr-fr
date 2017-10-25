@@ -9,11 +9,9 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="separation-of-node-and-configuration-ids" class="xliff"></a>
-# Séparation des ID de nœud et de configuration
+# <a name="separation-of-node-and-configuration-ids"></a>Séparation des ID de nœud et de configuration
 
-<a id="overview" class="xliff"></a>
-## Vue d’ensemble
+## <a name="overview"></a>Vue d’ensemble
 
 Afin d’offrir une expérience plus flexible et rationalisée lors de l’utilisation de DSC en mode par extraction, nous avons ajouté un certain nombre de fonctionnalités dans cette version. Ces fonctionnalités ont pour but de vous aider à configurer et à déployer des configurations sur plusieurs nœuds de manière simple et flexible, tout en assurant le suivi et en fournissant des informations pour chaque nœud. Il s’agit des fonctionnalités suivantes :
 

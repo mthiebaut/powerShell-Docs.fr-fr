@@ -10,29 +10,24 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="uninstall-script" class="xliff"></a>
-# Uninstall-Script
+# <a name="uninstall-script"></a>Uninstall-Script
 
 Désinstalle un fichier de script qui a été installé à l’aide de PowerShellGet.
 
-<a id="description" class="xliff"></a>
-## Description
+## <a name="description"></a>Description
 
 L’applet de commande Uninstall-Script désinstalle les fichiers de script spécifiés qui ont été installés à partir du référentiel en ligne.
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 
 ```powershell
 Get-Command -Name Uninstall-Script -Module PowerShellGet -Syntax
 ```
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [Uninstall-Script](http://go.microsoft.com/fwlink/?LinkId=619789)
 
-<a id="example-commands" class="xliff"></a>
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 
 ```powershell
 Get-InstalledScript | Uninstall-Script -WhatIf

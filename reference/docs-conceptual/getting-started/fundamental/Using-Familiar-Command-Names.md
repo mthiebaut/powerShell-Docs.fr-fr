@@ -1,5 +1,5 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: Utilisation de noms de commande familiers
 ms.assetid: 021e2424-c64e-4fa5-aa98-aa6405758d5d

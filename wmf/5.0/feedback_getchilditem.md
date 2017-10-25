@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="get-childitem-has--depth-parameter" class="xliff"></a>
-# Get-ChildItem a un paramètre -Depth
+# <a name="get-childitem-has--depth-parameter"></a>Get-ChildItem a un paramètre -Depth
 **Get-ChildItem** a maintenant un paramètre **–Depth** que vous pouvez utiliser avec **– Recurse** pour limiter la récursivité :
 
 PS C:\\Users\\slee\\Downloads\\Example&gt; Get-ChildItem -Recurse -Depth 0

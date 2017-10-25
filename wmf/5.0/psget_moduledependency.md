@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="installation-of-module-dependencies" class="xliff"></a>
-# Installation des dépendances de modules
+# <a name="installation-of-module-dependencies"></a>Installation des dépendances de modules
 
 Les applets de commande Install-module, Update-Module et Publish-Module qui s’exécutent dans Windows PowerShell 5.0 ou version ultérieure offrent désormais une prise en charge des versions de modules côte à côte (SxS).
 Nous avons aussi ajouté un paramètre -RequiredVersion à l’applet de commande Publish-Module pour spécifier la version à publier. Le paramètre Path prend désormais en charge le chemin de base de module avec le dossier de version.

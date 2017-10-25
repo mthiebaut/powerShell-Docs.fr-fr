@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="software-inventory-logging-sil" class="xliff"></a>
-# Journalisation de l’inventaire logiciel
+# <a name="software-inventory-logging-sil"></a>Journalisation de l’inventaire logiciel
 
 **IMPORTANT : ** *Lors de l’installation de WMF 5.0 sur un serveur Windows Server 2012 R2 exécutant déjà la journalisation de l’inventaire logiciel, vous devez exécuter l’applet de commande Start-SilLogging une seule fois après l’installation de WMF, car le processus d’installation arrête la fonctionnalité de journalisation de l’inventaire logiciel de façon non contrôlée.*
 

@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/12/2017
 ---
-<a id="update-scriptfileinfo" class="xliff"></a>
-# Update-ScriptFileInfo
+# <a name="update-scriptfileinfo"></a>Update-ScriptFileInfo
 
 L’applet de commande Update-ScriptFileInfo permet de mettre à jour les métadonnées existantes du fichier de script.
 
-<a id="description" class="xliff"></a>
-## Description
+## <a name="description"></a>Description
 
 L’applet de commande Update-ScriptFileInfo met à jour les informations pour un script.
 - L’applet de commande Update-ScriptFileInfo ne met à jour les métadonnées d’un fichier de script que s’il a été créé à l’aide de l’applet de commande New-ScriptFileInfo ou avec un commentaire PSScriptInfo valide.
@@ -24,19 +22,16 @@ L’applet de commande Update-ScriptFileInfo met à jour les informations pour u
 - Si –Force est spécifié, essayez d’ajouter les métadonnées au fichier de script existant qui n’a pas été créé à l’aide de l’applet de commande New-ScriptFileInfo.
 - En cas d’échec de Test-ScriptFileInfo avec les erreurs d’analyse, après avoir ajouté les métadonnées de script au fichier existant, une erreur est générée avec un message de type « Impossible d’ajouter les métadonnées au fichier existant ; vous pouvez utiliser l’applet de commande new-scriptfileinfo pour ajouter les métadonnées au fichier de script existant qui n’a pas été créé à l’aide de l’applet de commande New-ScriptFileInfo. ».
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Syntaxe de l’applet de commande
+## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
 
 ```powershell
 Get-Command -Name Update-ScriptFileInfo -Module PowerShellGet -Syntax
 ```
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Référence de l’aide en ligne de l’applet de commande
+## <a name="cmdlet-online-help-reference"></a>Référence de l’aide en ligne de l’applet de commande
 
 [Update-Script](http://go.microsoft.com/fwlink/?LinkId=619793)
 
-<a id="example-commands" class="xliff"></a>
-## Exemples de commandes
+## <a name="example-commands"></a>Exemples de commandes
 
 ```powershell
 # Use Update-ScriptFileInfo cmdlet to update the script metadata
@@ -50,8 +45,7 @@ Version Name Author Description
 ```
 
 
-<a id="adding-the-script-metadata-to-the-existing-script-file" class="xliff"></a>
-### Ajout des métadonnées de script au fichier de script existant
+### <a name="adding-the-script-metadata-to-the-existing-script-file"></a>Ajout des métadonnées de script au fichier de script existant
 
 ```powershell
 PS C:\WINDOWS\system32> New-ScriptFileInfo -Description "Script file description." -PassThru
