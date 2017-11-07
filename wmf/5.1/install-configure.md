@@ -5,11 +5,11 @@ ms.topic: reference
 keywords: wmf,powershell,configuration
 contributor: keithb
 title: "Installer et configurer WMF 5.1"
-ms.openlocfilehash: ea9b2fb184f2dd9a8e7a09c3a36278087f795172
-ms.sourcegitcommit: a5c0795ca6ec9332967bff9c151a8572feb1a53a
+ms.openlocfilehash: 74c19d2eb04b77b1e2b1c8d8977f9b4db6e94e4f
+ms.sourcegitcommit: 9910675e8758042b5949c99b381a926d2b4e8c21
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="install-and-configure-wmf-51"></a>Installer et configurer WMF 5.1 #
 
@@ -53,7 +53,8 @@ Install-WMF5.1.ps1 accepte les paramètres suivants pour faciliter l’automatis
 L’installation de WMF 5.1 sur Windows Server 2008 R2 SP1 ou Windows 7 SP1 nécessite ce qui suit :
 - Le dernier Service Pack doit est installé.
 - WMF 3.0 **ne doit pas** être installé. L’installation de WMF 5.1 sur WMF 3.0 entraîne la perte de PSModulePath, ce qui peut provoquer l’échec d’autres applications. Avant d’installer WMF 5.1, vous devez soit désinstaller WMF 3.0, soit enregistrer PSModulePath et le restaurer manuellement au terme de l’installation de WMF 5.1. 
-- WMF 5.1 exige au moins le [.NET Framework 4.5.2](https://www.microsoft.com/en-ca/download/details.aspx?id=42642). Vous pouvez installer Microsoft .NET Framework 4.5.2 en suivant les instructions à l’emplacement du téléchargement.
+- WMF 5.1 nécessite au moins [.NET Framework 4.5.2](https://www.microsoft.com/en-ca/download/details.aspx?id=42642).
+Vous pouvez installer Microsoft .NET Framework 4.5.2 en suivant les instructions à l’emplacement du téléchargement.
 
 **Dépendance de WinRM** 
 
