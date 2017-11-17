@@ -3,14 +3,14 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: Aide sur la ligne de commande PowerShell.exe
 ms.assetid: 1ab7b93b-6785-42c6-a1c9-35ff686a958f
-ms.openlocfilehash: c2583dac14f32db414f0a4377b1694ab7fa7523b
-ms.sourcegitcommit: cd66d4f49ea762a31887af2c72d087b219ddbe10
+ms.openlocfilehash: 262c21e44e509746314ed44d91bb3de16a4b854b
+ms.sourcegitcommit: 4807ab554d55fdee499980835bcc279368b1df68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="powershellexe-command-line-help"></a>Aide sur la ligne de commande PowerShell.exe
-Démarre une session Windows PowerShell. Vous pouvez utiliser PowerShell.exe pour démarrer une session Windows PowerShell à partir de la ligne de commande d’un autre outil, tel que Cmd.exe, ou l’utiliser dans la ligne de commande Windows PowerShell pour démarrer une nouvelle session. Utilisez les paramètres pour personnaliser la session.
+une session Windows PowerShell. Vous pouvez utiliser PowerShell.exe pour démarrer une session PowerShell à partir de la ligne de commande d’un autre outil, tel que Cmd.exe, ou l’utiliser dans la ligne de commande PowerShell pour démarrer une nouvelle session. Utilisez les paramètres pour personnaliser la session.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,7 +28,7 @@ PowerShell[.exe]
        [-NonInteractive] 
        [-NoProfile] 
        [-OutputFormat {Text | XML}] 
-       [-PSConsoleFile <FilePath> | -Version <Windows PowerShell version>]
+       [-PSConsoleFile <FilePath> | -Version <PowerShell version>]
        [-Sta]
        [-WindowStyle <style>]
         
@@ -39,10 +39,10 @@ PowerShell[.exe] -Help | -? | /?
 ## <a name="parameters"></a>Paramètres
 
 ### <a name="-encodedcommand-base64encodedcommand"></a>-EncodedCommand <Base64EncodedCommand>
-Accepte une version de chaîne codée en base 64 d’une commande. Utilisez ce paramètre pour envoyer à Windows PowerShell des commandes qui nécessitent des guillemets ou des accolades complexes.
+Accepte une version de chaîne codée en base 64 d’une commande. Utilisez ce paramètre pour envoyer à PowerShell des commandes qui nécessitent des guillemets ou des accolades complexes.
 
 ### <a name="-executionpolicy-executionpolicy"></a>-ExecutionPolicy <ExecutionPolicy>
-Définit la stratégie d’exécution par défaut pour la session actuelle et l’enregistre dans la variable d’environnement $env:PSExecutionPolicyPreference. Ce paramètre ne modifie pas la stratégie d’exécution Windows PowerShell qui est définie dans le Registre. Pour plus d’informations sur les stratégies d’exécution Windows PowerShell, notamment une liste de valeurs valides, voir about_Execution_Policies (http://go.microsoft.com/fwlink/?LinkID=135170).
+Définit la stratégie d’exécution par défaut pour la session actuelle et l’enregistre dans la variable d’environnement $env:PSExecutionPolicyPreference. Ce paramètre ne modifie pas la stratégie d’exécution PowerShell qui est définie dans le Registre. Pour plus d’informations sur les stratégies d’exécution PowerShell, notamment une liste de valeurs valides, consultez about_Execution_Policies (http://go.microsoft.com/fwlink/?LinkID=135170).
 
 ### <a name="-file-filepath-parameters"></a>-File <FilePath> \[<Parameters>]
 Exécute le script spécifié dans l’étendue locale (avec « dot-sourcing »), afin que les fonctions et variables créées par le script soient disponibles dans la session active. Entrez le chemin d’accès au fichier de script et les paramètres éventuels. **File** doit être le dernier paramètre de la commande, car tous les caractères tapés après le nom de paramètre **File** sont interprétés comme étant le chemin d’accès au fichier de script, suivi des paramètres de script et de leurs valeurs.
@@ -53,10 +53,10 @@ Par exemple, si vous êtes dans cmd.exe et que vous souhaitez passer une valeur 
 En règle générale, les paramètres de commutateur d’un script sont inclus ou omis. Par exemple, la commande suivante utilise le paramètre **All** du fichier de script Get-Script.ps1 : `-File .\Get-Script.ps1 -All`
 
 ### <a name="-inputformat-text--xml"></a>\-InputFormat {Text | XML}
-Décrit le format des données envoyées à Windows PowerShell. Les valeurs valides sont « Text » (chaînes de texte) ou « XML » (format CLIXML sérialisé).
+Décrit le format des données envoyées à PowerShell. Les valeurs valides sont « Text » (chaînes de texte) ou « XML » (format CLIXML sérialisé).
 
 ### <a name="-mta"></a>-Mta
-Démarre Windows PowerShell à l’aide d’un cloisonnement multithread. Ce paramètre est introduit dans Windows PowerShell 3.0. Dans Windows PowerShell 3.0, le cloisonnement par défaut est monothread (STA). Dans Windows PowerShell 2.0, le cloisonnement par défaut est multithread (MTA).
+Démarre PowerShell à l’aide d’un cloisonnement multithread. Ce paramètre est introduit dans PowerShell 3.0. Dans PowerShell 3.0, le cloisonnement par défaut est monothread (STA). Dans PowerShell 2.0, le cloisonnement par défaut est multithread (MTA).
 
 ### <a name="-noexit"></a>-NoExit
 Ne quitte pas après l’exécution de commandes de démarrage.
@@ -68,38 +68,38 @@ Masque la bannière de copyright au démarrage.
 Ne présente pas d’invite interactive à l’utilisateur.
 
 ### <a name="-noprofile"></a>-NoProfile
-Ne charge pas le profil Windows PowerShell.
+Ne charge pas le profil PowerShell.
 
 ### <a name="-outputformat-text--xml"></a>-OutputFormat {Text | XML}
-Détermine la mise en forme de la sortie de Windows PowerShell. Les valeurs valides sont « Text » (chaînes de texte) ou « XML » (format CLIXML sérialisé).
+Détermine la mise en forme de la sortie de PowerShell. Les valeurs valides sont « Text » (chaînes de texte) ou « XML » (format CLIXML sérialisé).
 
 ### <a name="-psconsolefile-filepath"></a>-PSConsoleFile <FilePath>
-Charge le fichier de console Windows PowerShell spécifié. Entrez le chemin d’accès et le nom du fichier de console. Pour créer un fichier de console, utilisez l’applet de commande [Export-Console](https://technet.microsoft.com/en-us/library/4bab1c02-9e61-4aaf-9957-11d1934ef4ef) dans Windows PowerShell.
+Charge le fichier de console PowerShell spécifié. Entrez le chemin d’accès et le nom du fichier de console. Pour créer un fichier de console, utilisez l’applet de commande [Export-Console](https://technet.microsoft.com/en-us/library/4bab1c02-9e61-4aaf-9957-11d1934ef4ef) dans PowerShell.
 
 ### <a name="-sta"></a>-Sta
-Démarre Windows PowerShell à l’aide d’un cloisonnement monothread. Dans Windows PowerShell 3.0, le cloisonnement par défaut est monothread (STA). Dans Windows PowerShell 2.0, le cloisonnement par défaut est multithread (MTA).
+Démarre PowerShell à l’aide d’un cloisonnement monothread. Dans PowerShell 3.0, le cloisonnement par défaut est monothread (STA). Dans PowerShell 2.0, le cloisonnement par défaut est multithread (MTA).
 
-### <a name="-version-windows-powershell-version"></a>-Version <Windows PowerShell Version>
-Démarre la version spécifiée de Windows PowerShell. La version que vous spécifiez doit être installée sur le système. Si Windows PowerShell 3.0 est installé sur l’ordinateur, les valeurs valides sont « 2.0 » et « 3.0 ». La valeur par défaut est « 3.0 ».
+### <a name="-version-powershell-version"></a>-Version <PowerShell Version>
+Démarre la version spécifiée de PowerShell. La version que vous spécifiez doit être installée sur le système. Si PowerShell 3.0 est installé sur l’ordinateur, les valeurs valides sont « 2.0 » et « 3.0 ». La valeur par défaut est « 3.0 ».
 
-Si Windows PowerShell 3.0 n’est pas installé, la seule valeur valide est « 2.0 ». Les autres valeurs sont ignorées.
+Si PowerShell 3.0 n’est pas installé, la seule valeur valide est « 2.0 ». Les autres valeurs sont ignorées.
 
-Pour plus d’informations, voir « Installation de Windows PowerShell » dans [Prise en main de Windows PowerShell [ancien MSDN]](https://technet.microsoft.com/en-us/library/69555d95-b481-43e1-86e7-b46d68b3e2dd).
+Pour plus d’informations, consultez « Installation de PowerShell » dans [Bien démarrer avec PowerShell [ancien MSDN]](https://technet.microsoft.com/en-us/library/69555d95-b481-43e1-86e7-b46d68b3e2dd).
 
 ### <a name="-windowstyle-window-style"></a>-WindowStyle <Window style>
 Définit le style de fenêtre pour la session. Les valeurs valides sont Normal, Hidden, Minimized et Maximized.
 
 ### <a name="-command"></a>-Command
-Exécute les commandes spécifiées (et les paramètres éventuels) comme si elles étaient tapées à l’invite de commandes Windows PowerShell, puis quitte, sauf si le paramètre NoExit est spécifié.
+Exécute les commandes spécifiées (et les paramètres éventuels) comme si elles étaient tapées à l’invite de commandes PowerShell, puis quitte, sauf si le paramètre NoExit est spécifié.
 Pour l’essentiel, tout le texte qui suit `-Command` est envoyé sous la forme d’une ligne de commande PowerShell (ce qui diffère de la façon dont `-File` gère les paramètres envoyés à un script).
 
 La valeur de Command peut être « - », une chaîne ou un bloc de script. Si la valeur de Command est « - », le texte de commande est lu à partir de l’entrée standard.
 
-Les blocs de script doivent être entourés d’accolades ({}). Vous pouvez spécifier un bloc de script uniquement lors de l’exécution de PowerShell.exe dans Windows PowerShell. Les résultats du script sont retournés à l’interpréteur de commandes parent en tant qu’objets XML désérialisés, et non en tant qu’objets actifs.
+Les blocs de script doivent être entourés d’accolades ({}). Vous pouvez spécifier un bloc de script uniquement lors de l’exécution de PowerShell.exe dans PowerShell. Les résultats du script sont retournés à l’interpréteur de commandes parent en tant qu’objets XML désérialisés, et non en tant qu’objets actifs.
 
 Si la valeur de Command est une chaîne, **Command** doit être le dernier paramètre de la commande, car les caractères tapés après la commande sont interprétés comme étant des arguments de la commande.
 
-Pour écrire une chaîne exécutant une commande Windows PowerShell, utilisez le format suivant :
+Pour écrire une chaîne exécutant une commande PowerShell, utilisez le format suivant :
 
 ```
 "& {<command>}"
@@ -108,10 +108,10 @@ Pour écrire une chaîne exécutant une commande Windows PowerShell, utilisez le
 où les guillemets indiquent une chaîne et l’opérateur d’appel (&) déclenche l’exécution de la commande.
 
 ### <a name="-help---"></a>-Help, -?, /?
-Affiche ce message. Si vous tapez une commande PowerShell.exe dans Windows PowerShell, faites précéder les paramètres de commande d’un trait d’union (-), et non d’une barre oblique (/). Vous pouvez utiliser un trait d’union ou une barre oblique dans Cmd.exe.
+Affiche ce message. Si vous tapez une commande PowerShell.exe dans PowerShell, faites précéder les paramètres de commande d’un trait d’union (-), et non d’une barre oblique (/). Vous pouvez utiliser un trait d’union ou une barre oblique dans Cmd.exe.
 
 > [!NOTE]
-> Remarque sur la résolution de problèmes : dans Windows PowerShell 2.0, le démarrage de certains programmes dans la console Windows PowerShell échoue en signalant un LastExitCode de 0xc0000142.
+> Remarque sur la résolution de problèmes : dans PowerShell 2.0, le démarrage de certains programmes dans la console Windows PowerShell échoue en signalant un LastExitCode de 0xc0000142.
 
 ## <a name="examples"></a>EXEMPLES
 

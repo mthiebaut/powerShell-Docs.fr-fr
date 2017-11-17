@@ -1,22 +1,31 @@
 ---
-ms.date: 2017-06-12
+ms.date: 2017-10-31
 author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: "Sécurisation du fichier MOF"
-ms.openlocfilehash: dc900f53c954637a407fbd026d24d20c2fdabf6e
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: f4ef2962710c7458ac947bf33270175a09de643c
+ms.sourcegitcommit: 4807ab554d55fdee499980835bcc279368b1df68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="securing-the-mof-file"></a>Sécurisation du fichier MOF
 
 >S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
-DSC indique aux nœuds cibles la configuration qu’ils doivent appliquer en envoyant à chaque nœud un fichier MOF contenant ces informations, dans lequel le gestionnaire de configuration local implémente la configuration souhaitée. Étant donné que ce fichier contient les détails de la configuration, il est important qu’il soit sécurisé. Pour ce faire, vous pouvez paramétrer le LCM pour qu’il vérifie les informations d’identification d’un utilisateur. Cette rubrique décrit comment transmettre ces informations d’identification en toute sécurité au nœud cible en les chiffrant avec des certificats.
+DSC gère la configuration des nœuds de serveur en appliquant les informations stockées dans un fichier MOF, où le Gestionnaire de configuration local implémente l’état de fin souhaitée.
+Étant donné que ce fichier contient les détails de la configuration, il est important qu’il soit sécurisé.
+Cette rubrique décrit comment s’assurer que le nœud cible a chiffré le fichier.
 
->**Remarque :** cette rubrique présente les certificats utilisés pour le chiffrement. Pour le chiffrement, un certificat auto-signé est suffisant, car la clé privée est toujours gardée secrète et le chiffrement n’implique pas d’approbation du document. Les certificats auto-signés ne doivent *pas* être utilisés à des fins d’authentification. Pour l’authentification, vous devez utiliser un certificat d’une Autorité de certification (CA) approuvée.
+À partir de PowerShell version 5.0, la totalité du fichier MOF est chiffrée par défaut quand il est appliqué au nœud à l’aide de l’applet de commande **Start-DSCConfiguration**.
+Le processus décrit dans cet article est nécessaire uniquement lors de l’implémentation d’une solution utilisant le protocole de service de tirage si les certificats ne sont pas gérés, afin de s’assurer que les configurations téléchargées par le nœud cible peuvent être déchiffrées et lues par le système avant d’être appliquées (par exemple, le service de tirage disponible dans Windows Server).
+Sur les nœuds inscrits auprès [d’Azure Automation DSC](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview), des certificats sont automatiquement installés et gérés par le service sans aucune surcharge administrative nécessaire.
+
+>**Remarque :** cette rubrique présente les certificats utilisés pour le chiffrement.
+>Pour le chiffrement, un certificat auto-signé est suffisant, car la clé privée est toujours gardée secrète et le chiffrement n’implique pas d’approbation du document.
+>Les certificats auto-signés ne doivent *pas* être utilisés à des fins d’authentification.
+>Pour l’authentification, vous devez utiliser un certificat d’une Autorité de certification (CA) approuvée.
 
 ## <a name="prerequisites"></a>Conditions préalables
 
