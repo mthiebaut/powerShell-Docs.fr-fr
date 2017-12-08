@@ -3,7 +3,8 @@ title: "Échec des applets de commande du Gestionnaire de commutateur réseau"
 contributor: vaibch
 ms.openlocfilehash: 8495d79aec54d93f94e745e2efccb5116ad5d944
 ms.sourcegitcommit: a3966253a165d193a42b43b9430a4dc76988f82f
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: fr-FR
 ---
 Les applets de commande du Gestionnaire de commutateur réseau peuvent être utilisées pour gérer les commutateurs réseau via WSMAN. Quelques applets de commande de ce module peuvent accepter des valeurs provenant de pipelines. Dans WMF 5.1 Preview, l’exécution des applets de commande qui peuvent accepter une valeur provenant d’un pipeline échoue quand les valeurs ne sont pas passées via des pipelines.
 
