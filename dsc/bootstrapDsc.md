@@ -4,11 +4,11 @@ author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: "Configurer une machine virtuelle au démarrage initial à l’aide de DSC"
-ms.openlocfilehash: a3592c50fa7f2232538fbec07129fac86c1d00b5
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: c793e36eb9caa194104f9dda2aa1d335b21b676c
+ms.sourcegitcommit: 58371abe9db4b9a0e4e1eb82d39a9f9e187355f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 12/05/2017
 ---
 >S’applique à : Windows PowerShell 5.0
 
@@ -21,7 +21,7 @@ Pour plus d’informations sur la configuration de nouvelles machines virtuelles
 
 Pour exécuter ces exemples, vous avez besoin des éléments suivants :
 
-- Un disque dur virtuel démarrable avec lequel travailler. Vous pouvez télécharger une image ISO avec une copie d’évaluation de Windows Server 2016 auprès du   [TechNet Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016). Vous trouverez des instructions sur la création d’un disque dur virtuel à partir d’une image ISO dans [Creating Bootable Virtual Hard Disks](https://technet.microsoft.com/en-us/library/gg318049.aspx).
+- Un disque dur virtuel démarrable avec lequel travailler. Vous pouvez télécharger une image ISO avec une copie d’évaluation de Windows Server 2016 auprès du [TechNet Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016). Vous trouverez des instructions sur la création d’un disque dur virtuel à partir d’une image ISO dans [Creating Bootable Virtual Hard Disks](https://technet.microsoft.com/en-us/library/gg318049.aspx).
 - Un ordinateur hôte où Hyper-V est activé. Pour plus d’informations, consultez [Vue d’ensemble d’Hyper-V](https://technet.microsoft.com/library/hh831531.aspx).
 
 À l’aide de DSC, vous pouvez automatiser l’installation et la configuration de logiciels d’un ordinateur au démarrage initial.
@@ -83,7 +83,7 @@ Configuration SampleIISInstall
 Renommez le fichier en `Pending.mof` et déplacez-le à l’emplacement approprié sur le disque dur virtuel en utilisant l’applet de commande [Move-Item](https://technet.microsoft.comlibrary/hh849852.aspx). Par exemple :
 
     ```powershell
-        Move-Item -Path C:\DSCTest\SampleIISInstall\localhost.mof -Destination E:\Windows\Sytem32\Configuration\Pending.mof
+        Move-Item -Path C:\DSCTest\SampleIISInstall\localhost.mof -Destination E:\Windows\System32\Configuration\Pending.mof
     ```
 6. Démontez le disque dur virtuel en appelant l’applet de commande [Dismount-VHD](https://technet.microsoft.com/library/hh848562.aspx). Par exemple :
 
