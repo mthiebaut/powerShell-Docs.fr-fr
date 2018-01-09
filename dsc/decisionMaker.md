@@ -4,11 +4,11 @@ author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: "Présentation de la configuration de l’état souhaité pour les décideurs"
-ms.openlocfilehash: e39ab5138b20653e46ac35fa32b99d268f96b2df
-ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
+ms.openlocfilehash: 1800acfa9edae4f65e34db380ff719ad4c034921
+ms.sourcegitcommit: 60f06a06c2fce63024f3f4cbd7657b1dfe7fcb1a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="desired-state-configuration-overview-for-decision-makers"></a>Présentation de la configuration de l’état souhaité pour les décideurs
 
@@ -34,7 +34,7 @@ Les configurations peuvent également être partagées via la [PowerShell Galler
 
 ## <a name="desired-state-configuration-and-devops"></a>Configuration de l’état souhaité et DevOps
 
-[DevOps](http://blogs.technet.com/b/ashleymcglone/archive/2015/11/20/devops-for-n00bs-ie-windows-people.aspx) est une association de personnes, de technologies et de cultures qui permet un déploiement et une itération rapides. DSC a été conçu autour de DevOps. Le fait de n’utiliser qu’une seule configuration pour définir un environnement signifie que les développeurs peuvent coder leurs spécifications dans une configuration et vérifier cette configuration dans le contrôle de code source. Les équipes opérationnelles peuvent facilement déployer le code sans avoir à passer par des processus manuels sujets aux erreurs. 
+[DevOps](http://blogs.technet.com/b/ashleymcglone/archive/2015/11/20/devops-for-n00bs-ie-windows-people.aspx) est une association de personnes, de processus et d’outils qui permet un déploiement et une itération rapides centrés sur l’offre de valeur aux utilisateurs finaux, internes ou externes. DSC a été conçu autour de DevOps. Le fait de n’utiliser qu’une seule configuration pour définir un environnement signifie que les développeurs peuvent coder leurs spécifications dans une configuration et vérifier cette configuration dans le contrôle de code source. Les équipes opérationnelles peuvent facilement déployer le code sans avoir à passer par des processus manuels sujets aux erreurs. 
 
 Les configurations sont également [pilotées par les données](https://msdn.microsoft.com/en-us/powershell/dsc/configdata), ce qui permet aux équipes opérationnelles d’identifier et de modifier plus facilement les environnements, sans intervention des développeurs. 
 
