@@ -2,11 +2,11 @@
 ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Effectuer le deuxième saut dans la communication à distance PowerShell"
-ms.openlocfilehash: f3b8280819e43bd67bd608ffd0ba9484c2bbc26c
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: 2518409369a75a49b975b9b944320c1878819421
+ms.sourcegitcommit: 1a0a0928c1e3cae4e8df8d79b0737bd7ed6b4e47
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="making-the-second-hop-in-powershell-remoting"></a>Effectuer le deuxième saut dans la communication à distance PowerShell
 
@@ -256,12 +256,12 @@ Vous pouvez transmettre des informations d’identification à l’intérieur du
 - Ne nécessite pas de configuration particulière du serveur.
 - Fonctionne sur n’importe quel serveur exécutant WMF 2.0 ou une version ultérieure.
 
-## <a name="cons"></a>Inconvénients
+### <a name="cons"></a>Inconvénients
 
 - Nécessite une technique de programmation délicate.
 - Si vous exécutez WMF 2.0, requiert une syntaxe différente pour transmettre des arguments à une session à distance.
 
-## <a name="example"></a>Exemple
+### <a name="example"></a>Exemple
 
 L’exemple suivant montre comment transmettre des informations d’identification dans un bloc de script **Invoke-Command** :
 
