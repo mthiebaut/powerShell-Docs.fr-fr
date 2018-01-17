@@ -11,8 +11,6 @@
               href: core-powershell/console/powershell.exe-command-line-help.md
             - name: Utilisation du développement par tabulation
               href: core-powershell/console/using-tab-expansion.md
-        - name: Guide de la console
-          href: core-powershell/console-guide.md
         - name: ISE
           href: core-powershell/ise/introducing-the-windows-powershell-ise.md
           items:
@@ -70,8 +68,6 @@
               href: core-powershell/ise/using-the-windows-powershell-ise.md
             - name: Informations de référence sur le modèle objet Windows PowerShell ISE
               href: core-powershell/ise/windows-powershell-ise-object-model-reference.md
-        - name: Guide de l’ISE
-          href: core-powershell/ise-guide.md
         - name: Visual Studio Code
           items:
             - name: Utilisation de Visual Studio Code
@@ -211,8 +207,6 @@
           href: getting-started/getting-started-with-windows-powershell.md
         - name: En savoir plus sur PowerShell
           href: getting-started/more-powershell-learning.md
-        - name: Référence de la présentation des concepts
-          href: getting-started/understanding-concepts-reference.md
     - name: Installation
       href: ''
       items:
