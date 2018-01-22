@@ -3,25 +3,37 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Exécution de commandes à distance"
 ms.assetid: d6938b56-7dc8-44ba-b4d4-cd7b169fd74d
-ms.openlocfilehash: 5cf9690b8fe4549a99186f172cb6f0de156a4dea
-ms.sourcegitcommit: c5251755c4442487f99ff74fadf7e37bbf039089
+ms.openlocfilehash: 43f07abd642e7de235647fa151537c46ebe86cae
+ms.sourcegitcommit: 6aed37d7f0c9652ae09bb8c11928da7e4783ed7f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="running-remote-commands"></a>Exécution de commandes à distance
+
 Vous pouvez exécuter des commandes sur un ordinateur ou plusieurs centaines au moyen d'une seule commande Windows PowerShell. Pour communiquer à distance, Windows PowerShell fait appel à différentes technologies, notamment WMI, RPC et WS-Management.
+
+## <a name="remoting-in-powershell-core"></a>Accès distant dans PowerShell Core
+
+PowerShell Core, l’édition la plus récente de PowerShell sur Windows, macOS et Linux, prend en charge WMI, WS-Management et l’accès distant SSH.
+(RPC n’est plus pris en charge.)
+
+Pour plus d’informations sur la configuration de ceci, consultez :
+
+* [Accès distant SSH dans PowerShell Core] [ssh-remoting]
+* [Accès distant WinRM dans PowerShell Core] [winrm-remoting]
 
 ## <a name="remoting-without-configuration"></a>Communication à distance sans configuration
 De nombreuses applets de commande Windows PowerShell possèdent le paramètre ComputerName, qui vous permet de collecter des données et de modifier les paramètres sur un ou plusieurs ordinateurs distants. Elles utilisent diverses technologies de communication et bon nombre d'entre elles fonctionnent sur tous les systèmes d'exploitation Windows pris en charge par Windows PowerShell, et ce sans configuration particulière.
 
 Ces applets de commande sont les suivantes :
+
 * [Restart-Computer](https://go.microsoft.com/fwlink/?LinkId=821625)
 * [Test-Connection](https://go.microsoft.com/fwlink/?LinkId=821646)
 * [Clear-EventLog](https://go.microsoft.com/fwlink/?LinkId=821568)
 * [Get-EventLog](https://go.microsoft.com/fwlink/?LinkId=821585)
 * [Get-HotFix](https://go.microsoft.com/fwlink/?LinkId=821586)
-  - [Get-Process](https://go.microsoft.com/fwlink/?linkid=821590)
+* [Get-Process](https://go.microsoft.com/fwlink/?linkid=821590)
 * [Get-Service](https://go.microsoft.com/fwlink/?LinkId=821593)
 * [Set-Service](https://go.microsoft.com/fwlink/?LinkId=821633)
 * [Get-WinEvent](https://go.microsoft.com/fwlink/?linkid=821529)
@@ -135,3 +147,6 @@ Pour obtenir de l’aide sur les erreurs de communication à distance, voir [abo
 - [New-PSSession](https://go.microsoft.com/fwlink/?LinkId=821498)
 - [Register-PSSessionConfiguration](https://go.microsoft.com/fwlink/?LinkId=821508)
 - [Fournisseur WSMan](https://technet.microsoft.com/en-us/library/66fe1241-e08f-49ca-832f-a84c33ca8735)
+
+[wsman-remoting]: WSMan-Remoting-in-PowerShell-Core.md
+[ssh-resmoting]: SSH-Remoting-in-PowerShell-Core.md
