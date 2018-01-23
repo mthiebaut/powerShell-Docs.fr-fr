@@ -1,19 +1,18 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: "Options relatives aux informations d’identification dans les données de configuration"
-ms.openlocfilehash: 94ff541fc517254ef2876c424307513eaf1d362a
-ms.sourcegitcommit: 28e71b0ae868014523631fec3f5417de751944f3
+ms.openlocfilehash: 15cdb29127d9774c58e1d6518bbba56273e7defd
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="credentials-options-in-configuration-data"></a>Options relatives aux informations d’identification dans les données de configuration
 >S’applique à : Windows PowerShell 5.0
 
-## <a name="plain-text-passwords-and-domain-users"></a>Mots de passe en texte clair et utilisateurs de domaine
+## <a name="plain-text-passwords-and-domain-users"></a>Mots de passe en texte brut et utilisateurs de domaine
 
 Les configurations DSC qui contiennent des informations d’identification non chiffrées génèrent un message d’erreur concernant les mots de passe en texte clair.
 En outre, DSC génère un avertissement lorsque des informations d’identification de domaine sont utilisées.
@@ -21,9 +20,12 @@ Pour empêcher ces messages d’erreur et d’avertissement, utilisez les mots c
 * **PsDscAllowPlainTextPassword**
 * **PsDscAllowDomainUser**
 
->**Remarques :** <p>Le stockage/la transmission des mots de passe en texte clair non chiffrés ne sont généralement pas sécurisés. Il est recommandé de sécuriser les informations d’identification à l’aide des techniques décrites plus loin dans cette rubrique.</p> <p>Le service Azure Automation DSC vous permet de centraliser la gestion des informations d’identification en les compilant dans des configurations et en les stockant en lieu sûr.  Pour plus d’informations, consultez : [Compilation des Configurations DSC / Ressources d’informations d’identification](https://docs.microsoft.com/en-in/azure/automation/automation-dsc-compile#credential-assets)</p>
+> [!NOTE]
+> Le stockage/la transmission des mots de passe en texte clair non chiffrés ne sont généralement pas sécurisés. Il est recommandé de sécuriser les informations d’identification à l’aide des techniques décrites plus loin dans cette rubrique.
+> Le service Azure Automation DSC vous permet de centraliser la gestion des informations d’identification en les compilant dans des configurations et en les stockant en lieu sûr.
+> Pour plus d’informations, consultez : [Compilation des Configurations DSC / Ressources d’informations d’identification](/azure/automation/automation-dsc-compile#credential-assets)
 
-Voici un exemple de transmission d’informations d’identification en texte clair :
+Voici un exemple de transmission d’informations d’identification en texte brut :
 
 ```powershell
 #Prompt user for their credentials
@@ -133,7 +135,8 @@ Avec WMF 5.0, la propriété `PsDscRunAsCredential` est ajoutée automatiquemen
 Pour plus d’informations sur l’utilisation de `PsDscRunAsCredential`, consultez [Exécution de DSC avec les informations d’identification de l’utilisateur](runAsUser.md).
 Les ressources récentes et les ressources personnalisées peuvent utiliser cette propriété automatique au lieu de créer leur propre propriété d’informations d’identification.
 
->**Remarque :** Certaines ressources sont conçues pour utiliser plusieurs informations d’identification pour une raison donnée et ont leurs propres propriétés d’informations d’identification.
+> [!NOTE]
+> Certaines ressources sont conçues pour utiliser plusieurs informations d’identification pour une raison donnée et ont leurs propres propriétés d’informations d’identification.
 
 Pour trouver les propriétés d’informations d’identification disponibles dans une ressource, utilisez `Get-DscResource -Name ResourceName -Syntax` ou Intellisense dans l’environnement ISE (`CTRL+SPACE`).
 
@@ -222,8 +225,8 @@ for node 'localhost'.
 ```
 
 Cet exemple comprend deux problèmes :
-1.  L’erreur explique que les mots de passe en texte clair ne sont pas recommandés
-2.  L’avertissement recommande de ne pas utiliser d’informations d’identification de domaine
+1. L’erreur explique que les mots de passe en texte brut ne sont pas recommandés
+2. L’avertissement recommande de ne pas utiliser d’informations d’identification de domaine
 
 ## <a name="psdscallowplaintextpassword"></a>PsDscAllowPlainTextPassword
 
@@ -231,7 +234,7 @@ Le premier message d’erreur comprend une URL vers de la documentation.
 Ce lien explique comment chiffrer des mots de passe avec une structure [ConfigurationData](https://msdn.microsoft.com/en-us/powershell/dsc/configdata) et un certificat.
 Pour plus d’informations sur les certificats et sur DSC, [lisez cet article de blog](http://aka.ms/certs4dsc).
 
-Pour forcer un mot de passe en texte clair, la ressource nécessite que le mot clé `PsDscAllowPlainTextPassword` se trouve dans la section des données de configuration comme dans l’exemple suivant :
+Pour forcer un mot de passe en texte brut, la ressource nécessite que le mot clé `PsDscAllowPlainTextPassword` se trouve dans la section des données de configuration comme dans l’exemple suivant :
 
 ```powershell
 Configuration DomainCredentialExample
@@ -266,9 +269,11 @@ $cred = Get-Credential -UserName contoso\genericuser -Message "Password please"
 DomainCredentialExample -DomainCredential $cred -ConfigurationData $cd
 ```
 
->**Remarque :**  `NodeName` n’est pas équivalent à un astérisque et un nom de nœud doit être fourni obligatoirement.
+> [!NOTE]
+> `NodeName` n’est pas équivalent à un astérisque et un nom de nœud doit être fourni obligatoirement.
 
-**Microsoft recommande d’éviter les mots de passe en texte clair en raison de l’important risque de sécurité qu’ils présentent.**
+**Microsoft recommande d’éviter les mots de passe en texte brut en raison de l’important risque de sécurité qu’ils présentent.**
+
 L’utilisation du service Azure Automation DSC constitue une exception, uniquement parce que les données sont toujours stockées chiffrées (en transit, au repos dans le service et au repos sur le nœud).
 
 ## <a name="domain-credentials"></a>Informations d’identification de domaine
