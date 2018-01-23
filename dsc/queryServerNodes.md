@@ -1,16 +1,15 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: "Fonction DSC pour demander des informations sur le nœud au serveur collecteur."
-ms.openlocfilehash: 307fd46f113797c75c6ad2211ec86af30104de36
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: f97e1d62873fb9e23147ff137468a767455cd82c
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="dsc-function-to-query-node-information-from-pull-server"></a><span data-ttu-id="a028d-103">Fonction DSC pour demander des informations sur le nœud au serveur collecteur.</span><span class="sxs-lookup"><span data-stu-id="a028d-103">DSC function to query node information from pull server.</span></span>
+# <a name="dsc-function-to-query-node-information-from-pull-server"></a><span data-ttu-id="02121-103">Fonction DSC pour demander des informations sur le nœud au serveur collecteur.</span><span class="sxs-lookup"><span data-stu-id="02121-103">DSC function to query node information from pull server.</span></span>
 
 ```powershell
 function QueryNodeInformation
@@ -39,9 +38,9 @@ Param (
 }
 ```
 
-<span data-ttu-id="a028d-104">Remplacez le paramètre `Uri` par l’URI de votre serveur collecteur.</span><span class="sxs-lookup"><span data-stu-id="a028d-104">Replace the `Uri` parameter with the URI for your pull server.</span></span> <span data-ttu-id="a028d-105">Si vous voulez les informations de nœud au format XML, définissez `ContentType` avec la valeur `application/xml`.</span><span class="sxs-lookup"><span data-stu-id="a028d-105">If you want the node information in XML format, set `ContentType` to `application/xml`.</span></span>
+<span data-ttu-id="02121-104">Remplacez le paramètre `Uri` par l’URI de votre serveur collecteur.</span><span class="sxs-lookup"><span data-stu-id="02121-104">Replace the `Uri` parameter with the URI for your pull server.</span></span> <span data-ttu-id="02121-105">Si vous voulez les informations de nœud au format XML, définissez `ContentType` avec la valeur `application/xml`.</span><span class="sxs-lookup"><span data-stu-id="02121-105">If you want the node information in XML format, set `ContentType` to `application/xml`.</span></span>
 
-<span data-ttu-id="a028d-106">Pour récupérer les informations de nœud à partir du paramètre `$json`, utilisez la commande suivante :</span><span class="sxs-lookup"><span data-stu-id="a028d-106">To retrieve the node information from the `$json` parameter, use the following:</span></span>
+<span data-ttu-id="02121-106">Pour récupérer les informations de nœud à partir du paramètre `$json`, utilisez la commande suivante :</span><span class="sxs-lookup"><span data-stu-id="02121-106">To retrieve the node information from the `$json` parameter, use the following:</span></span>
 
 ```powershell
 $json = QueryNodeInformation –Uri http://localhost:7070/PSDSCComplianceServer.svc/Status 

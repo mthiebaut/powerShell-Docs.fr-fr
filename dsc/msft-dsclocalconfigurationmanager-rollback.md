@@ -1,20 +1,19 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: "Méthode RollBack de la classe MSFT_DSCLocalConfigurationManager"
-ms.openlocfilehash: b8597e3eb7872d9894863fb02d927c9f475da44c
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: a219703389405c0dd457d0b2e0b1c54b9c28f559
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="rollback-method-of-the-msftdsclocalconfigurationmanager-class"></a><span data-ttu-id="fce20-103">Méthode RollBack de la classe MSFT_DSCLocalConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="fce20-103">RollBack method of the MSFT_DSCLocalConfigurationManager class</span></span>
+# <a name="rollback-method-of-the-msftdsclocalconfigurationmanager-class"></a><span data-ttu-id="fb70d-103">Méthode RollBack de la classe MSFT_DSCLocalConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="fb70d-103">RollBack method of the MSFT_DSCLocalConfigurationManager class</span></span>
 
-<span data-ttu-id="fce20-104">Restaure la configuration à une version précédente.</span><span class="sxs-lookup"><span data-stu-id="fce20-104">Rolls back the configuration to a previous version.</span></span>
+<span data-ttu-id="fb70d-104">Restaure la configuration à une version précédente.</span><span class="sxs-lookup"><span data-stu-id="fb70d-104">Rolls back the configuration to a previous version.</span></span>
 
-<a name="syntax"></a><span data-ttu-id="fce20-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="fce20-105">Syntax</span></span>
+<a name="syntax"></a><span data-ttu-id="fb70d-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="fb70d-105">Syntax</span></span>
 ------
 
 ```mof
@@ -23,32 +22,32 @@ uint32 RollBack(
 );
 ```
 
-<a name="parameters"></a><span data-ttu-id="fce20-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="fce20-106">Parameters</span></span>
+<a name="parameters"></a><span data-ttu-id="fb70d-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="fb70d-106">Parameters</span></span>
 ----------
 
-<span data-ttu-id="fce20-107">*configurationNumber* \[in\]</span><span class="sxs-lookup"><span data-stu-id="fce20-107">*configurationNumber* \[in\]</span></span>  
-<span data-ttu-id="fce20-108">Spécifie la configuration demandée.</span><span class="sxs-lookup"><span data-stu-id="fce20-108">Specifies the requested configuration.</span></span> 
+<span data-ttu-id="fb70d-107">*configurationNumber* \[in\]</span><span class="sxs-lookup"><span data-stu-id="fb70d-107">*configurationNumber* \[in\]</span></span>  
+<span data-ttu-id="fb70d-108">Spécifie la configuration demandée.</span><span class="sxs-lookup"><span data-stu-id="fb70d-108">Specifies the requested configuration.</span></span> 
 
-## <a name="return-value"></a><span data-ttu-id="fce20-109">Valeur renvoyée</span><span class="sxs-lookup"><span data-stu-id="fce20-109">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="fb70d-109">Valeur renvoyée</span><span class="sxs-lookup"><span data-stu-id="fb70d-109">Return value</span></span>
 ------------
 
-<span data-ttu-id="fce20-110">Retourne zéro en cas de réussite ; sinon, retourne un code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="fce20-110">Returns zero on success; otherwise returns an error code.</span></span>
+<span data-ttu-id="fb70d-110">Retourne zéro en cas de réussite ; sinon, retourne un code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="fb70d-110">Returns zero on success; otherwise returns an error code.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="fce20-111">Remarques</span><span class="sxs-lookup"><span data-stu-id="fce20-111">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="fb70d-111">Remarques</span><span class="sxs-lookup"><span data-stu-id="fb70d-111">Remarks</span></span>
 
-<span data-ttu-id="fce20-112">Il s’agit d’une méthode statique.</span><span class="sxs-lookup"><span data-stu-id="fce20-112">This is a static method.</span></span>
+<span data-ttu-id="fb70d-112">Il s’agit d’une méthode statique.</span><span class="sxs-lookup"><span data-stu-id="fb70d-112">This is a static method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="fce20-113">Spécifications</span><span class="sxs-lookup"><span data-stu-id="fce20-113">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="fb70d-113">Spécifications</span><span class="sxs-lookup"><span data-stu-id="fb70d-113">Requirements</span></span>
 ------------
-><span data-ttu-id="fce20-114">**MOF :** DscCore.mof</span><span class="sxs-lookup"><span data-stu-id="fce20-114">**MOF:** DscCore.mof</span></span>
+><span data-ttu-id="fb70d-114">**MOF :** DscCore.mof</span><span class="sxs-lookup"><span data-stu-id="fb70d-114">**MOF:** DscCore.mof</span></span>
 
-><span data-ttu-id="fce20-115">**Espace de noms** : Root\Microsoft\Windows\DesiredStateConfiguration</span><span class="sxs-lookup"><span data-stu-id="fce20-115">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span></span>
-
-
-## <a name="see-also"></a><span data-ttu-id="fce20-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="fce20-116">See also</span></span>
+><span data-ttu-id="fb70d-115">**Espace de noms** : Root\Microsoft\Windows\DesiredStateConfiguration</span><span class="sxs-lookup"><span data-stu-id="fb70d-115">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span></span>
 
 
-[<span data-ttu-id="fce20-117">**MSFT_DSCLocalConfigurationManager**</span><span class="sxs-lookup"><span data-stu-id="fce20-117">**MSFT_DSCLocalConfigurationManager**</span></span>](msft-dsclocalconfigurationmanager.md)
+## <a name="see-also"></a><span data-ttu-id="fb70d-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="fb70d-116">See also</span></span>
+
+
+[<span data-ttu-id="fb70d-117">**MSFT_DSCLocalConfigurationManager**</span><span class="sxs-lookup"><span data-stu-id="fb70d-117">**MSFT_DSCLocalConfigurationManager**</span></span>](msft-dsclocalconfigurationmanager.md)
 
 
  
