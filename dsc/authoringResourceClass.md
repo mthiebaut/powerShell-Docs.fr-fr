@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: "Écriture d’une ressource DSC personnalisée avec les classes PowerShell"
-ms.openlocfilehash: 6e482f45c7d09898d46de20f43dcf16ecf3da7da
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: b24351a49ca11dac4687efdce39d400bfd00f399
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>Écriture d’une ressource DSC personnalisée avec les classes PowerShell
 
@@ -485,7 +484,7 @@ Pour plus d’informations, consultez [Exécution de DSC avec les informations d
 L’attribut **DscResource()** accepte un paramètre facultatif, **RunAsCredential**.
 Ce paramètre prend une des trois valeurs suivantes :
 
-- `Optional` **PsDscRunAsCredential** est facultatif pour les configurations qui appellent cette ressource. Il s’agit de la valeur par défaut.
+- `Optional` **PsDscRunAsCredential** est facultatif pour les configurations qui appellent cette ressource. Il s'agit de la valeur par défaut.
 - `Mandatory` **PsDscRunAsCredential** doit être utilisé pour toute configuration qui appelle cette ressource.
 - `NotSupported` Les configurations qui appellent cette ressource ne peuvent pas utiliser **PsDscRunAsCredential**.
 - `Default` Identique à `Optional`.

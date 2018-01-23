@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-10-11
-author: eslesar;mgreenegit
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: Configuration du Gestionnaire de configuration local
-ms.openlocfilehash: 6ca527aae263637bbca5a064e0d770fe9384d679
-ms.sourcegitcommit: ea01285a3aa7818d67d4761fbd8793b9b66bd5f7
+ms.openlocfilehash: 947bc17347204f6f15a24f83b449582afe65a4ee
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="configuring-the-local-configuration-manager"></a>Configuration du Gestionnaire de configuration local
 
@@ -46,7 +45,7 @@ configuration LCMConfig
             RefreshMode = 'Push'
         }
     }
-} 
+}
 ```
 
 Le processus d’application des paramètres au Gestionnaire de configuration local est similaire à l’application d’une configuration DSC.
@@ -130,7 +129,7 @@ Pour définir un serveur de configuration web, créez un bloc **ConfigurationRep
 Un bloc **ConfigurationRepositoryWeb** définit les propriétés suivantes.
 
 |Propriété|Type|Description|
-|---|---|---| 
+|---|---|---|
 |AllowUnsecureConnection|bool|Définissez cette propriété sur **$TRUE** pour autoriser le nœud à se connecter au serveur sans authentification. Définissez-la sur **$FALSE** pour rendre l’authentification obligatoire.|
 |CertificateID|string|Empreinte d’un certificat utilisée pour l’authentification auprès du serveur.|
 |ConfigurationNames|String[]|Tableau des noms des configurations à extraire par le nœud cible. Ils sont utilisés uniquement si le nœud est enregistré auprès du service d’extraction à l’aide d’une propriété **RegistrationKey**. Pour plus d’informations, consultez [Configuration d’un client collecteur à l’aide des noms de configuration](pullClientConfigNames.md).|
@@ -191,7 +190,7 @@ Pour plus d’informations sur les configurations partielles, consultez [Configu
 Un bloc **PartialConfiguration** définit les propriétés suivantes.
 
 |Propriété|Type|Description|
-|---|---|---| 
+|---|---|---|
 |ConfigurationSource|string[]|Tableau des noms des serveurs de configuration, définis précédemment dans les blocs **ConfigurationRepositoryWeb** et **ConfigurationRepositoryShare**, à partir desquels la configuration partielle est extraite.|
 |DependsOn|string{}|Liste des noms des autres configurations à exécuter avant l’application de cette configuration partielle.|
 |Description|string|Texte qui décrit la configuration partielle.|
@@ -201,11 +200,11 @@ Un bloc **PartialConfiguration** définit les propriétés suivantes.
 
 __Remarque :__ les configurations partielles sont prises en charge avec Azure Automation DSC, mais une seule configuration peut être extraite du compte Automation de chaque nœud.
 
-## <a name="see-also"></a>Voir aussi 
+## <a name="see-also"></a>Voir aussi
 
 ### <a name="concepts"></a>Concepts
 [Vue d’ensemble de la configuration d'état souhaité](overview.md)
- 
+
 [Bien démarrer avec Azure Automation DSC](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-getting-started)
 
 ### <a name="other-resources"></a>Autres ressources

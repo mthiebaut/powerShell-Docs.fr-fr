@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: Ressource WindowsFeature dans DSC
-ms.openlocfilehash: b4f50cb9ee172600b1811175e9cf67f6a7ed2d55
-ms.sourcegitcommit: cd5a1f054cbf9eb95c5242a995f9741e031ddb24
+ms.openlocfilehash: 3dd4a9c6f11b0c76054ca3e95796cab8e709a7c6
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dsc-windowsfeature-resource"></a>Ressource WindowsFeature dans DSC
 
@@ -35,7 +34,7 @@ WindowsFeature [string] #ResourceName
 
 |  Propriété  |  Description   | 
 |---|---| 
-| Nom| Indique le nom du rôle ou de la fonctionnalité dont vous voulez garantir l’ajout ou la suppression. Il s’agit du même nom que celui de la propriété __Name__ de l’applet de commande [Get-WindowsFeature](/powershell/module/servermanager/Get-WindowsFeature) et non du nom d’affichage du rôle ou de la fonctionnalité.| 
+| Name| Indique le nom du rôle ou de la fonctionnalité dont vous voulez garantir l’ajout ou la suppression. Il s’agit du même nom que celui de la propriété __Name__ de l’applet de commande [Get-WindowsFeature](/powershell/module/servermanager/Get-WindowsFeature) et non du nom d’affichage du rôle ou de la fonctionnalité.| 
 | Credential| Indique les informations d’identification à utiliser pour ajouter ou supprimer le rôle ou la fonctionnalité.| 
 | Ensure| Indique si le rôle ou la fonctionnalité sont ajoutés. Pour vous assurer que le rôle ou la fonctionnalité sont ajoutés, définissez cette propriété sur « Present ». Pour que le rôle ou la fonctionnalité soient supprimés, définissez la propriété sur « Absent ».| 
 | IncludeAllSubFeature| Définissez cette propriété sur __$true__ pour garantir que l’état de toutes les sous-fonctionnalités nécessaires est l’état de la fonctionnalité que vous spécifiez avec la propriété __Name__.| 

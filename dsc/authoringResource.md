@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: "Création de ressources DSC Windows PowerShell personnalisées"
-ms.openlocfilehash: 75b494db4ee6e381491decb11d35b60105217a0f
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 4751bcaab1996ee3164bd2a2f430c3b188712860
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="build-custom-windows-powershell-desired-state-configuration-resources"></a>Création de ressources DSC Windows PowerShell personnalisées
 
@@ -20,9 +19,9 @@ La configuration de l’état souhaité (DSC) de Windows PowerShell comprend des
 
 Une ressource DSC est un module Windows PowerShell. Le module contient à la fois le schéma (la définition des propriétés configurables) et l’implémentation (le code qui effectue le travail spécifié par une configuration) de la ressource. Un schéma de ressources DSC peut être défini dans un fichier MOF et l’implémentation est effectuée par un module de script. À partir de la version 5 des classes PowerShell, le schéma et l’implémentation peuvent être définis dans une classe. Les rubriques suivantes expliquent plus en détail comment créer des ressources DSC.
 
-* [Écriture d’une ressource DSC personnalisée avec MOF](authoringResourceMOF.md) 
-* [Implementing a DSC resource in C#](authoringResourceMofCS.md) 
-* [Écriture d’une ressource DSC personnalisée avec les classes PowerShell](authoringResourceClass.md) 
-* [Ressources composites : utilisation d’une configuration DSC comme ressource](authoringResourceComposite.md) 
-* [Utilisation du Concepteur de ressources](authoringResourceMofDesigner.md) 
+* [Écriture d’une ressource DSC personnalisée avec MOF](authoringResourceMOF.md)
+* [Implementing a DSC resource in C#](authoringResourceMofCS.md)
+* [Écriture d’une ressource DSC personnalisée avec les classes PowerShell](authoringResourceClass.md)
+* [Ressources composites : utilisation d’une configuration DSC comme ressource](authoringResourceComposite.md)
+* [Utilisation du Concepteur de ressources](authoringResourceMofDesigner.md)
 

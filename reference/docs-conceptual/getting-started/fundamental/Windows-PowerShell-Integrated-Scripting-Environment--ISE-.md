@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Environnement d’écriture de scripts intégré de Windows PowerShell ISE"
 ms.assetid: f156b92d-0203-46d2-89c7-b4989d32e3d2
-ms.openlocfilehash: 6bddb953a7f17e220f92d357eb59dfedc5496272
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: 66f36371cbb8ad8523aa1e1e3cd791cc692194c9
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="windows-powershell-integrated-scripting-environment-ise"></a>Environnement d'écriture de scripts intégré de Windows PowerShell
 L’environnement d’écriture de scripts intégré de Windows PowerShell (ISE) est l’un des deux ordinateurs hôtes pour le moteur et le langage Windows PowerShell. Il permet d’écrire, d’exécuter et de tester des scripts d’une manière que la console Windows PowerShell ne permet pas. L’environnement ISE ajoute la coloration de la syntaxe, la saisie semi-automatique via la touche Tab, IntelliSense, le débogage visuel et l’aide contextuelle.
@@ -63,5 +63,5 @@ Notez que toutes les entrées étiquetées « Version préliminaire » compren
 > Étant donné que Windows PowerShell ISE nécessite une interface graphique utilisateur, vous ne pouvez pas l’exécuter sur l’option d’installation minimale de Windows Server.
 
 ## <a name="see-also"></a>Voir aussi
-- [Utilisation de l’environnement d’écriture de scripts intégré de Windows PowerShell](Using-the-Windows-PowerShell-ISE.md)
+- [Utilisation de l’environnement d’écriture de scripts intégré de Windows PowerShell](../../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
 

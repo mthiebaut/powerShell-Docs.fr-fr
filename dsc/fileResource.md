@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: "Ressource File DSC"
-ms.openlocfilehash: f16bfbc31489ef7d1b0e5e4ec3a4f30069c24c79
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 54d01bf0769eeed0354606eb3543973b0f850a6f
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dsc-file-resource"></a>Ressource File DSC
 
@@ -44,7 +43,7 @@ File [string] #ResourceName
 |---|---| 
 | DestinationPath| Spécifie l’emplacement d’un fichier ou d’un répertoire dont vous voulez garantir l’état.| 
 | Attributes| Spécifie l’état souhaité des attributs du fichier ou du répertoire cible.| 
-| Somme de contrôle| Spécifie le type de somme de contrôle à utiliser pour déterminer si deux fichiers sont identiques. Si __Checksum__ n’est pas spécifié, seul le nom du fichier ou du répertoire est utilisé pour la comparaison. Les valeurs valides sont les suivantes : SHA-1, SHA-256, SHA-512, createdDate, modifiedDate.| 
+| Checksum| Spécifie le type de somme de contrôle à utiliser pour déterminer si deux fichiers sont identiques. Si __Checksum__ n’est pas spécifié, seul le nom du fichier ou du répertoire est utilisé pour la comparaison. Les valeurs valides sont les suivantes : SHA-1, SHA-256, SHA-512, createdDate, modifiedDate.| 
 | Contenu| Spécifie le contenu d’un fichier, tel qu’une chaîne spécifique.| 
 | Credential| Indique les informations d’identification qui sont nécessaires pour accéder aux ressources, telles que des fichiers sources, si ce type d’accès est nécessaire.| 
 | Ensure| Indique si le fichier ou le répertoire existe. Définissez cette propriété sur Absent pour vous assurer que le fichier ou le répertoire n’existe pas. Définissez cette propriété sur Present pour vous assurer que le fichier ou le répertoire existe. La valeur par défaut est Present.| 

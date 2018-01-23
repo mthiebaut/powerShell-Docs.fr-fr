@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-10-31
-author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: "Sécurisation du fichier MOF"
-ms.openlocfilehash: ed9d259e2cd963560ad6f5b60702c54e2fa36900
-ms.sourcegitcommit: cd5a1f054cbf9eb95c5242a995f9741e031ddb24
+ms.openlocfilehash: fdb8fa17e9b5e92b56e0a62bf850529c241eee41
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="securing-the-mof-file"></a>Sécurisation du fichier MOF
 
@@ -81,7 +80,7 @@ L’exemple suivant :
  3. importe le certificat de clé publique dans le magasin de certificats **my** sur le **nœud de création**.
 
 #### <a name="on-the-target-node-create-and-export-the-certificate"></a>Sur le nœud cible : créer et exporter le certificat
->Nœud de création : Windows Server 2016 et Windows 10
+>Nœud cible : Windows Server 2016 et Windows 10
 
 ```powershell
 # note: These steps need to be performed in an Administrator PowerShell session
@@ -91,7 +90,7 @@ $cert | Export-Certificate -FilePath "$env:temp\DscPublicKey.cer" -Force
 ```
 Une fois exporté, le fichier ```DscPublicKey.cer``` doit être copié vers le **nœud de création**.
 
->Nœud de création : Windows Server 2012 R2/Windows 8.1 et versions antérieures
+>Nœud cible : Windows Server 2012 R2/Windows 8.1 et versions antérieures
 
 Étant donné que l’applet de commande New-SelfSignedCertificate sur les systèmes d’exploitation Windows antérieurs à Windows 10 et Windows Server 2016 ne prend pas en charge le paramètre **Type**, une autre méthode de création de ce certificat est requise sur ces systèmes d’exploitation.
 Dans ce cas, vous pouvez utiliser ```makecert.exe``` ou ```certutil.exe``` pour créer le certificat.
@@ -109,7 +108,6 @@ New-SelfsignedCertificateEx `
     -FriendlyName 'DSC Credential Encryption certificate' `
     -Exportable `
     -StoreLocation 'LocalMachine' `
-    -StoreName 'My' `
     -KeyLength 2048 `
     -ProviderName 'Microsoft Enhanced Cryptographic Provider v1.0' `
     -AlgorithmName 'RSA' `

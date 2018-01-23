@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: Ressource DSC PackageManagement
-ms.openlocfilehash: a984fbf5db561a696d89b60dde8b92096c6e4924
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 4cd7625af7ed0bb3fe971c826ac2075841cdfdc5
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dsc-packagemanagement-resource"></a>Ressource DSC PackageManagement
 
@@ -36,7 +35,7 @@ PackageManagement [string] #ResourceName
 ## <a name="properties"></a>Propriétés
 |  Propriété  |  Description   | 
 |---|---| 
-| Nom| Spécifie le nom du package à installer ou à désinstaller.| 
+| Name| Spécifie le nom du package à installer ou à désinstaller.| 
 | Source| Spécifie le nom de la source du package où se trouve le package. Il peut s’agir d’un URI ou d’une source inscrite avec une ressource DSC Register-PackageSource ou PackageManagementSource. La ressource DSC MSFT_PackageManagementSource peut également inscrire une source de package.| 
 | Ensure| Détermine si le package doit être installé ou désinstallé.| 
 | RequiredVersion| Spécifie la version exacte du package à installer. Si vous ne spécifiez pas ce paramètre, cette ressource DSC installe la version la plus récente du package parmi celles disponibles, sans toutefois dépasser la version maximale spécifiée par le paramètre MaximumVersion.| 
