@@ -108,7 +108,7 @@
 
 # Modèle DSC par extraction
 
-## [Configuration d’un serveur collecteur web](pullServer.md)
+## [Service d’extraction DSC Pull](pullServer.md)
 
 ## [Configuration d’un serveur collecteur SMB DSC](pullServerSMB.md)
 
