@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: Concepts de base de Windows PowerShell
 ms.assetid: 6b3cbbc8-060c-4877-b00b-7300dbbe4e28
-ms.openlocfilehash: 7b5cdfce876aa7d5559fe772379829011b275a02
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: bd17786d2d8690b89a2d107e0da98ee45f5b2ff7
+ms.sourcegitcommit: 18e3bfae83ffe282d3fd1a45f5386f3b7250f0c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="windows-powershell-basics"></a>Concepts de base de Windows PowerShell
 Les interfaces graphiques utilisateur utilisent des concepts de base bien connus de la plupart des utilisateurs d’ordinateur. Les utilisateurs s’appuient sur leur connaissance de ces interfaces pour accomplir des tâches. Les systèmes d’exploitation présentent aux utilisateurs une représentation graphique des éléments qui peuvent être parcourus, généralement avec des menus déroulants pour accéder à des fonctionnalités spécifiques, et des menus contextuels pour accéder à des fonctionnalités spécifique du contexte.
@@ -18,13 +18,10 @@ La plupart des CLI n’ont pas de modèles pouvant aider l’utilisateur à appr
 
 Windows PowerShell a été conçu pour tirer parti des connaissances historiques de l’utilisateur en matière de CLI. Ce chapitre présente des outils et concepts de base qui peuvent vous aider à apprendre rapidement à utiliser Windows PowerShell. Ils comprennent :
 
-- Utilisation de Get-Command
+- Utilisation de [Get-Command](/powershell/module/Microsoft.PowerShell.Core/get-command)
 
-- Utilisation de commandes Cmd.exe et UNIX
+- Utilisation de commandes [Cmd.exe](/windows-server/administration/windows-commands/cmd) et [UNIX](/windows/wsl/reference)
 
-- Utilisation de commandes externes
+- [Utilisation de la saisie semi-automatique vie la touche Tab](../../core-powershell/console/using-tab-expansion.md)
 
-- Utilisation de la saisie semi-automatique vie la touche Tab
-
-- Utilisation de Get-Help
-
+- [Utilisation de Get-Help](./getting-detailed-help-information.md)
