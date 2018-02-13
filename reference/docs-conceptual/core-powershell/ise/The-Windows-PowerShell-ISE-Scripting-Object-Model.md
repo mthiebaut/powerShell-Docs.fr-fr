@@ -4,10 +4,10 @@ keywords: powershell,applet de commande
 title: "Modèle objet de script Windows PowerShell ISE"
 ms.assetid: 69b047d0-da79-413e-b948-8e45d05d1f85
 ms.openlocfilehash: 705378c927fcd8d38c2a697584aad771d7bd6c49
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.sourcegitcommit: 18e3bfae83ffe282d3fd1a45f5386f3b7250f0c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 02/08/2018
 ---
 # <a name="the-windows-powershell-ise-scripting-object-model"></a>Modèle objet de script Windows PowerShell ISE
   L’environnement d’écriture de scripts intégré (ISE) de Windows PowerShell® expose ses fonctionnalités par le biais d’un modèle objet de script sous-jacent. Ce modèle permet aux utilisateurs d’écrire des scripts Windows PowerShell qui gèrent les divers aspects visuels et fonctionnels de Windows PowerShell ISE. Les objets de script ainsi que leurs propriétés et méthodes membres sont définis spécifiquement dans ce but.
