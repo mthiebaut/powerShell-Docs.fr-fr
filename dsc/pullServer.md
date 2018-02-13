@@ -1,77 +1,116 @@
 ---
-ms.date: 2017-06-12
+ms.date: 2018-02-02
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
-title: "Configuration d’un serveur collecteur web DSC"
-ms.openlocfilehash: 9a09804ef0efe3e4c92923910884710187d44ac5
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+title: Service collecteur DSC
+ms.openlocfilehash: d5e24dcc093c73d8ebbaa618517193dacc4f2aaf
+ms.sourcegitcommit: 755d7bc0740573d73613cedcf79981ca3dc81c5e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="setting-up-a-dsc-web-pull-server"></a>Configuration d’un serveur collecteur web DSC
+# <a name="desired-state-configuration-pull-service"></a>Service collecteur Desired State Configuration
 
 > S’applique à : Windows PowerShell 5.0
 
-Un serveur collecteur web DSC est un service web dans IIS qui utilise une interface OData pour que les fichiers de configuration DSC soient disponibles à la demande pour les nœuds cibles.
+La gestion du Gestionnaire de configuration local peut être centralisée par une solution de service collecteur.
+Lorsque vous utilisez cette approche, le nœud géré est inscrit auprès d’un service et se voit affecter une configuration dans les paramètres LCM.
+La configuration et toutes les ressources DSC nécessaires en tant que dépendances de la configuration sont téléchargées sur l’ordinateur et utilisées par le Gestionnaire de configuration local pour gérer la configuration.
+Des informations sur l’état de l’ordinateur géré sont chargées sur le service pour créer des rapports.
+Ce concept est appelé « service collecteur ».
+
+Les options actuelles du service collecteur sont les suivantes :
+
+- Service Desired State Configuration Azure Automation
+- Service collecteur exécuté sur Windows Server
+- Solutions open source gérées par la communauté
+- Partage SMB
+
+**La solution recommandée**, qui est à la fois l’option offrant le plus de fonctionnalités, est [Azure Automation DSC](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-getting-started).
+
+Le service Azure peut gérer les nœuds locaux dans des centres de données privés ou dans des clouds publics tels qu’Azure et AWS.
+Pour les environnements où les serveurs ne peut pas se connecter directement à Internet, envisagez de limiter le trafic sortant à la seule plage IP Azure publiée (voir [Plages d’adresses IP Azure Datacenter](https://www.microsoft.com/en-us/download/details.aspx?id=41653)).
+
+Fonctionnalités du service en ligne qui ne sont actuellement pas disponibles dans le service collecteur sur Windows Server :
+- Toutes les données sont chiffrées, en transit comme au repos
+- Les certificats clients sont créés et gérés automatiquement
+- Magasin des secrets pour une gestion centralisée des [mots de passe/informations d’identification](https://docs.microsoft.com/en-us/azure/automation/automation-credentials), ou des [variables](https://docs.microsoft.com/en-us/azure/automation/automation-variables) telles que les noms des serveurs ou les chaînes de connexion
+- Gestion centralisée du nœud [configuration du LCM](metaConfig.md#basic-settings)
+- Assignation centralisée de configurations aux nœuds clients
+- Mise des modifications de la configuration en « groupes de contrôle de validité » pour effectuer des tests avant la production
+- Création de rapports graphiques
+  - Détails de l’état au niveau de la granularité de la ressource DSC
+  - Messages d’erreur en clair des ordinateurs clients pour la résolution des problèmes
+- [Intégration à Azure Log Analytics](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-diagnostics) pour les alertes, tâches automatisées, application Android/iOS pour les rapports et les alertes
+
+## <a name="dsc-pull-service-in-windows-server"></a>Service collecteur DSC dans Windows Server
+
+Il est possible de configurer un service collecteur pour l’exécuter sur Windows Server.
+Veuillez noter que la solution de service collecteur incluse dans Windows Server contient uniquement les fonctionnalités de stockage des configurations/modules à télécharger et de capture de données de rapport dans la base de données.
+Elle ne contient pas les nombreuses fonctionnalités offertes par le service dans Azure et n’est donc pas un bon outil pour évaluer la manière dont le service doit être utilisé.
+
+Le service collecteur proposé dans Windows Server est un service web dans IIS qui utilise une interface OData pour mettre les fichiers de configuration DSC à la disposition des nœuds cibles quand ceux-ci en ont besoin.
 
 Configuration requise pour utiliser un serveur collecteur :
 
-* Un serveur en cours d’exécution :
+- Un serveur en cours d’exécution :
   - WMF/PowerShell 5.0 ou version supérieure
   - Rôle serveur IIS
   - Service DSC
-* Idéalement, des moyens de générer un certificat pour sécuriser les informations d’identification transmises au gestionnaire de configuration local sur les nœuds cibles
+- Idéalement, des moyens de générer un certificat pour sécuriser les informations d’identification transmises au gestionnaire de configuration local sur les nœuds cibles
 
-Vous pouvez ajouter le rôle serveur IIS et le service DSC avec l’Assistant Ajout de rôles et fonctionnalités dans le Gestionnaire de serveur, ou à l’aide de PowerShell. Les exemples de scripts inclus dans cette rubrique gèrent également ces deux étapes pour vous.
+La meilleure façon de configurer Windows Server pour héberger un service collecteur est d’utiliser une configuration DSC.
+Vous trouverez ci-dessous un exemple de script.
 
-## <a name="using-the-xdscwebservice-resource"></a>Utilisation de la ressource xDSCWebService
-Le moyen le plus simple de configurer un serveur collecteur web consiste à utiliser la ressource xWebService, incluse dans le module xPSDesiredStateConfiguration. Les étapes suivantes expliquent comment utiliser la ressource dans une configuration qui configure le service web.
+### <a name="using-the-xdscwebservice-resource"></a>Utilisation de la ressource xDSCWebService
+
+Le moyen le plus simple de configurer un serveur collecteur web consiste à utiliser la ressource xWebService, incluse dans le module xPSDesiredStateConfiguration.
+Les étapes suivantes expliquent comment utiliser la ressource dans une configuration qui configure le service web.
 
 1. Appelez l’applet de commande [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) pour installer le module **xPSDesiredStateConfiguration**. **Remarque** : **Install-Module** est inclus dans le module **PowerShellGet** de PowerShell 5.0. Vous pouvez télécharger le module **PowerShellGet** pour PowerShell 3.0 et 4.0 ici : [PackageManagement PowerShell Modules Preview](https://www.microsoft.com/en-us/download/details.aspx?id=49186). 
 1. Obtenez un certificat SSL pour le serveur collecteur DSC auprès d’une autorité de certification approuvée, au sein de votre organisation ou auprès d’une autorité publique. Le certificat reçu de l’autorité est généralement au format PFX. Installez le certificat sur le nœud qui sera le serveur DSC à l’emplacement par défaut, c’est-à-dire : CERT:\LocalMachine\My. Notez l’empreinte de certificat.
 1. Sélectionnez un GUID à utiliser comme clé d’inscription. Pour en générer un à l’aide de PowerShell, entrez ce qui suit à l’invite PowerShell et appuyez sur Entrée : « ``` [guid]::newGuid()``` » ou « ```New-Guid``` ». Cette clé est utilisée par les nœuds clients comme une clé partagée pour l’authentification lors de l’inscription. Pour plus d’informations, consultez la section Clé d’inscription ci-dessous.
 1. Dans PowerShell ISE, démarrez (F5) le script de configuration suivant (inclus dans le dossier Example du module **xPSDesiredStateConfiguration** en tant que Sample_xDscWebService.ps1). Ce script configure le serveur collecteur.
-  
-    ```powershell
-    configuration Sample_xDscPullServer
-    { 
-        param  
-        ( 
-                [string[]]$NodeName = 'localhost', 
 
-                [ValidateNotNullOrEmpty()] 
+```powershell
+    configuration Sample_xDscPullServer
+    {
+        param
+        (
+                [string[]]$NodeName = 'localhost',
+
+                [ValidateNotNullOrEmpty()]
                 [string] $certificateThumbPrint,
 
                 [Parameter(Mandatory)]
                 [ValidateNotNullOrEmpty()]
-                [string] $RegistrationKey 
-         ) 
-         
+                [string] $RegistrationKey
+         )
+
          Import-DSCResource -ModuleName xPSDesiredStateConfiguration
          Import-DSCResource –ModuleName PSDesiredStateConfiguration
 
-         Node $NodeName 
-         { 
-             WindowsFeature DSCServiceFeature 
-             { 
+         Node $NodeName
+         {
+             WindowsFeature DSCServiceFeature
+             {
                  Ensure = 'Present'
-                 Name   = 'DSC-Service'             
-             } 
+                 Name   = 'DSC-Service'
+             }
 
-             xDscWebService PSDSCPullServer 
-             { 
-                 Ensure                   = 'Present' 
-                 EndpointName             = 'PSDSCPullServer' 
-                 Port                     = 8080 
-                 PhysicalPath             = "$env:SystemDrive\inetpub\PSDSCPullServer" 
-                 CertificateThumbPrint    = $certificateThumbPrint          
-                 ModulePath               = "$env:PROGRAMFILES\WindowsPowerShell\DscService\Modules" 
-                 ConfigurationPath        = "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration" 
+             xDscWebService PSDSCPullServer
+             {
+                 Ensure                   = 'Present'
+                 EndpointName             = 'PSDSCPullServer'
+                 Port                     = 8080
+                 PhysicalPath             = "$env:SystemDrive\inetpub\PSDSCPullServer"
+                 CertificateThumbPrint    = $certificateThumbPrint
+                 ModulePath               = "$env:PROGRAMFILES\WindowsPowerShell\DscService\Modules"
+                 ConfigurationPath        = "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration"
                  State                    = 'Started'
-                 DependsOn                = '[WindowsFeature]DSCServiceFeature'     
+                 DependsOn                = '[WindowsFeature]DSCServiceFeature'
                  UseSecurityBestPractices = $false
-             } 
+             }
 
             File RegistrationKeyFile
             {
@@ -83,11 +122,11 @@ Le moyen le plus simple de configurer un serveur collecteur web consiste à util
         }
     }
 
-    ```
+```
 
 1. Exécutez la configuration, en passant l’empreinte du certificat SSL comme paramètre **certificateThumbPrint** et une clé d’inscription GUID comme paramètre **RegistrationKey** :
 
-    ```powershell
+```powershell
     # To find the Thumbprint for an installed SSL certificate for use with the pull server list all certificates in your local store 
     # and then copy the thumbprint for the appropriate certificate by reviewing the certificate subjects
     dir Cert:\LocalMachine\my
@@ -97,9 +136,11 @@ Le moyen le plus simple de configurer un serveur collecteur web consiste à util
 
     # Run the compiled configuration to make the target node a DSC Pull Server
     Start-DscConfiguration -Path c:\Configs\PullServer -Wait -Verbose
-    ```
 
-## <a name="registration-key"></a>Clé d’inscription
+```
+
+#### <a name="registration-key"></a>Clé d’inscription
+
 Pour que les nœuds clients puissent s’inscrire auprès du serveur afin de pouvoir utiliser les noms de configuration au lieu de l’ID de configuration, une clé d’inscription, créée par la configuration ci-dessus, est enregistrée dans un fichier nommé `RegistrationKeys.txt` dans `C:\Program Files\WindowsPowerShell\DscService`. La clé d’inscription fonctionne comme un secret partagé utilisé lors de l’inscription initiale par le client avec le serveur collecteur. Le client génère un certificat auto-signé qui est utilisé pour l’authentification unique auprès du serveur collecteur une fois l’inscription terminée. L’empreinte de ce certificat est stockée localement et associée à l’URL du serveur collecteur.
 > **Remarque** : Les clés d’inscription ne sont pas prises en charge dans PowerShell 4.0. 
 
@@ -117,14 +158,14 @@ configuration PullClientConfigID
             RefreshFrequencyMins = 30 
             RebootNodeIfNeeded   = $true
         }
-        
+
         ConfigurationRepositoryWeb CONTOSO-PullSrv
         {
             ServerURL          = 'https://CONTOSO-PullSrv:8080/PSDSCPullServer.svc'
             RegistrationKey    = '140a952b-b9d6-406b-b416-e0f759c9c0e4'
             ConfigurationNames = @('ClientConfig')
-        }   
-        
+        }
+
         ReportServerWeb CONTOSO-PullSrv
         {
             ServerURL       = 'https://CONTOSO-PullSrv:8080/PSDSCPullServer.svc'
@@ -134,30 +175,50 @@ configuration PullClientConfigID
 }
 
 PullClientConfigID -OutputPath c:\Configs\TargetNodes
-```
-> **Remarque** : la section **ReportServerWeb** permet d’envoyer les données de rapport au serveur collecteur. 
 
-Si la propriété **ConfigurationID** est absente du fichier de métaconfiguration, cela signifie implicitement que ce serveur collecteur prend en charge la version V2 du protocole du serveur collecteur et donc qu’une inscription initiale est nécessaire. Inversement, si la propriété **ConfigurationID** est présente, la version V1 du protocole du serveur collecteur est utilisée et il n’y a pas de traitement de l’inscription.
+
+```
+
+> **Remarque** : la section **ReportServerWeb** permet d’envoyer les données de rapport au serveur collecteur.
+
+Si la propriété **ConfigurationID** est absente du fichier de métaconfiguration, cela signifie implicitement que ce serveur collecteur prend en charge la version V2 du protocole du serveur collecteur et donc qu’une inscription initiale est nécessaire.
+Inversement, si la propriété **ConfigurationID** est présente, la version V1 du protocole du serveur collecteur est utilisée et il n’y a pas de traitement de l’inscription.
 
 >**Remarque** : dans un scénario PUSH, la version actuelle contient un bogue qui demande de définir une propriété ConfigurationID dans le fichier de métaconfiguration pour les nœuds qui n’ont jamais été inscrits auprès d’un serveur collecteur. Cette opération permet de forcer le protocole du serveur collecteur V1 et d’éviter les messages d’échec d’inscription.
 
 ## <a name="placing-configurations-and-resources"></a>Placement des configurations et des ressources
 
-Une fois l’installation du serveur collecteur terminée, vous placez les modules et configurations à extraire par les nœuds cibles dans les dossiers définis par les propriétés **ConfigurationPath** et **ModulePath** de la configuration du serveur collecteur. Ces fichiers doivent se trouver dans un format spécifique afin que le serveur collecteur puisse les traiter correctement. 
+Une fois l’installation du serveur collecteur terminée, vous placez les modules et configurations à extraire par les nœuds cibles dans les dossiers définis par les propriétés **ConfigurationPath** et **ModulePath** de la configuration du serveur collecteur.
+Ces fichiers doivent se trouver dans un format spécifique afin que le serveur collecteur puisse les traiter correctement.
 
 ### <a name="dsc-resource-module-package-format"></a>Format du package de module de ressources DSC
 
-Chaque module de ressources doit être compressé et nommé selon le modèle `{Module Name}_{Module Version}.zip` suivant. Par exemple, un module xWebAdminstration avec une version de module 3.1.2.0 est nommé « xWebAdministration_3.2.1.0.zip ». Chaque version d’un module doit être contenue dans un seul fichier zip. Étant donné que chaque fichier zip ne contient qu’une seule version d’une ressource, le format du module ajouté dans WMF 5.0 qui contient plusieurs versions de module dans un seul répertoire n’est pas pris en charge. Cela signifie qu’avant de créer le package des modules de ressources DSC à utiliser avec le serveur collecteur, vous devez apporter une petite modification à la structure de répertoires. Le format par défaut des modules contenant les ressources DSC dans WMF 5.0 est « {Dossier du module}\{{Version du module}\DscResources\{Dossier des ressources DSC}\' ». Avant de créer les packages pour le serveur collecteur, supprimez simplement le dossier **{Version du module}** pour transformer le chemin en « {Dossier du module}\DscResources\{Dossier des ressources DSC}\' ». Ensuite, compressez le dossier comme décrit ci-dessus, et placez ces fichiers zip dans le dossier **ModulePath**.
+Chaque module de ressources doit être compressé et nommé selon le modèle `{Module Name}_{Module Version}.zip` suivant.
+Par exemple, un module xWebAdminstration avec une version de module 3.1.2.0 est nommé « xWebAdministration_3.2.1.0.zip ».
+Chaque version d’un module doit être contenue dans un seul fichier zip.
+Étant donné que chaque fichier zip ne contient qu’une seule version d’une ressource, le format du module ajouté dans WMF 5.0 qui contient plusieurs versions de module dans un seul répertoire n’est pas pris en charge.
+Cela signifie qu’avant de créer le package des modules de ressources DSC à utiliser avec le serveur collecteur, vous devez apporter une petite modification à la structure de répertoires.
+Le format par défaut des modules contenant les ressources DSC dans WMF 5.0 est « {Dossier du module}\{{Version du module}\DscResources\{Dossier des ressources DSC}\' ».
+Avant de créer les packages pour le serveur collecteur, supprimez simplement le dossier **{Version du module}** pour transformer le chemin en « {Dossier du module}\DscResources\{Dossier des ressources DSC}\' ».
+Ensuite, compressez le dossier comme décrit ci-dessus, et placez ces fichiers zip dans le dossier **ModulePath**.
 
 Utilisez `new-dscchecksum {module zip file}` pour créer un fichier de somme de contrôle pour le module qui vient d’être ajouté.
 
-### <a name="configuration-mof-format"></a>Format du fichier MOF de configuration 
-Un fichier MOF de configuration doit être associé à un fichier de somme de contrôle pour que le gestionnaire de configuration local sur un nœud cible puisse valider la configuration. Pour créer une somme de contrôle, appelez l’applet de commande [New-DSCCheckSum](https://technet.microsoft.com/en-us/library/dn521622.aspx). L’applet de commande prend un paramètre **Path** qui spécifie le dossier où se trouve la configuration MOF. L’applet de commande crée un fichier de somme de contrôle nommé `ConfigurationMOFName.mof.checksum`, où `ConfigurationMOFName` est le nom du fichier MOF de configuration. S’il existe plusieurs fichiers MOF de configuration dans le dossier spécifié, une somme de contrôle est créée pour chaque configuration du dossier. Placez les fichiers MOF et leurs fichiers de somme de contrôle associés dans le dossier **ConfigurationPath**.
+### <a name="configuration-mof-format"></a>Format du fichier MOF de configuration
+
+Un fichier MOF de configuration doit être associé à un fichier de somme de contrôle pour que le gestionnaire de configuration local sur un nœud cible puisse valider la configuration.
+Pour créer une somme de contrôle, appelez l’applet de commande [New-DSCCheckSum](https://technet.microsoft.com/en-us/library/dn521622.aspx).
+L’applet de commande prend un paramètre **Path** qui spécifie le dossier où se trouve la configuration MOF.
+L’applet de commande crée un fichier de somme de contrôle nommé `ConfigurationMOFName.mof.checksum`, où `ConfigurationMOFName` est le nom du fichier MOF de configuration.
+S’il existe plusieurs fichiers MOF de configuration dans le dossier spécifié, une somme de contrôle est créée pour chaque configuration du dossier.
+Placez les fichiers MOF et leurs fichiers de somme de contrôle associés dans le dossier **ConfigurationPath**.
 
 >**Remarque** : Si vous modifiez le fichier MOF de configuration de quelque façon que ce soit, vous devez aussi recréer le fichier de somme de contrôle.
 
-## <a name="tooling"></a>Outils
+### <a name="tooling"></a>Outils
+
 Pour faciliter la configuration, la validation et la gestion du serveur collecteur, les outils suivants sont fournis comme exemples dans la dernière version du module xPSDesiredStateConfiguration :
+
 1. Module permettant de créer le package des modules de ressources DSC et les fichiers de configuration à utiliser sur le serveur collecteur. [PublishModulesAndMofsToPullServer.psm1](https://github.com/PowerShell/xPSDesiredStateConfiguration/blob/dev/DSCPullServerSetup/PublishModulesAndMofsToPullServer.psm1). Exemples ci-dessous :
 
     ```powershell
@@ -171,17 +232,24 @@ Pour faciliter la configuration, la validation et la gestion du serveur collecte
 
 1. Script qui valide la configuration du serveur collecteur. [PullServerSetupTests.ps1](https://github.com/PowerShell/xPSDesiredStateConfiguration/blob/dev/DSCPullServerSetup/PullServerDeploymentVerificationTest/PullServerSetupTests.ps1).
 
+## <a name="community-solutions-for-pull-service"></a>Solutions de service collecteur de la communauté
 
-## <a name="pull-client-configuration"></a>Configuration du client collecteur 
+La communauté DSC a créé plusieurs solutions pour implémenter le protocole de service collecteur.
+Pour les environnements locaux, elle offre des fonctionnalités de service collecteur et la possibilité de contribuer en retour avec des améliorations incrémentielles.
+
+- [Tug](https://github.com/powershellorg/tug)
+- [DSC-TRÆK](https://github.com/powershellorg/dsc-traek)
+
+## <a name="pull-client-configuration"></a>Configuration du client collecteur
+
 Les rubriques suivantes décrivent la configuration des clients collecteurs en détail :
 
-* [Configuration d’un client collecteur DSC à l’aide de l’ID de configuration](pullClientConfigID.md)
-* [Configuration d’un client collecteur DSC à l’aide du nom de configuration](pullClientConfigNames.md)
-* [Configurations partielles](partialConfigs.md)
-
+- [Configuration d’un client collecteur DSC à l’aide de l’ID de configuration](pullClientConfigID.md)
+- [Configuration d’un client collecteur DSC à l’aide du nom de configuration](pullClientConfigNames.md)
+- [Configurations partielles](partialConfigs.md)
 
 ## <a name="see-also"></a>Voir aussi
-* [Vue d’ensemble de la fonctionnalité Desired State Configuration de Windows PowerShell](overview.md)
-* [Application des configurations](enactingConfigurations.md)
-* [Utilisation d’un serveur de rapports DSC](reportServer.md)
 
+- [Vue d’ensemble de la fonctionnalité Desired State Configuration de Windows PowerShell](overview.md)
+- [Application des configurations](enactingConfigurations.md)
+- [Utilisation d’un serveur de rapports DSC](reportServer.md)
