@@ -2,25 +2,16 @@
 ms.date: 2017-08-09
 keywords: "powershell, applet de commande, télécharger, installer, installation, programme d’installation, windows 10, windows 8.1, windows 8.0, windows 7"
 title: Installation de Windows PowerShell
-ms.openlocfilehash: ec8f09087a5c5f2e7ea6237faa01ea3f447ad1f3
-ms.sourcegitcommit: 755d7bc0740573d73613cedcf79981ca3dc81c5e
+ms.openlocfilehash: dffb6ec11ce265ebc4e6bc91f631650e1af5868d
+ms.sourcegitcommit: 05d576cf107780fa52b2db4a042816be40b00fbc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="installing-windows-powershell"></a>Installation de Windows PowerShell
+Windows PowerShell est installé par défaut avec chaque copie de Windows, à compter de Windows 7 SP1 et de Windows Server 2008 R2 SP1.
 
-PowerShell est installé par défaut avec chaque copie de Windows, à compter de Windows 7 SP1 et de Windows Server 2008 R2 SP1.
-
-Les utilisateurs Linux, macOS et Windows qui souhaitent installer **PowerShell 6** (bêta) sur leurs ordinateurs doivent :
-
-1. Obtenir PowerShell pour leur système d’exploitation et leur version à partir de [GitHub](https://github.com/powershell/powershell#get-powershell)
-1. Suivre les instructions d'installation
-  - [Linux](https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md)
-  - [macOS](https://github.com/PowerShell/PowerShell/blob/master/docs/installation/macos.md)
-  - [Windows](https://github.com/PowerShell/PowerShell/blob/master/docs/installation/windows.md#msi)
-
-PowerShell 6 est également disponible pour Docker. Consultez les instructions sur l’[installation de Docker](https://github.com/PowerShell/PowerShell/tree/master/docker).
+Si vous envisagez d’utiliser PowerShell 6 et versions ultérieures, vous devez installer PowerShell Core plutôt que Windows PowerShell. Pour cela, consultez [Installation de PowerShell Core sous Windows](Installing-PowerShell-Core-on-Windows.md).
 
 ## <a name="finding-powershell-in-windows-10-81-80-and-7"></a>Recherche de PowerShell dans Windows 10, 8.1, 8.0 et 7
 
@@ -65,7 +56,7 @@ La seule exception à cette règle est l’ISE dans Windows Server 2008 R2 SP1 
 
 ## <a name="how-to-check-the-version-of-powershell"></a>Comment vérifier la version de PowerShell
 
-Pour trouver la version de PowerShell que vous avez installée, démarrez une console PowerShell (ou l’ISE), puis tapez `$PSVersionTable` et appuyez sur **Entrée**.
+Pour trouver la version de PowerShell que vous avez installée, démarrez une console PowerShell (ou l’ISE), puis tapez `$PSVersionTable` et appuyez sur **Entrée**. Recherchez la valeur `PSVersion`.
 
 ## <a name="upgrading-existing-windows-powershell"></a>Mise à niveau des instances Windows PowerShell existantes
 

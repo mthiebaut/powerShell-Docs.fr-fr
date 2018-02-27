@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: Glossaire Windows PowerShell
 ms.assetid: b0f88cbe-cb83-4912-a301-184534cb35c7
-ms.openlocfilehash: 48e5d832ead720c8bc7753c94f757ddb21846fc9
-ms.sourcegitcommit: ced46469e064736eeb1f5608abbc792ec69bdc92
+ms.openlocfilehash: 872ceb342cc72477c5142ce28a9b3b66e32bb84f
+ms.sourcegitcommit: 05d576cf107780fa52b2db4a042816be40b00fbc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="windows-powershell-glossary"></a>Glossaire Windows PowerShell
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 08/08/2017
 |ordinateur hôte|Interface que le moteur Windows PowerShell utilise pour communiquer avec l’utilisateur. Par exemple, l’hôte spécifie la manière dont les invites sont gérées entre Windows PowerShell et l’utilisateur.|
 |application hôte|Programme qui charge le moteur Windows PowerShell dans son processus et l’utilise pour effectuer des opérations.|
 |méthode de traitement d’entrée|Méthode qu’une applet de commande peut utiliser pour traiter les enregistrements qu’elle reçoit en entrée. Les méthodes de traitement d’entrée incluent la méthode BeginProcessing, la méthode ProcessRecord, la méthode EndProcessing et la méthode StopProcessing.|
-|module de manifeste|Module Windows PowerShell disposant d’un manifeste et dont la clé ModulesToProcess est vide.|
+|module de manifeste|Module Windows PowerShell disposant d’un manifeste et dont la clé RootModule est vide.|
 |manifeste de module|Fichier de données Windows PowerShell (.psd1) qui décrit le contenu d’un module et contrôle le mode de traitement de celui-ci.|
 |état de session de module|État de session contenant les données publiques et privées d’un module Windows PowerShell. Les données privées dans cet état de session ne sont pas accessibles à l’utilisateur d’une session Windows PowerShell.|
 |erreur sans fin d’exécution|Erreur qui n’empêche pas Windows PowerShell de continuer à traiter la commande.|
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/08/2017
 |canal|Dans Windows PowerShell, permet d’envoyer les résultats de la commande précédente en tant qu’entrée à la commande suivante dans le pipeline.|
 |pipeline|Série de commandes connectées par des opérateurs de pipeline (&#124;) (ASCII 124). Chaque opérateur de pipeline envoie les résultats de la commande précédente en tant qu’entrée à la commande suivante.|
 |PSSession|Type de session Windows PowerShell qui est créée, gérée et fermée par l’utilisateur.|
-|module racine|Module spécifié dans la clé ModuleToProcess d’un manifeste de module.|
+|module racine|Le module spécifié dans la clé RootModule d’un manifeste de module.|
 |instance d’exécution|Dans Windows PowerShell, environnement d’exploitation dans lequel chaque commande d’un pipeline est exécutée.|
 |bloc de script|Dans le langage de programmation de Windows PowerShell, collection d’instructions ou d’expressions qui peuvent être utilisées comme une seule unité. Un bloc de script peut accepter des arguments et retourner des valeurs.|
 |module de script|Module Windows PowerShell dont le module racine est un fichier de module de script (.psm1). Un module de script peut ou non inclure un manifeste de module.|
