@@ -6,7 +6,7 @@ keywords: wmf,powershell,configuration
 title: "Compatibilité de WMF 5.1 avec les systèmes d’exploitation"
 ms.openlocfilehash: 04217c5abb0f04a5dc6b15cd956a632f7b84c9bb
 ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/15/2018
 ---
@@ -30,7 +30,7 @@ ms.lasthandoff: 03/15/2018
 | Windows XP | | | |  | Oui |
 
 
-À propos de « Fourni par défaut » : les fonctionnalités de WMF 5.0 ont été incluses dans la version RTM d’origine de Windows 10.
+À propos de « Fourni par défaut* » : les fonctionnalités de WMF 5.0 ont été incluses dans la version RTM d’origine de Windows 10.
 Les fonctionnalités de WMF 5.1 ont été incluses dans Windows Server 2016 et Windows 10 Anniversary Edition. WMF 5.1 n’est pas applicable pour ces versions de système d’exploitation, les mises à jour étant fournies par le biais de Windows Update.
 
 
