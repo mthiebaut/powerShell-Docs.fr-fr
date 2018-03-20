@@ -9,7 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 08/03/2017
 ---
-# <a name="redirecting-data-with-out--cmdlets"></a>Redirection de données à l’aide d’applets de commande Out-*
+# <a name="redirecting-data-with-out--cmdlets"></a>Redirection de données à l’aide d’applets de commande Out-\*
 Windows PowerShell fournit plusieurs applets de commande qui vous permettent de contrôler directement la sortie de données. Ces applets de commande partagent deux caractéristiques importantes.
 
 Tout d’abord, elles transforment généralement les données en une forme de texte. Elles opèrent de la sorte, car elles envoient les données à des composants système qui requièrent une entrée de texte. Cela signifie qu’elles doivent représenter les objets sous forme de texte. C’est pourquoi le texte est mis en forme tel qu’il apparaît dans la fenêtre de la console Windows PowerShell.
