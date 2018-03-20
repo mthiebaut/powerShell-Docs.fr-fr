@@ -4,13 +4,13 @@ author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,configuration
 ms.openlocfilehash: fa972b68015d9b6e14508ccda562cfa5ebd632ac
-ms.sourcegitcommit: a5c0795ca6ec9332967bff9c151a8572feb1a53a
-ms.translationtype: HT
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="modules-support-for-declaring-version-ranges-1-etc"></a>Prise en charge des modules pour la déclaration des plages de versions (1.*, etc.)
-Combiné avec **-MinimumVersion**, **-MaximumVersion** permet désormais à l’utilisateur d’obtenir/importer un module dans une plage spécifique. Le paramètre prend également en charge **.***. L’exemple suivant illustre son fonctionnement :
+Combiné avec **-MinimumVersion**, **-MaximumVersion** permet désormais à l’utilisateur d’obtenir/importer un module dans une plage spécifique. Le paramètre prennent également en charge **. ***. L’exemple suivant illustre son fonctionnement :
 
 ```powershell
 Now, you can combine **-MinimumVersion** and **-MaximumVersion** to import module within specific range:
