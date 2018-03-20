@@ -4,11 +4,11 @@ contributor: manikb
 ms.topic: reference
 keywords: gallery,powershell,cmdlet,psget
 title: Find-DscResource
-ms.openlocfilehash: 37ba7925d6f73c453126f25e0818b3f8839d3b3b
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 6c5713f122d48e9c9d5e0aa45dc14047afc56102
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="find-dscresource"></a>Find-DscResource
 
@@ -16,7 +16,7 @@ Recherche des ressources DSC dans des modules.
 
 ## <a name="description"></a>Description
 
-L’applet de commande Find-DscResource recherche des ressources [DSC (Configuration de l’état souhaité)](https://msdn.microsoft.com/en-us/PowerShell/dsc/overview) contenues dans les modules qui correspondent aux critères spécifiés à partir des référentiels enregistrés.
+L’applet de commande Find-DscResource recherche des ressources [DSC (Configuration de l’état souhaité)](https://msdn.microsoft.com/PowerShell/dsc/overview) contenues dans les modules qui correspondent aux critères spécifiés à partir des référentiels enregistrés.
 Pour chaque module qu’elle détecte, Find-DscResource retourne un objet PSGetDscResourceInfo que vous pouvez rediriger vers Install-Module pour installer les modules contenant les ressources retournées par cette applet de commande.
 
 DSC est une nouvelle plateforme de gestion de Windows PowerShell qui permet de déployer et gérer les données de configuration des services logiciels, et de gérer l’environnement dans lequel ces services s’exécutent.

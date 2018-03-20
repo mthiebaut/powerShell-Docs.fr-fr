@@ -4,11 +4,11 @@ author: rpsqrd
 ms.topic: conceptual
 keywords: jea,powershell,security
 title: Inscription de configurations JEA
-ms.openlocfilehash: 0684a1c7acffbccbedab9dba4689611a24c8ae25
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: d6b007fed97be6470bfe4cf4d42f72cb4edc3a45
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="registering-jea-configurations"></a>Inscription de configurations JEA
 
@@ -19,7 +19,7 @@ Ce processus applique les informations de configuration de session au système e
 
 ## <a name="single-machine-configuration"></a>Configuration d’une machine unique
 
-Pour les environnements de petite taille, vous pouvez déployer JEA en inscrivant le fichier de configuration de session à l’aide de l’applet de commande [Register-PSSessionConfiguration](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/register-pssessionconfiguration).
+Pour les environnements de petite taille, vous pouvez déployer JEA en inscrivant le fichier de configuration de session à l’aide de l’applet de commande [Register-PSSessionConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/register-pssessionconfiguration).
 
 Avant de commencer, assurez-vous que les conditions préalables suivantes sont remplies :
 - Un ou plusieurs rôles ont été créés et placés dans le dossier « RoleCapabilities » d’un module PowerShell valide.
@@ -28,7 +28,7 @@ Avant de commencer, assurez-vous que les conditions préalables suivantes sont r
 
 Vous devez également sélectionner un nom pour votre point de terminaison JEA.
 Le nom du point de terminaison JEA est nécessaire lorsque les utilisateurs souhaitent se connecter au système à l’aide de JEA.
-Vous pouvez utiliser l’applet de commande [Get-PSSessionConfiguration](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/get-pssessionconfiguration) pour vérifier les noms des points de terminaison qui existent sur le système.
+Vous pouvez utiliser l’applet de commande [Get-PSSessionConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/get-pssessionconfiguration) pour vérifier les noms des points de terminaison qui existent sur le système.
 Les points de terminaison qui commencent par « microsoft » sont généralement livrés avec Windows.
 Le point de terminaison « microsoft.powershell » est le point de terminaison par défaut utilisé lors de la connexion à un point de terminaison PowerShell distant.
 

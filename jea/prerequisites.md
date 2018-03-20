@@ -4,11 +4,11 @@ author: rpsqrd
 ms.topic: conceptual
 keywords: jea,powershell,security
 title: "Conditions préalables pour JEA"
-ms.openlocfilehash: 75d5db2ba446df1d461050d187dc1495a22fef18
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: e6ee16e34eb9f1f0b2f3601c1aa9e90ab4f785f1
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="prerequisites"></a>Conditions préalables
 
@@ -72,7 +72,7 @@ Les utilisateurs Windows 10 doivent installer les dernières mises à jour de la
 ## <a name="enable-powershell-remoting"></a>Activer la communication à distance de PowerShell
 
 La communication à distance PowerShell est la base de JEA.
-Il est donc important d’assurer que la communication à distance PowerShell est activée et [correctement sécurisée](https://msdn.microsoft.com/en-us/powershell/scripting/setup/winrmsecurity) sur votre système avant de pouvoir utiliser JEA.
+Il est donc important d’assurer que la communication à distance PowerShell est activée et [correctement sécurisée](https://msdn.microsoft.com/powershell/scripting/setup/winrmsecurity) sur votre système avant de pouvoir utiliser JEA.
 
 La communication à distance PowerShell est activée par défaut dans Windows Server 2012, 2012 R2 et 2016.
 Vous pouvez activer la communication à distance PowerShell en exécutant la commande suivante dans une fenêtre PowerShell élevée.
@@ -109,6 +109,6 @@ Vous pouvez également activer la transcription PowerShell à l’échelle du sy
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Informations supplémentaires sur la sécurité de la communication à distance PowerShell et WinRM](https://msdn.microsoft.com/en-us/powershell/scripting/setup/winrmsecurity)
+- [Informations supplémentaires sur la sécurité de la communication à distance PowerShell et WinRM](https://msdn.microsoft.com/powershell/scripting/setup/winrmsecurity)
 - [*PowerShell ♥ the Blue Team*, billet de blog sur la sécurité](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/)
 

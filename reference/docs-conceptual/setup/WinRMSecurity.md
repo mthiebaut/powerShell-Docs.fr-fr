@@ -2,11 +2,11 @@
 ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: WinRMSecurity
-ms.openlocfilehash: 65cf12466c9dc8fc8b77d79b0d63a6ae61e64d60
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 0522844fded847a3fd45c1b3890a141357edb2b2
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="powershell-remoting-security-considerations"></a>Éléments à prendre en compte en matière de sécurité de la communication à distance PowerShell
 
@@ -14,7 +14,7 @@ La communication à distance PowerShell est la méthode recommandée pour gérer
 
 ## <a name="what-is-powershell-remoting"></a>Présentation de la communication à distance PowerShell
 
-La communication à distance Powershell utilise la [Gestion à distance de Windows (WinRM)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa384426.aspx), l’implémentation par Microsoft du protocole [Gestion des services Web (WS-Management)](http://www.dmtf.org/sites/default/files/standards/documents/DSP0226_1.2.0.pdf), pour permettre aux utilisateurs d’exécuter des commandes PowerShell sur des ordinateurs distants. Pour plus d’informations sur l’utilisation de la communication à distance PowerShell, voir [Exécution de commandes à distance](https://technet.microsoft.com/en-us/library/dd819505.aspx).
+La communication à distance Powershell utilise la [Gestion à distance de Windows (WinRM)](https://msdn.microsoft.com/library/windows/desktop/aa384426.aspx), l’implémentation par Microsoft du protocole [Gestion des services Web (WS-Management)](http://www.dmtf.org/sites/default/files/standards/documents/DSP0226_1.2.0.pdf), pour permettre aux utilisateurs d’exécuter des commandes PowerShell sur des ordinateurs distants. Pour plus d’informations sur l’utilisation de la communication à distance PowerShell, voir [Exécution de commandes à distance](https://technet.microsoft.com/library/dd819505.aspx).
 
 La communication à distance PowerShell n’est pas identique à l’utilisation du paramètre **ComputerName** d’une applet de commande pour l’exécuter sur un ordinateur distant, qui utilise l’appel de procédure distante (RPC) en tant que protocole sous-jacent.
 
@@ -33,7 +33,7 @@ Sur les réseaux privés, la règle de Pare-feu Windows par défaut pour la comm
 
 ## <a name="process-isolation"></a>Isolation des processus
 
-La communication à distance PowerShell utilise [WinRM](https://msdn.microsoft.com/en-us/library/windows/desktop/aa384426) pour la communication entre les ordinateurs. WinRM s’exécute comme service sous le compte de service réseau et génère des processus isolés exécutés comme comptes d’utilisateur pour héberger les instances de PowerShell. Une instance de PowerShell exécutée comme un utilisateur n’a pas accès à un processus utilisant une instance de PowerShell exécutée comme autre utilisateur.
+La communication à distance PowerShell utilise [WinRM](https://msdn.microsoft.com/library/windows/desktop/aa384426) pour la communication entre les ordinateurs. WinRM s’exécute comme service sous le compte de service réseau et génère des processus isolés exécutés comme comptes d’utilisateur pour héberger les instances de PowerShell. Une instance de PowerShell exécutée comme un utilisateur n’a pas accès à un processus utilisant une instance de PowerShell exécutée comme autre utilisateur.
 
 ## <a name="event-logs-generated-by-powershell-remoting"></a>Journaux des événements générés par la communication à distance PowerShell
 
@@ -50,10 +50,10 @@ Quel que soit le protocole de transport utilisé (HTTP ou HTTPS), la communicati
 
 L’authentification confirme l’identité du client auprès du serveur et, idéalement, du serveur auprès du client.
     
-Quand un client se connecte à un serveur de domaine à l’aide de son nom d’ordinateur (par exemple, serveur01 ou serveur01.contoso.com), le protocole d’authentification par défaut est [Kerberos](https://msdn.microsoft.com/en-us/library/windows/desktop/aa378747.aspx).
+Quand un client se connecte à un serveur de domaine à l’aide de son nom d’ordinateur (par exemple, serveur01 ou serveur01.contoso.com), le protocole d’authentification par défaut est [Kerberos](https://msdn.microsoft.com/library/windows/desktop/aa378747.aspx).
 Kerberos garantit l’identité de l’utilisateur et l’identité du serveur sans envoyer aucune sorte d’informations d’identification réutilisables.
 
-Quand un client se connecte à un serveur de domaine avec son adresse IP ou qu’il se connecte à un serveur de groupe de travail, l’authentification Kerberos n’est pas possible. Dans ce cas, la communication à distance PowerShell s’appuie sur le [protocole d’authentification NTLM](https://msdn.microsoft.com/en-us/library/windows/desktop/aa378749.aspx). Le protocole d’authentification NTLM garantit l’identité de l’utilisateur sans envoyer aucune sorte d’informations d’identification délégables. Pour prouver l’identité de l’utilisateur, le protocole NTLM nécessite que le client et le serveur calculent une clé de session à partir du mot de passe de l’utilisateur sans jamais s’échanger le mot de passe proprement dit. Le serveur ne connaissant en général pas le mot de passe de l’utilisateur, il communique avec le contrôleur de domaine qui connaît ce mot de passe et calcule la clé de session pour le serveur. 
+Quand un client se connecte à un serveur de domaine avec son adresse IP ou qu’il se connecte à un serveur de groupe de travail, l’authentification Kerberos n’est pas possible. Dans ce cas, la communication à distance PowerShell s’appuie sur le [protocole d’authentification NTLM](https://msdn.microsoft.com/library/windows/desktop/aa378749.aspx). Le protocole d’authentification NTLM garantit l’identité de l’utilisateur sans envoyer aucune sorte d’informations d’identification délégables. Pour prouver l’identité de l’utilisateur, le protocole NTLM nécessite que le client et le serveur calculent une clé de session à partir du mot de passe de l’utilisateur sans jamais s’échanger le mot de passe proprement dit. Le serveur ne connaissant en général pas le mot de passe de l’utilisateur, il communique avec le contrôleur de domaine qui connaît ce mot de passe et calcule la clé de session pour le serveur. 
       
 Le protocole NTLM ne garantit cependant pas l’identité du serveur. Comme avec tous les protocoles qui utilisent NTLM pour l’authentification, un pirate ayant accès au compte d’un ordinateur appartenant à un domaine peut appeler le contrôleur de domaine pour calculer une clé de session NTLM et donc emprunter l’identité du serveur.
 

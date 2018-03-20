@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: "Écriture d’une ressource DSC personnalisée avec les classes PowerShell"
-ms.openlocfilehash: b24351a49ca11dac4687efdce39d400bfd00f399
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 53757f965c51fee699409b5a8ecda802dda9801f
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>Écriture d’une ressource DSC personnalisée avec les classes PowerShell
 
@@ -69,7 +69,7 @@ Notez que les propriétés sont modifiées par les attributs. La signification d
 - **DscProperty(NotConfigurable)** : la propriété est en lecture seule. Les propriétés marquées avec cet attribut ne peuvent pas être définies par une configuration. Elles sont toutefois remplies par la méthode **Get()** quand celle-ci est présente.
 - **DscProperty()** : la propriété est configurable, mais elle n’est pas obligatoire.
 
-Les propriétés **$Path** et **$SourcePath** sont des chaînes. **$CreationTime** est une propriété [DateTime](https://technet.microsoft.com/en-us/library/system.datetime.aspx). La propriété **$Ensure** est un type d’énumération, défini de la manière suivante.
+Les propriétés **$Path** et **$SourcePath** sont des chaînes. **$CreationTime** est une propriété [DateTime](https://technet.microsoft.com/library/system.datetime.aspx). La propriété **$Ensure** est un type d’énumération, défini de la manière suivante.
 
 ```powershell
 enum Ensure 

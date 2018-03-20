@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: Utilisation de ressources avec plusieurs versions
-ms.openlocfilehash: 8bd8b1dab9418c6d8cf64cd682c527a7f039cdb4
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 5ca4eadfe23a4675e1b81b86d4274d7f113228fe
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-resources-with-multiple-versions"></a>Utilisation de ressources avec plusieurs versions
 
@@ -17,7 +17,7 @@ Dans PowerShell 5.0, les ressources DSC peuvent avoir plusieurs versions et cel
 
 ## <a name="installing-multiple-resource-versions-side-by-side"></a>Installation de plusieurs versions de ressources côte à côte
 
-Vous pouvez utiliser les paramètres **MinimumVersion**, **MaximumVersion** et **RequiredVersion** de l’applet de commande [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) pour indiquer la version d’un module à installer. L’appel de l’applet de commande **Install-Module** sans spécifier de version installe la version la plus récente.
+Vous pouvez utiliser les paramètres **MinimumVersion**, **MaximumVersion** et **RequiredVersion** de l’applet de commande [Install-Module](https://technet.microsoft.com/library/dn807162.aspx) pour indiquer la version d’un module à installer. L’appel de l’applet de commande **Install-Module** sans spécifier de version installe la version la plus récente.
 
 Par exemple, il existe plusieurs versions du module **xFailOverCluster**, chacun contenant une ressource **xCluster**. Le résultat de l’appel de l’applet de commande **Install-Module** sans spécifier de numéro de version est le suivant :
 

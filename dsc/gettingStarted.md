@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: "Prise en main de la configuration de l’état souhaité (DSC) Windows PowerShell"
-ms.openlocfilehash: 856528f1e52eafa8b2c93b825a60376a0d64cab2
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 04404696bef128805e4f1c191711eaab33cf7e4c
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="getting-started-with-powershell-desired-state-configuration"></a>Prise en main de la configuration de l’état souhaité (DSC) Windows PowerShell #
 
@@ -16,7 +16,7 @@ Ce guide explique comment créer des documents de configuration d’état souhai
 
 ## <a name="create-a-configuration"></a>Créer une configuration ##
 
-Les [**configurations**](https://msdn.microsoft.com/en-us/powershell/dsc/configurations) sont des documents qui décrivent un environnement. Les environnements sont constitués de **nœuds** qui sont généralement des machines physiques ou virtuelles. 
+Les [**configurations**](https://msdn.microsoft.com/powershell/dsc/configurations) sont des documents qui décrivent un environnement. Les environnements sont constitués de **nœuds** qui sont généralement des machines physiques ou virtuelles. 
 
 Les configurations peuvent se présenter sous différentes formes. Le moyen le plus simple de créer une nouvelle configuration consiste à créer un fichier .ps1 (script PowerShell). Pour ce faire, ouvrez l’éditeur de votre choix. PowerShell ISE constitue un bon choix, car il comprend DSC de manière native. Enregistrez ce qui suit dans un fichier PS1 :
 
@@ -44,9 +44,9 @@ La ligne suivante est une instruction d’importation, similaire à l’importat
 
 Node définit le nom de l’ordinateur auquel est appliquée la configuration. Même si elles sont modifiées localement, les configurations peuvent atteindre les nœuds distants et les configurer. 
 
-Les nœuds peuvent être des noms d’ordinateurs ou des adresses IP. Vous pouvez avoir plusieurs nœuds dans un même document de configuration. À l’aide de [données de configuration](https://msdn.microsoft.com/en-us/powershell/dsc/configdata), vous pouvez également appliquer une même configuration à plusieurs nœuds. Ici, le nœud s’appelle « localhost », ce qui correspond à l’ordinateur local. 
+Les nœuds peuvent être des noms d’ordinateurs ou des adresses IP. Vous pouvez avoir plusieurs nœuds dans un même document de configuration. À l’aide de [données de configuration](https://msdn.microsoft.com/powershell/dsc/configdata), vous pouvez également appliquer une même configuration à plusieurs nœuds. Ici, le nœud s’appelle « localhost », ce qui correspond à l’ordinateur local. 
 
-L’élément suivant est une [**ressource**](https://msdn.microsoft.com/en-us/powershell/dsc/resources). Les ressources sont les blocs de construction des configurations. Chaque ressource est un module qui définit la logique d’implémentation d’un aspect d’un ordinateur. Vous pouvez afficher toutes les ressources de votre ordinateur en exécutant **Get-DscResource** dans PowerShell. Les ressources doivent être présentes sur l’ordinateur local et importées avant de pouvoir être utilisées dans une configuration avec **Import-DscResource**, qui se trouve sur la deuxième ligne de cette configuration. 
+L’élément suivant est une [**ressource**](https://msdn.microsoft.com/powershell/dsc/resources). Les ressources sont les blocs de construction des configurations. Chaque ressource est un module qui définit la logique d’implémentation d’un aspect d’un ordinateur. Vous pouvez afficher toutes les ressources de votre ordinateur en exécutant **Get-DscResource** dans PowerShell. Les ressources doivent être présentes sur l’ordinateur local et importées avant de pouvoir être utilisées dans une configuration avec **Import-DscResource**, qui se trouve sur la deuxième ligne de cette configuration. 
 
 **Promulgation d’une configuration**
 

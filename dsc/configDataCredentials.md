@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: "Options relatives aux informations d’identification dans les données de configuration"
-ms.openlocfilehash: 15cdb29127d9774c58e1d6518bbba56273e7defd
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 6ddf82c2b63309255ec3187d650677a6c3c2afb0
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="credentials-options-in-configuration-data"></a>Options relatives aux informations d’identification dans les données de configuration
 >S’applique à : Windows PowerShell 5.0
@@ -156,7 +156,7 @@ Group [String] #ResourceName
 }
 ```
 
-Cet exemple utilise une ressource [Group](https://msdn.microsoft.com/en-us/powershell/dsc/groupresource) du module de ressource DSC `PSDesiredStateConfiguration` intégré.
+Cet exemple utilise une ressource [Group](https://msdn.microsoft.com/powershell/dsc/groupresource) du module de ressource DSC `PSDesiredStateConfiguration` intégré.
 Elle peut créer des groupes locaux et ajouter ou supprimer des membres.
 Elle accepte à la fois la propriété `Credential` et la propriété automatique `PsDscRunAsCredential`.
 Toutefois, la ressource utilise uniquement la propriété `Credential`.
@@ -231,7 +231,7 @@ Cet exemple comprend deux problèmes :
 ## <a name="psdscallowplaintextpassword"></a>PsDscAllowPlainTextPassword
 
 Le premier message d’erreur comprend une URL vers de la documentation.
-Ce lien explique comment chiffrer des mots de passe avec une structure [ConfigurationData](https://msdn.microsoft.com/en-us/powershell/dsc/configdata) et un certificat.
+Ce lien explique comment chiffrer des mots de passe avec une structure [ConfigurationData](https://msdn.microsoft.com/powershell/dsc/configdata) et un certificat.
 Pour plus d’informations sur les certificats et sur DSC, [lisez cet article de blog](http://aka.ms/certs4dsc).
 
 Pour forcer un mot de passe en texte brut, la ressource nécessite que le mot clé `PsDscAllowPlainTextPassword` se trouve dans la section des données de configuration comme dans l’exemple suivant :

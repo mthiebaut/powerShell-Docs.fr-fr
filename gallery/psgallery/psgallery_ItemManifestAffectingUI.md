@@ -2,8 +2,8 @@
 
 Cette rubrique fournit aux éditeurs des informations récapitulatives sur la façon de modifier le manifeste pour leurs publications PowerShell Gallery afin d’impacter les fonctionnalités des applets de commande PowerShellGet et de l’interface utilisateur de PowerShell Gallery. Ce contenu est organisé selon l’endroit où apparaît la modification, en commençant par la section centrale, puis la zone de navigation à gauche. Une sélection présente les balises les plus importantes ainsi que certaines balises couramment utilisées. Deux rubriques fournissent des exemples de manifeste : 
 
-* Pour les modules, voir [Mettre à jour le manifeste du module](https://docs.microsoft.com/en-us/powershell/gallery/psget/module/psget_update-modulemanifest)
-* Pour les scripts, voir [Créer un fichier de script avec des métadonnées](https://docs.microsoft.com/en-us/powershell/gallery/psget/script/psget_new-scriptfileinfo)
+* Pour les modules, voir [Mettre à jour le manifeste du module](https://docs.microsoft.com/powershell/gallery/psget/module/psget_update-modulemanifest)
+* Pour les scripts, voir [Créer un fichier de script avec des métadonnées](https://docs.microsoft.com/powershell/gallery/psget/script/psget_new-scriptfileinfo)
 
 ## <a name="powershell-gallery-feature-elements-controlled-by-the-manifest"></a>Éléments des fonctionnalités PowerShell Gallery contrôlés par le manifeste
 

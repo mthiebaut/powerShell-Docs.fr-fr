@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Accessibilité dans Windows PowerShell ISE"
 ms.assetid: a078f9d1-dd6b-4323-b16d-0622cd993aa8
-ms.openlocfilehash: 505ec3aca84b5ad0b9d58a1ec84d80e3aa86db7a
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: 7f758a46bdc722482b9e8a9baaff0a075f64ece9
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Accessibilité dans Windows PowerShell ISE
 Cette rubrique décrit les fonctionnalités d’accessibilité de Windows PowerShell Integrated Scripting Environment (ISE) qui peuvent s’avérer utiles.
@@ -22,7 +22,7 @@ Cette rubrique décrit les fonctionnalités d’accessibilité de Windows PowerS
 
 Microsoft s'attache à rendre ses produits et services conviviaux. Les rubriques suivantes fournissent des informations sur les fonctionnalités, les produits et les services qui rendent Windows PowerShell ISE plus accessible aux personnes handicapées.
 
-Windows PowerShell ISE prend en charge l’affichage à contraste élevé. Pour les malvoyants, les informations de point d’arrêt sont disponibles via les applets de commande pour la gestion des points d’arrêt, telles que [Get-PSBreakpoint](https://technet.microsoft.com/en-us/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6) et [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420). Pour plus d’informations, voir « Comment gérer des points d’arrêt » dans [Comment déboguer des scripts dans Windows PowerShell ISE](../core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md). En plus des fonctionnalités et utilitaires d’accessibilité dans Microsoft Windows, les fonctionnalités suivantes rendent Windows PowerShell ISE plus accessible aux personnes handicapées :
+Windows PowerShell ISE prend en charge l’affichage à contraste élevé. Pour les malvoyants, les informations de point d’arrêt sont disponibles via les applets de commande pour la gestion des points d’arrêt, telles que [Get-PSBreakpoint](https://technet.microsoft.com/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6) et [Set-PSBreakpoint](https://technet.microsoft.com/library/6afd5d2c-a285-4796-8607-3cbf49471420). Pour plus d’informations, voir « Comment gérer des points d’arrêt » dans [Comment déboguer des scripts dans Windows PowerShell ISE](../core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md). En plus des fonctionnalités et utilitaires d’accessibilité dans Microsoft Windows, les fonctionnalités suivantes rendent Windows PowerShell ISE plus accessible aux personnes handicapées :
 
 - Raccourcis clavier
 

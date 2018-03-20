@@ -2,11 +2,11 @@
 ms.date: 2017-08-23
 keywords: powershell,applet de commande
 title: utiliser la console web Windows PowerShell
-ms.openlocfilehash: 31ab17f1a1ea1353abc6f770285a2dca70da446d
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: a6c9812253309ba1225141cfd48d0f1c8b8785b5
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>Utiliser la console web Windows PowerShell
 
@@ -58,7 +58,7 @@ Par défaut, l’adresse de ce site web est *https://\<nom_serveur\>/pswa*.
 
 Avant de vous connecter à Accès Web Windows PowerShell, vérifiez que vous disposez du nom ou de l’adresse IP de l’ordinateur distant que vous souhaitez gérer.
 Vous devez être un utilisateur autorisé sur l’ordinateur distant et celui-ci doit être configuré pour autoriser la gestion à distance.
-Pour plus d’informations sur la configuration de votre ordinateur pour autoriser la gestion à distance, consultez [Activer et utiliser des commandes distantes dans Windows PowerShell](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enable-psremoting).
+Pour plus d’informations sur la configuration de votre ordinateur pour autoriser la gestion à distance, consultez [Activer et utiliser des commandes distantes dans Windows PowerShell](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/enable-psremoting).
 
 Le moyen le plus simple de configurer votre ordinateur pour autoriser la gestion à distance consiste à exécuter l’applet de commande **Enable-PSRemoting -force** sur l’ordinateur, dans une session Windows PowerShell qui a été ouverte avec des droits d’utilisateur élevés (**Exécuter en tant qu’administrateur**).
 
@@ -74,7 +74,7 @@ Le moyen le plus simple de configurer votre ordinateur pour autoriser la gestion
     > - Si l’ordinateur de destination est le serveur de passerelle, vous pouvez spécifier `localhost` dans le champ Nom de l’ordinateur.
     > - Si l’ordinateur de destination est le serveur de passerelle et qu’il est dans un groupe de travail, vous devez utiliser `<workgroup name>\<user_name>` dans le champ Nom d’utilisateur. Vous pouvez utiliser `localhost` dans le champ Nom de l’ordinateur.
 
-1. La section **Paramètres de connexion facultatifs** porte sur les exigences d’autorisation de l’ordinateur distant que vous souhaitez gérer. Pour plus d’informations sur les paramètres équivalents aux paramètres de connexion facultatifs, consultez l’aide de l’applet de commande [Enter-PSSession](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enter-pssession).
+1. La section **Paramètres de connexion facultatifs** porte sur les exigences d’autorisation de l’ordinateur distant que vous souhaitez gérer. Pour plus d’informations sur les paramètres équivalents aux paramètres de connexion facultatifs, consultez l’aide de l’applet de commande [Enter-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/enter-pssession).
 
     En général, les informations d’identification que vous passez par le biais de la passerelle Accès Web Windows PowerShell sont identiques à celles reconnues par l’ordinateur distant que vous souhaitez gérer. Toutefois, si vous souhaitez utiliser des informations d’identification différentes pour gérer l’ordinateur spécifié à l’étape 2, développez la section **Paramètres de connexion facultatifs** et spécifiez les autres informations d’identification. Sinon, passez à l’étape 6.
 

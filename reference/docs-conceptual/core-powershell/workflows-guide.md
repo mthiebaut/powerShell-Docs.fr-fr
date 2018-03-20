@@ -2,11 +2,11 @@
 ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: guide de workflows
-ms.openlocfilehash: 9eb5ae1d665ed6e4319ede62e7f7a27e6ce5b04f
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: d99f23e281b8a1229c4577c3d6c3a93e4ba4973e
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="psworkflow-module"></a>Module PSWorkflow
 Cette section contient les rubriques d’aide relatives au module **PSWorkflow**. Celui-ci comprend des applets de commande qui prennent en charge la fonctionnalité Windows PowerShell Workflow. Le module **PSWorkflow** est installé avec Windows PowerShell.
@@ -14,9 +14,9 @@ Cette section contient les rubriques d’aide relatives au module **PSWorkflow**
 ## <a name="help-topics"></a>Rubriques d'aide
 [Applets de commande Workflow](http://go.microsoft.com/fwlink/?LinkID=245865)
 
-[about_Workflows](https://technet.microsoft.com/en-us/library/f2897bdd-1b9d-4679-8b19-09840bd40a22)
+[about_Workflows](https://technet.microsoft.com/library/f2897bdd-1b9d-4679-8b19-09840bd40a22)
 
-[about_WorkflowCommonParameters](https://technet.microsoft.com/en-us/library/119f968e-618e-439c-b76c-cdd17e6df27c)
+[about_WorkflowCommonParameters](https://technet.microsoft.com/library/119f968e-618e-439c-b76c-cdd17e6df27c)
 
 [about_ActivityCommonParameters](https://technet.microsoft.com/en-us/library/8ca60664-37c6-4257-a723-e3c41dd10122)
 

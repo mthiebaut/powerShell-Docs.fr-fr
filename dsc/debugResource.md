@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: "Débogage des ressources DSC"
-ms.openlocfilehash: 35eb990705bab8190172df899c64c9f34452aa4b
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: c9534deb755e2d3ce59dbb44e55b58b59af2e7f4
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="debugging-dsc-resources"></a>Débogage des ressources DSC
 
@@ -16,9 +16,9 @@ ms.lasthandoff: 01/17/2018
 Dans PowerShell 5.0, DSC contient une nouvelle fonctionnalité qui permet de déboguer une ressource DSC pendant qu’une configuration est appliquée.
 
 ## <a name="enabling-dsc-debugging"></a>Activation du débogage DSC
-Avant de pouvoir déboguer une ressource, vous devez activer le débogage en appelant l’applet de commande [Enable-DscDebug](https://technet.microsoft.com/en-us/library/mt517870.aspx). Cette applet de commande prend un paramètre obligatoire : **BreakAll**. 
+Avant de pouvoir déboguer une ressource, vous devez activer le débogage en appelant l’applet de commande [Enable-DscDebug](https://technet.microsoft.com/library/mt517870.aspx). Cette applet de commande prend un paramètre obligatoire : **BreakAll**. 
 
-Vous pouvez vérifier que le débogage a été activé en examinant le résultat d’un appel à [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx).
+Vous pouvez vérifier que le débogage a été activé en examinant le résultat d’un appel à [Get-DscLocalConfigurationManager](https://technet.microsoft.com/library/dn407378.aspx).
 
 La sortie PowerShell suivante montre le résultat de l’activation du débogage :
 
@@ -59,7 +59,7 @@ Configuration PSWebAccess
     }
 PSWebAccess
 ```
-Après la compilation de la configuration, démarrez-la en appelant [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). La configuration s’arrête quand le gestionnaire de configuration local appelle la première ressource de la configuration. Si vous utilisez les paramètres `-Verbose` et `-Wait`, la sortie affiche les lignes que vous devez entrer pour démarrer le débogage.
+Après la compilation de la configuration, démarrez-la en appelant [Start-DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx). La configuration s’arrête quand le gestionnaire de configuration local appelle la première ressource de la configuration. Si vous utilisez les paramètres `-Verbose` et `-Wait`, la sortie affiche les lignes que vous devez entrer pour démarrer le débogage.
 
 ```powershell
 Start-DscConfiguration .\PSWebAccess -Wait -Verbose
@@ -96,7 +96,7 @@ Vous pouvez désormais utiliser les commandes de débogage dans l’environnemen
 
 ## <a name="disabling-dsc-debugging"></a>Désactivation du débogage DSC
 
-Après avoir appelé [Enable-DscDebug](https://technet.microsoft.com/en-us/library/mt517870.aspx), tous les appels à [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx) causeront des erreurs de configuration dans le débogueur. Pour permettre aux configurations de s’exécuter normalement, vous devez désactiver le débogage en appelant l’applet de commande [Disable-DscDebug](https://technet.microsoft.com/en-us/library/mt517872.aspx).
+Après avoir appelé [Enable-DscDebug](https://technet.microsoft.com/library/mt517870.aspx), tous les appels à [Start-DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx) causeront des erreurs de configuration dans le débogueur. Pour permettre aux configurations de s’exécuter normalement, vous devez désactiver le débogage en appelant l’applet de commande [Disable-DscDebug](https://technet.microsoft.com/en-us/library/mt517872.aspx).
 
 >**Remarque :** le redémarrage ne modifie pas l’état de débogage du LCM. Si le débogage est activé, le démarrage d’une configuration générera toujours des erreurs après un redémarrage.
 

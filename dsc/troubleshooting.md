@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: "Résolution des problèmes liés à DSC"
-ms.openlocfilehash: 4141e1f3304460dcaf310ce603fdc5d9550a5069
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: cdb11a80daecec0e0d01071752612663ac69ac6d
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="troubleshooting-dsc"></a>Résolution des problèmes liés à DSC
 
@@ -21,7 +21,7 @@ La Configuration de l’état souhaité (DSC) Windows PowerShell dépend de WinR
 
 ## <a name="using-get-dscconfigurationstatus"></a>Utilisation de l’applet de commande Get-DscConfigurationStatus
 
-L’applet de commande, [Get-DscConfigurationStatus](https://technet.microsoft.com/en-us/library/mt517868.aspx) obtient des informations sur l’état de configuration à partir d’un nœud cible. Un objet enrichi est retourné. Il comprend des informations générales indiquant si l’exécution de la configuration a réussi ou échoué. Vous pouvez explorer l’objet pour obtenir des détails sur l’exécution de la configuration, notamment :
+L’applet de commande, [Get-DscConfigurationStatus](https://technet.microsoft.com/library/mt517868.aspx) obtient des informations sur l’état de configuration à partir d’un nœud cible. Un objet enrichi est retourné. Il comprend des informations générales indiquant si l’exécution de la configuration a réussi ou échoué. Vous pouvez explorer l’objet pour obtenir des détails sur l’exécution de la configuration, notamment :
 
 * Toutes les ressources qui ont échoué
 * Toute ressource ayant demandé un redémarrage
@@ -621,5 +621,5 @@ onlyProperty                            PSComputerName
 * [Création de ressources personnalisées de configuration d’état souhaité Windows PowerShell](authoringResource.md)
 
 ### <a name="other-resources"></a>Autres ressources
-* [Windows PowerShell Desired State Configuration Cmdlets](https://technet.microsoft.com/en-us/library/dn521624(v=wps.630).aspx)
+* [Windows PowerShell Desired State Configuration Cmdlets](https://technet.microsoft.com/library/dn521624(v=wps.630).aspx)
 

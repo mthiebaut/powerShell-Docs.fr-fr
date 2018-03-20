@@ -4,11 +4,11 @@ author: rpsqrd
 ms.topic: conceptual
 keywords: "jea,powershell,sécurité"
 title: Utilisation de JEA
-ms.openlocfilehash: 9996a432bca27240e0f08adf932126ced116985d
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: f0c22bf0f823b9fafa203e7f98049a6a6b3b7c05
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-jea"></a>Utilisation de JEA
 
@@ -26,7 +26,7 @@ Pour utiliser JEA de manière interactive, vous aurez besoin des éléments suiv
 - le nom du point de terminaison JEA enregistré sur l’ordinateur ;
 - les informations d’identification de l’ordinateur ayant accès au point de terminaison JEA.
 
-Une fois que vous disposez de ces informations, vous pouvez lancer une session JEA avec [New-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/New-PSSession) ou [Enter-PSSession](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/enter-pssession).
+Une fois que vous disposez de ces informations, vous pouvez lancer une session JEA avec [New-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/New-PSSession) ou [Enter-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/enter-pssession).
 
 ```powershell
 $nonAdminCred = Get-Credential
@@ -107,7 +107,7 @@ Import-PSSession -Session $jeasession -Prefix 'JEA' -CommandName $filteredComman
 ```
 
 Vous pouvez également conserver les applets de commande en proxy de la communication à distance implicite avec [Export-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/Export-PSSession).
-Pour plus d’informations sur la communication à distance implicite, consultez la documentation d’aide de [Import-PSSession](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.utility/import-pssession) et [Import-Module](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/import-module).
+Pour plus d’informations sur la communication à distance implicite, consultez la documentation d’aide de [Import-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/import-pssession) et [Import-Module](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/import-module).
 
 ## <a name="using-jea-programatically"></a>Utiliser JEA par programmation
 

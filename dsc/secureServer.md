@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: Bonnes pratiques pour le serveur collecteur
-ms.openlocfilehash: 045f98475d6182b329ecf048038a98e933684a82
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 3d0ab969b7a0de9d428becc4b9bdb124a7a44c2c
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="pull-server-best-practices"></a>Bonnes pratiques pour le serveur collecteur
 
@@ -24,7 +24,7 @@ Publié | Avril 2015
 ## <a name="abstract"></a>Résumé
 
 Ce document a pour but de fournir des conseils officiels à toute personne planifiant l’implémentation d’un serveur collecteur Windows PowerShell DSC (Desired State Configuration). Un serveur collecteur est un service simple dont le déploiement ne devrait prendre que quelques minutes. Bien que ce document propose des procédures techniques pouvant être utilisées dans un déploiement, il est surtout une référence de bonnes pratiques et de points à prendre en compte avant d’effectuer un déploiement.
-Les lecteurs doivent avoir une connaissance de base de DSC et des termes utilisés pour décrire les composants inclus dans un déploiement DSC. Pour plus d’informations, consultez la rubrique [Vue d’ensemble de la fonctionnalité Desired State Configuration de Windows PowerShell](https://technet.microsoft.com/en-us/library/dn249912.aspx).
+Les lecteurs doivent avoir une connaissance de base de DSC et des termes utilisés pour décrire les composants inclus dans un déploiement DSC. Pour plus d’informations, consultez la rubrique [Vue d’ensemble de la fonctionnalité Desired State Configuration de Windows PowerShell](https://technet.microsoft.com/library/dn249912.aspx).
 Étant donné que DSC est supposé évoluer à la cadence du cloud, la technologie sous-jacente qui inclut le serveur collecteur devrait également évoluer et introduire de nouvelles fonctionnalités. L’annexe de ce document comprend un tableau de versions qui fournit des références aux versions précédentes et aux solutions novatrices pour encourager les conceptions innovantes.
 
 Les deux principales sections de ce document sont les suivantes :
@@ -43,7 +43,7 @@ Windows PowerShell fournit un ensemble d’extensions de langage pour DSC que vo
 ### <a name="pull-server-role"></a>Rôle serveur collecteur  
 Un serveur collecteur fournit un service centralisé pour stocker des configurations qui seront accessibles aux nœuds cibles.
  
-Vous pouvez déployer le rôle serveur collecteur comme instance de serveur web ou partage de fichiers SMB. La fonctionnalité de serveur web inclut une interface OData et peut éventuellement inclure des fonctionnalités permettant aux nœuds cibles d’envoyer une confirmation de réussite ou d’échec quand les configurations sont appliquées. Cette fonctionnalité est utile dans les environnements comportant un grand nombre de nœuds cibles. Après avoir configuré un nœud cible (également appelé « client ») pour pointer vers le serveur collecteur, téléchargez et appliquez les données de configuration les plus récentes et tous les scripts nécessaires. Vous pouvez effectuer ces opérations en un seul déploiement ou comme une tâche récurrente qui considère aussi le serveur collecteur comme important pour gérer les changements au besoin. Pour plus d’informations, consultez [Serveurs collecteurs Windows PowerShell DSC](https://technet.microsoft.com/en-us/library/dn249913.aspx) et [Modes de configuration d’émission et de collecte](https://technet.microsoft.com/en-us/library/dn249913.aspx).
+Vous pouvez déployer le rôle serveur collecteur comme instance de serveur web ou partage de fichiers SMB. La fonctionnalité de serveur web inclut une interface OData et peut éventuellement inclure des fonctionnalités permettant aux nœuds cibles d’envoyer une confirmation de réussite ou d’échec quand les configurations sont appliquées. Cette fonctionnalité est utile dans les environnements comportant un grand nombre de nœuds cibles. Après avoir configuré un nœud cible (également appelé « client ») pour pointer vers le serveur collecteur, téléchargez et appliquez les données de configuration les plus récentes et tous les scripts nécessaires. Vous pouvez effectuer ces opérations en un seul déploiement ou comme une tâche récurrente qui considère aussi le serveur collecteur comme important pour gérer les changements au besoin. Pour plus d’informations, consultez [Serveurs collecteurs Windows PowerShell DSC](https://technet.microsoft.com/library/dn249913.aspx) et [Modes de configuration d’émission et de collecte](https://technet.microsoft.com/library/dn249913.aspx).
 
 ## <a name="configuration-planning"></a>Planification de la configuration
 

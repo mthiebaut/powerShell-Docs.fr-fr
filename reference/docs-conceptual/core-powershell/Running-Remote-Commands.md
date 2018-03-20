@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Exécution de commandes à distance"
 ms.assetid: d6938b56-7dc8-44ba-b4d4-cd7b169fd74d
-ms.openlocfilehash: 43f07abd642e7de235647fa151537c46ebe86cae
-ms.sourcegitcommit: 6aed37d7f0c9652ae09bb8c11928da7e4783ed7f
+ms.openlocfilehash: 24648e8f35fbc28c9ba9f9b7176ac23e72ffbe78
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="running-remote-commands"></a>Exécution de commandes à distance
 
@@ -48,9 +48,9 @@ Get-Command | where { $_.parameters.keys -contains "ComputerName" -and $_.parame
 ## <a name="windows-powershell-remoting"></a>Communication à distance Windows PowerShell
 La communication à distance Windows PowerShell, qui utilise le protocole WS-Management, vous permet d'exécuter n'importe quelle commande Windows PowerShell sur un ou plusieurs ordinateurs distants. Vous pouvez ainsi établir des connexions persistantes, démarrer des sessions interactives 1:1 et exécuter des scripts sur plusieurs ordinateurs.
 
-Pour utiliser la communication à distance Windows PowerShell, l'ordinateur distant doit être configuré pour la gestion à distance. Pour obtenir plus d’informations, notamment des instructions, voir [about_Remote_Requirements](https://technet.microsoft.com/en-us/library/dd315349.aspx).
+Pour utiliser la communication à distance Windows PowerShell, l'ordinateur distant doit être configuré pour la gestion à distance. Pour obtenir plus d’informations, notamment des instructions, voir [about_Remote_Requirements](https://technet.microsoft.com/library/dd315349.aspx).
 
-Après avoir configuré la communication à distance Windows PowerShell, vous avez le choix entre plusieurs stratégies de communication à distance. Le reste de ce document répertorie quelques-unes d'entre elles. Pour plus d’informations, voir [À propos de la connexion à distance](https://technet.microsoft.com/en-us/library/dd347744.aspx) et [FAQ de la connexion à distance](https://technet.microsoft.com/en-us/library/dd347744.aspx).
+Après avoir configuré la communication à distance Windows PowerShell, vous avez le choix entre plusieurs stratégies de communication à distance. Le reste de ce document répertorie quelques-unes d'entre elles. Pour plus d’informations, voir [À propos de la connexion à distance](https://technet.microsoft.com/library/dd347744.aspx) et [FAQ de la connexion à distance](https://technet.microsoft.com/library/dd347744.aspx).
 
 ### <a name="start-an-interactive-session"></a>Démarrer une session interactive
 Pour démarrer une session interactive avec un seul ordinateur distant, utilisez l’applet de commande [Enter-PSSession](https://go.microsoft.com/fwlink/?LinkId=821477).

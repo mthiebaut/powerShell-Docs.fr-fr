@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: Utilisation du Concepteur de ressources
-ms.openlocfilehash: c21602e219b5830877cc211e092e93bb7fc8ad9c
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: c39b48f67d3874ee3cd2f2704aeb7390fa186fe4
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-the-resource-designer-tool"></a>Utilisation du Concepteur de ressources
 
@@ -15,7 +15,7 @@ ms.lasthandoff: 01/17/2018
 
 L’outil Concepteur de ressources est un ensemble d’applets de commande exposées par le module **xDscResourceDesigner** qui facilite la création de ressources DSC Windows PowerShell. Les applets de commande de cette ressource vous aident à créer le schéma MOF, le module de script et la structure de répertoires de votre nouvelle ressource. Pour plus d’informations sur les ressources DSC, consultez [Création de ressources DSC Windows PowerShell personnalisées](authoringResource.md).
 Dans cette rubrique, nous allons créer une ressource DSC qui gère les utilisateurs Active Directory.
-Utilisez l’applet de commande [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) pour installer le module **xDscResourceDesigner**.
+Utilisez l’applet de commande [Install-Module](https://technet.microsoft.com/library/dn807162.aspx) pour installer le module **xDscResourceDesigner**.
 
 >**Remarque** : **Install-Module** est inclus dans le module **PowerShellGet** de PowerShell 5.0. Vous pouvez télécharger le module **PowerShellGet** pour PowerShell 3.0 et 4.0 ici : [PackageManagement PowerShell Modules Preview](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
 

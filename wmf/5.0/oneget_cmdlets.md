@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,configuration
-ms.openlocfilehash: 6cba004890fc4b1dfac40920f751f61b0530cce9
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 134c22efe4fb86045ffb326e109dfbcc741bcf2f
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="packagemanagement-cmdlets"></a>Applets de commande PackageManagement
 Il s’agit du noyau de PackageManagement pour prendre en charge la découverte, l’installation et l’inventaire des logiciels. Essayez les applets de commande pour effectuer ces opérations :
@@ -31,7 +31,7 @@ PS C:\> Install-Module PackageManagement –Force
 ```
 Dans ce cas, vous devrez réaccéder à la session PowerShell pour basculer vers la nouvelle version de PackageManagement.
 
-## <a name="find-package-cmdlethttpstechnetmicrosoftcomen-uslibrarydn890709aspx"></a>[Applet de commande Find-Package](https://technet.microsoft.com/en-us/library/dn890709.aspx)
+## <a name="find-package-cmdlethttpstechnetmicrosoftcomlibrarydn890709aspx"></a>[Applet de commande Find-Package](https://technet.microsoft.com/library/dn890709.aspx)
 Cette applet de commande permet de détecter des packages logiciels dans les sources de packages disponibles à l’aide des fournisseurs de packages chargés.
 ```powershell
 # Find all available Windows PowerShell module packages from galleries registered
@@ -51,7 +51,7 @@ Find-Package -Name jquery –Provider NuGet -Source http://www.nuget.org/api/v2/
 Find-Package -Name jquery –Provider NuGet –RequiredVersion 2.1.4 -Source nuget.org
 ```
 
-## <a name="find-packageprovider-cmdlethttpstechnetmicrosoftcomen-uslibrarymt676544aspx"></a>[Applet de commande Find-PackageProvider](https://technet.microsoft.com/en-us/library/mt676544.aspx)
+## <a name="find-packageprovider-cmdlethttpstechnetmicrosoftcomlibrarymt676544aspx"></a>[Applet de commande Find-PackageProvider](https://technet.microsoft.com/library/mt676544.aspx)
 L’applet de commande Find-PackageProvider recherche les fournisseurs PackageManagement correspondants qui sont disponibles dans les sources de packages inscrites auprès de PowerShellGet. Il s’agit de fournisseurs de packages disponibles pour l’installation avec l’applet de commande Install-PackageProvider. Par défaut, cela comprend les modules disponibles dans PowerShell Gallery avec les balises « PackageManagement » et « Provider ». 
 
 Find-PackageProvider recherche également les fournisseurs PackageManagement correspondants qui sont disponibles dans le magasin d’objets blob Azure PackageManagement où nous utilisons le fournisseur de programme d’amorçage PackageManagement pour les rechercher et les installer.
@@ -66,7 +66,7 @@ Find-PackageProvider -Name "Nuget" -AllVersions
 Find-PackageProvider -Name "Gistprovider" -Source "PSGallery"
 ```
 
-## <a name="get-package-cmdlethttpstechnetmicrosoftcomen-uslibrarydn890704aspx"></a>[Applet de commande Get-Package](https://technet.microsoft.com/en-us/library/dn890704.aspx)
+## <a name="get-package-cmdlethttpstechnetmicrosoftcomlibrarydn890704aspx"></a>[Applet de commande Get-Package](https://technet.microsoft.com/library/dn890704.aspx)
 Cette applet de commande retourne une liste de tous les packages logiciels qui ont été installés à l’aide de PackageManagement.
 ```powershell
 # Get all the packages installed by Programs provider

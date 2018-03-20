@@ -4,11 +4,11 @@ contributor: JKeithB
 ms.topic: conceptual
 keywords: gallery, powershell, applet de commande, psgallery, psget
 title: PowerShell Gallery
-ms.openlocfilehash: 9fe341e4b297764321f3b3f07caca8ef4b8b40e0
-ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
+ms.openlocfilehash: 7389ce8286c515b0bfc25f32634a482b060cb74c
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="the-powershell-gallery"></a>PowerShell Gallery
 
@@ -50,7 +50,7 @@ Par conséquent, **PowerShellGet** nécessite l’un des systèmes d’exploitat
 - Windows Server 2012 R2
 - Windows Server 2008 R2 SP1
 
-**PowerShellGet** nécessite également .NET Framework 4.5 ou ultérieur. Vous pouvez installer .NET Framework 4.5 ou ultérieur à partir [d’ici](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx).
+**PowerShellGet** nécessite également .NET Framework 4.5 ou ultérieur. Vous pouvez installer .NET Framework 4.5 ou ultérieur à partir [d’ici](https://msdn.microsoft.com/library/5a4x27ek.aspx).
 
 
 ## <a name="got-a-question-have-feedback"></a>Vous avez une question ? Vous avez des commentaires ?

@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: "Utilisation d’un serveur de rapports DSC"
-ms.openlocfilehash: 31b0df7d9baf30d93154d6a28b21f32fc052bc06
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: fdf16a2de6aea46844d3812029fae474e80ae6ac
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-a-dsc-report-server"></a>Utilisation d’un serveur de rapports DSC
 
@@ -92,7 +92,7 @@ PullClientConfig
 
 ## <a name="getting-report-data"></a>Obtention des données du rapport
 
-Les rapports envoyés au serveur collecteur sont entrés dans une base de données sur le serveur. Les rapports sont disponibles par le biais d’appels au service web. Pour récupérer des rapports pour un nœud spécifique, envoyez une demande HTTP au service web de rapports sous la forme suivante : `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId= 'MyNodeAgentId')/Reports` où `MyNodeAgentId` est l’ID de l’agent du nœud pour lequel vous voulez obtenir des rapports. Vous pouvez obtenir l’ID de l’agent d’un nœud en appelant [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx) sur ce nœud.
+Les rapports envoyés au serveur collecteur sont entrés dans une base de données sur le serveur. Les rapports sont disponibles par le biais d’appels au service web. Pour récupérer des rapports pour un nœud spécifique, envoyez une demande HTTP au service web de rapports sous la forme suivante : `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId= 'MyNodeAgentId')/Reports` où `MyNodeAgentId` est l’ID de l’agent du nœud pour lequel vous voulez obtenir des rapports. Vous pouvez obtenir l’ID de l’agent d’un nœud en appelant [Get-DscLocalConfigurationManager](https://technet.microsoft.com/library/dn407378.aspx) sur ce nœud.
 
 Les rapports sont retournés sous forme de tableau d’objets JSON.
 

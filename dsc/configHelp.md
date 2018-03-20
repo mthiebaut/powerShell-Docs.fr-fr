@@ -3,17 +3,17 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: "Écriture de l’aide pour les configurations DSC"
-ms.openlocfilehash: c868fa0565baff833423db090a5d62824ab4cad8
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: c5d499ec887829c864c0f63f64af2d0a7738220b
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="writing-help-for-dsc-configurations"></a>Écriture de l’aide pour les configurations DSC
 
 >S’applique à : Windows PowerShell 5.0
 
-Vous pouvez utiliser l’aide basée sur les commentaires dans les configurations DSC. Les utilisateurs peuvent accéder à l’aide en appelant la fonction de configuration avec `-?` ou en utilisant l’applet de commande [Get-Help](https://technet.microsoft.com/en-us/library/hh849696.aspx). Pour plus d’informations sur l’aide PowerShell basée sur les commentaires, consultez [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/hh847834.aspx).
+Vous pouvez utiliser l’aide basée sur les commentaires dans les configurations DSC. Les utilisateurs peuvent accéder à l’aide en appelant la fonction de configuration avec `-?` ou en utilisant l’applet de commande [Get-Help](https://technet.microsoft.com/library/hh849696.aspx). Pour plus d’informations sur l’aide PowerShell basée sur les commentaires, consultez [about_Comment_Based_Help](https://technet.microsoft.com/library/hh847834.aspx).
 
 L’exemple suivant décrit un script qui contient une configuration et une aide basée sur les commentaires associée :
 

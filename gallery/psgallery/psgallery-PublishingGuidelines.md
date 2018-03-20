@@ -5,11 +5,11 @@ ms.topic: conceptual
 keywords: gallery,powershell,applet de commande,psgallery
 description: "Recommandations pour les éditeurs"
 title: Instructions et bonnes pratiques de publication PowerShell Gallery
-ms.openlocfilehash: 882a33c00cc024ad2bbb05a3283e058a61035e3a
-ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
+ms.openlocfilehash: 25bbe31bcc805808c311829598e3c29991f72aad
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Instructions et bonnes pratiques de publication PowerShell Gallery
 
@@ -19,7 +19,7 @@ Les éléments publiés en suivant ces recommandations seront plus susceptibles 
 Voici des recommandations sur ce qui constitue un bon élément PowerShell Gallery, les paramètres de manifeste facultatifs les plus importants, la façon d’améliorer votre code grâce aux commentaires des premiers réviseurs et aux informations fournies par [l’analyseur de script Powershell](https://aka.ms/psscriptanalyzer), de gérer les versions de votre module, ainsi qu’une documentation, des tests et des exemples pour apprendre à utiliser ce que vous avez partagé.
 Une grande partie de cette documentation suit les instructions pour publier [des modules de ressources DSC haute qualité](https://github.com/PowerShell/DscResources/blob/master/HighQualityModuleGuidelines.md).
 
-Pour plus de détails sur la publication d’un élément dans PowerShell Gallery, consultez [Création et publication d’un élément](https://msdn.microsoft.com/en-us/powershell/gallery/psgallery/creating-and-publishing-an-item).
+Pour plus de détails sur la publication d’un élément dans PowerShell Gallery, consultez [Création et publication d’un élément](https://msdn.microsoft.com/powershell/gallery/psgallery/creating-and-publishing-an-item).
 
 Les commentaires sur ces instructions sont les bienvenus. Si vous avez des commentaires, faites-le-nous savoir dans le [dépôt de notre documentation Github](https://github.com/powershell/powershell-docs/).
 
@@ -71,7 +71,7 @@ Il existe plusieurs articles dans MSDN sur la façon de fournir de la documentat
 * La rubrique [Comment rédiger l’aide sur une applet de commande](https://go.microsoft.com/fwlink/?LinkID=123415)
 * La création de l’aide sur une applet de commande est la meilleure approche, qu’il s’agisse d’un script, d’une fonction ou d’une applet de commande PowerShell.
   Pour plus d’informations sur la création de l’aide d’une applet de commande, commencez par [How to Write Cmdlet Help](https://go.microsoft.com/fwlink/?LinkID=123415) dans MSDN Library.
-  Pour ajouter une aide dans un script, consultez [À propos de l’aide d’un commentaire](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/about/about_comment_based_help).
+  Pour ajouter une aide dans un script, consultez [À propos de l’aide d’un commentaire](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_comment_based_help).
 * De nombreux modules incluent également une documentation au format texte, par exemple les fichiers MarkDown.
   Cela peut s’avérer particulièrement utile lorsque Github contient un projet dans lequel le format Markdown est très utilisé.
   La meilleure pratique consiste à utiliser un [format Markdown spécialement adapté à Github](https://help.github.com/categories/writing-on-github/)

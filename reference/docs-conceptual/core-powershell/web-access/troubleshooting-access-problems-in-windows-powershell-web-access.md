@@ -2,11 +2,11 @@
 ms.date: 2017-08-23
 keywords: powershell,applet de commande
 title: "résolution des problèmes d’accès dans Accès Web Windows PowerShell"
-ms.openlocfilehash: 08a9fd286ed8a40e9423deb7d29dc0a8ecf8e5b1
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: 6e51df3f4c6ac196c855ad918a91394d02c7d75e
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Résolution des problèmes d’accès dans Accès Web Windows PowerShell
 
@@ -34,7 +34,7 @@ L’échec peut avoir les causes suivantes.
 
   Vérifiez que la gestion à distance est activée sur l’ordinateur auquel l’utilisateur essaie de se connecter.
 
-  Pour plus d’informations, consultez [Comment configurer votre ordinateur pour la communication à distance](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_requirements#how-to-configure-your-computer-for-remoting).
+  Pour plus d’informations, consultez [Comment configurer votre ordinateur pour la communication à distance](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_requirements#how-to-configure-your-computer-for-remoting).
 
 ## <a name="internal-server-error"></a>Erreur de serveur interne
 
@@ -90,7 +90,7 @@ N’utilisez pas de point (.) tout seul pour représenter le nom de l’ordinat
 
 #### <a name="all-cases"></a>Tous les cas
 
-Paramètre | Value
+Paramètre | Valeur
 -- | --
 UserName | Nom\_serveur\\nom\_utilisateur<br/>Localhost\\nom\_utilisateur<br/>.\\nom\_utilisateur
 UserGroup | Nom\_serveur\\groupe\_utilisateurs<br/>Localhost\\groupe\_s<br/>.\\groupe\_utilisateurs
@@ -98,13 +98,13 @@ ComputerGroup | Nom\_serveur\\groupe\_ordinateurs<br/>Localhost\\groupe\_ordinat
 
 #### <a name="gateway-server-is-in-a-domain"></a>Serveur de passerelle dans un domaine
 
-Paramètre | Value
+Paramètre | Valeur
 -- | --
 ComputerName | Nom complet du serveur de passerelle ou Localhost
 
 #### <a name="gateway-server-is-in-a-workgroup"></a>Serveur de passerelle dans un groupe de travail
 
-Paramètre | Value
+Paramètre | Valeur
 -- | --
 ComputerName | Nom du serveur
 
@@ -132,7 +132,7 @@ Les règles d’autorisation ne prennent pas en charge une adresse IPv6 sous for
 Pour spécifier un ordinateur de destination à l’aide d’une adresse IPv6, utilisez l’adresse IPv6 d’origine (qui contient des deux-points) dans la règle d’autorisation.
 Les adresses IPv6 de domaine et numériques (avec des signes deux-points) sont prises en charge en tant que nom d’ordinateur cible dans la page de connexion à Accès Web Windows PowerShell, mais pas dans les règles d’autorisation. 
 
-Pour plus d’informations sur les adresses IPv6, consultez [Fonctionnement d’IPv6](https://technet.microsoft.com/en-us/library/cc781672(v=ws.10).aspx).
+Pour plus d’informations sur les adresses IPv6, consultez [Fonctionnement d’IPv6](https://technet.microsoft.com/library/cc781672(v=ws.10).aspx).
 
 ## <a name="see-also"></a>Voir aussi
 

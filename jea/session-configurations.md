@@ -2,13 +2,13 @@
 ms.date: 2017-06-12
 author: rpsqrd
 ms.topic: conceptual
-keywords: "jea,powershell,sécurité"
+keywords: jea,powershell,security
 title: Configuration de session JEA
-ms.openlocfilehash: 0a8931ae15caf04a3639ab46f130e5f5b0498d8c
-ms.sourcegitcommit: 0733db9a05e89e6a23f6b52b9edd784fcbe8beec
+ms.openlocfilehash: c475a90a59d91b074f954cfb656b00142444c052
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="jea-session-configurations"></a>Configuration de session JEA
 
@@ -38,7 +38,7 @@ New-PSSessionConfigurationFile -SessionType RestrictedRemoteServer -Path .\MyJEA
 
 Vous pouvez ouvrir le fichier de configuration de session dans l’éditeur de texte de votre choix.
 Le champ `-SessionType RestrictedRemoteServer` indique que la configuration de session sera utilisée par JEA pour une gestion sécurisée.
-Les sessions configurées de cette façon fonctionnent en [mode NoLanguage](https://technet.microsoft.com/en-us/library/dn433292.aspx) et seules les huit commandes par défaut suivantes (et les alias) sont disponibles :
+Les sessions configurées de cette façon fonctionnent en [mode NoLanguage](https://technet.microsoft.com/library/dn433292.aspx) et seules les huit commandes par défaut suivantes (et les alias) sont disponibles :
 
 - Clear-Host (cls, clear)
 - Exit-PSSession (exsn, exit)
@@ -128,7 +128,7 @@ Les utilisateurs standard ne doivent avoir aucun accès au dossier, et un ensemb
 ### <a name="user-drive"></a>Lecteur utilisateur
 
 Si vos utilisateurs connectés ont besoin de copier des fichiers vers/à partir du point de terminaison JEA afin d’exécuter une commande, vous pouvez activer le lecteur utilisateur dans le fichier de configuration de session.
-Le lecteur utilisateur est un [PSDrive](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/cookbooks/managing-windows-powershell-drives) mappé à un dossier unique pour chaque utilisateur connecté.
+Le lecteur utilisateur est un [PSDrive](https://msdn.microsoft.com/powershell/scripting/getting-started/cookbooks/managing-windows-powershell-drives) mappé à un dossier unique pour chaque utilisateur connecté.
 Ce dossier leur sert d’espace pour copier des fichiers vers/à partir du système, sans qu’ils puissent accéder à la totalité du système de fichiers ou exposer le fournisseur du système de fichiers.
 Le contenu du lecteur utilisateur est persistant d’une session à l’autre de façon à gérer les situations dans lesquelles la connectivité réseau risque d’être interrompue.
 

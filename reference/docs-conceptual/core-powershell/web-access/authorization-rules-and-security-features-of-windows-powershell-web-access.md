@@ -2,11 +2,11 @@
 ms.date: 2017-06-27
 keywords: powershell,applet de commande
 title: "Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell"
-ms.openlocfilehash: 6b50fdc0f2854d8af6147432fed1a155d26f57e7
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 19e4aa1bb55178ec2634af0771afe2db5db3423c
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Règles d’autorisation et fonctionnalités de sécurité d’Accès Web Windows PowerShell
 
@@ -32,7 +32,7 @@ Comme avec d’autres applets de commande Windows PowerShell disposant d’un pa
 Pour créer un objet PSCredential qui contient les informations d’identification que vous souhaitez transmettre à un ordinateur distant, exécutez l’applet de commande [Get-Credential](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.security/Get-Credential).
 
 Les règles d’authentification Accès Web Windows PowerShell sont des règles de liste verte.
-Chaque règle est une définition d’une connexion autorisée entre des utilisateurs, des ordinateurs cibles et des [configurations de session](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configurations) Windows PowerShell particulières (également appelées points de terminaison ou _instances d’exécution_) sur des ordinateurs cibles spécifiés.
+Chaque règle est une définition d’une connexion autorisée entre des utilisateurs, des ordinateurs cibles et des [configurations de session](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configurations) Windows PowerShell particulières (également appelées points de terminaison ou _instances d’exécution_) sur des ordinateurs cibles spécifiés.
 Pour obtenir une explication sur **les instances d’exécution**, consultez [Beginning Use of PowerShell Runspaces](https://blogs.technet.microsoft.com/heyscriptingguy/2015/11/26/beginning-use-of-powershell-runspaces-part-1/)
 
 > **Remarque sur la sécurité**
@@ -103,7 +103,7 @@ Ces règles sont évaluées uniquement après qu’un utilisateur a été authen
 La couche finale de sécurité pour Accès Web Windows PowerShell est la configuration de sécurité elle-même de l’ordinateur cible.
 Les utilisateurs doivent avoir les droits d’accès appropriés configurés sur l’ordinateur cible, ainsi que dans les règles d’autorisation d’Accès Web Windows PowerShell, pour exécuter une console web Windows PowerShell qui affecte un ordinateur cible par le biais d’Accès Web Windows PowerShell.
 
-Cette couche offre les mêmes mécanismes de sécurité que ceux qui évalueraient les tentatives de connexion si les utilisateurs créaient une session Windows PowerShell à distance sur un ordinateur cible depuis Windows PowerShell en exécutant les applets de commande [Enter-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/Enter-PSSession) ou [New-PSSession](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/new-pssession).
+Cette couche offre les mêmes mécanismes de sécurité que ceux qui évalueraient les tentatives de connexion si les utilisateurs créaient une session Windows PowerShell à distance sur un ordinateur cible depuis Windows PowerShell en exécutant les applets de commande [Enter-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/Enter-PSSession) ou [New-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/new-pssession).
 
 Par défaut, Accès Web Windows PowerShell utilise les nom d’utilisateur et mot de passe principaux pour l’authentification sur la passerelle et l’ordinateur cible.
 La page de connexion web, dans une section intitulée **Paramètres de connexion facultatifs**, permet aux utilisateurs de fournir si nécessaire des informations d’identification différentes pour l’ordinateur cible.

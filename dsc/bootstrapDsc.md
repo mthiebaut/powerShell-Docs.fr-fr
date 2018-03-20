@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: "Configurer une machine virtuelle au démarrage initial à l’aide de DSC"
-ms.openlocfilehash: 76c990ee7c98ea47d1fc3d7bd955ce6a993e28a6
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: ff06aafa6db49d93a9b42e38ac7c3e9a11657bd5
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 >S’applique à : Windows PowerShell 5.0
 
@@ -20,7 +20,7 @@ Pour plus d’informations sur la configuration de nouvelles machines virtuelles
 
 Pour exécuter ces exemples, vous avez besoin des éléments suivants :
 
-- Un disque dur virtuel démarrable avec lequel travailler. Vous pouvez télécharger une image ISO avec une copie d’évaluation de Windows Server 2016 auprès du [TechNet Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016). Vous trouverez des instructions sur la création d’un disque dur virtuel à partir d’une image ISO dans [Creating Bootable Virtual Hard Disks](https://technet.microsoft.com/en-us/library/gg318049.aspx).
+- Un disque dur virtuel démarrable avec lequel travailler. Vous pouvez télécharger une image ISO avec une copie d’évaluation de Windows Server 2016 auprès du [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016). Vous trouverez des instructions sur la création d’un disque dur virtuel à partir d’une image ISO dans [Creating Bootable Virtual Hard Disks](https://technet.microsoft.com/library/gg318049.aspx).
 - Un ordinateur hôte où Hyper-V est activé. Pour plus d’informations, consultez [Vue d’ensemble d’Hyper-V](https://technet.microsoft.com/library/hh831531.aspx).
 
 À l’aide de DSC, vous pouvez automatiser l’installation et la configuration de logiciels d’un ordinateur au démarrage initial.

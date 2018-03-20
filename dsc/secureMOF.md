@@ -3,11 +3,11 @@ ms.date: 2017-10-31
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: "Sécurisation du fichier MOF"
-ms.openlocfilehash: fdb8fa17e9b5e92b56e0a62bf850529c241eee41
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 1bb257f3237344f32c9035f3836dd317b75eef0a
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="securing-the-mof-file"></a>Sécurisation du fichier MOF
 
@@ -19,7 +19,7 @@ Cette rubrique décrit comment s’assurer que le nœud cible a chiffré le fich
 
 À partir de PowerShell version 5.0, la totalité du fichier MOF est chiffrée par défaut quand il est appliqué au nœud à l’aide de l’applet de commande **Start-DSCConfiguration**.
 Le processus décrit dans cet article est nécessaire uniquement lors de l’implémentation d’une solution utilisant le protocole de service de tirage si les certificats ne sont pas gérés, afin de s’assurer que les configurations téléchargées par le nœud cible peuvent être déchiffrées et lues par le système avant d’être appliquées (par exemple, le service de tirage disponible dans Windows Server).
-Sur les nœuds inscrits auprès [d’Azure Automation DSC](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview), des certificats sont automatiquement installés et gérés par le service sans aucune surcharge administrative nécessaire.
+Sur les nœuds inscrits auprès [d’Azure Automation DSC](https://docs.microsoft.com/azure/automation/automation-dsc-overview), des certificats sont automatiquement installés et gérés par le service sans aucune surcharge administrative nécessaire.
 
 >**Remarque :** cette rubrique présente les certificats utilisés pour le chiffrement.
 >Pour le chiffrement, un certificat auto-signé est suffisant, car la clé privée est toujours gardée secrète et le chiffrement n’implique pas d’approbation du document.
@@ -262,7 +262,7 @@ configuration CredentialEncryptionExample
 
 ## <a name="setting-up-decryption"></a>Configuration du déchiffrement
 
-Pour que [`Start-DscConfiguration`](https://technet.microsoft.com/en-us/library/dn521623.aspx) puisse fonctionner, vous devez indiquer au gestionnaire de configuration local sur chaque nœud cible le certificat à utiliser pour déchiffrer les informations d’identification, en utilisant la ressource CertificateID pour vérifier l’empreinte du certificat. Cet exemple de fonction recherche le certificat local approprié (vous devez peut-être la personnaliser pour qu’elle recherche le certificat exact que vous souhaitez utiliser) :
+Pour que [`Start-DscConfiguration`](https://technet.microsoft.com/library/dn521623.aspx) puisse fonctionner, vous devez indiquer au gestionnaire de configuration local sur chaque nœud cible le certificat à utiliser pour déchiffrer les informations d’identification, en utilisant la ressource CertificateID pour vérifier l’empreinte du certificat. Cet exemple de fonction recherche le certificat local approprié (vous devez peut-être la personnaliser pour qu’elle recherche le certificat exact que vous souhaitez utiliser) :
 
 ```powershell
 # Get the certificate that works for encryption 
@@ -311,7 +311,7 @@ configuration CredentialEncryptionExample
 
 À ce stade, vous pouvez exécuter la configuration qui produira deux fichiers :
 
- * Un fichier *.meta.mof qui configure le gestionnaire de configuration local de façon à déchiffrer les informations d’identification à l’aide du certificat stocké dans le magasin de l’ordinateur local et identifié par son empreinte numérique. [`Set-DscLocalConfigurationManager`](https://technet.microsoft.com/en-us/library/dn521621.aspx) applique le fichier *.meta.mof.
+ * Un fichier *.meta.mof qui configure le gestionnaire de configuration local de façon à déchiffrer les informations d’identification à l’aide du certificat stocké dans le magasin de l’ordinateur local et identifié par son empreinte numérique. [`Set-DscLocalConfigurationManager`](https://technet.microsoft.com/library/dn521621.aspx) applique le fichier *.meta.mof.
  * Un fichier MOF qui applique la configuration. Start-DscConfiguration applique la configuration.
 
 Ces commandes accomplissent les étapes suivantes :
