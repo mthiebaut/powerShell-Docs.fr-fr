@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: Ressource DSC WaitForSome
-ms.openlocfilehash: cbe16c543f0eeb62dbe1fb439af2f9147f1bc210
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 8b0ad0dbd31816cc673c7f77945927987e90e08b
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dsc-waitforsome-resource"></a>Ressource DSC WaitForSome
 
@@ -40,12 +40,12 @@ WaitForSome [String] #ResourceName
 |---|---| 
 | NodeCount| Le nombre minimal de nœuds qui doivent être dans l’état souhaité pour que cette ressource réussisse.|
 | NodeName| Les nœuds cible de la ressource de la dépendance.| 
-| Nom_ressource| Le nom de la ressource de la dépendance.| 
+| Nom_ressource| Le nom de la ressource de la dépendance. Si cette ressource appartient à une configuration différente, mettez en forme le nom comme ceci : "[__type_ressource__]__nom_ressource__::[__nom_configuration__]::[__nom_configuration__]"| 
 | RetryIntervalSec| Le nombre de secondes avant la nouvelle tentative. Le minimum est 1.| 
 | RetryCount| Le nombre maximum de nouvelles tentatives.| 
 | ThrottleLimit| Le nombre de machines à connecter simultanément. La valeur par défaut est new-cimsession.| 
 | DependsOn | Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource __ResourceName__ de type __ResourceType__, la syntaxe pour utiliser cette propriété est `DependsOn = "[ResourceType]ResourceName"`.|
-| PsDscRunAsCredential | Voir [Exécution de DSC avec les informations d’identification de l’utilisateur](https://docs.microsoft.com/en-us/powershell/dsc/runasuser) |
+| PsDscRunAsCredential | Voir [Exécution de DSC avec les informations d’identification de l’utilisateur](https://docs.microsoft.com/powershell/dsc/runasuser) |
 
 
 ## <a name="example"></a>Exemple

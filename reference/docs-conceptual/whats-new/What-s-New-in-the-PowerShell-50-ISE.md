@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Nouveautés de PowerShell 5.0 ISE"
 ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
-ms.openlocfilehash: 89dcc905ce200d06029e148c9675269e6f518fa3
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: 9fd25a4759602bebf2b5df2c17d0c816a15e5e2b
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="what39s-new-in-the-windows-powershell-ise"></a>Nouveauté dans Windows PowerShell ISE
 Cette rubrique décrit les fonctionnalités nouvelles et mises à jour qui ont été introduites dans les versions de l’environnement d’écriture de scripts intégré (ISE) de Windows PowerShell.
@@ -15,7 +15,7 @@ Cette rubrique décrit les fonctionnalités nouvelles et mises à jour qui ont �
 ## <a name="feature-description"></a>Description de la fonctionnalité
 Windows PowerShell ISE est une application hôte qui permet d’écrire, d’exécuter et de tester des scripts et des modules dans un environnement graphique et intuitif. Ses fonctionnalités clés, telles que la coloration de syntaxe, la saisie automatique par tabulation, le débogage visuel, la compatibilité avec Unicode et l’aide contextuelle, fournissent une riche expérience d’écriture de scripts.
 
-Pour obtenir une vue d’ensemble de Windows PowerShell ISE, consultez [Vue d’ensemble de l’environnement d’écriture de scripts intégré de Windows PowerShell](https://technet.microsoft.com/en-us/library/3c1892c2-bf84-4cb6-af26-1f453be9e671).
+Pour obtenir une vue d’ensemble de Windows PowerShell ISE, consultez [Vue d’ensemble de l’environnement d’écriture de scripts intégré de Windows PowerShell](https://technet.microsoft.com/library/3c1892c2-bf84-4cb6-af26-1f453be9e671).
 
 ## <a name="new-and-changed-functionality-in-windows-powershell-ise"></a>Fonctionnalités nouvelles et modifiées dans Windows PowerShell ISE
 Le tableau suivant répertorie les fonctionnalités nouvelles et modifiées pour cette version de Windows PowerShell ISE dans Windows PowerShell.
@@ -222,7 +222,7 @@ L’applet de commande Show-Command est une nouveauté dans Windows PowerShell I
 ## <a name="see-also"></a>Voir aussi
 Pour plus d’informations sur l’utilisation de Windows PowerShell ISE dans Windows PowerShell, consultez les liens suivants.
 
-- [Utilisation de l’environnement d’écriture de scripts intégré de Windows PowerShell](../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
+- [Exploration de l’environnement d’écriture de scripts intégré de Windows PowerShell](../getting-started/fundamental/exploring-the-windows-powershell-ise.md)
 - [ISE sur le Wiki TechNet](http://social.technet.microsoft.com/wiki/search/searchresults.aspx?q=ISE)
 - [Centre de scripts](http://technet.microsoft.com/scriptcenter/default)
 

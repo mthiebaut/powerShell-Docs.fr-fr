@@ -2,13 +2,13 @@
 ms.date: 2017-06-12
 contributor: JKeithB
 ms.topic: conceptual
-keywords: gallery,powershell,cmdlet,psgallery
+keywords: gallery,powershell,applet de commande,psgallery
 title: psgallery_gettingstarted
-ms.openlocfilehash: d13c23cd6f9cce433cd3fe1ad5f2d00e3ef0527c
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: 2117712b0081db4a21f8480b458a499ed84dc512
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="get-started-with-the-powershell-gallery"></a>Prendre en main PowerShell Gallery
 
@@ -40,7 +40,7 @@ Si vous avez une version antérieure à 2.8.5.201 de NuGet, vous devez appeler l
 2.  `Import-PackageProvider NuGet -MinimumVersion '2.8.5.201' -Force`
 3.  Supprimez l’ancienne version de NuGet à partir de l’emplacement d’installation ci-dessus.
 
-Pour plus d’informations, voir <http://oneget.org/>.
+Pour plus d’informations, consultez <http://oneget.org/>.
 
   
 Remarque : En raison de modifications apportées aux formats des packages, nous vous recommandons d’effectuer la mise à jour vers la dernière version de PowerShellGet et PackageManagement pour installer les éléments qui ont été récemment mis à jour. PowerShellGet est inclus dans Windows 10, au sujet duquel vous pouvez en savoir plus [ici](http://go.microsoft.com/fwlink/?LinkID=624830&clcid=0x409).
@@ -52,7 +52,7 @@ Vous pouvez rechercher des éléments dans PowerShell Gallery à l’aide du con
 
 Le filtrage des résultats de PowerShell Gallery est possible en utilisant les paramètres suivants de [Find-Module](https://go.microsoft.com/fwlink/?LinkId=821658) et [Find-Script](https://go.microsoft.com/fwlink/?LinkId=822322)
 
-- Nom
+- Name
 - AllVersions
 - MinimumVersion
 - RequiredVersion
@@ -103,7 +103,7 @@ Par défaut, [Install-Module](https://go.microsoft.com/fwlink/?LinkId=821663) et
 
 Pour déployer un élément de PowerShell Gallery sur Azure Automation, cliquez sur **Déployer sur Azure Automation** dans la page de détails de l’élément. Vous êtes redirigé vers le portail de gestion Azure où vous vous connectez à l’aide des informations d’identification de compte Azure. Notez que le déploiement d’éléments avec des dépendances va déployer toutes les dépendances sur Azure Automation. Le bouton « Déployer sur Azure Automation » peut être désactivé en ajoutant la balise **AzureAutomationNotSupported** aux métadonnées de l’élément.
 
-Pour en savoir plus sur Azure Automation, voir le [site web Azure Automation](http://azure.microsoft.com/en-us/services/automation/).
+Pour en savoir plus sur Azure Automation, voir le [site web Azure Automation](http://azure.microsoft.com/services/automation/).
 
 ## <a name="updating-items-from-the-powershell-gallery"></a>Mise à jour d’éléments de PowerShell Gallery
 

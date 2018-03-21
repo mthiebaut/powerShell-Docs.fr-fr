@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,applet de commande
 title: "Comment écrire et exécuter des scripts dans Windows PowerShell ISE"
 ms.assetid: 62f916d9-b3a1-484a-bdfb-41f57112c22b
-ms.openlocfilehash: dd3055df8c84195f0145b1a058f1d17c9c382f33
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 77d8ae81cb03f03b3b5d044e6503bbb23cb5b771
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="how-to-write-and-run-scripts-in-the-windows-powershell-ise"></a>Comment écrire et exécuter des scripts dans Windows PowerShell ISE
 Cette rubrique décrit comment créer, modifier, exécuter et enregistrer des scripts dans le volet Script.
@@ -16,7 +16,7 @@ Cette rubrique décrit comment créer, modifier, exécuter et enregistrer des sc
 Vous pouvez ouvrir et modifier des fichiers Windows PowerShell dans le volet Script. Les types de fichiers spécifiques intéressants dans Windows PowerShell sont les fichiers de script (.ps1), les fichiers de données de script (.psd1) et les fichiers de module de script (.psm1). Ces types de fichiers font l’objet d’une coloration de la syntaxe dans l’éditeur du volet Script. D’autres types de fichiers courants que vous pouvez ouvrir dans le volet Script sont les fichiers de configuration (.ps1xml), les fichiers XML et les fichiers texte.
 
 > [!NOTE]
-> La stratégie d’exécution de Windows PowerShell détermine si vous pouvez exécuter des scripts et charger des fichiers de configuration et des profils Windows PowerShell. La stratégie d’exécution par défaut, restreinte, empêche l’exécution de tous les scripts et le chargement de profils. Pour savoir comment modifier la stratégie d’exécution afin d’autoriser le chargement et l’utilisation de profils, voir [Set-ExecutionPolicy[PSITPro5_Security]](https://technet.microsoft.com/en-us/library/5690a0e1-495b-4e63-8280-65ead7bf01ab) et [about_Signing [v4]](https://technet.microsoft.com/en-us/library/fcbdd3b9-0b9f-4734-b5c7-e0dcc304fa1d).
+> La stratégie d’exécution de Windows PowerShell détermine si vous pouvez exécuter des scripts et charger des fichiers de configuration et des profils Windows PowerShell. La stratégie d’exécution par défaut, restreinte, empêche l’exécution de tous les scripts et le chargement de profils. Pour savoir comment modifier la stratégie d’exécution afin d’autoriser le chargement et l’utilisation de profils, voir [Set-ExecutionPolicy[PSITPro5_Security]](https://technet.microsoft.com/library/5690a0e1-495b-4e63-8280-65ead7bf01ab) et [about_Signing [v4]](https://technet.microsoft.com/library/fcbdd3b9-0b9f-4734-b5c7-e0dcc304fa1d).
 
 ### <a name="to-create-a-new-script-file"></a>Pour créer un fichier de script
 Dans la barre d’outils, cliquez sur **Nouveau** ou, dans le menu **Fichier**, cliquez sur **Nouveau**. Le fichier créé s’affiche dans un nouvel onglet de fichier sous l’onglet PowerShell actif. N’oubliez pas que les onglets PowerShell sont visibles uniquement quand il y en a plusieurs. Par défaut, un fichier de script type (.ps1) est créé, mais il peut être enregistré avec un nouveau nom et une nouvelle extension. Plusieurs fichiers de script peuvent être créés sous le même onglet PowerShell.
@@ -109,7 +109,7 @@ Appuyez sur **Ctrl+S** ou, dans la barre d’outils, cliquez sur l’icône **En
 
 2. Dans le champ **Nom de fichier**, entrez un nom pour le fichier.
 
-3. Dans le champ **Type de fichier**, sélectionnez un type de fichier. Par exemple, dans le champ **Type de fichier**, sélectionnez « Scripts PowerShell (\* .ps1) ».
+3. Dans le champ **Type de fichier**, sélectionnez un type de fichier. Par exemple, dans la zone **Type de fichier**, sélectionnez « Scripts PowerShell (\* .ps1) ».
 
 4. Cliquez sur **Enregistrer**.
 
@@ -139,5 +139,4 @@ Windows PowerShell ISE prend en charge les options d’encodage suivantes : ASC
 Windows PowerShell ISE ne modifie pas l’encodage des scripts qui ont été créés par d’autres éditeurs, même si vous utilisez les commandes Save ou Save As dans Windows PowerShell ISE.
 
 ## <a name="see-also"></a>Voir aussi
-- [Utilisation de Windows PowerShell ISE](Using-the-Windows-PowerShell-ISE.md)
-
+- [Exploration de Windows PowerShell ISE](../../getting-started/fundamental/exploring-the-windows-powershell-ise.md)

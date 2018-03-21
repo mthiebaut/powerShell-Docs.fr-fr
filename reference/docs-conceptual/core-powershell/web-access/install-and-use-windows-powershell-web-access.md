@@ -2,11 +2,11 @@
 ms.date: 2017-08-23
 keywords: powershell,applet de commande
 title: "installer et utiliser Accès Web Windows PowerShell"
-ms.openlocfilehash: 63e25fa2b1fc7c0a2b57763e337c25ece17a3296
-ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
+ms.openlocfilehash: 2ad7a701dbb464088d6ed47d49a8dc3fb9b911f8
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="install-and-use-windows-powershell-web-access"></a>Installer et utiliser Accès Web Windows PowerShell
 
@@ -29,7 +29,7 @@ L’installation et la configuration d’Accès Web Windows PowerShell forment u
 1. [Configurer une règle d’autorisation restrictive](#configure-a-restrictive-authorization-rule)
 
 Avant d’installer et de configurer Accès Web Windows PowerShell, nous vous recommandons de lire ce guide dans son intégralité, qui inclut des instructions sur la façon d’installer, de sécuriser et de désinstaller cette fonctionnalité.
-La rubrique [Utiliser la console web Windows PowerShell](https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx) décrit comment les utilisateurs se connectent à la console web, et couvre les limitations et les différences entre la console Windows PowerShell basée sur le web et la console **powershell.exe**. Les utilisateurs finaux de la console web doivent lire la rubrique [Utiliser la console web Windows PowerShell](use-the-web-based-windows-powershell-console.md), mais il n’est pas nécessaire qu’ils lisent le reste de ce guide.
+La rubrique [Utiliser la console web Windows PowerShell](https://technet.microsoft.com/library/hh831417(v=ws.11).aspx) décrit comment les utilisateurs se connectent à la console web, et couvre les limitations et les différences entre la console Windows PowerShell basée sur le web et la console **powershell.exe**. Les utilisateurs finaux de la console web doivent lire la rubrique [Utiliser la console web Windows PowerShell](use-the-web-based-windows-powershell-console.md), mais il n’est pas nécessaire qu’ils lisent le reste de ce guide.
 
 Cette rubrique ne fournit pas d’instructions détaillées sur les opérations du serveur Web IIS : elle décrit seulement les étapes nécessaires pour configurer la passerelle Accès Web Windows PowerShell. Pour plus d’informations sur la configuration et la sécurisation des sites web dans IIS, voir les ressources de documentation IIS dans la section Voir aussi.
 
@@ -212,7 +212,7 @@ Pour plus de détails sur les règles d’autorisation et la sécurité d’Acc�
 
     - Dans l’écran d’**accueil** de Windows, cliquez avec le bouton droit sur **Windows PowerShell**, puis cliquez sur **Exécuter en tant qu’administrateur**.
 
-2. Étape facultative pour restreindre l’accès utilisateur à l’aide de configurations de session : vérifiez que les configurations de session que vous voulez utiliser dans vos règles existent déjà. Si elles n’ont pas encore été créées, utilisez les instructions relatives à la création de configurations de session dans [About Session Configuration Files](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_session_configurations).
+2. Étape facultative pour restreindre l’accès utilisateur à l’aide de configurations de session : vérifiez que les configurations de session que vous voulez utiliser dans vos règles existent déjà. Si elles n’ont pas encore été créées, utilisez les instructions relatives à la création de configurations de session dans [About Session Configuration Files](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_session_configurations).
 
 3. Tapez ce qui suit, puis appuyez sur **Entrée**.
 
@@ -384,7 +384,7 @@ Pour plus de détails sur les règles d’autorisation et la sécurité d’Acc�
 
 2. ![Remarque sur la sécurité](images/SecurityNote.jpeg) Étape facultative pour restreindre l’accès utilisateur à l’aide de configurations de session :
 
-    Vérifiez que les configurations de session que vous souhaitez utiliser dans vos règles existent déjà. Si elles n’ont pas encore été créées, utilisez les instructions relatives à la création de configurations de session dans [About Session Configuration Files](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_session_configurations).
+    Vérifiez que les configurations de session que vous souhaitez utiliser dans vos règles existent déjà. Si elles n’ont pas encore été créées, utilisez les instructions relatives à la création de configurations de session dans [About Session Configuration Files](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_session_configurations).
 
 3. Tapez ce qui suit, puis appuyez sur **Entrée**.
 
@@ -418,7 +418,7 @@ Pour un environnement de production sécurisé, utilisez toujours un certificat 
 
     - Cliquez sur **Créer une demande de certificat** pour demander un certificat auprès d’une autorité de certification comme [VeriSign](http://www.verisign.com/), [Thawte](https://www.thawte.com/) ou [GeoTrust](https://www.geotrust.com/). Le nom courant du certificat doit correspondre à l’en-tête d’hôte dans la demande.
 
-      Par exemple, si le navigateur client demande http://www.contoso.com/, le nom courant doit également être http://www.contoso.com/. Il s’agit de l’option recommandée la plus sécurisée pour fournir un certificat à la passerelle Accès Web Windows PowerShell.
+      Par exemple, si le navigateur client demande http://www.contoso.com/, le nom commun doit également être http://www.contoso.com/. Il s’agit de l’option recommandée la plus sécurisée pour fournir un certificat à la passerelle Accès Web Windows PowerShell.
 
     - Cliquez sur **Créer un certificat auto-signé** pour créer un certificat que vous pouvez utiliser immédiatement, puis faire signer ultérieurement par une autorité de certification si besoin. Spécifiez un nom convivial pour le certificat auto-signé, comme **Accès Web Windows PowerShell**. Cette option est considérée comme non sécurisée et recommandée uniquement dans un environnement de test privé.
 

@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,configuration
-ms.openlocfilehash: f39328b240a36deb40d484c4aedb889cee91dc8d
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: ad1d19eeb70a19cd3d1493b9a09b115af755feb4
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="desired-state-configuration-dsc-known-issues-and-limitations"></a>Problèmes connus liés à la Configuration d’état souhaité (DSC)
 
@@ -16,7 +16,7 @@ ms.lasthandoff: 06/12/2017
 
 Dans les versions WMF 4.0 et WMF 5.0 Preview, DSC n’autorisait pas les mots de passe de plus de 121 caractères dans la configuration. DSC forçait l’utilisation de mots de passe courts même si des mots de passe forts et longs étaient souhaités. Cette modification avec rupture autorise les mots de passe de longueur arbitraire dans la configuration DSC.
 
-**Résolution :** Recréez le certificat avec l’attribut Data Encipherment ou Key Encipherment Key Usage, et avec l’attribut Document Encryption Enhanced Key Usage (1.3.6.1.4.1.311.80.1). L’article TechNet <https://technet.microsoft.com/en-us/library/dn807171.aspx> contient des informations supplémentaires.
+**Résolution :** Recréez le certificat avec l’attribut Data Encipherment ou Key Encipherment Key Usage, et avec l’attribut Document Encryption Enhanced Key Usage (1.3.6.1.4.1.311.80.1). L’article TechNet <https://technet.microsoft.com/library/dn807171.aspx> contient des informations supplémentaires.
 
 
 <a name="dsc-cmdlets-may-fail-after-installing-wmf-50-rtm"></a>Les applets de commande DSC peuvent échouer après l’installation de WMF 5.0 RTM

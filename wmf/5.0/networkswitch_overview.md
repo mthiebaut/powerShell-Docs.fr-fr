@@ -2,12 +2,12 @@
 ms.date: 2017-06-12
 author: JKeithB
 ms.topic: reference
-keywords: wmf,powershell,setup
-ms.openlocfilehash: 80852bf750700d549de24e150ffd89ac55b7bf88
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+keywords: wmf,powershell,configuration
+ms.openlocfilehash: 4868cf657f678ee43a6c92d5ee286e9ddb490964
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="network-switch-management-with-powershell"></a>Gestion du commutateur réseau avec PowerShell
 
@@ -20,7 +20,7 @@ L’applet de commande **Get-NetworkSwitchEthernetPort** retourne les informatio
 
 ## <a name="fundamental-network-switch-management-with-windows-powershell"></a>Gestion fondamentale du commutateur réseau avec Windows PowerShell
 
-Les applets de commande du commutateur réseau, introduites dans WMF 5.0, permettent d’appliquer une configuration de port de commutateur réseau local virtuel (VLAN) et de commutateur réseau de base de couche 2 à des commutateurs réseau certifiés par logo Windows Server 2012 R2. Microsoft s’engage à prendre en charge la vision DAL ([Datacenter Abstraction](http://technet.microsoft.com/en-us/cloud/dal.aspx) Layer) et à démontrer la valeur à nos clients et partenaires dans cet espace. Ces applets de commande vous permettent d’effectuer les opérations suivantes :
+Les applets de commande du commutateur réseau, introduites dans WMF 5.0, permettent d’appliquer une configuration de port de commutateur réseau local virtuel (VLAN) et de commutateur réseau de base de couche 2 à des commutateurs réseau certifiés par logo Windows Server 2012 R2. Microsoft s’engage à prendre en charge la vision DAL ([Datacenter Abstraction](http://technet.microsoft.com/cloud/dal.aspx) Layer) et à démontrer la valeur à nos clients et partenaires dans cet espace. Ces applets de commande vous permettent d’effectuer les opérations suivantes :
 
 - Configuration globale du commutateur, par exemple :
     - Définir le nom d’hôte
@@ -69,5 +69,5 @@ PS> Get-Command *-NetworkSwitch*
 | Function    | Set-NetworkSwitchVlanProperty             | NetworkSwitch |
 ```
 
-Vous trouverez des informations supplémentaires dans le billet de blog de Jeffrey Snover sur WMF 5.0 Preview : <http://blogs.technet.com/b/windowsserver/archive/2014/04/03/windows-management-framework-v5-preview.aspx>
+Vous trouverez des informations supplémentaires dans le billet de blog de Jeffrey Snover sur WMF 5.0 Preview : <http://blogs.technet.com/b/windowsserver/archive/2014/04/03/windows-management-framework-v5-preview.aspx>
 

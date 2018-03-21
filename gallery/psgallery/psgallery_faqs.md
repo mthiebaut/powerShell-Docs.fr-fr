@@ -2,13 +2,13 @@
 ms.date: 2017-06-12
 contributor: JKeithB
 ms.topic: conceptual
-keywords: gallery,powershell,cmdlet,psgallery
+keywords: gallery,powershell,applet de commande,psgallery
 title: psgallery_faqs
-ms.openlocfilehash: 80aaaa5e50e1bd85b93df721a4859e3020d1f315
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: b856c44f3733d4a7c236d901edb391091d9d546e
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="frequently-asked-questions"></a>Forum Aux Questions
 
@@ -18,7 +18,7 @@ Un module PowerShell est un package réutilisable contenant des fonctionnalités
 
 ## <a name="what-is-a-powershell-script"></a>Qu’est-ce qu’un script PowerShell ?
 
-Un script PowerShell est une série de commandes qui sont stockées dans un fichier .ps1 pour permettre la réutilisation et le partage. Les workflows PowerShell sont également des scripts PowerShell, qui présentent une série de tâches et donnent le séquencement de ces tâches. Pour plus d’informations, visitez le site [Présentation du workflow Windows PowerShell](https://technet.microsoft.com/en-us/library/jj134242.aspx).
+Un script PowerShell est une série de commandes qui sont stockées dans un fichier .ps1 pour permettre la réutilisation et le partage. Les workflows PowerShell sont également des scripts PowerShell, qui présentent une série de tâches et donnent le séquencement de ces tâches. Pour plus d’informations, visitez le site [Présentation du workflow Windows PowerShell](https://technet.microsoft.com/library/jj134242.aspx).
 
 ## <a name="how-are-powershell-scripts-different-from-powershell-modules"></a>En quoi les scripts PowerShell sont-ils différents des modules PowerShell ?
 
@@ -39,7 +39,7 @@ Une fois que vous êtes inscrit dans PowerShell Gallery, utilisez les applets de
 
 Cette erreur peut se produire pour les raisons suivantes :
 
-- **La clé API spécifiée n’est pas valide.**
+- **La clé d’API spécifiée n’est pas valide.**
      Vérifiez que vous avez spécifié la clé API valide à partir de votre compte. Pour obtenir votre clé API, examinez la page de votre profil.
 - **Le nom de l’élément spécifié ne vous appartient pas.**
      Si vous avez vérifié que votre clé API est correcte, il existe peut-être déjà un élément portant le même nom que celui que vous essayez d’utiliser. L’élément peut avoir été retiré de la liste par le propriétaire, auquel cas il n’apparaît dans aucun résultat de recherche. Pour déterminer si un élément portant le même nom existe déjà, ouvrez un navigateur et accédez à la page de détails de l’élément : `https://www.powershellgallery.com/packages/<itemName>`. Par exemple, un accès direct à `https://www.powershellgallery.com/packages/pester` vous dirige vers la page de détails du module Pester, qu’il soit répertorié ou non. Si un élément avec un nom en conflit existe déjà et n’est pas répertorié, vous pouvez :
@@ -48,7 +48,7 @@ Cette erreur peut se produire pour les raisons suivantes :
 
 ## <a name="why-cant-i-sign-in-with-my-personal-account-but-i-could-sign-in-yesterday"></a>Pourquoi ne puis-je pas me connecter avec mon compte personnel, alors que cela était possible hier ?
 
-Gardez à l’esprit que votre compte de galerie n’intègre pas les modifications apportées à votre alias d’e-mail principal. Pour plus d’informations, voir [Gérer les alias liés à votre compte Microsoft](https://windows.microsoft.com/en-us/windows/outlook/add-alias-account).
+Gardez à l’esprit que votre compte de galerie n’intègre pas les modifications apportées à votre alias d’e-mail principal. Pour plus d’informations, voir [Gérer les alias liés à votre compte Microsoft](https://windows.microsoft.com/windows/outlook/add-alias-account).
 
 ## <a name="why-dont-i-see-all-the-gallery-items-when-i-select-all-the-category-checkboxes-on-the-items-tab"></a>Pourquoi ne puis-je pas afficher tous les éléments de la galerie quand je coche toutes les cases de catégorie sous l’onglet Éléments ?
 
@@ -156,7 +156,7 @@ Par conséquent, **PowerShellGet** nécessite l’un des systèmes d’exploitat
 - Windows Server 2012 R2
 - Windows Server 2008 R2 SP1
 
-**PowerShellGet** nécessite également .NET Framework 4.5 ou ultérieur. Vous pouvez installer .NET Framework 4.5 ou ultérieur à partir [d’ici](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx).
+**PowerShellGet** nécessite également .NET Framework 4.5 ou ultérieur. Vous pouvez installer .NET Framework 4.5 ou ultérieur à partir [d’ici](https://msdn.microsoft.com/library/5a4x27ek.aspx).
 
 ## <a name="is-it-possible-to-reserve-names-for-items-that-will-be-published-in-future"></a>Est-il possible de réserver les noms des éléments qui doivent être publiés à l’avenir ?
 

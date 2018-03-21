@@ -3,17 +3,17 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: "Configuration d’un serveur collecteur SMB DSC"
-ms.openlocfilehash: 427dc8d858bd12e420fbde03b33a66f33cd654dc
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: ff3faeb1952e6116cf97b1aaf8f125d8931dd35e
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="setting-up-a-dsc-smb-pull-server"></a>Configuration d’un serveur collecteur SMB DSC
 
 >S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Un serveur collecteur [SMB](https://technet.microsoft.com/en-us/library/hh831795.aspx) DSC est un ordinateur qui héberge des partages de fichiers SMB qui fournissent des fichiers de configuration DSC et des ressources DSC aux nœuds cibles quand ces derniers les demandent.
+Un serveur collecteur [SMB](https://technet.microsoft.com/library/hh831795.aspx) DSC est un ordinateur qui héberge des partages de fichiers SMB qui fournissent des fichiers de configuration DSC et des ressources DSC aux nœuds cibles quand ces derniers les demandent.
 
 Pour utiliser un serveur collecteur SMB pour DSC, vous devez effectuer les étapes suivantes :
 - Configurer un partage de fichiers SMB sur un serveur qui exécute PowerShell 4.0 ou version ultérieure
@@ -25,7 +25,7 @@ Il existe plusieurs façons de configurer un partage de fichiers SMB, mais nous 
 
 ### <a name="install-the-xsmbshare-resource"></a>Installer la ressource xSmbShare
 
-Appelez l’applet de commande [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) pour installer le module **xSmbShare**.
+Appelez l’applet de commande [Install-Module](https://technet.microsoft.com/library/dn807162.aspx) pour installer le module **xSmbShare**.
 >**Remarque** : **Install-Module** est inclus dans le module **PowerShellGet** de PowerShell 5.0. Vous pouvez télécharger le module **PowerShellGet** pour PowerShell 3.0 et 4.0 ici : [PackageManagement PowerShell Modules Preview](https://www.microsoft.com/en-us/download/details.aspx?id=49186). **xSmbShare** contient la ressource DSC **xSmbShare** qui peut être utilisée pour créer un partage de fichiers SMB.
 
 ### <a name="create-the-directory-and-file-share"></a>Créer le répertoire et le partage de fichiers
@@ -208,7 +208,7 @@ $ConfigurationData = @{
 Un remerciement particulier aux personnes suivantes :
 
 - Mike F. Robbins, dont les billets sur l’utilisation de SMB pour DSC ont permis de documenter le contenu de cette rubrique. Son blog : [Mike F Robbins](http://mikefrobbins.com/).
-- Serge Nikalaichyk, qui a créé le module **cNtfsAccessControl**. La source de ce module est à l’adresse https://github.com/SNikalaichyk/cNtfsAccessControl.
+- Serge Nikalaichyk, qui a créé le module **cNtfsAccessControl**. La source de ce module se trouve ici : https://github.com/SNikalaichyk/cNtfsAccessControl.
 
 ## <a name="see-also"></a>Voir aussi
 - [Vue d’ensemble de la fonctionnalité Desired State Configuration de Windows PowerShell](overview.md)
