@@ -1,10 +1,10 @@
-# <a name="installing-powershell-core-on-macos-and-linux"></a><span data-ttu-id="b35d7-101">Installation de PowerShell Core sous macOS et Linux</span><span class="sxs-lookup"><span data-stu-id="b35d7-101">Installing PowerShell Core on macOS and Linux</span></span>
+# <a name="installing-powershell-core-on-macos-and-linux"></a><span data-ttu-id="c750f-101">Installation de PowerShell Core sous macOS et Linux</span><span class="sxs-lookup"><span data-stu-id="c750f-101">Installing PowerShell Core on macOS and Linux</span></span>
 
-<span data-ttu-id="b35d7-102">Prend en charge [Ubuntu 14.04][u14], [Ubuntu 16.04][u16], [Ubuntu 17.04][u17], [Debian 8][deb8], [Debian 9][deb9], [CentOS 7][cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [OpenSUSE 42.2][opensuse], [Fedora 25][fed25], [Fedora 26][fed26], [Arch Linux][arch] et [macOS 10.12][mac].</span><span class="sxs-lookup"><span data-stu-id="b35d7-102">Supports [Ubuntu 14.04][u14], [Ubuntu 16.04][u16], [Ubuntu 17.04][u17], [Debian 8][deb8], [Debian 9][deb9], [CentOS 7][cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [OpenSUSE 42.2][opensuse], [Fedora 25][fed25], [Fedora 26][fed26], [Arch Linux][arch], and [macOS 10.12][mac].</span></span>
+<span data-ttu-id="c750f-102">Prend en charge [Ubuntu 14.04][u14], [Ubuntu 16.04][u16], [Ubuntu 17.04][u17], [Debian 8][deb8], [Debian 9][deb9], [CentOS 7][cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [OpenSUSE 42.2][opensuse], [Fedora 25][fed25], [Fedora 26][fed26], [Arch Linux][arch] et [macOS 10.12][mac].</span><span class="sxs-lookup"><span data-stu-id="c750f-102">Supports [Ubuntu 14.04][u14], [Ubuntu 16.04][u16], [Ubuntu 17.04][u17], [Debian 8][deb8], [Debian 9][deb9], [CentOS 7][cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [OpenSUSE 42.2][opensuse], [Fedora 25][fed25], [Fedora 26][fed26], [Arch Linux][arch], and [macOS 10.12][mac].</span></span>
 
-<span data-ttu-id="b35d7-103">Pour les distributions Linux qui ne sont pas officiellement prises en charge, vous pouvez essayer d’utiliser [AppImage PowerShell][lai].</span><span class="sxs-lookup"><span data-stu-id="b35d7-103">For Linux distributions that are not officially supported, you can try using the [PowerShell AppImage][lai].</span></span> <span data-ttu-id="b35d7-104">Vous pouvez également essayer de déployer des fichiers binaires PowerShell directement à l’aide de [l’archive `tar.gz`][tar] Linux, mais vous devez configurer les dépendances nécessaires selon le système d’exploitation dans une procédure distincte.</span><span class="sxs-lookup"><span data-stu-id="b35d7-104">You can also try deploying PowerShell binaries directly using the Linux [`tar.gz` archive][tar], but you would need to set up the necessary dependencies based on the OS in separate steps.</span></span>
+<span data-ttu-id="c750f-103">Pour les distributions Linux qui ne sont pas officiellement prises en charge, vous pouvez essayer d’utiliser [AppImage PowerShell][lai].</span><span class="sxs-lookup"><span data-stu-id="c750f-103">For Linux distributions that are not officially supported, you can try using the [PowerShell AppImage][lai].</span></span> <span data-ttu-id="c750f-104">Vous pouvez également essayer de déployer des fichiers binaires PowerShell directement à l’aide de [l’archive `tar.gz`][tar] Linux, mais vous devez configurer les dépendances nécessaires selon le système d’exploitation dans une procédure distincte.</span><span class="sxs-lookup"><span data-stu-id="c750f-104">You can also try deploying PowerShell binaries directly using the Linux [`tar.gz` archive][tar], but you would need to set up the necessary dependencies based on the OS in separate steps.</span></span>
 
-<span data-ttu-id="b35d7-105">Tous les packages sont disponibles dans notre page de [versions][] GitHub.</span><span class="sxs-lookup"><span data-stu-id="b35d7-105">All packages are available on our GitHub [releases][] page.</span></span> <span data-ttu-id="b35d7-106">Une fois que le package est installé, exécutez `pwsh` à partir d’un terminal.</span><span class="sxs-lookup"><span data-stu-id="b35d7-106">Once the package is installed, run `pwsh` from a terminal.</span></span>
+<span data-ttu-id="c750f-105">Tous les packages sont disponibles dans notre page de [versions][] GitHub.</span><span class="sxs-lookup"><span data-stu-id="c750f-105">All packages are available on our GitHub [releases][] page.</span></span> <span data-ttu-id="c750f-106">Une fois que le package est installé, exécutez `pwsh` à partir d’un terminal.</span><span class="sxs-lookup"><span data-stu-id="c750f-106">Once the package is installed, run `pwsh` from a terminal.</span></span>
 
 [u14]: #ubuntu-1404
 [u16]: #ubuntu-1604
@@ -21,11 +21,11 @@
 [mac]: #macos-1012
 [tar]: #binary-archives
 
-## <a name="ubuntu-1404"></a><span data-ttu-id="b35d7-107">Ubuntu 14.04</span><span class="sxs-lookup"><span data-stu-id="b35d7-107">Ubuntu 14.04</span></span>
+## <a name="ubuntu-1404"></a><span data-ttu-id="c750f-107">Ubuntu 14.04</span><span class="sxs-lookup"><span data-stu-id="c750f-107">Ubuntu 14.04</span></span>
 
-### <a name="installation-via-package-repository---ubuntu-1404"></a><span data-ttu-id="b35d7-108">Installation via un dépôt de packages - Ubuntu 14.04</span><span class="sxs-lookup"><span data-stu-id="b35d7-108">Installation via Package Repository - Ubuntu 14.04</span></span>
+### <a name="installation-via-package-repository---ubuntu-1404"></a><span data-ttu-id="c750f-108">Installation via un dépôt de packages - Ubuntu 14.04</span><span class="sxs-lookup"><span data-stu-id="c750f-108">Installation via Package Repository - Ubuntu 14.04</span></span>
 
-<span data-ttu-id="b35d7-109">PowerShell Core pour Linux est publié dans des dépôts de packages pour faciliter l’installation (et les mises à jour).</span><span class="sxs-lookup"><span data-stu-id="b35d7-109">PowerShell Core, for Linux, is published to package repositories for easy installation (and updates).</span></span> <span data-ttu-id="b35d7-110">Il s’agit de la méthode recommandée.</span><span class="sxs-lookup"><span data-stu-id="b35d7-110">This is the preferred method.</span></span>
+<span data-ttu-id="c750f-109">PowerShell Core pour Linux est publié dans des dépôts de packages pour faciliter l’installation (et les mises à jour).</span><span class="sxs-lookup"><span data-stu-id="c750f-109">PowerShell Core, for Linux, is published to package repositories for easy installation (and updates).</span></span> <span data-ttu-id="c750f-110">Il s’agit de la méthode recommandée.</span><span class="sxs-lookup"><span data-stu-id="c750f-110">This is the preferred method.</span></span>
 
 ```sh
 # Import the public repository GPG keys
@@ -44,37 +44,37 @@ sudo apt-get install -y powershell
 pwsh
 ```
 
-<span data-ttu-id="b35d7-111">Après avoir inscrit le dépôt Microsoft une fois en tant que superutilisateur, vous devez par la suite simplement utiliser `sudo apt-get upgrade powershell` pour le mettre à jour.</span><span class="sxs-lookup"><span data-stu-id="b35d7-111">After registering the Microsoft repository once as superuser, from then on, you just need to use `sudo apt-get upgrade powershell` to update it.</span></span>
+<span data-ttu-id="c750f-111">Après avoir inscrit le dépôt Microsoft une fois en tant que superutilisateur, vous devez par la suite simplement utiliser `sudo apt-get upgrade powershell` pour le mettre à jour.</span><span class="sxs-lookup"><span data-stu-id="c750f-111">After registering the Microsoft repository once as superuser, from then on, you just need to use `sudo apt-get upgrade powershell` to update it.</span></span>
 
-### <a name="installation-via-direct-download---ubuntu-1404"></a><span data-ttu-id="b35d7-112">Installation par téléchargement direct - Ubuntu 14.04</span><span class="sxs-lookup"><span data-stu-id="b35d7-112">Installation via Direct Download - Ubuntu 14.04</span></span>
+### <a name="installation-via-direct-download---ubuntu-1404"></a><span data-ttu-id="c750f-112">Installation par téléchargement direct - Ubuntu 14.04</span><span class="sxs-lookup"><span data-stu-id="c750f-112">Installation via Direct Download - Ubuntu 14.04</span></span>
 
-<span data-ttu-id="b35d7-113">Téléchargez le package Debian `powershell_6.0.0-1.ubuntu.14.04_amd64.deb` à partir de la page de [versions][] sur l’ordinateur Ubuntu.</span><span class="sxs-lookup"><span data-stu-id="b35d7-113">Download the Debian package `powershell_6.0.0-1.ubuntu.14.04_amd64.deb` from the [releases][] page onto the Ubuntu machine.</span></span>
+<span data-ttu-id="c750f-113">Téléchargez le package Debian `powershell_6.0.0-1.ubuntu.14.04_amd64.deb` à partir de la page de [versions][] sur l’ordinateur Ubuntu.</span><span class="sxs-lookup"><span data-stu-id="c750f-113">Download the Debian package `powershell_6.0.0-1.ubuntu.14.04_amd64.deb` from the [releases][] page onto the Ubuntu machine.</span></span>
 
 ```sh
 wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell_6.0.0-1.ubuntu.14.04_amd64.deb
 ```
 
-<span data-ttu-id="b35d7-114">Exécutez ensuite le code suivant dans le terminal :</span><span class="sxs-lookup"><span data-stu-id="b35d7-114">Then execute the following in the terminal:</span></span>
+<span data-ttu-id="c750f-114">Exécutez ensuite le code suivant dans le terminal :</span><span class="sxs-lookup"><span data-stu-id="c750f-114">Then execute the following in the terminal:</span></span>
 
 ```sh
 sudo dpkg -i powershell_6.0.0-1.ubuntu.14.04_amd64.deb
 sudo apt-get install -f
 ```
 
-> <span data-ttu-id="b35d7-115">Notez que `dpkg -i` échoue avec des dépendances non satisfaites ; la commande suivante, `apt-get install -f`, les résout et finalise la configuration du package PowerShell.</span><span class="sxs-lookup"><span data-stu-id="b35d7-115">Please note that `dpkg -i` will fail with unmet dependencies; the next command, `apt-get install -f` resolves these and then finishes configuring the PowerShell package.</span></span>
+> <span data-ttu-id="c750f-115">Notez que `dpkg -i` échoue avec des dépendances non satisfaites ; la commande suivante, `apt-get install -f`, les résout et finalise la configuration du package PowerShell.</span><span class="sxs-lookup"><span data-stu-id="c750f-115">Please note that `dpkg -i` will fail with unmet dependencies; the next command, `apt-get install -f` resolves these and then finishes configuring the PowerShell package.</span></span>
 
-### <a name="uninstallation---ubuntu-1404"></a><span data-ttu-id="b35d7-116">Désinstallation - Ubuntu 14.04</span><span class="sxs-lookup"><span data-stu-id="b35d7-116">Uninstallation - Ubuntu 14.04</span></span>
+### <a name="uninstallation---ubuntu-1404"></a><span data-ttu-id="c750f-116">Désinstallation - Ubuntu 14.04</span><span class="sxs-lookup"><span data-stu-id="c750f-116">Uninstallation - Ubuntu 14.04</span></span>
 
 ```sh
 sudo apt-get remove powershell
 ```
 
-## <a name="ubuntu-1604"></a><span data-ttu-id="b35d7-117">Ubuntu 16.04</span><span class="sxs-lookup"><span data-stu-id="b35d7-117">Ubuntu 16.04</span></span>
+## <a name="ubuntu-1604"></a><span data-ttu-id="c750f-117">Ubuntu 16.04</span><span class="sxs-lookup"><span data-stu-id="c750f-117">Ubuntu 16.04</span></span>
 
-### <a name="installation-via-package-repository---ubuntu-1604"></a><span data-ttu-id="b35d7-118">Installation via un dépôt de packages - Ubuntu 16.04</span><span class="sxs-lookup"><span data-stu-id="b35d7-118">Installation via Package Repository - Ubuntu 16.04</span></span>
+### <a name="installation-via-package-repository---ubuntu-1604"></a><span data-ttu-id="c750f-118">Installation via un dépôt de packages - Ubuntu 16.04</span><span class="sxs-lookup"><span data-stu-id="c750f-118">Installation via Package Repository - Ubuntu 16.04</span></span>
 
-<span data-ttu-id="b35d7-119">PowerShell Core pour Linux est publié dans des dépôts de packages pour faciliter l’installation (et les mises à jour).</span><span class="sxs-lookup"><span data-stu-id="b35d7-119">PowerShell Core, for Linux, is published to package repositories for easy installation (and updates).</span></span>
-<span data-ttu-id="b35d7-120">Il s’agit de la méthode recommandée.</span><span class="sxs-lookup"><span data-stu-id="b35d7-120">This is the preferred method.</span></span>
+<span data-ttu-id="c750f-119">PowerShell Core pour Linux est publié dans des dépôts de packages pour faciliter l’installation (et les mises à jour).</span><span class="sxs-lookup"><span data-stu-id="c750f-119">PowerShell Core, for Linux, is published to package repositories for easy installation (and updates).</span></span>
+<span data-ttu-id="c750f-120">Il s’agit de la méthode recommandée.</span><span class="sxs-lookup"><span data-stu-id="c750f-120">This is the preferred method.</span></span>
 
 ```sh
 # Import the public repository GPG keys
@@ -93,37 +93,37 @@ sudo apt-get install -y powershell
 pwsh
 ```
 
-<span data-ttu-id="b35d7-121">Après avoir inscrit le dépôt Microsoft une fois en tant que superutilisateur, vous devez par la suite simplement utiliser `sudo apt-get upgrade powershell` pour le mettre à jour.</span><span class="sxs-lookup"><span data-stu-id="b35d7-121">After registering the Microsoft repository once as superuser, from then on, you just need to use `sudo apt-get upgrade powershell` to update it.</span></span>
+<span data-ttu-id="c750f-121">Après avoir inscrit le dépôt Microsoft une fois en tant que superutilisateur, vous devez par la suite simplement utiliser `sudo apt-get upgrade powershell` pour le mettre à jour.</span><span class="sxs-lookup"><span data-stu-id="c750f-121">After registering the Microsoft repository once as superuser, from then on, you just need to use `sudo apt-get upgrade powershell` to update it.</span></span>
 
-### <a name="installation-via-direct-download---ubuntu-1604"></a><span data-ttu-id="b35d7-122">Installation par téléchargement direct - Ubuntu 16.04</span><span class="sxs-lookup"><span data-stu-id="b35d7-122">Installation via Direct Download - Ubuntu 16.04</span></span>
+### <a name="installation-via-direct-download---ubuntu-1604"></a><span data-ttu-id="c750f-122">Installation par téléchargement direct - Ubuntu 16.04</span><span class="sxs-lookup"><span data-stu-id="c750f-122">Installation via Direct Download - Ubuntu 16.04</span></span>
 
-<span data-ttu-id="b35d7-123">Téléchargez le package Debian `powershell_6.0.0-1.ubuntu.16.04_amd64.deb` à partir de la page de [versions][] sur l’ordinateur Ubuntu :</span><span class="sxs-lookup"><span data-stu-id="b35d7-123">Download the Debian package `powershell_6.0.0-1.ubuntu.16.04_amd64.deb` from the [releases][] page onto the Ubuntu machine:</span></span>
+<span data-ttu-id="c750f-123">Téléchargez le package Debian `powershell_6.0.0-1.ubuntu.16.04_amd64.deb` à partir de la page de [versions][] sur l’ordinateur Ubuntu :</span><span class="sxs-lookup"><span data-stu-id="c750f-123">Download the Debian package `powershell_6.0.0-1.ubuntu.16.04_amd64.deb` from the [releases][] page onto the Ubuntu machine:</span></span>
 
 ```sh
 wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell_6.0.0-1.ubuntu.16.04_amd64.deb
 ```
 
-<span data-ttu-id="b35d7-124">Exécutez ensuite le code suivant dans le terminal :</span><span class="sxs-lookup"><span data-stu-id="b35d7-124">Then execute the following in the terminal:</span></span>
+<span data-ttu-id="c750f-124">Exécutez ensuite le code suivant dans le terminal :</span><span class="sxs-lookup"><span data-stu-id="c750f-124">Then execute the following in the terminal:</span></span>
 
 ```sh
 sudo dpkg -i powershell_6.0.0-1.ubuntu.16.04_amd64.deb
 sudo apt-get install -f
 ```
 
-> <span data-ttu-id="b35d7-125">Notez que `dpkg -i` échoue avec des dépendances non satisfaites ; la commande suivante, `apt-get install -f`, les résout et finalise la configuration du package PowerShell.</span><span class="sxs-lookup"><span data-stu-id="b35d7-125">Please note that `dpkg -i` will fail with unmet dependencies; the next command, `apt-get install -f` resolves these and then finishes configuring the PowerShell package.</span></span>
+> <span data-ttu-id="c750f-125">Notez que `dpkg -i` échoue avec des dépendances non satisfaites ; la commande suivante, `apt-get install -f`, les résout et finalise la configuration du package PowerShell.</span><span class="sxs-lookup"><span data-stu-id="c750f-125">Please note that `dpkg -i` will fail with unmet dependencies; the next command, `apt-get install -f` resolves these and then finishes configuring the PowerShell package.</span></span>
 
-### <a name="uninstallation---ubuntu-1604"></a><span data-ttu-id="b35d7-126">Désinstallation - Ubuntu 16.04</span><span class="sxs-lookup"><span data-stu-id="b35d7-126">Uninstallation - Ubuntu 16.04</span></span>
+### <a name="uninstallation---ubuntu-1604"></a><span data-ttu-id="c750f-126">Désinstallation - Ubuntu 16.04</span><span class="sxs-lookup"><span data-stu-id="c750f-126">Uninstallation - Ubuntu 16.04</span></span>
 
 ```sh
 sudo apt-get remove powershell
 ```
 
-## <a name="ubuntu-1704"></a><span data-ttu-id="b35d7-127">Ubuntu 17.04</span><span class="sxs-lookup"><span data-stu-id="b35d7-127">Ubuntu 17.04</span></span>
+## <a name="ubuntu-1704"></a><span data-ttu-id="c750f-127">Ubuntu 17.04</span><span class="sxs-lookup"><span data-stu-id="c750f-127">Ubuntu 17.04</span></span>
 
-### <a name="installation-via-package-repository---ubuntu-1704"></a><span data-ttu-id="b35d7-128">Installation via un dépôt de packages - Ubuntu 17.04</span><span class="sxs-lookup"><span data-stu-id="b35d7-128">Installation via Package Repository - Ubuntu 17.04</span></span>
+### <a name="installation-via-package-repository---ubuntu-1704"></a><span data-ttu-id="c750f-128">Installation via un dépôt de packages - Ubuntu 17.04</span><span class="sxs-lookup"><span data-stu-id="c750f-128">Installation via Package Repository - Ubuntu 17.04</span></span>
 
-<span data-ttu-id="b35d7-129">PowerShell Core pour Linux est publié dans des dépôts de packages pour faciliter l’installation (et les mises à jour).</span><span class="sxs-lookup"><span data-stu-id="b35d7-129">PowerShell Core, for Linux, is published to package repositories for easy installation (and updates).</span></span>
-<span data-ttu-id="b35d7-130">Il s’agit de la méthode recommandée.</span><span class="sxs-lookup"><span data-stu-id="b35d7-130">This is the preferred method.</span></span>
+<span data-ttu-id="c750f-129">PowerShell Core pour Linux est publié dans des dépôts de packages pour faciliter l’installation (et les mises à jour).</span><span class="sxs-lookup"><span data-stu-id="c750f-129">PowerShell Core, for Linux, is published to package repositories for easy installation (and updates).</span></span>
+<span data-ttu-id="c750f-130">Il s’agit de la méthode recommandée.</span><span class="sxs-lookup"><span data-stu-id="c750f-130">This is the preferred method.</span></span>
 
 ```sh
 # Import the public repository GPG keys
@@ -142,37 +142,37 @@ sudo apt-get install -y powershell
 pwsh
 ```
 
-<span data-ttu-id="b35d7-131">Après avoir inscrit le dépôt Microsoft une fois en tant que superutilisateur, vous devez par la suite simplement utiliser `sudo apt-get upgrade powershell` pour le mettre à jour.</span><span class="sxs-lookup"><span data-stu-id="b35d7-131">After registering the Microsoft repository once as superuser, from then on, you just need to use `sudo apt-get upgrade powershell` to update it.</span></span>
+<span data-ttu-id="c750f-131">Après avoir inscrit le dépôt Microsoft une fois en tant que superutilisateur, vous devez par la suite simplement utiliser `sudo apt-get upgrade powershell` pour le mettre à jour.</span><span class="sxs-lookup"><span data-stu-id="c750f-131">After registering the Microsoft repository once as superuser, from then on, you just need to use `sudo apt-get upgrade powershell` to update it.</span></span>
 
-### <a name="installation-via-direct-download---ubuntu-1704"></a><span data-ttu-id="b35d7-132">Installation par téléchargement direct - Ubuntu 17.04</span><span class="sxs-lookup"><span data-stu-id="b35d7-132">Installation via Direct Download - Ubuntu 17.04</span></span>
+### <a name="installation-via-direct-download---ubuntu-1704"></a><span data-ttu-id="c750f-132">Installation par téléchargement direct - Ubuntu 17.04</span><span class="sxs-lookup"><span data-stu-id="c750f-132">Installation via Direct Download - Ubuntu 17.04</span></span>
 
-<span data-ttu-id="b35d7-133">Téléchargez le package Debian `powershell_6.0.0-1.ubuntu.17.04_amd64.deb` à partir de la page de [versions][] sur l’ordinateur Ubuntu :</span><span class="sxs-lookup"><span data-stu-id="b35d7-133">Download the Debian package `powershell_6.0.0-1.ubuntu.17.04_amd64.deb` from the [releases][] page onto the Ubuntu machine:</span></span>
+<span data-ttu-id="c750f-133">Téléchargez le package Debian `powershell_6.0.0-1.ubuntu.17.04_amd64.deb` à partir de la page de [versions][] sur l’ordinateur Ubuntu :</span><span class="sxs-lookup"><span data-stu-id="c750f-133">Download the Debian package `powershell_6.0.0-1.ubuntu.17.04_amd64.deb` from the [releases][] page onto the Ubuntu machine:</span></span>
 
 ```sh
 wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell_6.0.0-1.ubuntu.17.04_amd64.deb
 ```
 
-<span data-ttu-id="b35d7-134">Exécutez ensuite le code suivant dans le terminal :</span><span class="sxs-lookup"><span data-stu-id="b35d7-134">Then execute the following in the terminal:</span></span>
+<span data-ttu-id="c750f-134">Exécutez ensuite le code suivant dans le terminal :</span><span class="sxs-lookup"><span data-stu-id="c750f-134">Then execute the following in the terminal:</span></span>
 
 ```sh
 sudo dpkg -i powershell_6.0.0-1.ubuntu.17.04_amd64.deb
 sudo apt-get install -f
 ```
 
-> <span data-ttu-id="b35d7-135">Notez que `dpkg -i` échoue avec des dépendances non satisfaites ; la commande suivante, `apt-get install -f`, les résout et finalise la configuration du package PowerShell.</span><span class="sxs-lookup"><span data-stu-id="b35d7-135">Please note that `dpkg -i` will fail with unmet dependencies; the next command, `apt-get install -f` resolves these and then finishes configuring the PowerShell package.</span></span>
+> <span data-ttu-id="c750f-135">Notez que `dpkg -i` échoue avec des dépendances non satisfaites ; la commande suivante, `apt-get install -f`, les résout et finalise la configuration du package PowerShell.</span><span class="sxs-lookup"><span data-stu-id="c750f-135">Please note that `dpkg -i` will fail with unmet dependencies; the next command, `apt-get install -f` resolves these and then finishes configuring the PowerShell package.</span></span>
 
-### <a name="uninstallation---ubuntu-1704"></a><span data-ttu-id="b35d7-136">Désinstallation - Ubuntu 17.04</span><span class="sxs-lookup"><span data-stu-id="b35d7-136">Uninstallation - Ubuntu 17.04</span></span>
+### <a name="uninstallation---ubuntu-1704"></a><span data-ttu-id="c750f-136">Désinstallation - Ubuntu 17.04</span><span class="sxs-lookup"><span data-stu-id="c750f-136">Uninstallation - Ubuntu 17.04</span></span>
 
 ```sh
 sudo apt-get remove powershell
 ```
 
-## <a name="debian-8"></a><span data-ttu-id="b35d7-137">Debian 8</span><span class="sxs-lookup"><span data-stu-id="b35d7-137">Debian 8</span></span>
+## <a name="debian-8"></a><span data-ttu-id="c750f-137">Debian 8</span><span class="sxs-lookup"><span data-stu-id="c750f-137">Debian 8</span></span>
 
-### <a name="installation-via-package-repository---debian-8"></a><span data-ttu-id="b35d7-138">Installation via un dépôt de packages - Debian 8</span><span class="sxs-lookup"><span data-stu-id="b35d7-138">Installation via Package Repository - Debian 8</span></span>
+### <a name="installation-via-package-repository---debian-8"></a><span data-ttu-id="c750f-138">Installation via un dépôt de packages - Debian 8</span><span class="sxs-lookup"><span data-stu-id="c750f-138">Installation via Package Repository - Debian 8</span></span>
 
-<span data-ttu-id="b35d7-139">PowerShell Core pour Linux est publié dans des dépôts de packages pour faciliter l’installation (et les mises à jour).</span><span class="sxs-lookup"><span data-stu-id="b35d7-139">PowerShell Core, for Linux, is published to package repositories for easy installation (and updates).</span></span>
-<span data-ttu-id="b35d7-140">Il s’agit de la méthode recommandée.</span><span class="sxs-lookup"><span data-stu-id="b35d7-140">This is the preferred method.</span></span>
+<span data-ttu-id="c750f-139">PowerShell Core pour Linux est publié dans des dépôts de packages pour faciliter l’installation (et les mises à jour).</span><span class="sxs-lookup"><span data-stu-id="c750f-139">PowerShell Core, for Linux, is published to package repositories for easy installation (and updates).</span></span>
+<span data-ttu-id="c750f-140">Il s’agit de la méthode recommandée.</span><span class="sxs-lookup"><span data-stu-id="c750f-140">This is the preferred method.</span></span>
 
 ```sh
 # Install system components
@@ -195,37 +195,37 @@ sudo apt-get install -y powershell
 pwsh
 ```
 
-<span data-ttu-id="b35d7-141">Après avoir inscrit le dépôt Microsoft une fois en tant que superutilisateur, vous devez par la suite simplement utiliser `sudo apt-get upgrade powershell` pour le mettre à jour.</span><span class="sxs-lookup"><span data-stu-id="b35d7-141">After registering the Microsoft repository once as superuser, from then on, you just need to use `sudo apt-get upgrade powershell` to update it.</span></span>
+<span data-ttu-id="c750f-141">Après avoir inscrit le dépôt Microsoft une fois en tant que superutilisateur, vous devez par la suite simplement utiliser `sudo apt-get upgrade powershell` pour le mettre à jour.</span><span class="sxs-lookup"><span data-stu-id="c750f-141">After registering the Microsoft repository once as superuser, from then on, you just need to use `sudo apt-get upgrade powershell` to update it.</span></span>
 
-### <a name="installation-via-direct-download---debian-8"></a><span data-ttu-id="b35d7-142">Installation par téléchargement direct - Debian 8</span><span class="sxs-lookup"><span data-stu-id="b35d7-142">Installation via Direct Download - Debian 8</span></span>
+### <a name="installation-via-direct-download---debian-8"></a><span data-ttu-id="c750f-142">Installation par téléchargement direct - Debian 8</span><span class="sxs-lookup"><span data-stu-id="c750f-142">Installation via Direct Download - Debian 8</span></span>
 
-<span data-ttu-id="b35d7-143">Téléchargez le package Debian `powershell_6.0.0-1.debian.8_amd64.deb` à partir de la page de [versions][] sur l’ordinateur Debian :</span><span class="sxs-lookup"><span data-stu-id="b35d7-143">Download the Debian package `powershell_6.0.0-1.debian.8_amd64.deb` from the [releases][] page onto the Debian machine:</span></span>
+<span data-ttu-id="c750f-143">Téléchargez le package Debian `powershell_6.0.0-1.debian.8_amd64.deb` à partir de la page de [versions][] sur l’ordinateur Debian :</span><span class="sxs-lookup"><span data-stu-id="c750f-143">Download the Debian package `powershell_6.0.0-1.debian.8_amd64.deb` from the [releases][] page onto the Debian machine:</span></span>
 
 ```sh
 wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell_6.0.0-1.debian.8_amd64.deb
 ```
 
-<span data-ttu-id="b35d7-144">Exécutez ensuite le code suivant dans le terminal :</span><span class="sxs-lookup"><span data-stu-id="b35d7-144">Then execute the following in the terminal:</span></span>
+<span data-ttu-id="c750f-144">Exécutez ensuite le code suivant dans le terminal :</span><span class="sxs-lookup"><span data-stu-id="c750f-144">Then execute the following in the terminal:</span></span>
 
 ```sh
 sudo dpkg -i powershell_6.0.0-1.debian.8_amd64.deb
 sudo apt-get install -f
 ```
 
-> <span data-ttu-id="b35d7-145">Notez que `dpkg -i` échoue avec des dépendances non satisfaites ; la commande suivante, `apt-get install -f`, les résout et finalise la configuration du package PowerShell.</span><span class="sxs-lookup"><span data-stu-id="b35d7-145">Please note that `dpkg -i` will fail with unmet dependencies; the next command, `apt-get install -f` resolves these and then finishes configuring the PowerShell package.</span></span>
+> <span data-ttu-id="c750f-145">Notez que `dpkg -i` échoue avec des dépendances non satisfaites ; la commande suivante, `apt-get install -f`, les résout et finalise la configuration du package PowerShell.</span><span class="sxs-lookup"><span data-stu-id="c750f-145">Please note that `dpkg -i` will fail with unmet dependencies; the next command, `apt-get install -f` resolves these and then finishes configuring the PowerShell package.</span></span>
 
-### <a name="uninstallation---debian-8"></a><span data-ttu-id="b35d7-146">Désinstallation - Debian 8</span><span class="sxs-lookup"><span data-stu-id="b35d7-146">Uninstallation - Debian 8</span></span>
+### <a name="uninstallation---debian-8"></a><span data-ttu-id="c750f-146">Désinstallation - Debian 8</span><span class="sxs-lookup"><span data-stu-id="c750f-146">Uninstallation - Debian 8</span></span>
 
 ```sh
 sudo apt-get remove powershell
 ```
 
-## <a name="debian-9"></a><span data-ttu-id="b35d7-147">Debian 9</span><span class="sxs-lookup"><span data-stu-id="b35d7-147">Debian 9</span></span>
+## <a name="debian-9"></a><span data-ttu-id="c750f-147">Debian 9</span><span class="sxs-lookup"><span data-stu-id="c750f-147">Debian 9</span></span>
 
-### <a name="installation-via-package-repository---debian-9"></a><span data-ttu-id="b35d7-148">Installation via un dépôt de packages - Debian 9</span><span class="sxs-lookup"><span data-stu-id="b35d7-148">Installation via Package Repository - Debian 9</span></span>
+### <a name="installation-via-package-repository---debian-9"></a><span data-ttu-id="c750f-148">Installation via un dépôt de packages - Debian 9</span><span class="sxs-lookup"><span data-stu-id="c750f-148">Installation via Package Repository - Debian 9</span></span>
 
-<span data-ttu-id="b35d7-149">PowerShell Core pour Linux est publié dans des dépôts de packages pour faciliter l’installation (et les mises à jour).</span><span class="sxs-lookup"><span data-stu-id="b35d7-149">PowerShell Core, for Linux, is published to package repositories for easy installation (and updates).</span></span>
-<span data-ttu-id="b35d7-150">Il s’agit de la méthode recommandée.</span><span class="sxs-lookup"><span data-stu-id="b35d7-150">This is the preferred method.</span></span>
+<span data-ttu-id="c750f-149">PowerShell Core pour Linux est publié dans des dépôts de packages pour faciliter l’installation (et les mises à jour).</span><span class="sxs-lookup"><span data-stu-id="c750f-149">PowerShell Core, for Linux, is published to package repositories for easy installation (and updates).</span></span>
+<span data-ttu-id="c750f-150">Il s’agit de la méthode recommandée.</span><span class="sxs-lookup"><span data-stu-id="c750f-150">This is the preferred method.</span></span>
 
 ```sh
 # Install system components
@@ -248,38 +248,38 @@ sudo apt-get install -y powershell
 pwsh
 ```
 
-<span data-ttu-id="b35d7-151">Après avoir inscrit le dépôt Microsoft une fois en tant que superutilisateur, vous devez par la suite simplement utiliser `sudo apt-get upgrade powershell` pour le mettre à jour.</span><span class="sxs-lookup"><span data-stu-id="b35d7-151">After registering the Microsoft repository once as superuser, from then on, you just need to use `sudo apt-get upgrade powershell` to update it.</span></span>
+<span data-ttu-id="c750f-151">Après avoir inscrit le dépôt Microsoft une fois en tant que superutilisateur, vous devez par la suite simplement utiliser `sudo apt-get upgrade powershell` pour le mettre à jour.</span><span class="sxs-lookup"><span data-stu-id="c750f-151">After registering the Microsoft repository once as superuser, from then on, you just need to use `sudo apt-get upgrade powershell` to update it.</span></span>
 
-### <a name="installation-via-direct-download---debian-9"></a><span data-ttu-id="b35d7-152">Installation par téléchargement direct - Debian 9</span><span class="sxs-lookup"><span data-stu-id="b35d7-152">Installation via Direct Download - Debian 9</span></span>
+### <a name="installation-via-direct-download---debian-9"></a><span data-ttu-id="c750f-152">Installation par téléchargement direct - Debian 9</span><span class="sxs-lookup"><span data-stu-id="c750f-152">Installation via Direct Download - Debian 9</span></span>
 
-<span data-ttu-id="b35d7-153">Téléchargez le package Debian `powershell_6.0.0-1.debian.9_amd64.deb` à partir de la page de [versions][] sur l’ordinateur Debian :</span><span class="sxs-lookup"><span data-stu-id="b35d7-153">Download the Debian package `powershell_6.0.0-1.debian.9_amd64.deb` from the [releases][] page onto the Debian machine:</span></span>
+<span data-ttu-id="c750f-153">Téléchargez le package Debian `powershell_6.0.0-1.debian.9_amd64.deb` à partir de la page de [versions][] sur l’ordinateur Debian :</span><span class="sxs-lookup"><span data-stu-id="c750f-153">Download the Debian package `powershell_6.0.0-1.debian.9_amd64.deb` from the [releases][] page onto the Debian machine:</span></span>
 
 ```sh
 wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell_6.0.0-1.debian.9_amd64.deb
 ```
 
-<span data-ttu-id="b35d7-154">Exécutez ensuite le code suivant dans le terminal :</span><span class="sxs-lookup"><span data-stu-id="b35d7-154">Then execute the following in the terminal:</span></span>
+<span data-ttu-id="c750f-154">Exécutez ensuite le code suivant dans le terminal :</span><span class="sxs-lookup"><span data-stu-id="c750f-154">Then execute the following in the terminal:</span></span>
 
 ```sh
 sudo dpkg -i powershell_6.0.0-1.debian.9_amd64.deb
 sudo apt-get install -f
 ```
 
-> <span data-ttu-id="b35d7-155">Notez que `dpkg -i` échoue avec des dépendances non satisfaites ; la commande suivante, `apt-get install -f`, les résout et finalise la configuration du package PowerShell.</span><span class="sxs-lookup"><span data-stu-id="b35d7-155">Please note that `dpkg -i` will fail with unmet dependencies; the next command, `apt-get install -f` resolves these and then finishes configuring the PowerShell package.</span></span>
+> <span data-ttu-id="c750f-155">Notez que `dpkg -i` échoue avec des dépendances non satisfaites ; la commande suivante, `apt-get install -f`, les résout et finalise la configuration du package PowerShell.</span><span class="sxs-lookup"><span data-stu-id="c750f-155">Please note that `dpkg -i` will fail with unmet dependencies; the next command, `apt-get install -f` resolves these and then finishes configuring the PowerShell package.</span></span>
 
-### <a name="uninstallation---debian-9"></a><span data-ttu-id="b35d7-156">Désinstallation - Debian 9</span><span class="sxs-lookup"><span data-stu-id="b35d7-156">Uninstallation - Debian 9</span></span>
+### <a name="uninstallation---debian-9"></a><span data-ttu-id="c750f-156">Désinstallation - Debian 9</span><span class="sxs-lookup"><span data-stu-id="c750f-156">Uninstallation - Debian 9</span></span>
 
 ```sh
 sudo apt-get remove powershell
 ```
 
-## <a name="centos-7"></a><span data-ttu-id="b35d7-157">CentOS 7</span><span class="sxs-lookup"><span data-stu-id="b35d7-157">CentOS 7</span></span>
+## <a name="centos-7"></a><span data-ttu-id="c750f-157">CentOS 7</span><span class="sxs-lookup"><span data-stu-id="c750f-157">CentOS 7</span></span>
 
-> <span data-ttu-id="b35d7-158">Ce package fonctionne également sur Oracle Linux 7.</span><span class="sxs-lookup"><span data-stu-id="b35d7-158">This package also works on Oracle Linux 7.</span></span>
+> <span data-ttu-id="c750f-158">Ce package fonctionne également sur Oracle Linux 7.</span><span class="sxs-lookup"><span data-stu-id="c750f-158">This package also works on Oracle Linux 7.</span></span>
 
-### <a name="installation-via-package-repository-preferred---centos-7"></a><span data-ttu-id="b35d7-159">Installation via un dépôt de packages (par défaut) - CentOS 7</span><span class="sxs-lookup"><span data-stu-id="b35d7-159">Installation via Package Repository (preferred) - CentOS 7</span></span>
+### <a name="installation-via-package-repository-preferred---centos-7"></a><span data-ttu-id="c750f-159">Installation via un dépôt de packages (par défaut) - CentOS 7</span><span class="sxs-lookup"><span data-stu-id="c750f-159">Installation via Package Repository (preferred) - CentOS 7</span></span>
 
-<span data-ttu-id="b35d7-160">PowerShell Core pour Linux est publié dans des dépôts Microsoft officiels pour faciliter l’installation (et les mises à jour).</span><span class="sxs-lookup"><span data-stu-id="b35d7-160">PowerShell Core for Linux is published to official Microsoft repositories for easy installation (and updates).</span></span>
+<span data-ttu-id="c750f-160">PowerShell Core pour Linux est publié dans des dépôts Microsoft officiels pour faciliter l’installation (et les mises à jour).</span><span class="sxs-lookup"><span data-stu-id="c750f-160">PowerShell Core for Linux is published to official Microsoft repositories for easy installation (and updates).</span></span>
 
 ```sh
 # Register the Microsoft RedHat repository
@@ -292,29 +292,29 @@ sudo yum install -y powershell
 pwsh
 ```
 
-<span data-ttu-id="b35d7-161">Après avoir inscrit le dépôt Microsoft une fois en tant que superutilisateur, vous devez simplement utiliser `sudo yum update powershell` pour mettre à jour PowerShell.</span><span class="sxs-lookup"><span data-stu-id="b35d7-161">After registering the Microsoft repository once as superuser, you just need to use `sudo yum update powershell` to update PowerShell.</span></span>
+<span data-ttu-id="c750f-161">Après avoir inscrit le dépôt Microsoft une fois en tant que superutilisateur, vous devez simplement utiliser `sudo yum update powershell` pour mettre à jour PowerShell.</span><span class="sxs-lookup"><span data-stu-id="c750f-161">After registering the Microsoft repository once as superuser, you just need to use `sudo yum update powershell` to update PowerShell.</span></span>
 
-### <a name="installation-via-direct-download---centos-7"></a><span data-ttu-id="b35d7-162">Installation par téléchargement direct - CentOS 7</span><span class="sxs-lookup"><span data-stu-id="b35d7-162">Installation via Direct Download - CentOS 7</span></span>
+### <a name="installation-via-direct-download---centos-7"></a><span data-ttu-id="c750f-162">Installation par téléchargement direct - CentOS 7</span><span class="sxs-lookup"><span data-stu-id="c750f-162">Installation via Direct Download - CentOS 7</span></span>
 
-<span data-ttu-id="b35d7-163">À l’aide de [CentOS 7][], téléchargez le package RPM `powershell-6.0.0-1.rhel.7.x86_64.rpm` à partir de la page de [versions][] sur l’ordinateur CentOS :</span><span class="sxs-lookup"><span data-stu-id="b35d7-163">Using [CentOS 7][], download the RPM package `powershell-6.0.0-1.rhel.7.x86_64.rpm` from the [releases][] page onto the CentOS machine:</span></span>
+<span data-ttu-id="c750f-163">À l’aide de [CentOS 7][], téléchargez le package RPM `powershell-6.0.0-1.rhel.7.x86_64.rpm` à partir de la page de [versions][] sur l’ordinateur CentOS :</span><span class="sxs-lookup"><span data-stu-id="c750f-163">Using [CentOS 7][], download the RPM package `powershell-6.0.0-1.rhel.7.x86_64.rpm` from the [releases][] page onto the CentOS machine:</span></span>
 
 ```sh
 wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
-<span data-ttu-id="b35d7-164">Exécutez ensuite le code suivant dans le terminal :</span><span class="sxs-lookup"><span data-stu-id="b35d7-164">Then execute the following in the terminal:</span></span>
+<span data-ttu-id="c750f-164">Exécutez ensuite le code suivant dans le terminal :</span><span class="sxs-lookup"><span data-stu-id="c750f-164">Then execute the following in the terminal:</span></span>
 
 ```sh
 sudo yum install powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
-<span data-ttu-id="b35d7-165">Vous pouvez également installer le package RPM sans l’étape intermédiaire de téléchargement :</span><span class="sxs-lookup"><span data-stu-id="b35d7-165">You can also install the RPM without the intermediate step of downloading it:</span></span>
+<span data-ttu-id="c750f-165">Vous pouvez également installer le package RPM sans l’étape intermédiaire de téléchargement :</span><span class="sxs-lookup"><span data-stu-id="c750f-165">You can also install the RPM without the intermediate step of downloading it:</span></span>
 
 ```sh
 sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
-### <a name="uninstallation---centos-7"></a><span data-ttu-id="b35d7-166">Désinstallation - CentOS 7</span><span class="sxs-lookup"><span data-stu-id="b35d7-166">Uninstallation - CentOS 7</span></span>
+### <a name="uninstallation---centos-7"></a><span data-ttu-id="c750f-166">Désinstallation - CentOS 7</span><span class="sxs-lookup"><span data-stu-id="c750f-166">Uninstallation - CentOS 7</span></span>
 
 ```sh
 sudo yum remove powershell
@@ -322,11 +322,11 @@ sudo yum remove powershell
 
 [CentOS 7]: https://www.centos.org/download/
 
-## <a name="red-hat-enterprise-linux-rhel-7"></a><span data-ttu-id="b35d7-168">Red Hat Enterprise Linux (RHEL) 7</span><span class="sxs-lookup"><span data-stu-id="b35d7-168">Red Hat Enterprise Linux (RHEL) 7</span></span>
+## <a name="red-hat-enterprise-linux-rhel-7"></a><span data-ttu-id="c750f-168">Red Hat Enterprise Linux (RHEL) 7</span><span class="sxs-lookup"><span data-stu-id="c750f-168">Red Hat Enterprise Linux (RHEL) 7</span></span>
 
-### <a name="installation-via-package-repository-preferred---red-hat-enterprise-linux-rhel-7"></a><span data-ttu-id="b35d7-169">Installation via un dépôt de packages (par défaut) - Red Hat Enterprise Linux (RHEL) 7</span><span class="sxs-lookup"><span data-stu-id="b35d7-169">Installation via Package Repository (preferred) - Red Hat Enterprise Linux (RHEL) 7</span></span>
+### <a name="installation-via-package-repository-preferred---red-hat-enterprise-linux-rhel-7"></a><span data-ttu-id="c750f-169">Installation via un dépôt de packages (par défaut) - Red Hat Enterprise Linux (RHEL) 7</span><span class="sxs-lookup"><span data-stu-id="c750f-169">Installation via Package Repository (preferred) - Red Hat Enterprise Linux (RHEL) 7</span></span>
 
-<span data-ttu-id="b35d7-170">PowerShell Core pour Linux est publié dans des dépôts Microsoft officiels pour faciliter l’installation (et les mises à jour).</span><span class="sxs-lookup"><span data-stu-id="b35d7-170">PowerShell Core for Linux is published to official Microsoft repositories for easy installation (and updates).</span></span>
+<span data-ttu-id="c750f-170">PowerShell Core pour Linux est publié dans des dépôts Microsoft officiels pour faciliter l’installation (et les mises à jour).</span><span class="sxs-lookup"><span data-stu-id="c750f-170">PowerShell Core for Linux is published to official Microsoft repositories for easy installation (and updates).</span></span>
 
 ```sh
 # Register the Microsoft RedHat repository
@@ -339,44 +339,55 @@ sudo yum install -y powershell
 pwsh
 ```
 
-<span data-ttu-id="b35d7-171">Après avoir inscrit le dépôt Microsoft une fois en tant que superutilisateur, vous devez simplement utiliser `sudo yum update powershell` pour mettre à jour PowerShell.</span><span class="sxs-lookup"><span data-stu-id="b35d7-171">After registering the Microsoft repository once as superuser, you just need to use `sudo yum update powershell` to update PowerShell.</span></span>
+<span data-ttu-id="c750f-171">Après avoir inscrit le dépôt Microsoft une fois en tant que superutilisateur, vous devez simplement utiliser `sudo yum update powershell` pour mettre à jour PowerShell.</span><span class="sxs-lookup"><span data-stu-id="c750f-171">After registering the Microsoft repository once as superuser, you just need to use `sudo yum update powershell` to update PowerShell.</span></span>
 
-### <a name="installation-via-direct-download---red-hat-enterprise-linux-rhel-7"></a><span data-ttu-id="b35d7-172">Installation par téléchargement direct - Red Hat Enterprise Linux (RHEL) 7</span><span class="sxs-lookup"><span data-stu-id="b35d7-172">Installation via Direct Download - Red Hat Enterprise Linux (RHEL) 7</span></span>
+### <a name="installation-via-direct-download---red-hat-enterprise-linux-rhel-7"></a><span data-ttu-id="c750f-172">Installation par téléchargement direct - Red Hat Enterprise Linux (RHEL) 7</span><span class="sxs-lookup"><span data-stu-id="c750f-172">Installation via Direct Download - Red Hat Enterprise Linux (RHEL) 7</span></span>
 
-<span data-ttu-id="b35d7-173">Téléchargez le package RPM `powershell-6.0.0-1.rhel.7.x86_64.rpm` à partir de la page de [versions][] sur l’ordinateur Red Hat Enterprise Linux :</span><span class="sxs-lookup"><span data-stu-id="b35d7-173">Download the RPM package `powershell-6.0.0-1.rhel.7.x86_64.rpm` from the [releases][] page onto the Red Hat Enterprise Linux machine:</span></span>
+<span data-ttu-id="c750f-173">Téléchargez le package RPM `powershell-6.0.0-1.rhel.7.x86_64.rpm` à partir de la page de [versions][] sur l’ordinateur Red Hat Enterprise Linux :</span><span class="sxs-lookup"><span data-stu-id="c750f-173">Download the RPM package `powershell-6.0.0-1.rhel.7.x86_64.rpm` from the [releases][] page onto the Red Hat Enterprise Linux machine:</span></span>
 
 ```sh
 wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell_6.0.0-1.debian.9_amd64.deb
 ```
 
-<span data-ttu-id="b35d7-174">Exécutez ensuite le code suivant dans le terminal :</span><span class="sxs-lookup"><span data-stu-id="b35d7-174">Then execute the following in the terminal:</span></span>
+<span data-ttu-id="c750f-174">Exécutez ensuite le code suivant dans le terminal :</span><span class="sxs-lookup"><span data-stu-id="c750f-174">Then execute the following in the terminal:</span></span>
 
 ```sh
 sudo yum install powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
-<span data-ttu-id="b35d7-175">Vous pouvez également installer le package RPM sans l’étape intermédiaire de téléchargement :</span><span class="sxs-lookup"><span data-stu-id="b35d7-175">You can also install the RPM without the intermediate step of downloading it:</span></span>
+<span data-ttu-id="c750f-175">Vous pouvez également installer le package RPM sans l’étape intermédiaire de téléchargement :</span><span class="sxs-lookup"><span data-stu-id="c750f-175">You can also install the RPM without the intermediate step of downloading it:</span></span>
 
 ```sh
 sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
-### <a name="uninstallation---red-hat-enterprise-linux-rhel-7"></a><span data-ttu-id="b35d7-176">Désinstallation - Red Hat Enterprise Linux (RHEL) 7</span><span class="sxs-lookup"><span data-stu-id="b35d7-176">Uninstallation - Red Hat Enterprise Linux (RHEL) 7</span></span>
+### <a name="uninstallation---red-hat-enterprise-linux-rhel-7"></a><span data-ttu-id="c750f-176">Désinstallation - Red Hat Enterprise Linux (RHEL) 7</span><span class="sxs-lookup"><span data-stu-id="c750f-176">Uninstallation - Red Hat Enterprise Linux (RHEL) 7</span></span>
 
 ```sh
 sudo yum remove powershell
 ```
 
-## <a name="opensuse-422"></a><span data-ttu-id="b35d7-177">OpenSUSE 42.2</span><span class="sxs-lookup"><span data-stu-id="b35d7-177">OpenSUSE 42.2</span></span>
+## <a name="opensuse-422"></a><span data-ttu-id="c750f-177">OpenSUSE 42.2</span><span class="sxs-lookup"><span data-stu-id="c750f-177">OpenSUSE 42.2</span></span>
 
-> <span data-ttu-id="b35d7-178">**Remarque :** Lors de l’installation de PowerShell Core, OpenSUSE peut signaler que rien ne fournit `libcurl`.</span><span class="sxs-lookup"><span data-stu-id="b35d7-178">**Note:** When installing PowerShell Core, OpenSUSE may report that nothing provides `libcurl`.</span></span>
-<span data-ttu-id="b35d7-179">`libcurl` doit déjà être installé sur les versions prises en charge d’OpenSUSE.</span><span class="sxs-lookup"><span data-stu-id="b35d7-179">`libcurl` should already be installed on supported versions of OpenSUSE.</span></span>
-<span data-ttu-id="b35d7-180">Exécutez `zypper search libcurl` pour confirmer.</span><span class="sxs-lookup"><span data-stu-id="b35d7-180">Run `zypper search libcurl` to confirm.</span></span>
-<span data-ttu-id="b35d7-181">L’erreur présentera 2 « solutions ».</span><span class="sxs-lookup"><span data-stu-id="b35d7-181">The error will present 2 'solutions'.</span></span> <span data-ttu-id="b35d7-182">Choisissez « Solution 2 » pour poursuivre l’installation de PowerShell Core.</span><span class="sxs-lookup"><span data-stu-id="b35d7-182">Choose 'Solution 2' to continue installing PowerShell Core.</span></span>
+> <span data-ttu-id="c750f-178">**Remarque :** Lors de l’installation de PowerShell Core, `zypper` peut signaler l’erreur suivante :</span><span class="sxs-lookup"><span data-stu-id="c750f-178">**Note:** When installing PowerShell Core, `zypper` may report the following error:</span></span>
+>
+> ```text
+> Problem: nothing provides libcurl needed by powershell-6.0.1-1.rhel.7.x86_64
+>  Solution 1: do not install powershell-6.0.1-1.rhel.7.x86_64
+>  Solution 2: break powershell-6.0.1-1.rhel.7.x86_64 by ignoring some of its dependencies
+> ```
+>
+> <span data-ttu-id="c750f-179">Dans ce cas, vérifiez qu’une bibliothèque `libcurl` compatible est présente en contrôlant que la commande suivante indique que le package `libcurl4` est installé :</span><span class="sxs-lookup"><span data-stu-id="c750f-179">In this case, verify that a compatible `libcurl` library is present by checking that the following command shows the `libcurl4` package as installed:</span></span>
+>
+> ```sh
+> zypper search --file-list --match-exact '/usr/lib64/libcurl.so.4'
+> ```
+>
+> <span data-ttu-id="c750f-180">Ensuite, choisissez la solution `break powershell-6.0.1-1.rhel.7.x86_64 by ignoring some of its dependencies` quand vous installez le package `powershell`.</span><span class="sxs-lookup"><span data-stu-id="c750f-180">Then choose the `break powershell-6.0.1-1.rhel.7.x86_64 by ignoring some of its dependencies` solution when installing the `powershell` package.</span></span>
 
-### <a name="installation-via-package-repository-preferred---opensuse-422"></a><span data-ttu-id="b35d7-183">Installation via un dépôt de packages (par défaut) - OpenSUSE 42.2</span><span class="sxs-lookup"><span data-stu-id="b35d7-183">Installation via Package Repository (preferred) - OpenSUSE 42.2</span></span>
+### <a name="installation-via-package-repository-preferred---opensuse-422"></a><span data-ttu-id="c750f-181">Installation via un dépôt de packages (par défaut) - OpenSUSE 42.2</span><span class="sxs-lookup"><span data-stu-id="c750f-181">Installation via Package Repository (preferred) - OpenSUSE 42.2</span></span>
 
-<span data-ttu-id="b35d7-184">PowerShell Core pour Linux est publié dans des dépôts Microsoft officiels pour faciliter l’installation (et les mises à jour).</span><span class="sxs-lookup"><span data-stu-id="b35d7-184">PowerShell Core for Linux is published to official Microsoft repositories for easy installation (and updates).</span></span>
+<span data-ttu-id="c750f-182">PowerShell Core pour Linux est publié dans des dépôts Microsoft officiels pour faciliter l’installation (et les mises à jour).</span><span class="sxs-lookup"><span data-stu-id="c750f-182">PowerShell Core for Linux is published to official Microsoft repositories for easy installation (and updates).</span></span>
 
 ```sh
 # Register the Microsoft signature key
@@ -385,9 +396,6 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 # Add the Microsoft Product feed
 curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/zypp/repos.d/microsoft.repo
 
-# Update the list of products
-sudo zypper update
-
 # Install PowerShell
 sudo zypper install powershell
 
@@ -395,9 +403,9 @@ sudo zypper install powershell
 pwsh
 ```
 
-### <a name="installation-via-direct-download---opensuse-422"></a><span data-ttu-id="b35d7-185">Installation par téléchargement direct - OpenSUSE 42.2</span><span class="sxs-lookup"><span data-stu-id="b35d7-185">Installation via Direct Download - OpenSUSE 42.2</span></span>
+### <a name="installation-via-direct-download---opensuse-422"></a><span data-ttu-id="c750f-183">Installation par téléchargement direct - OpenSUSE 42.2</span><span class="sxs-lookup"><span data-stu-id="c750f-183">Installation via Direct Download - OpenSUSE 42.2</span></span>
 
-<span data-ttu-id="b35d7-186">Téléchargez le package RPM `powershell-6.0.0-1.rhel.7.x86_64.rpm` à partir de la page de [versions][] sur l’ordinateur OpenSUSE :</span><span class="sxs-lookup"><span data-stu-id="b35d7-186">Download the RPM package `powershell-6.0.0-1.rhel.7.x86_64.rpm` from the [releases][] page onto the OpenSUSE machine:</span></span>
+<span data-ttu-id="c750f-184">Téléchargez le package RPM `powershell-6.0.0-1.rhel.7.x86_64.rpm` à partir de la page de [versions][] sur l’ordinateur OpenSUSE :</span><span class="sxs-lookup"><span data-stu-id="c750f-184">Download the RPM package `powershell-6.0.0-1.rhel.7.x86_64.rpm` from the [releases][] page onto the OpenSUSE machine:</span></span>
 
 ```sh
 wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-1.rhel.7.x86_64.rpm
@@ -408,24 +416,24 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo zypper install powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
-<span data-ttu-id="b35d7-187">Vous pouvez également installer le package RPM sans l’étape intermédiaire de téléchargement :</span><span class="sxs-lookup"><span data-stu-id="b35d7-187">You can also install the RPM without the intermediate step of downloading it:</span></span>
+<span data-ttu-id="c750f-185">Vous pouvez également installer le package RPM sans l’étape intermédiaire de téléchargement :</span><span class="sxs-lookup"><span data-stu-id="c750f-185">You can also install the RPM without the intermediate step of downloading it:</span></span>
 
 ```sh
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo zypper install https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
-### <a name="uninstallation---opensuse-422"></a><span data-ttu-id="b35d7-188">Désinstallation - OpenSUSE 42.2</span><span class="sxs-lookup"><span data-stu-id="b35d7-188">Uninstallation - OpenSUSE 42.2</span></span>
+### <a name="uninstallation---opensuse-422"></a><span data-ttu-id="c750f-186">Désinstallation - OpenSUSE 42.2</span><span class="sxs-lookup"><span data-stu-id="c750f-186">Uninstallation - OpenSUSE 42.2</span></span>
 
 ```sh
 sudo zypper remove powershell
 ```
 
-## <a name="fedora-25"></a><span data-ttu-id="b35d7-189">Fedora 25</span><span class="sxs-lookup"><span data-stu-id="b35d7-189">Fedora 25</span></span>
+## <a name="fedora-25"></a><span data-ttu-id="c750f-187">Fedora 25</span><span class="sxs-lookup"><span data-stu-id="c750f-187">Fedora 25</span></span>
 
-### <a name="installation-via-package-repository-preferred---fedora-25"></a><span data-ttu-id="b35d7-190">Installation via un dépôt de packages (par défaut) - Fedora 25</span><span class="sxs-lookup"><span data-stu-id="b35d7-190">Installation via Package Repository (preferred) - Fedora 25</span></span>
+### <a name="installation-via-package-repository-preferred---fedora-25"></a><span data-ttu-id="c750f-188">Installation via un dépôt de packages (par défaut) - Fedora 25</span><span class="sxs-lookup"><span data-stu-id="c750f-188">Installation via Package Repository (preferred) - Fedora 25</span></span>
 
-<span data-ttu-id="b35d7-191">PowerShell Core pour Linux est publié dans des dépôts Microsoft officiels pour faciliter l’installation (et les mises à jour).</span><span class="sxs-lookup"><span data-stu-id="b35d7-191">PowerShell Core for Linux is published to official Microsoft repositories for easy installation (and updates).</span></span>
+<span data-ttu-id="c750f-189">PowerShell Core pour Linux est publié dans des dépôts Microsoft officiels pour faciliter l’installation (et les mises à jour).</span><span class="sxs-lookup"><span data-stu-id="c750f-189">PowerShell Core for Linux is published to official Microsoft repositories for easy installation (and updates).</span></span>
 
 ```sh
 # Register the Microsoft signature key
@@ -444,37 +452,37 @@ sudo dnf install -y powershell
 pwsh
 ```
 
-### <a name="installation-via-direct-download---fedora-25"></a><span data-ttu-id="b35d7-192">Installation par téléchargement direct - Fedora 25</span><span class="sxs-lookup"><span data-stu-id="b35d7-192">Installation via Direct Download - Fedora 25</span></span>
+### <a name="installation-via-direct-download---fedora-25"></a><span data-ttu-id="c750f-190">Installation par téléchargement direct - Fedora 25</span><span class="sxs-lookup"><span data-stu-id="c750f-190">Installation via Direct Download - Fedora 25</span></span>
 
-<span data-ttu-id="b35d7-193">Téléchargez le package RPM `powershell-6.0.0-1.rhel.7.x86_64.rpm` à partir de la page de [versions][] sur l’ordinateur Fedora :</span><span class="sxs-lookup"><span data-stu-id="b35d7-193">Download the RPM package `powershell-6.0.0-1.rhel.7.x86_64.rpm` from the [releases][] page onto the Fedora machine:</span></span>
+<span data-ttu-id="c750f-191">Téléchargez le package RPM `powershell-6.0.0-1.rhel.7.x86_64.rpm` à partir de la page de [versions][] sur l’ordinateur Fedora :</span><span class="sxs-lookup"><span data-stu-id="c750f-191">Download the RPM package `powershell-6.0.0-1.rhel.7.x86_64.rpm` from the [releases][] page onto the Fedora machine:</span></span>
 
 ```sh
 wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
-<span data-ttu-id="b35d7-194">Exécutez ensuite le code suivant dans le terminal :</span><span class="sxs-lookup"><span data-stu-id="b35d7-194">Then execute the following in the terminal:</span></span>
+<span data-ttu-id="c750f-192">Exécutez ensuite le code suivant dans le terminal :</span><span class="sxs-lookup"><span data-stu-id="c750f-192">Then execute the following in the terminal:</span></span>
 
 ```sh
 sudo dnf install powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
-<span data-ttu-id="b35d7-195">Vous pouvez également installer le package RPM sans l’étape intermédiaire de téléchargement :</span><span class="sxs-lookup"><span data-stu-id="b35d7-195">You can also install the RPM without the intermediate step of downloading it:</span></span>
+<span data-ttu-id="c750f-193">Vous pouvez également installer le package RPM sans l’étape intermédiaire de téléchargement :</span><span class="sxs-lookup"><span data-stu-id="c750f-193">You can also install the RPM without the intermediate step of downloading it:</span></span>
 
 ```sh
 sudo dnf install https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
-### <a name="uninstallation---fedora-25"></a><span data-ttu-id="b35d7-196">Désinstallation - Fedora 25</span><span class="sxs-lookup"><span data-stu-id="b35d7-196">Uninstallation - Fedora 25</span></span>
+### <a name="uninstallation---fedora-25"></a><span data-ttu-id="c750f-194">Désinstallation - Fedora 25</span><span class="sxs-lookup"><span data-stu-id="c750f-194">Uninstallation - Fedora 25</span></span>
 
 ```sh
 sudo dnf remove powershell
 ```
 
-## <a name="fedora-26"></a><span data-ttu-id="b35d7-197">Fedora 26</span><span class="sxs-lookup"><span data-stu-id="b35d7-197">Fedora 26</span></span>
+## <a name="fedora-26"></a><span data-ttu-id="c750f-195">Fedora 26</span><span class="sxs-lookup"><span data-stu-id="c750f-195">Fedora 26</span></span>
 
-### <a name="installation-via-package-repository-preferred---fedora-26"></a><span data-ttu-id="b35d7-198">Installation via un dépôt de packages (par défaut) - Fedora 26</span><span class="sxs-lookup"><span data-stu-id="b35d7-198">Installation via Package Repository (preferred) - Fedora 26</span></span>
+### <a name="installation-via-package-repository-preferred---fedora-26"></a><span data-ttu-id="c750f-196">Installation via un dépôt de packages (par défaut) - Fedora 26</span><span class="sxs-lookup"><span data-stu-id="c750f-196">Installation via Package Repository (preferred) - Fedora 26</span></span>
 
-<span data-ttu-id="b35d7-199">PowerShell Core pour Linux est publié dans des dépôts Microsoft officiels pour faciliter l’installation (et les mises à jour).</span><span class="sxs-lookup"><span data-stu-id="b35d7-199">PowerShell Core for Linux is published to official Microsoft repositories for easy installation (and updates).</span></span>
+<span data-ttu-id="c750f-197">PowerShell Core pour Linux est publié dans des dépôts Microsoft officiels pour faciliter l’installation (et les mises à jour).</span><span class="sxs-lookup"><span data-stu-id="c750f-197">PowerShell Core for Linux is published to official Microsoft repositories for easy installation (and updates).</span></span>
 
 ```sh
 # Register the Microsoft signature key
@@ -496,15 +504,15 @@ sudo dnf install -y powershell
 pwsh
 ```
 
-### <a name="installation-via-direct-download---fedora-26"></a><span data-ttu-id="b35d7-200">Installation par téléchargement direct - Fedora 26</span><span class="sxs-lookup"><span data-stu-id="b35d7-200">Installation via Direct Download - Fedora 26</span></span>
+### <a name="installation-via-direct-download---fedora-26"></a><span data-ttu-id="c750f-198">Installation par téléchargement direct - Fedora 26</span><span class="sxs-lookup"><span data-stu-id="c750f-198">Installation via Direct Download - Fedora 26</span></span>
 
-<span data-ttu-id="b35d7-201">Téléchargez le package RPM `powershell-6.0.0-1.rhel.7.x86_64.rpm` à partir de la page de [versions][] sur l’ordinateur Fedora :</span><span class="sxs-lookup"><span data-stu-id="b35d7-201">Download the RPM package `powershell-6.0.0-1.rhel.7.x86_64.rpm` from the [releases][] page onto the Fedora machine:</span></span>
+<span data-ttu-id="c750f-199">Téléchargez le package RPM `powershell-6.0.0-1.rhel.7.x86_64.rpm` à partir de la page de [versions][] sur l’ordinateur Fedora :</span><span class="sxs-lookup"><span data-stu-id="c750f-199">Download the RPM package `powershell-6.0.0-1.rhel.7.x86_64.rpm` from the [releases][] page onto the Fedora machine:</span></span>
 
 ```sh
 wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
-<span data-ttu-id="b35d7-202">Exécutez ensuite le code suivant dans le terminal :</span><span class="sxs-lookup"><span data-stu-id="b35d7-202">Then execute the following in the terminal:</span></span>
+<span data-ttu-id="c750f-200">Exécutez ensuite le code suivant dans le terminal :</span><span class="sxs-lookup"><span data-stu-id="c750f-200">Then execute the following in the terminal:</span></span>
 
 ```sh
 sudo dnf update
@@ -512,7 +520,7 @@ sudo dnf install compat-openssl10
 sudo dnf install powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
-<span data-ttu-id="b35d7-203">Vous pouvez également installer le package RPM sans l’étape intermédiaire de téléchargement :</span><span class="sxs-lookup"><span data-stu-id="b35d7-203">You can also install the RPM without the intermediate step of downloading it:</span></span>
+<span data-ttu-id="c750f-201">Vous pouvez également installer le package RPM sans l’étape intermédiaire de téléchargement :</span><span class="sxs-lookup"><span data-stu-id="c750f-201">You can also install the RPM without the intermediate step of downloading it:</span></span>
 
 ```sh
 sudo dnf update
@@ -520,105 +528,105 @@ sudo dnf install compat-openssl10
 sudo dnf install https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
-### <a name="uninstallation---fedora-26"></a><span data-ttu-id="b35d7-204">Désinstallation - Fedora 26</span><span class="sxs-lookup"><span data-stu-id="b35d7-204">Uninstallation - Fedora 26</span></span>
+### <a name="uninstallation---fedora-26"></a><span data-ttu-id="c750f-202">Désinstallation - Fedora 26</span><span class="sxs-lookup"><span data-stu-id="c750f-202">Uninstallation - Fedora 26</span></span>
 
 ```sh
 sudo dnf remove powershell
 ```
 
-## <a name="arch-linux"></a><span data-ttu-id="b35d7-205">Arch Linux</span><span class="sxs-lookup"><span data-stu-id="b35d7-205">Arch Linux</span></span>
+## <a name="arch-linux"></a><span data-ttu-id="c750f-203">Arch Linux</span><span class="sxs-lookup"><span data-stu-id="c750f-203">Arch Linux</span></span>
 
-<span data-ttu-id="b35d7-206">PowerShell est disponible dans le dépôt utilisateur [Arch Linux][].</span><span class="sxs-lookup"><span data-stu-id="b35d7-206">PowerShell is available from the [Arch Linux][] User Repository (AUR).</span></span>
+<span data-ttu-id="c750f-204">PowerShell est disponible dans le dépôt utilisateur [Arch Linux][].</span><span class="sxs-lookup"><span data-stu-id="c750f-204">PowerShell is available from the [Arch Linux][] User Repository (AUR).</span></span>
 
-* <span data-ttu-id="b35d7-207">Il peut être compilé avec la [dernière version identifiée][arch-release]</span><span class="sxs-lookup"><span data-stu-id="b35d7-207">It can be compiled with the [latest tagged release][arch-release]</span></span>
-* <span data-ttu-id="b35d7-208">Il peut être compilé à partir de la [dernière validation sur le maître][arch-git]</span><span class="sxs-lookup"><span data-stu-id="b35d7-208">It can be compiled from the [latest commit to master][arch-git]</span></span>
-* <span data-ttu-id="b35d7-209">Il peut être installé à l’aide de la [dernière ressource binaire de version][arch-bin]</span><span class="sxs-lookup"><span data-stu-id="b35d7-209">It can be installed using the [latest release binary][arch-bin]</span></span>
+* <span data-ttu-id="c750f-205">Il peut être compilé avec la [dernière version identifiée][arch-release]</span><span class="sxs-lookup"><span data-stu-id="c750f-205">It can be compiled with the [latest tagged release][arch-release]</span></span>
+* <span data-ttu-id="c750f-206">Il peut être compilé à partir de la [dernière validation sur le maître][arch-git]</span><span class="sxs-lookup"><span data-stu-id="c750f-206">It can be compiled from the [latest commit to master][arch-git]</span></span>
+* <span data-ttu-id="c750f-207">Il peut être installé à l’aide de la [dernière ressource binaire de version][arch-bin]</span><span class="sxs-lookup"><span data-stu-id="c750f-207">It can be installed using the [latest release binary][arch-bin]</span></span>
 
-<span data-ttu-id="b35d7-210">Les packages dans le dépôt utilisateur Arch Linux sont gérés par la communauté ; il n’existe aucune prise en charge officielle.</span><span class="sxs-lookup"><span data-stu-id="b35d7-210">Packages in the AUR are community maintained - there is no official support.</span></span>
+<span data-ttu-id="c750f-208">Les packages dans le dépôt utilisateur Arch Linux sont gérés par la communauté ; il n’existe aucune prise en charge officielle.</span><span class="sxs-lookup"><span data-stu-id="c750f-208">Packages in the AUR are community maintained - there is no official support.</span></span>
 
-<span data-ttu-id="b35d7-211">Pour plus d’informations sur l’installation de packages à partir du dépôt utilisateur Arch Linux, consultez le [Wiki Arch Linux](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_packages) ou le [fichier Dockerfile](https://github.com/PowerShell/PowerShell/blob/master/docker/community/archlinux/Dockerfile) de la communauté.</span><span class="sxs-lookup"><span data-stu-id="b35d7-211">For more information on installing packages from the AUR, see the [Arch Linux wiki](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_packages) or the community [DockerFile](https://github.com/PowerShell/PowerShell/blob/master/docker/community/archlinux/Dockerfile).</span></span>
+<span data-ttu-id="c750f-209">Pour plus d’informations sur l’installation de packages à partir du dépôt utilisateur Arch Linux, consultez le [Wiki Arch Linux](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_packages) ou le [fichier Dockerfile](https://github.com/PowerShell/PowerShell/blob/master/docker/community/archlinux/Dockerfile) de la communauté.</span><span class="sxs-lookup"><span data-stu-id="c750f-209">For more information on installing packages from the AUR, see the [Arch Linux wiki](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_packages) or the community [DockerFile](https://github.com/PowerShell/PowerShell/blob/master/docker/community/archlinux/Dockerfile).</span></span>
 
 [Arch Linux]: https://www.archlinux.org/download/
 [arch-release]: https://aur.archlinux.org/packages/powershell/
 [arch-git]: https://aur.archlinux.org/packages/powershell-git/
 [arch-bin]: https://aur.archlinux.org/packages/powershell-bin/
 
-## <a name="linux-appimage"></a><span data-ttu-id="b35d7-213">AppImage Linux</span><span class="sxs-lookup"><span data-stu-id="b35d7-213">Linux AppImage</span></span>
+## <a name="linux-appimage"></a><span data-ttu-id="c750f-211">AppImage Linux</span><span class="sxs-lookup"><span data-stu-id="c750f-211">Linux AppImage</span></span>
 
-<span data-ttu-id="b35d7-214">En utilisant une distribution Linux récente, téléchargez AppImage `powershell-6.0.0-x86_64.AppImage` à partir de la page de [versions][] sur l’ordinateur Linux.</span><span class="sxs-lookup"><span data-stu-id="b35d7-214">Using a recent Linux distribution, download the AppImage `powershell-6.0.0-x86_64.AppImage` from the [releases][] page onto the Linux machine.</span></span>
+<span data-ttu-id="c750f-212">En utilisant une distribution Linux récente, téléchargez AppImage `powershell-6.0.0-x86_64.AppImage` à partir de la page de [versions][] sur l’ordinateur Linux.</span><span class="sxs-lookup"><span data-stu-id="c750f-212">Using a recent Linux distribution, download the AppImage `powershell-6.0.0-x86_64.AppImage` from the [releases][] page onto the Linux machine.</span></span>
 
-<span data-ttu-id="b35d7-215">Exécutez ensuite le code suivant dans le terminal :</span><span class="sxs-lookup"><span data-stu-id="b35d7-215">Then execute the following in the terminal:</span></span>
+<span data-ttu-id="c750f-213">Exécutez ensuite le code suivant dans le terminal :</span><span class="sxs-lookup"><span data-stu-id="c750f-213">Then execute the following in the terminal:</span></span>
 
 ```bash
 chmod a+x powershell-6.0.0-x86_64.AppImage
 ./powershell-6.0.0-x86_64.AppImage
 ```
 
-<span data-ttu-id="b35d7-216">[AppImage][] vous permet d’exécuter PowerShell sans l’installer.</span><span class="sxs-lookup"><span data-stu-id="b35d7-216">The [AppImage][] lets you run PowerShell without installing it.</span></span> <span data-ttu-id="b35d7-217">Il s’agit d’une application portable qui regroupe PowerShell et ses dépendances (dont les dépendances système de .NET Core) en un package cohérent.</span><span class="sxs-lookup"><span data-stu-id="b35d7-217">It is a portable application that bundles PowerShell and its dependencies (including .NET Core's system dependencies) into one cohesive package.</span></span> <span data-ttu-id="b35d7-218">Ce package fonctionne indépendamment de la distribution Linux de l’utilisateur et est un fichier binaire unique.</span><span class="sxs-lookup"><span data-stu-id="b35d7-218">This package works independently of the user's Linux distribution, and is a single binary.</span></span>
+<span data-ttu-id="c750f-214">[AppImage][] vous permet d’exécuter PowerShell sans l’installer.</span><span class="sxs-lookup"><span data-stu-id="c750f-214">The [AppImage][] lets you run PowerShell without installing it.</span></span> <span data-ttu-id="c750f-215">Il s’agit d’une application portable qui regroupe PowerShell et ses dépendances (dont les dépendances système de .NET Core) en un package cohérent.</span><span class="sxs-lookup"><span data-stu-id="c750f-215">It is a portable application that bundles PowerShell and its dependencies (including .NET Core's system dependencies) into one cohesive package.</span></span> <span data-ttu-id="c750f-216">Ce package fonctionne indépendamment de la distribution Linux de l’utilisateur et est un fichier binaire unique.</span><span class="sxs-lookup"><span data-stu-id="c750f-216">This package works independently of the user's Linux distribution, and is a single binary.</span></span>
 
 [appimage]: http://appimage.org/
 
-## <a name="macos-1012"></a><span data-ttu-id="b35d7-220">macOS 10.12</span><span class="sxs-lookup"><span data-stu-id="b35d7-220">macOS 10.12</span></span>
+## <a name="macos-1012"></a><span data-ttu-id="c750f-218">macOS 10.12</span><span class="sxs-lookup"><span data-stu-id="c750f-218">macOS 10.12</span></span>
 
-### <a name="installation-via-homebrew-preferred---macos-1012"></a><span data-ttu-id="b35d7-221">Installation via Homebrew (par défaut) - macOS 10.12</span><span class="sxs-lookup"><span data-stu-id="b35d7-221">Installation via Homebrew (preferred) - macOS 10.12</span></span>
+### <a name="installation-via-homebrew-preferred---macos-1012"></a><span data-ttu-id="c750f-219">Installation via Homebrew (par défaut) - macOS 10.12</span><span class="sxs-lookup"><span data-stu-id="c750f-219">Installation via Homebrew (preferred) - macOS 10.12</span></span>
 
-<span data-ttu-id="b35d7-222">[Homebrew][brew] est le gestionnaire de package manquant pour macOS.</span><span class="sxs-lookup"><span data-stu-id="b35d7-222">[Homebrew][brew] is the missing package manager for macOS.</span></span> <span data-ttu-id="b35d7-223">Si la commande `brew` est introuvable, vous devez installer Homebrew en suivant [leurs instructions][brew].</span><span class="sxs-lookup"><span data-stu-id="b35d7-223">If the `brew` command is not found, you need to install Homebrew following [their instructions][brew].</span></span>
+<span data-ttu-id="c750f-220">[Homebrew][brew] est le gestionnaire de package manquant pour macOS.</span><span class="sxs-lookup"><span data-stu-id="c750f-220">[Homebrew][brew] is the missing package manager for macOS.</span></span> <span data-ttu-id="c750f-221">Si la commande `brew` est introuvable, vous devez installer Homebrew en suivant [leurs instructions][brew].</span><span class="sxs-lookup"><span data-stu-id="c750f-221">If the `brew` command is not found, you need to install Homebrew following [their instructions][brew].</span></span>
 
-<span data-ttu-id="b35d7-224">Une fois que vous avez installé Homebrew, l’installation de PowerShell est facile.</span><span class="sxs-lookup"><span data-stu-id="b35d7-224">Once you've installed Homebrew, installing PowerShell is easy.</span></span> <span data-ttu-id="b35d7-225">Pour commencer, installez [Homebrew-Cask][cask] afin de pouvoir installer d’autres packages :</span><span class="sxs-lookup"><span data-stu-id="b35d7-225">First, install [Homebrew-Cask][cask], so you can install more packages:</span></span>
+<span data-ttu-id="c750f-222">Une fois que vous avez installé Homebrew, l’installation de PowerShell est facile.</span><span class="sxs-lookup"><span data-stu-id="c750f-222">Once you've installed Homebrew, installing PowerShell is easy.</span></span> <span data-ttu-id="c750f-223">Pour commencer, installez [Homebrew-Cask][cask] afin de pouvoir installer d’autres packages :</span><span class="sxs-lookup"><span data-stu-id="c750f-223">First, install [Homebrew-Cask][cask], so you can install more packages:</span></span>
 
 ```sh
 brew tap caskroom/cask
 ```
 
-<span data-ttu-id="b35d7-226">Maintenant, vous pouvez installer PowerShell :</span><span class="sxs-lookup"><span data-stu-id="b35d7-226">Now, you can install PowerShell:</span></span>
+<span data-ttu-id="c750f-224">Maintenant, vous pouvez installer PowerShell :</span><span class="sxs-lookup"><span data-stu-id="c750f-224">Now, you can install PowerShell:</span></span>
 
 ```sh
 brew cask install powershell
 ```
 
-<span data-ttu-id="b35d7-227">Quand de nouvelles versions de PowerShell sont publiées, mettez simplement à jour les formules de Homebrew et mettez à niveau PowerShell :</span><span class="sxs-lookup"><span data-stu-id="b35d7-227">When new versions of PowerShell are released, simply update Homebrew's formulae and upgrade PowerShell:</span></span>
+<span data-ttu-id="c750f-225">Quand de nouvelles versions de PowerShell sont publiées, mettez simplement à jour les formules de Homebrew et mettez à niveau PowerShell :</span><span class="sxs-lookup"><span data-stu-id="c750f-225">When new versions of PowerShell are released, simply update Homebrew's formulae and upgrade PowerShell:</span></span>
 
 ```sh
 brew update
 brew cask reinstall powershell
 ```
 
-> <span data-ttu-id="b35d7-228">Remarque : En raison de [ce problème dans Cask](https://github.com/caskroom/homebrew-cask/issues/29301), vous devez pour l’instant effectuer une réinstallation afin de procéder à la mise à niveau.</span><span class="sxs-lookup"><span data-stu-id="b35d7-228">Note: because of [this issue in Cask](https://github.com/caskroom/homebrew-cask/issues/29301), you currently have to do a reinstall to upgrade.</span></span>
+> <span data-ttu-id="c750f-226">Remarque : En raison de [ce problème dans Cask](https://github.com/caskroom/homebrew-cask/issues/29301), vous devez pour l’instant effectuer une réinstallation afin de procéder à la mise à niveau.</span><span class="sxs-lookup"><span data-stu-id="c750f-226">Note: because of [this issue in Cask](https://github.com/caskroom/homebrew-cask/issues/29301), you currently have to do a reinstall to upgrade.</span></span>
 
 [brew]: http://brew.sh/
 [cask]: https://caskroom.github.io/
 
-### <a name="installation-via-direct-download---macos-1012"></a><span data-ttu-id="b35d7-229">Installation par téléchargement direct - macOS 10.12</span><span class="sxs-lookup"><span data-stu-id="b35d7-229">Installation via Direct Download - macOS 10.12</span></span>
+### <a name="installation-via-direct-download---macos-1012"></a><span data-ttu-id="c750f-227">Installation par téléchargement direct - macOS 10.12</span><span class="sxs-lookup"><span data-stu-id="c750f-227">Installation via Direct Download - macOS 10.12</span></span>
 
-<span data-ttu-id="b35d7-230">À l’aide de macOS 10.12, téléchargez le package PKG `powershell-6.0.0-osx.10.12-x64.pkg` à partir de la page de [versions][] sur l’ordinateur macOS.</span><span class="sxs-lookup"><span data-stu-id="b35d7-230">Using macOS 10.12, download the PKG package `powershell-6.0.0-osx.10.12-x64.pkg` from the [releases][] page onto the macOS machine.</span></span>
+<span data-ttu-id="c750f-228">À l’aide de macOS 10.12, téléchargez le package PKG `powershell-6.0.0-osx.10.12-x64.pkg` à partir de la page de [versions][] sur l’ordinateur macOS.</span><span class="sxs-lookup"><span data-stu-id="c750f-228">Using macOS 10.12, download the PKG package `powershell-6.0.0-osx.10.12-x64.pkg` from the [releases][] page onto the macOS machine.</span></span>
 
-<span data-ttu-id="b35d7-231">Double-cliquez sur le fichier et suivez les invites ou installez-le à partir du terminal :</span><span class="sxs-lookup"><span data-stu-id="b35d7-231">Either double-click the file and follow the prompts, or install it from the terminal:</span></span>
+<span data-ttu-id="c750f-229">Double-cliquez sur le fichier et suivez les invites ou installez-le à partir du terminal :</span><span class="sxs-lookup"><span data-stu-id="c750f-229">Either double-click the file and follow the prompts, or install it from the terminal:</span></span>
 
 ```sh
 sudo installer -pkg powershell-6.0.0-osx.10.12-x64.pkg -target /
 ```
 
-### <a name="uninstallation---macos-1012"></a><span data-ttu-id="b35d7-232">Désinstallation - macOS 10.12</span><span class="sxs-lookup"><span data-stu-id="b35d7-232">Uninstallation - macOS 10.12</span></span>
+### <a name="uninstallation---macos-1012"></a><span data-ttu-id="c750f-230">Désinstallation - macOS 10.12</span><span class="sxs-lookup"><span data-stu-id="c750f-230">Uninstallation - macOS 10.12</span></span>
 
-<span data-ttu-id="b35d7-233">Si vous avez installé PowerShell avec Homebrew, la désinstallation est simple :</span><span class="sxs-lookup"><span data-stu-id="b35d7-233">If you installed PowerShell with Homebrew, uninstallation is easy:</span></span>
+<span data-ttu-id="c750f-231">Si vous avez installé PowerShell avec Homebrew, la désinstallation est simple :</span><span class="sxs-lookup"><span data-stu-id="c750f-231">If you installed PowerShell with Homebrew, uninstallation is easy:</span></span>
 
 ```sh
 brew cask uninstall powershell
 ```
 
-<span data-ttu-id="b35d7-234">Si vous avez installé PowerShell par téléchargement direct, PowerShell doit être supprimé manuellement :</span><span class="sxs-lookup"><span data-stu-id="b35d7-234">If you installed PowerShell via direct download, PowerShell must be removed manually:</span></span>
+<span data-ttu-id="c750f-232">Si vous avez installé PowerShell par téléchargement direct, PowerShell doit être supprimé manuellement :</span><span class="sxs-lookup"><span data-stu-id="c750f-232">If you installed PowerShell via direct download, PowerShell must be removed manually:</span></span>
 
 ```sh
 sudo rm -rf /usr/local/bin/pwsh /usr/local/microsoft/powershell
 ```
 
-<span data-ttu-id="b35d7-235">Pour désinstaller les chemins PowerShell supplémentaires (par exemple, le chemin du profil utilisateur), consultez la section sur les [chemins][paths] ci-dessous dans ce document et supprimez les chemins souhaités avec `sudo rm`.</span><span class="sxs-lookup"><span data-stu-id="b35d7-235">To uninstall the additional PowerShell paths (such as the user profile path) please see the [paths][paths] section below in this document and remove the desired the paths with `sudo rm`.</span></span> <span data-ttu-id="b35d7-236">(Remarque : Cela est inutile si vous avez installé PowerShell avec Homebrew.)</span><span class="sxs-lookup"><span data-stu-id="b35d7-236">(Note: this is not necessary if you installed with Homebrew.)</span></span>
+<span data-ttu-id="c750f-233">Pour désinstaller les chemins PowerShell supplémentaires (par exemple, le chemin du profil utilisateur), consultez la section sur les [chemins][paths] ci-dessous dans ce document et supprimez les chemins souhaités avec `sudo rm`.</span><span class="sxs-lookup"><span data-stu-id="c750f-233">To uninstall the additional PowerShell paths (such as the user profile path) please see the [paths][paths] section below in this document and remove the desired the paths with `sudo rm`.</span></span> <span data-ttu-id="c750f-234">(Remarque : Cela est inutile si vous avez installé PowerShell avec Homebrew.)</span><span class="sxs-lookup"><span data-stu-id="c750f-234">(Note: this is not necessary if you installed with Homebrew.)</span></span>
 
 [paths]:#paths
 
-## <a name="kali"></a><span data-ttu-id="b35d7-237">Kali</span><span class="sxs-lookup"><span data-stu-id="b35d7-237">Kali</span></span>
+## <a name="kali"></a><span data-ttu-id="c750f-235">Kali</span><span class="sxs-lookup"><span data-stu-id="c750f-235">Kali</span></span>
 
-### <a name="installation"></a><span data-ttu-id="b35d7-238">Installation</span><span class="sxs-lookup"><span data-stu-id="b35d7-238">Installation</span></span>
+### <a name="installation"></a><span data-ttu-id="c750f-236">Installation</span><span class="sxs-lookup"><span data-stu-id="c750f-236">Installation</span></span>
 
 ```sh
 # Download & Install prerequisites
@@ -634,7 +642,7 @@ sudo dpkg -i powershell_6.0.0-1.ubuntu.16.04_amd64.deb
 pwsh
 ```
 
-### <a name="run-powershell-in-latest-kali-kali-gnulinux-rolling-without-installing-it"></a><span data-ttu-id="b35d7-239">Exécuter PowerShell dans la dernière version de Kali (publication en continu Kali GNU/Linux) sans l’installer</span><span class="sxs-lookup"><span data-stu-id="b35d7-239">Run PowerShell in latest Kali (Kali GNU/Linux Rolling) without installing it</span></span>
+### <a name="run-powershell-in-latest-kali-kali-gnulinux-rolling-without-installing-it"></a><span data-ttu-id="c750f-237">Exécuter PowerShell dans la dernière version de Kali (publication en continu Kali GNU/Linux) sans l’installer</span><span class="sxs-lookup"><span data-stu-id="c750f-237">Run PowerShell in latest Kali (Kali GNU/Linux Rolling) without installing it</span></span>
 
 ```sh
 # Grab the latest App Image
@@ -647,17 +655,17 @@ chmod a+x powershell-6.0.0-x86_64.AppImage
 ./powershell-6.0.0-x86_64.AppImage
 ```
 
-### <a name="uninstallation---kali"></a><span data-ttu-id="b35d7-240">Désinstallation - Kali</span><span class="sxs-lookup"><span data-stu-id="b35d7-240">Uninstallation - Kali</span></span>
+### <a name="uninstallation---kali"></a><span data-ttu-id="c750f-238">Désinstallation - Kali</span><span class="sxs-lookup"><span data-stu-id="c750f-238">Uninstallation - Kali</span></span>
 
 ```sh
 sudo dpkg -r powershell-6.0.0-x86_64.AppImage
 ```
 
-## <a name="raspbian"></a><span data-ttu-id="b35d7-241">Raspbian</span><span class="sxs-lookup"><span data-stu-id="b35d7-241">Raspbian</span></span>
+## <a name="raspbian"></a><span data-ttu-id="c750f-239">Raspbian</span><span class="sxs-lookup"><span data-stu-id="c750f-239">Raspbian</span></span>
 
-<span data-ttu-id="b35d7-242">Actuellement, PowerShell est uniquement pris en charge sur Raspbian Stretch.</span><span class="sxs-lookup"><span data-stu-id="b35d7-242">Currently, PowerShell is only supported on Raspbian Stretch.</span></span>
+<span data-ttu-id="c750f-240">Actuellement, PowerShell est uniquement pris en charge sur Raspbian Stretch.</span><span class="sxs-lookup"><span data-stu-id="c750f-240">Currently, PowerShell is only supported on Raspbian Stretch.</span></span>
 
-### <a name="installation"></a><span data-ttu-id="b35d7-243">Installation</span><span class="sxs-lookup"><span data-stu-id="b35d7-243">Installation</span></span>
+### <a name="installation"></a><span data-ttu-id="c750f-241">Installation</span><span class="sxs-lookup"><span data-stu-id="c750f-241">Installation</span></span>
 
 ```sh
 # Install prerequisites
@@ -676,40 +684,40 @@ tar -xvf ./powershell-6.0.0-linux-arm32.tar.gz -C ~/powershell
 ~/powershell/pwsh
 ```
 
-### <a name="uninstallation---raspbian"></a><span data-ttu-id="b35d7-244">Désinstallation - Raspbian</span><span class="sxs-lookup"><span data-stu-id="b35d7-244">Uninstallation - Raspbian</span></span>
+### <a name="uninstallation---raspbian"></a><span data-ttu-id="c750f-242">Désinstallation - Raspbian</span><span class="sxs-lookup"><span data-stu-id="c750f-242">Uninstallation - Raspbian</span></span>
 
 ```sh
 rm -rf ~/powershell
 ```
 
-## <a name="binary-archives"></a><span data-ttu-id="b35d7-245">Archives binaires</span><span class="sxs-lookup"><span data-stu-id="b35d7-245">Binary Archives</span></span>
+## <a name="binary-archives"></a><span data-ttu-id="c750f-243">Archives binaires</span><span class="sxs-lookup"><span data-stu-id="c750f-243">Binary Archives</span></span>
 
-<span data-ttu-id="b35d7-246">Les archives `tar.gz` binaires PowerShell sont fournies pour les plateformes macOS et Linux afin de permettre des scénarios de déploiement avancés.</span><span class="sxs-lookup"><span data-stu-id="b35d7-246">PowerShell binary `tar.gz` archives are provided for macOS and Linux platforms to enable advanced deployment scenarios.</span></span>
+<span data-ttu-id="c750f-244">Les archives `tar.gz` binaires PowerShell sont fournies pour les plateformes macOS et Linux afin de permettre des scénarios de déploiement avancés.</span><span class="sxs-lookup"><span data-stu-id="c750f-244">PowerShell binary `tar.gz` archives are provided for macOS and Linux platforms to enable advanced deployment scenarios.</span></span>
 
-### <a name="dependencies"></a><span data-ttu-id="b35d7-247">Dépendances</span><span class="sxs-lookup"><span data-stu-id="b35d7-247">Dependencies</span></span>
+### <a name="dependencies"></a><span data-ttu-id="c750f-245">Dépendances</span><span class="sxs-lookup"><span data-stu-id="c750f-245">Dependencies</span></span>
 
-<span data-ttu-id="b35d7-248">Pour Linux, PowerShell génère des binaires portables pour toutes les distributions Linux.</span><span class="sxs-lookup"><span data-stu-id="b35d7-248">For Linux, PowerShell builds portable binaries for all Linux distributions.</span></span>
-<span data-ttu-id="b35d7-249">Toutefois, le runtime .NET Core nécessite différentes dépendances sur différentes distributions et PowerShell se comporte par conséquent de la même manière.</span><span class="sxs-lookup"><span data-stu-id="b35d7-249">But .NET Core runtime requires different dependencies on different distributions, and hence PowerShell does the same.</span></span>
+<span data-ttu-id="c750f-246">Pour Linux, PowerShell génère des binaires portables pour toutes les distributions Linux.</span><span class="sxs-lookup"><span data-stu-id="c750f-246">For Linux, PowerShell builds portable binaries for all Linux distributions.</span></span>
+<span data-ttu-id="c750f-247">Toutefois, le runtime .NET Core nécessite différentes dépendances sur différentes distributions et PowerShell se comporte par conséquent de la même manière.</span><span class="sxs-lookup"><span data-stu-id="c750f-247">But .NET Core runtime requires different dependencies on different distributions, and hence PowerShell does the same.</span></span>
 
-<span data-ttu-id="b35d7-250">Le graphique suivant montre les dépendances .NET Core 2.0 sur différentes distributions Linux prises en charge officiellement.</span><span class="sxs-lookup"><span data-stu-id="b35d7-250">The following chart shows the .NET Core 2.0 dependencies on different Linux distributions that are officially supported.</span></span>
+<span data-ttu-id="c750f-248">Le graphique suivant montre les dépendances .NET Core 2.0 sur différentes distributions Linux prises en charge officiellement.</span><span class="sxs-lookup"><span data-stu-id="c750f-248">The following chart shows the .NET Core 2.0 dependencies on different Linux distributions that are officially supported.</span></span>
 
-| <span data-ttu-id="b35d7-251">Système d’exploitation</span><span class="sxs-lookup"><span data-stu-id="b35d7-251">OS</span></span>                 | <span data-ttu-id="b35d7-252">Dépendances</span><span class="sxs-lookup"><span data-stu-id="b35d7-252">Dependencies</span></span> |
+| <span data-ttu-id="c750f-249">Système d’exploitation</span><span class="sxs-lookup"><span data-stu-id="c750f-249">OS</span></span>                 | <span data-ttu-id="c750f-250">Dépendances</span><span class="sxs-lookup"><span data-stu-id="c750f-250">Dependencies</span></span> |
 | ------------------ | ------------ |
-| <span data-ttu-id="b35d7-253">Ubuntu 14.04</span><span class="sxs-lookup"><span data-stu-id="b35d7-253">Ubuntu 14.04</span></span>       | <span data-ttu-id="b35d7-254">libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6,</span><span class="sxs-lookup"><span data-stu-id="b35d7-254">libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6,</span></span> <br> <span data-ttu-id="b35d7-255">libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu52</span><span class="sxs-lookup"><span data-stu-id="b35d7-255">libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu52</span></span> |
-| <span data-ttu-id="b35d7-256">Ubuntu 16.04</span><span class="sxs-lookup"><span data-stu-id="b35d7-256">Ubuntu 16.04</span></span>       | <span data-ttu-id="b35d7-257">libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6,</span><span class="sxs-lookup"><span data-stu-id="b35d7-257">libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6,</span></span> <br> <span data-ttu-id="b35d7-258">libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu55</span><span class="sxs-lookup"><span data-stu-id="b35d7-258">libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu55</span></span> |
-| <span data-ttu-id="b35d7-259">Ubuntu 17.04</span><span class="sxs-lookup"><span data-stu-id="b35d7-259">Ubuntu 17.04</span></span>       | <span data-ttu-id="b35d7-260">libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6,</span><span class="sxs-lookup"><span data-stu-id="b35d7-260">libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6,</span></span> <br> <span data-ttu-id="b35d7-261">libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu57</span><span class="sxs-lookup"><span data-stu-id="b35d7-261">libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu57</span></span> |
-| <span data-ttu-id="b35d7-262">Debian 8 (Jessie)</span><span class="sxs-lookup"><span data-stu-id="b35d7-262">Debian 8 (Jessie)</span></span>  | <span data-ttu-id="b35d7-263">libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6,</span><span class="sxs-lookup"><span data-stu-id="b35d7-263">libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6,</span></span> <br> <span data-ttu-id="b35d7-264">libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu52</span><span class="sxs-lookup"><span data-stu-id="b35d7-264">libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu52</span></span> |
-| <span data-ttu-id="b35d7-265">Debian 9 (Stretch)</span><span class="sxs-lookup"><span data-stu-id="b35d7-265">Debian 9 (Stretch)</span></span> | <span data-ttu-id="b35d7-266">libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6,</span><span class="sxs-lookup"><span data-stu-id="b35d7-266">libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6,</span></span> <br> <span data-ttu-id="b35d7-267">libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.2, libicu57</span><span class="sxs-lookup"><span data-stu-id="b35d7-267">libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.2, libicu57</span></span> |
-| <span data-ttu-id="b35d7-268">CentOS 7</span><span class="sxs-lookup"><span data-stu-id="b35d7-268">CentOS 7</span></span> <br> <span data-ttu-id="b35d7-269">Oracle Linux 7</span><span class="sxs-lookup"><span data-stu-id="b35d7-269">Oracle Linux 7</span></span> <br> <span data-ttu-id="b35d7-270">RHEL 7</span><span class="sxs-lookup"><span data-stu-id="b35d7-270">RHEL 7</span></span> <br> <span data-ttu-id="b35d7-271">OpenSUSE 42.2</span><span class="sxs-lookup"><span data-stu-id="b35d7-271">OpenSUSE 42.2</span></span> <br> <span data-ttu-id="b35d7-272">Fedora 25</span><span class="sxs-lookup"><span data-stu-id="b35d7-272">Fedora 25</span></span> | <span data-ttu-id="b35d7-273">libunwind, libcurl, openssl-libs, libicu</span><span class="sxs-lookup"><span data-stu-id="b35d7-273">libunwind, libcurl, openssl-libs, libicu</span></span> |
-| <span data-ttu-id="b35d7-274">Fedora 26</span><span class="sxs-lookup"><span data-stu-id="b35d7-274">Fedora 26</span></span>          | <span data-ttu-id="b35d7-275">libunwind, libcurl, openssl-libs, libicu, compat-openssl10</span><span class="sxs-lookup"><span data-stu-id="b35d7-275">libunwind, libcurl, openssl-libs, libicu, compat-openssl10</span></span> |
+| <span data-ttu-id="c750f-251">Ubuntu 14.04</span><span class="sxs-lookup"><span data-stu-id="c750f-251">Ubuntu 14.04</span></span>       | <span data-ttu-id="c750f-252">libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6,</span><span class="sxs-lookup"><span data-stu-id="c750f-252">libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6,</span></span> <br> <span data-ttu-id="c750f-253">libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu52</span><span class="sxs-lookup"><span data-stu-id="c750f-253">libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu52</span></span> |
+| <span data-ttu-id="c750f-254">Ubuntu 16.04</span><span class="sxs-lookup"><span data-stu-id="c750f-254">Ubuntu 16.04</span></span>       | <span data-ttu-id="c750f-255">libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6,</span><span class="sxs-lookup"><span data-stu-id="c750f-255">libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6,</span></span> <br> <span data-ttu-id="c750f-256">libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu55</span><span class="sxs-lookup"><span data-stu-id="c750f-256">libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu55</span></span> |
+| <span data-ttu-id="c750f-257">Ubuntu 17.04</span><span class="sxs-lookup"><span data-stu-id="c750f-257">Ubuntu 17.04</span></span>       | <span data-ttu-id="c750f-258">libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6,</span><span class="sxs-lookup"><span data-stu-id="c750f-258">libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6,</span></span> <br> <span data-ttu-id="c750f-259">libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu57</span><span class="sxs-lookup"><span data-stu-id="c750f-259">libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu57</span></span> |
+| <span data-ttu-id="c750f-260">Debian 8 (Jessie)</span><span class="sxs-lookup"><span data-stu-id="c750f-260">Debian 8 (Jessie)</span></span>  | <span data-ttu-id="c750f-261">libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6,</span><span class="sxs-lookup"><span data-stu-id="c750f-261">libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6,</span></span> <br> <span data-ttu-id="c750f-262">libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu52</span><span class="sxs-lookup"><span data-stu-id="c750f-262">libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.0, libicu52</span></span> |
+| <span data-ttu-id="c750f-263">Debian 9 (Stretch)</span><span class="sxs-lookup"><span data-stu-id="c750f-263">Debian 9 (Stretch)</span></span> | <span data-ttu-id="c750f-264">libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6,</span><span class="sxs-lookup"><span data-stu-id="c750f-264">libc6, libgcc1, libgssapi-krb5-2, liblttng-ust0, libstdc++6,</span></span> <br> <span data-ttu-id="c750f-265">libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.2, libicu57</span><span class="sxs-lookup"><span data-stu-id="c750f-265">libcurl3, libunwind8, libuuid1, zlib1g, libssl1.0.2, libicu57</span></span> |
+| <span data-ttu-id="c750f-266">CentOS 7</span><span class="sxs-lookup"><span data-stu-id="c750f-266">CentOS 7</span></span> <br> <span data-ttu-id="c750f-267">Oracle Linux 7</span><span class="sxs-lookup"><span data-stu-id="c750f-267">Oracle Linux 7</span></span> <br> <span data-ttu-id="c750f-268">RHEL 7</span><span class="sxs-lookup"><span data-stu-id="c750f-268">RHEL 7</span></span> <br> <span data-ttu-id="c750f-269">OpenSUSE 42.2</span><span class="sxs-lookup"><span data-stu-id="c750f-269">OpenSUSE 42.2</span></span> <br> <span data-ttu-id="c750f-270">Fedora 25</span><span class="sxs-lookup"><span data-stu-id="c750f-270">Fedora 25</span></span> | <span data-ttu-id="c750f-271">libunwind, libcurl, openssl-libs, libicu</span><span class="sxs-lookup"><span data-stu-id="c750f-271">libunwind, libcurl, openssl-libs, libicu</span></span> |
+| <span data-ttu-id="c750f-272">Fedora 26</span><span class="sxs-lookup"><span data-stu-id="c750f-272">Fedora 26</span></span>          | <span data-ttu-id="c750f-273">libunwind, libcurl, openssl-libs, libicu, compat-openssl10</span><span class="sxs-lookup"><span data-stu-id="c750f-273">libunwind, libcurl, openssl-libs, libicu, compat-openssl10</span></span> |
 
-<span data-ttu-id="b35d7-276">Pour déployer les fichiers binaires PowerShell sur les distributions Linux qui ne sont pas officiellement prises en charge, vous devez installer les dépendances nécessaires pour le système d’exploitation cible dans une procédure distincte.</span><span class="sxs-lookup"><span data-stu-id="b35d7-276">In order to deploy PowerShell binaries on Linux distributions that are not officially supported, you would need to install the necessary dependencies for the target OS in separate steps.</span></span> <span data-ttu-id="b35d7-277">Par exemple, notre [fichier Dockerfile Amazon Linux][amazon-dockerfile] installe tout d’abord les dépendances, puis extrait l’archive `tar.gz` Linux.</span><span class="sxs-lookup"><span data-stu-id="b35d7-277">For example, our [Amazon Linux dockerfile][amazon-dockerfile] installs dependencies first, and then extracts the Linux `tar.gz` archive.</span></span>
+<span data-ttu-id="c750f-274">Pour déployer les fichiers binaires PowerShell sur les distributions Linux qui ne sont pas officiellement prises en charge, vous devez installer les dépendances nécessaires pour le système d’exploitation cible dans une procédure distincte.</span><span class="sxs-lookup"><span data-stu-id="c750f-274">In order to deploy PowerShell binaries on Linux distributions that are not officially supported, you would need to install the necessary dependencies for the target OS in separate steps.</span></span> <span data-ttu-id="c750f-275">Par exemple, notre [fichier Dockerfile Amazon Linux][amazon-dockerfile] installe tout d’abord les dépendances, puis extrait l’archive `tar.gz` Linux.</span><span class="sxs-lookup"><span data-stu-id="c750f-275">For example, our [Amazon Linux dockerfile][amazon-dockerfile] installs dependencies first, and then extracts the Linux `tar.gz` archive.</span></span>
 
 [amazon-dockerfile]: https://github.com/PowerShell/PowerShell/blob/master/docker/community/amazonlinux/Dockerfile
 
-### <a name="installation---binary-archives"></a><span data-ttu-id="b35d7-278">Installation - Archives binaires</span><span class="sxs-lookup"><span data-stu-id="b35d7-278">Installation - Binary Archives</span></span>
+### <a name="installation---binary-archives"></a><span data-ttu-id="c750f-276">Installation - Archives binaires</span><span class="sxs-lookup"><span data-stu-id="c750f-276">Installation - Binary Archives</span></span>
 
-#### <a name="linux"></a><span data-ttu-id="b35d7-279">Linux</span><span class="sxs-lookup"><span data-stu-id="b35d7-279">Linux</span></span>
+#### <a name="linux"></a><span data-ttu-id="c750f-277">Linux</span><span class="sxs-lookup"><span data-stu-id="c750f-277">Linux</span></span>
 
 ```sh
 # Download the powershell '.tar.gz' archive
@@ -728,7 +736,7 @@ sudo chmod +x /usr/local/microsoft/powershell/6.0.0/pwsh
 sudo ln -s /opt/microsoft/powershell/6.0.0/pwsh /usr/bin/pwsh
 ```
 
-#### <a name="macos"></a><span data-ttu-id="b35d7-280">macOS</span><span class="sxs-lookup"><span data-stu-id="b35d7-280">macOS</span></span>
+#### <a name="macos"></a><span data-ttu-id="c750f-278">macOS</span><span class="sxs-lookup"><span data-stu-id="c750f-278">macOS</span></span>
 
 ```sh
 # Download the powershell '.tar.gz' archive
@@ -747,35 +755,35 @@ sudo chmod +x /usr/local/microsoft/powershell/6.0.0/pwsh
 sudo ln -s /usr/local/microsoft/powershell/6.0.0/pwsh /usr/local/bin/pwsh
 ```
 
-### <a name="uninstallation---binary-archives"></a><span data-ttu-id="b35d7-281">Désinstallation - Archives binaires</span><span class="sxs-lookup"><span data-stu-id="b35d7-281">Uninstallation - Binary Archives</span></span>
+### <a name="uninstallation---binary-archives"></a><span data-ttu-id="c750f-279">Désinstallation - Archives binaires</span><span class="sxs-lookup"><span data-stu-id="c750f-279">Uninstallation - Binary Archives</span></span>
 
-#### <a name="linux"></a><span data-ttu-id="b35d7-282">Linux</span><span class="sxs-lookup"><span data-stu-id="b35d7-282">Linux</span></span>
+#### <a name="linux"></a><span data-ttu-id="c750f-280">Linux</span><span class="sxs-lookup"><span data-stu-id="c750f-280">Linux</span></span>
 
 ```sh
 sudo rm -rf /usr/bin/pwsh /opt/microsoft/powershell
 ```
 
-#### <a name="macos"></a><span data-ttu-id="b35d7-283">macOS</span><span class="sxs-lookup"><span data-stu-id="b35d7-283">macOS</span></span>
+#### <a name="macos"></a><span data-ttu-id="c750f-281">macOS</span><span class="sxs-lookup"><span data-stu-id="c750f-281">macOS</span></span>
 
 ```sh
 sudo rm -rf /usr/local/bin/pwsh /usr/local/microsoft/powershell
 ```
 
-## <a name="paths"></a><span data-ttu-id="b35d7-284">Chemins d’accès</span><span class="sxs-lookup"><span data-stu-id="b35d7-284">Paths</span></span>
+## <a name="paths"></a><span data-ttu-id="c750f-282">Chemins d’accès</span><span class="sxs-lookup"><span data-stu-id="c750f-282">Paths</span></span>
 
-* <span data-ttu-id="b35d7-285">`$PSHOME` est `/opt/microsoft/powershell/6.0.0/`</span><span class="sxs-lookup"><span data-stu-id="b35d7-285">`$PSHOME` is `/opt/microsoft/powershell/6.0.0/`</span></span>
-* <span data-ttu-id="b35d7-286">Les profils utilisateur sont lus à partir de `~/.config/powershell/profile.ps1`</span><span class="sxs-lookup"><span data-stu-id="b35d7-286">User profiles will be read from `~/.config/powershell/profile.ps1`</span></span>
-* <span data-ttu-id="b35d7-287">Les profils par défaut sont lus à partir de `$PSHOME/profile.ps1`</span><span class="sxs-lookup"><span data-stu-id="b35d7-287">Default profiles will be read from `$PSHOME/profile.ps1`</span></span>
-* <span data-ttu-id="b35d7-288">Les modules utilisateur sont lus à partir de `~/.local/share/powershell/Modules`</span><span class="sxs-lookup"><span data-stu-id="b35d7-288">User modules will be read from `~/.local/share/powershell/Modules`</span></span>
-* <span data-ttu-id="b35d7-289">Les modules partagés sont lus à partir de `/usr/local/share/powershell/Modules`</span><span class="sxs-lookup"><span data-stu-id="b35d7-289">Shared modules will be read from `/usr/local/share/powershell/Modules`</span></span>
-* <span data-ttu-id="b35d7-290">Les modules par défaut sont lus à partir de `$PSHOME/Modules`</span><span class="sxs-lookup"><span data-stu-id="b35d7-290">Default modules will be read from `$PSHOME/Modules`</span></span>
-* <span data-ttu-id="b35d7-291">L’historique PSReadline est enregistré dans `~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt`</span><span class="sxs-lookup"><span data-stu-id="b35d7-291">PSReadline history will be recorded to `~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt`</span></span>
+* <span data-ttu-id="c750f-283">`$PSHOME` est `/opt/microsoft/powershell/6.0.0/`</span><span class="sxs-lookup"><span data-stu-id="c750f-283">`$PSHOME` is `/opt/microsoft/powershell/6.0.0/`</span></span>
+* <span data-ttu-id="c750f-284">Les profils utilisateur sont lus à partir de `~/.config/powershell/profile.ps1`</span><span class="sxs-lookup"><span data-stu-id="c750f-284">User profiles will be read from `~/.config/powershell/profile.ps1`</span></span>
+* <span data-ttu-id="c750f-285">Les profils par défaut sont lus à partir de `$PSHOME/profile.ps1`</span><span class="sxs-lookup"><span data-stu-id="c750f-285">Default profiles will be read from `$PSHOME/profile.ps1`</span></span>
+* <span data-ttu-id="c750f-286">Les modules utilisateur sont lus à partir de `~/.local/share/powershell/Modules`</span><span class="sxs-lookup"><span data-stu-id="c750f-286">User modules will be read from `~/.local/share/powershell/Modules`</span></span>
+* <span data-ttu-id="c750f-287">Les modules partagés sont lus à partir de `/usr/local/share/powershell/Modules`</span><span class="sxs-lookup"><span data-stu-id="c750f-287">Shared modules will be read from `/usr/local/share/powershell/Modules`</span></span>
+* <span data-ttu-id="c750f-288">Les modules par défaut sont lus à partir de `$PSHOME/Modules`</span><span class="sxs-lookup"><span data-stu-id="c750f-288">Default modules will be read from `$PSHOME/Modules`</span></span>
+* <span data-ttu-id="c750f-289">L’historique PSReadline est enregistré dans `~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt`</span><span class="sxs-lookup"><span data-stu-id="c750f-289">PSReadline history will be recorded to `~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt`</span></span>
 
-<span data-ttu-id="b35d7-292">Les profils respectant la configuration par hôte de PowerShell, les profils spécifiques à l’hôte par défaut existent sur `Microsoft.PowerShell_profile.ps1` aux mêmes emplacements.</span><span class="sxs-lookup"><span data-stu-id="b35d7-292">The profiles respect PowerShell's per-host configuration, so the default host-specific profiles exists at `Microsoft.PowerShell_profile.ps1` in the same locations.</span></span>
+<span data-ttu-id="c750f-290">Les profils respectant la configuration par hôte de PowerShell, les profils spécifiques à l’hôte par défaut existent sur `Microsoft.PowerShell_profile.ps1` aux mêmes emplacements.</span><span class="sxs-lookup"><span data-stu-id="c750f-290">The profiles respect PowerShell's per-host configuration, so the default host-specific profiles exists at `Microsoft.PowerShell_profile.ps1` in the same locations.</span></span>
 
-<span data-ttu-id="b35d7-293">Sur Linux et macOS, la [spécification de répertoire de base XDG][xdg-bds] est respectée.</span><span class="sxs-lookup"><span data-stu-id="b35d7-293">On Linux and macOS, the [XDG Base Directory Specification][xdg-bds] is respected.</span></span>
+<span data-ttu-id="c750f-291">Sur Linux et macOS, la [spécification de répertoire de base XDG][xdg-bds] est respectée.</span><span class="sxs-lookup"><span data-stu-id="c750f-291">On Linux and macOS, the [XDG Base Directory Specification][xdg-bds] is respected.</span></span>
 
-<span data-ttu-id="b35d7-294">Notez que, comme macOS est une dérivation de BSD, au lieu de `/opt`, le préfixe utilisé est `/usr/local`.</span><span class="sxs-lookup"><span data-stu-id="b35d7-294">Note that because macOS is a derivation of BSD, instead of `/opt`, the prefix used is `/usr/local`.</span></span> <span data-ttu-id="b35d7-295">Par conséquent, `$PSHOME` est `/usr/local/microsoft/powershell/6.0.0/`, et le lien symbolique est placé sur `/usr/local/bin/pwsh`.</span><span class="sxs-lookup"><span data-stu-id="b35d7-295">Thus, `$PSHOME` is `/usr/local/microsoft/powershell/6.0.0/`, and the symlink is placed at `/usr/local/bin/pwsh`.</span></span>
+<span data-ttu-id="c750f-292">Notez que, comme macOS est une dérivation de BSD, au lieu de `/opt`, le préfixe utilisé est `/usr/local`.</span><span class="sxs-lookup"><span data-stu-id="c750f-292">Note that because macOS is a derivation of BSD, instead of `/opt`, the prefix used is `/usr/local`.</span></span> <span data-ttu-id="c750f-293">Par conséquent, `$PSHOME` est `/usr/local/microsoft/powershell/6.0.0/`, et le lien symbolique est placé sur `/usr/local/bin/pwsh`.</span><span class="sxs-lookup"><span data-stu-id="c750f-293">Thus, `$PSHOME` is `/usr/local/microsoft/powershell/6.0.0/`, and the symlink is placed at `/usr/local/bin/pwsh`.</span></span>
 
 [versions]: https://github.com/PowerShell/PowerShell/releases/latest
 [xdg-bds]: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
