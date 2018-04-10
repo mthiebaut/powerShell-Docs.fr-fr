@@ -1,16 +1,24 @@
 ---
-title: "Échec des applets de commande du Gestionnaire de commutateur réseau"
+ms.date: 06/12/2017
+author: JKeithB
+ms.topic: reference
+keywords: wmf,powershell,configuration
 contributor: vaibch
-ms.openlocfilehash: 8495d79aec54d93f94e745e2efccb5116ad5d944
-ms.sourcegitcommit: a3966253a165d193a42b43b9430a4dc76988f82f
+title: Échec des applets de commande du Gestionnaire de commutateur réseau
+ms.openlocfilehash: 626809513e7a8f1aa2c47a48c74e69ca4077f598
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
+ms.lasthandoff: 04/09/2018
 ---
-Les applets de commande du Gestionnaire de commutateur réseau peuvent être utilisées pour gérer les commutateurs réseau via WSMAN. Quelques applets de commande de ce module peuvent accepter des valeurs provenant de pipelines. Dans WMF 5.1 Preview, l’exécution des applets de commande qui peuvent accepter une valeur provenant d’un pipeline échoue quand les valeurs ne sont pas passées via des pipelines.
+Les applets de commande du Gestionnaire de commutateur réseau peuvent être utilisées pour gérer les commutateurs réseau via WSMAN.
+Quelques applets de commande de ce module peuvent accepter des valeurs provenant de pipelines.
+Dans WMF 5.1 Preview, l’exécution des applets de commande qui peuvent accepter une valeur provenant d’un pipeline échoue quand les valeurs ne sont pas passées via des pipelines.
 
 Si le paramètre « InputObject » n’est pas utilisé, l’applet de commande doit continuer à s’exécuter sans erreurs.
 
-Voici la liste des applets de commande affectées (ces applets de commande peuvent accepter une valeur pour le paramètre « InputObject » provenant d’un pipeline). Si cette valeur n’est pas passée depuis un pipeline, l’exécution de l’applet de commande échoue.
+Voici la liste des applets de commande affectées (ces applets de commande peuvent accepter une valeur pour le paramètre « InputObject » provenant d’un pipeline).
+Si cette valeur n’est pas passée depuis un pipeline, l’exécution de l’applet de commande échoue.
 
 - Disable-NetworkSwitchEthernetPort
 - Enable-NetworkSwitchEthernetPort

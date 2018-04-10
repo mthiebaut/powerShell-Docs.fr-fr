@@ -1,14 +1,14 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,configuration
-title: "Résolutions de bogues dans WMF 5.1"
-ms.openlocfilehash: 137095f50f9f926d3488ff9c1ce8270ddbda63eb
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+title: Résolutions de bogues dans WMF 5.1
+ms.openlocfilehash: dfd9ead447edfe9b7bdae23be14785df4b182bbc
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="bug-fixes-in-wmf-51"></a>Résolutions de bogues dans WMF 5.1#
 
@@ -18,9 +18,11 @@ Les bogues importants suivants sont résolus dans WMF 5.1 :
 
 ### <a name="module-auto-discovery-fully-honors-envpsmodulepath"></a>La détection automatique de module respecte entièrement `$env:PSModulePath` ###
 
-La détection automatique de module (chargement automatique des modules sans Import-Module explicite lors de l’appel d’une commande) a été introduite dans WMF 3. Lors de l’introduction, PowerShell vérifiait la présence des commandes dans `$PSHome\Modules` avant d’utiliser `$env:PSModulePath`.
+La détection automatique de module (chargement automatique des modules sans Import-Module explicite lors de l’appel d’une commande) a été introduite dans WMF 3.
+Lors de l’introduction, PowerShell vérifiait la présence des commandes dans `$PSHome\Modules` avant d’utiliser `$env:PSModulePath`.
 
-WMF 5.1 modifie ce comportement pour honorer `$env:PSModulePath` complètement. Ainsi, un module créé par l’utilisateur qui définit des commandes fournies par PowerShell (par exemple, `Get-ChildItem`) peut être chargé automatiquement et remplacer correctement la commande intégrée.
+WMF 5.1 modifie ce comportement pour honorer `$env:PSModulePath` complètement.
+Ainsi, un module créé par l’utilisateur qui définit des commandes fournies par PowerShell (par exemple, `Get-ChildItem`) peut être chargé automatiquement et remplacer correctement la commande intégrée.
 
 ### <a name="file-redirection-no-longer-hard-codes--encoding-unicode"></a>La redirection de fichiers ne code plus en dur `-Encoding Unicode` ###
 
@@ -40,7 +42,8 @@ Ce bogue a été résolu dans WMF 5.1.
 
 ### <a name="fixed-some-issues-with-com-objects"></a>Résolution de certains problèmes liés aux objets COM ###
 
-WMF 5.0 a introduit un nouveau binder COM pour appeler des méthodes sur des objets COM et accéder aux propriétés des objets COM. Ce nouveau binder a amélioré les performances de manière significative, mais il a également introduit des bogues qui ont été résolus dans WMF 5.1.
+WMF 5.0 a introduit un nouveau binder COM pour appeler des méthodes sur des objets COM et accéder aux propriétés des objets COM.
+Ce nouveau binder a amélioré les performances de manière significative, mais il a également introduit des bogues qui ont été résolus dans WMF 5.1.
 
 #### <a name="argument-conversions-were-not-always-performed-correctly"></a>Les conversions d’arguments n’étaient pas toujours effectuées correctement ####
 
@@ -75,8 +78,9 @@ Cette modification résout également le [problème 1752224 sur Connect](https:
 
 ### <a name="ordered-was-not-allowed-inside-classes"></a>`[ordered]` n’était pas autorisé à l’intérieur des classes ###
 
-WMF 5.0 a introduit des classes avec la validation des littéraux de type utilisée dans les classes.  
-`[ordered]` ressemble à un littéral de type, mais n’est pas un vrai type .NET. WMF 5.0 signalait de façon erronée une erreur sur `[ordered]` à l’intérieur d’une classe :
+WMF 5.0 a introduit des classes avec la validation des littéraux de type utilisée dans les classes.
+`[ordered]` ressemble à un littéral de type, mais n’est pas un vrai type .NET.
+WMF 5.0 signalait de façon erronée une erreur sur `[ordered]` à l’intérieur d’une classe :
 
 ```
 class CThing
@@ -95,7 +99,8 @@ Avant WMF 5.1, si plusieurs versions d’un module étaient installées et que 
 
 WMF 5.1 résout ce problème en retournant l’aide de la version la plus récente de la rubrique.
 
-`Get-Help` n’offre aucun moyen de spécifier la version pour laquelle vous souhaitez obtenir de l’aide. Pour contourner ce problème, accédez au répertoire de modules et affichez l’aide directement avec un outil tel que votre éditeur favori. 
+`Get-Help` n’offre aucun moyen de spécifier la version pour laquelle vous souhaitez obtenir de l’aide.
+Pour contourner ce problème, accédez au répertoire de modules et affichez l’aide directement avec un outil tel que votre éditeur favori.
 
 ### <a name="powershellexe-reading-from-stdin-stopped-working"></a>Impossible de lire powershell.exe à partir de STDIN
 
@@ -109,4 +114,3 @@ PowerShell utilise une requête WMI pour vérifier s’il a été démarré par 
 La requête WMI finit par injecter tzres.mui.dll dans chaque processus sur le système, car la classe WMI Win32_Process tente de récupérer des informations sur le fuseau horaire local.
 Il en résulte une hausse soudaine de l’utilisation du processeur dans wmiprvse (hôte du fournisseur WMI).
 Pour y remédier tout en obtenant les mêmes informations, utilisez des appels d’API Win32 à la place de WMI.
-

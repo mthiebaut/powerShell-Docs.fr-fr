@@ -1,27 +1,28 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: JKeithB
 ms.topic: conceptual
-keywords: gallery,powershell,cmdlet,psgallery
+keywords: gallery,powershell,applet de commande,psgallery
 title: psgallery_unlist_items
-ms.openlocfilehash: 8fa09c77e144f14bf0fd3493dff7650897100715
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: af48f2ca889dcc101d466e40f2ecbe0cdf62c066
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="unlisting-items"></a>Retrait d’éléments de la liste
 
 **Pourquoi la suppression d’un élément de PowerShell Gallery n’est-elle pas proposée en option ?**
 
-PowerShell Gallery ne gère pas la suppression définitive d’éléments par des utilisateurs. Cela permet à d’autres utilisateurs de s’attribuer des dépendances sur vos éléments sans se soucier d’arrêts possibles. Par exemple, si le module Pester dépend du module Azure et que le module Azure est supprimé de la galerie, l’utilisateur ne peut plus utiliser le module Pester.
+PowerShell Gallery ne gère pas la suppression définitive d’éléments par des utilisateurs.
+Cela permet à d’autres utilisateurs de s’attribuer des dépendances sur vos éléments sans se soucier d’arrêts possibles.
+Par exemple, si le module Pester dépend du module Azure et que le module Azure est supprimé de la galerie, l’utilisateur ne peut plus utiliser le module Pester.
 
 Toutefois, au lieu de supprimer un élément, vous pouvez le retirer de la liste.
 
 **À quoi sert le retrait d’un élément dans PowerShell Gallery ?**
 
-Le retrait de la liste d’un élément comme un module ou un script dans PowerShell Gallery permet de supprimer cet élément de l’onglet Éléments.
-De plus, les éléments retirés de la liste ne sont pas détectables à l’aide de la barre de recherche.
+Le retrait de la liste d’un élément comme un module ou un script dans PowerShell Gallery permet de supprimer cet élément de l’onglet Éléments. De plus, les éléments retirés de la liste ne sont pas détectables à l’aide de la barre de recherche.
 La seule façon de télécharger un élément non listé consiste à spécifier le nom et la version exacts de l’élément.
 De ce fait, le retrait d’un élément de la liste n’interrompt pas les autres modules ou scripts qui en dépendent.
 
@@ -35,6 +36,4 @@ Les scénarios de suppression valides sont les suivants :
 - Élément contenant un contenu potentiellement dangereux.
 - Élément contenant des données sensibles.
 
-Pour soumettre une demande de suppression d’élément aux administrateurs PowerShell Gallery, visitez la page des détails de votre élément, puis sélectionnez Contacter le support technique.  
-
-
+Pour soumettre une demande de suppression d’élément aux administrateurs PowerShell Gallery, visitez la page des détails de votre élément, puis sélectionnez Contacter le support technique.

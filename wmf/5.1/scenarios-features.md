@@ -1,14 +1,14 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,configuration
-title: "Nouveaux scénarios et fonctionnalités dans WMF 5.1"
-ms.openlocfilehash: da3dfb2243c00e3faf637d3dbcb70016cfabb011
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+title: Nouveaux scénarios et fonctionnalités dans WMF 5.1
+ms.openlocfilehash: f0e50fc87208d6ee9edba9c660b9243621f02bb4
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="new-scenarios-and-features-in-wmf-51"></a>Nouveaux scénarios et fonctionnalités dans WMF 5.1 #
 
@@ -26,35 +26,41 @@ ms.lasthandoff: 03/15/2018
 - [Filtrer les résultats de Get-Module par CompatiblePSEditions]()
 - [Empêcher l’exécution des scripts, sauf en cas d’exécution sur une édition compatible de PowerShell]()
 
-## <a name="catalog-cmdlets"></a>Applets de commande de catalogue  
+## <a name="catalog-cmdlets"></a>Applets de commande de catalogue
 
-Deux nouvelles applets de commande ont été ajoutées au module [Microsoft.PowerShell.Security](https://technet.microsoft.com/library/hh847877.aspx) pour générer et valider des fichiers catalogue Windows.  
+Deux nouvelles applets de commande ont été ajoutées au module [Microsoft.PowerShell.Security](https://technet.microsoft.com/library/hh847877.aspx) pour générer et valider des fichiers catalogue Windows.
 
-###<a name="new-filecatalog"></a>New-FileCatalog 
+###<a name="new-filecatalog"></a>New-FileCatalog
 --------------------------------
 
-New-FileCatalog crée un fichier catalogue Windows pour un ensemble de dossiers et de fichiers. Ce fichier catalogue contient des hachages pour tous les fichiers dans les chemins spécifiés. Les utilisateurs peuvent distribuer l’ensemble des dossiers ainsi que le fichier catalogue correspondant représentant ces dossiers. Ces informations sont utiles pour vérifier si des modifications ont été apportées aux dossiers depuis l’heure de création du catalogue.    
+New-FileCatalog crée un fichier catalogue Windows pour un ensemble de dossiers et de fichiers.
+Ce fichier catalogue contient des hachages pour tous les fichiers dans les chemins spécifiés.
+Les utilisateurs peuvent distribuer l’ensemble des dossiers ainsi que le fichier catalogue correspondant représentant ces dossiers.
+Ces informations sont utiles pour vérifier si des modifications ont été apportées aux dossiers depuis l’heure de création du catalogue.
 
 ```powershell
 New-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-CatalogVersion <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
-Les versions de catalogues 1 et 2 sont prises en charge. La version 1 utilise l’algorithme de hachage SHA1 pour créer des fichiers à hacher et la version 2 utilise SHA256. La version de catalogue 2 n’est pas prise en charge sur *Windows Server 2008 R2* ni *Windows 7*. Vous devez utiliser la version de catalogue 2 sur *Windows 8*, *Windows Server 2012* et les systèmes d’exploitation ultérieurs.  
+Les versions de catalogues 1 et 2 sont prises en charge.
+La version 1 utilise l’algorithme de hachage SHA1 pour créer des fichiers à hacher et la version 2 utilise SHA256.
+La version de catalogue 2 n’est pas prise en charge sur *Windows Server 2008 R2* ni *Windows 7*.
+Vous devez utiliser la version de catalogue 2 sur *Windows 8*, *Windows Server 2012* et les systèmes d’exploitation ultérieurs.
 
 ![](../images/NewFileCatalog.jpg)
 
-Le fichier catalogue est ainsi créé. 
+Le fichier catalogue est ainsi créé.
 
-![](../images/CatalogFile1.jpg)  
+![](../images/CatalogFile1.jpg)
 
-![](../images/CatalogFile2.jpg) 
+![](../images/CatalogFile2.jpg)
 
-Pour vérifier l’intégrité du fichier catalogue (Pester.cat dans l’exemple ci-dessus), signez-le à l’aide de l’applet de commande [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx).   
+Pour vérifier l’intégrité du fichier catalogue (Pester.cat dans l’exemple ci-dessus), signez-le à l’aide de l’applet de commande [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx).
 
 
-###<a name="test-filecatalog"></a>Test-FileCatalog 
+###<a name="test-filecatalog"></a>Test-FileCatalog
 --------------------------------
 
-Test-FileCatalog valide le catalogue qui représente un ensemble de dossiers. 
+Test-FileCatalog valide le catalogue qui représente un ensemble de dossiers.
 
 ```powershell
 Test-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-Detailed] [-FilesToSkip <string[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -62,7 +68,11 @@ Test-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-Detailed] [-
 
 ![](../images/TestFileCatalog.jpg)
 
-Cette applet de commande compare tous les fichiers à hacher et leurs chemins relatifs qui figurent dans le *catalogue* à ceux sur le *disque*. Si elle détecte une incompatibilité entre les fichiers à hacher et les chemins, elle retourne le statut *ValidationFailed*. Les utilisateurs peuvent récupérer toutes ces informations à l’aide du paramètre *-Detailed*. Elle affiche également le statut de signature du catalogue dans la propriété *Signature*, ce qui revient à appeler l’applet de commande [Get-AuthenticodeSignature](https://technet.microsoft.com/library/hh849805.aspx) sur le fichier catalogue. Les utilisateurs peuvent également ignorer des fichiers lors de la validation à l’aide du paramètre *-FilesToSkip*. 
+Cette applet de commande compare tous les fichiers à hacher et leurs chemins relatifs qui figurent dans le *catalogue* à ceux sur le *disque*.
+Si elle détecte une incompatibilité entre les fichiers à hacher et les chemins, elle retourne le statut *ValidationFailed*.
+Les utilisateurs peuvent récupérer toutes ces informations à l’aide du paramètre *-Detailed*.
+Elle affiche également le statut de signature du catalogue dans la propriété *Signature*, ce qui revient à appeler l’applet de commande [Get-AuthenticodeSignature](https://technet.microsoft.com/library/hh849805.aspx) sur le fichier catalogue.
+Les utilisateurs peuvent également ignorer des fichiers lors de la validation à l’aide du paramètre *-FilesToSkip*.
 
 
 ## <a name="module-analysis-cache"></a>Cache d’analyse de module ##
@@ -71,13 +81,17 @@ Cette applet de commande compare tous les fichiers à hacher et leurs chemins re
 Par défaut, ce cache est stocké dans le fichier `${env:LOCALAPPDATA}\Microsoft\Windows\PowerShell\ModuleAnalysisCache`.
 Le cache est normalement lu au démarrage lors de la recherche d’une commande, et les données y sont écrites sur un thread d’arrière-plan après l’importation d’un module.
 
-Pour modifier l’emplacement par défaut du cache, définissez la variable d’environnement `$env:PSModuleAnalysisCachePath` avant de démarrer PowerShell. Les modifications apportées à cette variable d’environnement affectent uniquement les processus enfants. La valeur doit nommer un chemin complet (y compris le nom de fichier) où PowerShell est autorisé à créer et à écrire des fichiers. Pour désactiver le cache de fichiers, vous pouvez affecter à cette valeur un emplacement non valide, par exemple :
+Pour modifier l’emplacement par défaut du cache, définissez la variable d’environnement `$env:PSModuleAnalysisCachePath` avant de démarrer PowerShell.
+Les modifications apportées à cette variable d’environnement affectent uniquement les processus enfants.
+La valeur doit nommer un chemin complet (y compris le nom de fichier) où PowerShell est autorisé à créer et à écrire des fichiers.
+Pour désactiver le cache de fichiers, vous pouvez affecter à cette valeur un emplacement non valide, par exemple :
 
 ```powershell
 $env:PSModuleAnalysisCachePath = 'nul'
 ```
 
-Cela définit un appareil non valide comme chemin. Si PowerShell ne peut pas écrire dans le chemin, aucune erreur n’est retournée, mais vous pouvez observer la présence d’une erreur signalée à l’aide d’un suivi :
+Cela définit un appareil non valide comme chemin.
+Si PowerShell ne peut pas écrire dans le chemin, aucune erreur n’est retournée, mais vous pouvez observer la présence d’une erreur signalée à l’aide d’un suivi :
 
 ```powershell
 Trace-Command -PSHost -Name Modules -Expression { Import-Module Microsoft.PowerShell.Management -Force }
@@ -94,12 +108,14 @@ Cette variable d’environnement prend effet immédiatement dans le processus ac
 
 ##<a name="specifying-module-version"></a>Spécification de la version de module
 
-Dans WMF 5.1, `using module` se comporte de la même façon que les autres constructions liées aux modules dans PowerShell. Auparavant, vous n’aviez aucun moyen de spécifier une version de module particulière. Si plusieurs versions étaient présentes, une erreur se produisait.
+Dans WMF 5.1, `using module` se comporte de la même façon que les autres constructions liées aux modules dans PowerShell.
+Auparavant, vous n’aviez aucun moyen de spécifier une version de module particulière. Si plusieurs versions étaient présentes, une erreur se produisait.
 
 
 Dans WMF 5.1 :
 
-* Vous pouvez utiliser [ModuleSpecification Constructor (Hashtable)](https://msdn.microsoft.com/library/jj136290). Cette table de hachage a le même format que `Get-Module -FullyQualifiedName`.
+* Vous pouvez utiliser [ModuleSpecification Constructor (Hashtable)](https://msdn.microsoft.com/library/jj136290).
+Cette table de hachage a le même format que `Get-Module -FullyQualifiedName`.
 
 **Exemple :** `using module @{ModuleName = 'PSReadLine'; RequiredVersion = '1.1'}`
 
@@ -107,7 +123,6 @@ Dans WMF 5.1 :
 
 
 ##<a name="improvements-to-pester"></a>Améliorations apportées à Pester
-Dans WMF 5.1, la version de Pester qui est fournie avec PowerShell a été mise à jour de la version 3.3.5 vers 3.4.0, avec l’ajout de la validation https://github.com/pester/Pester/pull/484/commits/3854ae8a1f215b39697ac6c2607baf42257b102e, ce qui permet à Pester de mieux fonctionner sur Nano Server. 
+Dans WMF 5.1, la version de Pester qui est fournie avec PowerShell a été mise à jour de la version 3.3.5 vers 3.4.0, avec l’ajout de la validation https://github.com/pester/Pester/pull/484/commits/3854ae8a1f215b39697ac6c2607baf42257b102e, ce qui permet à Pester de mieux fonctionner sur Nano Server.
 
 Vous pouvez examiner les modifications des versions 3.3.5 à 3.4.0 dans le fichier ChangeLog.md qui se trouve ici : https://github.com/pester/Pester/blob/master/CHANGELOG.md
-

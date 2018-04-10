@@ -1,14 +1,14 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: rpsqrd
 ms.topic: conceptual
 keywords: jea,powershell,security
-title: "Capacités de rôle JEA"
-ms.openlocfilehash: 083cab3b44348168fe20e8355f5076b28be78702
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+title: Capacités de rôle JEA
+ms.openlocfilehash: bd6d61443faf30e4056930a010103e6807c015c9
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="jea-role-capabilities"></a>Capacités de rôle JEA
 
@@ -280,4 +280,3 @@ Vous trouverez des informations supplémentaires sur l’identification des auto
 ## <a name="next-steps"></a>Étapes suivantes
 
 - [Créer un fichier de configuration de session](session-configurations.md)
-

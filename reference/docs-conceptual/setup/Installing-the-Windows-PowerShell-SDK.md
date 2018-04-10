@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: powershell,applet de commande
-title: Installation du SDK Windows PowerShell
+title: Installation du Kit de développement logiciel Windows PowerShell
 ms.assetid: c3636b45-61aa-4720-85f0-58312c4fc8f9
-ms.openlocfilehash: c6acba828e469e716c80603ec2432176652a7280
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 830b054c2cf2b49d935d3d96b79effa7131f6db2
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="installing-the-windows-powershell-sdk"></a>Installation du SDK Windows PowerShell
+# <a name="installing-the-windows-powershell-sdk"></a>Installation du Kit de développement logiciel Windows PowerShell
 
 La rubrique suivante explique comment installer le SDK PowerShell sur différentes versions de Windows.
 
@@ -266,4 +266,3 @@ La classe de fournisseur de cet exemple dérive de la classe [NavigationCmdletPr
 Montre comment remplacer les méthodes de contenu pour prendre en charge les appels aux applets de commande Clear-Content, Get-Content et Set-Content.
 Ces méthodes doivent être implémentées quand l’utilisateur a besoin de gérer le contenu des éléments situés dans le magasin de données.
 La classe de fournisseur de cet exemple dérive de la classe [NavigationCmdletProvider](https://technet.microsoft.com/library/system.management.automation.provider.navigationcmdletprovider.aspx) et implémente l’interface [IContentCmdletProvider](https://technet.microsoft.com/library/system.management.automation.provider.icontentcmdletprovider.aspx).
-

@@ -1,12 +1,12 @@
 ---
-ms.date: 2017-08-23
+ms.date: 08/23/2017
 keywords: powershell,applet de commande
-title: "Désinstaller Accès Web Windows PowerShell"
-ms.openlocfilehash: b6e6a2374e6b4b2be8742019c5f1e4d5b5d1abe3
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+title: Désinstaller Accès Web Windows PowerShell
+ms.openlocfilehash: 22c874d766445dccedd8494097daf16c30fa66ff
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="uninstall-windows-powershell-web-access"></a>désinstaller Accès Web Windows PowerShell
 
@@ -29,7 +29,7 @@ Les procédures de cette section vous permettent de désinstaller :
 
 - l’application Accès Web Windows PowerShell et
 - la fonctionnalité Accès Web Windows PowerShell
- 
+
 à l’aide d’applets de commande Windows PowerShell.
 
 ### <a name="step-1-delete-the-web-application-using-cmdlets"></a>Étape 1 : Supprimer l’application web à l’aide d’applets de commande
@@ -96,9 +96,9 @@ Les procédures de cette section vous permettent de désinstaller l’applicatio
 
 > ![Avertissement](images/SecurityNote.jpeg)**Remarque** :
 >
-> Le certificat n’est pas supprimé durant la désinstallation. 
+> Le certificat n’est pas supprimé durant la désinstallation.
 >
-> Si vous avez créé un certificat auto-signé ou utilisé un certificat de test et que vous souhaitez le supprimer, supprimez le certificat dans le Gestionnaire des services Internet. 
+> Si vous avez créé un certificat auto-signé ou utilisé un certificat de test et que vous souhaitez le supprimer, supprimez le certificat dans le Gestionnaire des services Internet.
 
 ### <a name="step-2-uninstall-windows-powershell-web-access-using-the-remove-roles-and-features-wizard"></a>Étape 2 : Désinstaller Accès Web Windows PowerShell à l’aide de l’Assistant Suppression de rôles et de fonctionnalités
 
@@ -110,7 +110,7 @@ Les procédures de cette section vous permettent de désinstaller l’applicatio
 
 1. Dans le menu **Gérer**, cliquez sur **Supprimer des rôles et fonctionnalités**.
 
-1. Dans la page **Sélectionner le serveur de destination**, sélectionnez le serveur ou le disque dur virtuel hors connexion sur lequel vous souhaitez supprimer la fonctionnalité. Pour sélectionner un disque dur virtuel hors connexion, choisissez d’abord le serveur sur lequel monter le disque dur virtuel, puis sélectionnez le fichier VHD. Une fois que vous avez sélectionné le serveur de destination, cliquez sur **Suivant**.
+1. Dans la page **Sélectionner le serveur de destination**, sélectionnez le serveur ou le disque dur virtuel hors connexion sur lequel vous souhaitez supprimer la fonctionnalité. Pour sélectionner un disque dur virtuel hors connexion, choisissez d’abord le serveur sur lequel monter le disque dur virtuel, puis sélectionnez le fichier VHD. Une fois que vous avez sélectionné le serveur de destination, cliquez sur **Suivant**.
 
 1. Cliquez de nouveau sur **Suivant** pour passer à la page **Supprimer des fonctionnalités**.
 

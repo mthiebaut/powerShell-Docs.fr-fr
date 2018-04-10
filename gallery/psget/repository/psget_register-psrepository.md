@@ -1,14 +1,14 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: manikb
 ms.topic: reference
 keywords: gallery,powershell,cmdlet,psget
 title: Register-PSRepository
-ms.openlocfilehash: badac5dc1157bbfa79058630c5c2f260d2151bd8
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: 7a7d1bf56a87161f6ec735399b15b19f317282b6
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="register-psrepository"></a>Register-PSRepository
 
@@ -16,7 +16,7 @@ Obtient les référentiels enregistrés sur un ordinateur.
 
 ## <a name="description"></a>Description
 
-L’applet de commande Register-PSRepository enregistre le référentiel en ligne pour les modules PowerShell. Après avoir enregistré un référentiel, vous pouvez le référencer à partir des applets de commande Find-Module, Install-Module et Publish-Module. Le référentiel enregistré devient le référentiel par défaut dans Find-Module et Install-Module. 
+L’applet de commande Register-PSRepository enregistre le référentiel en ligne pour les modules PowerShell. Après avoir enregistré un référentiel, vous pouvez le référencer à partir des applets de commande Find-Module, Install-Module et Publish-Module. Le référentiel enregistré devient le référentiel par défaut dans Find-Module et Install-Module.
 
 Les référentiels enregistrés sont spécifiques à l’utilisateur. Ils ne sont pas enregistrés dans un contexte à l’échelle du système.
 
@@ -33,7 +33,8 @@ Get-Command -Name Register-PSRepository -Module PowerShellGet -Syntax
 ## <a name="example-commands"></a>Exemples de commandes
 
 ### <a name="register-a-powershell-repository"></a>Inscrire un dépôt PowerShell
-Vous pouvez configurer PowerShellGet pour qu’il fonctionne sur des référentiels internes. Après avoir inscrit un dépôt, vous pouvez utiliser Find-Module et Install-Module pour l’utiliser.
+Vous pouvez configurer PowerShellGet pour qu’il fonctionne sur des référentiels internes.
+Après avoir inscrit un dépôt, vous pouvez utiliser Find-Module et Install-Module pour l’utiliser.
 
 ```powershell
 # Register a default repository
@@ -114,4 +115,3 @@ ScriptPublishLocation : https://customgallery.cloudapp.net/api/v2/package/
 ProviderOptions : {}
 
 ```
-

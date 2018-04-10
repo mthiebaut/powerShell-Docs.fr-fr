@@ -1,17 +1,17 @@
 ---
-description: 
+description: ''
 ms.topic: article
 ms.prod: powershell
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
+ms.date: 12/12/2016
 title: add pswaauthorizationrule
 ms.technology: powershell
 schema: 2.0.0
-ms.openlocfilehash: 71954fc115daee4c05662d11baa2bc6a0a417896
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+ms.openlocfilehash: 07ddd4df6a776f3ef6763242f8682747b9b97061
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="add-pswaauthorizationrule"></a>Add-PswaAuthorizationRule
 
@@ -62,7 +62,7 @@ Les règles d’autorisation évaluent les informations d’identification de co
 
 Spécifie le nom d’un groupe d’ordinateurs dans les Services de domaine Active Directory (AD DS) ou les groupes locaux auxquels cette règle accorde l’accès.
 
-|||  
+|||
 |-|-|
 | Alias                              | none                                 |
 | Obligatoire ?                            | true                                 |
@@ -75,7 +75,7 @@ Spécifie le nom d’un groupe d’ordinateurs dans les Services de domaine Acti
 
 Spécifie le nom de l’ordinateur auquel cette règle accorde l’accès.
 
-|||  
+|||
 |-|-|
 | Alias                              | none                                 |
 | Obligatoire ?                            | true                                 |
@@ -88,7 +88,7 @@ Spécifie le nom de l’ordinateur auquel cette règle accorde l’accès.
 
 Spécifie le nom de la configuration de session Windows PowerShell, également appelée instance d’exécution, à laquelle cette règle accorde l’accès.
 
-|||  
+|||
 |-|-|
 | Alias                              | none                                 |
 | Obligatoire ?                            | true                                 |
@@ -101,7 +101,7 @@ Spécifie le nom de la configuration de session Windows PowerShell, également a
 
 Spécifie un objet **PSCredential** pour un compte d’utilisateur que vous voulez utiliser pour changer les règles d’autorisation d’Accès Web Windows PowerShell. Si vous n’ajoutez pas ce paramètre, l’applet de commande utilise le compte d’utilisateur actuellement connecté. Pour obtenir un objet **PSCredential**, qui est nécessaire pour ajouter des règles d’autorisation à distance, exécutez l’applet de commande [Get-Credential](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.security/Get-Credential).
 
-|||  
+|||
 |-|-|
 | Alias                              | none                                 |
 | Obligatoire ?                            | false                                |
@@ -115,7 +115,7 @@ Spécifie un objet **PSCredential** pour un compte d’utilisateur que vous voul
 Force l’exécution de la commande sans demander la confirmation de l’utilisateur.\
 En outre, elle vous demande également confirmation quand vous entrez un nom d’ordinateur court ou simple (par exemple un nom qui n’est pas un nom de domaine ou qui n’est pas complet). La confirmation est demandée pour des raisons de sécurité, pour vous permettre d’utiliser le nom simple pour ajouter un ordinateur seulement si l’ordinateur est dans un groupe de travail.
 
-|||  
+|||
 |-|-|
 | Alias                              | none                                 |
 | Obligatoire ?                            | false                                |
@@ -128,7 +128,7 @@ En outre, elle vous demande également confirmation quand vous entrez un nom d�
 
 Spécifie le nom convivial de cette règle.
 
-|||  
+|||
 |-|-|
 | Alias                              | none                                 |
 | Obligatoire ?                            | false                                |
@@ -141,7 +141,7 @@ Spécifie le nom convivial de cette règle.
 
 Spécifie le nom d’un ou plusieurs groupes d’utilisateurs dans les services AD DS ou dans des groupes locaux auxquels cette règle accorde l’accès.
 
-|||  
+|||
 |-|-|
 | Alias                              | none                                 |
 | Obligatoire ?                            | true                                 |
@@ -155,7 +155,7 @@ Spécifie le nom d’un ou plusieurs groupes d’utilisateurs dans les services 
 Spécifie un ou plusieurs ordinateurs auxquels cette règle accorde l’accès. Le nom d’utilisateur peut être un compte d’utilisateur local sur l’ordinateur de passerelle ou un utilisateur dans AD DS.
 Le format est `domain\user` ou `computer\user`.
 
-|||  
+|||
 |-|-|
 | Alias                              | none                                 |
 | Obligatoire ?                            | true                                 |
@@ -217,9 +217,9 @@ Cet exemple montre comment entrer les valeurs des noms d’utilisateur via le pi
 Cet exemple montre comment tous les paramètres prennent des valeurs du pipeline par nom de propriété.
 
 ````PowerShell
-$o = New-Object -TypeName PSObject | 
-    Add-Member -Type NoteProperty -Name "UserName" -Value "contoso\user1" -PassThru | 
-    Add-Member -Type NoteProperty -Name "ComputerName" -Value "srv2.contoso.com" -PassThru | 
+$o = New-Object -TypeName PSObject |
+    Add-Member -Type NoteProperty -Name "UserName" -Value "contoso\user1" -PassThru |
+    Add-Member -Type NoteProperty -Name "ComputerName" -Value "srv2.contoso.com" -PassThru |
     Add-Member -Type NoteProperty -Name "ConfigurationName" -Value "Microsoft.PowerShell" –PassThru
 
 $o | Add-PswaAuthorizationRule -UserName contoso\user1 -ConfigurationName Microsoft.PowerShell

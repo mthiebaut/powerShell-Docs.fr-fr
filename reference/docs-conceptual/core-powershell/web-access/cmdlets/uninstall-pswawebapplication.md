@@ -1,16 +1,16 @@
 ---
-description: 
+description: ''
 ms.topic: article
 ms.prod: powershell
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
+ms.date: 12/12/2016
 title: uninstall pswawebapplication
 ms.technology: powershell
-ms.openlocfilehash: cc54c94426d754ff2d3bf658e3e92083f02cd6c7
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 139c8358a24e54dec630f8c78737728330ba4aa2
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="uninstall-pswawebapplication"></a>Uninstall-PswaWebApplication
 
@@ -36,7 +36,7 @@ L’applet de commande **Uninstall-PswaWebApplication** désinstalle l’applica
 Indique que le certificat de test créé par l’applet de commande **Install\_PswaWebApplication** (avec le paramètre **UseTestCertificate**) est supprimé.
 Seul le certificat de test avec le même nom que celui créé par l’applet de commande **Install-PswaWebApplication** est supprimé.
 
-|||  
+|||
 |-|-|
 | Alias                              | none                                 |
 | Obligatoire ?                            | false                                |
@@ -49,7 +49,7 @@ Seul le certificat de test avec le même nom que celui créé par l’applet de 
 
 Spécifie le nom de l’application web à désinstaller.
 
-|||  
+|||
 |-|-|
 | Alias                              | none                                 |
 | Obligatoire ?                            | false                                |
@@ -62,7 +62,7 @@ Spécifie le nom de l’application web à désinstaller.
 
 Spécifie le nom du site web où l’application web est installée.
 
-|||  
+|||
 |-|-|
 | Alias                              | none                                 |
 | Obligatoire ?                            | false                                |
@@ -75,7 +75,7 @@ Spécifie le nom du site web où l’application web est installée.
 
 Votre confirmation sera requise avant l’exécution de l’applet de commande.
 
-|||  
+|||
 |-|-|
 | Obligatoire ?                            | false                                |
 | Position ?                            | nommé                                |
@@ -88,7 +88,7 @@ Votre confirmation sera requise avant l’exécution de l’applet de commande.
 Présente les conséquences éventuelles de l’exécution de l’applet de commande.
 L’applet de commande n’est pas exécutée.
 
-|||  
+|||
 |-|-|
 | Obligatoire ?                            | false                                |
 | Position ?                            | nommé                                |

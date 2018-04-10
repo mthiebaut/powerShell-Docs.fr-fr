@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
-title: "Ressource File DSC"
-ms.openlocfilehash: 54d01bf0769eeed0354606eb3543973b0f850a6f
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+title: Ressource File DSC
+ms.openlocfilehash: 7964eabe5f4585600ae80f3e5ff7439c0d954769
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dsc-file-resource"></a>Ressource File DSC
 
@@ -15,8 +15,8 @@ ms.lasthandoff: 01/17/2018
 
 La ressource File dans DSC Windows PowerShell fournit un mécanisme permettant de gérer les fichiers et les dossiers sur un nœud cible.
 
->**Remarque :** Si la propriété **MatchSource** a la valeur **$false** (qui est la valeur par défaut), le contenu à copier est mis en cache la première fois que la configuration est appliquée. 
->Les applications suivantes de la configuration ne recherchent pas les fichiers et/ou dossiers mis à jour dans le chemin spécifié par **SourcePath**. Si vous voulez rechercher les mises à jour des fichiers et/ou dossiers dans **SourcePath** chaque fois que la configuration est appliquée, affectez à **MatchSource** la valeur **$true**. 
+>**Remarque :** Si la propriété **MatchSource** a la valeur **$false** (qui est la valeur par défaut), le contenu à copier est mis en cache la première fois que la configuration est appliquée.
+>Les applications suivantes de la configuration ne recherchent pas les fichiers et/ou dossiers mis à jour dans le chemin spécifié par **SourcePath**. Si vous voulez rechercher les mises à jour des fichiers et/ou dossiers dans **SourcePath** chaque fois que la configuration est appliquée, affectez à **MatchSource** la valeur **$true**.
 
 ## <a name="syntax"></a>Syntaxe
 ```
@@ -27,32 +27,32 @@ File [string] #ResourceName
     [ Checksum = [string] { CreatedDate | ModifiedDate | SHA-1 | SHA-256 | SHA-512 } ]
     [ Contents = [string] ]
     [ Credential = [PSCredential] ]
-    [ Ensure = [string] { Absent | Present } ] 
+    [ Ensure = [string] { Absent | Present } ]
     [ Force = [bool] ]
     [ Recurse = [bool] ]
     [ DependsOn = [string[]] ]
     [ SourcePath = [string] ]
-    [ Type = [string] { Directory | File } ] 
+    [ Type = [string] { Directory | File } ]
     [ MatchSource = [bool] ]
 }
 ```
 
 ## <a name="properties"></a>Propriétés
 
-|  Propriété  |  Description   | 
-|---|---| 
-| DestinationPath| Spécifie l’emplacement d’un fichier ou d’un répertoire dont vous voulez garantir l’état.| 
-| Attributes| Spécifie l’état souhaité des attributs du fichier ou du répertoire cible.| 
-| Checksum| Spécifie le type de somme de contrôle à utiliser pour déterminer si deux fichiers sont identiques. Si __Checksum__ n’est pas spécifié, seul le nom du fichier ou du répertoire est utilisé pour la comparaison. Les valeurs valides sont les suivantes : SHA-1, SHA-256, SHA-512, createdDate, modifiedDate.| 
-| Contenu| Spécifie le contenu d’un fichier, tel qu’une chaîne spécifique.| 
-| Credential| Indique les informations d’identification qui sont nécessaires pour accéder aux ressources, telles que des fichiers sources, si ce type d’accès est nécessaire.| 
-| Ensure| Indique si le fichier ou le répertoire existe. Définissez cette propriété sur Absent pour vous assurer que le fichier ou le répertoire n’existe pas. Définissez cette propriété sur Present pour vous assurer que le fichier ou le répertoire existe. La valeur par défaut est Present.| 
-| Force| Certaines opérations de fichier (par exemple, le remplacement d’un fichier ou la suppression d’un répertoire non vide) entraînent une erreur. La propriété Force permet d’ignorer ces erreurs. La valeur par défaut est __$false__.| 
-| Recurse| Indique si des sous-répertoires sont inclus. Définissez cette propriété sur __$true__ pour indiquer que vous voulez inclure des sous-répertoires. La valeur par défaut est __$false__. **Remarque** : Cette propriété est valide uniquement quand la propriété Type est définie sur Directory.| 
-| DependsOn | Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource __ResourceName__ de type __ResourceType__, la syntaxe pour utiliser cette propriété est `DependsOn = "[ResourceType]ResourceName"`.| 
-| SourcePath| Indique le chemin à partir duquel copier la ressource de fichier ou de dossier.| 
-| Type| Indique si la ressource actuellement configurée est un répertoire ou un fichier. Définissez cette propriété sur Directory pour indiquer que la ressource est un répertoire. Affectez-lui la valeur File pour indiquer que la ressource est un fichier. La valeur par défaut est File.| 
-| MatchSource| Si la valeur par défaut __$false__ est définie, tous les fichiers de la source (par exemple, les fichiers A, B et C) sont ajoutés à la destination quand la configuration est appliquée pour la première fois. Si un nouveau fichier (D) est ajouté à la source, il n’est pas ajouté à la destination, même si la configuration est de nouveau appliquée plus tard. Si la valeur est __$true__, chaque fois que la configuration est appliquée, les nouveaux fichiers détectés par la suite sur la source (comme le fichier D de cet exemple) seront ajoutés à la destination. La valeur par défaut est **$false**.| 
+|  Propriété  |  Description   |
+|---|---|
+| DestinationPath| Spécifie l’emplacement d’un fichier ou d’un répertoire dont vous voulez garantir l’état.|
+| Attributes| Spécifie l’état souhaité des attributs du fichier ou du répertoire cible.|
+| Checksum| Spécifie le type de somme de contrôle à utiliser pour déterminer si deux fichiers sont identiques. Si __Checksum__ n’est pas spécifié, seul le nom du fichier ou du répertoire est utilisé pour la comparaison. Les valeurs valides sont les suivantes : SHA-1, SHA-256, SHA-512, createdDate, modifiedDate.|
+| Contenu| Spécifie le contenu d’un fichier, tel qu’une chaîne spécifique.|
+| Credential| Indique les informations d’identification qui sont nécessaires pour accéder aux ressources, telles que des fichiers sources, si ce type d’accès est nécessaire.|
+| Ensure| Indique si le fichier ou le répertoire existe. Définissez cette propriété sur Absent pour vous assurer que le fichier ou le répertoire n’existe pas. Définissez cette propriété sur Present pour vous assurer que le fichier ou le répertoire existe. La valeur par défaut est Present.|
+| Force| Certaines opérations de fichier (par exemple, le remplacement d’un fichier ou la suppression d’un répertoire non vide) entraînent une erreur. La propriété Force permet d’ignorer ces erreurs. La valeur par défaut est __$false__.|
+| Recurse| Indique si des sous-répertoires sont inclus. Définissez cette propriété sur __$true__ pour indiquer que vous voulez inclure des sous-répertoires. La valeur par défaut est __$false__. **Remarque** : Cette propriété est valide uniquement quand la propriété Type est définie sur Directory.|
+| DependsOn | Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource __ResourceName__ de type __ResourceType__, la syntaxe pour utiliser cette propriété est `DependsOn = "[ResourceType]ResourceName"`.|
+| SourcePath| Indique le chemin à partir duquel copier la ressource de fichier ou de dossier.|
+| Type| Indique si la ressource actuellement configurée est un répertoire ou un fichier. Définissez cette propriété sur Directory pour indiquer que la ressource est un répertoire. Affectez-lui la valeur File pour indiquer que la ressource est un fichier. La valeur par défaut est File.|
+| MatchSource| Si la valeur par défaut __$false__ est définie, tous les fichiers de la source (par exemple, les fichiers A, B et C) sont ajoutés à la destination quand la configuration est appliquée pour la première fois. Si un nouveau fichier (D) est ajouté à la source, il n’est pas ajouté à la destination, même si la configuration est de nouveau appliquée plus tard. Si la valeur est __$true__, chaque fois que la configuration est appliquée, les nouveaux fichiers détectés par la suite sur la source (comme le fichier D de cet exemple) seront ajoutés à la destination. La valeur par défaut est **$false**.|
 
 ## <a name="example"></a>Exemple
 
@@ -69,7 +69,7 @@ Configuration FileResourceDemo
             Type = "Directory" # Default is "File".
             Recurse = $true # Ensure presence of subdirectories, too
             SourcePath = "C:\Users\Public\Documents\DSCDemo\DemoSource"
-            DestinationPath = "C:\Users\Public\Documents\DSCDemo\DemoDestination"    
+            DestinationPath = "C:\Users\Public\Documents\DSCDemo\DemoDestination"
         }
 
         Log AfterDirectoryCopy
@@ -81,4 +81,3 @@ Configuration FileResourceDemo
     }
 }
 ```
-

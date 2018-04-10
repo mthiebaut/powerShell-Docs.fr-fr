@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: powershell,applet de commande
 title: Utilisation de variables pour stocker des objets
 ms.assetid: b1688d73-c173-491e-9ba6-6d0c1cc852de
-ms.openlocfilehash: 9a95d421fa2686608a565987c16fecc41c3c6d20
-ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
+ms.openlocfilehash: e52f0a344d0ad13db42b34bed912d584c99b0e30
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="using-variables-to-store-objects"></a>Utilisation de variables pour stocker des objets
 PowerShell fonctionne avec des objets. PowerShell permet de créer des variables (essentiellement des objets nommés) pour conserver les sorties en vue d’une utilisation ultérieure. Si vous êtes habitué à utiliser des variables dans d’autres interpréteurs de commandes, n’oubliez pas que les variables PowerShell sont des objets, et non du texte.
@@ -97,4 +97,3 @@ C:\WINDOWS
 ```
 
 Vous pouvez également créer et modifier des variables d’environnement à partir de PowerShell. Les variables d’environnement auxquelles vous accédez à partir de Windows PowerShell sont conformes aux règles normales applicables aux variables d’environnement ailleurs dans Windows.
-

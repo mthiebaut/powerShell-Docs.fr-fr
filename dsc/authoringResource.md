@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
-title: "Création de ressources DSC Windows PowerShell personnalisées"
-ms.openlocfilehash: 4751bcaab1996ee3164bd2a2f430c3b188712860
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+title: Création de ressources DSC Windows PowerShell personnalisées
+ms.openlocfilehash: 7da4741a773d40da75c6ef667c35f86e1bae74bf
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="build-custom-windows-powershell-desired-state-configuration-resources"></a>Création de ressources DSC Windows PowerShell personnalisées
 
@@ -24,4 +24,3 @@ Une ressource DSC est un module Windows PowerShell. Le module contient à la fo
 * [Écriture d’une ressource DSC personnalisée avec les classes PowerShell](authoringResourceClass.md)
 * [Ressources composites : utilisation d’une configuration DSC comme ressource](authoringResourceComposite.md)
 * [Utilisation du Concepteur de ressources](authoringResourceMofDesigner.md)
-

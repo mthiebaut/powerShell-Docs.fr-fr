@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: powershell,applet de commande
-title: "Présentation des concepts importants de Windows PowerShell"
+title: Présentation des concepts importants de Windows PowerShell
 ms.assetid: 3e601e38-4520-4578-a48d-b6779f1d35ee
-ms.openlocfilehash: 1ffcfefcc7ffc7c98ba4d1e3ccc9a59cd9b0baac
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 07ceaa2f3e6a192c6281cb4c99aed4c3f66afc7e
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="understanding-important-windows-powershell-concepts"></a>Présentation des concepts importants de Windows PowerShell
 La conception de Windows PowerShell intègre des concepts de différents environnements. Plusieurs d’entre eux sont déjà familiers aux utilisateurs ayant une expérience d’interpréteurs de commandes ou d’environnements de programmation spécifiques, mais très peu de gens les connaissent tous. L’examen de certains de ces concepts permet d’avoir une vue d’ensemble utile de l’interpréteur de commandes.
@@ -43,4 +43,3 @@ Il est important de comprendre que les fonctionnalités d’aide de Windows Powe
 Windows PowerShell dispose de fonctionnalités et de mots clés de syntaxe qui sont très similaires à ceux utilisés dans le langage de programmation C#, car Windows PowerShell est basé sur .NET Framework. L’apprentissage de Windows PowerShell facilite sensiblement l’apprentissage de C#, si ce langage vous intéresse.
 
 Si vous n’êtes pas programmeur C#, cette similitude est sans importance. En revanche, si le langage C# vous est familier, les similitudes peuvent faciliter sensiblement l’apprentissage de Windows PowerShell.
-

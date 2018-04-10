@@ -1,22 +1,22 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
-keywords: wmf,powershell,setup
-ms.openlocfilehash: c3645a6ba83081bd5ac31a13af0f67f6538db22a
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+keywords: wmf,powershell,configuration
+ms.openlocfilehash: 9065315ef39129e6a28234d972fe350fd5e7e11d
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="creating-and-connecting-to-a-jea-endpoint"></a>Création et connexion à un point de terminaison JEA
 Pour créer un point de terminaison JEA, vous devez créer et inscrire un fichier de configuration de session PowerShell spécialement configuré, que vous pouvez générer avec l’applet de commande **New-PSSessionConfigurationFile**.
 
 ```powershell
-New-PSSessionConfigurationFile -SessionType RestrictedRemoteServer -TranscriptDirectory "C:\ProgramData\JEATranscripts" -RunAsVirtualAccount -RoleDefinitions @{ 'CONTOSO\NonAdmin_Operators' = @{ RoleCapabilities = 'Maintenance' }} -Path "$env:ProgramData\JEAConfiguration\Demo.pssc" 
+New-PSSessionConfigurationFile -SessionType RestrictedRemoteServer -TranscriptDirectory "C:\ProgramData\JEATranscripts" -RunAsVirtualAccount -RoleDefinitions @{ 'CONTOSO\NonAdmin_Operators' = @{ RoleCapabilities = 'Maintenance' }} -Path "$env:ProgramData\JEAConfiguration\Demo.pssc"
 ```
 
-Cela crée un fichier de configuration de session qui ressemble à ceci : 
+Cela crée un fichier de configuration de session qui ressemble à ceci :
 ```powershell
 @{
 
@@ -52,7 +52,7 @@ RoleDefinitions = @{
     'CONTOSO\NonAdmin_Operators' = @{
         'RoleCapabilities' = 'Maintenance' } }
 
-} 
+}
 ```
 Quand vous créez un point de terminaison JEA, vous devez définir les paramètres suivants de la commande (et les clés correspondantes dans le fichier) :
 1.  SessionType doit avoir la valeur RestrictedRemoteServer
@@ -64,7 +64,7 @@ Quand vous créez un point de terminaison JEA, vous devez définir les paramètr
 Le champ RoleDefinitions définit les groupes qui avaient accès aux différentes capacités de rôle.  Une capacité de rôle est un fichier qui définit un ensemble de capacités qui seront exposées aux utilisateurs qui se connectent.  Vous pouvez créer des capacités de rôle avec la commande **New-PSRoleCapabilityFile**.
 
 ```powershell
-New-PSRoleCapabilityFile -Path "$env:ProgramFiles\WindowsPowerShell\Modules\DemoModule\RoleCapabilities\Maintenance.psrc" 
+New-PSRoleCapabilityFile -Path "$env:ProgramFiles\WindowsPowerShell\Modules\DemoModule\RoleCapabilities\Maintenance.psrc"
 ```
 
 Cela génère un modèle de capacité de rôle qui ressemble à ceci :
@@ -128,7 +128,7 @@ Copyright = '(c) 2015 Administrator. All rights reserved.'
 # Assemblies to load when applied to a session
 # AssembliesToLoad = 'System.Web', 'System.OtherAssembly, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
 
-} 
+}
 
 ```
 Pour pouvoir être utilisées par une configuration de session JEA, les capacités de rôle doivent être enregistrées en tant que modules PowerShell valides dans un répertoire nommé « RoleCapabilities ». Un module peut avoir plusieurs fichiers de capacités de rôle, si vous le souhaitez.
@@ -138,7 +138,7 @@ Pour commencer à configurer les applets de commande, les fonctions, les alias e
 Pour finir, une fois que vous avez terminé de personnaliser votre configuration de session et les capacités de rôle associées, enregistrez cette configuration de session et créez le point de terminaison en exécutant **Register-PSSessionConfiguration**.
 
 ```powershell
-Register-PSSessionConfiguration -Name Maintenance -Path "C:\ProgramData\JEAConfiguration\Demo.pssc" 
+Register-PSSessionConfiguration -Name Maintenance -Path "C:\ProgramData\JEAConfiguration\Demo.pssc"
 ```
 
 ## <a name="connect-to-a-jea-endpoint"></a>Se connecter à un point de terminaison JEA
@@ -148,4 +148,3 @@ La connexion à un point de terminaison JEA s’effectue comme pour tout autre p
 Enter-PSSession -ConfigurationName Maintenance -ComputerName localhost
 ```
 Une fois connecté à la session JEA, vous êtes limité à l’exécution des commandes figurant dans la liste approuvée dans les capacités de rôle auxquelles vous avez accès. Si vous essayez d’exécuter une commande non autorisée pour votre rôle, une erreur se produit.
-

@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: powershell,applet de commande
 title: Apprentissage des noms dans Windows PowerShell
 ms.assetid: b4d0fd22-8298-4ee6-82ae-9b6f2907c986
-ms.openlocfilehash: 28c821c4a617b6ac775dbdda8ade3d15c3f218c3
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 381aa619a41ccacb2ff3a4cdbc2b75b7f04282d1
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="learning-windows-powershell-names"></a>Apprentissage des noms dans Windows PowerShell
 L’apprentissage des noms et des paramètres des commandes nécessite beaucoup de temps avec la plupart des interfaces de ligne de commande. Le problème est qu’il existe très peu de modèles, de sorte que la seule façon d’apprendre consiste à mémoriser chaque commande et chaque paramètre que vous devez utiliser régulièrement.
@@ -57,7 +57,7 @@ Cmdlet          Resume-Service                  Resume-Service [-Name] <Stri...
 Cmdlet          Set-Service                     Set-Service [-Name] <String>...
 Cmdlet          Start-Service                   Start-Service [-Name] <Strin...
 Cmdlet          Stop-Service                    Stop-Service [-Name] <String...
-Cmdlet          Suspend-Service                 Suspend-Service [-Name] <Str... 
+Cmdlet          Suspend-Service                 Suspend-Service [-Name] <Str...
 ...
 ```
 
@@ -91,4 +91,3 @@ Windows PowerShell dispose de plusieurs paramètres appelés *paramètres commun
 Les principales applets de commande Windows PowerShell utilisent des noms standard pour des paramètres similaires. Bien que le mode d’utilisation des noms de paramètre ne soit pas imposé, il existe des instructions d’utilisation explicites visant à encourager la normalisation.
 
 Par exemple, les instructions recommandent d’attribuer à un paramètre faisant référence à un ordinateur un nom de type **ComputerName**, plutôt que Serveur, Hôte, Système, Nœud ou un autre nom commun. Parmi les noms de paramètres importants suggérés figurent **Force**, **Exclude**, **Include**, **PassThru**, **Path** et **CaseSensitive**.
-

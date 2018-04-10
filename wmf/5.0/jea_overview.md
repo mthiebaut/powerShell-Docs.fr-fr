@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
-keywords: wmf,powershell,setup
-ms.openlocfilehash: 4e0c1638bf10e57580a463c46595ac9bc142a5b4
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+keywords: wmf,powershell,configuration
+ms.openlocfilehash: 847bd978b0a8ad8daf26d37ee8759f88fba67f31
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="just-enough-administration-jea"></a>Administration Just Enough (JEA)
+# <a name="just-enough-administration-jea"></a>Just Enough Administration (JEA)
 Just Enough Administration est une nouvelle fonctionnalité de WMF 5.0 qui autorise l’administration basée sur des rôles par le biais de l’accès distant PowerShell.  Elle étend l’infrastructure de point de terminaison contrainte existante en autorisant les utilisateurs non-administrateurs à exécuter des commandes, des scripts et des exécutables spécifiques en tant qu’administrateur.  Cela vous permet de réduire le nombre d’administrateurs complets dans votre environnement et d’améliorer la sécurité.  JEA fonctionne pour tout ce que vous gérez par le biais de PowerShell. Si vous pouvez gérer quelque chose avec PowerShell, JEA peut vous aider à le faire de manière plus sécurisée.  Pour découvrir Just Enough Administration de manière détaillée, consultez le [guide d’expérience](http://aka.ms/JEA).
 
 Contrairement aux anciens points de terminaison contraints, JEA est à la fois puissant et facile à configurer.  Les fonctionnalités utilisateur dans JEA peuvent être contrôlées de manière granulaire, jusqu’à limiter les jeux de paramètres et les valeurs qui peuvent être fournis à une commande spécifique. Les actions de l’utilisateur sont exécutées dans le contexte d’un compte virtuel ponctuel qui est autorisé à effectuer les actions d’administrateur.  Vous pouvez enregistrer les commandes appelées par l’utilisateur dans un journal afin d’effectuer un audit de sécurité.
@@ -19,4 +19,3 @@ JEA vous permet de créer des points de terminaison contraints spécialement con
 1. Les utilisateurs qui s’y connectent « s’exécutent en tant que » compte privilégié virtuel qui existe uniquement pendant la durée de la session à distance.  Par défaut, ce compte virtuel est membre du groupe Administrateurs intégré, et également administrateur de domaine sur les contrôleurs de domaine (notez que ces autorisations sont configurables). Le fait de se connecter sous un utilisateur et de s’exécuter en tant qu’autre utilisateur privilégié permet aux utilisateurs sans privilèges d’effectuer des tâches administratives spécifiques sans que des droits d’administration leur soient accordés sur vos systèmes.
 2. Le point de terminaison est verrouillé.  Cela signifie que PowerShell s’exécute en mode sans langage.  Seuls des commandes, scripts et exécutables spécifiques sont visibles par l’utilisateur.
 3. Des ensembles de capacités différents sont présentés aux utilisateurs qui se connectent en fonction de l’appartenance au groupe.  Vous pouvez fournir différentes capacités à différents rôles sur le même point de terminaison.
-

@@ -1,14 +1,14 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: manikb
 ms.topic: reference
 keywords: gallery,powershell,cmdlet,psget
 title: Uninstall-Module
-ms.openlocfilehash: 3c4d8faa63aba6b4434d42a19a219baf84122591
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 90f26e64a8a6bc95faf444b1d3ce82a8e3bbefc1
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="uninstall-module"></a>Uninstall-Module
 
@@ -16,7 +16,8 @@ Désinstalle un module qui a été installé à l’aide des applets de commande
 
 ## <a name="description"></a>Description
 
-L’applet de commande Uninstall-Module désinstalle le module spécifié de l’ordinateur local. Vous ne pouvez pas désinstaller un module si certains autres modules ont une dépendance sur celui-ci.
+L’applet de commande Uninstall-Module désinstalle le module spécifié de l’ordinateur local.
+Vous ne pouvez pas désinstaller un module si certains autres modules ont une dépendance sur celui-ci.
 Les applets de commande Uninstall-Module vérifient également si le module en cours de désinstallation est en cours d’utilisation ou non. Une erreur est générée si le module est en cours d’utilisation.
 
 ## <a name="cmdlet-syntax"></a>Syntaxe de l’applet de commande
@@ -126,4 +127,3 @@ At C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PSModule.psm
    , Exception
     + FullyQualifiedErrorId : NoMatchFound,Microsoft.PowerShell.PackageManagement.Cmdlets.UninstallPackage
 ```
-

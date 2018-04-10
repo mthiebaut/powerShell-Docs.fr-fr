@@ -58,7 +58,7 @@ Si vous voulez utiliser une installation spécifique de PowerShell avec Visual S
 
 1. Cliquez sur **Fichier -> Préférences -> Paramètres**
 1. Deux volets de l’éditeur apparaissent.
-   Dans le volet le plus à droite (`settings.json`), insérez le paramètre ci-dessous approprié pour votre système d’exploitation quelque part entre les deux accolades (`{` et `}`) et remplacez  *<version>*  par la version installée de PowerShell :
+   Dans le volet le plus à droite (`settings.json`), insérez le paramètre ci-dessous approprié pour votre système d’exploitation quelque part entre les deux accolades (`{` et `}`) et remplacez *<version>* par la version installée de PowerShell :
 
   ```json
     // On Windows:

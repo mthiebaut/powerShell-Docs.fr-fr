@@ -1,19 +1,20 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
-title: "Appel direct de méthodes de ressources DSC"
-ms.openlocfilehash: 68344d1be5c41e5ce4660e0a62019fa0a52c2541
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+title: Appel direct de méthodes de ressources DSC
+ms.openlocfilehash: dbf0a4ada4c6cc2e7d65698b87a5a29a2ea84781
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="calling-dsc-resource-methods-directly"></a>Appel direct de méthodes de ressources DSC
 
 >S’applique à : Windows PowerShell 5.0
 
-Vous pouvez utiliser l’applet de commande [Invoke-DscResource](https://technet.microsoft.com/library/mt517869.aspx) pour appeler directement les fonctions ou méthodes d’une ressource DSC (les fonctions **Get-TargetResource**, **Set-TargetResource** et **Test-TargetResource** d’une ressource basée sur MOF, ou les méthodes **Get**, **Set** et **Test** d’une ressource basée sur la classe). Elle peut être utilisée par des tiers qui veulent utiliser des ressources DSC, ou comme un outil très utile lors du développement de ressources. 
+Vous pouvez utiliser l’applet de commande [Invoke-DscResource](https://technet.microsoft.com/library/mt517869.aspx) pour appeler directement les fonctions ou méthodes d’une ressource DSC (les fonctions **Get-TargetResource**, **Set-TargetResource** et **Test-TargetResource** d’une ressource basée sur MOF, ou les méthodes **Get**, **Set** et **Test** d’une ressource basée sur la classe).
+Elle peut être utilisée par des tiers qui veulent utiliser des ressources DSC, ou comme un outil très utile lors du développement de ressources.
 
 Cette applet de commande est généralement utilisée avec une propriété de métaconfiguration `refreshMode = 'Disabled'`, mais vous pouvez l’utiliser quelle que soit la valeur de **refreshMode**.
 
@@ -51,7 +52,6 @@ $result.ItemValue | fl
 >**Remarque :** l’appel direct de méthodes de ressources composites n’est pas pris en charge. Appelez plutôt les ressources sous-jacentes qui forment la ressource composite.
 
 ## <a name="see-also"></a>Voir aussi
-- [Écriture d’une ressource DSC personnalisée avec MOF](authoringResourceMOF.md) 
+- [Écriture d’une ressource DSC personnalisée avec MOF](authoringResourceMOF.md)
 - [Écriture d’une ressource DSC personnalisée avec les classes PowerShell](authoringResourceClass.md)
 - [Débogage des ressources DSC](debugResource.md)
-

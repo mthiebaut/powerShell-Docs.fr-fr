@@ -1,15 +1,16 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: powershell,applet de commande
-title: "Utilisation des commandes de mise en forme pour modifier l’affichage d’une sortie"
+title: Utilisation des commandes de mise en forme pour modifier l’affichage d’une sortie
 ms.assetid: 63515a06-a6f7-4175-a45e-a0537f4f6d05
-ms.openlocfilehash: 0163fcb21d586fc98902d9bdcfab6fe4eb97c225
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 97d3a9e04abb61bb80a0b8c67d9fb9e885a0b91b
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="using-format-commands-to-change-output-view"></a>Utilisation des commandes de mise en forme pour modifier l’affichage d’une sortie
+
 Windows PowerShell dispose d’un ensemble d’applets de commande qui vous permettent de contrôler les propriétés affichées pour des objets spécifiques. Les noms de toutes les applets de commande commencent par le verbe **Format**. Elles vous permettent de sélectionner une ou plusieurs propriétés à afficher.
 
 Les applets de commande **Format** sont **Format-Wide**, **Format-List**, **Format-Table**, et **Format-Custom**. Ce guide décrit uniquement les applets de commande **Format-Wide**, **Format-List** et **Format-Table**.
@@ -18,7 +19,7 @@ Chaque applet de commande Format a des propriétés par défaut qui sont utilis�
 
 Si vous utilisez la commande **Get-Process -Name powershell** avec deux instances de Windows PowerShell en cours d’exécution, vous obtenez une sortie ressemblant à ceci :
 
-```
+```output
 Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
 -------  ------    -----      ----- -----   ------     -- -----------
     995       9    30308      27996   152     2.73   2760 powershell
@@ -28,6 +29,7 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
 Dans le reste de cette section, nous allons examiner comment utiliser les applets de commande **Format** pour modifier le mode d’affichage de la sortie de cette commande.
 
 ### <a name="using-format-wide-for-single-item-output"></a>Utilisation de l’applet de commande Format-Wide pour une sortie d’élément unique
+
 Par défaut, l’applet de commande **Format-Wide** affiche uniquement la propriété par défaut d’un objet. Les informations associées à chaque objet s’affichent dans une seule colonne :
 
 ```
@@ -45,13 +47,15 @@ PS> Get-Process -Name powershell | Format-Wide -Property Id
 ```
 
 #### <a name="controlling-format-wide-display-with-column"></a>Contrôle de l’affichage de Format-Wide avec une colonne
+
 Avec l’applet de commande **Format-Wide**, vous ne pouvez afficher qu’une seule propriété à la fois. Cela rend utile l’affichage de listes simples qui ne présentent qu’un seul élément par ligne. Pour obtenir une liste simple, définissez la valeur du paramètre **Column** sur 1 en tapant ce qui suit :
 
-```
+```powershell
 Get-Command Format-Wide -Property Name -Column 1
 ```
 
 ### <a name="using-format-list-for-a-list-view"></a>Utilisation de l’applet de commande Format-List pour un Affichage Liste
+
 L’applet de commende **Format-List** affiche un objet sous la forme d’une liste, chaque propriété étant étiquetée et affichée sur une ligne distincte :
 
 ```
@@ -86,15 +90,17 @@ Id          : 3448
 ```
 
 #### <a name="getting-detailed-information-by-using-format-list-with-wildcards"></a>Obtention d’informations détaillées en utilisant l’applet de commande Format-List avec des caractères génériques
+
 L’applet de commande **Format-List** permet d’utiliser un caractère générique en tant que la valeur pour son paramètre **Property**. Cela permet d’afficher des informations détaillées. Souvent, des objets incluent plus d’informations que nécessaire. C’est pourquoi, par défaut, Windows PowerShell n’affiche pas les valeurs de toutes les propriétés. Pour afficher toutes les propriétés d’un objet, utilisez la commande **Format-List -Property \&#42;**. La commande suivante génère plus de 60 lignes de sortie pour un seul processus :
 
-```
+```powershell
 Get-Process -Name powershell | Format-List -Property *
 ```
 
 Bien que la commande **Format-List** soit utile pour afficher des détails, si vous souhaitez une vue d’ensemble de la sortie incluant de nombreux d’éléments, une simple vue tabulaire est souvent plus utile.
 
 ### <a name="using-format-table-for-tabular-output"></a>Utilisation de l’applet de commande Format-Table pour une sortie tabulaire
+
 Si vous utilisez l’applet de commande **Format-Table** sans nom de propriété spécifié pour mettre en forme la sortie de la commande **Get-Process**, vous obtenez exactement la même sortie que sans effectuer de mise en forme. La raison en est que les processus sont généralement affichés dans un format tabulaire, tout comme la plupart des objets Windows PowerShell.
 
 ```
@@ -107,6 +113,7 @@ Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
 ```
 
 #### <a name="improving-format-table-output-autosize"></a>Amélioration de la sortie de l’applet de commande Format-Table (AutoSize)
+
 Bien qu’une vue tabulaire soit utile pour afficher de nombreuses informations comparables, elle peut être difficile à interpréter si l’affichage est trop étroit pour les données. Par exemple, si vous essayez d’afficher le chemin d’accès au processus, l’ID, le nom et la société, vous obtenez une sortie tronquée pour les colonnes du chemin d’accès et de la société :
 
 ```
@@ -156,6 +163,7 @@ Microsoft Corporation C:\Program Files\Windows PowerShell\v1.0\powershell.exe 6
 Dans la sortie ci-dessus, la colonne ID est tronquée pour qu’elle tienne dans la liste, et les en-têtes de colonne sont empilés. Une redimensionnement automatique les colonnes ne produit pas toujours le résultat souhaité.
 
 #### <a name="wrapping-format-table-output-in-columns-wrap"></a>Retour automatique à la ligne de la sortie de l’applet de commande Format-Table dans les colonnes (Wrap)
+
 Vous pouvez forcer le retour automatique à la ligne des données longues retournées par l’applet de commande **Format-Table** dans la colonne d’affichage en utilisant le paramètre **Wrap**. L’utilisation du paramètre **Wrap** isolément ne produit pas nécessairement le résultat attendu car, si vous ne spécifiez pas **AutoSize**, les paramètres par défaut sont utilisés :
 
 ```
@@ -198,6 +206,7 @@ C:\Program Files\Windows PowerShell\v1.0\powershell.exe 2836 Microsoft Corporat
 ```
 
 #### <a name="organizing-table-output--groupby"></a>Organisation de la sortie de table (-GroupBy)
+
 Un autre paramètre utile pour le contrôle de la sortie tabulaire est **GroupBy**. Des listes tabulaires plus longues en particulier peuvent être difficiles à comparer. Le paramètre **GroupBy** groupe la sortie en fonction d’une valeur de propriété. Par exemple, nous pouvons grouper des processus par société pour faciliter l’inspection, en omettant la valeur de la société de la liste des propriétés :
 
 ```
@@ -211,4 +220,3 @@ Name         Id Path
 powershell 1956 C:\Program Files\Windows PowerShell\v1.0\powershell.exe
 powershell 2656 C:\Program Files\Windows PowerShell\v1.0\powershell.exe
 ```
-

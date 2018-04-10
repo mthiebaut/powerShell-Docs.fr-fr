@@ -1,16 +1,16 @@
 ---
-description: 
+description: ''
 ms.topic: article
 ms.prod: powershell
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
+ms.date: 12/12/2016
 title: install pswawebapplication
 ms.technology: powershell
-ms.openlocfilehash: ce4d01fbe8a83924e7023d792c68c903a32e07d4
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: c7f7768a41b6784d8c29afa1fccf0b855160b777
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="install-pswawebapplication"></a>Install-PswaWebApplication
 
@@ -35,7 +35,7 @@ L’applet de commande **Install-PswaWebApplication** configure l’application 
 
 Spécifie qu’un certificat de test est créé. Si ce paramètre est défini sur true, cette applet de commande crée un certificat de test et configure l’application web Accès Web Windows PowerShell pour qu’elle utilise le certificat pour les requêtes HTTPS. Si ce paramètre est défini sur false, aucun certificat ni aucune liaison ne sont créés. Définissez cette valeur sur false si un autre certificat est utilisé pour Accès Web Windows PowerShell.
 
-|||  
+|||
 |-|-|
 | Alias                              | none                                 |
 | Obligatoire ?                            | false                                |
@@ -48,7 +48,7 @@ Spécifie qu’un certificat de test est créé. Si ce paramètre est défini su
 
 Spécifie le nom de votre application web. Il constitue la dernière partie de l’URL d’Accès Web Windows PowerShell.
 
-|||  
+|||
 |-|-|
 | Alias                              | none                                 |
 | Obligatoire ?                            | false                                |
@@ -61,7 +61,7 @@ Spécifie le nom de votre application web. Il constitue la dernière partie de l
 
 Spécifie le nom du site web du serveur Web IIS sur lequel installer cette application web Accès Web Windows PowerShell.
 
-|||  
+|||
 |-|-|
 | Alias                              | none                                 |
 | Obligatoire ?                            | false                                |
@@ -74,7 +74,7 @@ Spécifie le nom du site web du serveur Web IIS sur lequel installer cette appli
 
 Votre confirmation sera requise avant l’exécution de l’applet de commande.
 
-|||  
+|||
 |-|-|
 | Obligatoire ?                            | false                                |
 | Position ?                            | nommé                                |
@@ -87,7 +87,7 @@ Votre confirmation sera requise avant l’exécution de l’applet de commande.
 Présente les conséquences éventuelles de l’exécution de l’applet de commande.
 L’applet de commande n’est pas exécutée.
 
-|||  
+|||
 |-|-|
 | Obligatoire ?                            | false                                |
 | Position ?                            | nommé                                |

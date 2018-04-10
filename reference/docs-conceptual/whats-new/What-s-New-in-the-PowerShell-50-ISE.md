@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: powershell,applet de commande
-title: "Nouveautés de PowerShell 5.0 ISE"
+title: Nouveautés de PowerShell 5.0 ISE
 ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
-ms.openlocfilehash: 9fd25a4759602bebf2b5df2c17d0c816a15e5e2b
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+ms.openlocfilehash: 35b825cfa6ea720d0af3537c5d1b16c5ececb701
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="what39s-new-in-the-windows-powershell-ise"></a>Nouveauté dans Windows PowerShell ISE
 Cette rubrique décrit les fonctionnalités nouvelles et mises à jour qui ont été introduites dans les versions de l’environnement d’écriture de scripts intégré (ISE) de Windows PowerShell.
@@ -225,4 +225,3 @@ Pour plus d’informations sur l’utilisation de Windows PowerShell ISE dans Wi
 - [Exploration de l’environnement d’écriture de scripts intégré de Windows PowerShell](../getting-started/fundamental/exploring-the-windows-powershell-ise.md)
 - [ISE sur le Wiki TechNet](http://social.technet.microsoft.com/wiki/search/searchresults.aspx?q=ISE)
 - [Centre de scripts](http://technet.microsoft.com/scriptcenter/default)
-

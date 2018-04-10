@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
-title: "Présentation de la configuration de l’état souhaité pour les décideurs"
-ms.openlocfilehash: 42335d674bd23a109ad8f818d3e22ef221884ca7
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+title: Présentation de la configuration de l’état souhaité pour les décideurs
+ms.openlocfilehash: 8b410420ef30b066a32864a0d08a12a8485eaa4b
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="desired-state-configuration-overview-for-decision-makers"></a>Présentation de la configuration de l’état souhaité pour les décideurs
 
@@ -15,35 +15,46 @@ Ce document décrit les avantages de l’utilisation de la configuration de l’
 
 ## <a name="what-is-desired-state-configuration"></a>Qu’est-ce que la configuration de l’état souhaité ?
 
-La configuration d’état souhaité (DSC) Windows PowerShell est une plateforme de gestion de la configuration intégrée à Windows, basée sur des normes ouvertes. DSC est suffisamment flexible pour fonctionner de manière fiable et cohérente à chaque étape du cycle de vie de déploiement (développement, test, préproduction, production), ainsi qu’au cours d’une montée en puissance parallèle. 
+La configuration d’état souhaité (DSC) Windows PowerShell est une plateforme de gestion de la configuration intégrée à Windows, basée sur des normes ouvertes. DSC est suffisamment flexible pour fonctionner de manière fiable et cohérente à chaque étape du cycle de vie de déploiement (développement, test, préproduction, production), ainsi qu’au cours d’une montée en puissance parallèle.
 
 DSC repose sur des « [configurations](https://msdn.microsoft.com/powershell/dsc/configurations) ».
-Une configuration est un document facile à lire qui décrit un environnement d’ordinateurs (ou « nœuds ») ayant des caractéristiques spécifiques. Ces caractéristiques peuvent être aussi simples que de vérifier qu’une fonctionnalité spécifique de Windows est activée, et aussi complexes que de déployer SharePoint. 
+Une configuration est un document facile à lire qui décrit un environnement d’ordinateurs (ou « nœuds ») ayant des caractéristiques spécifiques.
+Ces caractéristiques peuvent être aussi simples que de vérifier qu’une fonctionnalité spécifique de Windows est activée, et aussi complexes que de déployer SharePoint.
 
-DSC comprend également des fonctions intégrées d’analyse et de création de rapports. Si un système n’est plus conforme, DSC peut déclencher une alerte et corriger le système. 
+DSC comprend également des fonctions intégrées d’analyse et de création de rapports.
+Si un système n’est plus conforme, DSC peut déclencher une alerte et corriger le système.
 
 ## <a name="benefits-of-using-desired-state-configuration"></a>Avantages de l’utilisation de la configuration de l’état souhaité
 
-Les configurations sont conçues pour être facilement lues, stockées et mises à jour. Les configurations déclarent l’état dans lequel doivent être les appareils cibles. Vous n’avez donc pas à écrire d’instructions sur l’état des appareils. L’apprentissage, l’adoption, l’implémentation et la maintenance par le biais de DSC est une solution beaucoup moins coûteuse. 
+Les configurations sont conçues pour être facilement lues, stockées et mises à jour.
+Les configurations déclarent l’état dans lequel doivent être les appareils cibles. Vous n’avez donc pas à écrire d’instructions sur l’état des appareils.
+L’apprentissage, l’adoption, l’implémentation et la maintenance par le biais de DSC est une solution beaucoup moins coûteuse.
 
-La création de configurations permet de capturer les étapes d’un déploiement complexe sous la forme d’une « source unique de vérité » à un emplacement unique. Cela évite ainsi les erreurs lors de déploiements répétés d’un ensemble spécifique d’ordinateurs. Par conséquent, les déploiements sont plus rapides et plus fiables, ce qui permet de réduire les délais des déploiements complexes.
+La création de configurations permet de capturer les étapes d’un déploiement complexe sous la forme d’une « source unique de vérité » à un emplacement unique.
+Cela évite ainsi les erreurs lors de déploiements répétés d’un ensemble spécifique d’ordinateurs.
+Par conséquent, les déploiements sont plus rapides et plus fiables, ce qui permet de réduire les délais des déploiements complexes.
 
 Les configurations peuvent également être partagées via la [PowerShell Gallery](https://powershellgallery.com), ce qui signifie que des scénarios courants et de meilleures pratiques existent peut-être déjà pour le travail que vous devez effectuer.
 
 
 ## <a name="desired-state-configuration-and-devops"></a>Configuration de l’état souhaité et DevOps
 
-[DevOps](http://blogs.technet.com/b/ashleymcglone/archive/2015/11/20/devops-for-n00bs-ie-windows-people.aspx) est une association de personnes, de processus et d’outils qui permet un déploiement et une itération rapides centrés sur l’offre de valeur aux utilisateurs finaux, internes ou externes. DSC a été conçu autour de DevOps. Le fait de n’utiliser qu’une seule configuration pour définir un environnement signifie que les développeurs peuvent coder leurs spécifications dans une configuration et vérifier cette configuration dans le contrôle de code source. Les équipes opérationnelles peuvent facilement déployer le code sans avoir à passer par des processus manuels sujets aux erreurs. 
+[DevOps](http://blogs.technet.com/b/ashleymcglone/archive/2015/11/20/devops-for-n00bs-ie-windows-people.aspx) est une association de personnes, de processus et d’outils qui permet un déploiement et une itération rapides centrés sur l’offre de valeur aux utilisateurs finaux, internes ou externes.
+DSC a été conçu autour de DevOps.
+Le fait de n’utiliser qu’une seule configuration pour définir un environnement signifie que les développeurs peuvent coder leurs spécifications dans une configuration et vérifier cette configuration dans le contrôle de code source. Les équipes opérationnelles peuvent facilement déployer le code sans avoir à passer par des processus manuels sujets aux erreurs.
 
-Les configurations sont également [pilotées par les données](https://msdn.microsoft.com/powershell/dsc/configdata), ce qui permet aux équipes opérationnelles d’identifier et de modifier plus facilement les environnements, sans intervention des développeurs. 
+Les configurations sont également [pilotées par les données](https://msdn.microsoft.com/powershell/dsc/configdata), ce qui permet aux équipes opérationnelles d’identifier et de modifier plus facilement les environnements, sans intervention des développeurs.
 
 ## <a name="desired-state-configuration-on--and-off-premises"></a>Configuration d’état souhaité sur site et hors site
 
-DSC peut être utilisé pour gérer des déploiements sur site et hors site. Pour les solutions sur site, DSC possède un [serveur collecteur](https://msdn.microsoft.com/powershell/dsc/pullserver) qui peut être utilisé pour centraliser la gestion des ordinateurs et créer des rapports sur leur état. Pour les solutions cloud, DSC peut être utilisé partout où Windows est utilisable. Il existe également des offres Azure spécifiques basées sur la configuration d’état souhaité, telles que [Azure Automation](https://azure.microsoft.com/en-us/documentation/services/automation/), qui centralise la création de rapports DSC. 
+DSC peut être utilisé pour gérer des déploiements sur site et hors site.
+Pour les solutions sur site, DSC possède un [serveur collecteur](https://msdn.microsoft.com/powershell/dsc/pullserver) qui peut être utilisé pour centraliser la gestion des ordinateurs et créer des rapports sur leur état.
+Pour les solutions cloud, DSC peut être utilisé partout où Windows est utilisable.
+Il existe également des offres Azure spécifiques basées sur la configuration d’état souhaité, telles que [Azure Automation](https://azure.microsoft.com/en-us/documentation/services/automation/), qui centralise la création de rapports DSC.
 
 ## <a name="dsc-and-compatibility"></a>DSC et compatibilité
 
-Même si DSC a fait son apparition avec Windows Server 2012 R2, il est disponible pour les systèmes d’exploitation de bas niveau via le package Windows Management Framework (WMF). Pour plus d’informations sur le package WMF, reportez-vous à la [page d’accueil de PowerShell](https://msdn.microsoft.com/en-us/powershell/). 
+Même si DSC a fait son apparition avec Windows Server 2012 R2, il est disponible pour les systèmes d’exploitation de bas niveau via le package Windows Management Framework (WMF).
+Pour plus d’informations sur le package WMF, reportez-vous à la [page d’accueil de PowerShell](https://msdn.microsoft.com/en-us/powershell/).
 
 DSC peut également servir à gérer Linux. Pour plus d’informations, consultez [Bien démarrer avec DSC pour Linux](https://msdn.microsoft.com/en-us/powershell/dsc/lnxgettingstarted).
-

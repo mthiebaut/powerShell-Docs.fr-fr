@@ -1,12 +1,12 @@
 ---
-ms.date: 2017-08-25
+ms.date: 08/25/2017
 keywords: powershell,applet de commande
 title: Objet ObjectModelRoot
-ms.openlocfilehash: eb3424ff147c35364fa08543d59ebd30f6d2d857
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 2670321ebac1eac4ecc8457afb796f9f260da471
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="the-objectmodelroot-object"></a>Objet ObjectModelRoot
 
@@ -17,7 +17,7 @@ Cette rubrique décrit les propriétés de l’objet **ObjectModelRoot**.
 
 ### <a name="currentfile"></a>CurrentFile
 
-> Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+> Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures.
 
 Propriété en lecture seule qui obtient le fichier associé à cet objet hôte ayant actuellement le focus.
 
@@ -35,24 +35,23 @@ Propriété en lecture seule qui obtient l’outil complémentaire Windows Power
 
 ### <a name="currentvisibleverticaltool"></a>CurrentVisibleVerticalTool
 
-> Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+> Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures.
 
 Propriété en lecture seule qui obtient l’outil complémentaire Windows PowerShell ISE qui est actuellement visible dans le volet d’outils vertical à droite de l’éditeur.
 
 ### <a name="options"></a>Options
 
-> Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+> Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures.
 
 Propriété en lecture seule qui obtient les diverses options permettant de modifier des paramètres dans Windows PowerShell ISE.
 
 ### <a name="powershelltabs"></a>PowerShellTabs
 
-> Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures. 
+> Prise en charge dans Windows PowerShell ISE 2.0 et versions ultérieures.
 
 Propriété en lecture seule qui obtient la collection des onglets PowerShell ouverts dans Windows PowerShell ISE. Par défaut, cet objet contient un seul onglet PowerShell. Toutefois, vous pouvez ajouter plusieurs onglets PowerShell à cet objet à l’aide de scripts ou en utilisant les menus dans Windows PowerShell ISE.
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Modèle objet de script Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
-- [Informations de référence sur le modèle objet Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md)
+- [Objectif du modèle objet de script Windows PowerShell ISE](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 - [Hiérarchie du modèle objet ISE](The-ISE-Object-Model-Hierarchy.md)

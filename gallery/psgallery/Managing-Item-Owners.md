@@ -1,23 +1,25 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: JKeithB
 ms.topic: conceptual
-keywords: gallery,powershell,cmdlet,psgallery
-title: "Gestion des propriétaires d’éléments"
-ms.openlocfilehash: fcd538148f9ff1ac96324b567d54d643f1756c93
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+keywords: gallery,powershell,applet de commande,psgallery
+title: Gestion des propriétaires d’éléments
+ms.openlocfilehash: e550b74ebde00cfbb154dbf4fb1fa4ae0582e029
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="managing-item-owners"></a>Gestion des propriétaires d’éléments
 
 La propriété d’un élément dans PowerShell Gallery est définie par la personne qui a publié l’élément dans la galerie.
 Ces métadonnées doivent parfois être gérées au-delà de la publication initiale de l’élément, ce qui signifie que les métadonnées du propriétaire doivent être mutables alors que l’élément lui-même ne l’est pas.
 
-Tous les propriétaires d’éléments sont des homologues. Cela signifie que tout propriétaire d’élément peut publier une nouvelle version d’un élément. Cela signifie également que tout propriétaire d’élément peut supprimer n’importe quel autre propriétaire d’élément. Aucun propriétaire n’a plus d’autorité qu’un autre.  
+Tous les propriétaires d’éléments sont des homologues.
+Cela signifie que tout propriétaire d’élément peut publier une nouvelle version d’un élément. Cela signifie également que tout propriétaire d’élément peut supprimer n’importe quel autre propriétaire d’élément.
+Aucun propriétaire n’a plus d’autorité qu’un autre.
 
-## <a name="setting-an-items-initial-owner"></a>Définition du propriétaire initial d’un élément 
+## <a name="setting-an-items-initial-owner"></a>Définition du propriétaire initial d’un élément
 
 Quand un nouvel élément est publié dans PowerShell Gallery, le propriétaire initial est défini par l’utilisateur qui a publié l’élément. Cela est déterminé par l’utilisateur dont la clé API a été utilisée dans l’applet de commande Publish-Module.
 
@@ -78,4 +80,3 @@ Nous suivons alors un processus pour vérifier votre propriété de l’élémen
 Si nous déterminons que vous devez être un propriétaire de l’élément, nous utilisons alors nous-mêmes le lien « Gérer les propriétaires » de l’élément et nous vous envoyons l’invitation pour devenir propriétaire.
 Nous n’effectuons cette opération qu’après avoir vérifié que vous devez être un propriétaire. Ce processus varie selon les circonstances.
 Nous utilisons souvent l’URL du projet de l’élément pour trouver un moyen de contacter le propriétaire du projet, mais nous pouvons aussi utiliser Twitter, l’e-mail ou d’autres moyens.
-

@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: powershell,applet de commande
 title: Glossaire Windows PowerShell
 ms.assetid: b0f88cbe-cb83-4912-a301-184534cb35c7
-ms.openlocfilehash: 872ceb342cc72477c5142ce28a9b3b66e32bb84f
-ms.sourcegitcommit: 05d576cf107780fa52b2db4a042816be40b00fbc
+ms.openlocfilehash: fd15667939fd9b3ea705806686b626645519588a
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="windows-powershell-glossary"></a>Glossaire Windows PowerShell
 
@@ -55,4 +55,3 @@ ms.lasthandoff: 02/19/2018
 |fichier de script Windows PowerShell|Fichier portant l’extension .ps1 et contenant un script écrit dans le langage Windows PowerShell.|
 |composant logiciel enfichable Windows PowerShell|Ressource définissant un ensemble d’applets de commande, de fournisseurs et de types Microsoft .NET Framework qui peuvent être ajoutés à l’environnement Windows PowerShell.|
 |Windows PowerShell Workflow|Un workflow est une séquence d’étapes programmées et connectées qui effectuent des tâches de longue durée ou requièrent la coordination de plusieurs étapes sur plusieurs appareils ou nœuds gérés. Windows PowerShell Workflow permet aux professionnels de l’informatique et aux développeurs de créer des séquences d’activités de gestion multi-appareils, ou des tâches unique au sein d’un workflow en tant que workflow. Windows PowerShell Workflow permet d’adapter et d’exécuter des fichiers XAML et des scripts Windows PowerShell en tant que workflow.|
-

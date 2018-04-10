@@ -1,33 +1,33 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,configuration
 contributor: jianyunt, quoctruong
-title: "Améliorations apportées à la gestion des packages dans WMF 5.1"
-ms.openlocfilehash: b55a1742530b7cd48d60d79b7d4866ebee80a3b6
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+title: Améliorations apportées à la gestion des packages dans WMF 5.1
+ms.openlocfilehash: d8b66cc101a6d963b484bba26a1bcd7f71437536
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="improvements-to-package-management-in-wmf-51"></a>Améliorations apportées à la gestion des packages dans WMF 5.1#
 
 ## <a name="improvements-in-packagemanagement"></a>Améliorations apportées à PackageManagement ##
-Voici les corrections apportées dans WMF 5.1 : 
+Voici les corrections apportées dans WMF 5.1 :
 
 ### <a name="version-alias"></a>Alias de version
 
-**Scénario** : Si vous avez installé les versions 1.0 et 2.0 d’un package P1 sur votre système et que vous souhaitez désinstaller la version 1.0, vous devez exécuter `Uninstall-Package -Name P1 -Version 1.0`, et la version 1.0 devrait normalement être désinstallée après l’exécution de l’applet de commande. Toutefois, le résultat est que la version 2.0 est désinstallée.  
-    
+**Scénario** : Si vous avez installé les versions 1.0 et 2.0 d’un package P1 sur votre système et que vous souhaitez désinstaller la version 1.0, vous devez exécuter `Uninstall-Package -Name P1 -Version 1.0`, et la version 1.0 devrait normalement être désinstallée après l’exécution de l’applet de commande. Toutefois, le résultat est que la version 2.0 est désinstallée.
+
 Cela se produit, car le paramètre `-Version` est un alias du paramètre `-MinimumVersion`. Quand PackageManagement recherche un package qualifié avec la version minimale 1.0, il retourne la dernière version. Ce comportement est attendu dans les cas normaux, car la recherche de la version la plus récente est généralement le résultat souhaité. Toutefois, il ne devrait pas s’appliquer en cas d’utilisation de la commande `Uninstall-Package`.
-    
-**Solution** : L’alias de `-Version` a été entièrement supprimé dans PackageManagement (également appelé OneGet) et PowerShellGet. 
+
+**Solution** : L’alias de `-Version` a été entièrement supprimé dans PackageManagement (également appelé OneGet) et PowerShellGet.
 
 ### <a name="multiple-prompts-for-bootstrapping-the-nuget-provider"></a>Invites multiples pour le démarrage du fournisseur NuGet
 
-**Scénario** : Quand vous exécutez `Find-Module`, `Install-Module` ou d’autres applets de commande PackageManagement sur votre ordinateur pour la première fois, PackageManagement tente de démarrer le fournisseur NuGet. En effet, le fournisseur PowerShellGet utilise également le fournisseur NuGet pour télécharger les modules PowerShell. PackageManagement invite ensuite l’utilisateur à autoriser l’installation du fournisseur NuGet. Une fois que l’utilisateur a répondu « Oui » à la demande de démarrage, la version la plus récente du fournisseur NuGet est installée. 
-    
+**Scénario** : Quand vous exécutez `Find-Module`, `Install-Module` ou d’autres applets de commande PackageManagement sur votre ordinateur pour la première fois, PackageManagement tente de démarrer le fournisseur NuGet. En effet, le fournisseur PowerShellGet utilise également le fournisseur NuGet pour télécharger les modules PowerShell. PackageManagement invite ensuite l’utilisateur à autoriser l’installation du fournisseur NuGet. Une fois que l’utilisateur a répondu « Oui » à la demande de démarrage, la version la plus récente du fournisseur NuGet est installée.
+
 Dans certains cas, quand une ancienne version du fournisseur NuGet est installée sur votre ordinateur, celle-ci est parfois chargée en premier dans la session PowerShell (il s’agit de la condition de concurrence dans PackageManagement). Toutefois, le fonctionnement de PowerShellGet nécessite la dernière version du fournisseur NuGet. Ainsi, PowerShellGet demande à PackageManagement de redémarrer le fournisseur NuGet. Cela entraîne l’affichage de plusieurs invites de démarrage du fournisseur NuGet.
 
 **Solution** : Dans WMF 5.1, PackageManagement charge la dernière version du fournisseur NuGet pour éviter l’affichage de plusieurs invites de démarrage du fournisseur NuGet.
@@ -68,4 +68,3 @@ Dans WMF 5.1, PackageManagement accepte désormais les nouveaux paramètres de 
 ``` PowerShell
 Find-Package -Source http://www.nuget.org/api/v2/ -Proxy http://www.myproxyserver.com -ProxyCredential (Get-Credential)
 ```
-

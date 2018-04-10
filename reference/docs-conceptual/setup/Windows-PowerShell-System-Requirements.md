@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: powershell,applet de commande
 title: Configuration requise pour Windows PowerShell
 ms.assetid: 6d1d3c75-3be4-4fc9-8805-ca9b2c454d42
-ms.openlocfilehash: 33824eac4de28de97990ffa1ea2500e61e03e847
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: a15b5b33b5296befae833e520cfdfbd41a07b122
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="windows-powershell-system-requirements"></a>Configuration requise pour Windows PowerShell
 Cette rubrique répertorie la configuration système requise pour Windows PowerShell 3.0, Windows PowerShell 4.0 et Windows PowerShell 5.0, et pour des fonctionnalités spéciales comme l’environnement d’écriture de scripts intégré de Windows PowerShell (ISE), les commandes CIM et les workflows.
@@ -125,4 +125,3 @@ En outre, le service **WinRM** n’est pas présent sur Windows PE.
 - [Prise en main de Windows PowerShell](../getting-started/Getting-Started-with-Windows-PowerShell.md)
 - [Installation de Windows PowerShell](Installing-Windows-PowerShell.md)
 - [Démarrage de Windows PowerShell](Starting-Windows-PowerShell.md)
-

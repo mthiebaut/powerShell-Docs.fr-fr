@@ -1,12 +1,12 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: powershell,applet de commande
-title: "Nouveautés dans Windows PowerShell 5.0"
-ms.openlocfilehash: 3a412b35c593c99fb8ea8307b12ccc05871863f4
-ms.sourcegitcommit: e2360ac94fe4deb0ed0f5c8c8d9b293551ec8030
+title: Nouveautés dans Windows PowerShell 5.0
+ms.openlocfilehash: f1134a37e7027b00c948ce1db186a21dc5a311c6
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Nouveautés dans Windows PowerShell 5.0
 Windows PowerShell 5.0 intègre plusieurs nouvelles fonctionnalités importantes qui, en plus d’étendre et de simplifier son utilisation, vous permettent de contrôler et de gérer des environnements Windows plus facilement et plus complètement.
@@ -14,7 +14,7 @@ Windows PowerShell 5.0 intègre plusieurs nouvelles fonctionnalités importantes
 Windows PowerShell 5.0 offre une compatibilité descendante. Les applets de commande, fournisseurs, modules, composants logiciels enfichables, scripts, fonctions et profils conçus pour Windows PowerShell 4.0, Windows PowerShell 3.0 et Windows PowerShell 2.0 fonctionnent généralement dans Windows PowerShell 5.0 sans aucune modification.
 
 # <a name="installing-windows-powershell"></a>Installation de Windows PowerShell
-Windows PowerShell 5.0 est installé par défaut sur Windows Server 2016 Technical Preview et Windows 10. 
+Windows PowerShell 5.0 est installé par défaut sur Windows Server 2016 Technical Preview et Windows 10.
 
 Pour installer Windows PowerShell 5.0 sur Windows Server 2012 R2, Windows 8.1 Entreprise ou Windows 8.1 Professionnel, téléchargez et installez [Windows Management Framework 5.0](http://aka.ms/wmf5download). Avant d'installer Windows Management Framework 5.0, veillez à prendre connaissance des détails du téléchargement et à vérifier la configuration système requise.
 
@@ -507,7 +507,7 @@ Pour plus d’informations, voir [Déployer un Accès Windows PowerShell Web](ht
 Pour Windows PowerShell 3.0, l’environnement d’écriture de scripts intégré (ISE) de Windows PowerShell comprend de nombreuses nouveautés, notamment IntelliSense, une fenêtre Show-Command, un volet de console unifiée, des extraits de code, la correspondance d’accolade, des sections à développement/réduction, l’enregistrement automatique, une liste des éléments récents, la copie riche, la copie de blocs, ainsi que la prise en charge complète de l’écriture de workflows de scripts Windows PowerShell. Pour plus d’informations, voir [about_Windows_PowerShell_ISE [v3]](https://technet.microsoft.com/en-us/library/dfa54d47-60c6-4fff-8197-c747e8d411bb).
 
 ### <a name="support-for-microsoft-net-framework-4"></a>Prise en charge du Microsoft .NET Framework 4
-Windows PowerShell repose sur le Common Language Runtime 4.0. Les auteurs d’applets de commande, de scripts et de workflow peuvent utiliser les nouvelles classes Microsoft .NET Framework 4 de Windows PowerShell. Ils peuvent ainsi bénéficier de fonctionnalités comme la compatibilité et le déploiement d’applications, Managed Extensibility Framework, l’informatique parallèle, la mise en réseau, Windows Communication Foundation et Windows Workflow Foundation.
+Windows PowerShell repose sur le Common Language Runtime 4.0. Les auteurs d’applets de commande, de scripts et de flux de travail peuvent utiliser les nouvelles classes Microsoft .NET Framework 4 de Windows PowerShell. Ils peuvent ainsi bénéficier de fonctionnalités comme la compatibilité et le déploiement d’applications, Managed Extensibility Framework, l’informatique parallèle, la mise en réseau, Windows Communication Foundation et Windows Workflow Foundation.
 
 ### <a name="support-for-windows-preinstallation-environment"></a>Prise en charge de l'environnement de préinstallation Windows
 Windows PowerShell 3.0 est un composant facultatif de l'environnement de préinstallation Windows (WinPE) 4.0 pour Windows 8. Windows PE est un système d’exploitation minimal qui permet de démarrer un ordinateur sans système d’exploitation, et qui le prépare en vue de l’installation de Windows. Windows PE permet de partitionner et formater des disques durs, de copier des images de disque sur un ordinateur et d’initier l’installation de Windows à partir d’un partage réseau. Windows PowerShell 3.0 peut être utilisé sur Windows PE pour gérer des scénarios de déploiement, de diagnostic et de récupération.
@@ -584,7 +584,7 @@ Pour créer un fichier de configuration de session, utilisez l’applet de comma
 Pour plus d’informations, voir [about_Session_Configuration_Files](https://technet.microsoft.com/en-us/library/c7217447-1ebf-477b-a8ef-4dbe9a1473b8) et [New-PSSessionConfigurationFile](https://technet.microsoft.com/en-us/library/5f3e3633-6e90-479c-aea9-ba45a1954866).
 
 ### <a name="scheduled-jobs-and-task-scheduler-integration"></a>Travaux planifiés et intégration du Planificateur de tâches
-Vous pouvez maintenant planifier des travaux Windows PowerShell en arrière-plan, puis les gérer dans Windows PowerShell et dans le Planificateur de tâches.
+Vous pouvez désormais planifier des travaux Windows PowerShell en arrière-plan, puis les gérer dans Windows PowerShell et dans le Planificateur de tâches.
 
 Les travaux planifiés Windows PowerShell sont des tâches hybrides qui regroupent les avantages des travaux Windows PowerShell en arrière-plan et des tâches du Planificateur de tâches.
 
@@ -713,4 +713,3 @@ Pour améliorer l’interprétation et la gestion des caractères spéciaux dans
 ## <a name="see-also"></a>Voir aussi
 - [about_Windows_PowerShell_5.0](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_windows_powershell_5.0?view=powershell-5.0)
 - [Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=107116)
-

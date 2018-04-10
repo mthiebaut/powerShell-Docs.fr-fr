@@ -1,14 +1,14 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: rpsqrd
 ms.topic: conceptual
 keywords: jea,powershell,security
 title: Configuration de session JEA
-ms.openlocfilehash: c475a90a59d91b074f954cfb656b00142444c052
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+ms.openlocfilehash: 317a549ed20b5800d5bafdabd266e93ba7cd321c
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="jea-session-configurations"></a>Configuration de session JEA
 
@@ -252,4 +252,3 @@ Lorsque vous enregistrez de nouveau la configuration de session JEA, utilisez un
 
 - [Enregistrer une configuration JEA](register-jea.md)
 - [Créer des rôles JEA](role-capabilities.md)
-

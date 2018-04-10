@@ -1,14 +1,14 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: JKeithB
 ms.topic: conceptual
 keywords: gallery, powershell, applet de commande, psgallery, psget
 title: PowerShell Gallery
-ms.openlocfilehash: 7389ce8286c515b0bfc25f32634a482b060cb74c
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+ms.openlocfilehash: 9519b8bcca9f43419a33db380c3b852e9bb354ac
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="the-powershell-gallery"></a>PowerShell Gallery
 
@@ -56,4 +56,3 @@ Par conséquent, **PowerShellGet** nécessite l’un des systèmes d’exploitat
 ## <a name="got-a-question-have-feedback"></a>Vous avez une question ? Vous avez des commentaires ?
 
 Des informations supplémentaires relatives à PowerShell Gallery et PowerShellGet sont disponibles dans la page [Getting Started](psgallery/psgallery_gettingstarted.md). Envoyez vos commentaires et signalez les problèmes à l’aide de [UserVoice](http://windowsserver.uservoice.com/forums/301869-powershell).
-

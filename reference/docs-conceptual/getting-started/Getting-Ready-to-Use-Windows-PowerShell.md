@@ -1,18 +1,18 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: powershell,applet de commande
-title: "Préparation à l’utilisation de Windows PowerShell"
+title: Préparation à l’utilisation de Windows PowerShell
 ms.assetid: 6dc7052d-cc5a-4220-950f-98f963a2b587
-ms.openlocfilehash: de09c74e938f11a130864b1620d6c169006a27be
-ms.sourcegitcommit: 4807ab554d55fdee499980835bcc279368b1df68
+ms.openlocfilehash: 5e095984286ff89958dc0a4e3d27e40eae5b2c5e
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="getting-ready-to-use-windows-powershell"></a>Préparation à l’utilisation de Windows PowerShell
 Une fois Windows PowerShell installé et démarré, envisagez les options de configuration suivantes. Vous pouvez effectuer ces tâches à tout moment.
 
-- **Installez les fichiers d’aide.** Les applets de commande incluses dans Windows PowerShell 3.0 ne sont pas fournies avec des fichiers d’aide. En revanche, vous pouvez utiliser l’applet de commande [Update-Help](/powershell/module/microsoft.powershell.core/update-help) pour télécharger et installer les fichiers d’aide les plus récents sur votre ordinateur. Lorsque les fichiers sont installés, vous pouvez utiliser l’applet de commande [Get-Help](/powershell/module/microsoft.powershell.core/get-help) pour les afficher sur la ligne de commande. Pour plus d’informations, voir [about_Updatable_Help](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+- **Installez les fichiers d’aide.** Les applets de commande incluses dans Windows PowerShell 3.0 ne sont pas fournies avec des fichiers d’aide. En revanche, vous pouvez utiliser l’applet de commande [Update-Help](/powershell/module/microsoft.powershell.core/update-help) pour télécharger et installer les fichiers d’aide les plus récents sur votre ordinateur. Lorsque les fichiers sont installés, vous pouvez utiliser l’applet de commande [Get-Help](/powershell/module/microsoft.powershell.core/get-help) pour les afficher sur la ligne de commande. Pour plus d’informations, voir [about_Updatable_Help](/powershell/module/microsoft.powershell.core/about/about_updatable_help).
 
     Si vous décidez de ne pas installer les fichiers d’aide, vous pouvez toujours lire les rubriques d’aide en ligne. Pour trouver la version en ligne de la rubrique d’aide relative à une applet de commande, tapez : `Get-Help <CmdletName> -Online`. Pour parcourir les rubriques d’aide de Windows PowerShell, consultez la [documentation de PowerShell](/powershell/scripting).
 
@@ -25,4 +25,3 @@ Une fois Windows PowerShell installé et démarré, envisagez les options de con
 ## <a name="see-also"></a>Voir aussi
 - [Installation de Windows PowerShell](../setup/Installing-Windows-PowerShell.md)
 - [Démarrage de Windows PowerShell](/powershell/scripting/setup/starting-windows-powershell)
-

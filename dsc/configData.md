@@ -1,106 +1,112 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
-title: "Utilisation des données de configuration"
-ms.openlocfilehash: b56a3f970b0b5121585dc4ed2f32da3243b980bd
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+title: Utilisation des données de configuration
+ms.openlocfilehash: 19544494a547a06d87701b38585844cb11d03e33
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="using-configuration-data-in-dsc"></a>Utilisation des données de configuration dans DSC
 
 >S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
-À l’aide du paramètre DSC intégré **ConfigurationData**, vous pouvez définir les données qui peuvent être utilisées dans une configuration. Cela vous permet de créer une configuration unique utilisée pour plusieurs nœuds ou différents environnements. Par exemple, si vous développez une application, vous pouvez utiliser une seule configuration pour les environnements de développement et de production et utiliser les données de configuration pour spécifier les données de chaque environnement.
+À l’aide du paramètre DSC intégré **ConfigurationData**, vous pouvez définir les données qui peuvent être utilisées dans une configuration.
+Cela vous permet de créer une configuration unique utilisée pour plusieurs nœuds ou différents environnements.
+Par exemple, si vous développez une application, vous pouvez utiliser une seule configuration pour les environnements de développement et de production et utiliser les données de configuration pour spécifier les données de chaque environnement.
 
-Cette rubrique décrit la structure de la table de hachage **ConfigurationData**. Pour des exemples d’utilisation des données de configuration, consultez [Séparation des données de configuration et d’environnement](separatingEnvData.md).
+Cette rubrique décrit la structure de la table de hachage **ConfigurationData**.
+Pour des exemples d’utilisation des données de configuration, consultez [Séparation des données de configuration et d’environnement](separatingEnvData.md).
 
 ## <a name="the-configurationdata-common-parameter"></a>Le paramètre commun ConfigurationData
 
-Une configuration DSC prend un paramètre commun, **ConfigurationData**, que vous spécifiez lorsque vous compilez la configuration. Pour plus d’informations sur la compilation de configurations, voir [Configurations DSC](configurations.md).
+Une configuration DSC prend un paramètre commun, **ConfigurationData**, que vous spécifiez lorsque vous compilez la configuration.
+Pour plus d’informations sur la compilation de configurations, voir [Configurations DSC](configurations.md).
 
-Le paramètre **ConfigurationData** est une table de hachage qui doit contenir au moins une clé nommée **AllNodes**. Il peut également avoir une ou plusieurs autres clés.
+Le paramètre **ConfigurationData** est une table de hachage qui doit contenir au moins une clé nommée **AllNodes**.
+Il peut également avoir une ou plusieurs autres clés.
 
 >**Remarque :** les exemples de cette rubrique utilisent une seule clé supplémentaire (autres que la clé nommée **AllNodes**), `NonNodeData`, mais vous pouvez inclure n’importe quel nombre de clés supplémentaires et les nommer comme vous le souhaitez.
 
 ```powershell
-$MyData = 
+$MyData =
 @{
     AllNodes = @()
-    NonNodeData = ""   
+    NonNodeData = ""
 }
 ```
 
 La valeur de la clé **AllNodes** est un tableau. Chaque élément de ce tableau est également une table de hachage qui doit contenir au moins une clé nommée **NodeName** :
 
 ```powershell
-$MyData = 
+$MyData =
 @{
-    AllNodes = 
+    AllNodes =
     @(
         @{
             NodeName = "VM-1"
         },
 
- 
+
         @{
             NodeName = "VM-2"
         },
 
- 
+
         @{
             NodeName = "VM-3"
         }
     );
 
-    NonNodeData = ""   
+    NonNodeData = ""
 }
 ```
 
 Vous pouvez ajouter d’autres clés à chaque table de hachage :
 
 ```powershell
-$MyData = 
+$MyData =
 @{
-    AllNodes = 
+    AllNodes =
     @(
         @{
             NodeName = "VM-1"
             Role     = "WebServer"
         },
 
- 
+
         @{
             NodeName = "VM-2"
             Role     = "SQLServer"
         },
 
- 
+
         @{
             NodeName = "VM-3"
             Role     = "WebServer"
         }
     );
 
-    NonNodeData = ""   
+    NonNodeData = ""
 }
 ```
 
-Pour appliquer une propriété à tous les nœuds, vous pouvez créer un membre du tableau **AllNodes** dont un **NodeName** a la valeur `*`. Par exemple, pour attribuer la propriété `LogPath` à tous les nœuds, vous pouvez procéder ainsi :
+Pour appliquer une propriété à tous les nœuds, vous pouvez créer un membre du tableau **AllNodes** dont un **NodeName** a la valeur `*`.
+Par exemple, pour attribuer la propriété `LogPath` à tous les nœuds, vous pouvez procéder ainsi :
 
 ```powershell
-$MyData = 
+$MyData =
 @{
-    AllNodes = 
+    AllNodes =
     @(
         @{
             NodeName     = "*"
             LogPath      = "C:\Logs"
         },
 
- 
+
         @{
             NodeName     = "VM-1"
             Role         = "WebServer"
@@ -108,13 +114,13 @@ $MyData =
             SiteName     = "Website1"
         },
 
- 
+
         @{
             NodeName     = "VM-2"
             Role         = "SQLServer"
         },
 
- 
+
         @{
             NodeName     = "VM-3"
             Role         = "WebServer"
@@ -129,7 +135,8 @@ Ceci équivaut à ajouter une propriété portant le nom `LogPath` avec la valeu
 
 ## <a name="defining-the-configurationdata-hashtable"></a>Définition de la table de hachage ConfigurationData
 
-Vous pouvez définir **ConfigurationData** soit comme variable dans le même fichier de script qu’une configuration (comme dans nos exemples précédents), soit dans un fichier `.psd1` distinct. Pour définir **ConfigurationData** dans un fichier `.psd1`, créez un fichier contenant uniquement la table de hachage qui représente les données de configuration.
+Vous pouvez définir **ConfigurationData** soit comme variable dans le même fichier de script qu’une configuration (comme dans nos exemples précédents), soit dans un fichier `.psd1` distinct.
+Pour définir **ConfigurationData** dans un fichier `.psd1`, créez un fichier contenant uniquement la table de hachage qui représente les données de configuration.
 
 Par exemple, vous pouvez créer un fichier nommé `MyData.psd1` avec le contenu suivant :
 
@@ -186,11 +193,11 @@ DSC fournit trois variables spéciales qui peuvent être utilisées dans un scri
 ## <a name="using-non-node-data"></a>Utilisation des données n’appartenant pas à un nœud
 
 Comme nous l’avons vu dans les exemples précédents, la table de hachage **ConfigurationData** peut avoir une ou plusieurs clés en plus de la clé **AllNodes** requise.
-Dans les exemples de cette rubrique, nous avons utilisé un seul nœud supplémentaire et l’avons nommé `NonNodeData`. Toutefois, vous pouvez définir n’importe quel nombre de clés supplémentaires et les nommer comme vous le souhaitez.
+Dans les exemples de cette rubrique, nous avons utilisé un seul nœud supplémentaire et l’avons nommé `NonNodeData`.
+Toutefois, vous pouvez définir n’importe quel nombre de clés supplémentaires et les nommer comme vous le souhaitez.
 
 Pour obtenir un exemple d’utilisation des données n’appartenant pas à un nœud, consultez [Séparation des données de configuration et d’environnement](separatingEnvData.md).
 
 ## <a name="see-also"></a>Voir aussi
 - [Options relatives aux informations d’identification dans les données de configuration](configDataCredentials.md)
 - [Configurations DSC](configurations.md)
-

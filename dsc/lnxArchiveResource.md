@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: Ressource nxArchive dans DSC pour Linux
-ms.openlocfilehash: e91ef5bcf4bdf413844c23d1d3bd823a535b536f
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 142f0317914f1bd3a0523d706b19662f3f64c8b6
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dsc-for-linux-nxarchive-resource"></a>Ressource nxArchive dans DSC pour Linux
 
@@ -29,21 +29,21 @@ nxArchive <string> #ResourceName
 
 ## <a name="properties"></a>Propriétés
 
-|  Propriété |  Description | 
+|  Propriété |  Description |
 |---|---|
-| SourcePath| Spécifie le chemin source du fichier d’archive. Ce fichier doit être au format .tar, .zip ou .tar.gz. | 
-| DestinationPath| Spécifie l’emplacement où le contenu de l’archive doit être extrait.| 
-| Somme de contrôle| Définit le type à utiliser pour déterminer si l’archive source a été mise à jour. Les valeurs sont « ctime », « mtime » et « md5 ». La valeur par défaut est « md5 ».| 
-| Force| Certaines opérations de fichier (par exemple, le remplacement d’un fichier ou la suppression d’un répertoire non vide) entraînent une erreur. La propriété **Force** permet d’ignorer ces erreurs. La valeur par défaut est **$false**.| 
-| DependsOn | Indique que la configuration d’une autre ressource doit être effectuée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’**ID** **ResourceName** et le type **ResourceType**, utilisez la syntaxe suivante pour cette propriété : `DependsOn = "[ResourceType]ResourceName"`.| 
-| Ensure| Détermine s’il faut vérifier que le contenu de l’archive se trouve à la **Destination** donnée. Définissez cette propriété sur Present pour vous assurer que le contenu se trouve à l’emplacement donné. Définissez la propriété sur Absent pour vous assurer que le contenu ne se trouve pas à l’emplacement donné. La valeur par défaut est « Present ».| 
+| SourcePath| Spécifie le chemin source du fichier d’archive. Ce fichier doit être au format .tar, .zip ou .tar.gz. |
+| DestinationPath| Spécifie l’emplacement où le contenu de l’archive doit être extrait.|
+| Somme de contrôle| Définit le type à utiliser pour déterminer si l’archive source a été mise à jour. Les valeurs sont « ctime », « mtime » et « md5 ». La valeur par défaut est « md5 ».|
+| Force| Certaines opérations de fichier (par exemple, le remplacement d’un fichier ou la suppression d’un répertoire non vide) entraînent une erreur. La propriété **Force** permet d’ignorer ces erreurs. La valeur par défaut est **$false**.|
+| DependsOn | Indique que la configuration d’une autre ressource doit être effectuée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’**ID** **ResourceName** et le type **ResourceType**, utilisez la syntaxe suivante pour cette propriété : `DependsOn = "[ResourceType]ResourceName"`.|
+| Ensure| Détermine s’il faut vérifier que le contenu de l’archive se trouve à la **Destination** donnée. Définissez cette propriété sur Present pour vous assurer que le contenu se trouve à l’emplacement donné. Définissez la propriété sur Absent pour vous assurer que le contenu ne se trouve pas à l’emplacement donné. La valeur par défaut est « Present ».|
 
 ## <a name="example"></a>Exemple
 
 L’exemple suivant montre comment utiliser la ressource **nxArchive** pour vous assurer que le contenu d’un fichier d’archive appelé `website.tar` existe et qu’il est extrait à une destination donnée.
 
 ```
-Import-DSCResource -Module nx 
+Import-DSCResource -Module nx
 
 nxFile SyncArchiveFromWeb
 {
@@ -60,6 +60,5 @@ nxArchive SyncWebDir
    DestinationPath = “/usr/local/apache2/htdocs/”
    Force = $false
    DependsOn = "[nxFile]SyncArchiveFromWeb"
-} 
+}
 ```
-

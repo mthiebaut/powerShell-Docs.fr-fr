@@ -1,20 +1,22 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: powershell,applet de commande
 title: Gestion de l'emplacement actuel
 ms.assetid: a9f9e7a7-3ea8-47d3-bbb4-6e437f6d4a4a
-ms.openlocfilehash: cbdebb84b3191e3bd549a1cf344cbeefaa91a23c
-ms.sourcegitcommit: c5251755c4442487f99ff74fadf7e37bbf039089
+ms.openlocfilehash: 8d529bf4a85553b95a9cab2739016859662486f2
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="managing-current-location"></a>Gestion de l'emplacement actuel
+
 Quand vous parcourez des systèmes de dossiers dans l'Explorateur de fichiers, vous disposez généralement d'un emplacement de travail spécifique, à savoir le dossier actuellement ouvert. Pour manipuler les éléments contenus dans le dossier actif, il vous suffit de cliquer dessus. Dans les interfaces de ligne de commande telles que Cmd.exe, quand vous vous trouvez dans le même dossier qu'un fichier particulier, vous pouvez accéder à ce fichier en spécifiant un nom relativement court, ce qui vous évite de préciser le chemin d'accès complet au fichier. Le répertoire actif est désigné sous le nom de « répertoire de travail ».
 
 Windows PowerShell utilise le substantif **Location** pour faire référence au répertoire de travail, et implémente une famille d’applets de commande pour vous permettre d’examiner et de manipuler votre emplacement.
 
 ### <a name="getting-your-current-location-get-location"></a>Obtention de votre emplacement actuel (Get-Location)
+
 Pour déterminer le chemin d’accès à l’emplacement de votre répertoire actif, entrez la commande **Get-Location** :
 
 ```
@@ -28,16 +30,18 @@ C:\Documents and Settings\PowerUser
 > L’applet de commande Get-Location est similaire à la commande **pwd** dans l’interpréteur de commandes BASH. L’applet de commande Set-Location est similaire à la commande **cd** dans Cmd.exe.
 
 ### <a name="setting-your-current-location-set-location"></a>Définition de votre emplacement actuel (Set-Location)
+
 La commande **Get-Location** s’utilise avec la commande **Set-Location**. La commande **Set-Location** permet de spécifier l’emplacement de votre répertoire actif.
 
-```
-PS> Set-Location -Path C:\Windows
+```powershell
+Set-Location -Path C:\Windows
 ```
 
 Une fois la commande entrée, notez qu'aucun commentaire concernant l'impact de la commande n'est affiché. La plupart des commandes Windows PowerShell qui exécutent une action ne génèrent que peu de commentaires, voire aucun, car la sortie n'est pas toujours utile. Pour vérifier qu’un changement de répertoire a bien eu lieu après l’exécution de la commande **Set-Location**, incluez le paramètre **-PassThru** dans la commande **Set-Location** :
 
 ```
 PS> Set-Location -Path C:\Windows -PassThru
+
 Path
 ----
 C:\WINDOWS
@@ -49,7 +53,7 @@ Pour spécifier des chemins d'accès par rapport à votre emplacement actuel, pr
 
 Par exemple, si vous vous trouvez dans le dossier **C:\\Windows**, un point (**.**) représente **C:\\Windows** et un point double (**..**) représente **C:**. Pour passer de votre emplacement actuel à la racine du lecteur C:, tapez :
 
-```powershell
+```
 PS> Set-Location -Path .. -PassThru
 
 Path
@@ -79,19 +83,20 @@ HKLM:\
 
 Vous pouvez taper Set-Location ou utiliser l'un des alias Windows PowerShell intégrés pour Set-Location (cd, chdir, sl). Par exemple :
 
-```
+```powershell
 cd -Path C:\Windows
 ```
 
-```
+```powershell
 chdir -Path .. -PassThru
 ```
 
-```
+```powershell
 sl -Path HKLM:\SOFTWARE -PassThru
 ```
 
 ### <a name="saving-and-recalling-recent-locations-push-location-and-pop-location"></a>Enregistrement et rappel des emplacements récents (Push-Location et Pop-Location)
+
 Quand vous passez d'un emplacement à un autre, il est utile de faire le suivi des emplacements visités et d'être en mesure de retourner à l'emplacement précédent. L’applet de commande **Push-Location** dans Windows PowerShell crée un historique chronologique (ou « pile ») des chemins d’accès aux répertoires visités. Pour revenir en arrière dans l’historique des chemins d’accès aux répertoires, utilisez l’applet de commande complémentaire, **Pop-Location**.
 
 Par exemple, Windows PowerShell démarre généralement dans le répertoire de base de l'utilisateur.
@@ -109,14 +114,14 @@ C:\Documents and Settings\PowerUser
 
 Pour ajouter l'emplacement actuel à la pile, puis passer au dossier Local Settings, tapez :
 
-```
-PS> Push-Location -Path "Local Settings"
+```powershell
+Push-Location -Path "Local Settings"
 ```
 
 Ensuite, pour ajouter l'emplacement Local Settings à la pile et passer au dossier Temp, tapez :
 
-```
-PS> Push-Location -Path Temp
+```powershell
+Push-Location -Path Temp
 ```
 
 Pour vérifier que le changement de répertoire a bien eu lieu, entrez la commande **Get-Location** :
@@ -152,13 +157,13 @@ C:\Documents and Settings\PowerUser
 
 Vous pouvez également utiliser les applets de commande Location avec des chemins d'accès réseau. Si vous disposez d'un serveur nommé FS01 avec un partage nommé Public, vous pouvez changer votre emplacement en tapant
 
-```
+```powershell
 Set-Location \\FS01\Public
 ```
 
 ou
 
-```
+```powershell
 Push-Location \\FS01\Public
 ```
 
@@ -172,4 +177,3 @@ Set-Location : Cannot find path 'D:\' because it does not exist.
 ```
 
 Quand vous utilisez une interface de ligne de commande, il n'est pas pratique de recourir à l'Explorateur de fichiers pour examiner les lecteurs physiques disponibles. En outre, l'Explorateur de fichiers n'affiche pas tous les lecteurs Windows PowerShell. Windows PowerShell fournit un ensemble de commandes permettant de manipuler les lecteurs Windows PowerShell. Celles-ci seront traitées dans une autre section.
-

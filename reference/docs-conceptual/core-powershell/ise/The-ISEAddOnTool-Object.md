@@ -1,32 +1,35 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: powershell,applet de commande
 title: Objet ISEAddOnTool
 ms.assetid: ce84d8bc-07ba-41f6-bdde-d6f3fddcd1e3
-ms.openlocfilehash: b813fcac547c8069e84741081a3ceb00044bab87
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: e091f37601c7a4fdaf5deff8c668b18ee7369e74
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="the-iseaddontool-object"></a>Objet ISEAddOnTool
-  Un objet **ISEAddonTool** représente un outil complémentaire installé qui apporte des fonctionnalités supplémentaires à Windows PowerShell ISE. L’outil **Commandes** en est un exemple. Vous pouvez l’afficher en cliquant sur **Affichage**, puis sur **Afficher le composant additionnel de commande**. Vous pouvez ensuite utiliser cet outil par le biais des différents objets **ISEAddOnTool** disponibles.
 
- Chaque outil complémentaire peut être associé au volet vertical ou horizontal. Le volet vertical est ancré sur le bord droit de Windows PowerShell ISE. Le volet horizontal est ancré sur le bord inférieur.
+Un objet **ISEAddonTool** représente un outil complémentaire installé qui apporte des fonctionnalités supplémentaires à Windows PowerShell ISE. L’outil **Commandes** en est un exemple. Vous pouvez l’afficher en cliquant sur **Affichage**, puis sur **Afficher le composant additionnel de commande**. Vous pouvez ensuite utiliser cet outil par le biais des différents objets **ISEAddOnTool** disponibles.
 
- Chaque onglet PowerShell dans Windows PowerShell ISE peut avoir son propre ensemble d’outils complémentaires installés. Consultez [$psISE.CurrentPowerShellTab.HorizontalAddOnTools](The-PowerShellTab-Object.md) et [$psISE.CurrentPowerShellTab.VerticalAddOnTools](The-PowerShellTab-Object.md) pour accéder à la collection d’outils disponibles pour l’onglet actuellement sélectionné ou les propriétés communes à tous les objets **PowerShellTab** fournis dans l’objet collection [$psISE.PowerShellTabs](The-PowerShellTabCollection-Object.md).
+Chaque outil complémentaire peut être associé au volet vertical ou horizontal. Le volet vertical est ancré sur le bord droit de Windows PowerShell ISE. Le volet horizontal est ancré sur le bord inférieur.
+
+Chaque onglet PowerShell dans Windows PowerShell ISE peut avoir son propre ensemble d’outils complémentaires installés. Consultez [$psISE.CurrentPowerShellTab.HorizontalAddOnTools](The-PowerShellTab-Object.md) et [$psISE.CurrentPowerShellTab.VerticalAddOnTools](The-PowerShellTab-Object.md) pour accéder à la collection d’outils disponibles pour l’onglet actuellement sélectionné ou les propriétés communes à tous les objets **PowerShellTab** fournis dans l’objet collection [$psISE.PowerShellTabs](The-PowerShellTabCollection-Object.md).
 
 ## <a name="methods"></a>Méthodes
- Il n’existe pas de méthode Windows PowerShell ISE spécifique pour les objets de cette classe.
+
+Il n’existe pas de méthode Windows PowerShell ISE spécifique pour les objets de cette classe.
 
 ## <a name="properties"></a>Propriétés
 
 ### <a name="control"></a>Control
-  Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures.
 
- La propriété **Control** fournit un accès en lecture à de nombreux détails de l’outil complémentaire Commandes.
+Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures.
 
-```
+La propriété **Control** fournit un accès en lecture à de nombreux détails de l’outil complémentaire Commandes.
+
+```powershell
 # View the properties of the Commands add-on tool.
 # (assumes that it is visible in the vertical pane)
 $psISE.CurrentVisibleVerticalTool.Control
@@ -134,37 +137,35 @@ TouchesDirectlyOver         : {}
 DependencyObjectType        : System.Windows.DependencyObjectType
 IsSealed                    : False
 Dispatcher                  : System.Windows.Threading.Dispatcher
-
 ```
 
 ### <a name="isvisible"></a>IsVisible
-  Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures.
 
- Propriété booléenne qui indique si l’outil complémentaire est actuellement visible dans le volet associé. S’il est visible, vous pouvez définir la propriété **IsVisible** à la valeur **$false** pour masquer l’outil, ou définir la propriété **IsVisible** à la valeur **$true** pour afficher un outil complémentaire dans l’onglet PowerShell correspondant. Notez qu’un outil complémentaire masqué n’est plus accessible via l’objet **CurrentVisibleHorizontalTool** ou **CurrentVisibleVerticalTool**, et qu’il ne peut donc pas être affiché en définissant cette propriété sur cet objet.
+Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures.
 
-```
+Propriété booléenne qui indique si l’outil complémentaire est actuellement visible dans le volet associé. S’il est visible, vous pouvez définir la propriété **IsVisible** à la valeur **$false** pour masquer l’outil, ou définir la propriété **IsVisible** à la valeur **$true** pour afficher un outil complémentaire dans l’onglet PowerShell correspondant. Notez qu’un outil complémentaire masqué n’est plus accessible via l’objet **CurrentVisibleHorizontalTool** ou **CurrentVisibleVerticalTool**, et qu’il ne peut donc pas être affiché en définissant cette propriété sur cet objet.
+
+```powershell
 # Hide the current tool in the vertical tool pane
 $psISE.CurrentVisibleVerticalTool.IsVisible = $false
 # Show the first tool on the currently selected PowerShell tab
-$psISE.CurrentPowerShellTab.VerticalAddOnTools[0].IsVisible=$true
-
+$psISE.CurrentPowerShellTab.VerticalAddOnTools[0].IsVisible = $true
 ```
 
-### <a name="name"></a>Nom
-  Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures.
+### <a name="name"></a>Name
 
- Propriété en lecture seule qui obtient le nom de l’outil complémentaire.
+Prise en charge dans Windows PowerShell ISE 3.0 et versions ultérieures, ne figure pas dans les versions antérieures.
 
-```
+Propriété en lecture seule qui obtient le nom de l’outil complémentaire.
+
+```powershell
 # Gets the name of the visible vertical pane add-on tool.
-$psISE.CurrentVisibleVerticalTool.name
+$psISE.CurrentVisibleVerticalTool.Name
 Commands
-
 ```
 
 ## <a name="see-also"></a>Voir aussi
-- [Objet ISEAddOnToolCollection](The-ISEAddOnToolCollection-Object.md)
-- [Modèle objet de script Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
-- [Informations de référence sur le modèle objet Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md)
-- [Hiérarchie du modèle objet ISE](The-ISE-Object-Model-Hierarchy.md)
 
+- [Objet ISEAddOnToolCollection](The-ISEAddOnToolCollection-Object.md)
+- [Objectif du modèle objet de script Windows PowerShell ISE](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
+- [Hiérarchie du modèle objet ISE](The-ISE-Object-Model-Hierarchy.md)

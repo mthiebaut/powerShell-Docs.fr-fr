@@ -1,15 +1,16 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: powershell,applet de commande
-title: "Accessibilité dans Windows PowerShell ISE"
+title: Accessibilité dans Windows PowerShell ISE
 ms.assetid: a078f9d1-dd6b-4323-b16d-0622cd993aa8
-ms.openlocfilehash: 7f758a46bdc722482b9e8a9baaff0a075f64ece9
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+ms.openlocfilehash: 65d159905660f4f3e025b385626679e02a785fd7
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Accessibilité dans Windows PowerShell ISE
+
 Cette rubrique décrit les fonctionnalités d’accessibilité de Windows PowerShell Integrated Scripting Environment (ISE) qui peuvent s’avérer utiles.
 
 * [Guide pratique pour modifier la taille et l’emplacement des volets Console et Script](#how-to-change-the-size-and-location-of-the-console-and-script-panes)
@@ -31,6 +32,7 @@ Windows PowerShell ISE prend en charge l’affichage à contraste élevé. Pour 
 - Modification de la taille du texte
 
 ## <a name="how-to-change-the-size-and-location-of-the-console-and-script-panes"></a>Comment modifier la taille et l’emplacement des volets Console et Script
+
 Pour modifier la taille et l’emplacement des volets Console et Script, vous pouvez procéder comme suit. Quand vous rouvrez Windows PowerShell ISE, les modifications de taille et d’emplacement sont conservées.
 
 ### <a name="to-resize-the-script-pane-and-console-pane"></a>Pour redimensionner les volets Script et Console
@@ -40,6 +42,7 @@ Pour modifier la taille et l’emplacement des volets Console et Script, vous po
 2. Lorsque le pointeur de la souris prend la forme d’une flèche à deux pointes, faites glisser la bordure pour modifier la taille du volet.
 
 ### <a name="to-move-the-script-pane-and-console-pane"></a>Pour déplacer les volets Script et Console
+
 Effectuez l'une des opérations suivantes :
 
 - Pour déplacer le volet Script au-dessus du volet Console, appuyez sur **Ctrl+1** ou, dans la barre d’outils, cliquez sur l’icône **Afficher le volet Script en haut**, ou encore, dans le menu **Affichage**, cliquez sur **Afficher le volet Script en haut**.
@@ -53,6 +56,7 @@ Effectuez l'une des opérations suivantes :
 - Pour afficher le volet Script quand le volet Console est agrandi, sur le bord de droit de la ligne d’onglets, cliquez sur l’icône **Afficher le volet Script**, ou, dans le menu **Affichage**, cliquez pour activer l’option de menu **Afficher le volet Script**.
 
 ## <a name="keyboard-shortcuts-for-editing-text"></a>Raccourcis clavier pour l’édition de texte
+
 Lorsque vous éditez un texte, vous pouvez utiliser les raccourcis clavier suivants.
 
 |Action|Raccourcis clavier|Utiliser dans|
@@ -70,6 +74,7 @@ Lorsque vous éditez un texte, vous pouvez utiliser les raccourcis clavier suiva
 |**Annuler**|Ctrl+Z|Volet Script, volet Console|
 
 ## <a name="keyboard-shortcuts-for-running-scripts"></a>Raccourcis clavier pour exécuter les scripts
+
 Lorsque vous exécutez des scripts dans le volet Script, vous pouvez utiliser les raccourcis clavier suivants.
 
 |Action|Raccourci clavier|
@@ -83,6 +88,7 @@ Lorsque vous exécutez des scripts dans le volet Script, vous pouvez utiliser le
 |**Tab** (pour accéder au script précédent)|Ctrl+Maj+Tab **Remarque :** L’usage de la touche Tab pour accéder au script précédent fonctionne uniquement quand un seul onglet PowerShell est ouvert ou, si plusieurs onglets PowerShell sont ouverts, quand le focus est dans le volet Script.|
 
 ## <a name="keyboard-shortcuts-for-customizing-the-view"></a>Raccourcis clavier pour la personnalisation de l’affichage
+
 Pour personnaliser l’affichage dans Windows PowerShell ISE, vous pouvez utiliser les raccourcis clavier suivants. Ils sont accessibles à partir de tous les volets de l’application.
 
 |Action|Raccourci clavier|
@@ -99,6 +105,7 @@ Pour personnaliser l’affichage dans Windows PowerShell ISE, vous pouvez utilis
 |**Zoom arrière**|Ctrl+Signe Moins|
 
 ## <a name="keyboard-shortcuts-for-debugging-scripts"></a>Raccourcis clavier pour le débogage des scripts
+
 Lors du débogage de scripts, vous pouvez utiliser les raccourcis clavier suivants.
 
 |Action|Raccourci clavier|Utiliser dans|
@@ -130,6 +137,7 @@ Lors du débogage de scripts, vous pouvez utiliser les raccourcis clavier suivan
 |**Afficher les commandes de débogage de la console**|H ou ?|Volet Console, lors du débogage d’un script|
 
 ## <a name="keyboard-shortcuts-for-windows-powershell-tabs"></a>Raccourcis clavier pour les onglets Windows PowerShell
+
 Lorsque vous utilisez les onglets Windows PowerShell, vous pouvez utiliser les raccourcis clavier suivants.
 
 |Action|Raccourci clavier|
@@ -140,6 +148,7 @@ Lorsque vous utilisez les onglets Windows PowerShell, vous pouvez utiliser les r
 |**Onglet Windows PowerShell suivant**|CTRL+Tab Ce raccourci ne fonctionne que si aucun fichier n’est ouvert sous aucun onglet PowerShell.|
 
 ## <a name="keyboard-shortcuts-for-starting-and-exiting"></a>Raccourcis clavier pour le démarrage et la fermeture
+
 Pour démarrer la console Windows PowerShell (PowerShell.exe) ou pour quitter Windows PowerShell ISE, vous pouvez utiliser les raccourcis clavier suivants.
 
 |Action|Raccourci clavier|
@@ -148,5 +157,5 @@ Pour démarrer la console Windows PowerShell (PowerShell.exe) ou pour quitter Wi
 |**Démarrer PowerShell.exe** (console Windows PowerShell)|Ctrl+Maj+P|
 
 ## <a name="see-also"></a>Voir aussi
-- [Utilisation de Windows PowerShell ISE](../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
 
+- [Présentation de Windows PowerShell ISE](../core-powershell/ise/Introducing-the-Windows-PowerShell-ISE.md)

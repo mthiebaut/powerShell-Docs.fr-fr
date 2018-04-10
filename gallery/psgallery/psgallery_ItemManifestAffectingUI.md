@@ -1,6 +1,8 @@
 # <a name="item-manifest-values-that-impact-the-powershell-gallery-ui"></a>Valeurs de manifeste d’élément qui impactent l’interface utilisateur de PowerShell Gallery
 
-Cette rubrique fournit aux éditeurs des informations récapitulatives sur la façon de modifier le manifeste pour leurs publications PowerShell Gallery afin d’impacter les fonctionnalités des applets de commande PowerShellGet et de l’interface utilisateur de PowerShell Gallery. Ce contenu est organisé selon l’endroit où apparaît la modification, en commençant par la section centrale, puis la zone de navigation à gauche. Une sélection présente les balises les plus importantes ainsi que certaines balises couramment utilisées. Deux rubriques fournissent des exemples de manifeste : 
+Cette rubrique fournit aux éditeurs des informations récapitulatives sur la façon de modifier le manifeste pour leurs publications PowerShell Gallery afin d’impacter les fonctionnalités des applets de commande PowerShellGet et de l’interface utilisateur de PowerShell Gallery.
+Ce contenu est organisé selon l’endroit où apparaît la modification, en commençant par la section centrale, puis la zone de navigation à gauche. Une sélection présente les balises les plus importantes ainsi que certaines balises couramment utilisées.
+Deux rubriques fournissent des exemples de manifeste :
 
 * Pour les modules, voir [Mettre à jour le manifeste du module](https://docs.microsoft.com/powershell/gallery/psget/module/psget_update-modulemanifest)
 * Pour les scripts, voir [Créer un fichier de script avec des métadonnées](https://docs.microsoft.com/powershell/gallery/psget/script/psget_new-scriptfileinfo)
@@ -10,7 +12,7 @@ Cette rubrique fournit aux éditeurs des informations récapitulatives sur la fa
 Le tableau ci-dessous présente les éléments de l’interface utilisateur PowerShell Gallery qui sont contrôlés par l’éditeur.
 Chaque élément précise s’il peut être contrôlé par le manifeste de type module ou script.
 
-| Élément de l'interface utilisateur | Description | Module | Script | 
+| Élément de l'interface utilisateur | Description | Module | Script |
 | --- | --- | --- | --- |
 | **Titre** | Nom de l’élément publié dans Gallery  | Non | Non |
 | **Version** | La version affichée représente la chaîne de version dans les métadonnées, ainsi qu’une préversion si elle est spécifiée. La partie principale de la version dans un manifeste Module est ModuleVersion. Pour un script, elle est identifiée par .VERSION. Si une chaîne de préversion est spécifiée, elle est ajoutée à la partie ModuleVersion pour les modules, ou identifiée par .VERSION pour les scripts. Il existe une documentation pour spécifier les chaînes de préversion dans les [modules](https://docs.microsoft.com/en-us/powershell/gallery/psget/module/prereleasemodule) et les [scripts](https://docs.microsoft.com/en-us/powershell/gallery/psget/script/prereleasescript) | Oui | Oui |
@@ -49,18 +51,26 @@ La page de modification de l’élément dans PowerShell Gallery permet aux édi
 * Notes de publication
 * Exiger une licence
 
-Cette approche est généralement déconseillée, sauf si elle est nécessaire pour corriger les informations affichées pour une version antérieure d’un module. Les utilisateurs qui acquièrent le module constateront que les métadonnées ne correspondent pas à ce qui est affiché dans PowerShell Gallery, ce qui soulève quelques interrogations concernant l’élément. Dans cette situation, les propriétaires de l’élément sont souvent invités à confirmer la modification. Chaque fois que cette approche est utilisée, il est fortement recommandé de publier une nouvelle version de l’élément avec les mêmes modifications. 
+Cette approche est généralement déconseillée, sauf si elle est nécessaire pour corriger les informations affichées pour une version antérieure d’un module.
+Les utilisateurs qui acquièrent le module constateront que les métadonnées ne correspondent pas à ce qui est affiché dans PowerShell Gallery, ce qui soulève quelques interrogations concernant l’élément.
+Dans cette situation, les propriétaires de l’élément sont souvent invités à confirmer la modification.
+Chaque fois que cette approche est utilisée, il est fortement recommandé de publier une nouvelle version de l’élément avec les mêmes modifications.
 
 ## <a name="tag-details"></a>Détails de la balise
 
-Les balises sont de simples chaînes permettant aux utilisateurs de rechercher des éléments. Les balises sont particulièrement utiles lorsqu’elles sont utilisées de manière cohérente entre plusieurs éléments liés à la même rubrique. L’utilisation de plusieurs formes d’un mot (par exemple, database et databases, ou test et testing) n’offre que peu d’avantages. Les balises sont des chaînes constituées d’un mot unique sensible à la casse, et ne peuvent pas inclure d’espaces. Si vous pensez qu’une expression fera l’objet de nombreuses recherches, ajoutez-la à la description de l’objet afin qu’elle apparaisse dans les résultats de la recherche. Utilisez la casse Pascal, le trait d’union, le trait de soulignement ou le point pour améliorer la lisibilité. Évitez les balises longues, complexes et inhabituelles, car elles sont souvent mal orthographiées. 
+Les balises sont de simples chaînes permettant aux utilisateurs de rechercher des éléments.
+Les balises sont particulièrement utiles lorsqu’elles sont utilisées de manière cohérente entre plusieurs éléments liés à la même rubrique. L’utilisation de plusieurs formes d’un mot (par exemple, database et databases, ou test et testing) n’offre que peu d’avantages.
+Les balises sont des chaînes constituées d’un mot unique sensible à la casse, et ne peuvent pas inclure d’espaces. Si vous pensez qu’une expression fera l’objet de nombreuses recherches, ajoutez-la à la description de l’objet afin qu’elle apparaisse dans les résultats de la recherche. Utilisez la casse Pascal, le trait d’union, le trait de soulignement ou le point pour améliorer la lisibilité. Évitez les balises longues, complexes et inhabituelles, car elles sont souvent mal orthographiées.
 
-Certaines balises sont particulièrement importantes car elles sont traitées de façon unique par PowerShell Gallery et les applets de commande PowerShellGet. C’est le cas des balises PSEdition_Desktop et PSEdition_Core, décrites précédemment. 
+Certaines balises sont particulièrement importantes car elles sont traitées de façon unique par PowerShell Gallery et les applets de commande PowerShellGet. C’est le cas des balises PSEdition_Desktop et PSEdition_Core, décrites précédemment.
 
-Comme indiqué ci-dessus, les balises sont particulièrement utiles lorsqu’elles sont spécifiques et utilisées de manière cohérente entre plusieurs éléments. Quand un éditeur recherche les meilleures balises à utiliser, l’approche la plus simple consiste à rechercher ces balises dans PowerShell Gallery. Idéalement, beaucoup d’éléments sont retournés et leurs descriptions correspondent à l’utilisation que vous faites de ce mot clé. 
+Comme indiqué ci-dessus, les balises sont particulièrement utiles lorsqu’elles sont spécifiques et utilisées de manière cohérente entre plusieurs éléments.
+Quand un éditeur recherche les meilleures balises à utiliser, l’approche la plus simple consiste à rechercher ces balises dans PowerShell Gallery.
+Idéalement, beaucoup d’éléments sont retournés et leurs descriptions correspondent à l’utilisation que vous faites de ce mot clé.
 
-Pour référence, voici quelques-unes des balises les plus couramment utilisées en date 14/12/2017. Dans certains cas, d’autres options similaires mais moins recommandées sont proposées en regard de la balise.
-Il est conseillé d’utiliser la balise préférée car elle génère moins de bruit et offre aux consommateurs de meilleurs résultats. 
+Pour référence, voici quelques-unes des balises les plus couramment utilisées en date 14/12/2017.
+Dans certains cas, d’autres options similaires mais moins recommandées sont proposées en regard de la balise.
+Il est conseillé d’utiliser la balise préférée car elle génère moins de bruit et offre aux consommateurs de meilleurs résultats.
 
 
 | **Balise préférée** | **Alternatives et remarques** |
@@ -125,5 +135,3 @@ Il est conseillé d’utiliser la balise préférée car elle génère moins de 
 | **MSI** |  |
 | **Mac** |  |
 | **PoshBot** |  |
-
-

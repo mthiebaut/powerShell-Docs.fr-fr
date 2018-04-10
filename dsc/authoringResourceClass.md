@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
-title: "Écriture d’une ressource DSC personnalisée avec les classes PowerShell"
-ms.openlocfilehash: 53757f965c51fee699409b5a8ecda802dda9801f
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+title: Écriture d’une ressource DSC personnalisée avec les classes PowerShell
+ms.openlocfilehash: 23669a6db17855e8d69aa0144c541bb4c799a9eb
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>Écriture d’une ressource DSC personnalisée avec les classes PowerShell
 
@@ -30,8 +30,8 @@ Pour implémenter une ressource personnalisée DSC avec une classe PowerShell, 
 ```
 $env:ProgramFiles\WindowsPowerShell\Modules (folder)
     |- MyDscResource (folder)
-        |- MyDscResource.psm1 
-           MyDscResource.psd1 
+        |- MyDscResource.psm1
+           MyDscResource.psd1
 ```
 
 ## <a name="create-the-class"></a>Créer la classe
@@ -72,10 +72,10 @@ Notez que les propriétés sont modifiées par les attributs. La signification d
 Les propriétés **$Path** et **$SourcePath** sont des chaînes. **$CreationTime** est une propriété [DateTime](https://technet.microsoft.com/library/system.datetime.aspx). La propriété **$Ensure** est un type d’énumération, défini de la manière suivante.
 
 ```powershell
-enum Ensure 
-{ 
-    Absent 
-    Present 
+enum Ensure
+{
+    Absent
+    Present
 }
 ```
 
@@ -83,7 +83,7 @@ enum Ensure
 
 Les méthodes **Get()**, **Set()** et **Test()** sont équivalentes aux fonctions **Get-TargetResource**, **Set-TargetResource** et **Test-TargetResource** d’une ressource de script.
 
-Ce code comprend également la fonction CopyFile(), une fonction d’assistance qui copie le fichier de **$SourcePath** vers **$Path**. 
+Ce code comprend également la fonction CopyFile(), une fonction d’assistance qui copie le fichier de **$SourcePath** vers **$Path**.
 
 ```powershell
 
@@ -450,7 +450,7 @@ PowerShellVersion = '5.0'
 
 # Name of the Windows PowerShell host required by this module
 # PowerShellHostName = ''
-} 
+}
 ```
 
 ## <a name="test-the-resource"></a>Tester la ressource
@@ -466,7 +466,7 @@ Configuration Test
         Path = "C:\test\test.txt"
         SourcePath = "c:\test.txt"
         Ensure = "Present"
-    } 
+    }
 }
 Test
 Start-DscConfiguration -Wait -Force Test
@@ -512,4 +512,3 @@ if (PsDscContext.RunAsUser) {
 ## <a name="see-also"></a>Voir aussi
 ### <a name="concepts"></a>Concepts
 [Création de ressources personnalisées de configuration d’état souhaité Windows PowerShell](authoringResource.md)
-

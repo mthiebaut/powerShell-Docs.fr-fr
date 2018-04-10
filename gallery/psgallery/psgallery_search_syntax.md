@@ -1,14 +1,14 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: JKeithB
 ms.topic: conceptual
-keywords: gallery,powershell,cmdlet,psgallery
+keywords: gallery,powershell,applet de commande,psgallery
 title: psgallery_search_syntax
-ms.openlocfilehash: 409ae607557af760f9cec4e3c54f39e51b5fac18
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 337b4b1e702994fcbc456eb31a2d8632f5220d09
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="gallery-search-syntax"></a>Syntaxe de recherche PowerShell Gallery
 
@@ -49,7 +49,7 @@ est une autre façon de rechercher des éléments avec « AzureRM.Profile » d
 Le filtre Id étant une correspondance avec la sous-chaîne, si vous recherchez ce qui suit :
 
     Id:"azure"
-    
+
 Vous obtiendrez des résultats comme « AzureRM.Profile » et « Azure.Storage ».
 
 Vous pouvez également rechercher plusieurs mots clés dans un champ unique. Vous pouvez aussi combiner et associer des champs.
@@ -71,7 +71,7 @@ Pour rechercher tous les éléments avec la fonction spécifiée.
     Functions:"Update-AzureRM"
 
 Pour rechercher tous les éléments avec l’applet de commande spécifiée.
-    
+
     Cmdlets:"Get-AzureRmEnvironment"
 
 Pour rechercher tous les éléments avec le nom de ressource DSC spécifié.
@@ -88,8 +88,7 @@ Pour rechercher tous les éléments avec la version PowerShell spécifiée
 Enfin, si vous utilisez un champ non pris en charge, tel que « commandes », nous l’ignorons simplement et effectuons une recherche dans tous les champs. Par conséquent, la requête suivante
 
     commands:blobs storage
-    
+
 est interprétée exactement comme cette requête :
 
     blobs storage
-

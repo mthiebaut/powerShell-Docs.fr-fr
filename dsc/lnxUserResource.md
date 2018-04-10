@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: Ressource nxUser dans DSC pour Linux
-ms.openlocfilehash: 93e2b12af076fce687e045e3043c94fa82d61861
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 222bd2191cf5c5f0a90ba947275ffde47d22ec86
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dsc-for-linux-nxuser-resource"></a>Ressource nxUser dans DSC pour Linux
 
@@ -34,25 +34,25 @@ nxUser <string> #ResourceName
 
 ## <a name="properties"></a>Propriétés
 
-|  Propriété |  Indique le nom du compte pour lequel vous souhaitez garantir un état spécifique. | 
+|  Propriété |  Indique le nom du compte pour lequel vous souhaitez garantir un état spécifique. |
 |---|---|
-| UserName| Spécifie l’emplacement d’un fichier ou d’un répertoire dont vous voulez garantir l’état.| 
-| Ensure| Spécifie si le compte existe. Définissez cette propriété sur « Present » pour vous assurer que le compte existe, ou sur « Absent » pour vous assurer que le compte n’existe pas.| 
-| FullName| Chaîne contenant le nom complet à utiliser pour le compte d’utilisateur.| 
-| Description| Description du compte d’utilisateur.| 
-| Password| Hachage du mot de passe de l’utilisateur dans le format approprié pour l’ordinateur Linux. En règle générale, il s’agit d’un hachage salt SHA-256 ou SHA-512. Pour Debian et Ubuntu Linux, cette valeur peut être générée avec la commande mkpasswd. Pour les autres versions de Linux, vous pouvez générer la valeur de hachage à l’aide de la méthode crypt disponible dans la bibliothèque de cryptage Python.| 
-| Disabled| Indique si le compte est activé. Définissez cette propriété sur **$true** pour vous assurer que ce compte est désactivé, ou sur **$false** pour vous assurer qu’il est activé.| 
-| PasswordChangeRequired| Indique si l’utilisateur peut modifier le mot de passe. Définissez cette propriété sur **$true** pour vous assurer que l’utilisateur ne modifie pas le mot de passe, ou sur **$false** pour permettre à l’utilisateur de modifier le mot de passe. La valeur par défaut est **$false**. Cette propriété est évaluée uniquement si le compte d’utilisateur en cours de création n’existe pas encore.| 
-| HomeDirectory| Indique le répertoire racine de l’utilisateur.| 
-| GroupID| Indique l’ID de groupe principal de l’utilisateur.| 
-| DependsOn | Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’ID « ResourceName » et le type « ResourceType », utilisez la syntaxe suivante pour cette propriété : `DependsOn = "[ResourceType]ResourceName"`.| 
+| UserName| Spécifie l’emplacement d’un fichier ou d’un répertoire dont vous voulez garantir l’état.|
+| Ensure| Spécifie si le compte existe. Définissez cette propriété sur « Present » pour vous assurer que le compte existe, ou sur « Absent » pour vous assurer que le compte n’existe pas.|
+| FullName| Chaîne contenant le nom complet à utiliser pour le compte d’utilisateur.|
+| Description| Description du compte d’utilisateur.|
+| Password| Hachage du mot de passe de l’utilisateur dans le format approprié pour l’ordinateur Linux. En règle générale, il s’agit d’un hachage salt SHA-256 ou SHA-512. Pour Debian et Ubuntu Linux, cette valeur peut être générée avec la commande mkpasswd. Pour les autres versions de Linux, vous pouvez générer la valeur de hachage à l’aide de la méthode crypt disponible dans la bibliothèque de cryptage Python.|
+| Disabled| Indique si le compte est activé. Définissez cette propriété sur **$true** pour vous assurer que ce compte est désactivé, ou sur **$false** pour vous assurer qu’il est activé.|
+| PasswordChangeRequired| Indique si l’utilisateur peut modifier le mot de passe. Définissez cette propriété sur **$true** pour vous assurer que l’utilisateur ne modifie pas le mot de passe, ou sur **$false** pour permettre à l’utilisateur de modifier le mot de passe. La valeur par défaut est **$false**. Cette propriété est évaluée uniquement si le compte d’utilisateur en cours de création n’existe pas encore.|
+| HomeDirectory| Indique le répertoire racine de l’utilisateur.|
+| GroupID| Indique l’ID de groupe principal de l’utilisateur.|
+| DependsOn | Indique que la configuration d’une autre ressource doit être exécutée avant celle de cette ressource. Par exemple, si vous voulez exécuter en premier le bloc de script de configuration de ressource ayant l’ID « ResourceName » et le type « ResourceType », utilisez la syntaxe suivante pour cette propriété : `DependsOn = "[ResourceType]ResourceName"`.|
 
 ## <a name="example"></a>Exemple
 
 L’exemple suivant vérifie que l’utilisateur « monuser » existe et qu’il est membre du groupe « DBusers ».
 
 ```
-Import-DSCResource -Module nx 
+Import-DSCResource -Module nx
 
 Node $node {
 nxUser UserExample{
@@ -62,13 +62,12 @@ nxUser UserExample{
    Ensure = "Present"
    HomeDirectory = "/home/monuser"
 }
- 
+
 nxGroup GroupExample{
    GroupName = "DBusers"
    Ensure = "Present"
    MembersToInclude = "monuser"
-   DependsOn = "[nxUser]UserExample"            
+   DependsOn = "[nxUser]UserExample"
 }
 }
 ```
-

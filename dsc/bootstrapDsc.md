@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
-title: "Configurer une machine virtuelle au démarrage initial à l’aide de DSC"
-ms.openlocfilehash: ff06aafa6db49d93a9b42e38ac7c3e9a11657bd5
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+title: Configurer une machine virtuelle au démarrage initial à l’aide de DSC
+ms.openlocfilehash: e6ff83b9a09f93277904c80e8e52f3db5e818739
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 >S’applique à : Windows PowerShell 5.0
 
@@ -90,7 +90,8 @@ Renommez le fichier en `Pending.mof` et déplacez-le à l’emplacement appropri
     Dismount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
     ```
 
-7. Créez une machine virtuelle en utilisant le disque dur virtuel où vous avez installé le document MOF DSC. Après le démarrage initial et l’installation du système d’exploitation, IIS est installé.
+7. Créez une machine virtuelle en utilisant le disque dur virtuel où vous avez installé le document MOF DSC.
+Après le démarrage initial et l’installation du système d’exploitation, IIS est installé.
 Vous pouvez le vérifier en appelant l’applet de commande [Get-WindowsFeature](https://technet.microsoft.com/library/jj205469.aspx).
 
 ## <a name="inject-a-dsc-metaconfiguration-into-a-vhd"></a>Injecter une métaconfiguration DSC dans un disque dur virtuel
@@ -203,4 +204,3 @@ Par défaut, la valeur de la clé **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Window
 - [Clé de Registre DSCAutomationHostEnabled](DSCAutomationHostEnabled.md)
 - [Configuration du gestionnaire de configuration local](metaConfig.md)
 - [Configuration d’un serveur collecteur web DSC](pullServer.md)
-

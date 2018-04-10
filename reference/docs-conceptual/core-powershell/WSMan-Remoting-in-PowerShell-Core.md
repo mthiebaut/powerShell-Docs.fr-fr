@@ -1,6 +1,6 @@
-# <a name="ws-management-wsman-remoting-in-powershell-core"></a>Accès distant à WS-Management (WSMan) dans PowerShell Core 
+# <a name="ws-management-wsman-remoting-in-powershell-core"></a>Accès distant à WS-Management (WSMan) dans PowerShell Core
 
-## <a name="instructions-to-create-a-remoting-endpoint"></a>Instructions pour créer un point de terminaison d’accès distant
+## <a name="instructions-to-create-a-remoting-endpoint"></a>Instructions pour créer un point de terminaison de communication à distance
 
 Le package PowerShell Core pour Windows inclut un plug-in WinRM (`pwrshplugin.dll`) et un script d’installation (`Install-PowerShellRemoting.ps1`) dans `$PSHome`.
 Ces fichiers permettent à PowerShell d’accepter les connexions à distance PowerShell entrantes quand son point de terminaison est spécifié.
@@ -28,19 +28,19 @@ Le script doit être exécuté dans une session PowerShell de niveau administrat
 
 #### <a name="executed-by-the-instance-of-powershell-that-it-will-register"></a>Exécuté par l’instance de PowerShell qu’il inscrira
 
-``` powershell
+```powershell
 Install-PowerShellRemoting.ps1
 ```
 
 #### <a name="executed-by-another-instance-of-powershell-on-behalf-of-the-instance-that-it-will-register"></a>Exécuté par une autre instance de PowerShell pour le compte de l’instance qu’il inscrira
 
-``` powershell
+```powershell
 <path to powershell>\Install-PowerShellRemoting.ps1 -PowerShellHome "<absolute path to the instance's $PSHOME>"
 ```
 
 Par exemple :
 
-``` powershell
+```powershell
 Set-Location -Path 'C:\Program Files\PowerShell\6.0.0\'
 .\Install-PowerShellRemoting.ps1 -PowerShellHome "C:\Program Files\PowerShell\6.0.0\"
 ```
@@ -51,7 +51,7 @@ Set-Location -Path 'C:\Program Files\PowerShell\6.0.0\'
 
 Créez une session PowerShell sur le nouveau point de terminaison PowerShell en spécifiant `-ConfigurationName "some endpoint name"`. Pour vous connecter à l’instance PowerShell de l’exemple ci-dessus, utilisez :
 
-``` powershell
+```powershell
 New-PSSession ... -ConfigurationName "powershell.6.0.0"
 Enter-PSSession ... -ConfigurationName "powershell.6.0.0"
 ```

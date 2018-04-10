@@ -67,7 +67,7 @@ En installant le module [`WindowsPSModulePath`][] vous pouvez ajouter Windows Po
 Installez d’abord le module `WindowsPSModulePath` à partir de PowerShell Gallery :
 
 ```powershell
-# Add `-Scope CurrentUser` if you're installing as non-admin 
+# Add `-Scope CurrentUser` if you're installing as non-admin
 Install-Module WindowsPSModulePath -Force
 ```
 

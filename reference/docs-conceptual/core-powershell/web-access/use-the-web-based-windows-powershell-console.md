@@ -1,12 +1,12 @@
 ---
-ms.date: 2017-08-23
+ms.date: 08/23/2017
 keywords: powershell,applet de commande
 title: utiliser la console web Windows PowerShell
-ms.openlocfilehash: a6c9812253309ba1225141cfd48d0f1c8b8785b5
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+ms.openlocfilehash: 3ef2b39279745ffe78fa928247e8a1fb76519ba0
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>Utiliser la console web Windows PowerShell
 
@@ -18,15 +18,18 @@ Accès Web Windows PowerShell permet aux utilisateurs de se connecter à un site
 
 Comme la console Windows PowerShell s’exécute dans un navigateur web, elle peut être ouverte depuis un grand nombre d’appareils clients différents : elle fonctionne donc sur presque tous les appareils avec un navigateur web.
 
-La console web Windows PowerShell a pour cible un ordinateur distant spécifié par les utilisateurs dans le cadre du processus de connexion. 
+La console web Windows PowerShell a pour cible un ordinateur distant spécifié par les utilisateurs dans le cadre du processus de connexion.
 
 Cette rubrique décrit comment se connecter et commencer à utiliser la console web Accès Web Windows PowerShell.
 
-Elle ne décrit pas comment utiliser Windows PowerShell ou exécuter des applets de commande ou des scripts. Pour plus d’informations sur la façon d’utiliser Windows PowerShell et pour accéder à des ressources de script, consultez la section [Voir aussi](#see-also) à la fin de cette rubrique.
+Elle ne décrit pas comment utiliser Windows PowerShell ou exécuter des applets de commande ou des scripts.
+Pour plus d’informations sur la façon d’utiliser Windows PowerShell et pour accéder à des ressources de script, consultez la section [Voir aussi](#see-also) à la fin de cette rubrique.
 
 ## <a name="supported-browsers-and-client-devices"></a>Navigateurs et périphériques clients pris en charge
 
-Accès Web Windows PowerShell prend en charge les navigateurs suivants. Bien que les navigateurs mobiles ne soient pas officiellement pris en charge, nombre d’entre eux sont susceptibles de pouvoir exécuter la console web Windows PowerShell. D’autres navigateurs acceptant les cookies, exécutant JavaScript et exécutant des sites Web HTTPS sont censés fonctionner, mais n’ont pas été testés officiellement.
+Accès Web Windows PowerShell prend en charge les navigateurs suivants.
+Bien que les navigateurs mobiles ne soient pas officiellement pris en charge, nombre d’entre eux sont susceptibles de pouvoir exécuter la console web Windows PowerShell.
+D’autres navigateurs acceptant les cookies, exécutant JavaScript et exécutant des sites Web HTTPS sont censés fonctionner, mais n’ont pas été testés officiellement.
 
 ### <a name="supported-desktop-computer-browsers"></a>Navigateurs d’ordinateur de bureau pris en charge
 

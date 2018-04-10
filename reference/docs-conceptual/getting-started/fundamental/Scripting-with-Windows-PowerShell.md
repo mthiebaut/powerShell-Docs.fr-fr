@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: powershell,applet de commande
-title: "Écriture de scripts avec Windows PowerShell"
+title: Écriture de scripts avec Windows PowerShell
 ms.assetid: c425d27a-bb41-4947-8d73-ba5480bc8ee0
-ms.openlocfilehash: 693d1bb9329dbb280453fc16738eda63c466e156
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 9bb420a3d725d3fa925b79452bbbcc542bf9f4db
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="scripting-with-windows-powershell"></a>Écriture de scripts avec Windows PowerShell
 
@@ -23,4 +23,3 @@ Windows PowerShell intègre les fonctionnalités suivantes :
 - Une navigation simplifiée et basée sur les commandes du système d'exploitation, ce qui permet aux utilisateurs de parcourir le Registre et d'autres magasins de données en employant les mêmes techniques que celles utilisées pour parcourir le système de fichiers.
 - Des fonctionnalités puissantes de manipulation d'objets. Les objets peuvent être directement manipulés ou envoyés à d'autres outils ou bases de données.
 - Une interface extensible. Les éditeurs de logiciels indépendants et les développeurs d'entreprise peuvent créer des outils personnalisés et des utilitaires pour administrer leurs logiciels.
-

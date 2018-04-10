@@ -1,13 +1,13 @@
 ---
-ms.date: 2018-02-02
+ms.date: 02/02/2018
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: Service collecteur DSC
-ms.openlocfilehash: d5e24dcc093c73d8ebbaa618517193dacc4f2aaf
-ms.sourcegitcommit: 755d7bc0740573d73613cedcf79981ca3dc81c5e
+ms.openlocfilehash: 1547092d5ea6733296bf89f05dd96f70c0a000ac
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="desired-state-configuration-pull-service"></a>Service collecteur Desired State Configuration
 
@@ -19,9 +19,9 @@ La configuration et toutes les ressources DSC nécessaires en tant que dépendan
 Des informations sur l’état de l’ordinateur géré sont chargées sur le service pour créer des rapports.
 Ce concept est appelé « service collecteur ».
 
-Les options actuelles du service collecteur sont les suivantes :
+Les options actuelles du service d’extraction sont les suivantes :
 
-- Service Desired State Configuration Azure Automation
+- Service de Configuration d’état souhaité d’Azure Automation
 - Service collecteur exécuté sur Windows Server
 - Solutions open source gérées par la communauté
 - Partage SMB
@@ -31,7 +31,7 @@ Les options actuelles du service collecteur sont les suivantes :
 Le service Azure peut gérer les nœuds locaux dans des centres de données privés ou dans des clouds publics tels qu’Azure et AWS.
 Pour les environnements où les serveurs ne peut pas se connecter directement à Internet, envisagez de limiter le trafic sortant à la seule plage IP Azure publiée (voir [Plages d’adresses IP Azure Datacenter](https://www.microsoft.com/en-us/download/details.aspx?id=41653)).
 
-Fonctionnalités du service en ligne qui ne sont actuellement pas disponibles dans le service collecteur sur Windows Server :
+Fonctionnalités du service en ligne qui ne sont actuellement pas disponibles dans le service d’extraction sur Windows Server :
 - Toutes les données sont chiffrées, en transit comme au repos
 - Les certificats clients sont créés et gérés automatiquement
 - Magasin des secrets pour une gestion centralisée des [mots de passe/informations d’identification](https://docs.microsoft.com/en-us/azure/automation/automation-credentials), ou des [variables](https://docs.microsoft.com/en-us/azure/automation/automation-variables) telles que les noms des serveurs ou les chaînes de connexion
@@ -67,7 +67,7 @@ Vous trouverez ci-dessous un exemple de script.
 Le moyen le plus simple de configurer un serveur collecteur web consiste à utiliser la ressource xWebService, incluse dans le module xPSDesiredStateConfiguration.
 Les étapes suivantes expliquent comment utiliser la ressource dans une configuration qui configure le service web.
 
-1. Appelez l’applet de commande [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) pour installer le module **xPSDesiredStateConfiguration**. **Remarque** : **Install-Module** est inclus dans le module **PowerShellGet** de PowerShell 5.0. Vous pouvez télécharger le module **PowerShellGet** pour PowerShell 3.0 et 4.0 ici : [PackageManagement PowerShell Modules Preview](https://www.microsoft.com/en-us/download/details.aspx?id=49186). 
+1. Appelez l’applet de commande [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) pour installer le module **xPSDesiredStateConfiguration**. **Remarque** : **Install-Module** est inclus dans le module **PowerShellGet** de PowerShell 5.0. Vous pouvez télécharger le module **PowerShellGet** pour PowerShell 3.0 et 4.0 ici : [PackageManagement PowerShell Modules Preview](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
 1. Obtenez un certificat SSL pour le serveur collecteur DSC auprès d’une autorité de certification approuvée, au sein de votre organisation ou auprès d’une autorité publique. Le certificat reçu de l’autorité est généralement au format PFX. Installez le certificat sur le nœud qui sera le serveur DSC à l’emplacement par défaut, c’est-à-dire : CERT:\LocalMachine\My. Notez l’empreinte de certificat.
 1. Sélectionnez un GUID à utiliser comme clé d’inscription. Pour en générer un à l’aide de PowerShell, entrez ce qui suit à l’invite PowerShell et appuyez sur Entrée : « ``` [guid]::newGuid()``` » ou « ```New-Guid``` ». Cette clé est utilisée par les nœuds clients comme une clé partagée pour l’authentification lors de l’inscription. Pour plus d’informations, consultez la section Clé d’inscription ci-dessous.
 1. Dans PowerShell ISE, démarrez (F5) le script de configuration suivant (inclus dans le dossier Example du module **xPSDesiredStateConfiguration** en tant que Sample_xDscWebService.ps1). Ce script configure le serveur collecteur.
@@ -127,7 +127,7 @@ Les étapes suivantes expliquent comment utiliser la ressource dans une configur
 1. Exécutez la configuration, en passant l’empreinte du certificat SSL comme paramètre **certificateThumbPrint** et une clé d’inscription GUID comme paramètre **RegistrationKey** :
 
 ```powershell
-    # To find the Thumbprint for an installed SSL certificate for use with the pull server list all certificates in your local store 
+    # To find the Thumbprint for an installed SSL certificate for use with the pull server list all certificates in your local store
     # and then copy the thumbprint for the appropriate certificate by reviewing the certificate subjects
     dir Cert:\LocalMachine\my
 
@@ -142,7 +142,7 @@ Les étapes suivantes expliquent comment utiliser la ressource dans une configur
 #### <a name="registration-key"></a>Clé d’inscription
 
 Pour que les nœuds clients puissent s’inscrire auprès du serveur afin de pouvoir utiliser les noms de configuration au lieu de l’ID de configuration, une clé d’inscription, créée par la configuration ci-dessus, est enregistrée dans un fichier nommé `RegistrationKeys.txt` dans `C:\Program Files\WindowsPowerShell\DscService`. La clé d’inscription fonctionne comme un secret partagé utilisé lors de l’inscription initiale par le client avec le serveur collecteur. Le client génère un certificat auto-signé qui est utilisé pour l’authentification unique auprès du serveur collecteur une fois l’inscription terminée. L’empreinte de ce certificat est stockée localement et associée à l’URL du serveur collecteur.
-> **Remarque** : Les clés d’inscription ne sont pas prises en charge dans PowerShell 4.0. 
+> **Remarque** : Les clés d’inscription ne sont pas prises en charge dans PowerShell 4.0.
 
 Pour configurer un nœud pour l’authentification auprès du serveur collecteur, la clé d’inscription doit se trouver dans la métaconfiguration de tous les nœuds cibles que vous prévoyez d’inscrire auprès de ce serveur. Notez que la propriété **RegistrationKey** dans la métaconfiguration ci-dessous est supprimée une fois que l’ordinateur cible a été correctement inscrit, et que la valeur « 140a952b-b9d6-406b-b416-e0f759c9c0e4 » doit correspondre à la valeur stockée dans le fichier RegistrationKeys.txt sur le serveur collecteur. Conservez la valeur de la clé d’inscription en lieu sûr, car elle permet d’inscrire n’importe quel ordinateur cible auprès du serveur.
 
@@ -155,7 +155,7 @@ configuration PullClientConfigID
         Settings
         {
             RefreshMode          = 'Pull'
-            RefreshFrequencyMins = 30 
+            RefreshFrequencyMins = 30
             RebootNodeIfNeeded   = $true
         }
 
@@ -223,8 +223,8 @@ Pour faciliter la configuration, la validation et la gestion du serveur collecte
 
     ```powershell
         # Example 1 - Package all versions of given modules installed locally and MOF files are in c:\LocalDepot
-         $moduleList = @("xWebAdministration", "xPhp") 
-         Publish-DSCModuleAndMof -Source C:\LocalDepot -ModuleNameList $moduleList 
+         $moduleList = @("xWebAdministration", "xPhp")
+         Publish-DSCModuleAndMof -Source C:\LocalDepot -ModuleNameList $moduleList
 
          # Example 2 - Package modules and mof documents from c:\LocalDepot
          Publish-DSCModuleAndMof -Source C:\LocalDepot -Force

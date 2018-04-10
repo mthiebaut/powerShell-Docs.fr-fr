@@ -1,16 +1,16 @@
 ---
-description: 
+description: ''
 ms.topic: article
 ms.prod: powershell
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
+ms.date: 12/12/2016
 title: test pswaauthorizationrule
 ms.technology: powershell
-ms.openlocfilehash: fb2937397616160c70b056e412e42fb8ff4c2f27
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: ed6d56b2f3c4ee4ac410cdaadda312bffe506ee9
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="test-pswaauthorizationrule"></a>Test-PswaAuthorizationRule
 
@@ -47,7 +47,7 @@ Les paramètres de cette applet de commande correspondent aux champs de la page 
 
 Spécifie le nom de l’ordinateur à tester.
 
-|||  
+|||
 |-|-|
 | Alias                              | none                                 |
 | Obligatoire ?                            | true                                 |
@@ -60,7 +60,7 @@ Spécifie le nom de l’ordinateur à tester.
 
 Spécifie le nom de la configuration de session Windows PowerShell, également appelée point de terminaison ou instance d’exécution, à tester.
 
-|||  
+|||
 |-|-|
 | Alias                              | none                                 |
 | Obligatoire ?                            | false                                |
@@ -73,7 +73,7 @@ Spécifie le nom de la configuration de session Windows PowerShell, également a
 
 Spécifie l’URI de la connexion à tester.
 
-|||  
+|||
 |-|-|
 | Alias                              | none                                 |
 | Obligatoire ?                            | true                                 |
@@ -86,7 +86,7 @@ Spécifie l’URI de la connexion à tester.
 
 Spécifie un objet **PSCredential** pour un compte d’utilisateur que vous voulez utiliser pour tester les règles d’autorisation d’Accès Web Windows PowerShell. Si vous n’ajoutez pas ce paramètre, l’applet de commande utilise le compte d’utilisateur actuellement connecté. Pour obtenir un objet **PSCredential**, qui est nécessaire pour tester des règles d’autorisation à distance, exécutez l’applet de commande [Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936).
 
-|||  
+|||
 |-|-|
 | Alias                              | none                                 |
 | Obligatoire ?                            | false                                |
@@ -99,7 +99,7 @@ Spécifie un objet **PSCredential** pour un compte d’utilisateur que vous voul
 
 Spécifie un sous-ensemble de règles à tester. Si ce paramètre n’est pas spécifié, cette applet de commande teste en prenant en compte toutes les règles d’autorisation.
 
-|||  
+|||
 |-|-|
 | Alias                              | none                                 |
 | Obligatoire ?                            | false                                |
@@ -112,7 +112,7 @@ Spécifie un sous-ensemble de règles à tester. Si ce paramètre n’est pas sp
 
 Spécifie le nom de l’utilisateur à tester.
 
-|||  
+|||
 |-|-|
 | Alias                              | none                                 |
 | Obligatoire ?                            | true                                 |

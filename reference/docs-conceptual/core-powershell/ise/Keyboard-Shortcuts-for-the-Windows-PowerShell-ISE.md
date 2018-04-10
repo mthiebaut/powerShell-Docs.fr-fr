@@ -1,18 +1,20 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: powershell,applet de commande
 title: Raccourcis clavier pour Windows PowerShell ISE
 ms.assetid: 8328b946-0f02-4ef4-ac28-2743a1b4043b
-ms.openlocfilehash: 21c4b43b1ab94e2b533413362319ec42ac8a15aa
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: e17fee4cf0cc8ac7aa0bb36acde3b452919312d0
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Raccourcis clavier pour Windows PowerShell ISE
+
 Pour effectuer des actions dans l’environnement d’écriture de scripts intégré de Windows PowerShell®, utilisez les raccourcis clavier suivants. Windows PowerShell ISE est intégré aux systèmes d’exploitation Windows Server et Windows Client, mais peut également être installé sur certains systèmes d’exploitation Windows plus anciens comme composant du [package de téléchargement de Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881).
 
 ## <a name="keyboard-shortcuts-for-editing-text"></a>Raccourcis clavier pour l’édition de texte
+
 Lorsque vous éditez un texte, vous pouvez utiliser les raccourcis clavier suivants.
 
 |Action|Raccourcis clavier|Utiliser dans|
@@ -34,6 +36,7 @@ Lorsque vous éditez un texte, vous pouvez utiliser les raccourcis clavier suiva
 |**Annuler**|Ctrl+Z|Volets Script et Commande|
 
 ## <a name="keyboard-shortcuts-for-running-scripts"></a>Raccourcis clavier pour exécuter les scripts
+
 Lorsque vous exécutez des scripts dans le volet Script, vous pouvez utiliser les raccourcis clavier suivants.
 
 |Action|Raccourci clavier|
@@ -47,6 +50,7 @@ Lorsque vous exécutez des scripts dans le volet Script, vous pouvez utiliser le
 |**Tab** (pour accéder au script précédent)|Ctrl+Maj+Tab **Remarque :** L’usage de la touche Tab pour accéder au script précédent fonctionne uniquement quand un seul onglet Windows PowerShell est ouvert ou, si plusieurs onglets Windows PowerShell sont ouverts, quand le focus est dans le volet Script.|
 
 ## <a name="keyboard-shortcuts-for-customizing-the-view"></a>Raccourcis clavier pour la personnalisation de l’affichage
+
 Pour personnaliser l’affichage dans Windows PowerShell ISE, vous pouvez utiliser les raccourcis clavier suivants. Ils sont accessibles à partir de tous les volets de l’application.
 
 |Action|Raccourci clavier|
@@ -63,6 +67,7 @@ Pour personnaliser l’affichage dans Windows PowerShell ISE, vous pouvez utilis
 |**Zoom arrière**|Ctrl+Signe Moins|
 
 ## <a name="keyboard-shortcuts-for-debugging-scripts"></a>Raccourcis clavier pour le débogage des scripts
+
 Lors du débogage de scripts, vous pouvez utiliser les raccourcis clavier suivants.
 
 |Action|Raccourci clavier|Utiliser dans|
@@ -93,6 +98,7 @@ Lors du débogage de scripts, vous pouvez utiliser les raccourcis clavier suivan
 |**Afficher les commandes de débogage de la console**|H ou ?|Volet Console, lors du débogage d’un script|
 
 ## <a name="keyboard-shortcuts-for-windows-powershell-tabs"></a>Raccourcis clavier pour les onglets Windows PowerShell
+
 Lorsque vous utilisez les onglets Windows PowerShell, vous pouvez utiliser les raccourcis clavier suivants.
 
 |Action|Raccourci clavier|
@@ -103,6 +109,7 @@ Lorsque vous utilisez les onglets Windows PowerShell, vous pouvez utiliser les r
 |**Onglet Windows PowerShell suivant**|CTRL+Tab Ce raccourci ne fonctionne que si aucun fichier n’est ouvert sous aucun onglet Windows PowerShell.|
 
 ## <a name="keyboard-shortcuts-for-starting-and-exiting"></a>Raccourcis clavier pour le démarrage et la fermeture
+
 Pour démarrer la console Windows PowerShell (PowerShell.exe) ou pour quitter Windows PowerShell ISE, vous pouvez utiliser les raccourcis clavier suivants.
 
 |Action|Raccourci clavier|
@@ -111,5 +118,5 @@ Pour démarrer la console Windows PowerShell (PowerShell.exe) ou pour quitter Wi
 |**Démarrer PowerShell.exe** (console Windows PowerShell)|Ctrl+Maj+P|
 
 ## <a name="see-also"></a>Voir aussi
-- [PowerShell Magazine : Liste complète des raccourcis clavier pour Windows PowerShell ISE](http://www.powershellmagazine.com/2013/01/29/the-complete-list-of-powershell-ise-3-0-keyboard-shortcuts/)
 
+- [PowerShell Magazine : Liste complète des raccourcis clavier pour Windows PowerShell ISE](http://www.powershellmagazine.com/2013/01/29/the-complete-list-of-powershell-ise-3-0-keyboard-shortcuts/)

@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
-title: "Configuration d’état souhaité - Démarrage rapide"
-ms.openlocfilehash: e21017f24db8c90229063895c1a7e4c6f0546d0c
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+title: Configuration d’état souhaité - Démarrage rapide
+ms.openlocfilehash: 25bcd46bbf62a6ebb727519a65732377363e68c0
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 > S’applique à : Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -37,7 +37,7 @@ Dans un éditeur de texte, tapez le texte suivant :
 </body>
 ```
 
-Enregistrez-le en tant que `index.htm` dans le dossier `test` que vous avez créé précédemment. 
+Enregistrez-le en tant que `index.htm` dans le dossier `test` que vous avez créé précédemment.
 
 ## <a name="write-the-configuration"></a>Écrire la configuration
 
@@ -122,7 +122,7 @@ Start-DscConfiguration .\WebsiteTest
 
 ## <a name="test-the-configuration"></a>Tester la configuration
 
-Vous pouvez appeler l’applet de commande [Get-DscConfigurationStatus](/reference/5.1/PSDesiredStateConfiguration/Get-DscConfigurationStatus) pour vérifier si la configuration a réussi. 
+Vous pouvez appeler l’applet de commande [Get-DscConfigurationStatus](/reference/5.1/PSDesiredStateConfiguration/Get-DscConfigurationStatus) pour vérifier si la configuration a réussi.
 
 Vous pouvez également tester les résultats directement, dans ce cas en accédant à `http://localhost/` dans un navigateur web.
 Vous devez voir la page HTML « Hello World » que vous avez créée lors de la première étape dans cet exemple.
@@ -132,6 +132,3 @@ Vous devez voir la page HTML « Hello World » que vous avez créée lors de l
 - En savoir plus sur les configurations DSC sous [Configurations DSC](configurations.md).
 - Consultez les ressources DSC disponibles et découvrez comment créer des ressources DSC personnalisées sous [Ressources DSC](resources.md).
 - Recherchez des configurations et des ressources DSC dans la [galerie PowerShell](https://www.powershellgallery.com/).
-
-
-

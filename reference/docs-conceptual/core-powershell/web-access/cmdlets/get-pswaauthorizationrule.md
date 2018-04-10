@@ -1,16 +1,16 @@
 ---
-description: 
+description: ''
 ms.topic: article
 ms.prod: powershell
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
+ms.date: 12/12/2016
 title: get pswaauthorizationrule
 ms.technology: powershell
-ms.openlocfilehash: 003195457660a18b9bbed065181b6d8c23835348
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 74c044c329d8b6a305b86c9056a7041fb5fd046b
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-pswaauthorizationrule"></a>Get-PswaAuthorizationRule
 
@@ -41,7 +41,7 @@ Si ni le paramètre **Id** ni le paramètre **RuleName** n’est spécifié, cet
 
 Spécifie les identificateurs (ID) des règles que cette applet de commande doit obtenir. Si aucun ID n’est spécifié, cette applet de commande retourne toutes les règles d’autorisation.
 
-|||  
+|||
 |-|-|
 | Alias                              | none                                 |
 | Obligatoire ?                            | false                                |
@@ -54,7 +54,7 @@ Spécifie les identificateurs (ID) des règles que cette applet de commande doit
 
 Spécifie les noms des règles d’autorisation à récupérer. Ce paramètre retourne les règles qui correspondent exactement aux noms de règle des chaînes de ce tableau.
 
-|||  
+|||
 |-|-|
 | Alias                              | none                                 |
 | Obligatoire ?                            | true                                 |
