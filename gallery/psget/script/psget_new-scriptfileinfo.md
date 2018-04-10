@@ -1,43 +1,43 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: manikb
 ms.topic: reference
 keywords: gallery,powershell,cmdlet,psget
 title: New-ScriptFileInfo
-ms.openlocfilehash: 9aed0e16f2dec3681ca4b58595aae8d4972a3808
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 2b19421111cd3daef9f7a953cc59223a38fcb79c
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="new-scriptfileinfo"></a><span data-ttu-id="d60ab-103">New-ScriptFileInfo</span><span class="sxs-lookup"><span data-stu-id="d60ab-103">New-ScriptFileInfo</span></span>
+# <a name="new-scriptfileinfo"></a><span data-ttu-id="fca61-103">New-ScriptFileInfo</span><span class="sxs-lookup"><span data-stu-id="fca61-103">New-ScriptFileInfo</span></span>
 
-<span data-ttu-id="d60ab-104">Crée un fichier de script avec des métadonnées.</span><span class="sxs-lookup"><span data-stu-id="d60ab-104">Creates a script file with metadata.</span></span>
+<span data-ttu-id="fca61-104">Crée un fichier de script avec des métadonnées.</span><span class="sxs-lookup"><span data-stu-id="fca61-104">Creates a script file with metadata.</span></span>
 
-## <a name="description"></a><span data-ttu-id="d60ab-105">Description</span><span class="sxs-lookup"><span data-stu-id="d60ab-105">Description</span></span>
+## <a name="description"></a><span data-ttu-id="fca61-105">Description</span><span class="sxs-lookup"><span data-stu-id="fca61-105">Description</span></span>
 
-<span data-ttu-id="d60ab-106">L’applet de commande New-ScriptFileInfo crée un fichier de script PowerShell, dont des métadonnées sur le script.</span><span class="sxs-lookup"><span data-stu-id="d60ab-106">The New-ScriptFileInfo cmdlet creates a PowerShell script file, including metadata about the script.</span></span>
+<span data-ttu-id="fca61-106">L’applet de commande New-ScriptFileInfo crée un fichier de script PowerShell, dont des métadonnées sur le script.</span><span class="sxs-lookup"><span data-stu-id="fca61-106">The New-ScriptFileInfo cmdlet creates a PowerShell script file, including metadata about the script.</span></span>
 
-## <a name="cmdlet-syntax"></a><span data-ttu-id="d60ab-107">Syntaxe de l’applet de commande</span><span class="sxs-lookup"><span data-stu-id="d60ab-107">Cmdlet syntax</span></span>
+## <a name="cmdlet-syntax"></a><span data-ttu-id="fca61-107">Syntaxe de l’applet de commande</span><span class="sxs-lookup"><span data-stu-id="fca61-107">Cmdlet syntax</span></span>
 
 ```powershell
 Get-Command -Name New-ScriptFileInfo -Module PowerShellGet -Syntax
 ```
 
-## <a name="cmdlet-online-help-reference"></a><span data-ttu-id="d60ab-108">Référence de l’aide en ligne de l’applet de commande</span><span class="sxs-lookup"><span data-stu-id="d60ab-108">Cmdlet online help reference</span></span>
+## <a name="cmdlet-online-help-reference"></a><span data-ttu-id="fca61-108">Référence de l’aide en ligne de l’applet de commande</span><span class="sxs-lookup"><span data-stu-id="fca61-108">Cmdlet online help reference</span></span>
 
-[<span data-ttu-id="d60ab-109">New-ScriptFileInfo</span><span class="sxs-lookup"><span data-stu-id="d60ab-109">New-ScriptFileInfo</span></span>](http://go.microsoft.com/fwlink/?LinkId=619792)
+[<span data-ttu-id="fca61-109">New-ScriptFileInfo</span><span class="sxs-lookup"><span data-stu-id="fca61-109">New-ScriptFileInfo</span></span>](http://go.microsoft.com/fwlink/?LinkId=619792)
 
-## <a name="example-commands"></a><span data-ttu-id="d60ab-110">Exemples de commandes</span><span class="sxs-lookup"><span data-stu-id="d60ab-110">Example commands</span></span>
+## <a name="example-commands"></a><span data-ttu-id="fca61-110">Exemples de commandes</span><span class="sxs-lookup"><span data-stu-id="fca61-110">Example commands</span></span>
 
-### <a name="passthru-parameter"></a><span data-ttu-id="d60ab-111">Paramètre PassThru</span><span class="sxs-lookup"><span data-stu-id="d60ab-111">PassThru parameter</span></span>
+### <a name="passthru-parameter"></a><span data-ttu-id="fca61-111">Paramètre PassThru</span><span class="sxs-lookup"><span data-stu-id="fca61-111">PassThru parameter</span></span>
 
 ```powershell
 New-ScriptFileInfo -Description "Script file description." -PassThru
 ```
 
-### <a name="new-scriptfileinfo-cmdlet"></a><span data-ttu-id="d60ab-112">Applet de commande New-ScriptFileInfo</span><span class="sxs-lookup"><span data-stu-id="d60ab-112">New-ScriptFileInfo cmdlet</span></span>
-<span data-ttu-id="d60ab-113">L’applet de commande New-ScriptFileInfo permet de créer un fichier de script avec des métadonnées telles que version, GUID, auteur, description, et ainsi de suite.</span><span class="sxs-lookup"><span data-stu-id="d60ab-113">New-ScriptFileInfo cmdlet lets you to create a new script file with metadata like Version, Guid, Author, and Description, etc.</span></span> 
+### <a name="new-scriptfileinfo-cmdlet"></a><span data-ttu-id="fca61-112">Applet de commande New-ScriptFileInfo</span><span class="sxs-lookup"><span data-stu-id="fca61-112">New-ScriptFileInfo cmdlet</span></span>
+<span data-ttu-id="fca61-113">L’applet de commande New-ScriptFileInfo permet de créer un fichier de script avec des métadonnées telles que version, GUID, auteur, description, et ainsi de suite.</span><span class="sxs-lookup"><span data-stu-id="fca61-113">New-ScriptFileInfo cmdlet lets you to create a new script file with metadata like Version, Guid, Author, and Description, etc.</span></span>
 
 ```powershell
 # Create a new script file with minimum required metadata values
@@ -73,11 +73,11 @@ Version Name Author Description
 
 # Add function and workflow to the script file
 Add-Content -Path C:\ScriptSharingDemo\Demo-Script.ps1 -Value @"
-   
+
     Function Demo-ScriptFunction { 'Demo-ScriptFunction' }
-   
+
     Workflow Demo-ScriptWorkflow { 'Demo-ScriptWorkflow' }
-   
+
     Demo-ScriptFunction
     Demo-ScriptWorkflow
 "@
@@ -118,11 +118,11 @@ New-ScriptFileInfo -Path 'C:\ScriptSharingDemo\Demo-ScriptWithCompletePSScriptIn
 
 # Add function and workflow to the script file
 Add-Content -Path 'C:\ScriptSharingDemo\Demo-ScriptWithCompletePSScriptInfo.ps1' -Value @"
-   
+
     Function Demo-ScriptFunction { 'Demo-ScriptFunction' }
-   
+
     Workflow Demo-ScriptWorkflow { 'Demo-ScriptWorkflow' }
-   
+
     Demo-ScriptFunction
     Demo-ScriptWorkflow
 "@
@@ -192,4 +192,3 @@ DefinedCommands : {Demo-ScriptFunction, Demo-ScriptWorkflow}
 DefinedFunctions : Demo-ScriptFunction
 DefinedWorkflows : Demo-ScriptWorkflow
 ```
-

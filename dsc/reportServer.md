@@ -1,30 +1,30 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
-title: "Utilisation d’un serveur de rapports DSC"
-ms.openlocfilehash: fdf16a2de6aea46844d3812029fae474e80ae6ac
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+title: Utilisation d’un serveur de rapports DSC
+ms.openlocfilehash: e239414dc30c7458c509392792d4775d04f2311a
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="using-a-dsc-report-server"></a><span data-ttu-id="9b09f-103">Utilisation d’un serveur de rapports DSC</span><span class="sxs-lookup"><span data-stu-id="9b09f-103">Using a DSC report server</span></span>
+# <a name="using-a-dsc-report-server"></a><span data-ttu-id="bc73c-103">Utilisation d’un serveur de rapports DSC</span><span class="sxs-lookup"><span data-stu-id="bc73c-103">Using a DSC report server</span></span>
 
-> <span data-ttu-id="9b09f-104">S’applique à : Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="9b09f-104">Applies To: Windows PowerShell 5.0</span></span>
+> <span data-ttu-id="bc73c-104">S’applique à : Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="bc73c-104">Applies To: Windows PowerShell 5.0</span></span>
 
-><span data-ttu-id="9b09f-105">**Remarque** : le serveur de rapports décrit dans cette rubrique n’est pas disponible dans PowerShell 4.0.</span><span class="sxs-lookup"><span data-stu-id="9b09f-105">**Note:** The report server described in this topic is not available in PowerShell 4.0.</span></span>
+><span data-ttu-id="bc73c-105">**Remarque** : le serveur de rapports décrit dans cette rubrique n’est pas disponible dans PowerShell 4.0.</span><span class="sxs-lookup"><span data-stu-id="bc73c-105">**Note:** The report server described in this topic is not available in PowerShell 4.0.</span></span>
 
-<span data-ttu-id="9b09f-106">Le gestionnaire de configuration local d’un nœud peut être configuré pour envoyer des rapports sur son état de configuration à un serveur collecteur, qui peut alors être interrogé pour récupérer ces données.</span><span class="sxs-lookup"><span data-stu-id="9b09f-106">The Local Configuration Manager (LCM) of a node can be configured to send reports about its configuration status to a pull server, which can then be queried to retrieve that data.</span></span> <span data-ttu-id="9b09f-107">Chaque fois, le nœud vérifie et applique une configuration, il envoie un rapport au serveur de rapports.</span><span class="sxs-lookup"><span data-stu-id="9b09f-107">Each time the node checks and applies a configuration, it sends a report to the report server.</span></span> <span data-ttu-id="9b09f-108">Ces rapports sont stockés dans une base de données sur le serveur et peuvent être récupérés en appelant le service web de création de rapports.</span><span class="sxs-lookup"><span data-stu-id="9b09f-108">These reports are stored in a database on the server, and can be retrieved by calling the reporting web service.</span></span> <span data-ttu-id="9b09f-109">Chaque rapport contient des informations telles que les configurations qui ont été appliquées et si l’opération a réussi, les ressources utilisées, les erreurs qui ont été levées et les heures de début et de fin.</span><span class="sxs-lookup"><span data-stu-id="9b09f-109">Each report contains information such as what configurations were applied and whether they succeeded, the resources used, any errors that were thrown, and start and finish times.</span></span>
+<span data-ttu-id="bc73c-106">Le gestionnaire de configuration local d’un nœud peut être configuré pour envoyer des rapports sur son état de configuration à un serveur collecteur, qui peut alors être interrogé pour récupérer ces données.</span><span class="sxs-lookup"><span data-stu-id="bc73c-106">The Local Configuration Manager (LCM) of a node can be configured to send reports about its configuration status to a pull server, which can then be queried to retrieve that data.</span></span> <span data-ttu-id="bc73c-107">Chaque fois, le nœud vérifie et applique une configuration, il envoie un rapport au serveur de rapports.</span><span class="sxs-lookup"><span data-stu-id="bc73c-107">Each time the node checks and applies a configuration, it sends a report to the report server.</span></span> <span data-ttu-id="bc73c-108">Ces rapports sont stockés dans une base de données sur le serveur et peuvent être récupérés en appelant le service web de création de rapports.</span><span class="sxs-lookup"><span data-stu-id="bc73c-108">These reports are stored in a database on the server, and can be retrieved by calling the reporting web service.</span></span> <span data-ttu-id="bc73c-109">Chaque rapport contient des informations telles que les configurations qui ont été appliquées et si l’opération a réussi, les ressources utilisées, les erreurs qui ont été levées et les heures de début et de fin.</span><span class="sxs-lookup"><span data-stu-id="bc73c-109">Each report contains information such as what configurations were applied and whether they succeeded, the resources used, any errors that were thrown, and start and finish times.</span></span>
 
-## <a name="configuring-a-node-to-send-reports"></a><span data-ttu-id="9b09f-110">Configuration d’un nœud pour envoyer des rapports</span><span class="sxs-lookup"><span data-stu-id="9b09f-110">Configuring a node to send reports</span></span>
+## <a name="configuring-a-node-to-send-reports"></a><span data-ttu-id="bc73c-110">Configuration d’un nœud pour envoyer des rapports</span><span class="sxs-lookup"><span data-stu-id="bc73c-110">Configuring a node to send reports</span></span>
 
-<span data-ttu-id="9b09f-111">Vous indiquez à un nœud d’envoyer des rapports à un serveur en utilisant un bloc **ReportServerWeb** dans la configuration du gestionnaire de configuration local du nœud (pour plus d’informations sur la configuration du gestionnaire de configuration local, consultez [Configuration du gestionnaire de configuration local](metaConfig.md)).</span><span class="sxs-lookup"><span data-stu-id="9b09f-111">You tell a node to send reports to a server by using a **ReportServerWeb** block in the node's LCM configuration (for information about configuring the LCM, see [Configuring the Local Configuration Manager](metaConfig.md)).</span></span> <span data-ttu-id="9b09f-112">Le serveur auquel le nœud envoie des rapports doit être configuré comme un serveur web collecteur (vous ne pouvez pas envoyer de rapports à un partage SMB).</span><span class="sxs-lookup"><span data-stu-id="9b09f-112">The server to which the node sends reports must be set up as a web pull server (you cannot send reports to an SMB share).</span></span> <span data-ttu-id="9b09f-113">Pour plus d’informations sur la configuration d’un serveur collecteur, consultez [Configuration d’un serveur collecteur web DSC](pullServer.md).</span><span class="sxs-lookup"><span data-stu-id="9b09f-113">For information about setting up a pull server, see [Setting up a DSC web pull server](pullServer.md).</span></span> <span data-ttu-id="9b09f-114">Le serveur de rapports peut être le même service duquel le nœud extrait des configurations et obtient des ressources, mais il peut également être un service différent.</span><span class="sxs-lookup"><span data-stu-id="9b09f-114">The report server can be the same service from which the node pulls configurations and gets resources, or it can be a different service.</span></span>
- 
-<span data-ttu-id="9b09f-115">Dans le bloc **ReportServerWeb**, vous spécifiez l’URL du service d’extraction et une clé d’inscription connue du serveur.</span><span class="sxs-lookup"><span data-stu-id="9b09f-115">In the **ReportServerWeb** block, you specify the URL of the pull service and a registration key that is known to the server.</span></span>
- 
-<span data-ttu-id="9b09f-116">La configuration suivante configure un nœud de façon à extraire des configurations d’un seul service et à envoyer des rapports à un service sur un autre serveur.</span><span class="sxs-lookup"><span data-stu-id="9b09f-116">The following configuration configures a node to pull configurations from one service, and send reports to a service on a different server.</span></span> 
- 
+<span data-ttu-id="bc73c-111">Vous indiquez à un nœud d’envoyer des rapports à un serveur en utilisant un bloc **ReportServerWeb** dans la configuration du gestionnaire de configuration local du nœud (pour plus d’informations sur la configuration du gestionnaire de configuration local, consultez [Configuration du gestionnaire de configuration local](metaConfig.md)).</span><span class="sxs-lookup"><span data-stu-id="bc73c-111">You tell a node to send reports to a server by using a **ReportServerWeb** block in the node's LCM configuration (for information about configuring the LCM, see [Configuring the Local Configuration Manager](metaConfig.md)).</span></span> <span data-ttu-id="bc73c-112">Le serveur auquel le nœud envoie des rapports doit être configuré comme un serveur web collecteur (vous ne pouvez pas envoyer de rapports à un partage SMB).</span><span class="sxs-lookup"><span data-stu-id="bc73c-112">The server to which the node sends reports must be set up as a web pull server (you cannot send reports to an SMB share).</span></span> <span data-ttu-id="bc73c-113">Pour plus d’informations sur la configuration d’un serveur collecteur, consultez [Configuration d’un serveur collecteur web DSC](pullServer.md).</span><span class="sxs-lookup"><span data-stu-id="bc73c-113">For information about setting up a pull server, see [Setting up a DSC web pull server](pullServer.md).</span></span> <span data-ttu-id="bc73c-114">Le serveur de rapports peut être le même service duquel le nœud extrait des configurations et obtient des ressources, mais il peut également être un service différent.</span><span class="sxs-lookup"><span data-stu-id="bc73c-114">The report server can be the same service from which the node pulls configurations and gets resources, or it can be a different service.</span></span>
+
+<span data-ttu-id="bc73c-115">Dans le bloc **ReportServerWeb**, vous spécifiez l’URL du service d’extraction et une clé d’inscription connue du serveur.</span><span class="sxs-lookup"><span data-stu-id="bc73c-115">In the **ReportServerWeb** block, you specify the URL of the pull service and a registration key that is known to the server.</span></span>
+
+<span data-ttu-id="bc73c-116">La configuration suivante configure un nœud de façon à extraire des configurations d’un seul service et à envoyer des rapports à un service sur un autre serveur.</span><span class="sxs-lookup"><span data-stu-id="bc73c-116">The following configuration configures a node to pull configurations from one service, and send reports to a service on a different server.</span></span>
+
 ```powershell
 [DSCLocalConfigurationManager()]
 configuration ReportClientConfig
@@ -34,7 +34,7 @@ configuration ReportClientConfig
         Settings
         {
             RefreshMode          = 'Pull'
-            RefreshFrequencyMins = 30 
+            RefreshFrequencyMins = 30
             RebootNodeIfNeeded   = $true
         }
 
@@ -56,7 +56,7 @@ configuration ReportClientConfig
 ReportClientConfig
 ```
 
-<span data-ttu-id="9b09f-117">La configuration suivante configure un nœud de façon à utiliser un seul serveur pour les configurations, les ressources et les rapports.</span><span class="sxs-lookup"><span data-stu-id="9b09f-117">The following configuration configures a node to use a single server for configurations, resources, and reporting.</span></span>
+<span data-ttu-id="bc73c-117">La configuration suivante configure un nœud de façon à utiliser un seul serveur pour les configurations, les ressources et les rapports.</span><span class="sxs-lookup"><span data-stu-id="bc73c-117">The following configuration configures a node to use a single server for configurations, resources, and reporting.</span></span>
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -67,7 +67,7 @@ configuration PullClientConfig
         Settings
         {
             RefreshMode = 'Pull'
-            RefreshFrequencyMins = 30 
+            RefreshFrequencyMins = 30
             RebootNodeIfNeeded = $true
         }
 
@@ -76,8 +76,8 @@ configuration PullClientConfig
             ServerURL = 'https://CONTOSO-PullSrv:8080/PSDSCPullServer.svc'
             RegistrationKey = 'fbc6ef09-ad98-4aad-a062-92b0e0327562'
         }
-        
-        
+
+
 
         ReportServerWeb CONTOSO-ReportSrv
         {
@@ -88,15 +88,15 @@ configuration PullClientConfig
 PullClientConfig
 ```
 
-><span data-ttu-id="9b09f-118">**Remarque :** vous pouvez donner le nom de votre choix au service web quand vous configurez un serveur collecteur, mais la propriété **ServerURL** doit correspondre au nom du service.</span><span class="sxs-lookup"><span data-stu-id="9b09f-118">**Note:** You can name the web service whatever you want when you set up a pull server, but the **ServerURL** property must match the service name.</span></span>
+><span data-ttu-id="bc73c-118">**Remarque :** vous pouvez donner le nom de votre choix au service web quand vous configurez un serveur collecteur, mais la propriété **ServerURL** doit correspondre au nom du service.</span><span class="sxs-lookup"><span data-stu-id="bc73c-118">**Note:** You can name the web service whatever you want when you set up a pull server, but the **ServerURL** property must match the service name.</span></span>
 
-## <a name="getting-report-data"></a><span data-ttu-id="9b09f-119">Obtention des données du rapport</span><span class="sxs-lookup"><span data-stu-id="9b09f-119">Getting report data</span></span>
+## <a name="getting-report-data"></a><span data-ttu-id="bc73c-119">Obtention des données du rapport</span><span class="sxs-lookup"><span data-stu-id="bc73c-119">Getting report data</span></span>
 
-<span data-ttu-id="9b09f-120">Les rapports envoyés au serveur collecteur sont entrés dans une base de données sur le serveur.</span><span class="sxs-lookup"><span data-stu-id="9b09f-120">Reports sent to the pull server are entered into a database on the server.</span></span> <span data-ttu-id="9b09f-121">Les rapports sont disponibles par le biais d’appels au service web.</span><span class="sxs-lookup"><span data-stu-id="9b09f-121">The reports are available through calls to the web service.</span></span> <span data-ttu-id="9b09f-122">Pour récupérer des rapports pour un nœud spécifique, envoyez une demande HTTP au service web de rapports sous la forme suivante : `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId= 'MyNodeAgentId')/Reports` où `MyNodeAgentId` est l’ID de l’agent du nœud pour lequel vous voulez obtenir des rapports.</span><span class="sxs-lookup"><span data-stu-id="9b09f-122">To retrieve reports for a specific node, send an HTTP request to the report web service in the following form: `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId= 'MyNodeAgentId')/Reports` where `MyNodeAgentId` is the AgentId of the node for which you want to get reports.</span></span> <span data-ttu-id="9b09f-123">Vous pouvez obtenir l’ID de l’agent d’un nœud en appelant [Get-DscLocalConfigurationManager](https://technet.microsoft.com/library/dn407378.aspx) sur ce nœud.</span><span class="sxs-lookup"><span data-stu-id="9b09f-123">You can get the AgentID for a node by calling [Get-DscLocalConfigurationManager](https://technet.microsoft.com/library/dn407378.aspx) on that node.</span></span>
+<span data-ttu-id="bc73c-120">Les rapports envoyés au serveur collecteur sont entrés dans une base de données sur le serveur.</span><span class="sxs-lookup"><span data-stu-id="bc73c-120">Reports sent to the pull server are entered into a database on the server.</span></span> <span data-ttu-id="bc73c-121">Les rapports sont disponibles par le biais d’appels au service web.</span><span class="sxs-lookup"><span data-stu-id="bc73c-121">The reports are available through calls to the web service.</span></span> <span data-ttu-id="bc73c-122">Pour récupérer des rapports pour un nœud spécifique, envoyez une demande HTTP au service web de rapports sous la forme suivante : `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId= 'MyNodeAgentId')/Reports` où `MyNodeAgentId` est l’ID de l’agent du nœud pour lequel vous voulez obtenir des rapports.</span><span class="sxs-lookup"><span data-stu-id="bc73c-122">To retrieve reports for a specific node, send an HTTP request to the report web service in the following form: `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId= 'MyNodeAgentId')/Reports` where `MyNodeAgentId` is the AgentId of the node for which you want to get reports.</span></span> <span data-ttu-id="bc73c-123">Vous pouvez obtenir l’ID de l’agent d’un nœud en appelant [Get-DscLocalConfigurationManager](https://technet.microsoft.com/library/dn407378.aspx) sur ce nœud.</span><span class="sxs-lookup"><span data-stu-id="bc73c-123">You can get the AgentID for a node by calling [Get-DscLocalConfigurationManager](https://technet.microsoft.com/library/dn407378.aspx) on that node.</span></span>
 
-<span data-ttu-id="9b09f-124">Les rapports sont retournés sous forme de tableau d’objets JSON.</span><span class="sxs-lookup"><span data-stu-id="9b09f-124">The reports are returned as an array of JSON objects.</span></span>
+<span data-ttu-id="bc73c-124">Les rapports sont retournés sous forme de tableau d’objets JSON.</span><span class="sxs-lookup"><span data-stu-id="bc73c-124">The reports are returned as an array of JSON objects.</span></span>
 
-<span data-ttu-id="9b09f-125">Le script suivant retourne les rapports pour le nœud sur lequel il est exécuté :</span><span class="sxs-lookup"><span data-stu-id="9b09f-125">The following script returns the reports for the node on which it is run:</span></span>
+<span data-ttu-id="bc73c-125">Le script suivant retourne les rapports pour le nœud sur lequel il est exécuté :</span><span class="sxs-lookup"><span data-stu-id="bc73c-125">The following script returns the reports for the node on which it is run:</span></span>
 
 ```powershell
 function GetReport
@@ -110,10 +110,10 @@ function GetReport
     return $object.value
 }
 ```
-    
-## <a name="viewing-report-data"></a><span data-ttu-id="9b09f-126">Affichage des données du rapport</span><span class="sxs-lookup"><span data-stu-id="9b09f-126">Viewing report data</span></span>
 
-<span data-ttu-id="9b09f-127">Si vous définissez une variable sur le résultat de la fonction **GetReport**, vous pouvez afficher les champs individuels dans un élément du tableau retourné :</span><span class="sxs-lookup"><span data-stu-id="9b09f-127">If you set a variable to the result of the **GetReport** function, you can view the individual fields in an element of the array that is returned:</span></span>
+## <a name="viewing-report-data"></a><span data-ttu-id="bc73c-126">Affichage des données du rapport</span><span class="sxs-lookup"><span data-stu-id="bc73c-126">Viewing report data</span></span>
+
+<span data-ttu-id="bc73c-127">Si vous définissez une variable sur le résultat de la fonction **GetReport**, vous pouvez afficher les champs individuels dans un élément du tableau retourné :</span><span class="sxs-lookup"><span data-stu-id="bc73c-127">If you set a variable to the result of the **GetReport** function, you can view the individual fields in an element of the array that is returned:</span></span>
 
 ```powershell
 $reports = GetReport
@@ -132,7 +132,7 @@ RebootRequested      : False
 Errors               : {}
 StatusData           : {{"StartDate":"2016-04-03T06:21:43.7220000-07:00","IPV6Addresses":["2001:4898:d8:f2f2:852b:b255:b071:283b","fe80::852b:b255:b071
                        :283b%12","::2000:0:0:0","::1","::2000:0:0:0"],"DurationInSeconds":"21","JobID":"{019DFBE5-F99F-11E5-80C6-001DD8B8065C}","Curren
-                       tChecksum":"A7797571CB9C3AF4D74C39A0FDA11DAF33273349E1182385528FFC1E47151F7F","MetaData":"Author: configAuthor; Name: 
+                       tChecksum":"A7797571CB9C3AF4D74C39A0FDA11DAF33273349E1182385528FFC1E47151F7F","MetaData":"Author: configAuthor; Name:
                        Sample_ArchiveFirewall; Version: 2.0.0; GenerationDate: 04/01/2016 15:23:30; GenerationHost: CONTOSO-PullSrv;","RebootRequested":"False
                        ","Status":"Success","IPV4Addresses":["10.240.179.151","127.0.0.1"],"LCMVersion":"2.0","ResourcesNotInDesiredState":[{"SourceInf
                        o":"C:\\ReportTest\\Sample_xFirewall_AddFirewallRule.ps1::23::9::xFirewall","ModuleName":"xNetworking","DurationInSeconds":"8.785",
@@ -153,14 +153,14 @@ StatusData           : {{"StartDate":"2016-04-03T06:21:43.7220000-07:00","IPV6Ad
 AdditionalData       : {}
 ```
 
-<span data-ttu-id="9b09f-128">Par défaut, les rapports sont triés par **JobID**.</span><span class="sxs-lookup"><span data-stu-id="9b09f-128">By default, the reports are sorted by **JobID**.</span></span> <span data-ttu-id="9b09f-129">Pour obtenir le rapport le plus récent, vous pouvez trier les rapports dans l’ordre décroissant de la valeur de la propriété **StartTime**, puis obtenir le premier élément du tableau :</span><span class="sxs-lookup"><span data-stu-id="9b09f-129">To get the most recent report, you can sort the reports by descending **StartTime** property, and then get the first element of the array:</span></span>
+<span data-ttu-id="bc73c-128">Par défaut, les rapports sont triés par **JobID**.</span><span class="sxs-lookup"><span data-stu-id="bc73c-128">By default, the reports are sorted by **JobID**.</span></span> <span data-ttu-id="bc73c-129">Pour obtenir le rapport le plus récent, vous pouvez trier les rapports dans l’ordre décroissant de la valeur de la propriété **StartTime**, puis obtenir le premier élément du tableau :</span><span class="sxs-lookup"><span data-stu-id="bc73c-129">To get the most recent report, you can sort the reports by descending **StartTime** property, and then get the first element of the array:</span></span>
 
 ```powershell
 $reportsByStartTime = $reports | Sort-Object {$_."StartTime" -as [DateTime] } -Descending
 $reportMostRecent = $reportsByStartTime[0]
 ```
 
-<span data-ttu-id="9b09f-130">Notez que la propriété **StatusData** est un objet avec un certain nombre de propriétés.</span><span class="sxs-lookup"><span data-stu-id="9b09f-130">Notice that the **StatusData** property is an object with a number of properties.</span></span> <span data-ttu-id="9b09f-131">C’est là que figurent une bonne partie des données de création de rapports.</span><span class="sxs-lookup"><span data-stu-id="9b09f-131">This is where much of the reporting data is.</span></span> <span data-ttu-id="9b09f-132">Examinons les différents champs de la propriété**StatusData** pour le rapport le plus récent :</span><span class="sxs-lookup"><span data-stu-id="9b09f-132">Let's look at the individual fields of the **StatusData** property for the most recent report:</span></span>
+<span data-ttu-id="bc73c-130">Notez que la propriété **StatusData** est un objet avec un certain nombre de propriétés.</span><span class="sxs-lookup"><span data-stu-id="bc73c-130">Notice that the **StatusData** property is an object with a number of properties.</span></span> <span data-ttu-id="bc73c-131">C’est là que figurent une bonne partie des données de création de rapports.</span><span class="sxs-lookup"><span data-stu-id="bc73c-131">This is where much of the reporting data is.</span></span> <span data-ttu-id="bc73c-132">Examinons les différents champs de la propriété**StatusData** pour le rapport le plus récent :</span><span class="sxs-lookup"><span data-stu-id="bc73c-132">Let's look at the individual fields of the **StatusData** property for the most recent report:</span></span>
 
 ```powershell
 $statusData = $reportMostRecent.StatusData | ConvertFrom-Json
@@ -171,34 +171,34 @@ IPV6Addresses              : {2001:4898:d8:f2f2:852b:b255:b071:283b, fe80::852b:
 DurationInSeconds          : 25
 JobID                      : {135D230E-FA92-11E5-80C6-001DD8B8065C}
 CurrentChecksum            : A7797571CB9C3AF4D74C39A0FDA11DAF33273349E1182385528FFC1E47151F7F
-MetaData                   : Author: configAuthor; Name: Sample_ArchiveFirewall; Version: 2.0.0; GenerationDate: 04/01/2016 15:23:30; GenerationHost: 
+MetaData                   : Author: configAuthor; Name: Sample_ArchiveFirewall; Version: 2.0.0; GenerationDate: 04/01/2016 15:23:30; GenerationHost:
                              CONTOSO-PullSrv;
 RebootRequested            : False
 Status                     : Success
 IPV4Addresses              : {10.240.179.151, 127.0.0.1}
 LCMVersion                 : 2.0
-ResourcesNotInDesiredState : {@{SourceInfo=C:\ReportTest\Sample_xFirewall_AddFirewallRule.ps1::23::9::xFirewall; ModuleName=xNetworking; 
-                             DurationInSeconds=10.725; InstanceName=Firewall; StartDate=2016-04-04T11:21:55.7200000-07:00; ResourceName=xFirewall; 
-                             ModuleVersion=2.7.0.0; RebootRequested=False; ResourceId=[xFirewall]Firewall; ConfigurationName=Sample_ArchiveFirewall; 
+ResourcesNotInDesiredState : {@{SourceInfo=C:\ReportTest\Sample_xFirewall_AddFirewallRule.ps1::23::9::xFirewall; ModuleName=xNetworking;
+                             DurationInSeconds=10.725; InstanceName=Firewall; StartDate=2016-04-04T11:21:55.7200000-07:00; ResourceName=xFirewall;
+                             ModuleVersion=2.7.0.0; RebootRequested=False; ResourceId=[xFirewall]Firewall; ConfigurationName=Sample_ArchiveFirewall;
                              InDesiredState=False}}
 NumberOfResources          : 2
 Type                       : Consistency
 HostName                   : CONTOSO-PULLCLI
-ResourcesInDesiredState    : {@{SourceInfo=C:\ReportTest\Sample_xFirewall_AddFirewallRule.ps1::16::9::Archive; ModuleName=PSDesiredStateConfiguration; 
-                             DurationInSeconds=2.672; InstanceName=ArchiveExample; StartDate=2016-04-04T11:21:55.7200000-07:00; ResourceName=Archive; 
-                             ModuleVersion=1.1; RebootRequested=False; ResourceId=[Archive]ArchiveExample; ConfigurationName=Sample_ArchiveFirewall; 
+ResourcesInDesiredState    : {@{SourceInfo=C:\ReportTest\Sample_xFirewall_AddFirewallRule.ps1::16::9::Archive; ModuleName=PSDesiredStateConfiguration;
+                             DurationInSeconds=2.672; InstanceName=ArchiveExample; StartDate=2016-04-04T11:21:55.7200000-07:00; ResourceName=Archive;
+                             ModuleVersion=1.1; RebootRequested=False; ResourceId=[Archive]ArchiveExample; ConfigurationName=Sample_ArchiveFirewall;
                              InDesiredState=True}}
 MACAddresses               : {00-1D-D8-B8-06-5C, 00-00-00-00-00-00-00-E0}
-MetaConfiguration          : @{AgentId=52DA826D-00DE-4166-8ACB-73F2B46A7E00; ConfigurationDownloadManagers=System.Object[]; 
-                             ActionAfterReboot=ContinueConfiguration; LCMCompatibleVersions=System.Object[]; LCMState=Idle; 
-                             ResourceModuleManagers=System.Object[]; ReportManagers=System.Object[]; StatusRetentionTimeInDays=10; LCMVersion=2.0; 
-                             ConfigurationMode=ApplyAndMonitor; RefreshFrequencyMins=30; RebootNodeIfNeeded=True; RefreshMode=Pull; 
+MetaConfiguration          : @{AgentId=52DA826D-00DE-4166-8ACB-73F2B46A7E00; ConfigurationDownloadManagers=System.Object[];
+                             ActionAfterReboot=ContinueConfiguration; LCMCompatibleVersions=System.Object[]; LCMState=Idle;
+                             ResourceModuleManagers=System.Object[]; ReportManagers=System.Object[]; StatusRetentionTimeInDays=10; LCMVersion=2.0;
+                             ConfigurationMode=ApplyAndMonitor; RefreshFrequencyMins=30; RebootNodeIfNeeded=True; RefreshMode=Pull;
                              DebugMode=System.Object[]; LCMStateDetail=; AllowModuleOverwrite=False; ConfigurationModeFrequencyMins=15}
 Locale                     : en-US
 Mode                       : Pull
 ```
 
-<span data-ttu-id="9b09f-133">Cela indique, entre autres, que la configuration la plus récente a appelé deux ressources, et que l’une d’elles était dans l’état souhaité, tandis que l’autre pas.</span><span class="sxs-lookup"><span data-stu-id="9b09f-133">Among other things, this shows that the most recent configuration called two resources, and that one of them was in the desired state, and one of them was not.</span></span> <span data-ttu-id="9b09f-134">Vous pouvez obtenir une sortie plus lisible uniquement de la propriété **ResourcesNotInDesiredState**:</span><span class="sxs-lookup"><span data-stu-id="9b09f-134">You can get a more readable output of just the **ResourcesNotInDesiredState** property:</span></span>
+<span data-ttu-id="bc73c-133">Cela indique, entre autres, que la configuration la plus récente a appelé deux ressources, et que l’une d’elles était dans l’état souhaité, tandis que l’autre pas.</span><span class="sxs-lookup"><span data-stu-id="bc73c-133">Among other things, this shows that the most recent configuration called two resources, and that one of them was in the desired state, and one of them was not.</span></span> <span data-ttu-id="bc73c-134">Vous pouvez obtenir une sortie plus lisible uniquement de la propriété **ResourcesNotInDesiredState**:</span><span class="sxs-lookup"><span data-stu-id="bc73c-134">You can get a more readable output of just the **ResourcesNotInDesiredState** property:</span></span>
 
 ```powershell
 $statusData.ResourcesInDesiredState
@@ -216,10 +216,9 @@ ConfigurationName : Sample_ArchiveFirewall
 InDesiredState    : True
 ```
 
-<span data-ttu-id="9b09f-135">Notez que ces exemples ont pour but de vous donner une idée de ce que vous pouvez faire avec les données du rapport.</span><span class="sxs-lookup"><span data-stu-id="9b09f-135">Note that these examples are meant to give you an idea of what you can do with report data.</span></span> <span data-ttu-id="9b09f-136">Pour obtenir une présentation de l’utilisation de JSON dans PowerShell, voir [Playing with JSON and PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).</span><span class="sxs-lookup"><span data-stu-id="9b09f-136">For an introduction on working with JSON in PowerShell, see [Playing with JSON and PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).</span></span>
+<span data-ttu-id="bc73c-135">Notez que ces exemples ont pour but de vous donner une idée de ce que vous pouvez faire avec les données du rapport.</span><span class="sxs-lookup"><span data-stu-id="bc73c-135">Note that these examples are meant to give you an idea of what you can do with report data.</span></span> <span data-ttu-id="bc73c-136">Pour obtenir une présentation de l’utilisation de JSON dans PowerShell, voir [Playing with JSON and PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).</span><span class="sxs-lookup"><span data-stu-id="bc73c-136">For an introduction on working with JSON in PowerShell, see [Playing with JSON and PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="9b09f-137">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="9b09f-137">See Also</span></span>
-- [<span data-ttu-id="9b09f-138">Configuration du gestionnaire de configuration local</span><span class="sxs-lookup"><span data-stu-id="9b09f-138">Configuring the Local Configuration Manager</span></span>](metaConfig.md)
-- [<span data-ttu-id="9b09f-139">Configuration d’un serveur collecteur web DSC</span><span class="sxs-lookup"><span data-stu-id="9b09f-139">Setting up a DSC web pull server</span></span>](pullServer.md)
-- [<span data-ttu-id="9b09f-140">Configuration d’un client collecteur à l’aide du nom de configuration</span><span class="sxs-lookup"><span data-stu-id="9b09f-140">Setting up a pull client using configuration names</span></span>](pullClientConfigNames.md)
-
+## <a name="see-also"></a><span data-ttu-id="bc73c-137">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="bc73c-137">See Also</span></span>
+- [<span data-ttu-id="bc73c-138">Configuration du gestionnaire de configuration local</span><span class="sxs-lookup"><span data-stu-id="bc73c-138">Configuring the Local Configuration Manager</span></span>](metaConfig.md)
+- [<span data-ttu-id="bc73c-139">Configuration d’un serveur collecteur web DSC</span><span class="sxs-lookup"><span data-stu-id="bc73c-139">Setting up a DSC web pull server</span></span>](pullServer.md)
+- [<span data-ttu-id="bc73c-140">Configuration d’un client collecteur à l’aide du nom de configuration</span><span class="sxs-lookup"><span data-stu-id="bc73c-140">Setting up a pull client using configuration names</span></span>](pullClientConfigNames.md)
