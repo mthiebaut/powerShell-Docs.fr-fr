@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
-title: "Méthode GetConfigurationResultOutput de la classe MSFT_DSCLocalConfigurationManager"
-ms.openlocfilehash: f6106bb28dc20004b5bbb6df2d8e719cf0c453f0
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+title: Méthode GetConfigurationResultOutput de la classe MSFT_DSCLocalConfigurationManager
+ms.openlocfilehash: f4c2ddaa37cdafeff1a442f3f1fa656788a1c6c8
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="getconfigurationresultoutput-method-of-the-msftdsclocalconfigurationmanager-class"></a>Méthode GetConfigurationResultOutput de la classe MSFT_DSCLocalConfigurationManager
 
@@ -27,14 +27,11 @@ uint32 GetConfigurationResultOutput(
 <a name="parameters"></a>Paramètres
 ----------
 
-*jobId* \[in\]  
-ID du travail pour lequel obtenir les données de sortie.
+*jobId* \[in\] ID du travail pour lequel obtenir les données de sortie.
 
-*resumeOutputBookmark* \[in\]  
-Spécifie que la sortie doit être une continuation à partir d’un signet précédent.
+*resumeOutputBookmark* \[in\] Spécifie que la sortie doit être une continuation à partir d’un signet précédent.
 
-*output* \[out\]  
-Sortie pour le travail spécifié.
+*output* \[out\] Sortie pour le travail spécifié.
 
 ## <a name="return-value"></a>Valeur renvoyée
 ------------
@@ -56,10 +53,3 @@ Il s’agit d’une méthode statique.
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
-
- 
-
- 
-
-
-

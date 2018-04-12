@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
-title: "Méthode StopConfiguration de la classe MSFT_DSCLocalConfigurationManager"
-ms.openlocfilehash: 66d00cb40750e91e4b369a2e8cebb449697406d9
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+title: Méthode StopConfiguration de la classe MSFT_DSCLocalConfigurationManager
+ms.openlocfilehash: dadb6912af2e4450381958ed465799056da49946
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="stopconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Méthode StopConfiguration de la classe MSFT_DSCLocalConfigurationManager
 
@@ -25,8 +25,7 @@ uint32 StopConfiguration(
 <a name="parameters"></a>Paramètres
 ----------
 
-*force* \[in\]  
-**true** pour forcer l’arrêt de la configuration.
+*force* \[in\] **true** pour forcer l’arrêt de la configuration.
 
 ## <a name="return-value"></a>Valeur renvoyée
 ------------
@@ -48,11 +47,3 @@ Il s’agit d’une méthode statique.
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
-
-
- 
-
- 
-
-
-

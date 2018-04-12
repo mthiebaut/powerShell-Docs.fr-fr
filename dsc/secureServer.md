@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: Bonnes pratiques pour le serveur collecteur
-ms.openlocfilehash: 3d0ab969b7a0de9d428becc4b9bdb124a7a44c2c
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+ms.openlocfilehash: 7de523ad16aee77d87ec4d3334d296997020aa19
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="pull-server-best-practices"></a>Bonnes pratiques pour le serveur collecteur
 
@@ -17,8 +17,8 @@ Résumé : Ce document vise à fournir une procédure et une extensibilité pou
 
 | |Informations sur le document|
 |:---|:---|
-Auteur | Michael Greene  
-Réviseurs | Ben Gelens, Ravikanth Chaganti, Aleksandar Nikolic  
+Auteur | Michael Greene
+Réviseurs | Ben Gelens, Ravikanth Chaganti, Aleksandar Nikolic
 Publié | Avril 2015
 
 ## <a name="abstract"></a>Résumé
@@ -31,8 +31,8 @@ Les deux principales sections de ce document sont les suivantes :
 
  - Planification de la configuration
  - Guide d’installation
- 
-### <a name="versions-of-the-windows-management-framework"></a>Versions de Windows Management Framework 
+
+### <a name="versions-of-the-windows-management-framework"></a>Versions de Windows Management Framework
 Les informations contenues dans ce document s’appliquent à Windows Management Framework 5.0. Même si WMF 5.0 n’est pas nécessaire au déploiement et au fonctionnement d’un serveur collecteur, elle est la version ciblée par ce document.
 
 ### <a name="windows-powershell-desired-state-configuration"></a>Windows PowerShell Desired State Configuration
@@ -40,10 +40,11 @@ DSC (Desired State Configuration) est une plateforme de gestion qui permet de d�
 
 Windows PowerShell fournit un ensemble d’extensions de langage pour DSC que vous pouvez utiliser pour créer et gérer des configurations déclaratives.
 
-### <a name="pull-server-role"></a>Rôle serveur collecteur  
+### <a name="pull-server-role"></a>Rôle serveur collecteur
 Un serveur collecteur fournit un service centralisé pour stocker des configurations qui seront accessibles aux nœuds cibles.
- 
-Vous pouvez déployer le rôle serveur collecteur comme instance de serveur web ou partage de fichiers SMB. La fonctionnalité de serveur web inclut une interface OData et peut éventuellement inclure des fonctionnalités permettant aux nœuds cibles d’envoyer une confirmation de réussite ou d’échec quand les configurations sont appliquées. Cette fonctionnalité est utile dans les environnements comportant un grand nombre de nœuds cibles. Après avoir configuré un nœud cible (également appelé « client ») pour pointer vers le serveur collecteur, téléchargez et appliquez les données de configuration les plus récentes et tous les scripts nécessaires. Vous pouvez effectuer ces opérations en un seul déploiement ou comme une tâche récurrente qui considère aussi le serveur collecteur comme important pour gérer les changements au besoin. Pour plus d’informations, consultez [Serveurs collecteurs Windows PowerShell DSC](https://technet.microsoft.com/library/dn249913.aspx) et [Modes de configuration d’émission et de collecte](https://technet.microsoft.com/library/dn249913.aspx).
+
+Vous pouvez déployer le rôle serveur collecteur comme instance de serveur web ou partage de fichiers SMB. La fonctionnalité de serveur web inclut une interface OData et peut éventuellement inclure des fonctionnalités permettant aux nœuds cibles d’envoyer une confirmation de réussite ou d’échec quand les configurations sont appliquées. Cette fonctionnalité est utile dans les environnements comportant un grand nombre de nœuds cibles.
+Après avoir configuré un nœud cible (également appelé « client ») pour pointer vers le serveur collecteur, téléchargez et appliquez les données de configuration les plus récentes et tous les scripts nécessaires. Vous pouvez effectuer ces opérations en un seul déploiement ou comme une tâche récurrente qui considère aussi le serveur collecteur comme important pour gérer les changements au besoin. Pour plus d’informations, consultez [Serveurs collecteurs Windows PowerShell DSC](https://technet.microsoft.com/library/dn249913.aspx) et [Modes de configuration d’émission et de collecte](https://technet.microsoft.com/library/dn249913.aspx).
 
 ## <a name="configuration-planning"></a>Planification de la configuration
 
@@ -59,7 +60,9 @@ Outre l’installation du contenu le plus récent à partir de Windows Update, d
 
 ### <a name="wmf"></a>WMF
 
-Windows Server 2012 R2 inclut une fonctionnalité appelée « Service DSC ». Service DSC fournit les fonctionnalités de serveur collecteur, notamment les fichiers binaires qui prennent en charge le point de terminaison OData. WMF est inclus dans Windows Server et est mis à jour en continu entre les versions de Windows Server. Les [nouvelles versions de WMF 5.0](http://aka.ms/wmf5latest) peuvent inclure des mises à jour de la fonctionnalité Service DSC. C’est pourquoi il est recommandé de télécharger la dernière version de WMF et de consulter les notes de publication afin de déterminer si la version inclut une mise à jour de la fonctionnalité Service DSC. Vous devez également examiner la section des notes de publication qui indique si l’état de conception d’un scénario ou d’une mise à jour est répertorié comme stable ou expérimental. Pour avoir un cycle de versions en continu, des fonctionnalités peuvent être déclarées stables, ce qui signifie qu’elles sont prêtes à être utilisées dans un environnement de production, même si WMF est publié en préversion.
+Windows Server 2012 R2 inclut une fonctionnalité appelée « Service DSC ». Service DSC fournit les fonctionnalités de serveur collecteur, notamment les fichiers binaires qui prennent en charge le point de terminaison OData.
+WMF est inclus dans Windows Server et est mis à jour en continu entre les versions de Windows Server. Les [nouvelles versions de WMF 5.0](http://aka.ms/wmf5latest) peuvent inclure des mises à jour de la fonctionnalité Service DSC. C’est pourquoi il est recommandé de télécharger la dernière version de WMF et de consulter les notes de publication afin de déterminer si la version inclut une mise à jour de la fonctionnalité Service DSC. Vous devez également examiner la section des notes de publication qui indique si l’état de conception d’un scénario ou d’une mise à jour est répertorié comme stable ou expérimental.
+Pour avoir un cycle de versions en continu, des fonctionnalités peuvent être déclarées stables, ce qui signifie qu’elles sont prêtes à être utilisées dans un environnement de production, même si WMF est publié en préversion.
 Autres fonctionnalités qui ont déjà été mises à jour par des versions de WMF (voir les Notes de publication de WMF pour plus d’informations) :
 
  - Windows PowerShell Environnement d’écriture de scripts intégré (ISE) de Windows PowerShell
@@ -77,7 +80,7 @@ Utilisez l’applet de commande **Install-Module** à partir du module **PowerSh
 Install-Module xPSDesiredStateConfiguration
 ```
 
-Le module **PowerShellGet** télécharge le module dans : 
+Le module **PowerShellGet** télécharge le module dans :
 
 `C:\Program Files\Windows PowerShell\Modules`
 
@@ -93,10 +96,7 @@ Avez-vous accès aux fichiers d’installation de Windows Server qui contiennent
 
 Les déploiements de serveurs collecteurs sont pris en charge sur les serveurs physiques et virtuels. La configuration requise du serveur collecteur s’aligne sur celle de Windows Server 2012 R2.
 
-Unité centrale : processeur 1,4 GHz 64 bits  
-Mémoire : 512 Mo  
-Espace disque : 32 Go  
-Réseau : Carte Gigabit Ethernet  
+UC : processeur 1,4 GHz 64 bits Mémoire : 512 Mo Espace disque : 32 Go Réseau : carte Gigabit Ethernet
 
 Tâche de planification|
 ---|
@@ -107,15 +107,22 @@ Un serveur de quelle taille demandez-vous ?|
 
 ### <a name="accounts"></a>Comptes
 
-Aucun compte de service en particulier n’est exigé pour déployer une instance de serveur collecteur. Toutefois, dans certains scénarios, le site web peut s’exécuter dans le contexte d’un compte d’utilisateur local. Par exemple, s’il est nécessaire d’accéder à un partage de stockage pour du contenu de site web et que le serveur Windows Server ou l’appareil hébergeant le partage de stockage ne sont pas joints à un domaine.
+Aucun compte de service en particulier n’est exigé pour déployer une instance de serveur collecteur.
+Toutefois, dans certains scénarios, le site web peut s’exécuter dans le contexte d’un compte d’utilisateur local.
+Par exemple, s’il est nécessaire d’accéder à un partage de stockage pour du contenu de site web et que le serveur Windows Server ou l’appareil hébergeant le partage de stockage ne sont pas joints à un domaine.
 
 ### <a name="dns-records"></a>Enregistrements DNS
 
-Lors de la configuration de clients, vous aurez besoin d’un nom de serveur pour utiliser un environnement de serveur collecteur. Dans les environnements de test, on utilise généralement le nom d’hôte du serveur. On peut aussi utiliser l’adresse IP du serveur si la résolution de noms DNS n’est pas disponible. Dans les environnements de production ou dans un environnement lab destiné à représenter un déploiement de production, il est conseillé de créer un enregistrement DNS CNAME.
+Lors de la configuration de clients, vous aurez besoin d’un nom de serveur pour utiliser un environnement de serveur collecteur.
+Dans les environnements de test, on utilise généralement le nom d’hôte du serveur. On peut aussi utiliser l’adresse IP du serveur si la résolution de noms DNS n’est pas disponible.
+Dans les environnements de production ou dans un environnement lab destiné à représenter un déploiement de production, il est conseillé de créer un enregistrement DNS CNAME.
 
-Un CNAME DNS vous permet de créer un alias pour faire référence à votre enregistrement d’hôte (A). L’objectif d’avoir un enregistrement de nom supplémentaire est d’augmenter la flexibilité dans le cas où une modification s’avérerait nécessaire. Un CNAME permet d’isoler la configuration du client afin que les modifications apportées à l’environnement de serveur, telles que le remplacement d’un serveur collecteur ou l’ajout de serveurs collecteurs supplémentaires, ne nécessitent pas une modification correspondante dans la configuration du client.
+Un CNAME DNS vous permet de créer un alias pour faire référence à votre enregistrement d’hôte (A).
+L’objectif d’avoir un enregistrement de nom supplémentaire est d’augmenter la flexibilité dans le cas où une modification s’avérerait nécessaire.
+Un CNAME permet d’isoler la configuration du client afin que les modifications apportées à l’environnement de serveur, telles que le remplacement d’un serveur collecteur ou l’ajout de serveurs collecteurs supplémentaires, ne nécessitent pas une modification correspondante dans la configuration du client.
 
-Quand vous choisissez un nom pour l’enregistrement DNS, gardez à l’esprit l’architecture de la solution. Si vous utilisez l’équilibrage de charge, le certificat servant à sécuriser le trafic sur HTTPS doit partager le même nom que l’enregistrement DNS. 
+Quand vous choisissez un nom pour l’enregistrement DNS, gardez à l’esprit l’architecture de la solution.
+Si vous utilisez l’équilibrage de charge, le certificat servant à sécuriser le trafic sur HTTPS doit partager le même nom que l’enregistrement DNS.
 
 Scénario |Bonne pratique
 :---|:---
@@ -134,7 +141,8 @@ Le cas échéant, quel type de solution d’équilibrage de charge utiliserez-vo
 
 ### <a name="public-key-infrastructure"></a>Infrastructure à clé publique (PKI)
 
-Aujourd’hui, la plupart des organisations exigent que le trafic réseau, en particulier le trafic qui inclut des données sensibles comme le mode de configuration des serveurs, soit validé et/ou chiffré pendant le transit. Bien qu’il soit possible de déployer un serveur collecteur à l’aide de HTTP, ce qui facilite les demandes des clients en texte en clair, il est recommandé de sécuriser le trafic à l’aide de HTTPS. Vous pouvez configurer le service pour utiliser HTTPS à l’aide d’un ensemble de paramètres dans la ressource DSC **xPSDesiredStateConfiguration**.
+Aujourd’hui, la plupart des organisations exigent que le trafic réseau, en particulier le trafic qui inclut des données sensibles comme le mode de configuration des serveurs, soit validé et/ou chiffré pendant le transit.
+Bien qu’il soit possible de déployer un serveur collecteur à l’aide de HTTP, ce qui facilite les demandes des clients en texte en clair, il est recommandé de sécuriser le trafic à l’aide de HTTPS. Vous pouvez configurer le service pour utiliser HTTPS à l’aide d’un ensemble de paramètres dans la ressource DSC **xPSDesiredStateConfiguration**.
 
 Les critères de certificat pour sécuriser le trafic HTTPS pour le serveur collecteur ne sont pas différents de ceux pour sécuriser un site web HTTPS. Le modèle de **serveur web** dans un service de certificats Windows Server est conforme aux fonctionnalités demandées.
 
@@ -149,9 +157,11 @@ Avez-vous choisi, pour l’environnement de serveur collecteur, un nom DNS que v
 
 ### <a name="choosing-an-architecture"></a>Choix d’une architecture
 
-Vous pouvez déployer un serveur collecteur à l’aide d’un service web hébergé sur IIS ou d’un partage de fichiers SMB. Dans la plupart des cas, l’option de service web offre une plus grande souplesse. Il n’est pas rare que le trafic HTTPS traverse les limites du réseau, tandis que le trafic SMB est souvent filtré ou bloqué entre les réseaux. Le service web offre également la possibilité d’inclure un serveur de mise en conformité ou Web Reporting Manager (ces deux sujets seront traités dans une future version de ce document) qui fournissent un mécanisme permettant aux clients de signaler l’état à un serveur pour une visibilité centralisée. SMB fournit une option pour les environnements où la stratégie indique qu’un serveur web ne doit pas être utilisé et pour les autres exigences liées à l’environnement qui font qu’un rôle serveur web n’est pas souhaitable. Dans les deux cas, n’oubliez pas d’évaluer les exigences de signature et de chiffrement du trafic. HTTPS, la signature SMB et les stratégies IPSEC sont toutes des options qui méritent d’être examinées.
+Vous pouvez déployer un serveur collecteur à l’aide d’un service web hébergé sur IIS ou d’un partage de fichiers SMB. Dans la plupart des cas, l’option de service web offre une plus grande souplesse. Il n’est pas rare que le trafic HTTPS traverse les limites du réseau, tandis que le trafic SMB est souvent filtré ou bloqué entre les réseaux. Le service web offre également la possibilité d’inclure un serveur de mise en conformité ou Web Reporting Manager (ces deux sujets seront traités dans une future version de ce document) qui fournissent un mécanisme permettant aux clients de signaler l’état à un serveur pour une visibilité centralisée.
+SMB fournit une option pour les environnements où la stratégie indique qu’un serveur web ne doit pas être utilisé et pour les autres exigences liées à l’environnement qui font qu’un rôle serveur web n’est pas souhaitable.
+Dans les deux cas, n’oubliez pas d’évaluer les exigences de signature et de chiffrement du trafic. HTTPS, la signature SMB et les stratégies IPSEC sont toutes des options qui méritent d’être examinées.
 
-#### <a name="load-balancing"></a>Équilibrage de charge  
+#### <a name="load-balancing"></a>Équilibrage de charge
 Les clients qui interagissent avec le service web adressent une demande d’informations qui sont retournées dans une réponse unique. Aucune demande séquentielle n’est nécessaire. La plateforme d’équilibrage de charge n’a donc pas besoin de garantir la conservation des sessions sur un serveur unique à un moment donné.
 
 Tâche de planification|
@@ -166,11 +176,11 @@ La solution d’équilibrage de charge exige-t-elle que l’infrastructure à cl
 
 ### <a name="staging-configurations-and-modules-on-the-pull-server"></a>Configurations et modules intermédiaires sur le serveur collecteur
 
-Dans le cadre de la planification de la configuration, vous devez réfléchir aux modules et configurations DSC qui seront hébergés par le serveur. Pour les besoins de la planification de la configuration, il est important de comprendre le mode de préparation et de déploiement du contenu sur un serveur collecteur. 
+Dans le cadre de la planification de la configuration, vous devez réfléchir aux modules et configurations DSC qui seront hébergés par le serveur. Pour les besoins de la planification de la configuration, il est important de comprendre le mode de préparation et de déploiement du contenu sur un serveur collecteur.
 
-Cette section sera prochainement développée et incluse dans un Guide des opérations du serveur collecteur DSC.  Ce guide décrira le processus de gestion des configurations et des modules avec l’automatisation jour après jour. 
+Cette section sera prochainement développée et incluse dans un Guide des opérations du serveur collecteur DSC.  Ce guide décrira le processus de gestion des configurations et des modules avec l’automatisation jour après jour.
 
-#### <a name="dsc-modules"></a>Modules DSC  
+#### <a name="dsc-modules"></a>Modules DSC
 Les clients qui demandent une configuration doivent disposer des modules DSC obligatoires. Le serveur collecteur dispose d’une fonctionnalité qui permet d’automatiser la distribution sur demande des modules DSC aux clients. Si vous déployez un serveur collecteur pour la première fois, peut-être dans le cadre d’un laboratoire ou à des fins de démonstration de concept, vous allez probablement dépendre des modules DSC qui sont disponibles à partir de dépôts publics tels que PowerShell Gallery ou des dépôts GitHub PowerShell.org pour les modules DSC.
 
 Il est essentiel de se rappeler que même pour les sources en ligne approuvées telles que PowerShell Gallery, tout module téléchargé à partir d’un dépôt public doit être vérifié par quelqu’un disposant d’une expérience PowerShell et d’une connaissance de l’environnement dans lequel les modules seront utilisés avant de les utiliser en production. Profitez de l’exécution de cette tâche pour rechercher dans le module tout contenu pouvant être supprimé, telle que la documentation et les exemples de script. Vous réduisez ainsi la bande passante réseau par client lors de leur première demande, quand les modules sont téléchargés sur le réseau à partir du serveur vers le client.
@@ -194,7 +204,8 @@ Votre équipe sera-t-elle également responsable de la gestion de la plateforme 
 
 #### <a name="dsc-configurations"></a>Configurations DSC
 
-Le rôle d’un serveur collecteur est de fournir un mécanisme centralisé pour la distribution des configurations DSC aux nœuds du client. Les configurations sont stockées sur le serveur sous la forme de documents MOF. Chaque document est nommé avec un GUID unique. Quand les clients sont configurés pour se connecter à un serveur collecteur, ils reçoivent également le GUID pour la configuration qu’ils doivent demander. Ce système de référencement des configurations par GUID garantit que chaque configuration est unique. Il offre aussi une flexibilité certaine car il permet d’appliquer aussi bien une configuration spécifique par nœud qu’une configuration de rôle englobant plusieurs serveurs qui doivent avoir des configurations identiques.
+Le rôle d’un serveur collecteur est de fournir un mécanisme centralisé pour la distribution des configurations DSC aux nœuds du client. Les configurations sont stockées sur le serveur sous la forme de documents MOF.
+Chaque document est nommé avec un GUID unique. Quand les clients sont configurés pour se connecter à un serveur collecteur, ils reçoivent également le GUID pour la configuration qu’ils doivent demander. Ce système de référencement des configurations par GUID garantit que chaque configuration est unique. Il offre aussi une flexibilité certaine car il permet d’appliquer aussi bien une configuration spécifique par nœud qu’une configuration de rôle englobant plusieurs serveurs qui doivent avoir des configurations identiques.
 
 #### <a name="guids"></a>GUID
 
@@ -289,26 +300,26 @@ Start-DscConfiguration -Wait -Force -Verbose -Path 'C:\PullServerConfig\'
 #      * Automatically load certificate from Certificate Authority
 #      * Locate Modules and Configuration data on remote SMB share
 #      * Manage state of default websites in IIS
-    
+
 param (
-        [Parameter(Mandatory=$true)] 
-        [ValidateNotNullorEmpty()] 
+        [Parameter(Mandatory=$true)]
+        [ValidateNotNullorEmpty()]
         [System.String] $ServerName,
         [System.String] $DomainName,
         [System.String] $CARootName,
         [System.String] $CAServerFQDN,
         [System.String] $CertSubject,
         [System.String] $SMBShare,
-        [Parameter(Mandatory=$true)] 
-        [ValidateNotNullorEmpty()] 
+        [Parameter(Mandatory=$true)]
+        [ValidateNotNullorEmpty()]
         [PsCredential] $Credential
     )
-    
+
 Configuration PullServer {
     Import-DscResource -ModuleName xPSDesiredStateConfiguration, xWebAdministration, xCertificate, xComputerManagement
     Node localhost
     {
-            
+
         # Configure the server to automatically corret configuration drift including reboots if needed.
         LocalConfigurationManager
         {
@@ -316,14 +327,14 @@ Configuration PullServer {
             RebootNodeifNeeded = $node.RebootNodeifNeeded
             CertificateId = $node.Thumbprint
         }
-    
+
         # Remove all GUI interfaces so the server has minimum running footprint.
         WindowsFeature ServerCore
         {
             Ensure = 'Absent'
             Name = 'User-Interfaces-Infra'
         }
-    
+
         # Set the server name and if needed, join a domain. If not joining a domain, remove the DomainName parameter.
         xComputer DomainJoin
         {
@@ -331,7 +342,7 @@ Configuration PullServer {
             DomainName = $Node.DomainName
             Credential = $Node.Credential
         }
-    
+
         # The next series of settings disable SSL and enable TLS, for environments where that is required by policy.
         Registry TLS1_2ServerEnabled
         {
@@ -373,14 +384,14 @@ Configuration PullServer {
             ValueData = 0
             ValueType = 'Dword'
         }
-    
+
         # Install the Windows Server DSC Service feature
         WindowsFeature DSCServiceFeature
         {
             Ensure = 'Present'
             Name = 'DSC-Service'
         }
-    
+
         # If using a certificate from a local Active Directory Enterprise Root Certificate Authority, complete a request and install the certificate
         xCertReq SSLCert
         {
@@ -390,7 +401,7 @@ Configuration PullServer {
             AutoRenew = $Node.AutoRenew
             Credential = $Node.Credential
         }
-    
+
         # Use the DSC resource to simplify deployment of the web service.  You might also consider modifying the default port, possibly leveraging port 443 in environments where that is enforced as a standard.
         xDSCWebService PSDSCPullServer
         {
@@ -405,10 +416,10 @@ Configuration PullServer {
             State = 'Started'
             DependsOn = '[WindowsFeature]DSCServiceFeature'
         }
-    
+
         # Validate web config file contains current DB settings
         xWebConfigKeyValue CorrectDBProvider
-        { 
+        {
             ConfigSection = 'AppSettings'
             Key = 'dbprovider'
             Value = 'System.Data.OleDb'
@@ -416,17 +427,17 @@ Configuration PullServer {
             DependsOn = '[xDSCWebService]PSDSCPullServer'
         }
         xWebConfigKeyValue CorrectDBConnectionStr
-        { 
+        {
             ConfigSection = 'AppSettings'
             Key = 'dbconnectionstr'
             Value = 'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Program Files\WindowsPowerShell\DscService\Devices.mdb;'
             WebsitePath = 'IIS:\sites\PSDSCPullServer'
             DependsOn = '[xDSCWebService]PSDSCPullServer'
         }
-    
+
         # Stop the default website
-        xWebsite StopDefaultSite  
-        { 
+        xWebsite StopDefaultSite
+        {
             Ensure = 'Present'
             Name = 'Default Web Site'
             State = 'Stopped'
@@ -456,8 +467,8 @@ $configData = @{
 PullServer -ConfigurationData $configData -OutputPath 'C:\PullServerConfig\'
 Set-DscLocalConfigurationManager -ComputerName localhost -Path 'C:\PullServerConfig\'
 Start-DscConfiguration -Wait -Force -Verbose -Path 'C:\PullServerConfig\'
-    
-# .\Script.ps1 -ServerName web1 -domainname 'test.pha' -carootname 'test-dc01-ca' -caserverfqdn 'dc01.test.pha' -certsubject 'CN=service.test.pha' -smbshare '\\sofs1.test.pha\share' 
+
+# .\Script.ps1 -ServerName web1 -domainname 'test.pha' -carootname 'test-dc01-ca' -caserverfqdn 'dc01.test.pha' -certsubject 'CN=service.test.pha' -smbshare '\\sofs1.test.pha\share'
 ```
 
 
@@ -468,7 +479,7 @@ Start-DscConfiguration -Wait -Force -Verbose -Path 'C:\PullServerConfig\'
 function Verify-DSCPullServer ($fqdn) {
     ([xml](invoke-webrequest "https://$($fqdn):8080/psdscpullserver.svc" | % Content)).service.workspace.collection.href
 }
-Verify-DSCPullServer 'INSERT SERVER FQDN' 
+Verify-DSCPullServer 'INSERT SERVER FQDN'
 
 Expected Result:
 Action
@@ -485,14 +496,14 @@ Configuration PullClient {
     $ID,
     $Server
     )
-        LocalConfigurationManager 
-                { 
+        LocalConfigurationManager
+                {
                     ConfigurationID = $ID;
                     RefreshMode = 'PULL';
                     DownloadManagerName = 'WebDownloadManager';
                     RebootNodeIfNeeded = $true;
                     RefreshFrequencyMins = 30;
-                    ConfigurationModeFrequencyMins = 15; 
+                    ConfigurationModeFrequencyMins = 15;
                     ConfigurationMode = 'ApplyAndAutoCorrect';
                     DownloadManagerCustomData = @{ServerUrl = "http://"+$Server+":8080/PSDSCPullServer.svc"; AllowUnsecureConnection = $true}
                 }
@@ -504,13 +515,13 @@ Set-DscLocalConfigurationManager -ComputerName 'Localhost' -Path 'C:\DSCConfig\'
 
 ## <a name="additional-references-snippets-and-examples"></a>Références, extraits de code et exemples supplémentaires
 
-Cet exemple montre comment démarrer manuellement une connexion au client (nécessitant WMF5) pour les tests. 
+Cet exemple montre comment démarrer manuellement une connexion au client (nécessitant WMF5) pour les tests.
 
 ```powershell
 Update-DSCConfiguration –Wait -Verbose
 ```
 
-L’applet de commande [Add-DnsServerResourceRecordName](http://bit.ly/1G1H31L) est utilisée pour ajouter un enregistrement CNAME de type à une zone DNS. 
+L’applet de commande [Add-DnsServerResourceRecordName](http://bit.ly/1G1H31L) est utilisée pour ajouter un enregistrement CNAME de type à une zone DNS.
 
 La fonction PowerShell permettant de [créer une somme de contrôle et de publier un document MOF DSC sur un serveur collecteur SMB](http://bit.ly/1E46BhI) génère automatiquement la somme de contrôle exigée, puis copie les fichiers de configuration MOF et de somme de contrôle sur le serveur collecteur SMB.
 
@@ -518,10 +529,7 @@ La fonction PowerShell permettant de [créer une somme de contrôle et de publie
 
 Un fichier de données est stocké pour créer des informations pendant le déploiement d’un serveur collecteur qui inclut le service web OData. Le type de fichier dépend du système d’exploitation, comme décrit ci-dessous.
 
- - **Windows Server 2012**  
-Le type de fichier est toujours .mdb
- - **Windows Server 2012 R2**  
-Le type de fichier est .edb par défaut, sauf si le type .mdb est spécifié dans la configuration
+ - **Windows Server 2012** Le type de fichier est toujours .mdb
+ - **Windows Server 2012 R2** Le type de fichier est .edb par défaut, sauf si le type .mdb est spécifié dans la configuration
 
 Dans l’[exemple de script avancé](https://github.com/mgreenegit/Whitepapers/blob/Dev/PullServerCPIG.md#installation-and-configuration-scripts) d’installation un serveur collecteur, vous trouverez également un exemple de la façon de contrôler automatiquement les paramètres du fichier web.config pour empêcher tout risque d’erreur provoquée par le type de fichier.
-

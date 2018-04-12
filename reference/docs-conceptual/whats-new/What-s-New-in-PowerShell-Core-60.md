@@ -133,7 +133,7 @@ En installant le module [`WindowsPSModulePath`][windowspsmodulepath], vous pouve
 Installez d’abord le module `WindowsPSModulePath` à partir de PowerShell Gallery :
 
 ```powershell
-# Add `-Scope CurrentUser` if you're installing as non-admin 
+# Add `-Scope CurrentUser` if you're installing as non-admin
 Install-Module WindowsPSModulePath -Force
 ```
 
@@ -160,7 +160,7 @@ Il vous suffit d’inscrire PowerShell comme un sous-système avec un serveur SS
 
 Pour plus d’informations sur la configuration et l’utilisation de la communication à distance SSH, consultez [Communication à distance PowerShell via SSH][ssh-remoting].
 
-## <a name="default-encoding-is-utf-8-without-a-bom"></a>L’encodage par défaut est UTF-8 sans marque d’ordre d’octet
+## <a name="default-encoding-is-utf-8-without-a-bom-except-for-new-modulemanifest"></a>L’encodage par défaut est UTF-8 sans marque d’ordre d’octet à l’exception de New-ModuleManifest
 
 Dans le passé, les applets de commande Windows PowerShell telles que `Get-Content` ou `Set-Content` utilisaient des encodages différents comme ASCII et UTF-16.
 Le changement des valeurs par défaut d’encodage générait des problèmes lors de l’association d’applets de commande sans spécifier d’encodage.
@@ -179,7 +179,6 @@ Les applets de commande suivantes sont affectées par cette modification :
 - Format-Hex
 - Get-Content
 - Import-Csv
-- New-ModuleManifest
 - Out-File
 - Select-String
 - Send-MailMessage
@@ -190,6 +189,8 @@ Ces applets de commande ont également été mises à jour afin que le paramètr
 La valeur par défaut `$OutputEncoding` a également été remplacée par UTF-8.
 
 Comme bonne pratique, vous devez définir explicitement des encodages dans les scripts à l’aide du paramètre `-Encoding` pour produire un comportement déterministe sur plusieurs plateformes.
+
+La cmdlet `New-ModuleManifest` ne dispose pas du paramètre **Encodage**. L’encodage du fichier de manifeste (.psd1) du module créé avec la cmdlet `New-ModuleManifest` dépend de l’environnement : s’il s’agit de PowerShell Core exécuté sur Linux, alors l’encodage est UTF-8 (sans marque d’ordre d’octet) ; sinon, l’encodage est UTF-16 (avec marque d’ordre d’octet). (#3940)
 
 ## <a name="support-backgrounding-of-pipelines-with-ampersand--3360"></a>Prendre en charge le lancement en arrière-plan des pipelines avec l’esperluette (`&`) (#3360)
 
@@ -225,7 +226,7 @@ Pour plus d’informations sur les tâches PowerShell, consultez [about_Jobs](ht
   - `GitCommitId` : il s’agit de l’ID de validation Git de la branche ou balise Git où PowerShell a été généré.
     Sur les versions publiées, il est probable qu’il soit identique à `PSVersion`.
   - `OS` : il s’agit d’une chaîne de version du système d’exploitation retournée par `[System.Runtime.InteropServices.RuntimeInformation]::OSDescription`
-  - `Platform` : valeur retournée par `[System.Environment]::OSVersion.Platform` qui est égale à `Win32NT` sur Windows, `MacOSX` sur macOS et `Unix` sur Linux.
+  - `Platform` : valeur retournée par `[System.Environment]::OSVersion.Platform` qui est égale à `Win32NT` sur Windows, `Unix` sur macOS et `Unix` sur Linux.
 - Suppression de la propriété `BuildVersion` de `$PSVersionTable`.
   Cette propriété était fortement liée à la version de build Windows.
   Au lieu de cela, nous vous recommandons d’utiliser `GitCommitId` pour récupérer la version de build exacte de PowerShell Core. (#3877) (merci à @iSazonov !)

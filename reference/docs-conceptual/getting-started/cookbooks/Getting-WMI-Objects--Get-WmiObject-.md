@@ -1,20 +1,22 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: powershell,applet de commande
-title: "Obtention d’objets WMI Get WmiObject"
+title: Obtention d’objets WMI Get WmiObject
 ms.assetid: f0ddfc7d-6b5e-4832-82de-2283597ea70d
-ms.openlocfilehash: fbaac2797dd62eb03a2be581b3b5f8be6dafc0ad
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 67922426ae3f13ef5f4c70bc70bb3ce1594d3d05
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="getting-wmi-objects-get-wmiobject"></a>Obtention d’objets WMI (Get-WmiObject)
 
 ## <a name="getting-wmi-objects-get-wmiobject"></a>Obtention d’objets WMI (Get-WmiObject)
+
 WMI (Windows Management Instrumentation) est une technologie majeure pour l’administration du système Windows, car elle expose un vaste éventail d’informations de manière uniforme. Compte tenu de tout ce que WMI permet de réaliser, l’applet de commande Windows PowerShell pour l’accès aux objets WMI, **Get-WmiObject**, est l’une des plus utiles pour travailler réellement. Nous allons aborder l’utilisation de l’applet de commande Get-WmiObject pour accéder aux objets WMI, puis expliquer comment utiliser des objets WMI pour réaliser des opérations spécifiques.
 
 ### <a name="listing-wmi-classes"></a>Affichage de la liste des classes WMI
+
 Le premier problème que rencontrent la plupart des utilisateurs de WMI est de comprendre ce que WMI permet de faire. Les classes WMI décrivent les ressources qui peuvent être gérées. Il existe des centaines de classes WMI, dont certaines contiennent des dizaines de propriétés.
 
 L’applet de commande **Get-WmiObject** résout ce problème en rendant WMI détectable. Vous pouvez obtenir la liste des classes WMI disponibles sur l’ordinateur local en tapant ce qui suit :
@@ -48,7 +50,7 @@ La liste de classes retournée par des ordinateurs distants peut varier selon le
 
 Lors de la connexion au système local, vous pouvez même inclure le nom d’ordinateur à l’aide du paramètre ComputerName. Vous pouvez utiliser le nom de l’ordinateur local, son adresse IP (ou l’adresse de bouclage 127.0.0.1), ou le style de WMI « . » comme nom d’ordinateur. Si vous exécutez Windows PowerShell sur un ordinateur nommé Admin01 dont l’adresse IP est 192.168.1.90, les commandes suivantes retournent toutes la classe WMI pour cet ordinateur :
 
-```
+```powershell
 Get-WmiObject -List
 Get-WmiObject -List -ComputerName .
 Get-WmiObject -List -ComputerName Admin01
@@ -68,6 +70,7 @@ __Provider                              __Win32Provider
 ```
 
 ### <a name="displaying-wmi-class-details"></a>Affichage des détails de classe WMI
+
 Si vous connaissez déjà le nom d’une classe WMI, vous pouvez l’utiliser pour obtenir des informations immédiatement. Par exemple, une des classes WMI couramment utilisées pour récupérer des informations sur un ordinateur est **Win32_OperatingSystem**.
 
 ```
@@ -83,7 +86,7 @@ Version         : 5.1.2600
 
 Bien que nous montrions tous les paramètres, la commande peut être exprimée de façon plus concise. Le paramètre **ComputerName** n’est pas nécessaire lors de la connexion au système local. Nous le montrons pour illustrer le cas le plus général, et vous rappeler la disponibilité de ce paramètre. Par défaut, l’**espace de noms** est root/cimv2. Vous pouvez également l’omettre. Enfin, la plupart des applets de commande permettent l’omission du nom de paramètres communs. Avec l’applet de commande Get-WmiObject, si aucun nom n’est spécifié pour le premier paramètre, Windows PowerShell traite celui-ci en tant que paramètre **Class**. Cela signifie que la dernière commande pourrait avoir été émise en tapant ce qui suit :
 
-```
+```powershell
 Get-WmiObject Win32_OperatingSystem
 ```
 
@@ -105,6 +108,7 @@ BuildNumber                               Property   System.String BuildNumb...
 ```
 
 #### <a name="displaying-non-default-properties-with-format-cmdlets"></a>Affichage de propriétés autres que par défaut avec les applets de commande Format
+
 Si vous souhaitez des informations contenues dans la classe **Win32_OperatingSystem** qui ne sont pas affichées par défaut, vous pouvez les afficher à l’aide des applets de commande **Format**. Par exemple, si vous souhaitez afficher les données de la mémoire disponible, tapez :
 
 ```
@@ -129,4 +133,3 @@ FreePhysicalMemory     : 301876
 FreeVirtualMemory      : 2056724
 FreeSpaceInPagingFiles : 1556644
 ```
-

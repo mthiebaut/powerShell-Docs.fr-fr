@@ -1,16 +1,16 @@
 ---
-description: "Découvrez plus d’informations sur l’historique de l’extension Configuration d’état souhaité (DSC, Desired State Configuration) dans Azure."
-ms.date: 2018-03-14
+description: Découvrez plus d’informations sur l’historique de l’extension Configuration d’état souhaité (DSC, Desired State Configuration) dans Azure.
+ms.date: 03/14/2018
 ms.topic: conceptual
 keywords: dsc, powershell, azure, extension
-title: "Historique des versions de l’extension Configuration d’état souhaité Azure"
+title: Historique des versions de l’extension Configuration d’état souhaité Azure
 author: DCtheGeek
 ms.author: dacoulte
-ms.openlocfilehash: e324ff9db2aff36a7e13c3a222e3c50f6f1c5d39
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+ms.openlocfilehash: a183137dde302811874bd5466c35bccebca5d128
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="azure-desired-state-configuration-extension-version-history"></a>Historique des versions de l’extension Configuration d’état souhaité Azure
 
@@ -38,7 +38,7 @@ Cet article fournit des informations sur chaque version de l’extension de mach
   - WMF 4.0
 - **Environnement :**
   - Azure
-- **Remarques :** Cette version utilise DSC telle qu’elle est incluse dans Windows Server 2016 ; pour les autres systèmes d’exploitation Windows, elle installe [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (l’installation de WMF nécessite un redémarrage). Pour Nano, le rôle DSC est installé sur la machine virtuelle.
+- **Remarques :** Cette version utilise DSC telle qu’elle est incluse dans Windows Server 2016 ; pour les autres systèmes d’exploitation Windows, elle installe [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (l’installation de WMF nécessite un redémarrage). Pour Nano Server, le rôle DSC est installé sur la machine virtuelle.
 - **Nouvelles fonctionnalités :**
   - Depuis le récent passage de GitHub à TLS 1.2, vous ne pouvez pas intégrer une machine virtuelle dans Azure Automation DSC en utilisant des modèles Resource Manager personnalisés disponibles sur la Place de marché Azure, ni utiliser l’extension DSC pour obtenir des configurations hébergées sur GitHub. Quand vous déployez l’extension, vous voyez une erreur similaire à celle-ci :
 
@@ -101,7 +101,7 @@ Cet article fournit des informations sur chaque version de l’extension de mach
 - **Prise en charge du système d’exploitation :** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Windows Client 7/8.1/10, Nano Server
 - **Prise en charge de WMF :** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
 - **Environnement :** Azure
-- **Remarques :** Cette version utilise DSC telle qu’elle est incluse dans Windows Server 2016 ; pour les autres systèmes d’exploitation Windows, elle installe [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (l’installation de WMF nécessite un redémarrage). Pour Nano, le rôle DSC est installé sur la machine virtuelle.
+- **Remarques :** Cette version utilise DSC telle qu’elle est incluse dans Windows Server 2016 ; pour les autres systèmes d’exploitation Windows, elle installe [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (l’installation de WMF nécessite un redémarrage). Pour Nano Server, le rôle DSC est installé sur la machine virtuelle.
 - **Nouvelles fonctionnalités :**
   - Correctifs de bogues et améliorations qui simplifient l’utilisation de DSC Azure Automation via l’interface utilisateur du portail et du modèle Resource Manager.  Pour plus d’informations, consultez [Script de configuration par défaut](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/extensions-dsc-overview#default-configuration-script) dans la documentation de l’extension DSC.
 
@@ -111,7 +111,7 @@ Cet article fournit des informations sur chaque version de l’extension de mach
 - **Prise en charge du système d’exploitation :** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Windows Client 7/8.1/10, Nano Server
 - **Prise en charge de WMF :** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
 - **Environnement :** Azure
-- **Remarques :** Cette version utilise DSC telle qu’elle est incluse dans Windows Server 2016 ; pour les autres systèmes d’exploitation Windows, elle installe [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (l’installation de WMF nécessite un redémarrage). Pour Nano, le rôle DSC est installé sur la machine virtuelle.
+- **Remarques :** Cette version utilise DSC telle qu’elle est incluse dans Windows Server 2016 ; pour les autres systèmes d’exploitation Windows, elle installe [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (l’installation de WMF nécessite un redémarrage). Pour Nano Server, le rôle DSC est installé sur la machine virtuelle.
 - **Nouvelles fonctionnalités :**
   - Améliorations de la télémétrie.
 
@@ -121,7 +121,7 @@ Cet article fournit des informations sur chaque version de l’extension de mach
 - **Prise en charge du système d’exploitation :** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Windows Client 7/8.1/10, Nano Server
 - **Prise en charge de WMF :** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
 - **Environnement :** Azure
-- **Remarques :** Cette version utilise DSC telle qu’elle est incluse dans Windows Server 2016 ; pour les autres systèmes d’exploitation Windows, elle installe [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (l’installation de WMF nécessite un redémarrage). Pour Nano, le rôle DSC est installé sur la machine virtuelle.
+- **Remarques :** Cette version utilise DSC telle qu’elle est incluse dans Windows Server 2016 ; pour les autres systèmes d’exploitation Windows, elle installe [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (l’installation de WMF nécessite un redémarrage). Pour Nano Server, le rôle DSC est installé sur la machine virtuelle.
 - **Nouvelles fonctionnalités :**
   - Plusieurs correctifs de bogues et d’autres améliorations mineures ont été ajoutés.
 
@@ -131,7 +131,7 @@ Cet article fournit des informations sur chaque version de l’extension de mach
 - **Prise en charge du système d’exploitation :** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Nano Server
 - **Prise en charge de WMF :** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
 - **Environnement :** Azure
-- **Remarques :** Cette version utilise DSC telle qu’elle est incluse dans Windows Server 2016 ; pour les autres systèmes d’exploitation Windows, elle installe [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (l’installation de WMF nécessite un redémarrage). Pour Nano, le rôle DSC est installé sur la machine virtuelle.
+- **Remarques :** Cette version utilise DSC telle qu’elle est incluse dans Windows Server 2016 ; pour les autres systèmes d’exploitation Windows, elle installe [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (l’installation de WMF nécessite un redémarrage). Pour Nano Server, le rôle DSC est installé sur la machine virtuelle.
 - **Nouvelles fonctionnalités :**
   - Expose l’UUID de la machine virtuelle et l’ID de l’agent DSC sous forme de métadonnées de l’extension. D’autres améliorations mineures ont été ajoutées.
 
@@ -141,7 +141,7 @@ Cet article fournit des informations sur chaque version de l’extension de mach
 - **Prise en charge du système d’exploitation :** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Nano Server
 - **Prise en charge de WMF :** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
 - **Environnement :** Azure
-- **Remarques :** Cette version utilise DSC telle qu’elle est incluse dans Windows Server 2016 ; pour les autres systèmes d’exploitation Windows, elle installe [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (l’installation de WMF nécessite un redémarrage). Pour Nano, le rôle DSC est installé sur la machine virtuelle.
+- **Remarques :** Cette version utilise DSC telle qu’elle est incluse dans Windows Server 2016 ; pour les autres systèmes d’exploitation Windows, elle installe [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (l’installation de WMF nécessite un redémarrage). Pour Nano Server, le rôle DSC est installé sur la machine virtuelle.
 - **Nouvelles fonctionnalités :**
   - De nombreux correctifs de bogues et d’autres améliorations ont été ajoutés.
 
@@ -151,7 +151,7 @@ Cet article fournit des informations sur chaque version de l’extension de mach
 - **Prise en charge du système d’exploitation :** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Nano Server
 - **Prise en charge de WMF :** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
 - **Environnement :** Azure
-- **Remarques :** Cette version utilise DSC telle qu’elle est incluse dans Windows Server 2016 ; pour les autres systèmes d’exploitation Windows, elle installe [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (l’installation de WMF nécessite un redémarrage). Pour Nano, le rôle DSC est installé sur la machine virtuelle.
+- **Remarques :** Cette version utilise DSC telle qu’elle est incluse dans Windows Server 2016 ; pour les autres systèmes d’exploitation Windows, elle installe [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (l’installation de WMF nécessite un redémarrage). Pour Nano Server, le rôle DSC est installé sur la machine virtuelle.
 - **Nouvelles fonctionnalités :**
   - L’extension DSC prend désormais en charge WMF 5.1.
   - D’autres améliorations mineures ont été ajoutées.
@@ -162,7 +162,7 @@ Cet article fournit des informations sur chaque version de l’extension de mach
 - **Prise en charge du système d’exploitation :** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Nano Server
 - **Prise en charge de WMF :** WMF 5.1 Preview, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
 - **Environnement :** Azure
-- **Remarques :** Cette version utilise DSC telle qu’elle est incluse dans Windows Server 2016 ; pour les autres systèmes d’exploitation Windows, elle installe [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (l’installation de WMF nécessite un redémarrage). Pour Nano, le rôle DSC est installé sur la machine virtuelle.
+- **Remarques :** Cette version utilise DSC telle qu’elle est incluse dans Windows Server 2016 ; pour les autres systèmes d’exploitation Windows, elle installe [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (l’installation de WMF nécessite un redémarrage). Pour Nano Server, le rôle DSC est installé sur la machine virtuelle.
 - **Nouvelles fonctionnalités :**
   - L’extension DSC est désormais disponible sur Nano Server. Cette version contient principalement des modifications du code pour l’exécution de l’extension sur Nano Server.
   - D’autres améliorations mineures ont été ajoutées.

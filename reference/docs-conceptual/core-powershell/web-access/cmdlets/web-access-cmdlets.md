@@ -1,16 +1,16 @@
 ---
-description: 
+description: ''
 ms.topic: article
 ms.prod: powershell
 keywords: powershell,applet de commande
-ms.date: 2016-12-12
-title: "applets de commande d’accès à distance"
+ms.date: 12/12/2016
+title: applets de commande d’accès à distance
 ms.technology: powershell
-ms.openlocfilehash: 54821c318b165461ec613678a39c4e3b500dfd0e
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 6930fd6a08de69078576fb0d0fbabb04e05d0814
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="windows-powershell-web-access-cmdlets"></a>Applets de commande d’accès Web Windows PowerShell
 
@@ -46,9 +46,7 @@ Désinstalle l’application Accès Web Windows PowerShell d’IIS.
 >
 > `Get-Command –Module PowerShellWebAccess`.
 
-Pour plus d’informations sur les applets de commande ou sur leur syntaxe, utilisez :  
-`Get-Help `*&lt;nom_applet_de_commande&gt;*  
-où *&lt;nom_applet_de_commande&gt;* est le nom de l’applet de commande que vous voulez rechercher.
+Pour plus d’informations sur les cmdlets et leur syntaxe, utilisez : `Get-Help `*&lt;nom de la cmdlet&gt;* où *&lt;nom de la cmdlet&gt;* correspond au nom de la cmdlet que vous recherchez.
 
 Pour obtenir des informations plus détaillées, vous pouvez exécuter l'une des applets de commande suivantes :
 
@@ -61,4 +59,3 @@ Pour obtenir des informations plus détaillées, vous pouvez exécuter l'une des
 Pour plus d’informations sur Accès Web PowerShell, consultez :
 
 - [Installer et utiliser Accès Web Windows PowerShell](../install-and-use-windows-powershell-web-access.md)
-

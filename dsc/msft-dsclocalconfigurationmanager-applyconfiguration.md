@@ -1,17 +1,17 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
-title: "Méthode ApplyConfiguration de la classe MSFT_DSCLocalConfigurationManager"
-ms.openlocfilehash: 72fbedf30e5058d8003ed620400d6b443d50dff6
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+title: Méthode ApplyConfiguration de la classe MSFT_DSCLocalConfigurationManager
+ms.openlocfilehash: 2844e354e0d054b13b92267ce314536d88a1c33e
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="applyconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Méthode ApplyConfiguration de la classe MSFT_DSCLocalConfigurationManager
 
-Utilise l’agent de configuration pour appliquer la configuration en attente. 
+Utilise l’agent de configuration pour appliquer la configuration en attente.
 
 S’il n’existe aucune configuration en attente, cette méthode applique de nouveau la configuration actuelle.
 
@@ -28,8 +28,7 @@ uint32 ApplyConfiguration(
 ## <a name="parameters"></a>Paramètres
 ----------
 
-*force* \[in\]  
-Si la valeur est **true**, la configuration actuelle est de nouveau appliquée, même s’il existe une configuration en attente.
+*force* \[in\] Si la valeur est **true**, la configuration actuelle est de nouveau appliquée, même s’il existe une configuration en attente.
 
 ## <a name="return-value"></a>Valeur renvoyée
 ------------
@@ -51,10 +50,3 @@ Il s’agit d’une méthode statique.
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
-
- 
-
- 
-
-
-
