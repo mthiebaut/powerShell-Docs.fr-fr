@@ -8,7 +8,8 @@ Vous pouvez utiliser Visual Studio Code sur Windows avec PowerShell version 5 av
 Avant de le démarrer, vérifiez que PowerShell est présent sur votre système.
 Pour les charges de travail modernes sur Windows, macOS et Linux, consultez :
 
-- [Installation de PowerShell Core sur macOS et Linux][install-pscore-linux]
+- [Installation de PowerShell Core sous Linux][install-pscore-linux]
+- [Installation de PowerShell Core sous macOS][install-pscore-macos]
 - [Installation de PowerShell Core sur Windows][install-pscore-windows]
 
 Pour les charges de travail Windows PowerShell classiques, consultez [Installation de Windows PowerShell][install-winps].
@@ -171,7 +172,8 @@ Quelques blogs peuvent être utiles pour vous aider à prendre en main l’exten
 - [Débogage des scripts PowerShell dans Visual Studio Code – Partie 2][debugging-part2]
 
 [ise]: ../ise-guide.md
-[install-pscore-linux]:  ../../setup/Installing-PowerShell-Core-on-macOS-and-Linux.md
+[install-pscore-linux]:  ../../setup/Installing-PowerShell-Core-on-Linux.md
+[install-pscore-macos]:  ../../setup/Installing-PowerShell-Core-on-macOS.md
 [install-pscore-windows]: ../../setup/Installing-PowerShell-Core-on-Windows.md
 [install-winps]: ../../setup/Installing-Windows-PowerShell.md
 [ps-extension]:https://blogs.msdn.microsoft.com/cdndevs/2015/12/11/visual-studio-code-powershell-extension/
