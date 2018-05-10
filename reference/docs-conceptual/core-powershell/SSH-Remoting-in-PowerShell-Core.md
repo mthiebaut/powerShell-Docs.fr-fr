@@ -242,7 +242,7 @@ GitCommitId                    v6.0.0-alpha.17
 1. La commande sudo ne fonctionne pas dans la session à distance sur un ordinateur Linux.
 
 [PowerShell Core pour Windows]: https://github.com/PowerShell/PowerShell/blob/master/docs/installation/windows.md#msi
-[OpenSSH Win32]: https://github.com/PowerShell/Win32-OpenSSH
+[OpenSSH Win32]: https://github.com/PowerShell/Win32-OpenSSH/releases
 [d’installation]: https://github.com/PowerShell/Win32-OpenSSH/wiki/Install-Win32-OpenSSH
 [PowerShell pour Linux]: https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md#ubuntu-1404
 [Ubuntu SSH]: https://help.ubuntu.com/lts/serverguide/openssh-server.html
