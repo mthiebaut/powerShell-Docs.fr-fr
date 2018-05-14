@@ -25,7 +25,7 @@ Pour les charges de travail Windows PowerShell classiques, consultez [Installati
 > [!IMPORTANT]
 > Sur macOS, vous devez installer OpenSSL pour que l’extension PowerShell fonctionne correctement.
 > Le moyen le plus simple de le faire est d’installer [Homebrew](http://brew.sh/), puis d’exécuter `brew install openssl`.
-> L’extension PowerShell peut maintenant se charger correctement.
+> VS Code peut désormais charger l’extension de PowerShell.
 
 - **Windows** : suivez les instructions d’installation sur la page [Exécution de Visual Studio Code sur Windows](https://code.visualstudio.com/docs/setup/windows)
 
@@ -39,7 +39,7 @@ Pour les charges de travail Windows PowerShell classiques, consultez [Installati
 - Lancez **Quick Open** en appuyant sur **Ctrl+P** (**Cmd+P** sur Mac).
 - Dans Quick Open, tapez `ext install powershell`, puis appuyez sur **Entrée**.
 - La vue **Extensions** s’ouvre dans la barre latérale. Sélectionnez l’extension de PowerShell de Microsoft.
-  Vous voyez quelque chose comme ceci :
+  Vous devez voir quelque chose semblable à ce qui présenté ci-dessous :
 
   ![VSCode](../../images/vscode.png)
 
@@ -153,7 +153,7 @@ Suivez ces étapes pour créer votre fichier de configuration de débogage :
 ```
 
 Ceci représente les scénarios de débogage courants.
-Cependant, quand vous ouvrez ce fichier dans l’éditeur, vous voyez un bouton **Ajouter une configuration...**
+Cependant, quand vous ouvrez ce fichier dans l’éditeur, vous voyez un bouton **Ajouter une configuration**.
 Vous pouvez appuyer sur ce bouton pour ajouter d’autres configurations de débogage PowerShell. **PowerShell : Lancer un script** est une configuration très pratique que vous pouvez ajouter.
 Avec cette configuration, vous pouvez spécifier un fichier spécifique avec des arguments facultatifs, qui doit être lancé quand vous appuyez sur F5, quel que soit le fichier actif dans l’éditeur.
 

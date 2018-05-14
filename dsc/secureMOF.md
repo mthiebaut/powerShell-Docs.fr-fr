@@ -3,11 +3,11 @@ ms.date: 10/31/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configuration,setup
 title: Sécurisation du fichier MOF
-ms.openlocfilehash: 80ef37ef1bdcb0a8b0ad343b4eab99f1bc66e116
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 00a33a5d628921bcd04aa904a1aa8ee4345af48f
+ms.sourcegitcommit: 4a841ebda3339ae2477e0f5f5be8c01740221232
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="securing-the-mof-file"></a>Sécurisation du fichier MOF
 
@@ -137,7 +137,7 @@ L’exemple suivant :
  1. crée un certificat sur le **nœud de création**.
  2. exporte le certificat, avec la clé privée, sur le **nœud de création**.
  3. supprime la clé privée du **nœud de création**, mais conserve le certificat de clé publique dans le magasin **my** ;
- 4. importe le certificat de clé privée dans le magasin de certificats racines sur le **nœud cible**.
+ 4. importe le certificat de clé privée dans le magasin de certificats racines My(Personal) sur le **nœud cible**.
    - Il doit être ajouté au magasin racine pour être approuvé par le **nœud cible**.
 
 #### <a name="on-the-authoring-node-create-and-export-the-certificate"></a>Sur le nœud de création : créer et exporter le certificat
