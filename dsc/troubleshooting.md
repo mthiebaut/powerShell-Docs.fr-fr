@@ -552,7 +552,7 @@ Configuration ConfigTestDebugMode
 ConfigTestDebugMode
 ```
 
-<span data-ttu-id="f70c1-224">Le contenu du fichier : « **$env:SystemDrive\OutputFromTestProviderDebugMode.txt** » est **1**.</span><span class="sxs-lookup"><span data-stu-id="f70c1-224">You will see that the contents of file: “**$env:SystemDrive\OutputFromTestProviderDebugMode.txt**” is **1**.</span></span>
+<span data-ttu-id="f70c1-224">Le contenu du fichier : «  **$env:SystemDrive\OutputFromTestProviderDebugMode.txt** » est **1**.</span><span class="sxs-lookup"><span data-stu-id="f70c1-224">You will see that the contents of file: “**$env:SystemDrive\OutputFromTestProviderDebugMode.txt**” is **1**.</span></span>
 
 <span data-ttu-id="f70c1-225">Ensuite, mettez à jour le code du fournisseur à l’aide du script suivant :</span><span class="sxs-lookup"><span data-stu-id="f70c1-225">Now, update the provider code using the following script:</span></span>
 
@@ -589,7 +589,7 @@ function Test-TargetResource
 "@ | Out-File -FilePath "C:\Program Files\WindowsPowerShell\Modules\MyPowerShellModules\DSCResources\TestProviderDebugMode\TestProviderDebugMode.psm1
 ```
 
-<span data-ttu-id="f70c1-226">Ce script génère un nombre aléatoire et met à jour le code du fournisseur en conséquence.</span><span class="sxs-lookup"><span data-stu-id="f70c1-226">This script generates a random number and updates the provider code accordingly.</span></span> <span data-ttu-id="f70c1-227">Quand `DebugMode` a la valeur false, le contenu du fichier « **$env:SystemDrive\OutputFromTestProviderDebugMode.txt** » est toujours le même.</span><span class="sxs-lookup"><span data-stu-id="f70c1-227">With `DebugMode` set to false, the contents of the file “**$env:SystemDrive\OutputFromTestProviderDebugMode.txt**” are never changed.</span></span>
+<span data-ttu-id="f70c1-226">Ce script génère un nombre aléatoire et met à jour le code du fournisseur en conséquence.</span><span class="sxs-lookup"><span data-stu-id="f70c1-226">This script generates a random number and updates the provider code accordingly.</span></span> <span data-ttu-id="f70c1-227">Quand `DebugMode` a la valeur false, le contenu du fichier «  **$env:SystemDrive\OutputFromTestProviderDebugMode.txt** » est toujours le même.</span><span class="sxs-lookup"><span data-stu-id="f70c1-227">With `DebugMode` set to false, the contents of the file “**$env:SystemDrive\OutputFromTestProviderDebugMode.txt**” are never changed.</span></span>
 
 <span data-ttu-id="f70c1-228">À présent, définissez `DebugMode` avec la valeur **TRUE** dans votre script de configuration :</span><span class="sxs-lookup"><span data-stu-id="f70c1-228">Now, set `DebugMode` to **TRUE** in your configuration script:</span></span>
 
