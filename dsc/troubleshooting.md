@@ -551,7 +551,7 @@ Configuration ConfigTestDebugMode
 ConfigTestDebugMode
 ```
 
-Le contenu du fichier : « **$env:SystemDrive\OutputFromTestProviderDebugMode.txt** » est **1**.
+Le contenu du fichier : «  **$env:SystemDrive\OutputFromTestProviderDebugMode.txt** » est **1**.
 
 Ensuite, mettez à jour le code du fournisseur à l’aide du script suivant :
 
@@ -588,7 +588,7 @@ function Test-TargetResource
 "@ | Out-File -FilePath "C:\Program Files\WindowsPowerShell\Modules\MyPowerShellModules\DSCResources\TestProviderDebugMode\TestProviderDebugMode.psm1
 ```
 
-Ce script génère un nombre aléatoire et met à jour le code du fournisseur en conséquence. Quand `DebugMode` a la valeur false, le contenu du fichier « **$env:SystemDrive\OutputFromTestProviderDebugMode.txt** » est toujours le même.
+Ce script génère un nombre aléatoire et met à jour le code du fournisseur en conséquence. Quand `DebugMode` a la valeur false, le contenu du fichier «  **$env:SystemDrive\OutputFromTestProviderDebugMode.txt** » est toujours le même.
 
 À présent, définissez `DebugMode` avec la valeur **TRUE** dans votre script de configuration :
 
